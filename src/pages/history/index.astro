@@ -5,101 +5,35 @@ import { getCollection } from 'astro:content';
 const history = await getCollection('history');
 const sortedHistory = history.sort((a, b) => a.data.title.localeCompare(b.data.title));
 
-// Group articles by category based on the TOC structure
-const categories = {
-  'Historical Events & Close Calls': {
-    'Scientific Discoveries': [
-      'historical-events/discovery-of-radioactivity',
-      'historical-events/neutron-discovery', 
-      'historical-events/nuclear-fission-discovery',
-      'historical-events/chicago-pile-1',
-      'historical-events/atoms-for-peace'
-    ],
-    'Crisis Events': [
-      'historical-events/cuban-missile-crisis',
-      'historical-events/able-archer-83',
-      'historical-events/stanislav-petrov-incident',
-      'historical-events/norwegian-rocket-incident',
-      'historical-events/kargil-conflict'
-    ]
-  },
-  'Testing Sites & Programs': [
-    'testing-sites/nevada-test-site',
-    'testing-sites/bikini-atoll',
-    'testing-sites/semipalatinsk-test-site',
-    'testing-sites/novaya-zemlya',
-    'testing-sites/lop-nur'
-  ],
-  'Treaties & Diplomacy': [
-    'treaties-diplomacy/non-proliferation-treaty',
-    'treaties-diplomacy/comprehensive-test-ban-treaty',
-    'treaties-diplomacy/start-treaties',
-    'treaties-diplomacy/intermediate-range-nuclear-forces-treaty',
-    'treaties-diplomacy/nuclear-weapons-free-zones'
-  ],
-  'Key Figures': [
-    'key-figures/oppenheimer',
-    'key-figures/edward-teller',
-    'key-figures/andrei-sakharov',
-    'key-figures/klaus-fuchs',
-    'key-figures/hyman-rickover'
-  ],
-  'Medical & Environmental Impact': [
-    'medical-environmental/three-mile-island',
-    'medical-environmental/chernobyl-disaster',
-    'medical-environmental/fukushima-daiichi',
-    'medical-environmental/nuclear-testing-health-effects',
-    'medical-environmental/hibakusha',
-    'medical-environmental/castle-bravo'
-  ],
-  'Delivery Systems & Strategy': [
-    'delivery-systems/nautilus-submarine',
-    'delivery-systems/nuclear-submarines',
-    'delivery-systems/intercontinental-ballistic-missiles',
-    'delivery-systems/nuclear-triad',
-    'delivery-systems/strategic-bombers',
-    'delivery-systems/missile-defense-systems'
-  ],
-  'Modern Developments': [
-    'modern-developments/obninsk-reactor',
-    'modern-developments/shippingport',
-    'modern-developments/small-modular-reactors',
-    'modern-developments/nuclear-proliferation-21st-century',
-    'modern-developments/nuclear-modernization-programs',
-    'modern-developments/nuclear-terrorism'
-  ],
-  'Philosophical & Ethical': [
-    'philosophical-ethical/nuclear-ethics',
-    'philosophical-ethical/nuclear-deterrence-theory',
-    'philosophical-ethical/nuclear-abolition'
-  ],
-  'Weapons Technology': [
-    'weapons-technology/fission-weapons',
-    'weapons-technology/fusion-weapons',
-    'weapons-technology/nuclear-materials',
-    'weapons-technology/nuclear-testing',
-    'weapons-technology/nuclear-weapon-effects',
-    'weapons-technology/nuclear-weapons-design',
-    'weapons-technology/weapons-manufacturing'
-  ]
-};
+// Dynamically group articles by their directory structure
+const categories: Record<string, any[]> = {};
 
-function getArticlesBySlug(slugs: string[]) {
-  return sortedHistory.filter(article => 
-    slugs.some(slug => article.slug.endsWith(slug))
-  );
-}
-
-function renderCategory(category: any, isNested = false) {
-  if (Array.isArray(category)) {
-    return getArticlesBySlug(category);
-  }
+// Group articles by category folder
+sortedHistory.forEach(article => {
+  // Remove 'history/' prefix from slug to get the actual path
+  const path = article.slug.replace('history/', '');
+  const parts = path.split('/');
   
-  return Object.entries(category).map(([subcat, slugs]) => ({
-    name: subcat,
-    articles: getArticlesBySlug(slugs as string[])
-  }));
-}
+  if (parts.length > 1) {
+    const categoryFolder = parts[0]; // Get the category folder name
+    
+    // Convert folder name to display name (e.g., 'historical-events' -> 'Historical Events')
+    const displayName = categoryFolder.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+    
+    if (!categories[displayName]) {
+      categories[displayName] = [];
+    }
+    categories[displayName].push(article);
+  }
+});
+
+// Sort categories alphabetically
+const sortedCategories = Object.keys(categories).sort().reduce((acc, key) => {
+  acc[key] = categories[key];
+  return acc;
+}, {} as Record<string, any[]>);
 ---
 
 <BaseLayout 
@@ -133,73 +67,35 @@ function renderCategory(category: any, isNested = false) {
 
     <!-- Categories -->
     <div class="space-y-12">
-      {Object.entries(categories).map(([categoryName, categoryData]) => {
-        const isNested = !Array.isArray(categoryData);
-        
+      {Object.entries(sortedCategories).map(([categoryName, articles]) => {
         return (
           <section>
             <h2 class="text-3xl font-bold mb-6 text-primary">{categoryName}</h2>
-            
-            {isNested ? (
-              <div class="space-y-8">
-                {renderCategory(categoryData).map((subcat: any) => (
-                  <div>
-                    <h3 class="text-2xl font-semibold mb-4 text-secondary">{subcat.name}</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {subcat.articles.map((article: any) => (
-                        <a 
-                          href={`/history/${article.slug.replace('history/', '')}/`} 
-                          class="group relative"
-                        >
-                          <div class="card bg-base-100 border border-base-300 hover:border-secondary/50 transition-all duration-300 h-full hover:shadow-2xl hover:scale-[1.02]">
-                            <div class="card-body p-6">
-                              <h4 class="card-title text-lg font-semibold mb-2 group-hover:text-secondary transition-colors">
-                                {article.data.title}
-                              </h4>
-                              <p class="text-sm text-base-content/70 line-clamp-3 leading-relaxed">
-                                {article.data.description}
-                              </p>
-                              <div class="mt-4 flex items-center text-secondary opacity-0 group-hover:opacity-100 transition-opacity">
-                                <span class="text-sm font-medium">Read article</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {renderCategory(categoryData).map((article: any) => (
-                  <a 
-                    href={`/history/${article.slug.replace('history/', '')}/`} 
-                    class="group relative"
-                  >
-                    <div class="card bg-base-100 border border-base-300 hover:border-secondary/50 transition-all duration-300 h-full hover:shadow-2xl hover:scale-[1.02]">
-                      <div class="card-body p-6">
-                        <h4 class="card-title text-lg font-semibold mb-2 group-hover:text-secondary transition-colors">
-                          {article.data.title}
-                        </h4>
-                        <p class="text-sm text-base-content/70 line-clamp-3 leading-relaxed">
-                          {article.data.description}
-                        </p>
-                        <div class="mt-4 flex items-center text-secondary opacity-0 group-hover:opacity-100 transition-opacity">
-                          <span class="text-sm font-medium">Read article</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                          </svg>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {articles.map((article: any) => (
+                <a 
+                  href={`/history/${article.slug.replace('history/', '')}/`} 
+                  class="group relative"
+                >
+                  <div class="card bg-base-100 border border-base-300 hover:border-secondary/50 transition-all duration-300 h-full hover:shadow-2xl hover:scale-[1.02]">
+                    <div class="card-body p-6">
+                      <h4 class="card-title text-lg font-semibold mb-2 group-hover:text-secondary transition-colors">
+                        {article.data.title}
+                      </h4>
+                      <p class="text-sm text-base-content/70 line-clamp-3 leading-relaxed">
+                        {article.data.description}
+                      </p>
+                      <div class="mt-4 flex items-center text-secondary opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-sm font-medium">Read article</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
                       </div>
                     </div>
-                  </a>
-                ))}
-              </div>
-            )}
+                  </div>
+                </a>
+              ))}
+            </div>
           </section>
         );
       })}
@@ -229,7 +125,7 @@ function renderCategory(category: any, isNested = false) {
         <!-- Stats -->
         <div class="mt-12 pt-8 border-t border-base-300 inline-block">
           <p class="text-lg text-base-content/70">
-            <span class="font-bold text-primary">{sortedHistory.length}</span> historical articles across <span class="font-bold text-secondary">{Object.keys(categories).length}</span> categories
+            <span class="font-bold text-primary">{sortedHistory.length}</span> historical articles across <span class="font-bold text-secondary">{Object.keys(sortedCategories).length}</span> categories
           </p>
         </div>
       </div>

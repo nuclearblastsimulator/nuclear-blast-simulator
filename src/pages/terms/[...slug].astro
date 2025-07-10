@@ -7,7 +7,7 @@ export async function getStaticPaths() {
   const terms = await getCollection('terms');
   
   return terms.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.slug.replace('terms/', '') },
     props: { entry, allTerms: terms },
   }));
 }
@@ -20,36 +20,37 @@ interface Props {
 const { entry, allTerms } = Astro.props;
 const { Content } = await entry.render();
 
-// Group terms by category for sidebar
-const categories = {
-  'Nuclear Physics': [
-    'alpha-decay', 'binding-energy', 'critical-mass', 'fission', 
-    'fusion', 'half-life', 'neutron-cross-section', 'plutonium'
-  ],
-  'Nuclear Effects': [
-    'electromagnetic-pulse', 'ground-zero', 'megaton', 'nuclear-fallout',
-    'nuclear-winter', 'yield'
-  ],
-  'Nuclear Technology': ['enrichment'],
-  'Reactor Types': [
-    'boiling-water-reactor', 'generation-iv', 'pressurized-water-reactor',
-    'small-modular-reactors', 'thorium-cycle', 'tokamak'
-  ],
-  'Reactor Components': ['control-rods', 'coolant', 'moderator'],
-  'Safety Systems': ['alara-principle', 'containment', 'defense-in-depth', 'scram'],
-  'Weapons & Delivery Systems': [
-    'first-strike', 'icbm', 'nuclear-triad', 'tactical-nuclear-weapons'
-  ],
-  'Strategy & Policy': ['mutual-assured-destruction', 'nuclear-deterrence'],
-  'Treaties & Agreements': ['non-proliferation-treaty', 'start-treaty']
-};
+// Dynamically group articles by their directory structure
+const categories: Record<string, any[]> = {};
 
-function getTermsByCategory(categoryTerms: string[]) {
-  return allTerms.filter(term => categoryTerms.includes(term.slug))
-    .sort((a, b) => a.data.title.localeCompare(b.data.title));
-}
+// Group articles by category folder
+allTerms.forEach(term => {
+  // Remove 'terms/' prefix from slug to get the actual path
+  const path = term.slug.replace('terms/', '');
+  const parts = path.split('/');
+  
+  if (parts.length > 1) {
+    const categoryFolder = parts[0]; // Get the category folder name
+    
+    // Convert folder name to display name (e.g., 'nuclear-physics' -> 'Nuclear Physics')
+    const displayName = categoryFolder.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+    
+    if (!categories[displayName]) {
+      categories[displayName] = [];
+    }
+    categories[displayName].push(term);
+  }
+});
 
-const currentSlug = entry.slug;
+// Sort articles within each category and sort categories alphabetically
+const sortedCategories = Object.keys(categories).sort().reduce((acc, key) => {
+  acc[key] = categories[key].sort((a, b) => a.data.title.localeCompare(b.data.title));
+  return acc;
+}, {} as Record<string, any[]>);
+
+const currentSlug = entry.slug.replace('terms/', '');
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
@@ -71,33 +72,44 @@ const currentSlug = entry.slug;
         </div>
         
         <!-- Categories -->
-        <div class="space-y-6">
-          {Object.entries(categories).map(([categoryName, termSlugs]) => {
-            const categoryTerms = getTermsByCategory(termSlugs);
-            if (categoryTerms.length === 0) return null;
+        <div class="space-y-4">
+          {Object.entries(sortedCategories).map(([categoryName, categoryTerms], index) => {
+            // Check if current term is in this category
+            const hasActiveArticle = categoryTerms.some(term => term.slug.replace('terms/', '') === currentSlug);
+            const categoryId = `category-${index}`;
             
             return (
-              <div class="space-y-2">
-                <h3 class="text-sm font-bold text-base-content/60 uppercase tracking-wider">{categoryName}</h3>
-                <ul class="space-y-1 ml-2">
-                  {categoryTerms.map((term) => {
-                    const isActive = term.slug === currentSlug;
-                    return (
-                      <li>
-                        <a 
-                          href={`/terms/${term.slug}/`}
-                          class={`block text-sm py-1 px-2 rounded transition-all ${
-                            isActive 
-                              ? 'bg-primary text-primary-content font-medium active-article' 
-                              : 'text-base-content/70 hover:text-base-content hover:bg-base-300'
-                          }`}
-                        >
-                          {term.data.title}
-                        </a>
-                      </li>
-                    );
-                  })}
-                </ul>
+              <div class="collapse collapse-arrow bg-base-300/50 rounded-lg">
+                <input 
+                  type="radio" 
+                  name="sidebar-accordion" 
+                  id={categoryId}
+                  checked={hasActiveArticle}
+                />
+                <label for={categoryId} class="collapse-title text-sm font-bold text-base-content/80 py-2 px-3 min-h-0 cursor-pointer">
+                  {categoryName}
+                </label>
+                <div class="collapse-content px-1">
+                  <ul class="space-y-0.5 mt-1">
+                    {categoryTerms.map((term) => {
+                      const isActive = term.slug.replace('terms/', '') === currentSlug;
+                      return (
+                        <li>
+                          <a 
+                            href={`/terms/${term.slug.replace('terms/', '')}/`}
+                            class={`block text-sm py-1.5 px-3 rounded transition-all ${
+                              isActive 
+                                ? 'bg-primary text-primary-content font-medium active-article' 
+                                : 'text-base-content/70 hover:text-base-content hover:bg-base-300'
+                            }`}
+                          >
+                            {term.data.title}
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
               </div>
             );
           })}
@@ -180,14 +192,27 @@ const currentSlug = entry.slug;
       const activeArticle = document.querySelector('.active-article');
       if (activeArticle) {
         const sidebar = document.getElementById('sidebar');
-        const sidebarRect = sidebar.getBoundingClientRect();
-        const activeRect = activeArticle.getBoundingClientRect();
         
-        // Calculate the scroll position to center the active article in the viewport
-        const scrollTop = activeArticle.offsetTop - (sidebar.clientHeight / 2) + (activeArticle.clientHeight / 2);
+        // Make sure the parent collapse is expanded
+        const parentCollapse = activeArticle.closest('.collapse');
+        if (parentCollapse) {
+          const input = parentCollapse.querySelector('input[type="radio"]');
+          if (input) {
+            input.checked = true;
+          }
+        }
         
-        // Scroll the sidebar
-        sidebar.scrollTop = scrollTop;
+        // Wait a bit for the collapse animation
+        setTimeout(() => {
+          const activeRect = activeArticle.getBoundingClientRect();
+          const sidebarRect = sidebar.getBoundingClientRect();
+          
+          // Calculate the scroll position to center the active article in the viewport
+          const scrollTop = activeArticle.offsetTop - (sidebar.clientHeight / 2) + (activeArticle.clientHeight / 2);
+          
+          // Scroll the sidebar
+          sidebar.scrollTop = scrollTop;
+        }, 100);
       }
     });
   </script>

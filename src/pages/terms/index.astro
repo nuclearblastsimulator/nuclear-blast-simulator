@@ -5,33 +5,35 @@ import { getCollection } from 'astro:content';
 const terms = await getCollection('terms');
 const sortedTerms = terms.sort((a, b) => a.data.title.localeCompare(b.data.title));
 
-// Group terms by category based on the TOC structure
-const categories = {
-  'Nuclear Physics': [
-    'alpha-decay', 'binding-energy', 'critical-mass', 'fission', 
-    'fusion', 'half-life', 'neutron-cross-section', 'plutonium'
-  ],
-  'Nuclear Effects': [
-    'electromagnetic-pulse', 'ground-zero', 'megaton', 'nuclear-fallout',
-    'nuclear-winter', 'yield'
-  ],
-  'Nuclear Technology': ['enrichment'],
-  'Reactor Types': [
-    'boiling-water-reactor', 'generation-iv', 'pressurized-water-reactor',
-    'small-modular-reactors', 'thorium-cycle', 'tokamak'
-  ],
-  'Reactor Components': ['control-rods', 'coolant', 'moderator'],
-  'Safety Systems': ['alara-principle', 'containment', 'defense-in-depth', 'scram'],
-  'Weapons & Delivery Systems': [
-    'first-strike', 'icbm', 'nuclear-triad', 'tactical-nuclear-weapons'
-  ],
-  'Strategy & Policy': ['mutual-assured-destruction', 'nuclear-deterrence'],
-  'Treaties & Agreements': ['non-proliferation-treaty', 'start-treaty']
-};
+// Dynamically group articles by their directory structure
+const categories: Record<string, any[]> = {};
 
-function getTermsByCategory(categoryTerms: string[]) {
-  return sortedTerms.filter(term => categoryTerms.includes(term.slug));
-}
+// Group articles by category folder
+sortedTerms.forEach(term => {
+  // Remove 'terms/' prefix from slug to get the actual path
+  const path = term.slug.replace('terms/', '');
+  const parts = path.split('/');
+  
+  if (parts.length > 1) {
+    const categoryFolder = parts[0]; // Get the category folder name
+    
+    // Convert folder name to display name (e.g., 'nuclear-physics' -> 'Nuclear Physics')
+    const displayName = categoryFolder.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+    
+    if (!categories[displayName]) {
+      categories[displayName] = [];
+    }
+    categories[displayName].push(term);
+  }
+});
+
+// Sort categories alphabetically
+const sortedCategories = Object.keys(categories).sort().reduce((acc, key) => {
+  acc[key] = categories[key];
+  return acc;
+}, {} as Record<string, any[]>);
 ---
 
 <BaseLayout 
@@ -65,17 +67,14 @@ function getTermsByCategory(categoryTerms: string[]) {
 
     <!-- Categories -->
     <div class="space-y-12">
-      {Object.entries(categories).map(([category, termSlugs]) => {
-        const categoryTerms = getTermsByCategory(termSlugs);
-        if (categoryTerms.length === 0) return null;
-        
+      {Object.entries(sortedCategories).map(([category, categoryTerms]) => {
         return (
           <section>
             <h2 class="text-3xl font-bold mb-6 text-primary">{category}</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {categoryTerms.map((term) => (
                 <a 
-                  href={`/terms/${term.slug}/`} 
+                  href={`/terms/${term.slug.replace('terms/', '')}/`} 
                   class="group relative"
                 >
                   <div class="card bg-base-100 border border-base-300 hover:border-primary/50 transition-all duration-300 h-full hover:shadow-2xl hover:scale-[1.02]">
@@ -126,7 +125,7 @@ function getTermsByCategory(categoryTerms: string[]) {
         <!-- Stats -->
         <div class="mt-12 pt-8 border-t border-base-300 inline-block">
           <p class="text-lg text-base-content/70">
-            <span class="font-bold text-primary">{sortedTerms.length}</span> comprehensive glossary entries across <span class="font-bold text-secondary">{Object.keys(categories).length}</span> categories
+            <span class="font-bold text-primary">{sortedTerms.length}</span> comprehensive glossary entries across <span class="font-bold text-secondary">{Object.keys(sortedCategories).length}</span> categories
           </p>
         </div>
       </div>
