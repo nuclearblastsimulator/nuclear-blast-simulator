@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Feedback"
+  description="Share your feedback about the Nuclear Blast Simulator. Help us improve this educational resource."
+>
+  <div class="mx-auto px-6 py-12 w-full max-w-xl">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-black mb-4">Feedback</h1>
+      <p class="text-lg text-base-content/70">
+        Your input helps us improve this educational resource. Share your thoughts, suggestions, or report issues.
+      </p>
+    </div>
+
+    <div class="card bg-base-200 shadow-xl">
+      <div class="card-body">
+        <form name="feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
+          <!-- Hidden fields for Netlify -->
+          <input type="hidden" name="form-name" value="feedback" />
+          <p class="hidden">
+            <label>
+              Don't fill this out if you're human: <input name="bot-field" />
+            </label>
+          </p>
+
+          <!-- Name Field -->
+          <div class="form-control">
+            <label for="name" class="label">
+              <span class="label-text font-semibold">Name</span>
+            </label>
+            <input 
+              type="text" 
+              id="name"
+              name="name" 
+              required 
+              placeholder="Your name" 
+              class="input input-bordered w-full bg-base-100 focus:input-primary" 
+            />
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-control">
+            <label for="email" class="label">
+              <span class="label-text font-semibold">Email</span>
+            </label>
+            <input 
+              type="email" 
+              id="email"
+              name="email" 
+              required 
+              placeholder="your@email.com" 
+              class="input input-bordered w-full bg-base-100 focus:input-primary" 
+            />
+          </div>
+
+          <!-- Reason Dropdown -->
+          <div class="form-control">
+            <label for="reason" class="label">
+              <span class="label-text font-semibold">Reason for Feedback</span>
+            </label>
+            <select 
+              id="reason"
+              name="reason" 
+              required 
+              class="select select-bordered w-full bg-base-100 focus:select-primary"
+            >
+              <option value="" disabled selected>Select a reason</option>
+              <option value="bug-report">Bug Report</option>
+              <option value="feature-request">Feature Request</option>
+              <option value="content-suggestion">Content Suggestion</option>
+              <option value="educational-feedback">Educational Feedback</option>
+              <option value="technical-issue">Technical Issue</option>
+              <option value="general-feedback">General Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <!-- Message Field -->
+          <div class="form-control">
+            <label for="message" class="label">
+              <span class="label-text font-semibold">Your Feedback</span>
+            </label>
+            <textarea 
+              id="message"
+              name="message" 
+              required 
+              rows="6" 
+              placeholder="Please share your feedback, suggestions, or describe any issues you've encountered..."
+              class="textarea textarea-bordered w-full bg-base-100 focus:textarea-primary resize-none"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="mt-8">
+            <button type="submit" class="btn btn-primary btn-block group">
+              <span class="font-bold">Detonate</span>
+              <span class="text-xl ml-2">🚀</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Additional Information -->
+    <div class="mt-8 text-center text-sm text-base-content/60">
+      <p>
+        For urgent issues, you can also report them on our 
+        <a href="https://github.com/nuclear-blast-simulator" target="_blank" rel="noopener noreferrer" class="link link-primary">
+          GitHub repository
+        </a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
