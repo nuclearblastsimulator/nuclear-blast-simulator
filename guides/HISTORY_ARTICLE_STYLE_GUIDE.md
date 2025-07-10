@@ -5,79 +5,126 @@ This document defines the writing style and structure for history articles in th
 ## Article Structure
 
 ### 1. Front Matter
+
 ```yaml
 ---
-title: "Article Title"
-description: "A compelling 1-2 sentence description that summarizes the historical event and its significance..."
+title: 'Article Title'
+description: 'A compelling one-sentence description that summarizes the historical event and its significance, ending with ellipsis to create intrigue...'
 ---
 ```
 
 ### 2. Title Section
-- Main heading using `#` 
-- Followed by a thematic subtitle using `##` that captures the essence of the event
+
+- Main heading using `#` (exact copy of front matter title)
+- Followed by a thematic, engaging subtitle using `##` that captures the essence of the event
+- Subtitle should be memorable and create emotional impact
 
 Example:
-```markdown
-# Able Archer 83
 
-## When Exercise Became Reality
+```markdown
+# Cuban Missile Crisis
+
+## Thirteen Days That Nearly Ended the World
 ```
 
 ### 3. Opening Paragraph
-- A narrative introduction that sets the scene
-- Should be engaging and accessible
-- Explains the significance in 2-3 sentences
-- Written in past tense
+
+- A vivid, scene-setting paragraph that immediately places the reader in the moment
+- Uses specific dates, times, and locations
+- Emphasizes the dramatic nature and significance of the event
+- Typically 3-5 sentences that build tension and establish stakes
+- May use present tense for dramatic effect before shifting to past tense
+- Should hook the reader emotionally
 
 ### 4. Content Organization
 
 #### Summary Section (Before `<!-- SUMMARY_END -->`)
-The summary section uses a **hierarchical outline format** with bullet points:
 
-- **Main sections**: Use `##` headings
-- **Subsections**: Use `###` headings
-- **Bullet points**: Each point follows the pattern:
-  - **Bold key phrase**: Brief explanatory text
-  - Keep explanations concise (5-10 words typically)
-  - Use colons to separate key phrase from explanation
+The summary section provides comprehensive coverage using a **hierarchical outline format**:
+
+- **Main sections**: Use `##` headings (Background, The Event, Impact, etc.)
+- **Subsections**: Use `###` headings for detailed breakdowns
+- **Bullet points**: Extensive use for clarity and facts
+  - Each subsection typically contains 4-5 bullet points
+  - Points contain concise, factual information
+  - Use dashes to separate labels from content
+  - Include specific dates, names, and numbers
+- **Word count**: Typically 2,000-4,000 words for the summary alone
 
 Example:
+
 ```markdown
 ### Cold War Tensions (1983)
-- **Reagan administration**: Aggressive anti-Soviet rhetoric and military buildup
-- **Soviet paranoia**: Deep Soviet fears of U.S. first strike
+
+- **Reagan administration** - Aggressive anti-Soviet rhetoric and military buildup
+- **Soviet paranoia** - Deep Soviet fears of U.S. first strike capabilities
+- **Operation RYAN** - Soviet intelligence operation to detect surprise attack
+- **SS-20 deployment** - Soviet intermediate-range missiles in Eastern Europe
 ```
 
 #### Full Article Section (After `<!-- SUMMARY_END -->`)
-The full article expands the outline into comprehensive prose:
 
-- **Narrative style**: Tell the story with context and detail
-- **Paragraph structure**: Each major point becomes a full paragraph
-- **Academic tone**: Authoritative but accessible
-- **Evidence-based**: Include specific dates, names, and verifiable facts
-- **Multiple perspectives**: Present different viewpoints where relevant
+The full article provides an extensive, literary treatment of the topic:
+
+- **Deep Dive header**: Always starts with `## Deep Dive`
+- **Narrative style**: Engaging storytelling with comprehensive detail
+- **Extended coverage**: Often 3,000-5,000 words for the full section
+- **Literary quality**: Uses vivid descriptions and scene-setting
+- **Human elements**: Integrates personal stories throughout
+- **Technical balance**: Complex topics explained without dumbing down
+- **Multiple perspectives**: International viewpoints and various stakeholders
+- **Philosophical depth**: Explores moral and ethical dimensions
+- **Circular structure**: Often returns to opening imagery in conclusion
 
 ### 5. Standard Sections Pattern
 
 Most articles follow this section progression:
 
-1. **Background** - Historical context leading to the event
-2. **The [Main Event]** - Detailed description of what happened
-3. **Key Figures/Personalities** - Important people involved
-4. **Impact/Consequences** - Short and long-term effects
-5. **Historical Significance** - Why this matters in nuclear history
-6. **Connection to Nuclear Weapons** - Explicit link to nuclear topics
-7. **Sources** - Credible references
+1. **Background** - Historical context with multiple subsections:
+
+   - Political/social environment
+   - Key players and motivations
+   - Technical/military context
+   - Precipitating events
+
+2. **The [Main Event]** - Chronological account with:
+
+   - Critical moments highlighted
+   - Human stories integrated
+   - Technical details explained
+   - Multiple perspectives
+
+3. **Immediate Response/Impact** - How the world reacted:
+
+   - Government responses
+   - Public reaction
+   - International implications
+   - Emergency measures
+
+4. **Key Figures** - Important people with context
+
+5. **Long-term Consequences** - Lasting effects and changes
+
+6. **Connection to Nuclear Weapons** - Explicit section before summary ends:
+
+   - 4-5 bullet points
+   - Clear nuclear relevance
+   - Deterrence implications
+   - Policy impacts
+
+7. **Sources** - Authoritative references with descriptions
 
 ### 6. Writing Style Guidelines
 
 #### Tone and Voice
+
 - **Objective**: Present facts without bias
 - **Educational**: Explain complex concepts clearly
 - **Serious**: Appropriate gravity for nuclear topics
 - **Accessible**: Avoid jargon without explanation
 
 #### Language Patterns
+
 - **Active voice** preferred
 - **Past tense** for historical events
 - **Present tense** for ongoing implications
@@ -85,22 +132,29 @@ Most articles follow this section progression:
 - **Full names on first mention**, then last names
 
 #### Formatting Conventions
-- **Bold** for key terms in bullet points
-- **Italics** sparingly for emphasis
-- **Numbers**: Spell out one through nine, use digits for 10+
-- **Dates**: "November 8, 1983" format
-- **Acronyms**: Define on first use
+
+- **Bold** for emphasis and key terms throughout
+- **No italics** - avoid italic formatting
+- **Dashes** to separate labels from content in bullets
+- **Parentheses** for clarifications and dates
+- **Numbers**: Use digits for all numbers for clarity
+- **Dates**: "October 16, 1962" format (month day, year)
+- **Acronyms**: Define on first use with acronym in parentheses
+- **Quotes**: Use double quotes for direct quotations
 
 ### 7. Content Requirements
 
 #### Factual Accuracy
+
 - Only include verifiable historical facts
 - No speculation or conspiracy theories
 - Multiple sources preferred for controversial claims
 - Acknowledge uncertainty where it exists
 
 #### Nuclear Connection
+
 Every article must explicitly connect to nuclear weapons through:
+
 - Direct involvement of nuclear weapons
 - Nuclear policy implications
 - Crisis escalation dynamics
@@ -108,56 +162,86 @@ Every article must explicitly connect to nuclear weapons through:
 - Arms control relevance
 
 #### Sources Section
-Always include authoritative sources:
+
+Always include authoritative sources with horizontal rule:
+
 ```markdown
+---
+
 ## Sources
 
 **Authoritative Sources:**
 
 - [National Security Archive](https://nsarchive.gwu.edu) - Declassified documents and analysis
 - [Institution Name](URL) - Brief description of relevance
+- [Institution Name](URL) - Brief description of relevance
 ```
+
+Include 3-5 sources from:
+
+- Government agencies and archives
+- International organizations (UN, IAEA)
+- Academic institutions
+- Specialized nuclear/military organizations
+- Official government reports
 
 ## Summary vs. Full Article Split
 
 ### Summary (Outline) Characteristics
-- **Purpose**: Quick reference and overview
-- **Format**: Hierarchical bullet points
-- **Length**: 200-300 lines typically
-- **Content**: Key facts and timeline
-- **Style**: Telegraph-like brevity
+
+- **Purpose**: Comprehensive reference covering all aspects
+- **Format**: Hierarchical sections with extensive bullet points
+- **Length**: 2,000-4,000 words (much longer than previously)
+- **Content**: Complete coverage of background, event, impact, and significance
+- **Style**: Factual and detailed while remaining accessible
+- **Structure**: Multiple H2 and H3 sections with 4-5 bullets each
 
 ### Full Article Characteristics
-- **Purpose**: In-depth educational content
-- **Format**: Narrative prose with sections
-- **Length**: 1500-3000 words
-- **Content**: Context, analysis, and interpretation
-- **Style**: Engaging storytelling with academic rigor
+
+- **Purpose**: Literary, comprehensive historical account
+- **Format**: Extended narrative prose with deep analysis
+- **Length**: 8,000-15,000 words (total article often 10,000-20,000 words)
+- **Content**: Vivid storytelling, human elements, technical depth, philosophical reflection
+- **Style**: Literary quality with academic rigor
+- **Opening**: Always begins with "## Deep Dive"
 
 ### Marker Usage
-Place `<!-- SUMMARY_END -->` between the outline and full article:
+
+Place `<!-- SUMMARY_END -->` after the Connection to Nuclear Weapons section:
+
 ```markdown
-[Summary content ends here]
+## Connection to Nuclear Weapons
+
+[Event name] directly relates to nuclear weapons:
+
+- **[Key aspect]** - How it relates to nuclear weapons
+- **[Key aspect]** - Nuclear policy implications
+- **[Key aspect]** - Deterrence or proliferation impact
+- **[Key aspect]** - Arms control relevance
 
 <!-- SUMMARY_END -->
 
-## Full Article
+## Deep Dive
 
-### [First full article section]
+### [First narrative section]
 ```
 
 ## Examples of Good Practices
 
 ### Effective Opening
+
 "In the early hours of November 8, 1983, Lieutenant Colonel Stanislav Petrov had already prevented nuclear war once..."
 
 ### Clear Timeline References
+
 "The exercise was scheduled to run from November 2-11, 1983..."
 
 ### Multiple Perspectives
+
 "While NATO viewed the exercise as routine, Soviet intelligence interpreted these indicators as potential evidence of genuine war planning."
 
 ### Connecting to Themes
+
 "The incident demonstrated how nuclear weapons create hair-trigger situations where misunderstandings can rapidly escalate..."
 
 ## Common Pitfalls to Avoid
@@ -171,21 +255,34 @@ Place `<!-- SUMMARY_END -->` between the outline and full article:
 ## File Organization
 
 Place articles in appropriate subdirectories:
-- `/content/history/cold-war-crises/` - Cold War incidents
-- `/content/history/foundational-events/` - Early nuclear history
-- `/content/history/nuclear-accidents/` - Accidents and close calls
-- `/content/history/treaties-agreements/` - Arms control history
+
+- `/content/history/cold-war-crises/` - Major nuclear crises and close calls
+- `/content/history/foundational-events/` - Key events in nuclear history
+- `/content/history/key-figures/` - Important figures in nuclear development
+- `/content/history/modern-developments/` - Contemporary nuclear issues
+- `/content/history/nuclear-programs/` - National nuclear programs
+- `/content/history/testing-disasters/` - Nuclear testing and disasters
+- `/content/history/weapons-technology/` - Nuclear weapons technology
 
 ## Review Checklist
 
 Before submitting an article, verify:
-- [ ] Front matter is complete and accurate
-- [ ] Opening paragraph hooks the reader
-- [ ] Summary section uses consistent bullet format
-- [ ] `<!-- SUMMARY_END -->` marker is present
-- [ ] Full article expands all outline points
-- [ ] Nuclear weapons connection is explicit
-- [ ] Sources are authoritative and linked
-- [ ] No speculation or unverified claims
-- [ ] Dates and names are accurate
-- [ ] Writing is clear and accessible
+
+- [ ] Front matter uses single quotes and ends description with ellipsis
+- [ ] Title matches H1 exactly
+- [ ] Dramatic subtitle captures essence of event
+- [ ] Opening paragraph creates immediate emotional engagement
+- [ ] Summary section is comprehensive (2,000-4,000 words)
+- [ ] All sections use consistent H2/H3 hierarchy
+- [ ] Bullets use dashes between labels and content
+- [ ] Connection to Nuclear Weapons section present before marker
+- [ ] `<!-- SUMMARY_END -->` marker placed correctly
+- [ ] Deep Dive section starts full article
+- [ ] Full article is extensive (8,000-15,000 words)
+- [ ] Human stories integrated throughout
+- [ ] Technical concepts explained clearly
+- [ ] Multiple perspectives included
+- [ ] Sources section has horizontal rule and 3-5 authorities
+- [ ] No italics used in formatting
+- [ ] All numbers use digits
+- [ ] Dates follow "Month Day, Year" format
