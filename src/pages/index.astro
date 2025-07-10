@@ -618,23 +618,30 @@ const locations = data.locations;
         </p>
       </div>
       
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div class="lg:col-span-2 space-y-8">
-          <div class="card bg-base-100 border border-base-300 overflow-hidden">
-            <div class="relative" style="height: 600px;">
-              <Image src={screenshotDesktop} alt="Nuclear Blast Simulator Desktop View" class="w-full h-full object-contain bg-base-200" />
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <div class="lg:col-span-2">
+          <div class="card bg-base-100 border border-base-300 overflow-hidden h-full flex flex-col">
+            <div class="card-body p-6 flex-1 flex flex-col">
+              <div class="mockup-browser border-base-300 border bg-base-300 flex-1 flex flex-col">
+                <div class="mockup-browser-toolbar">
+                  <div class="input border-base-300">https://www.nuclearblastsimulator.com/simulator</div>
+                </div>
+                <div class="bg-base-200 p-4 flex-1 flex items-center justify-center">
+                  <Image src={screenshotDesktop} alt="Nuclear Blast Simulator Desktop View" class="w-full h-auto max-h-full object-contain" />
+                </div>
+              </div>
             </div>
-            <div class="card-body">
+            <div class="card-body pt-0">
               <h3 class="text-xl font-semibold">Desktop Experience</h3>
               <p class="text-base-content/70">Full-featured interface with comprehensive controls and detailed information panels</p>
             </div>
           </div>
         </div>
         
-        <div class="lg:col-span-1 space-y-8">
-          <div class="card bg-base-100 border border-base-300 overflow-hidden">
+        <div class="lg:col-span-1">
+          <div class="card bg-base-100 border border-base-300 overflow-hidden h-full flex flex-col">
             <!-- iPhone Frame -->
-            <div class="flex items-center justify-center p-4 bg-gradient-to-br from-base-200 to-base-300" style="height: 600px;">
+            <div class="flex items-center justify-center p-4 bg-gradient-to-br from-base-200 to-base-300 flex-1">
               <div class="relative" style="width: 240px; height: 480px;">
                 <!-- iPhone Frame -->
                 <div class="absolute inset-0 bg-gray-900 rounded-[2.5rem] shadow-2xl"></div>
