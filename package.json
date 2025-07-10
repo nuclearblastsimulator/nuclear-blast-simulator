@@ -1,6 +1,6 @@
 {
   "name": "nuclear-blast-simulator",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Educational visualization of nuclear weapon effects",
   "main": "index.html",
   "scripts": {
