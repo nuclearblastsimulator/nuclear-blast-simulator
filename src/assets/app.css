@@ -35,17 +35,20 @@ body {
 
 /* Heading styles */
 h1, h2 {
-  font-family: 'Rubik Mono One', monospace;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 800;
 }
 
-/* Ensure font-mono uses Rubik Mono One */
+/* Ensure font-mono uses Rubik */
 .font-mono {
-  font-family: 'Rubik Mono One', monospace !important;
+  font-family: 'Rubik', sans-serif !important;
+  font-weight: 700;
 }
 
 /* Navbar app name */
 .navbar-app-name {
-  font-family: 'Rubik Mono One', monospace;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
 }
 
 /* Fix container widths */
@@ -185,19 +188,23 @@ h1, h2 {
 }
 
 .prose :where(h1):not(:where([class~="not-prose"] *)) {
-  color: hsl(var(--p));
-  font-family: 'Rubik Mono One', monospace;
-  font-weight: 800;
-  font-size: 2.25em;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 900;
+  font-size: 2.5em;
   margin-top: 0;
   margin-bottom: 0.8888889em;
   line-height: 1.1111111;
+  background: linear-gradient(to right, hsl(var(--p)), hsl(var(--s)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
 }
 
 .prose :where(h2):not(:where([class~="not-prose"] *)) {
   color: hsl(var(--p));
-  font-family: 'Rubik Mono One', monospace;
-  font-weight: 700;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 800;
   font-size: 1.875em;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
@@ -206,8 +213,8 @@ h1, h2 {
 
 .prose :where(h3):not(:where([class~="not-prose"] *)) {
   color: hsl(var(--p));
-  font-family: 'Rubik Mono One', monospace;
-  font-weight: 600;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
   font-size: 1.5em;
   margin-top: 2rem;
   margin-bottom: 1rem;
