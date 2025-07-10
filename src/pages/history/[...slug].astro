@@ -144,14 +144,18 @@ const currentSlug = entry.slug.replace('history/', '');
         <div class="bg-base-100 rounded-3xl border border-base-300 p-8 md:p-12 shadow-xl">
           {hasTabSeparator ? (
             <>
-              <!-- Tabs -->
-              <div class="tabs tabs-boxed mb-8 bg-base-200 p-1">
-                <button class="tab tab-active" data-tab="summary">Summary</button>
-                <button class="tab" data-tab="full">Full Article</button>
+              <!-- Summary Toggle Button -->
+              <div class="flex justify-end mb-6">
+                <button id="summary-toggle" class="btn btn-outline btn-sm gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Show Summary
+                </button>
               </div>
               
-              <!-- Tab Content -->
-              <div id="tab-content" class="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:leading-relaxed prose-a:transition-colors prose-a:duration-200 prose-strong:text-secondary prose-li:marker:text-secondary/60">
+              <!-- Article Content -->
+              <div id="article-content" class="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:leading-relaxed prose-a:transition-colors prose-a:duration-200 prose-strong:text-secondary prose-li:marker:text-secondary/60">
                 <Content />
               </div>
             </>
@@ -232,16 +236,17 @@ const currentSlug = entry.slug.replace('history/', '');
         }, 100);
       }
       
-      // Tab functionality for articles with summary/full content
-      const tabContent = document.getElementById('tab-content');
-      if (tabContent) {
-        // Find the summary end marker
-        const summaryEndMarker = tabContent.querySelector('comment');
+      // Summary toggle functionality for articles with summary/full content
+      const articleContent = document.getElementById('article-content');
+      const summaryToggle = document.getElementById('summary-toggle');
+      
+      if (articleContent && summaryToggle) {
         let summaryContent = '';
         let fullContent = '';
+        let showingSummary = false;
         
         // Split content at the marker
-        const allNodes = Array.from(tabContent.childNodes);
+        const allNodes = Array.from(articleContent.childNodes);
         let foundMarker = false;
         
         allNodes.forEach(node => {
@@ -254,31 +259,37 @@ const currentSlug = entry.slug.replace('history/', '');
           }
         });
         
-        // Store original full content
-        const originalContent = tabContent.innerHTML;
+        // Store original full content (default view)
+        const originalContent = articleContent.innerHTML;
         
-        // Tab switching
-        const tabButtons = document.querySelectorAll('[data-tab]');
-        tabButtons.forEach(button => {
-          button.addEventListener('click', () => {
-            const tab = button.getAttribute('data-tab');
-            
-            // Update active tab
-            tabButtons.forEach(btn => btn.classList.remove('tab-active'));
-            button.classList.add('tab-active');
-            
-            // Update content
-            if (tab === 'summary') {
-              tabContent.innerHTML = summaryContent;
-            } else {
-              tabContent.innerHTML = fullContent;
-            }
-          });
+        // Button click handler
+        summaryToggle.addEventListener('click', () => {
+          if (showingSummary) {
+            // Switch to full article
+            articleContent.innerHTML = fullContent;
+            summaryToggle.innerHTML = `
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Show Summary
+            `;
+            showingSummary = false;
+          } else {
+            // Switch to summary
+            articleContent.innerHTML = summaryContent;
+            summaryToggle.innerHTML = `
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+              </svg>
+              Show Full Article
+            `;
+            showingSummary = true;
+          }
         });
         
-        // Show summary by default
-        if (summaryContent) {
-          tabContent.innerHTML = summaryContent;
+        // Show full article by default
+        if (fullContent) {
+          articleContent.innerHTML = fullContent;
         }
       }
     });
