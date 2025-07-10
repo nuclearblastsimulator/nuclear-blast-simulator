@@ -20,6 +20,9 @@ interface Props {
 const { entry, allHistory } = Astro.props;
 const { Content } = await entry.render();
 
+// Check if content has the summary marker
+const hasTabSeparator = entry.body.includes('<!-- SUMMARY_END -->');
+
 // Dynamically group articles by their directory structure
 const categories: Record<string, any[]> = {};
 
@@ -139,10 +142,25 @@ const currentSlug = entry.slug.replace('history/', '');
       <!-- Content Section -->
       <article class="container max-w-4xl mx-auto px-6 py-12">
         <div class="bg-base-100 rounded-3xl border border-base-300 p-8 md:p-12 shadow-xl">
-          <!-- Content -->
-          <div class="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:leading-relaxed prose-a:transition-colors prose-a:duration-200 prose-strong:text-secondary prose-li:marker:text-secondary/60">
-            <Content />
-          </div>
+          {hasTabSeparator ? (
+            <>
+              <!-- Tabs -->
+              <div class="tabs tabs-boxed mb-8 bg-base-200 p-1">
+                <button class="tab tab-active" data-tab="summary">Summary</button>
+                <button class="tab" data-tab="full">Full Article</button>
+              </div>
+              
+              <!-- Tab Content -->
+              <div id="tab-content" class="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:leading-relaxed prose-a:transition-colors prose-a:duration-200 prose-strong:text-secondary prose-li:marker:text-secondary/60">
+                <Content />
+              </div>
+            </>
+          ) : (
+            <!-- Regular content -->
+            <div class="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:leading-relaxed prose-a:transition-colors prose-a:duration-200 prose-strong:text-secondary prose-li:marker:text-secondary/60">
+              <Content />
+            </div>
+          )}
         </div>
         
         <!-- Navigation -->
@@ -212,6 +230,56 @@ const currentSlug = entry.slug.replace('history/', '');
           // Scroll the sidebar
           sidebar.scrollTop = scrollTop;
         }, 100);
+      }
+      
+      // Tab functionality for articles with summary/full content
+      const tabContent = document.getElementById('tab-content');
+      if (tabContent) {
+        // Find the summary end marker
+        const summaryEndMarker = tabContent.querySelector('comment');
+        let summaryContent = '';
+        let fullContent = '';
+        
+        // Split content at the marker
+        const allNodes = Array.from(tabContent.childNodes);
+        let foundMarker = false;
+        
+        allNodes.forEach(node => {
+          if (node.nodeType === Node.COMMENT_NODE && node.textContent.trim() === 'SUMMARY_END') {
+            foundMarker = true;
+          } else if (!foundMarker) {
+            summaryContent += node.outerHTML || node.textContent || '';
+          } else {
+            fullContent += node.outerHTML || node.textContent || '';
+          }
+        });
+        
+        // Store original full content
+        const originalContent = tabContent.innerHTML;
+        
+        // Tab switching
+        const tabButtons = document.querySelectorAll('[data-tab]');
+        tabButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const tab = button.getAttribute('data-tab');
+            
+            // Update active tab
+            tabButtons.forEach(btn => btn.classList.remove('tab-active'));
+            button.classList.add('tab-active');
+            
+            // Update content
+            if (tab === 'summary') {
+              tabContent.innerHTML = summaryContent;
+            } else {
+              tabContent.innerHTML = fullContent;
+            }
+          });
+        });
+        
+        // Show summary by default
+        if (summaryContent) {
+          tabContent.innerHTML = summaryContent;
+        }
       }
     });
   </script>
