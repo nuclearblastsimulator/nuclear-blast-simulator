@@ -68,7 +68,25 @@ function formatDistance(meters) {
     }
 }
 
-// Calculate blast radii based on yield (more accurate formulas)
+// Nuclear weapon effects scaling formulas based on authoritative sources
+// 
+// Primary References:
+// 1. "The Effects of Nuclear Weapons" by Glasstone & Dolan (1977, 3rd Ed.)
+//    - U.S. Department of Defense/Energy official publication
+// 2. "Nuclear Weapons FAQ" by Carey Sublette (nuclearweaponarchive.org)
+//
+// Scaling Laws:
+// - Fireball: R ∝ Y^0.4 (Glasstone & Dolan: R ≈ 100W^0.4 in feet)
+// - Blast: R ∝ Y^0.33 (cube root law - pressure scales with volume)
+// - Thermal: R ∝ Y^0.41 (modified square root law due to atmospheric absorption)
+//
+// These formulas provide educational approximations. Actual effects vary with:
+// height of burst, weather, terrain, and atmospheric conditions.
+//
+// Overpressure damage thresholds:
+// - 5 psi: Heavy damage (most buildings collapse)
+// - 1 psi: Moderate damage (residential buildings damaged)
+// - 0.25 psi: Light damage (windows shatter)
 function calculateRadii(yieldKt) {
     // More accurate scaling formulas based on nuclear weapons effects data
     const fireball = 0.2 * Math.pow(yieldKt, 0.4) * 1000; // meters
