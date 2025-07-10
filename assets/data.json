@@ -28,20 +28,11 @@
       "default": false
     },
     {
-      "id": "mop",
-      "name": "GBU-57 MOP",
-      "yield": 35,
-      "details": "30,000 lbs • Bunker buster",
-      "category": "non-nuclear",
-      "displayText": "GBU-57 MOP • 30,000 lbs • Bunker Buster",
-      "default": false
-    },
-    {
       "id": "little-boy",
       "name": "Little Boy",
       "yield": 15,
       "details": "15 kilotons • Hiroshima 1945",
-      "category": "atomic",
+      "category": "historically-significant",
       "displayText": "Little Boy • 15 kT • Hiroshima 1945",
       "default": true
     },
@@ -50,8 +41,143 @@
       "name": "Fat Man",
       "yield": 21,
       "details": "21 kilotons • Nagasaki 1945",
-      "category": "atomic",
+      "category": "historically-significant",
       "displayText": "Fat Man • 21 kT • Nagasaki 1945",
+      "default": false
+    },
+    {
+      "id": "ivy-mike",
+      "name": "Ivy Mike",
+      "yield": 10400,
+      "details": "10.4 megatons • First hydrogen bomb 1952",
+      "category": "historically-significant",
+      "displayText": "Ivy Mike • 10.4 MT • First H-Bomb 1952",
+      "default": false
+    },
+    {
+      "id": "castle-bravo",
+      "name": "Castle Bravo",
+      "yield": 15000,
+      "details": "15 megatons • Largest US test",
+      "category": "historically-significant",
+      "displayText": "Castle Bravo • 15 MT • Largest US Test",
+      "default": false
+    },
+    {
+      "id": "tsar-bomba",
+      "name": "Tsar Bomba",
+      "yield": 50000,
+      "details": "50 megatons • Largest ever tested",
+      "category": "historically-significant",
+      "displayText": "Tsar Bomba • 50 MT • Largest Ever",
+      "default": false
+    },
+        {
+      "id": "mop",
+      "name": "GBU-57 MOP",
+      "yield": 35,
+      "details": "30,000 lbs • Bunker buster dropped on Iran",
+      "category": "historically-significant",
+      "displayText": "GBU-57 MOP • 30k lbs • Bunker Buster dropped on Iran",
+      "default": false
+    },
+    {
+      "id": "aman",
+      "name": "Aman",
+      "yield": 16,
+      "details": "12-20 kilotons • Pakistan nuclear weapon",
+      "category": "international",
+      "displayText": "Aman • 16 kT • Pakistan",
+      "default": false
+    },
+    {
+      "id": "ghauri",
+      "name": "Ghauri",
+      "yield": 10,
+      "details": "5-15 kilotons • Pakistan medium-range missile",
+      "category": "international",
+      "displayText": "Ghauri • 10 kT • Pakistan MRBM",
+      "default": false
+    },
+    {
+      "id": "df-5",
+      "name": "DF-5",
+      "yield": 4000,
+      "details": "3-5 megatons • Chinese ICBM",
+      "category": "international",
+      "displayText": "DF-5 • 4 MT • Chinese ICBM",
+      "default": false
+    },
+    {
+      "id": "iskander",
+      "name": "9K720 Iskander",
+      "yield": 50,
+      "details": "50 kilotons • Russian tactical missile",
+      "category": "tactical",
+      "displayText": "Iskander • 50 kT • Russian Tactical",
+      "default": false
+    },
+    {
+      "id": "b61-12",
+      "name": "B61-12",
+      "yield": 50,
+      "details": "50 kilotons • US precision gravity bomb",
+      "category": "tactical",
+      "displayText": "B61-12 • 50 kT • US Precision Bomb",
+      "default": false
+    },
+    {
+      "id": "w76-1",
+      "name": "W76-1",
+      "yield": 100,
+      "details": "90-100 kilotons • US submarine warhead",
+      "category": "tactical",
+      "displayText": "W76-1 • 100 kT • US SLBM",
+      "default": false
+    },
+    {
+      "id": "polaris-a3",
+      "name": "Polaris A-3",
+      "yield": 200,
+      "details": "200 kilotons • Early US submarine missile",
+      "category": "tactical",
+      "displayText": "Polaris A-3 • 200 kT • Early SLBM",
+      "default": false
+    },
+    {
+      "id": "w87",
+      "name": "W87",
+      "yield": 300,
+      "details": "300 kilotons • US Minuteman III warhead",
+      "category": "strategic",
+      "displayText": "W87 • 300 kT • US ICBM",
+      "default": false
+    },
+    {
+      "id": "w78",
+      "name": "W78",
+      "yield": 335,
+      "details": "335 kilotons • US ICBM warhead",
+      "category": "strategic",
+      "displayText": "W78 • 335 kT • US ICBM",
+      "default": false
+    },
+    {
+      "id": "b61-13",
+      "name": "B61-13",
+      "yield": 360,
+      "details": "360 kilotons • US Gravity Bomb 2025",
+      "category": "strategic",
+      "displayText": "B61-13 • 360 kT • US Gravity Bomb 2025",
+      "default": false
+    },
+    {
+      "id": "b61-11",
+      "name": "B61-11",
+      "yield": 400,
+      "details": "400 kilotons • US bunker buster",
+      "category": "strategic",
+      "displayText": "B61-11 • 400 kT • US Bunker Buster",
       "default": false
     },
     {
@@ -64,6 +190,24 @@
       "default": false
     },
     {
+      "id": "kinzhal",
+      "name": "Kinzhal",
+      "yield": 500,
+      "details": "~500 kilotons • Russian hypersonic missile",
+      "category": "strategic",
+      "displayText": "Kinzhal • 500 kT • Russian Hypersonic",
+      "default": false
+    },
+    {
+      "id": "ss-18-satan",
+      "name": "SS-18 Satan",
+      "yield": 875,
+      "details": "750kT-1MT • Soviet/Russian heavy ICBM",
+      "category": "strategic",
+      "displayText": "SS-18 Satan • 875 kT • Russian ICBM",
+      "default": false
+    },
+    {
       "id": "b83",
       "name": "B83",
       "yield": 1200,
@@ -73,28 +217,49 @@
       "default": false
     },
     {
-      "id": "castle-bravo",
-      "name": "Castle Bravo",
-      "yield": 15000,
-      "details": "15 megatons • Largest US test",
-      "category": "test",
-      "displayText": "Castle Bravo • 15 MT • Largest US Test",
+      "id": "poseidon",
+      "name": "Poseidon",
+      "yield": 50000,
+      "details": "2-100 megatons • Russian nuclear torpedo",
+      "category": "modern-threats",
+      "displayText": "Poseidon • 50 MT • Russian Torpedo",
       "default": false
     },
     {
-      "id": "tsar-bomba",
-      "name": "Tsar Bomba",
-      "yield": 50000,
-      "details": "50 megatons • Largest ever tested",
+      "id": "burevestnik",
+      "name": "Burevestnik",
+      "yield": 1000,
+      "details": "Unknown yield • Russian nuclear cruise missile",
+      "category": "modern-threats",
+      "displayText": "Burevestnik • 1 MT • Russian Cruise Missile",
+      "default": false
+    },
+    {
+      "id": "an-602-original",
+      "name": "AN-602 (Original Design)",
+      "yield": 100000,
+      "details": "100 megatons • Tsar Bomba original design",
       "category": "test",
-      "displayText": "Tsar Bomba • 50 MT • Largest Ever",
+      "displayText": "AN-602 Original • 100 MT • Tsar Bomba Design",
+      "default": false
+    },
+    {
+      "id": "chernobyl-equivalent",
+      "name": "Chernobyl Radiation Equivalent",
+      "yield": 6000,
+      "details": "400x Hiroshima radiation • Nuclear accident",
+      "category": "test",
+      "displayText": "Chernobyl Equivalent • 6 MT • Radiation Comparison",
       "default": false
     }
   ],
   "categories": {
+    "historically-significant": "Historically Significant",
     "non-nuclear": "Non-Nuclear",
-    "atomic": "Early Atomic Bombs",
-    "strategic": "Modern Strategic Weapons",
-    "test": "Thermonuclear Tests"
+    "international": "International Arsenal",
+    "tactical": "Tactical Nuclear Weapons",
+    "strategic": "Strategic Nuclear Weapons",
+    "modern-threats": "Modern Threats",
+    "test": "Tests & Comparisons"
   }
 }
