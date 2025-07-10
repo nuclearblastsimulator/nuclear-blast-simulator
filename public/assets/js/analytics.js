@@ -166,8 +166,20 @@ const Analytics = {
         });
     },
 
+    // Page view tracking
+    trackPageView: function(pagePath, pageTitle) {
+        this.sendEvent('page_view', {
+            page_path: pagePath || window.location.pathname,
+            page_title: pageTitle || document.title,
+            page_location: window.location.href
+        });
+    },
+
     // Initialize analytics
     init: function() {
+        // Track initial page view
+        this.trackPageView();
+
         // Track session summary when user leaves
         window.addEventListener('beforeunload', () => {
             this.trackSessionSummary();
@@ -189,6 +201,18 @@ const Analytics = {
                 this.trackExternalLinkClicked(linkType, href);
             }
         });
+
+        // Track client-side navigation for SPAs
+        let lastPath = window.location.pathname;
+        const checkForNavigation = () => {
+            if (window.location.pathname !== lastPath) {
+                lastPath = window.location.pathname;
+                this.trackPageView();
+            }
+        };
+        
+        // Check for navigation changes periodically
+        setInterval(checkForNavigation, 1000);
 
         console.log('Analytics initialized');
     }
