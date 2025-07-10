@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Blast Radius Calculator - Interactive Nuclear Weapon Effects Simulator</title>
+    <meta name="description"
+        content="Visualize nuclear weapon blast radius on any city. Compare atomic bomb effects from Hiroshima to Tsar Bomba. Educational nuclear explosion simulator with real-time calculations.">
+    <meta name="keywords"
+        content="nuclear blast radius, atomic bomb simulator, nuclear weapon effects, nukemap alternative, nuclear explosion calculator, hiroshima bomb radius, nuclear fallout map, nuclear damage calculator, atomic blast map">
+    <meta name="author" content="Nuclear Blast Simulator">
+    <meta property="og:title" content="Nuclear Blast Radius Calculator - Interactive Nuclear Weapon Effects Simulator">
+    <meta property="og:description"
+        content="Visualize the devastating effects of nuclear weapons on any city. Educational tool showing blast radius, thermal radiation, and damage zones.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/nuclear-blast-preview.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nuclear Blast Radius Calculator">
+    <meta name="twitter:description"
+        content="Interactive nuclear weapon effects simulator. Visualize blast radius from Hiroshima to Tsar Bomba on any location.">
+    <link rel="canonical" href="https://nuclear-blast.netlify.app/">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Nuclear Blast Radius Calculator",
+        "alternativeHeadline": "NUKEMAP Alternative - Nuclear Weapon Effects Simulator",
+        "applicationCategory": "EducationalApplication",
+        "applicationSubCategory": "Science Education",
+        "description": "Interactive educational tool to visualize nuclear weapon blast effects and damage radius on any location worldwide. Compare different nuclear weapons from conventional explosives to thermonuclear bombs.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        },
+        "browserRequirements": "Requires JavaScript enabled",
+        "softwareVersion": "1.0",
+        "operatingSystem": "All",
+        "educationalUse": [
+            "Teaching nuclear physics",
+            "Understanding nuclear weapon effects",
+            "Historical education about atomic weapons",
+            "Civil defense planning education"
+        ],
+        "creator": {
+            "@type": "Organization",
+            "name": "Nuclear Blast Simulator"
+        },
+        "keywords": [
+            "nuclear blast radius",
+            "atomic bomb simulator",
+            "nuclear weapon effects",
+            "nukemap alternative",
+            "nuclear explosion calculator",
+            "blast damage assessment",
+            "thermal radiation radius",
+            "nuclear detonation effects"
+        ],
+        "educationalLevel": "High school and above",
+        "inLanguage": "en-US",
+        "isAccessibleForFree": true,
+        "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    }
+    </script>
+
+    <!-- Additional Schema for FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "How far does a nuclear blast radius extend?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The blast radius depends on the weapon's yield. A 15 kiloton bomb (Hiroshima-sized) creates severe damage within 1-2 miles, while a 50 megaton bomb (Tsar Bomba) can cause damage over 30 miles away."
+            }
+        }, {
+            "@type": "Question",
+            "name": "What are the different damage zones in a nuclear explosion?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nuclear explosions create multiple damage zones: the fireball (complete vaporization), heavy blast damage (5 psi), moderate damage (1 psi), light damage (0.25 psi), and thermal radiation zones extending furthest."
+            }
+        }, {
+            "@type": "Question",
+            "name": "Is this nuclear blast simulator accurate?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "This educational tool uses publicly available data and simplified models. Actual effects vary based on altitude, weather, terrain, and other factors. It's designed for educational purposes only."
+            }
+        }]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 400px;
+            background: #111;
+            border-right: 1px solid #333;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .map-container {
+            flex: 1;
+            position: relative;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .logo {
+            width: 56px;
+            height: 56px;
+            flex-shrink: 0;
+        }
+
+        .title-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .title-line {
+            font-family: 'Rubik Mono One', monospace;
+            font-size: 1.75rem;
+            margin: 0;
+            background: linear-gradient(135deg, #247bac, #f77f00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            line-height: 1;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-family: 'Rubik Mono One', monospace;
+            font-size: 0.875rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: #247bac;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .bomb-presets {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .bomb-btn {
+            background: #1a1a1a;
+            border: 2px solid #333;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .bomb-btn:hover {
+            border-color: #247bac;
+            background: #222;
+        }
+
+        .bomb-btn.active {
+            border-color: #247bac;
+            background: rgba(36, 123, 172, 0.1);
+        }
+
+        .bomb-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #fff;
+        }
+
+        .bomb-details {
+            font-size: 0.875rem;
+            color: #888;
+            font-weight: 400;
+        }
+
+        .location-selector {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        select,
+        input {
+            background: #1a1a1a;
+            border: 2px solid #333;
+            color: #fff;
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+
+        select:focus,
+        input:focus {
+            outline: none;
+            border-color: #247bac;
+        }
+
+        .custom-location {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .custom-location input {
+            flex: 1;
+        }
+
+        .search-btn {
+            background: #247bac;
+            border: none;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .search-btn:hover {
+            background: #1d6290;
+        }
+
+        .simulate-btn {
+            background: linear-gradient(135deg, #247bac, #f77f00);
+            border: none;
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(247, 127, 0, 0.3);
+            margin-top: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .simulate-btn:hover {
+            background: linear-gradient(135deg, #1d6290, #e56f00);
+            box-shadow: 0 6px 20px rgba(247, 127, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .simulate-btn:active {
+            transform: translateY(0);
+        }
+
+        .simulate-btn:disabled {
+            background: #333;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        .legend {
+            background: rgba(17, 17, 17, 0.95);
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            font-weight: 500;
+        }
+
+        .legend-item:hover {
+            opacity: 0.8;
+        }
+
+        .legend-item.disabled {
+            opacity: 0.5;
+        }
+
+        .legend-item.disabled .legend-color {
+            border: 2px solid #666;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .warning {
+            background: rgba(36, 123, 172, 0.1);
+            border: 1px solid rgba(36, 123, 172, 0.3);
+            border-radius: 8px;
+            padding: 1rem;
+            font-size: 0.875rem;
+            color: #8bbfe0;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .warning strong {
+            color: #247bac;
+            font-weight: 600;
+        }
+
+        #weapon-details {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(247, 127, 0, 0.1);
+            border: 2px solid #f77f00;
+            border-radius: 8px;
+        }
+
+        @keyframes blastExpand {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .blast-circle {
+            animation: blastExpand 0.8s ease-out;
+            transform-origin: center;
+        }
+
+        /* Popup styling */
+        .leaflet-popup-content-wrapper {
+            background: #222;
+            color: #fff;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .leaflet-popup-content {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .leaflet-popup-tip {
+            background: #222;
+            border-bottom: 1px solid #333;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                max-height: 60vh;
+                border-right: none;
+                border-bottom: 1px solid #333;
+                padding: 1.5rem;
+            }
+
+            .section {
+                margin-bottom: 1rem;
+            }
+
+            .header-container {
+                flex-wrap: wrap;
+            }
+
+            .logo {
+                width: 48px;
+                height: 48px;
+            }
+
+            .title-line {
+                font-size: 1.25rem;
+            }
+
+            .subtitle {
+                margin-bottom: 1rem;
+            }
+
+            #weapon-details {
+                margin-top: 0.5rem !important;
+                padding: 0.75rem !important;
+            }
+
+            .simulate-btn {
+                margin-top: 0.75rem;
+                padding: 0.875rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .legend {
+                display: none;
+            }
+
+            .warning {
+                display: none;
+            }
+
+            .map-container {
+                flex: 1;
+                min-height: 40vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="header-container">
+                <img src="/assets/logo/logo.png" alt="Nuclear Blast Simulator Logo" class="logo">
+                <div class="title-wrapper">
+                    <h1 class="title-line">Nuclear Blast</h1>
+                    <h1 class="title-line">Simulator</h1>
+                </div>
+            </div>
+            <p class="subtitle">Educational visualization of nuclear weapon effects</p>
+
+            <div class="section">
+                <h3 class="section-title">Select Weapon</h3>
+                <select id="weapon-select"
+                    style="width: 100%; padding: 1rem; background: #1a1a1a; border: 2px solid #333; color: #fff; border-radius: 8px; font-size: 1rem;">
+                    <optgroup label="Non-Nuclear">
+                        <option value="tnt">1 Ton TNT • Reference Explosive</option>
+                        <option value="tomahawk">Tomahawk Missile • 1,000 lbs • Cruise Missile</option>
+                        <option value="moab">MOAB • 21,600 lbs • Largest Conventional</option>
+                    </optgroup>
+                    <optgroup label="Early Atomic Bombs">
+                        <option value="little-boy" selected>Little Boy • 15 kT • Hiroshima 1945</option>
+                        <option value="fat-man">Fat Man • 21 kT • Nagasaki 1945</option>
+                    </optgroup>
+                    <optgroup label="Modern Strategic Weapons">
+                        <option value="w88">W88 Warhead • 475 kT • US SLBM</option>
+                        <option value="b83">B83 • 1.2 MT • US Strategic Bomb</option>
+                    </optgroup>
+                    <optgroup label="Thermonuclear Tests">
+                        <option value="castle-bravo">Castle Bravo • 15 MT • Largest US Test</option>
+                        <option value="tsar-bomba">Tsar Bomba • 50 MT • Largest Ever</option>
+                    </optgroup>
+                </select>
+                <div id="weapon-details">
+                    <div class="bomb-name">Little Boy (Hiroshima)</div>
+                    <div class="bomb-details">15 kilotons • 1945</div>
+                </div>
+            </div>
+
+            <!-- Units preference hidden but still functional -->
+            <div style="display: none;">
+                <input type="radio" name="units" value="imperial" checked>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Select Location</h3>
+                <div class="location-selector">
+                    <select id="city-select">
+                        <option value="">Choose a city...</option>
+                        <option value="36.0104,-84.2696" selected>Oak Ridge, Tennessee</option>
+                        <option value="40.7128,-74.0060">New York City</option>
+                        <option value="51.5074,-0.1278">London</option>
+                        <option value="35.6762,139.6503">Tokyo</option>
+                        <option value="48.8566,2.3522">Paris</option>
+                        <option value="55.7558,37.6173">Moscow</option>
+                        <option value="39.9042,116.4074">Beijing</option>
+                        <option value="34.0522,-118.2437">Los Angeles</option>
+                        <option value="41.8781,-87.6298">Chicago</option>
+                        <option value="52.5200,13.4050">Berlin</option>
+                        <option value="-33.8688,151.2093">Sydney</option>
+                    </select>
+
+                    <div class="custom-location">
+                        <input type="text" id="custom-address" placeholder="Or enter any address...">
+                        <button class="search-btn" onclick="searchAddress()">Search</button>
+                    </div>
+                </div>
+
+                <button class="simulate-btn" id="simulate-btn" onclick="simulateBlast()">
+                    🚀 Simulate Bomb Detonation
+                </button>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Blast Effects</h3>
+                <div class="legend">
+                    <div class="legend-item" data-zone="fireball">
+                        <div class="legend-color" style="background: rgba(255, 0, 0, 0.6);"></div>
+                        <span>Fireball (vaporization)</span>
+                    </div>
+                    <div class="legend-item" data-zone="heavy">
+                        <div class="legend-color" style="background: rgba(255, 100, 0, 0.5);"></div>
+                        <span>Heavy blast damage (5 psi)</span>
+                    </div>
+                    <div class="legend-item" data-zone="moderate">
+                        <div class="legend-color" style="background: rgba(255, 200, 0, 0.4);"></div>
+                        <span>Moderate damage (1 psi)</span>
+                    </div>
+                    <div class="legend-item" data-zone="light">
+                        <div class="legend-color" style="background: rgba(255, 255, 0, 0.3);"></div>
+                        <span>Light damage (0.25 psi)</span>
+                    </div>
+                    <div class="legend-item" data-zone="thermal">
+                        <div class="legend-color" style="background: rgba(200, 200, 0, 0.2);"></div>
+                        <span>Thermal radiation (3rd degree burns)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="warning">
+                <strong>Educational Purpose:</strong> This simulation demonstrates the devastating scale of nuclear
+                weapons. The data is based on publicly available information and simplified models. Actual effects would
+                vary based on altitude, weather, and terrain.
+            </div>
+        </div>
+
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let map;
+        let currentBomb = 'little-boy';
+        let blastCircles = {};
+        let useMetric = false;
+        let hiddenZones = new Set();
+        let groundZeroMarker = null;
+        let currentLocation = { lat: 36.0104, lng: -84.2696 };
+
+        // Bomb data (yields in kilotons)
+        const bombData = {
+            'tnt': { name: '1 Ton TNT', yield: 0.001, details: 'Reference explosive' },
+            'tomahawk': { name: 'Tomahawk Missile', yield: 0.5, details: '1,000 lbs warhead • Cruise missile' },
+            'moab': { name: 'MOAB (Mother of All Bombs)', yield: 11, details: '21,600 lbs • Largest conventional' },
+            'little-boy': { name: 'Little Boy', yield: 15, details: '15 kilotons • Hiroshima 1945' },
+            'fat-man': { name: 'Fat Man', yield: 21, details: '21 kilotons • Nagasaki 1945' },
+            'w88': { name: 'W88 Warhead', yield: 475, details: '475 kilotons • Modern US SLBM' },
+            'b83': { name: 'B83', yield: 1200, details: '1.2 megatons • US Strategic Bomb' },
+            'castle-bravo': { name: 'Castle Bravo', yield: 15000, details: '15 megatons • Largest US test' },
+            'tsar-bomba': { name: 'Tsar Bomba', yield: 50000, details: '50 megatons • Largest ever tested' }
+        };
+
+        // Initialize everything after page loads
+        window.addEventListener('DOMContentLoaded', function () {
+            // Initialize map
+            map = L.map('map').setView([36.0104, -84.2696], 12);
+
+            // Add medium-dark tile layer
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                subdomains: 'abcd',
+                maxZoom: 20
+            }).addTo(map);
+
+            // Add labels layer on top for better visibility
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png', {
+                subdomains: 'abcd',
+                maxZoom: 20
+            }).addTo(map);
+
+            // Set up event listeners
+            setupEventListeners();
+        });
+
+        // Format distance with both units
+        function formatDistanceBoth(meters) {
+            const km = (meters / 1000).toFixed(2);
+            const miles = (meters * 0.000621371).toFixed(2);
+            return `${km} km / ${miles} mi`;
+        }
+
+        // Format distance for display
+        function formatDistance(meters) {
+            if (useMetric) {
+                if (meters < 1000) {
+                    return `${Math.round(meters)} meters`;
+                } else {
+                    return `${(meters / 1000).toFixed(2)} km`;
+                }
+            } else {
+                const miles = meters * 0.000621371;
+                const feet = meters * 3.28084;
+                if (feet < 5280) {
+                    return `${Math.round(feet).toLocaleString()} feet`;
+                } else {
+                    return `${miles.toFixed(2)} miles`;
+                }
+            }
+        }
+
+        // Calculate blast radii based on yield (more accurate formulas)
+        function calculateRadii(yieldKt) {
+            // More accurate scaling formulas based on nuclear weapons effects data
+            const fireball = 0.2 * Math.pow(yieldKt, 0.4) * 1000; // meters
+            const heavyBlast = 0.28 * Math.pow(yieldKt, 0.33) * 1000; // 5 psi
+            const moderateBlast = 0.7 * Math.pow(yieldKt, 0.33) * 1000; // 1 psi  
+            const lightBlast = 1.5 * Math.pow(yieldKt, 0.33) * 1000; // 0.25 psi
+            const thermalRadiation = 1.2 * Math.pow(yieldKt, 0.41) * 1000; // 3rd degree burns
+
+            return {
+                fireball,
+                heavyBlast,
+                moderateBlast,
+                lightBlast,
+                thermalRadiation
+            };
+        }
+
+        // Create popup content for each zone
+        function createZonePopup(zoneName, radius, effects) {
+            return `
+                <div style="background: #222; color: #fff; padding: 12px; border-radius: 6px; min-width: 250px;">
+                    <h4 style="margin: 0 0 8px 0; color: #f77f00; font-family: 'Rubik Mono One', monospace; font-size: 14px; text-transform: uppercase;">${zoneName}</h4>
+                    <p style="margin: 4px 0; font-size: 14px; font-family: 'Inter', sans-serif;"><strong>Radius:</strong> ${formatDistanceBoth(radius)}</p>
+                    <p style="margin: 8px 0 0 0; font-size: 13px; line-height: 1.4; color: #ccc; font-family: 'Inter', sans-serif;">${effects}</p>
+                </div>
+            `;
+        }
+
+        // Clear all blast circles
+        function clearBlast() {
+            Object.values(blastCircles).forEach(circle => {
+                if (circle) map.removeLayer(circle);
+            });
+            blastCircles = {};
+
+            if (groundZeroMarker) {
+                map.removeLayer(groundZeroMarker);
+                groundZeroMarker = null;
+            }
+        }
+
+        // Simulate blast with animation
+        function simulateBlast() {
+            const citySelect = document.getElementById('city-select');
+            const customAddress = document.getElementById('custom-address').value;
+
+            if (!citySelect.value && !customAddress) {
+                alert('Please select a city or enter a custom address first.');
+                return;
+            }
+
+            // Clear existing blast
+            clearBlast();
+
+            // Animate the blast circles appearing
+            setTimeout(() => {
+                drawBlast(currentLocation.lat, currentLocation.lng);
+            }, 100);
+        }
+
+        // Draw blast circles with animation
+        function drawBlast(lat, lng) {
+            const bomb = bombData[currentBomb];
+            const radii = calculateRadii(bomb.yield);
+
+            // Store the circles in order from largest to smallest for staggered animation
+            const circleOrder = [];
+
+            // Thermal radiation (outermost)
+            if (!hiddenZones.has('thermal')) {
+                const thermalCircle = L.circle([lat, lng], {
+                    radius: radii.thermalRadiation,
+                    fillColor: '#c8c800',
+                    fillOpacity: 0,
+                    color: '#c8c800',
+                    weight: 1,
+                    className: 'blast-circle'
+                }).addTo(map);
+                thermalCircle.bindPopup(createZonePopup(
+                    'Thermal Radiation Zone',
+                    radii.thermalRadiation,
+                    'Third-degree burns to exposed skin. Most flammable materials ignite. Fire storms likely in urban areas. Windows shatter from thermal shock.'
+                ));
+                blastCircles.thermal = thermalCircle;
+                circleOrder.push({ circle: thermalCircle, opacity: 0.2 });
+            }
+
+            // Light damage
+            if (!hiddenZones.has('light')) {
+                const lightCircle = L.circle([lat, lng], {
+                    radius: radii.lightBlast,
+                    fillColor: '#ffff00',
+                    fillOpacity: 0,
+                    color: '#ffff00',
+                    weight: 1,
+                    className: 'blast-circle'
+                }).addTo(map);
+                lightCircle.bindPopup(createZonePopup(
+                    'Light Damage Zone (0.25 psi)',
+                    radii.lightBlast,
+                    'Windows shatter causing injuries. Light frame buildings damaged. 25% injuries, 1% fatalities among exposed population.'
+                ));
+                blastCircles.light = lightCircle;
+                circleOrder.push({ circle: lightCircle, opacity: 0.3 });
+            }
+
+            // Moderate damage
+            if (!hiddenZones.has('moderate')) {
+                const moderateCircle = L.circle([lat, lng], {
+                    radius: radii.moderateBlast,
+                    fillColor: '#ffc800',
+                    fillOpacity: 0,
+                    color: '#ffc800',
+                    weight: 1,
+                    className: 'blast-circle'
+                }).addTo(map);
+                moderateCircle.bindPopup(createZonePopup(
+                    'Moderate Damage Zone (1 psi)',
+                    radii.moderateBlast,
+                    'Residential buildings moderately damaged. Walls crack, roofs cave in. 50% injuries, 5% fatalities. Most vehicles damaged.'
+                ));
+                blastCircles.moderate = moderateCircle;
+                circleOrder.push({ circle: moderateCircle, opacity: 0.4 });
+            }
+
+            // Heavy blast damage
+            if (!hiddenZones.has('heavy')) {
+                const heavyCircle = L.circle([lat, lng], {
+                    radius: radii.heavyBlast,
+                    fillColor: '#ff6400',
+                    fillOpacity: 0,
+                    color: '#ff6400',
+                    weight: 1,
+                    className: 'blast-circle'
+                }).addTo(map);
+                heavyCircle.bindPopup(createZonePopup(
+                    'Heavy Blast Damage Zone (5 psi)',
+                    radii.heavyBlast,
+                    'Most buildings collapse. Concrete structures heavily damaged. 90% injuries, 50% fatalities. Total destruction of infrastructure.'
+                ));
+                blastCircles.heavy = heavyCircle;
+                circleOrder.push({ circle: heavyCircle, opacity: 0.5 });
+            }
+
+            // Fireball
+            if (!hiddenZones.has('fireball')) {
+                const fireballCircle = L.circle([lat, lng], {
+                    radius: radii.fireball,
+                    fillColor: '#ff0000',
+                    fillOpacity: 0,
+                    color: '#ff0000',
+                    weight: 2,
+                    className: 'blast-circle'
+                }).addTo(map);
+                fireballCircle.bindPopup(createZonePopup(
+                    'Fireball Zone',
+                    radii.fireball,
+                    'Complete vaporization. Temperatures exceed 100 million °C. Everything is instantly vaporized. 100% fatalities. Ground zero.'
+                ));
+                blastCircles.fireball = fireballCircle;
+                circleOrder.push({ circle: fireballCircle, opacity: 0.6 });
+            }
+
+            // Animate opacity for each circle with staggered timing
+            circleOrder.forEach((item, index) => {
+                setTimeout(() => {
+                    item.circle.setStyle({ fillOpacity: item.opacity });
+                }, index * 150);
+            });
+
+            // Add marker at ground zero after circles animate
+            setTimeout(() => {
+                groundZeroMarker = L.marker([lat, lng]).addTo(map)
+                    .bindPopup(`<div style="background: #222; color: #fff; padding: 12px; border-radius: 6px;">
+                        <h4 style="margin: 0 0 8px 0; color: #f77f00; font-family: 'Rubik Mono One', monospace; font-size: 14px; text-transform: uppercase;">${bomb.name}</h4>
+                        <p style="margin: 4px 0; font-size: 14px; font-family: 'Inter', sans-serif;"><strong>Yield:</strong> ${bomb.yield < 1 ? (bomb.yield * 1000) + ' tons TNT' : bomb.yield > 1000 ? (bomb.yield / 1000) + ' MT' : bomb.yield + ' kT'}</p>
+                        <p style="margin: 4px 0; font-size: 13px; color: #ccc; font-family: 'Inter', sans-serif;">Ground Zero - Point of detonation</p>
+                    </div>`);
+            }, circleOrder.length * 150);
+
+            // Adjust map view to show all circles
+            map.setView([lat, lng], getZoomLevel(radii.thermalRadiation));
+        }
+
+        // Calculate appropriate zoom level
+        function getZoomLevel(maxRadius) {
+            if (maxRadius > 50000) return 8;
+            if (maxRadius > 20000) return 9;
+            if (maxRadius > 10000) return 10;
+            if (maxRadius > 5000) return 11;
+            return 12;
+        }
+
+        // Search for custom address
+        async function searchAddress() {
+            const address = document.getElementById('custom-address').value;
+            if (!address) return;
+
+            try {
+                const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`);
+                const data = await response.json();
+
+                if (data.length > 0) {
+                    const lat = parseFloat(data[0].lat);
+                    const lng = parseFloat(data[0].lon);
+                    currentLocation = { lat, lng };
+                    map.setView([lat, lng], 12);
+                    document.getElementById('city-select').value = '';
+                    clearBlast(); // Clear blast when location changes
+                } else {
+                    alert('Location not found. Please try a different address.');
+                }
+            } catch (error) {
+                alert('Error searching for location. Please try again.');
+            }
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Handle weapon selection
+            document.getElementById('weapon-select').addEventListener('change', function () {
+                currentBomb = this.value;
+                updateWeaponDetails();
+                clearBlast(); // Clear blast when weapon changes
+            });
+
+            // Handle city selection
+            document.getElementById('city-select').addEventListener('change', function () {
+                if (this.value) {
+                    const [lat, lng] = this.value.split(',').map(Number);
+                    currentLocation = { lat, lng };
+                    map.setView([lat, lng], 12);
+                    clearBlast(); // Clear blast when city changes
+                }
+            });
+
+            // Allow Enter key for search
+            document.getElementById('custom-address').addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    searchAddress();
+                }
+            });
+
+            // Handle unit selection (simplified since it's hidden)
+            useMetric = false; // Always use imperial by default
+
+            // Handle legend clicks
+            document.querySelectorAll('.legend-item').forEach(item => {
+                item.addEventListener('click', function () {
+                    const zone = this.dataset.zone;
+
+                    if (hiddenZones.has(zone)) {
+                        hiddenZones.delete(zone);
+                        this.classList.remove('disabled');
+                    } else {
+                        hiddenZones.add(zone);
+                        this.classList.add('disabled');
+                    }
+
+                    // If blast is currently shown, redraw it
+                    if (Object.keys(blastCircles).length > 0) {
+                        clearBlast();
+                        simulateBlast();
+                    }
+                });
+            });
+        }
+
+        // Update weapon details display
+        function updateWeaponDetails() {
+            const weapon = bombData[currentBomb];
+            const detailsDiv = document.getElementById('weapon-details');
+            detailsDiv.innerHTML = `
+                <div class="bomb-name">${weapon.name}</div>
+                <div class="bomb-details">${weapon.details}</div>
+            `;
+        }
+    </script>
+</body>
+
+</html>

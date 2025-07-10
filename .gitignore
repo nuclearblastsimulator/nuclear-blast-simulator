@@ -1,0 +1,51 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.idea
+*.swp
+*.swo
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Firebase
+firebase-dist
+.firebase
+firebase-debug.log
+
+# Video files (optional - remove if you want to track videos)
+public/videos/*.mp4
+public/videos/optimized
+public/thumbnails/*.jpg
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+
+audio_extracted
+transcriptions
+
+netlify-dist
+# Local Netlify folder
+.netlify
+
+.routes.json
+.nuxt-routes.json
+*.bak
+version.json
