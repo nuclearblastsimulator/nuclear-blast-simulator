@@ -22,16 +22,6 @@ const { Content } = await entry.render();
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
   <article class="container mx-auto px-4 py-12 max-w-4xl">
-    <!-- Header -->
-    <header class="text-center mb-12">
-      <h1 class="text-4xl md:text-5xl font-mono font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-        {entry.data.title}
-      </h1>
-      <p class="text-xl opacity-80 max-w-3xl mx-auto">
-        {entry.data.description}
-      </p>
-    </header>
-    
     <!-- Content -->
     <div class="prose prose-lg max-w-none">
       <Content />
