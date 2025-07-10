@@ -347,5 +347,185 @@
     "strategic": "Strategic Nuclear Weapons",
     "modern-threats": "Modern Threats",
     "test": "Tests & Comparisons"
-  }
+  },
+  "roadmapNodes": [
+    {
+      "id": "atomic-structure",
+      "title": "Atomic Structure",
+      "type": "foundational",
+      "difficulty": "Beginner",
+      "time": "2-3 hours",
+      "position": { "x": "50%", "y": "120px" },
+      "description": "Protons, neutrons, electrons, and isotopes",
+      "links": ["terms/alpha-decay.md", "terms/half-life.md"]
+    },
+    {
+      "id": "radioactivity",
+      "title": "Radioactivity Basics",
+      "type": "foundational",
+      "difficulty": "Beginner",
+      "time": "3-4 hours",
+      "position": { "x": "25%", "y": "180px" },
+      "description": "Alpha, beta, gamma radiation and decay processes",
+      "links": ["history/discovery-of-radioactivity.md"]
+    },
+    {
+      "id": "energy-matter",
+      "title": "Energy & Matter",
+      "type": "foundational",
+      "difficulty": "Beginner",
+      "time": "2-3 hours",
+      "position": { "x": "75%", "y": "180px" },
+      "description": "E=mc² and mass-energy equivalence",
+      "links": ["terms/binding-energy.md"]
+    },
+    {
+      "id": "nuclear-forces",
+      "title": "Nuclear Forces",
+      "type": "core",
+      "difficulty": "Intermediate",
+      "time": "4-5 hours",
+      "position": { "x": "30%", "y": "280px" },
+      "description": "Strong and weak nuclear forces, stability",
+      "links": ["terms/critical-mass.md"]
+    },
+    {
+      "id": "fission",
+      "title": "Nuclear Fission",
+      "type": "core",
+      "difficulty": "Intermediate",
+      "time": "5-6 hours",
+      "position": { "x": "50%", "y": "240px" },
+      "description": "Chain reactions and energy release",
+      "links": ["terms/fission.md", "history/nuclear-fission-discovery.md"]
+    },
+    {
+      "id": "fusion",
+      "title": "Nuclear Fusion",
+      "type": "core",
+      "difficulty": "Intermediate",
+      "time": "4-5 hours",
+      "position": { "x": "70%", "y": "280px" },
+      "description": "Fusion reactions and stellar processes",
+      "links": ["terms/fusion.md", "terms/tokamak.md"]
+    },
+    {
+      "id": "neutron-physics",
+      "title": "Neutron Physics",
+      "type": "core",
+      "difficulty": "Intermediate",
+      "time": "6-7 hours",
+      "position": { "x": "20%", "y": "360px" },
+      "description": "Neutron interactions and cross-sections",
+      "links": ["terms/neutron-cross-section.md", "history/neutron-discovery.md"]
+    },
+    {
+      "id": "reactor-basics",
+      "title": "Reactor Basics",
+      "type": "practical",
+      "difficulty": "Intermediate",
+      "time": "6-8 hours",
+      "position": { "x": "50%", "y": "360px" },
+      "description": "Control rods, moderators, coolants",
+      "links": ["terms/control-rods.md", "terms/moderator.md", "terms/coolant.md"]
+    },
+    {
+      "id": "reactor-types",
+      "title": "Reactor Types",
+      "type": "practical",
+      "difficulty": "Intermediate",
+      "time": "8-10 hours",
+      "position": { "x": "80%", "y": "360px" },
+      "description": "PWR, BWR, and advanced designs",
+      "links": ["terms/pressurized-water-reactor.md", "terms/boiling-water-reactor.md"]
+    },
+    {
+      "id": "safety-systems",
+      "title": "Safety Systems",
+      "type": "practical",
+      "difficulty": "Intermediate",
+      "time": "5-6 hours",
+      "position": { "x": "30%", "y": "460px" },
+      "description": "Defense in depth, containment, SCRAM",
+      "links": ["terms/defense-in-depth.md", "terms/containment.md", "terms/scram.md"]
+    },
+    {
+      "id": "radiation-protection",
+      "title": "Radiation Protection",
+      "type": "practical",
+      "difficulty": "Intermediate",
+      "time": "4-5 hours",
+      "position": { "x": "70%", "y": "460px" },
+      "description": "ALARA principle and safety measures",
+      "links": ["terms/alara-principle.md"]
+    },
+    {
+      "id": "advanced-reactors",
+      "title": "Advanced Reactors",
+      "type": "advanced",
+      "difficulty": "Advanced",
+      "time": "10-12 hours",
+      "position": { "x": "25%", "y": "560px" },
+      "description": "Generation IV, SMRs, thorium cycle",
+      "links": ["terms/generation-iv.md", "terms/small-modular-reactors.md", "terms/thorium-cycle.md"]
+    },
+    {
+      "id": "nuclear-economics",
+      "title": "Nuclear Economics",
+      "type": "advanced",
+      "difficulty": "Advanced",
+      "time": "8-10 hours",
+      "position": { "x": "50%", "y": "580px" },
+      "description": "LCOE, financing, policy factors",
+      "links": []
+    },
+    {
+      "id": "waste-management",
+      "title": "Waste Management",
+      "type": "advanced",
+      "difficulty": "Advanced",
+      "time": "6-8 hours",
+      "position": { "x": "75%", "y": "560px" },
+      "description": "Storage, disposal, reprocessing",
+      "links": []
+    },
+    {
+      "id": "weapons-physics",
+      "title": "Weapons Physics",
+      "type": "advanced",
+      "difficulty": "Advanced",
+      "time": "8-10 hours",
+      "position": { "x": "35%", "y": "680px" },
+      "description": "Fission/fusion weapons, effects",
+      "links": ["terms/nuclear-fallout.md", "terms/electromagnetic-pulse.md"]
+    },
+    {
+      "id": "proliferation",
+      "title": "Proliferation",
+      "type": "advanced",
+      "difficulty": "Advanced",
+      "time": "6-8 hours",
+      "position": { "x": "65%", "y": "680px" },
+      "description": "NPT, safeguards, dual-use technology",
+      "links": ["terms/non-proliferation-treaty.md", "terms/enrichment.md"]
+    }
+  ],
+  "roadmapConnections": [
+    { "from": "atomic-structure", "to": "radioactivity", "type": "required" },
+    { "from": "atomic-structure", "to": "energy-matter", "type": "required" },
+    { "from": "radioactivity", "to": "nuclear-forces", "type": "required" },
+    { "from": "energy-matter", "to": "fusion", "type": "required" },
+    { "from": "nuclear-forces", "to": "fission", "type": "required" },
+    { "from": "fission", "to": "neutron-physics", "type": "required" },
+    { "from": "fission", "to": "reactor-basics", "type": "required" },
+    { "from": "neutron-physics", "to": "reactor-basics", "type": "required" },
+    { "from": "reactor-basics", "to": "reactor-types", "type": "required" },
+    { "from": "reactor-basics", "to": "safety-systems", "type": "required" },
+    { "from": "safety-systems", "to": "radiation-protection", "type": "recommended" },
+    { "from": "reactor-types", "to": "advanced-reactors", "type": "required" },
+    { "from": "advanced-reactors", "to": "nuclear-economics", "type": "recommended" },
+    { "from": "radiation-protection", "to": "waste-management", "type": "recommended" },
+    { "from": "fission", "to": "weapons-physics", "type": "recommended" },
+    { "from": "reactor-basics", "to": "proliferation", "type": "recommended" }
+  ]
 }
