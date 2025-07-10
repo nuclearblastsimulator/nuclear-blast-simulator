@@ -2,11 +2,11 @@
 
 An educational web application that visualizes the devastating effects of nuclear weapons on any location worldwide. This interactive tool helps users understand the scale and impact of nuclear detonations through realistic blast radius calculations, damage zone visualizations, and comprehensive educational content covering nuclear history, technology, and policy.
 
-![Nuclear Blast Simulator](https://img.shields.io/badge/version-2.0.2-blue.svg)
+![Nuclear Blast Simulator](https://img.shields.io/github/package-json/v/nuclearblastsimulator/nuclear-blast-simulator)
 ![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
 ![Node.js](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)
 ![Astro](https://img.shields.io/badge/astro-v5.11-orange.svg)
-![Articles](https://img.shields.io/badge/articles-115-green.svg)
+![Articles](https://img.shields.io/badge/articles-extensive-green.svg)
 
 ## 🎯 Purpose
 
@@ -21,18 +21,18 @@ This simulator serves as an educational resource to help people understand:
 ## 🚀 Features
 
 ### Interactive Blast Simulator
-- **Weapon Selection**: 40+ weapons from TNT to Tsar Bomba
+- **Weapon Selection**: Dozens of weapons from TNT to Tsar Bomba
 - **Detonation Options**: Air burst or surface burst
 - **Real-time Visualization**: Interactive map with damage zones
 - **Detailed Effects**: Click zones for casualty estimates and damage info
 
 ### Educational Content
-- **Nuclear Terms Glossary**: 38 comprehensive articles covering:
+- **Nuclear Terms Glossary**: Comprehensive articles covering:
   - Nuclear physics fundamentals
   - Reactor technology and power generation
   - Weapons systems and delivery methods
   - Treaties, policy, and international relations
-- **Historical Articles**: 77 in-depth articles across 7 categories:
+- **Historical Articles**: Dozens of in-depth articles across multiple categories:
   - **Cold War Crises**: Major nuclear incidents and close calls
   - **Foundational Events**: Key moments in nuclear history
   - **Key Figures**: Important scientists, leaders, and policymakers
@@ -58,7 +58,7 @@ This simulator serves as an educational resource to help people understand:
 - **Framework**: Astro v5.11 (Static Site Generator)
 - **Frontend**: Vanilla JavaScript, HTML5, CSS3
 - **Styling**: Tailwind CSS v4.1.11 with Typography plugin
-- **Content**: Astro Content Collections with 115 Markdown articles
+- **Content**: Astro Content Collections with extensive Markdown articles
 - **Mapping**: Leaflet.js with OpenStreetMap tiles
 - **Fonts**: Inter (body text) and Rubik Mono One (headings)
 - **Icons**: Custom SVG graphics and atomic-themed design
@@ -101,10 +101,10 @@ nuclear-blast-simulator/
 │   │   ├── index.astro     # Homepage with hero, features, screenshots
 │   │   ├── simulator/      # Interactive blast simulator
 │   │   │   └── index.astro
-│   │   ├── terms/          # Nuclear terminology (38 articles)
+│   │   ├── terms/          # Nuclear terminology articles
 │   │   │   ├── index.astro # Terms listing page
 │   │   │   └── [...slug].astro # Dynamic term pages
-│   │   ├── history/        # Historical content (77 articles)
+│   │   ├── history/        # Historical content articles
 │   │   │   ├── index.astro # History listing page
 │   │   │   └── [...slug].astro # Dynamic history pages
 │   │   ├── timeline.astro  # Nuclear history timeline
@@ -117,8 +117,8 @@ nuclear-blast-simulator/
 │   │   └── BaseLayout.astro # Base layout with navigation
 │   ├── content/            # Content collections
 │   │   ├── config.ts       # Content schema definitions
-│   │   ├── terms/          # 38 nuclear terminology articles
-│   │   └── history/        # 77 historical articles in 7 categories
+│   │   ├── terms/          # Nuclear terminology articles
+│   │   └── history/        # Historical articles in multiple categories
 │   │       ├── cold-war-crises/
 │   │       ├── foundational-events/
 │   │       ├── key-figures/
@@ -305,7 +305,7 @@ This tool is designed to promote understanding of nuclear weapons effects and su
 Made with ❤️ in Knoxville, TN
 
 ### Content Sources
-All 115 educational articles include authoritative sources and references from:
+All educational articles include authoritative sources and references from:
 - Government agencies and national laboratories
 - Academic institutions and research organizations
 - International organizations and treaties
