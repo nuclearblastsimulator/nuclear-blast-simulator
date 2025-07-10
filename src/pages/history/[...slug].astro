@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import type { CollectionEntry } from 'astro:content';
+import { getReadingMeta } from '../../utils/reading-time.js';
 
 export async function getStaticPaths() {
   const history = await getCollection('history');
@@ -22,6 +23,17 @@ const { Content } = await entry.render();
 
 // Check if content has the summary marker
 const hasTabSeparator = entry.body.includes('<!-- SUMMARY_END -->');
+
+// Extract summary and full content for reading time calculation
+let summaryText = '';
+let fullText = '';
+if (hasTabSeparator) {
+  const parts = entry.body.split('<!-- SUMMARY_END -->');
+  summaryText = parts[0] || '';
+  fullText = parts[1] || '';
+}
+
+const readingMeta = hasTabSeparator ? getReadingMeta(summaryText, fullText) : null;
 
 // Dynamically group articles by their directory structure
 const categories: Record<string, any[]> = {};
@@ -130,9 +142,9 @@ const currentSlug = entry.slug.replace('history/', '');
           <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
             <span class="text-secondary text-sm font-medium">Historical Article</span>
           </div>
-          <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            {entry.data.title}
-          </h1>
+          <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Topic: {entry.data.title}
+          </h2>
           <p class="text-xl text-base-content/70 max-w-3xl">
             {entry.data.description}
           </p>
@@ -140,27 +152,68 @@ const currentSlug = entry.slug.replace('history/', '');
       </section>
 
       <!-- Content Section -->
-      <article class="container max-w-4xl mx-auto px-6 py-12">
+      <article class="container max-w-4xl mx-auto px-6 py-12 history-article">
+        <!-- Reading progress indicator -->
+        <div id="reading-progress" class="reading-progress"></div>
+        
         <div class="bg-base-100 rounded-3xl border border-base-300 p-8 md:p-12 shadow-xl">
-          {hasTabSeparator ? (
+          {hasTabSeparator && readingMeta ? (
             <>
-              <!-- Summary Toggle Button -->
-              <div class="flex justify-end mb-6">
-                <button id="summary-toggle" class="btn btn-outline btn-sm gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <!-- Reading metadata -->
+              <div class="reading-meta mb-6">
+                <span class="summary-indicator">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  {readingMeta.summaryReadTime} min overview
+                </span>
+                <span class="full-indicator">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                  Show Summary
-                </button>
+                  {readingMeta.fullReadTime} min deep dive
+                </span>
               </div>
               
-              <!-- Article Content -->
+              <!-- Article Content with Progressive Disclosure -->
               <div id="article-content" class="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:leading-relaxed prose-a:transition-colors prose-a:duration-200 prose-strong:text-secondary prose-li:marker:text-secondary/60">
-                <Content />
+                <!-- Summary content (always visible) -->
+                <div class="article-summary" id="summary-content">
+                  <div class="summary-text" id="summary-text">
+                    <!-- Summary content will be populated by JavaScript -->
+                  </div>
+                  
+                  <!-- Expansion trigger -->
+                  <div class="expansion-trigger" id="expansion-trigger">
+                    <button class="continue-reading-btn" id="expand-btn">
+                      <span class="btn-text">Continue Reading</span>
+                      <span class="btn-subtitle">Explore the complete story</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="arrow h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                
+                <!-- Full article (hidden initially) -->
+                <div class="full-article" id="full-article">
+                  <div class="article-transition">
+                    <hr class="section-divider">
+                  </div>
+                  
+                  <div class="full-content" id="full-content">
+                    <!-- Full content will be populated by JavaScript -->
+                  </div>
+                </div>
+                
+                <!-- Hidden container for original content -->
+                <div class="original-content" style="display: none;">
+                  <Content />
+                </div>
               </div>
             </>
           ) : (
-            <!-- Regular content -->
+            <!-- Regular content without summary/full split -->
             <div class="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:leading-relaxed prose-a:transition-colors prose-a:duration-200 prose-strong:text-secondary prose-li:marker:text-secondary/60">
               <Content />
             </div>
@@ -208,6 +261,193 @@ const currentSlug = entry.slug.replace('history/', '');
   </div>
   
   <script>
+    // Progressive Disclosure Article Display
+    class ArticleDisplay {
+      constructor() {
+        this.expandBtn = document.getElementById('expand-btn');
+        this.summaryContent = document.getElementById('summary-content');
+        this.summaryText = document.getElementById('summary-text');
+        this.fullArticle = document.getElementById('full-article');
+        this.fullContent = document.getElementById('full-content');
+        this.expansionTrigger = document.getElementById('expansion-trigger');
+        this.progressBar = document.getElementById('reading-progress');
+        this.originalContent = document.querySelector('.original-content');
+        
+        this.isExpanded = false;
+        this.autoExpandTriggered = false;
+        
+        if (this.originalContent && this.summaryText && this.fullContent) {
+          this.init();
+        }
+      }
+      
+      init() {
+        // Extract and populate summary and full content
+        this.populateContent();
+        
+        // Manual expansion handler
+        if (this.expandBtn) {
+          this.expandBtn.addEventListener('click', () => this.expandArticle());
+        }
+        
+        // Scroll-based auto-expansion
+        this.setupScrollTrigger();
+        
+        // Reading progress
+        this.setupReadingProgress();
+        
+        // Handle URL hash for direct linking to full article
+        if (window.location.hash === '#full') {
+          this.expandArticle(false);
+        }
+      }
+      
+      populateContent() {
+        // Get all content from the original container
+        const allNodes = Array.from(this.originalContent.childNodes);
+        let summaryHTML = '';
+        let fullHTML = '';
+        let foundMarker = false;
+        
+        allNodes.forEach(node => {
+          if (node.nodeType === Node.COMMENT_NODE && node.textContent.trim() === 'SUMMARY_END') {
+            foundMarker = true;
+          } else if (!foundMarker) {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+              summaryHTML += node.outerHTML;
+            } else if (node.nodeType === Node.TEXT_NODE) {
+              summaryHTML += node.textContent;
+            }
+          } else {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+              fullHTML += node.outerHTML;
+            } else if (node.nodeType === Node.TEXT_NODE) {
+              fullHTML += node.textContent;
+            }
+          }
+        });
+        
+        // Populate the sections
+        this.summaryText.innerHTML = summaryHTML;
+        this.fullContent.innerHTML = fullHTML;
+      }
+      
+      setupScrollTrigger() {
+        if (!this.expansionTrigger) return;
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !this.autoExpandTriggered && !this.isExpanded) {
+              // User has scrolled to the expansion trigger
+              this.suggestExpansion();
+            }
+          });
+        }, {
+          threshold: 0.8,
+          rootMargin: '0px 0px -100px 0px'
+        });
+        
+        // Observe the expansion trigger area
+        observer.observe(this.expansionTrigger);
+      }
+      
+      suggestExpansion() {
+        if (this.isExpanded || this.autoExpandTriggered) return;
+        
+        this.autoExpandTriggered = true;
+        
+        // Add gentle pulse animation to suggest expansion
+        if (this.expandBtn) {
+          this.expandBtn.classList.add('pulse-suggestion');
+        }
+        
+        // Auto-expand after short delay if user continues scrolling
+        setTimeout(() => {
+          if (this.isUserStillReading() && !this.isExpanded) {
+            this.expandArticle(true);
+          }
+        }, 2000);
+      }
+      
+      isUserStillReading() {
+        // Check if user is still engaged (hasn't left page, is scrolling, etc.)
+        return document.hasFocus() && !document.hidden;
+      }
+      
+      expandArticle(animated = true) {
+        if (this.isExpanded) return;
+        
+        this.isExpanded = true;
+        
+        if (animated) {
+          // Smooth expansion animation
+          this.fullArticle.style.maxHeight = this.fullArticle.scrollHeight + 'px';
+          this.fullArticle.classList.add('expanding');
+          
+          setTimeout(() => {
+            this.fullArticle.classList.add('expanded');
+            this.fullArticle.style.maxHeight = 'none';
+          }, 50);
+        } else {
+          // Instant expansion
+          this.fullArticle.classList.add('expanded');
+        }
+        
+        // Update button state
+        if (this.expandBtn) {
+          this.expandBtn.innerHTML = `
+            <span class="btn-text">Reading Full Article</span>
+            <span class="btn-subtitle">Scroll to continue</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          `;
+          this.expandBtn.disabled = true;
+          this.expandBtn.classList.add('btn-success');
+        }
+        
+        // Update URL for sharing
+        if (history.pushState) {
+          history.pushState(null, null, '#full');
+        }
+        
+        // Analytics tracking
+        this.trackExpansion(animated ? 'auto' : 'manual');
+      }
+      
+      setupReadingProgress() {
+        window.addEventListener('scroll', () => {
+          const article = document.querySelector('.history-article');
+          if (!article) return;
+          
+          const articleHeight = article.offsetHeight;
+          const windowHeight = window.innerHeight;
+          const scrolled = window.scrollY;
+          const articleTop = article.offsetTop;
+          
+          // Calculate reading progress
+          const progress = Math.min(
+            Math.max((scrolled - articleTop) / (articleHeight - windowHeight), 0),
+            1
+          );
+          
+          if (this.progressBar) {
+            this.progressBar.style.width = (progress * 100) + '%';
+          }
+        });
+      }
+      
+      trackExpansion(method) {
+        // Analytics tracking for expansion events
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'article_expand', {
+            'method': method,
+            'article_slug': window.location.pathname.split('/').pop()
+          });
+        }
+      }
+    }
+    
     // Scroll to the active article in the sidebar on page load
     document.addEventListener('DOMContentLoaded', () => {
       const activeArticle = document.querySelector('.active-article');
@@ -217,7 +457,7 @@ const currentSlug = entry.slug.replace('history/', '');
         // Make sure the parent collapse is expanded
         const parentCollapse = activeArticle.closest('.collapse');
         if (parentCollapse) {
-          const input = parentCollapse.querySelector('input[type="radio"]');
+          const input = parentCollapse.querySelector('input[type="checkbox"]');
           if (input) {
             input.checked = true;
           }
@@ -236,61 +476,10 @@ const currentSlug = entry.slug.replace('history/', '');
         }, 100);
       }
       
-      // Summary toggle functionality for articles with summary/full content
-      const articleContent = document.getElementById('article-content');
-      const summaryToggle = document.getElementById('summary-toggle');
-      
-      if (articleContent && summaryToggle) {
-        let summaryContent = '';
-        let fullContent = '';
-        let showingSummary = false;
-        
-        // Split content at the marker
-        const allNodes = Array.from(articleContent.childNodes);
-        let foundMarker = false;
-        
-        allNodes.forEach(node => {
-          if (node.nodeType === Node.COMMENT_NODE && node.textContent.trim() === 'SUMMARY_END') {
-            foundMarker = true;
-          } else if (!foundMarker) {
-            summaryContent += node.outerHTML || node.textContent || '';
-          } else {
-            fullContent += node.outerHTML || node.textContent || '';
-          }
-        });
-        
-        // Store original full content (default view)
-        const originalContent = articleContent.innerHTML;
-        
-        // Button click handler
-        summaryToggle.addEventListener('click', () => {
-          if (showingSummary) {
-            // Switch to full article
-            articleContent.innerHTML = fullContent;
-            summaryToggle.innerHTML = `
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              Show Summary
-            `;
-            showingSummary = false;
-          } else {
-            // Switch to summary
-            articleContent.innerHTML = summaryContent;
-            summaryToggle.innerHTML = `
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-              </svg>
-              Show Full Article
-            `;
-            showingSummary = true;
-          }
-        });
-        
-        // Show full article by default
-        if (fullContent) {
-          articleContent.innerHTML = fullContent;
-        }
+      // Initialize progressive disclosure for articles with summary/full content
+      const hasProgressiveContent = document.querySelector('.original-content');
+      if (hasProgressiveContent) {
+        new ArticleDisplay();
       }
     });
   </script>
