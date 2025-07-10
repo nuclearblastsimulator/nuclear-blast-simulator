@@ -7,7 +7,7 @@ description: 'The Strategic Arms Reduction Treaties between the U.S. and Soviet 
 
 ## The Greatest Nuclear Disarmament Success
 
-The Strategic Arms Reduction Treaties (START) represent the most successful nuclear disarmament agreements in history, reducing deployed U.S. and Russian strategic nuclear warheads from over 12,000 to 1,550 each. Beginning with START I in 1991, these treaties fundamentally transformed the nuclear relationship between the world's two largest nuclear powers, moving from an era of unlimited nuclear buildup to one of structured reductions and verification.
+The Strategic Arms Reduction Treaties (START) represent the most successful [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) disarmament agreements in history, reducing deployed U.S. and Russian strategic nuclear warheads from over 12,000 to 1,550 each. Beginning with START I in 1991, these treaties fundamentally transformed the nuclear relationship between the world's two largest nuclear powers, moving from an era of unlimited nuclear buildup to one of structured reductions and verification.
 
 ## Background
 
@@ -16,7 +16,7 @@ The Strategic Arms Reduction Treaties (START) represent the most successful nucl
 - **Massive arsenals**: U.S. and Soviet Union built enormous nuclear arsenals
 - **Arms race**: Decades of nuclear competition and buildup
 - **SALT limitations**: Previous treaties only limited growth, not reductions
-- **Strategic instability**: Thousands of nuclear weapons created instability
+- **Strategic instability**: Thousands of nuclear [weapons](/history/weapons-technology/nuclear-weapons-design) created instability
 
 ### Changing Dynamics
 
@@ -61,7 +61,7 @@ The Strategic Arms Reduction Treaties (START) represent the most successful nucl
 - **Soviet collapse**: Soviet Union collapsed before ratification
 - **Successor states**: Belarus, Kazakhstan, Ukraine inherited Soviet weapons
 - **Lisbon Protocol**: Extended treaty to successor states
-- **Denuclearization**: Three states gave up nuclear weapons
+- **Denuclearization**: Three states gave up [nuclear weapons](/terms/nuclear-effects/yield-comparison)
 
 ## START II Treaty
 
@@ -207,7 +207,7 @@ The Strategic Arms Reduction Treaties (START) represent the most successful nucl
 
 - **Deeper cuts**: Proposals for deeper nuclear reductions
 - **Multilateral involvement**: Including other nuclear weapon states
-- **Tactical weapons**: Including tactical nuclear weapons
+- **Tactical weapons**: Including [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
 - **Non-deployed weapons**: Including non-deployed weapons
 
 ### Expanded Scope

@@ -7,7 +7,7 @@ description: "Nuclear deterrence is the strategy of preventing enemy attack by m
 
 ## Overview
 
-Nuclear deterrence is the strategy of preventing enemy attack by maintaining the credible threat of devastating nuclear retaliation. Based on the logic that rational actors won't initiate conflicts they cannot win, deterrence has prevented nuclear war for nearly 80 years.
+[Nuclear](/history/modern-developments/nuclear-deterrence-theory) deterrence is the strategy of preventing enemy attack by maintaining the credible threat of devastating nuclear retaliation. Based on the logic that rational actors won't initiate conflicts they cannot win, deterrence has prevented nuclear war for nearly 80 years.
 
 ## Core Principles
 
@@ -16,11 +16,11 @@ Nuclear deterrence relies on fundamental assumptions:
 - **Rational actors**: Decision-makers weigh costs and benefits
 - **Credible threats**: Enemies must believe retaliation is certain
 - **Unacceptable damage**: Costs exceed any possible benefits
-- **Survivable forces**: Weapons survive first strikes
+- **Survivable forces**: [Weapons](/terms/nuclear-effects/yield-comparison) survive first strikes
 
 ## Historical Development
 
-Deterrence theory emerged with nuclear weapons:
+Deterrence theory emerged with [nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons):
 
 - **Brodie's insight (1946)**: Military purpose shifts from winning to preventing war
 - **Cold War application**: Superpower nuclear competition

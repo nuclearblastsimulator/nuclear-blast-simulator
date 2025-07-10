@@ -7,7 +7,7 @@ description: 'The Soviet physicist who helped create the hydrogen bomb later bec
 
 ## From Bomb Builder to Peace Advocate
 
-Andrei Dmitrievich Sakharov (1921-1989) was a Soviet theoretical physicist who played a crucial role in developing the Soviet Union's nuclear weapons, including the hydrogen bomb, before becoming one of the world's most prominent advocates for nuclear disarmament, human rights, and civil liberties. His transformation from weapons scientist to peace activist earned him the Nobel Peace Prize in 1975 and made him a symbol of the scientist's moral responsibility in the nuclear age.
+Andrei Dmitrievich Sakharov (1921-1989) was a Soviet theoretical physicist who played a crucial role in developing the Soviet Union's [nuclear](/history/modern-developments/nuclear-weapons-free-zones) [weapons](/history/nuclear-programs/nuclear-weapons-by-country), including the hydrogen bomb, before becoming one of the world's most prominent advocates for nuclear disarmament, human rights, and civil liberties. His transformation from weapons scientist to peace activist earned him the Nobel Peace Prize in 1975 and made him a symbol of the scientist's moral responsibility in the nuclear age.
 
 ## Early Life and Education
 
@@ -36,7 +36,7 @@ Andrei Dmitrievich Sakharov (1921-1989) was a Soviet theoretical physicist who p
 
 ### Recruitment to Weapons Program
 
-- **1948**: Recruited to Soviet nuclear weapons program
+- **1948**: Recruited to Soviet [nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons) program
 - **Igor Kurchatov**: Worked under scientific director Kurchatov
 - **Top secret**: Assigned to highly classified nuclear weapons research
 - **Arzamas-16**: Moved to secret nuclear weapons laboratory
@@ -383,7 +383,7 @@ The decision to join the weapons program was not difficult for Sakharov at the t
 
 Sakharov was assigned to Arzamas-16, a secret nuclear weapons laboratory in the Soviet Union. The city, known officially as Sarov, was a closed facility where the Soviet Union's most important nuclear weapons research was conducted. Life at Arzamas-16 was comfortable but isolated, with excellent facilities and resources but strict security measures and limited contact with the outside world. This environment fostered intense scientific collaboration but also created a sense of separation from the broader implications of the work being done.
 
-The Soviet nuclear weapons program was led by Igor Kurchatov, a brilliant scientist and administrator who had been chosen by Stalin to direct the effort. Kurchatov was known for his ability to combine scientific excellence with practical results, and he created an environment where theoretical physicists like Sakharov could work closely with engineers and technicians to solve the complex problems of nuclear weapons design. This collaborative approach was essential to the program's success and gave Sakharov valuable experience in translating theoretical knowledge into practical applications.
+The Soviet nuclear weapons program was led by Igor Kurchatov, a brilliant scientist and administrator who had been chosen by Stalin to direct the effort. Kurchatov was known for his ability to combine scientific excellence with practical results, and he created an environment where theoretical physicists like Sakharov could work closely with engineers and technicians to solve the complex problems of [nuclear weapons design](/history/weapons-technology/nuclear-weapons-design). This collaborative approach was essential to the program's success and gave Sakharov valuable experience in translating theoretical knowledge into practical applications.
 
 The work at Arzamas-16 was technically challenging and intellectually stimulating. Sakharov was working on the most advanced problems in nuclear physics, using his theoretical knowledge to solve practical problems that had never been encountered before. The Soviet nuclear weapons program was racing against time to catch up with the American program, and the pressure to achieve results was intense. However, the scientific challenges were fascinating, and Sakharov threw himself into the work with enthusiasm and dedication.
 
@@ -397,7 +397,7 @@ The hydrogen bomb, or thermonuclear weapon, uses nuclear fusion rather than fiss
 
 Sakharov's breakthrough came with his development of the "layer cake" design for the hydrogen bomb. This approach alternated layers of fissionable and fusionable materials, using the energy from fission to trigger fusion reactions. The design was different from the American approach but proved to be effective and efficient. Sakharov's theoretical work on the physics of fusion reactions was crucial to making the design work, and his ability to understand both the theoretical principles and practical constraints was essential to the program's success.
 
-The first Soviet hydrogen bomb test in 1953 was a spectacular success, demonstrating that the Soviet Union had achieved parity with the United States in nuclear weapons technology. The bomb produced a yield of 400 kilotons, far more powerful than the atomic bombs used against Japan. The test established the Soviet Union as a major nuclear power and confirmed Sakharov's reputation as one of the world's leading nuclear physicists.
+The first Soviet hydrogen bomb test in 1953 was a spectacular success, demonstrating that the Soviet Union had achieved parity with the United States in nuclear weapons technology. The bomb produced a [yield](/terms/nuclear-effects/yield-comparison) of 400 kilotons, far more powerful than the atomic bombs used against Japan. The test established the Soviet Union as a major nuclear power and confirmed Sakharov's reputation as one of the world's leading nuclear physicists.
 
 However, the success of the hydrogen bomb also marked the beginning of Sakharov's growing unease about nuclear weapons. The enormous destructive power of the weapon was sobering, and the implications of a world armed with such weapons were beginning to trouble him. The test also demonstrated the potential for even more powerful weapons, raising questions about whether there were any limits to the destructive power that humans could create.
 

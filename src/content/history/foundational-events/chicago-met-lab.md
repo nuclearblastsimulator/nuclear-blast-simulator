@@ -7,7 +7,7 @@ description: 'The Chicago Metallurgical Laboratory was the Manhattan Project fac
 
 ## Birthplace of the Nuclear Chain Reaction
 
-The Chicago Metallurgical Laboratory was the Manhattan Project facility at the University of Chicago where Enrico Fermi achieved the first controlled nuclear chain reaction on December 2, 1942, ushering in the nuclear age. Known as the "Met Lab," this secret research facility brought together the world's leading nuclear physicists to develop the scientific foundation for nuclear weapons. The laboratory's work on Chicago Pile-1 proved that nuclear fission could be controlled and sustained, providing the theoretical and practical basis for both nuclear reactors and nuclear weapons, fundamentally changing the course of human history.
+The Chicago Metallurgical Laboratory was the Manhattan Project facility at the University of Chicago where Enrico Fermi achieved the first controlled [nuclear](/history/weapons-technology/nuclear-weapons-design) chain reaction on December 2, 1942, ushering in the nuclear age. Known as the "Met Lab," this secret research facility brought together the world's leading nuclear physicists to develop the scientific foundation for nuclear [weapons](/terms/nuclear-effects/yield-comparison). The laboratory's work on Chicago Pile-1 proved that nuclear fission could be controlled and sustained, providing the theoretical and practical basis for both nuclear reactors and [nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons), fundamentally changing the course of human history.
 
 ## Historical Origins
 
@@ -100,7 +100,7 @@ The Chicago Metallurgical Laboratory was the Manhattan Project facility at the U
 - **Uranium metallurgy**: Uranium metal processing
 - **Graphite purification**: Graphite purification methods
 - **Nuclear materials**: Nuclear materials research
-- **Plutonium chemistry**: Plutonium chemistry research
+- **[Plutonium](/terms/nuclear-physics/plutonium) chemistry**: Plutonium chemistry research
 
 ## Plutonium Research
 

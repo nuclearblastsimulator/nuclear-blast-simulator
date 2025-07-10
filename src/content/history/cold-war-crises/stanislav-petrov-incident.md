@@ -7,7 +7,7 @@ description: 'On September 26, 1983, Soviet officer Stanislav Petrov prevented n
 
 ## The Man Who Saved the World
 
-On September 26, 1983, Soviet Lieutenant Colonel Stanislav Petrov was on duty at the Serpukhov-15 missile attack early warning station when the computer systems indicated that the United States had launched nuclear missiles at the Soviet Union. Despite protocol requiring him to report the attack immediately, Petrov chose to trust his instincts over the computers, classifying the alert as a false alarm. His decision prevented a nuclear war that could have destroyed civilization.
+On September 26, 1983, Soviet Lieutenant Colonel Stanislav Petrov was on duty at the Serpukhov-15 missile attack early warning station when the computer systems indicated that the United States had launched [nuclear](/terms/weapons-delivery/tactical-nuclear-weapons) missiles at the Soviet Union. Despite protocol requiring him to report the attack immediately, Petrov chose to trust his instincts over the computers, classifying the alert as a false alarm. His decision prevented a nuclear war that could have destroyed civilization.
 
 ## Background
 
@@ -184,7 +184,7 @@ On September 26, 1983, Soviet Lieutenant Colonel Stanislav Petrov was on duty at
 - **Computer errors**: Even sophisticated systems can malfunction
 - **Human oversight**: Need for human oversight of automated systems
 - **Multiple confirmation**: Importance of multiple independent confirmation
-- **System design**: Need for better system design and testing
+- **System [design](/history/weapons-technology/nuclear-weapons-design)**: Need for better system design and testing
 
 ### Human Factors
 
@@ -202,14 +202,14 @@ On September 26, 1983, Soviet Lieutenant Colonel Stanislav Petrov was on duty at
 
 ## Connection to Nuclear Weapons
 
-The Stanislav Petrov incident was entirely about nuclear weapons and their dangers:
+The Stanislav Petrov incident was entirely about nuclear [weapons](/history/nuclear-programs/nuclear-weapons-by-country) and their dangers:
 
 - **Nuclear early warning**: Incident involved nuclear attack warning system
 - **Nuclear response**: False alarm could have triggered nuclear response
 - **Nuclear war**: Petrov's decision prevented potential nuclear war
 - **Nuclear command**: Highlighted vulnerabilities in nuclear command systems
 
-The incident demonstrated how nuclear weapons create situations where technical failures combined with human error could trigger global catastrophe, making individual judgment crucial for human survival.
+The incident demonstrated how [nuclear weapons](/terms/nuclear-effects/yield-comparison) create situations where technical failures combined with human error could trigger global catastrophe, making individual judgment crucial for human survival.
 
 <!-- SUMMARY_END -->
 

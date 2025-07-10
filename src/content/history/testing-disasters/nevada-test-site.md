@@ -7,14 +7,14 @@ description: 'From 1951 to 1992, the Nevada Test Site hosted 928 nuclear tests, 
 
 ## America's Nuclear Proving Ground
 
-From 1951 to 1992, the Nevada Test Site (now Nevada National Security Site) served as the primary location for U.S. nuclear weapons testing. Located 65 miles northwest of Las Vegas, this 1,360-square-mile facility witnessed 928 nuclear tests, including 828 underground tests and 100 atmospheric tests. The site played a crucial role in developing America's nuclear arsenal while exposing thousands of military personnel, scientists, and civilians to radioactive fallout.
+From 1951 to 1992, the Nevada Test Site (now Nevada National Security Site) served as the primary location for U.S. [nuclear](/history/testing-disasters/nuclear-testing-health-effects) [weapons](/terms/nuclear-effects/yield-comparison) testing. Located 65 miles northwest of Las Vegas, this 1,360-square-mile facility witnessed 928 nuclear tests, including 828 underground tests and 100 atmospheric tests. The site played a crucial role in developing America's nuclear arsenal while exposing thousands of military personnel, scientists, and civilians to radioactive fallout.
 
 ## Background
 
 ### Site Selection
 
 - **Remote location**: Chosen for distance from major population centers
-- **Geographic features**: Desert terrain suitable for nuclear testing
+- **Geographic features**: Desert terrain suitable for [nuclear testing](/history/weapons-technology/nuclear-testing)
 - **Weather patterns**: Prevailing winds generally blew fallout away from populated areas
 - **Federal land**: Already under federal control, facilitating security
 - **Proximity to Los Alamos**: Close enough to Los Alamos weapons laboratory
@@ -330,7 +330,7 @@ Despite its enormous human and environmental costs, the Nevada Test Site made si
 
 The atmospheric tests at the Nevada site provided crucial data about nuclear weapons effects that could not be obtained any other way. Scientists studied how nuclear explosions affected different types of structures, vehicles, and equipment, providing information that was essential for military planning and civil defense. The tests also generated data about thermal radiation, electromagnetic pulses, and other nuclear weapons effects that were crucial for understanding how nuclear weapons might be used in warfare.
 
-The underground testing program advanced scientific understanding of nuclear weapons physics and design. The tests provided data about how nuclear weapons performed under different conditions and helped scientists develop new weapons designs. The program also contributed to the development of computer models used to simulate nuclear weapons performance, knowledge that became crucial when nuclear testing was eventually ended.
+The underground testing program advanced scientific understanding of nuclear weapons physics and [design](/history/weapons-technology/nuclear-weapons-design). The tests provided data about how nuclear weapons performed under different conditions and helped scientists develop new weapons designs. The program also contributed to the development of computer models used to simulate nuclear weapons performance, knowledge that became crucial when nuclear testing was eventually ended.
 
 The Nevada Test Site also served as a laboratory for studying radiation effects on biological systems. Scientists conducted experiments on plants, animals, and microorganisms to understand how radiation affected living systems. This research contributed to the development of radiation protection standards, medical treatments for radiation exposure, and our understanding of the long-term health effects of radiation.
 
@@ -376,7 +376,7 @@ The human cost of nuclear testing at the Nevada Test Site was largely ignored fo
 
 The first major breakthrough came with the passage of the Radiation Exposure Compensation Act (RECA) in 1990, which provided compensation for certain categories of people exposed to radiation from nuclear testing. The act covered atomic veterans who participated in nuclear testing operations, civilians living in designated downwind areas, and uranium miners who were exposed to radiation during uranium production. However, the compensation was limited in scope and amount, and many affected people were excluded from coverage.
 
-The RECA program required claimants to prove that they had been exposed to radiation from nuclear testing and that their illnesses were related to that exposure. This was often difficult to establish, as many people lacked adequate documentation of their exposure and the relationship between radiation exposure and specific illnesses was sometimes uncertain. The program also required claimants to have lived in designated areas during specific time periods, excluding many people who were exposed but lived outside the designated zones.
+The RECA program required claimants to prove that they had been exposed to radiation from nuclear testing and that their illnesses were related to that exposure. This was often difficult to establish, as many people lacked adequate documentation of their exposure and the relationship between radiation exposure and specific illnesses was sometimes uncertain. The program also required claimants to have lived in designated areas during specific time periods, excluding many people who were exposed but lived outside the designated [zones](/history/modern-developments/nuclear-weapons-free-zones).
 
 The compensation program was expanded several times in response to new evidence and advocacy efforts. The 2000 amendments to RECA expanded coverage to include additional downwind counties and additional categories of uranium workers. However, the program remained limited in scope, and many affected people continued to be excluded from compensation.
 

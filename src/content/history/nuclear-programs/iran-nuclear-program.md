@@ -7,7 +7,7 @@ description: "Tehran has been the center of Iran's nuclear program and internati
 
 ## The Center of Nuclear Diplomacy
 
-Tehran has been the center of Iran's nuclear program and international negotiations, from the development of nuclear capabilities to the Joint Comprehensive Plan of Action (JCPOA) agreement and subsequent diplomatic efforts. Iran's nuclear program, begun in the 1950s with U.S. assistance under the Atoms for Peace program, has evolved into one of the most significant nuclear proliferation challenges of the 21st century. From the halls of the Iranian parliament to international negotiating venues, Tehran coordinates Iran's nuclear policy, balancing domestic political pressures with international diplomatic demands while maintaining the country's nuclear technological capabilities.
+Tehran has been the center of Iran's [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) program and international negotiations, from the development of nuclear capabilities to the Joint Comprehensive Plan of Action (JCPOA) agreement and subsequent diplomatic efforts. Iran's nuclear program, begun in the 1950s with U.S. assistance under the Atoms for Peace program, has evolved into one of the most significant nuclear proliferation challenges of the 21st century. From the halls of the Iranian parliament to international negotiating venues, Tehran coordinates Iran's nuclear policy, balancing domestic political pressures with international diplomatic demands while maintaining the country's nuclear technological capabilities.
 
 ## Historical Development
 
@@ -23,7 +23,7 @@ Tehran has been the center of Iran's nuclear program and international negotiati
 - **Nuclear cooperation**: Extensive international nuclear cooperation
 - **NPT signature**: Signed Nuclear Non-Proliferation Treaty (1968)
 - **Ambitious plans**: Plans for 23,000 MW nuclear capacity
-- **Weapons consideration**: Alleged weapons program consideration
+- **[Weapons](/history/modern-developments/nuclear-weapons-free-zones) consideration**: Alleged weapons program consideration
 
 ### Islamic Revolution Impact
 
@@ -90,7 +90,7 @@ Tehran has been the center of Iran's nuclear program and international negotiati
 - **Enrichment capacity**: 19,000+ installed centrifuges
 - **Stockpile**: Multi-ton low-enriched uranium stockpile
 - **Technical knowledge**: Advanced nuclear technical knowledge
-- **Breakout capability**: Potential nuclear weapons breakout capability
+- **Breakout capability**: Potential [nuclear weapons](/terms/nuclear-effects/yield-comparison) breakout capability
 
 ## International Negotiations
 
@@ -370,7 +370,7 @@ The story of Iran's nuclear program is ultimately a story about the complex rela
 
 ### The Shah's Nuclear Vision
 
-The origins of Iran's nuclear program can be traced to the ambitious modernization plans of Shah Mohammad Reza Pahlavi, who envisioned nuclear technology as a cornerstone of Iran's transformation into a modern, industrialized nation. The Shah's nuclear program began in 1957 with Iran's participation in the U.S. Atoms for Peace program, which provided peaceful nuclear technology to American allies as part of the Cold War competition with the Soviet Union.
+The origins of Iran's nuclear program can be traced to the ambitious modernization plans of Shah Mohammad Reza Pahlavi, who envisioned nuclear technology as a cornerstone of Iran's transformation into a modern, industrialized nation. The Shah's nuclear program began in 1957 with Iran's participation in the U.S. Atoms for Peace program, which provided peaceful nuclear technology to American allies as part of the Cold War competition with the [Soviet](/history/cold-war-crises/moscow-nuclear-program) Union.
 
 The early nuclear program was characterized by extensive international cooperation and ambitious plans for nuclear power development. The United States provided Iran with a small research reactor, which began operation in 1967 at the Tehran Research Reactor. This facility, designed to produce medical isotopes and conduct nuclear research, became the foundation of Iran's nuclear infrastructure and remains operational today.
 
@@ -562,7 +562,7 @@ The regional security environment will also play a crucial role in shaping the p
 
 The international community's response to the crisis will be critical in determining whether Iran decides to develop nuclear weapons. The effectiveness of sanctions, the credibility of military threats, and the availability of diplomatic alternatives will all influence Iranian decision-making. The international community's ability to maintain unity and coordination will be particularly important in addressing the crisis.
 
-Technological developments may also influence the program's future, including advances in uranium enrichment, missile technology, and nuclear weapons design. The proliferation of nuclear technology and the availability of external assistance could accelerate the program's development, while improved monitoring and verification capabilities could constrain it.
+Technological developments may also influence the program's future, including advances in uranium enrichment, missile technology, and [nuclear weapons design](/history/weapons-technology/nuclear-weapons-design). The proliferation of nuclear technology and the availability of external assistance could accelerate the program's development, while improved monitoring and verification capabilities could constrain it.
 
 ### Conclusion: The Endless Nuclear Equation
 

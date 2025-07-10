@@ -7,7 +7,7 @@ description: "The thorium fuel cycle is an alternative nuclear fuel cycle that u
 
 ## Overview
 
-The thorium fuel cycle is an alternative nuclear fuel cycle that uses thorium-232 as fertile material to breed uranium-233, which serves as the fissile fuel. This cycle offers several potential advantages over the conventional uranium-plutonium cycle, including greater fuel abundance, reduced long-lived waste, and enhanced proliferation resistance—representing a road not taken in nuclear power's development.
+The thorium fuel cycle is an alternative [nuclear](/history/weapons-technology/nuclear-weapons-design) fuel cycle that uses thorium-232 as fertile material to breed uranium-233, which serves as the fissile fuel. This cycle offers several potential advantages over the conventional uranium-[plutonium](/terms/nuclear-physics/plutonium) cycle, including greater fuel abundance, reduced long-lived waste, and enhanced proliferation resistance—representing a road not taken in nuclear power's development.
 
 ## Basic Physics
 
@@ -15,7 +15,7 @@ The thorium fuel cycle is an alternative nuclear fuel cycle that uses thorium-23
 - **Fertile material**: Cannot sustain chain reaction alone
 - **Neutron capture**: Absorbs neutrons to become protactinium-233
 - **Decay chain**: Pa-233 → U-233 (fissile) + beta particles
-- **Half-life**: Th-232 has 14.1 billion year half-life
+- **[Half-life](/terms/nuclear-physics/half-life)**: Th-232 has 14.1 billion year half-life
 
 ### Breeding Process
 - **Neutron absorption**: Th-232 + n → Th-233
@@ -238,7 +238,7 @@ The thorium fuel cycle is an alternative nuclear fuel cycle that uses thorium-23
 
 ## Relevance to Nuclear Weapons
 
-Thorium cycle technology has limited relevance to nuclear weapons:
+Thorium cycle technology has limited relevance to nuclear [weapons](/terms/nuclear-effects/yield-comparison):
 - **U-233 production**: Could theoretically produce weapons material
 - **U-232 contamination**: Makes weapons use very difficult
 - **Proliferation resistance**: Inherently difficult to weaponize

@@ -7,7 +7,7 @@ description: 'Nuclear materials like uranium and plutonium are the essential com
 
 ## The Building Blocks of Nuclear Weapons
 
-Nuclear materials are the fundamental components required for nuclear weapons, representing the critical bottleneck in nuclear weapons development. These special radioactive isotopes - primarily highly enriched uranium and weapons-grade plutonium - can sustain nuclear chain reactions that release enormous amounts of energy. The production, enrichment, and processing of nuclear materials requires sophisticated industrial facilities and advanced technology, making the control of these materials central to nuclear non-proliferation efforts worldwide.
+[Nuclear](/history/weapons-technology/nuclear-weapons-design) materials are the fundamental components required for nuclear [weapons](/history/nuclear-programs/nuclear-weapons-by-country), representing the critical bottleneck in [nuclear weapons](/terms/nuclear-effects/yield-comparison) development. These special radioactive isotopes - primarily highly enriched uranium and weapons-grade plutonium - can sustain nuclear chain reactions that release enormous amounts of energy. The production, enrichment, and processing of nuclear materials requires sophisticated industrial facilities and advanced technology, making the control of these materials central to nuclear non-proliferation efforts worldwide.
 
 ## Types of Nuclear Materials
 
@@ -455,7 +455,7 @@ The proliferation of nuclear materials represents one of the most significant se
 
 Horizontal proliferation - the spread of nuclear weapons to additional states - has been driven primarily by the acquisition of nuclear materials production capabilities. Countries that have developed nuclear weapons since the NPT entered into force have typically done so by developing indigenous uranium enrichment or plutonium reprocessing capabilities. The proliferation of these "sensitive" nuclear technologies has been a particular concern for non-proliferation efforts.
 
-The threat of nuclear terrorism has added a new dimension to proliferation concerns. The possibility that non-state actors might acquire nuclear materials has led to increased emphasis on nuclear security measures and international cooperation. The threat is particularly concerning because terrorist groups might not require the same technical sophistication as state actors, potentially being satisfied with crude improvised nuclear devices.
+The threat of [nuclear terrorism](/history/modern-developments/nuclear-terrorism) has added a new dimension to proliferation concerns. The possibility that non-state actors might acquire nuclear materials has led to increased emphasis on nuclear security measures and international cooperation. The threat is particularly concerning because terrorist groups might not require the same technical sophistication as state actors, potentially being satisfied with crude improvised nuclear devices.
 
 The A.Q. Khan network, revealed in the early 2000s, demonstrated how private networks can facilitate the spread of nuclear technology. The network supplied centrifuge technology and weapons designs to several countries, showing how proliferation can occur outside official government channels. This highlighted the need for better controls on dual-use technology and improved international cooperation on nuclear security.
 

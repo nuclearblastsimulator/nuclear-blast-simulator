@@ -7,7 +7,7 @@ description: "SCRAM is the emergency shutdown system for nuclear reactors, desig
 
 ## Overview
 
-SCRAM is the emergency shutdown system for nuclear reactors, designed to rapidly insert control rods and shut down the nuclear chain reaction. The term originally stood for "Safety Control Rod Axe Man" from the early Chicago Pile-1 reactor, but is now commonly interpreted as "Shutdown of Control Rod Axe Man" or simply as an emergency shutdown command—a system that can mean the difference between a safe shutdown and a nuclear meltdown.
+SCRAM is the emergency shutdown system for nuclear reactors, designed to rapidly insert [control rods](/terms/reactor-technology/control-rods) and shut down the nuclear chain reaction. The term originally stood for "Safety Control Rod Axe Man" from the early Chicago Pile-1 reactor, but is now commonly interpreted as "Shutdown of Control Rod Axe Man" or simply as an emergency shutdown command—a system that can mean the difference between a safe shutdown and a nuclear meltdown.
 
 ## Historical Origin
 
@@ -28,7 +28,7 @@ SCRAM is the emergency shutdown system for nuclear reactors, designed to rapidly
 
 ### Triggering Conditions
 - **High neutron flux**: Excessive power levels
-- **Low reactor coolant flow**: Inadequate heat removal
+- **Low reactor [coolant](/terms/reactor-technology/coolant) flow**: Inadequate heat removal
 - **High reactor coolant temperature**: Overheating conditions
 - **Low reactor coolant pressure**: Loss of coolant scenarios
 - **Containment high pressure**: Accident conditions
@@ -46,9 +46,9 @@ SCRAM is the emergency shutdown system for nuclear reactors, designed to rapidly
 - **Insertion time**: Typically 2-4 seconds for full insertion
 
 #### Boiling Water Reactors (BWR)
-- **Hydraulic drive**: High-pressure water drives rods upward
+- **Hydraulic drive**: High-pressure [water](/terms/reactor-technology/boiling-water-reactor) drives rods upward
 - **Scram valves**: Rapid venting of drive water
-- **Accumulator tanks**: Pressurized water for rod insertion
+- **Accumulator tanks**: [Pressurized](/terms/reactor-technology/pressurized-water-reactor) water for rod insertion
 - **Insertion time**: Typically 3-5 seconds for full insertion
 
 ### Reactor Protection System
@@ -115,7 +115,7 @@ SCRAM is the emergency shutdown system for nuclear reactors, designed to rapidly
 
 ### Heavy Water Reactors
 - **Liquid zone control**: Poison injection systems
-- **Moderator dump**: Drain heavy water moderator
+- **[Moderator](/terms/reactor-technology/moderator) dump**: Drain heavy water moderator
 - **Control rod insertion**: Similar to light water reactors
 - **Shutdown systems**: Multiple independent systems
 

@@ -7,7 +7,7 @@ description: 'All nuclear weapon states are modernizing their arsenals with new 
 
 ## The Trillion-Dollar Nuclear Renaissance
 
-Despite commitments to nuclear disarmament, all nuclear weapon states are currently engaged in extensive nuclear modernization programs, upgrading their weapons, delivery systems, and supporting infrastructure. These programs, collectively costing over a trillion dollars globally, involve developing new nuclear weapons, modernizing delivery platforms, and enhancing command and control systems. While advocates argue modernization maintains safety and reliability of smaller arsenals, critics see it as a new nuclear arms race that contradicts disarmament obligations.
+Despite commitments to [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) disarmament, all nuclear weapon states are currently engaged in extensive nuclear modernization programs, upgrading their [weapons](/terms/nuclear-effects/yield-comparison), delivery systems, and supporting infrastructure. These programs, collectively costing over a trillion dollars globally, involve developing new [nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones), modernizing delivery platforms, and enhancing command and control systems. While advocates argue modernization maintains safety and reliability of smaller arsenals, critics see it as a new nuclear arms race that contradicts disarmament obligations.
 
 ## Global Modernization Overview
 
@@ -175,7 +175,7 @@ Despite commitments to nuclear disarmament, all nuclear weapon states are curren
 
 ### Pakistan
 
-- **Tactical weapons**: Developing tactical nuclear weapons
+- **Tactical weapons**: Developing [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
 - **Delivery systems**: Expanding delivery system capabilities
 - **Naval development**: Developing sea-based nuclear forces
 - **Production expansion**: Expanding nuclear production

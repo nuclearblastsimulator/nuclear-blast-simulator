@@ -41,12 +41,12 @@ Common alpha emitters:
 ## Applications
 
 - **Smoke detectors**: Americium-241 alpha source
-- **Nuclear batteries**: Plutonium-238 in space missions
+- **[Nuclear](/terms/nuclear-effects/yield-comparison) batteries**: [Plutonium](/terms/nuclear-physics/plutonium)-238 in space missions
 - **Research**: Alpha particle scattering experiments
 
 ## Relevance to Nuclear Weapons
 
-Alpha decay is important in nuclear weapons because:
+Alpha decay is important in nuclear [weapons](/terms/weapons-delivery/tactical-nuclear-weapons) because:
 - Many fissile materials are alpha emitters
 - Alpha decay contributes to plutonium aging
 - Affects weapon reliability over time
@@ -60,6 +60,6 @@ Alpha decay is important in nuclear weapons because:
 
 - [International Atomic Energy Agency (IAEA)](https://www.iaea.org) - Nuclear science and safety standards
 - [Nuclear Regulatory Commission](https://www.nrc.gov) - Radiation protection and nuclear physics
-- [Los Alamos National Laboratory](https://www.lanl.gov) - Nuclear weapons physics and research
+- [Los Alamos National Laboratory](https://www.lanl.gov) - [Nuclear weapons](/history/foundational-events/los-alamos) physics and research
 - [Lawrence Livermore National Laboratory](https://www.llnl.gov) - Nuclear science and technology
 - [Atomic Heritage Foundation](https://www.atomicheritage.org) - Nuclear history and science education

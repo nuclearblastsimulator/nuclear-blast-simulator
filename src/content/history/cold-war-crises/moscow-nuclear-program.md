@@ -7,7 +7,7 @@ description: "Moscow served as the command center for the Soviet Union's nuclear
 
 ## The Heart of Soviet Nuclear Power
 
-Moscow served as the command center for the Soviet Union's nuclear weapons program, coordinating the development of the world's largest nuclear arsenal during the Cold War nuclear standoff with the United States. From the Kremlin's nuclear decision-making to the sprawling scientific institutes and military facilities surrounding the capital, Moscow represented the epicenter of Soviet nuclear power. The city housed the political leadership, military command structures, and scientific institutions that built and maintained an arsenal of over 45,000 nuclear warheads at its peak, fundamentally shaping the global nuclear order.
+Moscow served as the command center for the Soviet Union's [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) [weapons](/terms/nuclear-effects/yield-comparison) program, coordinating the development of the world's largest nuclear arsenal during the Cold War nuclear standoff with the United States. From the Kremlin's nuclear decision-making to the sprawling scientific institutes and military facilities surrounding the capital, Moscow represented the epicenter of Soviet nuclear power. The city housed the political leadership, military command structures, and scientific institutions that built and maintained an arsenal of over 45,000 nuclear warheads at its peak, fundamentally shaping the global nuclear order.
 
 ## Historical Development
 
@@ -62,7 +62,7 @@ Moscow served as the command center for the Soviet Union's nuclear weapons progr
 - **1943**: Established as Laboratory No. 2
 - **Igor Kurchatov**: Leading nuclear physicist
 - **Reactor development**: First Soviet nuclear reactors
-- **Weapons physics**: Nuclear weapons physics research
+- **Weapons physics**: [Nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones) physics research
 
 ### Research Institutes
 
@@ -128,7 +128,7 @@ Moscow served as the command center for the Soviet Union's nuclear weapons progr
 
 ### Arzamas-16 (Sarov)
 
-- **Nuclear weapons design**: Primary weapons design facility
+- **[Nuclear weapons design](/history/weapons-technology/nuclear-weapons-design)**: Primary weapons design facility
 - **Closed city**: Secret nuclear city
 - **Weapons testing**: Nuclear weapons testing
 - **Research and development**: Advanced nuclear research
@@ -222,7 +222,7 @@ Moscow served as the command center for the Soviet Union's nuclear weapons progr
 
 - **6,000 warheads**: Approximately 6,000 nuclear warheads
 - **Strategic forces**: Modern strategic nuclear forces
-- **Tactical weapons**: Tactical nuclear weapons
+- **Tactical weapons**: [Tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
 - **Modernization**: Ongoing modernization program
 
 ### Nuclear Doctrine

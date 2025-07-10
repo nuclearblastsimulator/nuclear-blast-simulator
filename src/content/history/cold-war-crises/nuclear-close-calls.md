@@ -7,7 +7,7 @@ description: 'Nuclear close calls are incidents where nuclear weapons were nearl
 
 ## Near Misses with Nuclear Catastrophe
 
-Nuclear close calls are incidents where nuclear weapons were nearly launched or detonated accidentally, highlighting the constant risk of nuclear catastrophe through technical failures, miscommunication, or human error. Throughout the nuclear age, numerous incidents have brought the world perilously close to nuclear war or accidental nuclear detonation, often being averted only by individual heroism, last-minute discoveries, or sheer luck. These incidents demonstrate the inherent dangers of maintaining nuclear arsenals and the challenges of preventing nuclear accidents in complex technological systems.
+[Nuclear](/terms/weapons-delivery/tactical-nuclear-weapons) close calls are incidents where nuclear [weapons](/history/nuclear-programs/nuclear-weapons-by-country) were nearly launched or detonated accidentally, highlighting the constant risk of nuclear catastrophe through technical failures, miscommunication, or human error. Throughout the nuclear age, numerous incidents have brought the world perilously close to nuclear war or accidental nuclear detonation, often being averted only by individual heroism, last-minute discoveries, or sheer luck. These incidents demonstrate the inherent dangers of maintaining nuclear arsenals and the challenges of preventing nuclear accidents in complex technological systems.
 
 ## Types of Nuclear Close Calls
 
@@ -171,7 +171,7 @@ Nuclear close calls are incidents where nuclear weapons were nearly launched or 
 ### Palomares Incident (1966)
 
 - **January 17, 1966**: B-52 collision over Spain
-- **Nuclear weapons**: Four nuclear weapons involved
+- **[Nuclear weapons](/terms/nuclear-effects/yield-comparison)**: Four nuclear weapons involved
 - **Conventional explosion**: Two weapons had conventional explosions
 - **Recovery operation**: Extensive recovery operation
 
@@ -285,7 +285,7 @@ Nuclear close calls are incidents where nuclear weapons were nearly launched or 
 
 ### Technical Safeguards
 
-- **Fail-safe systems**: Fail-safe system design
+- **Fail-safe systems**: Fail-safe system [design](/history/weapons-technology/nuclear-weapons-design)
 - **Redundant verification**: Redundant verification systems
 - **Automatic shutdown**: Automatic shutdown systems
 - **Error detection**: Error detection and correction

@@ -7,7 +7,7 @@ description: "Nuclear fallout is residual radioactive material created by nuclea
 
 ## Overview
 
-Nuclear fallout is residual radioactive material created by nuclear explosions that "falls out" of the radioactive cloud as deadly particles. The bulk of fallout radioactivity comes from fission products created by nuclear fission reactions in the weapon.
+[Nuclear](/history/weapons-technology/nuclear-testing) fallout is residual radioactive material created by nuclear explosions that "falls out" of the radioactive cloud as deadly particles. The bulk of fallout radioactivity comes from [fission](/terms/nuclear-physics/fission) products created by nuclear fission reactions in the [weapon](/history/weapons-technology/nuclear-weapon-effects).
 
 ## Formation Process
 
@@ -78,7 +78,7 @@ Fallout contamination affects ecosystems:
 Major fallout incidents demonstrate real-world effects:
 - **Castle Bravo**: 1954 test contaminated 7,000 square miles
 - **Chernobyl**: 1986 reactor accident spread fallout across Europe
-- **Atmospheric testing**: 1950s-60s tests contaminated global environment
+- **Atmospheric [testing](/history/testing-disasters/nuclear-testing-health-effects)**: 1950s-60s tests contaminated global environment
 - **Lucky Dragon**: Japanese fishing vessel contaminated in 1954
 
 ## Protection Measures
@@ -95,7 +95,7 @@ Fallout can be used as a weapon:
 - **Area denial**: Make regions uninhabitable
 - **Psychological warfare**: Create fear and panic
 - **Economic disruption**: Contaminate agricultural areas
-- **Enhanced radiation weapons**: Maximize fallout effects
+- **Enhanced radiation [weapons](/history/modern-developments/nuclear-weapons-free-zones)**: Maximize fallout effects
 
 ## Relevance to Nuclear Weapons
 

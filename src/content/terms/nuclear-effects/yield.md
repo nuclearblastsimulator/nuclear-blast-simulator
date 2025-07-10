@@ -7,7 +7,7 @@ description: "Nuclear yield measures a weapon's explosive power in TNT equivalen
 
 ## Overview
 
-Nuclear yield measures a weapon's explosive power in TNT equivalent, typically expressed in kilotons (thousands of tons of TNT) or megatons (millions of tons). This measurement quantifies the total energy release from nuclear fission and fusion reactions.
+[Nuclear](/terms/nuclear-effects/yield-comparison) yield measures a weapon's explosive power in TNT equivalent, typically expressed in kilotons (thousands of tons of TNT) or megatons (millions of tons). This measurement quantifies the total energy release from nuclear fission and fusion reactions.
 
 ## Units of Measurement
 
@@ -19,7 +19,7 @@ Nuclear yield uses standardized units:
 
 ## Historical Examples
 
-Major nuclear weapons demonstrate yield ranges:
+Major nuclear [weapons](/history/nuclear-programs/nuclear-weapons-by-country) demonstrate yield ranges:
 - **Little Boy (Hiroshima)**: 15 kilotons
 - **Fat Man (Nagasaki)**: 20 kilotons
 - **Castle Bravo**: 15 megatons (expected 5 megatons)
@@ -28,7 +28,7 @@ Major nuclear weapons demonstrate yield ranges:
 ## Modern Weapons
 
 Current nuclear arsenals contain various yield ranges:
-- **Tactical weapons**: 0.3-50 kilotons
+- **[Tactical](/terms/weapons-delivery/tactical-nuclear-weapons) weapons**: 0.3-50 kilotons
 - **Strategic warheads**: 100 kilotons to 1.5 megatons
 - **Largest deployed**: Up to 25 megatons
 - **Efficiency**: Modern weapons achieve 600-2,200 kt per ton of device weight
@@ -37,7 +37,7 @@ Current nuclear arsenals contain various yield ranges:
 
 Several factors determine nuclear yield:
 - **Fissile material**: Amount and quality of uranium/plutonium
-- **Weapon design**: Implosion efficiency and compression
+- **Weapon [design](/history/weapons-technology/nuclear-weapons-design)**: Implosion efficiency and compression
 - **Fusion stage**: Thermonuclear weapons add hydrogen fusion
 - **Tamper**: Materials that reflect neutrons back into core
 
@@ -59,7 +59,7 @@ Yield affects damage in predictable ways:
 
 ## Yield vs. Weight
 
-Nuclear weapons show dramatic miniaturization:
+[Nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones) show dramatic miniaturization:
 - **Early weapons**: 4-15 kilotons per ton of device weight
 - **Modern weapons**: 600-2,200 kilotons per ton
 - **Warhead size**: MIRV warheads weigh 200-500 kg each

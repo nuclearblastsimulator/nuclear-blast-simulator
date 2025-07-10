@@ -7,13 +7,13 @@ description: "The threat of nuclear terrorism has become a major 21st-century se
 
 ## The Ultimate Security Nightmare
 
-Nuclear terrorism represents one of the most serious security threats of the 21st century - the possibility that terrorist groups could acquire and use nuclear weapons or materials to cause mass casualties and social disruption. While technically challenging, the potential consequences of nuclear terrorism are so catastrophic that it has become a top priority for national security agencies worldwide. From securing nuclear materials to preventing the transfer of nuclear technology, the international community has developed extensive measures to address this threat.
+[Nuclear](/history/nuclear-programs/nuclear-weapons-by-country) terrorism represents one of the most serious security threats of the 21st century - the possibility that terrorist groups could acquire and use nuclear [weapons](/terms/weapons-delivery/tactical-nuclear-weapons) or materials to cause mass casualties and social disruption. While technically challenging, the potential consequences of nuclear terrorism are so catastrophic that it has become a top priority for national security agencies worldwide. From securing [nuclear materials](/history/weapons-technology/nuclear-materials) to preventing the transfer of nuclear technology, the international community has developed extensive measures to address this threat.
 
 ## Nature of the Threat
 
 ### Definition and Scope
 - **Nuclear terrorism**: Use of nuclear materials or weapons by non-state actors
-- **Spectrum of threats**: From "dirty bombs" to nuclear weapons
+- **Spectrum of threats**: From "dirty bombs" to [nuclear weapons](/terms/nuclear-effects/yield-comparison)
 - **Catastrophic potential**: Potential for massive casualties and destruction
 - **Psychological impact**: Terror effects beyond physical damage
 
@@ -448,7 +448,7 @@ As early as 1992, Osama bin Laden attempted to purchase uranium from a Sudanese 
 
 The 1998 meeting between Al-Qaeda representatives and Pakistani nuclear scientist Sultan Bashiruddin Mahmood raised more serious concerns. Mahmood, a former director of Pakistan's nuclear program, met with bin Laden and other Al-Qaeda leaders in Afghanistan. While the extent of any nuclear cooperation remains classified, the meeting highlighted the potential for terrorist groups to recruit nuclear expertise.
 
-Following the September 11 attacks, intelligence agencies discovered extensive Al-Qaeda research into nuclear weapons. Documents found in Afghanistan included detailed information about nuclear weapons design, radiological dispersal devices, and potential targets. The organization had systematically studied nuclear weapons effects and potential attack scenarios.
+Following the September 11 attacks, intelligence agencies discovered extensive Al-Qaeda research into nuclear weapons. Documents found in Afghanistan included detailed information about [nuclear weapons design](/history/weapons-technology/nuclear-weapons-design), radiological dispersal devices, and potential targets. The organization had systematically studied nuclear weapons effects and potential attack scenarios.
 
 ### Nuclear Facility Security Breaches
 

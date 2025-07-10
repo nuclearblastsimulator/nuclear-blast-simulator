@@ -7,7 +7,7 @@ description: "Pakistan's nuclear weapons program began in the 1970s, culminating
 
 ## The World's Sixth Nuclear Power
 
-Pakistan's nuclear weapons program began in the 1970s under the leadership of scientist A.Q. Khan and culminated in nuclear tests in 1998, establishing Pakistan as the world's sixth nuclear power. Driven primarily by security concerns over India's nuclear capabilities and conventional military superiority, Pakistan developed a nuclear arsenal designed to provide minimum credible deterrence. The program represents one of the most significant proliferation challenges of the late 20th century and continues to influence South Asian security dynamics and global nonproliferation efforts.
+Pakistan's [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) [weapons](/terms/nuclear-effects/yield-comparison) program began in the 1970s under the leadership of scientist A.Q. Khan and culminated in nuclear tests in 1998, establishing Pakistan as the world's sixth nuclear power. Driven primarily by security concerns over India's nuclear capabilities and conventional military superiority, Pakistan developed a nuclear arsenal designed to provide minimum credible deterrence. The program represents one of the most significant proliferation challenges of the late 20th century and continues to influence South Asian security dynamics and global nonproliferation efforts.
 
 ## Historical Development
 
@@ -69,7 +69,7 @@ Pakistan's nuclear weapons program began in the 1970s under the leadership of sc
 - **Implosion design**: Plutonium implosion warheads
 - **Highly enriched uranium**: HEU-based weapons
 - **Miniaturization**: Ongoing miniaturization efforts
-- **Tactical weapons**: Development of tactical nuclear weapons
+- **Tactical weapons**: Development of [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
 
 ### Fissile Material Production
 
@@ -133,7 +133,7 @@ Pakistan's nuclear weapons program began in the 1970s under the leadership of sc
 
 ### Command and Control
 
-- **National Command Authority**: Civilian control of nuclear weapons
+- **National Command Authority**: Civilian control of [nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones)
 - **Strategic Plans Division**: Military organization for nuclear security
 - **Command structure**: Clear command and control structure
 - **Safety measures**: Comprehensive safety measures
@@ -349,7 +349,7 @@ Pakistan's nuclear program was significantly aided by Chinese assistance, which 
 
 Chinese assistance was particularly important in the development of Pakistan's plutonium production capabilities. China provided assistance for the construction of Pakistan's heavy water reactor at Khushab, which began operation in 1998 and has been expanded with additional reactors. These reactors produce weapons-grade plutonium, providing Pakistan with an alternative path to nuclear weapons beyond uranium enrichment.
 
-Perhaps most significantly, China provided Pakistan with a proven nuclear weapons design, believed to be based on China's fourth nuclear test in 1966. This transfer of weapons design information dramatically reduced the time and resources required for Pakistan to develop nuclear weapons, as the country did not need to conduct extensive nuclear testing to validate its weapons designs. The Chinese design was reportedly compact and efficient, suitable for delivery by ballistic missiles.
+Perhaps most significantly, China provided Pakistan with a proven [nuclear weapons design](/history/weapons-technology/nuclear-weapons-design), believed to be based on China's fourth nuclear test in 1966. This transfer of weapons design information dramatically reduced the time and resources required for Pakistan to develop nuclear weapons, as the country did not need to conduct extensive nuclear testing to validate its weapons designs. The Chinese design was reportedly compact and efficient, suitable for delivery by ballistic missiles.
 
 The Chinese-Pakistani nuclear cooperation extended beyond weapons technology to include missile development. China provided Pakistan with M-11 and M-9 short-range ballistic missiles, which served as the basis for Pakistan's Shaheen missile series. China also provided technical assistance for the development of Pakistan's longer-range missiles, including the Ghauri series.
 

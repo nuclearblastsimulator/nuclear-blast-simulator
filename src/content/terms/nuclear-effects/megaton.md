@@ -7,7 +7,7 @@ description: "A megaton measures nuclear explosive yield equivalent to one milli
 
 ## Overview
 
-A megaton measures nuclear explosive yield equivalent to one million tons of TNT. This unit emerged during the hydrogen bomb era when kilotons became insufficient to describe weapons that could destroy entire regions.
+A megaton measures [nuclear](/terms/nuclear-effects/yield-comparison) explosive yield equivalent to one million tons of TNT. This unit emerged during the hydrogen bomb era when kilotons became insufficient to describe [weapons](/terms/weapons-delivery/tactical-nuclear-weapons) that could destroy entire regions.
 
 ## Definition and Scale
 
@@ -59,7 +59,7 @@ Megaton yields are measured through various methods:
 
 ## Relevance to Nuclear Weapons
 
-Megatons are crucial to understanding nuclear weapons because:
+Megatons are crucial to understanding [nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones) because:
 - They represent the ultimate destructive capability
 - Single weapons can destroy entire metropolitan areas
 - They demonstrate the leap from conventional to nuclear warfare

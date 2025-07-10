@@ -7,7 +7,7 @@ description: "The world's first nuclear-powered submarine, launched in 1954, rev
 
 ## The World's First Nuclear Submarine
 
-USS Nautilus (SSN-571), launched on January 21, 1954, was the world's first operational nuclear-powered submarine and one of the most revolutionary vessels in naval history. Powered by a nuclear reactor that eliminated the need to surface for air or refuel for months, Nautilus fundamentally changed naval warfare and demonstrated the peaceful applications of nuclear technology. The submarine's historic achievements, including the first underwater transit of the North Pole, captured global imagination and established the foundation for modern nuclear navies.
+USS Nautilus (SSN-571), launched on January 21, 1954, was the world's first operational [nuclear](/history/modern-developments/nuclear-modernization-programs)-powered submarine and one of the most revolutionary vessels in naval history. Powered by a nuclear reactor that eliminated the need to surface for air or refuel for months, Nautilus fundamentally changed naval warfare and demonstrated the peaceful applications of nuclear technology. The submarine's historic achievements, including the first underwater transit of the North Pole, captured global imagination and established the foundation for modern nuclear navies.
 
 ## Background and Development
 
@@ -16,7 +16,7 @@ USS Nautilus (SSN-571), launched on January 21, 1954, was the world's first oper
 - **Hyman Rickover**: Admiral Rickover championed nuclear submarine development
 - **Strategic advantage**: Submarines that could remain submerged indefinitely
 - **Technical challenge**: Miniaturizing nuclear reactors for submarine use
-- **Cold War imperative**: Need for technological advantage over Soviet Union
+- **Cold War imperative**: Need for technological advantage over [Soviet](/history/cold-war-crises/moscow-nuclear-program) Union
 
 ### Design Requirements
 
@@ -103,7 +103,7 @@ USS Nautilus (SSN-571), launched on January 21, 1954, was the world's first oper
 
 ### First Nuclear Voyage
 
-- **January 17, 1955**: Famous signal "Underway on nuclear power"
+- **January 17, 1955**: Famous signal "Underway on [nuclear power](/history/testing-disasters/chernobyl-disaster)"
 - **Revolutionary moment**: First nuclear-powered sea voyage
 - **Performance demonstration**: Demonstrated nuclear propulsion superiority
 - **Public relations**: Major public relations success
@@ -126,7 +126,7 @@ USS Nautilus (SSN-571), launched on January 21, 1954, was the world's first oper
 
 - **Intelligence gathering**: Covert intelligence gathering missions
 - **Soviet surveillance**: Monitoring Soviet naval activities
-- **Strategic deterrence**: Contribution to nuclear deterrence
+- **Strategic deterrence**: Contribution to [nuclear deterrence](/terms/nuclear-strategy/nuclear-deterrence)
 - **Technological demonstration**: Proof of U.S. technological superiority
 
 ## Operational History
@@ -404,7 +404,7 @@ The technical challenges of naval nuclear propulsion were immense. Nuclear react
 
 Rickover's approach to these challenges was revolutionary. He established the Naval Reactors program within the Atomic Energy Commission, creating a unique organizational structure that gave him unprecedented control over nuclear submarine development. He demanded the highest standards of design, construction, and operation, establishing quality control procedures that were far more rigorous than those used in other military programs. His insistence on perfection, though sometimes difficult for contractors and subordinates, established the foundation for the Navy's extraordinary nuclear safety record.
 
-The selection and training of nuclear-qualified personnel became one of Rickover's most important contributions to naval operations. He personally interviewed every officer assigned to nuclear submarines, looking for individuals with the intelligence, dedication, and integrity necessary for nuclear operations. The training programs he established were among the most rigorous in the military, requiring extensive study of nuclear physics, reactor engineering, and emergency procedures. This emphasis on training created a cadre of highly skilled nuclear professionals who would lead the Navy's nuclear programs for decades.
+The selection and training of nuclear-qualified personnel became one of Rickover's most important contributions to naval operations. He personally interviewed every officer assigned to [nuclear submarines](/history/nuclear-programs/nuclear-submarines), looking for individuals with the intelligence, dedication, and integrity necessary for nuclear operations. The training programs he established were among the most rigorous in the military, requiring extensive study of nuclear physics, reactor engineering, and emergency procedures. This emphasis on training created a cadre of highly skilled nuclear professionals who would lead the Navy's nuclear programs for decades.
 
 ### The Engineering Marvel
 

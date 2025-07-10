@@ -7,7 +7,7 @@ description: 'Nuclear weapons design involves complex physics and engineering to
 
 ## Engineering Armageddon
 
-Nuclear weapons design represents one of the most complex and consequential engineering challenges ever undertaken by humanity. These weapons harness the fundamental forces of atomic physics to create devices capable of releasing energy equivalent to thousands or millions of tons of conventional explosives. The design of nuclear weapons requires mastery of nuclear physics, precision engineering, advanced materials science, and sophisticated manufacturing techniques. From the first crude atomic bombs to modern thermonuclear weapons, nuclear weapons design has evolved to create increasingly powerful and efficient instruments of destruction.
+[Nuclear](/terms/nuclear-effects/yield-comparison) [weapons](/history/modern-developments/nuclear-weapons-free-zones) design represents one of the most complex and consequential engineering challenges ever undertaken by humanity. These weapons harness the fundamental forces of atomic physics to create devices capable of releasing energy equivalent to thousands or millions of tons of conventional explosives. The design of [nuclear weapons](/history/nuclear-programs/nuclear-weapons-by-country) requires mastery of nuclear physics, precision engineering, advanced materials science, and sophisticated manufacturing techniques. From the first crude atomic bombs to modern thermonuclear weapons, nuclear weapons design has evolved to create increasingly powerful and efficient instruments of destruction.
 
 ## Fundamental Design Principles
 
@@ -140,7 +140,7 @@ Nuclear weapons design represents one of the most complex and consequential engi
 
 - **Neutron bombs**: Enhanced neutron radiation weapons
 - **Reduced blast**: Reduced blast and thermal effects
-- **Tactical applications**: Intended for tactical use
+- **[Tactical](/terms/weapons-delivery/tactical-nuclear-weapons) applications**: Intended for tactical use
 - **Controversial weapons**: Highly controversial weapons
 
 ### Variable Yield Weapons
@@ -328,7 +328,7 @@ Nuclear weapons design represents one of the most complex and consequential engi
 - **Complexity**: Extreme complexity of weapon design
 - **Material requirements**: Difficult material requirements
 - **Manufacturing precision**: Precision manufacturing needs
-- **Testing requirements**: Need for nuclear testing
+- **Testing requirements**: Need for [nuclear testing](/history/weapons-technology/nuclear-testing)
 
 ### International Controls
 

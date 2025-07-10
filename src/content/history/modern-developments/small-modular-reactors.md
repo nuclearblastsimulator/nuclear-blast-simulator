@@ -7,7 +7,7 @@ description: 'Small Modular Reactors represent a new generation of nuclear techn
 
 ## The Future of Nuclear Power
 
-Small Modular Reactors (SMRs) represent a revolutionary approach to nuclear power generation, featuring factory-built reactor modules that are smaller, safer, and more economically attractive than traditional large nuclear plants. With power outputs typically under 300 megawatts electrical, SMRs promise to make nuclear energy accessible to smaller grids, developing countries, and specialized applications while incorporating advanced safety features and passive safety systems that reduce the risk of accidents.
+Small Modular Reactors (SMRs) represent a revolutionary approach to [nuclear](/history/weapons-technology/nuclear-weapons-design) power generation, featuring factory-built reactor modules that are smaller, safer, and more economically attractive than traditional large nuclear plants. With power outputs typically under 300 megawatts electrical, SMRs promise to make nuclear energy accessible to smaller grids, developing countries, and specialized applications while incorporating advanced safety features and passive safety systems that reduce the risk of accidents.
 
 ## Definition and Characteristics
 
@@ -66,7 +66,7 @@ Small Modular Reactors (SMRs) represent a revolutionary approach to nuclear powe
 
 - **Remote locations**: Power for remote communities and industries
 - **Military applications**: Power for military bases and operations
-- **Space applications**: Nuclear power for space missions
+- **Space applications**: [Nuclear power](/history/testing-disasters/chernobyl-disaster) for space missions
 - **Marine propulsion**: Nuclear propulsion for ships
 
 ## Leading SMR Designs
@@ -287,7 +287,7 @@ Small Modular Reactors (SMRs) represent a revolutionary approach to nuclear powe
 
 - **Physical protection**: Enhanced physical protection features
 - **Cyber security**: Cyber security for digital systems
-- **Proliferation resistance**: Proliferation-resistant design features
+- **[Proliferation](/history/nuclear-programs/nuclear-proliferation-21st-century) resistance**: Proliferation-resistant design features
 - **Transport security**: Security during transportation
 
 ### Emergency Planning
@@ -373,7 +373,7 @@ Small Modular Reactors (SMRs) represent a revolutionary approach to nuclear powe
 
 ## Connection to Nuclear Weapons
 
-SMRs have complex relationships with nuclear weapons concerns:
+SMRs have complex relationships with nuclear [weapons](/history/modern-developments/nuclear-weapons-free-zones) concerns:
 
 - **Proliferation resistance**: Designed with proliferation-resistant features
 - **Safeguards**: Subject to international nuclear safeguards
@@ -462,7 +462,7 @@ Public acceptance remains a challenge for all nuclear technologies, including SM
 
 The development of SMR technology has become an area of intense international competition, with countries seeking to establish leadership in what could become a major export industry. The United States has invested heavily in SMR development through the Department of Energy's Advanced Reactor Demonstration Program, which is supporting the development of multiple SMR designs.
 
-China has also made significant investments in SMR development, with plans to deploy the first Chinese SMR by 2025. Russia has taken a different approach, focusing on floating nuclear power plants that use small reactor designs originally developed for nuclear submarines. The first floating nuclear plant, the Akademik Lomonosov, began operation in 2019.
+China has also made significant investments in SMR development, with plans to deploy the first Chinese SMR by 2025. Russia has taken a different approach, focusing on floating nuclear power plants that use small reactor designs originally developed for [nuclear submarines](/history/nuclear-programs/nuclear-submarines). The first floating nuclear plant, the Akademik Lomonosov, began operation in 2019.
 
 International cooperation on SMR development includes the International Atomic Energy Agency's SMR Technology Roadmap, which provides guidance for countries interested in deploying SMRs. The Generation IV International Forum is coordinating research on advanced reactor technologies, including several SMR designs.
 

@@ -7,7 +7,7 @@ description: "A nuclear first strike is a preemptive attack designed to destroy 
 
 ## Overview
 
-A nuclear first strike is a preemptive attack designed to destroy an enemy's nuclear weapons before they can be used in retaliation. This strategy attempts to prevent nuclear retaliation by eliminating the opponent's nuclear capabilities in a surprise attack.
+A [nuclear](/terms/nuclear-effects/yield-comparison) [first](/history/nuclear-programs/north-korea-first-test) strike is a preemptive attack designed to destroy an enemy's nuclear [weapons](/terms/weapons-delivery/tactical-nuclear-weapons) before they can be used in retaliation. This strategy attempts to prevent nuclear retaliation by eliminating the opponent's nuclear capabilities in a surprise attack.
 
 ## Strategic Concept
 
@@ -86,6 +86,6 @@ First strike doctrine is significant because:
 
 - [International Atomic Energy Agency (IAEA)](https://www.iaea.org) - Nuclear science and safety standards
 - [Nuclear Regulatory Commission](https://www.nrc.gov) - Radiation protection and nuclear physics
-- [Los Alamos National Laboratory](https://www.lanl.gov) - Nuclear weapons physics and research
+- [Los Alamos National Laboratory](https://www.lanl.gov) - [Nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones) physics and research
 - [Lawrence Livermore National Laboratory](https://www.llnl.gov) - Nuclear science and technology
 - [Atomic Heritage Foundation](https://www.atomicheritage.org) - Nuclear history and science education

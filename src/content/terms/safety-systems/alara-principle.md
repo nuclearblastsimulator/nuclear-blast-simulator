@@ -155,7 +155,7 @@ ALARA stands for "As Low As Reasonably Achievable" and is the fundamental princi
 
 ## Relevance to Nuclear Weapons
 
-ALARA principles apply to nuclear weapons activities:
+ALARA principles apply to [nuclear](/history/weapons-technology/nuclear-weapons-design) [weapons](/history/nuclear-programs/nuclear-weapons-by-country) activities:
 - **Worker protection**: Minimizing occupational exposure
 - **Manufacturing**: Radiation protection in weapons production
 - **Maintenance**: Protecting personnel during weapons maintenance

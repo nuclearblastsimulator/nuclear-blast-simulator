@@ -7,7 +7,7 @@ description: 'The 2011 tsunami-triggered nuclear disaster at Fukushima Daiichi b
 
 ## When Nature Overwhelmed Nuclear Safety
 
-The Fukushima Daiichi nuclear disaster, which began on March 11, 2011, was triggered by a massive earthquake and tsunami that overwhelmed the safety systems of the nuclear power plant in northeastern Japan. The disaster resulted in three reactor meltdowns, massive radioactive contamination, and the evacuation of over 154,000 people. As the worst nuclear accident since Chernobyl, Fukushima fundamentally changed global nuclear safety standards and energy policies while raising profound questions about nuclear power's role in a world increasingly threatened by climate change.
+The Fukushima Daiichi [nuclear](/history/testing-disasters/nuclear-testing-health-effects) disaster, which began on March 11, 2011, was triggered by a massive earthquake and tsunami that overwhelmed the safety systems of the nuclear power plant in northeastern Japan. The disaster resulted in three reactor meltdowns, massive radioactive contamination, and the evacuation of over 154,000 people. As the worst nuclear accident since [Chernobyl](/history/testing-disasters/chernobyl-disaster), Fukushima fundamentally changed global nuclear safety standards and energy policies while raising profound questions about nuclear power's role in a world increasingly threatened by climate change.
 
 ## Background
 
@@ -188,7 +188,7 @@ The Fukushima Daiichi nuclear disaster, which began on March 11, 2011, was trigg
 ### Health Impacts
 
 - **No immediate deaths**: No immediate deaths from radiation
-- **Cancer screening**: Extensive cancer screening programs
+- **Cancer screening**: Extensive cancer screening [programs](/history/modern-developments/nuclear-modernization-programs)
 - **Thyroid cancer**: Increased thyroid cancer in children
 - **Mental health**: Significant mental health impacts
 
@@ -218,7 +218,7 @@ The Fukushima Daiichi nuclear disaster, which began on March 11, 2011, was trigg
 ### Marine Environment
 
 - **Ocean contamination**: Extensive contamination of marine environment
-- **Bioaccumulation**: Radioactive materials in marine food chain
+- **Bioaccumulation**: Radioactive [materials](/history/weapons-technology/nuclear-materials) in marine food chain
 - **International impact**: Contamination spread across Pacific
 - **Fisheries**: Long-term impact on fisheries
 
@@ -397,7 +397,7 @@ The Fukushima Daiichi nuclear disaster, which began on March 11, 2011, was trigg
 
 ## Connection to Nuclear Weapons
 
-While Fukushima was a civilian nuclear accident, it connects to nuclear weapons issues:
+While Fukushima was a civilian nuclear accident, it connects to nuclear [weapons](/history/weapons-technology/nuclear-weapons-design) issues:
 
 - **Nuclear technology**: Highlighted risks of nuclear technology
 - **Public perception**: Affected perception of all nuclear technology

@@ -7,7 +7,7 @@ description: 'Broken Arrows are nuclear weapon accidents involving the accidenta
 
 ## Nuclear Weapon Accidents and Incidents
 
-Broken Arrows are nuclear weapon accidents involving the accidental launching, firing, detonating, theft, or loss of nuclear weapons, representing some of the most serious incidents in the nuclear age. The U.S. military has officially acknowledged 32 Broken Arrow incidents since 1950, though the actual number may be higher. These accidents highlight the inherent risks of maintaining large nuclear arsenals and the constant challenge of ensuring nuclear safety while maintaining nuclear readiness. From aircraft crashes to missile explosions, Broken Arrows demonstrate that even the most sophisticated safety systems cannot entirely eliminate the risk of nuclear accidents.
+Broken Arrows are [nuclear](/history/weapons-technology/nuclear-weapon-effects) [weapon](/history/weapons-technology/miniaturization) accidents involving the accidental launching, firing, detonating, theft, or loss of nuclear [weapons](/history/weapons-technology/nuclear-weapons-design), representing some of the most serious incidents in the nuclear age. The U.S. military has officially acknowledged 32 Broken Arrow incidents since 1950, though the actual number may be higher. These accidents highlight the inherent risks of maintaining large nuclear arsenals and the constant challenge of ensuring nuclear safety while maintaining nuclear readiness. From aircraft crashes to missile explosions, Broken Arrows demonstrate that even the most sophisticated safety systems cannot entirely eliminate the risk of nuclear accidents.
 
 ## Definition and Classification
 
@@ -15,7 +15,7 @@ Broken Arrows are nuclear weapon accidents involving the accidental launching, f
 
 - **U.S. military term**: Official U.S. military accident classification
 - **Serious incidents**: Most serious category of nuclear incidents
-- **Nuclear weapons involved**: Accidents involving actual nuclear weapons
+- **[Nuclear weapons](/history/nuclear-programs/nuclear-weapons-by-country) involved**: Accidents involving actual nuclear weapons
 - **Safety compromise**: Incidents compromising nuclear weapon safety
 
 ### Related Classifications
@@ -347,7 +347,7 @@ Miraculously, the nuclear warhead did not detonate, despite being subjected to f
 
 Perhaps the most terrifying Broken Arrow incident occurred on January 23, 1961, when a B-52 bomber carrying two Mark 39 nuclear bombs broke up in flight over Goldsboro, North Carolina. The aircraft experienced structural failure during flight, forcing the crew to abandon the aircraft. As the B-52 disintegrated, both nuclear weapons were released and fell toward the ground.
 
-One weapon deployed its parachute and landed relatively intact in a tree, while the other weapon fell free and broke apart on impact. Investigation revealed that the weapon that deployed its parachute had gone through all but one of the steps required for nuclear detonation. Only a single safety switch prevented the weapon from detonating with a yield of 3.8 megatons—260 times more powerful than the bomb that destroyed Hiroshima.
+One weapon deployed its parachute and landed relatively intact in a tree, while the other weapon fell free and broke apart on impact. Investigation revealed that the weapon that deployed its parachute had gone through all but one of the steps required for nuclear detonation. Only a single safety switch prevented the weapon from detonating with a [yield](/terms/nuclear-effects/yield-comparison) of 3.8 megatons—260 times more powerful than the bomb that destroyed Hiroshima.
 
 The incident was kept secret for decades, with the full details only revealed through declassified documents released in the 1980s. The revelation that the United States had come so close to accidentally detonating a nuclear weapon on its own soil shocked the public and led to increased scrutiny of nuclear weapon safety systems.
 

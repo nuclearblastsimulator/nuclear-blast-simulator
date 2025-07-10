@@ -7,7 +7,7 @@ description: 'The nuclear triad strategy employs three delivery systems - ICBMs,
 
 ## Three Pillars of Nuclear Deterrence
 
-The nuclear triad is a strategic nuclear doctrine that employs three distinct delivery systems for nuclear weapons: land-based intercontinental ballistic missiles (ICBMs), submarine-launched ballistic missiles (SLBMs), and strategic bombers. This approach ensures that nuclear forces remain survivable and credible under any conceivable attack scenario, forming the foundation of nuclear deterrence strategy. Each leg of the triad offers unique advantages and limitations, creating a complementary system that has provided strategic stability for over six decades.
+The [nuclear triad](/terms/weapons-delivery/nuclear-triad) is a strategic [nuclear](/terms/nuclear-effects/yield-comparison) doctrine that employs three distinct delivery systems for nuclear [weapons](/history/nuclear-programs/nuclear-weapons-by-country): land-based intercontinental ballistic missiles (ICBMs), submarine-launched ballistic missiles (SLBMs), and strategic bombers. This approach ensures that nuclear forces remain survivable and credible under any conceivable attack scenario, forming the foundation of [nuclear deterrence](/terms/nuclear-strategy/nuclear-deterrence) strategy. Each leg of the triad offers unique advantages and limitations, creating a complementary system that has provided strategic stability for over six decades.
 
 ## Concept and Origins
 
@@ -485,7 +485,7 @@ The debate over the necessity of all three legs of the triad has focused particu
 
 Alternative approaches to nuclear deterrence have been proposed that would rely on different combinations of delivery systems and strategies. Some analysts have suggested that conventional prompt global strike weapons could substitute for some nuclear missions, providing rapid response capabilities without the political and operational complications of nuclear weapons.
 
-The role of tactical nuclear weapons in nuclear strategy has also been debated, with some arguing that smaller, more flexible nuclear weapons could provide more credible deterrence than large strategic systems. The development of low-yield nuclear weapons and their potential integration into the triad creates new options for nuclear employment while raising concerns about the lowering of the nuclear threshold.
+The role of [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons) in nuclear strategy has also been debated, with some arguing that smaller, more flexible nuclear weapons could provide more credible deterrence than large strategic systems. The development of low-yield nuclear weapons and their potential integration into the triad creates new options for nuclear employment while raising concerns about the lowering of the nuclear threshold.
 
 The future of the nuclear triad will depend on political decisions about the role of nuclear weapons in national security strategy. The balance between deterrence and disarmament, between security and cost, between flexibility and simplicity will determine whether the triad continues to serve as the foundation of nuclear deterrence or evolves into new forms of nuclear force structure.
 

@@ -7,7 +7,7 @@ description: 'In 1938, Otto Hahn and Fritz Strassmann discovered nuclear fission
 
 ## The Splitting of the Atom
 
-In late 1938, German chemist Otto Hahn and his assistant Fritz Strassmann discovered nuclear fission—the splitting of atomic nuclei into smaller fragments. Their Austrian colleague Lise Meitner, forced to flee Nazi Germany, provided the crucial theoretical explanation with her nephew Otto Frisch. This discovery revealed that enormous amounts of energy could be released from atomic nuclei, directly leading to both nuclear weapons and nuclear power.
+In late 1938, German chemist Otto Hahn and his assistant Fritz Strassmann discovered [nuclear](/terms/nuclear-effects/yield-comparison) [fission](/terms/nuclear-physics/fission)—the splitting of atomic nuclei into smaller fragments. Their Austrian colleague Lise Meitner, forced to flee Nazi Germany, provided the crucial theoretical explanation with her nephew Otto Frisch. This discovery revealed that enormous amounts of energy could be released from atomic nuclei, directly leading to both nuclear [weapons](/history/modern-developments/nuclear-weapons-free-zones) and nuclear power.
 
 ## Background
 
@@ -239,7 +239,7 @@ The discovery of nuclear fission was the direct scientific foundation for nuclea
 - **Energy source**: Fission provides the enormous energy of nuclear explosions
 - **Chain reaction**: Uncontrolled fission chain reaction creates nuclear explosions
 - **Critical mass**: Understanding fission enabled calculation of critical mass
-- **Weapons design**: Fission physics determines all aspects of nuclear weapons design
+- **Weapons design**: Fission physics determines all aspects of [nuclear weapons design](/history/weapons-technology/nuclear-weapons-design)
 
 This discovery transformed warfare and international relations, creating both the promise of abundant energy and the threat of nuclear destruction.
 
@@ -353,7 +353,7 @@ The development of nuclear weapons by additional countries—the United Kingdom 
 
 ### The Environmental and Safety Legacy
 
-The discovery of nuclear fission also introduced new environmental and safety challenges. Nuclear fission produces radioactive waste products that remain dangerous for thousands of years. The management of this nuclear waste has proven to be one of the most persistent challenges of the nuclear age, with no country yet implementing a permanent solution for high-level radioactive waste disposal.
+The discovery of nuclear fission also introduced new environmental and safety challenges. Nuclear fission produces radioactive waste products that remain dangerous for thousands of years. The management of this nuclear waste has proven to be one of the most persistent challenges of the nuclear age, with no [country](/history/nuclear-programs/nuclear-weapons-by-country) yet implementing a permanent solution for high-level radioactive waste disposal.
 
 Nuclear accidents, while rare, have had significant environmental and health consequences. Major accidents at Three Mile Island, Chernobyl, and Fukushima have highlighted the potential risks of nuclear technology and the importance of maintaining high safety standards. These accidents have also influenced public perception of nuclear power and affected the development of nuclear energy programs worldwide.
 

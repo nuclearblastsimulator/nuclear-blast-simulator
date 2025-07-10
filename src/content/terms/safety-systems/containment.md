@@ -7,12 +7,12 @@ description: "Nuclear containment is a critical safety system designed to preven
 
 ## Overview
 
-Nuclear containment is a critical safety system designed to prevent the release of radioactive materials to the environment during normal operation and accident conditions. It serves as the final barrier between the reactor and the public, containing radioactive materials even in the event of severe accidents—a massive concrete and steel fortress that can mean the difference between a manageable incident and a nuclear catastrophe.
+[Nuclear](/history/weapons-technology/nuclear-weapons-design) containment is a critical safety system designed to prevent the release of radioactive materials to the environment during normal operation and accident conditions. It serves as the final barrier between the reactor and the public, containing radioactive materials even in the event of severe accidents—a massive concrete and steel fortress that can mean the difference between a manageable incident and a nuclear catastrophe.
 
 ## Primary Functions
 
 ### Barrier Function
-- **Radioactive confinement**: Prevent release of fission products
+- **Radioactive confinement**: Prevent release of [fission](/terms/nuclear-physics/fission) products
 - **Pressure containment**: Withstand internal pressure from accidents
 - **Structural integrity**: Maintain barrier function under extreme conditions
 - **Leak limitation**: Minimize uncontrolled radioactive release
@@ -36,7 +36,7 @@ Nuclear containment is a critical safety system designed to prevent the release 
 #### Ice Condenser Containment
 - **Pressure suppression**: Ice melts to condense steam
 - **Compact design**: Smaller containment structure
-- **Active systems**: Fans circulate air through ice
+- **Active [systems](/history/nuclear-programs/missile-defense-systems)**: Fans circulate air through ice
 - **Lower design pressure**: Typically 10-15 psig
 
 #### Subatmospheric Containment
@@ -123,7 +123,7 @@ Nuclear containment is a critical safety system designed to prevent the release 
 
 ### Leak Rate Testing
 - **Integrated leak rate test**: Overall containment leakage
-- **Local leak rate test**: Individual penetration testing
+- **Local leak rate test**: Individual penetration [testing](/history/weapons-technology/nuclear-testing)
 - **Periodic testing**: Regular verification of integrity
 - **Acceptance criteria**: Maximum allowable leakage
 
@@ -177,7 +177,7 @@ Nuclear containment is a critical safety system designed to prevent the release 
 
 ## Relevance to Nuclear Weapons
 
-Containment technology is relevant to nuclear weapons in several ways:
+Containment technology is relevant to nuclear [weapons](/history/modern-developments/nuclear-weapons-free-zones) in several ways:
 - **Reactor containment**: Protecting plutonium production facilities
 - **Waste containment**: Managing radioactive waste from weapons production
 - **Accident prevention**: Protecting weapons facilities from releases

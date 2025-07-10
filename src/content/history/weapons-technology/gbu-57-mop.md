@@ -7,7 +7,7 @@ description: 'The GBU-57 Massive Ordnance Penetrator is the largest conventional
 
 ## The Ultimate Bunker Buster
 
-The GBU-57 Massive Ordnance Penetrator (MOP) is the largest conventional bunker-busting bomb in the U.S. arsenal, designed to destroy deeply buried nuclear facilities and hardened command bunkers. Weighing 30,000 pounds with a 5,300-pound warhead, the MOP represents the pinnacle of conventional penetrating weapons technology, capable of penetrating over 200 feet of hardened concrete before detonation. Developed specifically to address threats from nations like Iran and North Korea that have buried their nuclear facilities deep underground, the MOP bridges the gap between conventional weapons and nuclear options.
+The GBU-57 Massive Ordnance Penetrator (MOP) is the largest conventional bunker-busting bomb in the U.S. arsenal, designed to destroy deeply buried [nuclear](/history/weapons-technology/nuclear-weapon-effects) facilities and hardened command bunkers. Weighing 30,000 pounds with a 5,300-pound warhead, the MOP represents the pinnacle of conventional penetrating [weapons](/history/weapons-technology/nuclear-weapons-design) technology, capable of penetrating over 200 feet of hardened concrete before detonation. Developed specifically to address threats from nations like Iran and North Korea that have buried their nuclear facilities deep underground, the MOP bridges the gap between conventional weapons and nuclear options.
 
 ## Development History
 
@@ -91,7 +91,7 @@ The GBU-57 Massive Ordnance Penetrator (MOP) is the largest conventional bunker-
 
 - **Size constraints**: Bomb bay size limitations
 - **Weight limits**: Aircraft weight limitations
-- **Weapon systems**: Specialized weapon systems
+- **[Weapon](/history/weapons-technology/miniaturization) systems**: Specialized weapon systems
 - **Crew training**: Specialized crew training
 
 ### Mission Profile
@@ -286,7 +286,7 @@ The GBU-57 Massive Ordnance Penetrator (MOP) is the largest conventional bunker-
 
 ## Connection to Nuclear Weapons
 
-The GBU-57 MOP has significant connections to nuclear weapons issues:
+The GBU-57 MOP has significant connections to [nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons) issues:
 
 - **Nuclear facility targeting**: Designed to destroy nuclear facilities
 - **Conventional alternative**: Conventional alternative to nuclear weapons
@@ -363,7 +363,7 @@ The MOP's capabilities can best be understood by comparing it to other bunker-bu
 
 The MOP's 30,000-pound weight represents a six-fold increase over the GBU-28, with correspondingly greater penetration capability. The weapon's ability to penetrate over 200 feet of concrete represents more than a doubling of penetration capability compared to previous weapons. This increase in capability is not merely quantitative but qualitative, enabling attacks on targets that were previously considered immune to conventional weapons.
 
-Compared to nuclear options, the MOP provides many of the same target destruction capabilities without the political, diplomatic, and escalatory risks associated with nuclear weapons use. The B61-11 nuclear earth-penetrating weapon can destroy deeply buried targets through its nuclear yield, but its use would cross the nuclear threshold and create enormous political and strategic consequences. The MOP provides a conventional alternative that avoids these risks while still providing significant target destruction capability.
+Compared to nuclear options, the MOP provides many of the same target destruction capabilities without the political, diplomatic, and escalatory risks associated with nuclear weapons use. The B61-11 nuclear earth-penetrating weapon can destroy deeply buried targets through its nuclear [yield](/terms/nuclear-effects/yield-comparison), but its use would cross the nuclear threshold and create enormous political and strategic consequences. The MOP provides a conventional alternative that avoids these risks while still providing significant target destruction capability.
 
 The MOP's capabilities also compare favorably to similar weapons being developed by other countries, though few nations have attempted to develop weapons of comparable size and capability. The weapon represents a unique American capability that provides significant advantages in attacking hardened underground targets, though its effectiveness depends on accurate intelligence about target characteristics and successful delivery to the target.
 

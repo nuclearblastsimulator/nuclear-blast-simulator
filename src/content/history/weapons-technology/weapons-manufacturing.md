@@ -7,7 +7,7 @@ description: "Nuclear weapons manufacturing requires sophisticated industrial fa
 
 ## Industrial Foundation of Nuclear Power
 
-Nuclear weapons manufacturing represents one of the most complex and sophisticated industrial undertakings in human history. The production of nuclear weapons requires an extensive network of specialized facilities, advanced technologies, precision manufacturing capabilities, and highly skilled personnel. From uranium mining and enrichment to plutonium production and weapons assembly, the nuclear weapons complex encompasses a vast industrial infrastructure that has cost hundreds of billions of dollars and employed hundreds of thousands of people across multiple countries.
+[Nuclear](/history/weapons-technology/nuclear-weapons-design) [weapons](/history/nuclear-programs/nuclear-weapons-by-country) manufacturing represents one of the most complex and sophisticated industrial undertakings in human history. The production of [nuclear weapons](/terms/nuclear-effects/yield-comparison) requires an extensive network of specialized facilities, advanced technologies, precision manufacturing capabilities, and highly skilled personnel. From uranium mining and enrichment to plutonium production and weapons assembly, the nuclear weapons complex encompasses a vast industrial infrastructure that has cost hundreds of billions of dollars and employed hundreds of thousands of people across multiple countries.
 
 ## Nuclear Weapons Complex Overview
 
@@ -194,7 +194,7 @@ Nuclear weapons manufacturing represents one of the most complex and sophisticat
 ### Assembly Facilities
 
 - **Secure facilities**: Highly secure assembly facilities
-- **Clean rooms**: Contamination-free assembly environments
+- **Clean rooms**: Contamination-[free](/history/modern-developments/nuclear-weapons-free-zones) assembly environments
 - **Special equipment**: Specialized assembly equipment
 - **Safety systems**: Comprehensive safety systems
 

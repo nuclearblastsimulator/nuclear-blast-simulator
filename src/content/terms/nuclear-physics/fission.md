@@ -7,7 +7,7 @@ description: "Nuclear fission is a nuclear reaction where the nucleus of an atom
 
 ## Overview
 
-Nuclear fission is a nuclear reaction where the nucleus of an atom splits into two or more smaller nuclei, releasing enormous amounts of energy. This process powers nuclear reactors and nuclear weapons, representing one of the most significant scientific discoveries of the 20th century.
+[Nuclear](/history/foundational-events/nuclear-fission-discovery) fission is a nuclear reaction where the nucleus of an atom splits into two or more smaller nuclei, releasing enormous amounts of energy. This process powers nuclear reactors and nuclear [weapons](/terms/nuclear-effects/yield-comparison), representing one of the most significant scientific discoveries of the 20th century.
 
 ## Fission Process
 
@@ -63,7 +63,7 @@ Nuclear fission is a nuclear reaction where the nucleus of an atom splits into t
 - **1938**: Discovery of nuclear fission in Germany
 - **1939**: Confirmation and explanation of fission process
 - **1942**: First controlled chain reaction (Chicago Pile-1)
-- **1945**: First nuclear weapons used in warfare
+- **1945**: First [nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones) used in warfare
 
 ## Applications
 
@@ -76,7 +76,7 @@ Nuclear fission is a nuclear reaction where the nucleus of an atom splits into t
 ### Nuclear Weapons
 - **Atomic bombs**: Uncontrolled fission chain reaction
 - **Weapon designs**: Gun-type and implosion mechanisms
-- **Military applications**: Strategic and tactical nuclear weapons
+- **Military applications**: Strategic and [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
 - **Proliferation concerns**: Spread of fission weapon technology
 
 ## Safety and Control
@@ -95,7 +95,7 @@ Nuclear fission is a nuclear reaction where the nucleus of an atom splits into t
 
 ## Relevance to Nuclear Weapons
 
-Nuclear fission is the fundamental process that enables nuclear weapons. Fission weapons (atomic bombs) use uncontrolled chain reactions to release enormous energy in milliseconds. Understanding fission explains how nuclear weapons achieve their devastating power, why certain materials are restricted, and how nuclear technology can be both beneficial for energy and dangerous for weapons. The same physics that powers nuclear plants can create nuclear weapons, making fission knowledge both essential and carefully controlled.
+Nuclear fission is the fundamental process that enables nuclear weapons. [Fission weapons](/history/weapons-technology/fission-weapons) (atomic bombs) use uncontrolled chain reactions to release enormous energy in milliseconds. Understanding fission explains how nuclear weapons achieve their devastating power, why certain materials are restricted, and how nuclear technology can be both beneficial for energy and dangerous for weapons. The same physics that powers nuclear plants can create nuclear weapons, making fission knowledge both essential and carefully controlled.
 
 ---
 

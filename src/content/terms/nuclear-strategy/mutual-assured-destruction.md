@@ -7,7 +7,7 @@ description: "Mutual Assured Destruction (MAD) is the nuclear strategy where bot
 
 ## Overview
 
-Mutual Assured Destruction (MAD) is the nuclear strategy where both superpowers maintain enough weapons to completely destroy each other, making nuclear war suicidal for both sides. This doctrine has prevented nuclear war while keeping humanity perpetually on the brink of annihilation.
+Mutual Assured Destruction (MAD) is the [nuclear](/terms/nuclear-effects/yield-comparison) strategy where both superpowers maintain enough [weapons](/terms/weapons-delivery/tactical-nuclear-weapons) to completely destroy each other, making nuclear war suicidal for both sides. This doctrine has prevented nuclear war while keeping humanity perpetually on the brink of annihilation.
 
 ## Core Concept
 
@@ -67,11 +67,11 @@ Contemporary threats to MAD stability:
 
 ## Relevance to Nuclear Weapons
 
-MAD is crucial to understanding nuclear weapons because:
+MAD is crucial to understanding [nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones) because:
 - It explains how nuclear weapons prevent war through deterrence
 - It demonstrates the paradox of security through mutual vulnerability
 - It shows how nuclear weapons changed the nature of international conflict
-- It illustrates the psychological and strategic dimensions of nuclear deterrence
+- It illustrates the psychological and strategic dimensions of [nuclear deterrence](/terms/nuclear-strategy/nuclear-deterrence)
 
 ---
 

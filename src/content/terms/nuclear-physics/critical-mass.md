@@ -7,12 +7,12 @@ description: "Critical mass is the minimum amount of fissile material needed to 
 
 ## Overview
 
-Critical mass is the minimum amount of fissile material needed to sustain a nuclear chain reaction. It represents the precise threshold where atomic energy becomes self-perpetuating, determining whether nuclear material produces controlled power or explosive destruction.
+Critical mass is the minimum amount of fissile material needed to sustain a [nuclear](/history/weapons-technology/nuclear-weapons-design) chain reaction. It represents the precise threshold where atomic energy becomes self-perpetuating, determining whether nuclear material produces controlled power or explosive destruction.
 
 ## Physics of Critical Mass
 
 ### Neutron Multiplication
-- **Chain reaction**: Each fission must produce at least one neutron that causes another fission
+- **Chain reaction**: Each [fission](/terms/nuclear-physics/fission) must produce at least one neutron that causes another fission
 - **Multiplication factor (k)**: Must equal or exceed 1.0 for sustained reaction
 - **Subcritical**: k < 1 (reaction dies out)
 - **Critical**: k = 1 (steady-state reaction)
@@ -80,7 +80,7 @@ Critical mass is the minimum amount of fissile material needed to sustain a nucl
 
 ## Relevance to Nuclear Weapons
 
-Critical mass is fundamental to nuclear weapons because it determines the minimum amount of fissile material needed for nuclear explosions. Understanding critical mass helps explain weapon design challenges, proliferation concerns, and why certain nuclear materials are more dangerous than others. It also explains why nuclear weapons require precise engineering to achieve supercriticality rapidly enough for explosive yields.
+Critical mass is fundamental to nuclear [weapons](/terms/nuclear-effects/yield-comparison) because it determines the minimum amount of fissile material needed for nuclear explosions. Understanding critical mass helps explain weapon design challenges, proliferation concerns, and why certain [nuclear materials](/history/weapons-technology/nuclear-materials) are more dangerous than others. It also explains why [nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons) require precise engineering to achieve supercriticality rapidly enough for explosive yields.
 
 ---
 

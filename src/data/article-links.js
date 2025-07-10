@@ -32,7 +32,7 @@ export const weaponArticleLinks = {
   "mop": "/history/weapons-technology/gbu-57-mop/",
   "aman": null,
   "ghauri": "/history/nuclear-programs/pakistan/",
-  "df-5": "/history/cold-war-crises/broken-arrows/",
+  "df-5": "/history/modern-developments/nuclear-modernization-programs/",
   "iskander": "/terms/weapons-delivery/tactical-nuclear-weapons/",
   "b61-12": "/terms/weapons-delivery/tactical-nuclear-weapons/",
   "w76-1": null,
@@ -135,5 +135,5 @@ export const linkStats = {
   linkedCities: 12,
   totalWeapons: 28,
   linkedWeapons: 17,
-  lastUpdated: '2025-07-08T19:48:43.765Z'
+  lastUpdated: '2025-07-10T04:19:33.637Z'
 };

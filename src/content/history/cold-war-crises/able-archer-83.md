@@ -7,7 +7,7 @@ description: 'In November 1983, a NATO military exercise simulating nuclear war 
 
 ## When Exercise Became Reality
 
-In November 1983, NATO conducted Able Archer 83, a command post exercise simulating nuclear warfare in Europe. The exercise was so realistic that Soviet intelligence concluded it might be cover for an actual nuclear first strike. For several days, the world unknowingly teetered on the edge of nuclear war as Soviet forces prepared for what they believed was an imminent NATO attack. The crisis was only revealed years later when classified documents were declassified.
+In November 1983, NATO conducted Able Archer 83, a command post exercise simulating [nuclear](/terms/nuclear-effects/yield-comparison) warfare in Europe. The exercise was so realistic that Soviet intelligence concluded it might be cover for an actual nuclear first strike. For several days, the world unknowingly teetered on the edge of nuclear war as Soviet forces prepared for what they believed was an imminent NATO attack. The crisis was only revealed years later when classified documents were declassified.
 
 ## Background
 
@@ -44,7 +44,7 @@ In November 1983, NATO conducted Able Archer 83, a command post exercise simulat
 ### Exercise Scenario
 
 - **Conventional war**: Exercise began with conventional warfare
-- **Nuclear escalation**: Gradual escalation to nuclear weapons use
+- **Nuclear escalation**: Gradual escalation to nuclear [weapons](/history/modern-developments/nuclear-weapons-free-zones) use
 - **DEFCON progression**: Simulated movement through DEFCON levels
 - **Command decisions**: Senior officials made simulated war decisions
 
@@ -80,7 +80,7 @@ In November 1983, NATO conducted Able Archer 83, a command post exercise simulat
 
 ### KGB Reporting
 
-- **Urgent reports**: KGB sent urgent reports to Moscow
+- **Urgent reports**: KGB sent urgent reports to [Moscow](/history/cold-war-crises/moscow-nuclear-program)
 - **War preparation**: Reports suggested NATO preparing for war
 - **First strike**: Possibility of NATO first strike considered
 - **Crisis escalation**: Soviet leadership took threat seriously
@@ -97,7 +97,7 @@ In November 1983, NATO conducted Able Archer 83, a command post exercise simulat
 ### Soviet Nuclear Forces
 
 - **Strategic forces**: Strategic nuclear forces placed on alert
-- **Tactical weapons**: Tactical nuclear weapons prepared
+- **Tactical weapons**: [Tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons) prepared
 - **Submarine deployment**: Nuclear submarines moved to firing positions
 - **Air defense**: Air defense systems activated
 
@@ -255,7 +255,7 @@ In November 1983, NATO conducted Able Archer 83, a command post exercise simulat
 
 ## Connection to Nuclear Weapons
 
-Able Archer 83 was entirely about nuclear weapons and their role in crisis escalation:
+Able Archer 83 was entirely about [nuclear weapons](/history/nuclear-programs/nuclear-weapons-by-country) and their role in crisis escalation:
 
 - **Nuclear exercise**: Exercise simulated nuclear weapons use
 - **Nuclear alert**: Soviet nuclear forces placed on alert

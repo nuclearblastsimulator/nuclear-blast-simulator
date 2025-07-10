@@ -7,7 +7,7 @@ description: 'Fission weapons derive their explosive power from splitting heavy 
 
 ## The First Nuclear Weapons
 
-Fission weapons, also known as atomic bombs or A-bombs, represent the first generation of nuclear weapons and derive their explosive power from the splitting (fission) of heavy atomic nuclei such as uranium-235 or plutonium-239. These weapons unleashed the power of the atom for destructive purposes, fundamentally changing warfare and international relations. From the Manhattan Project's development of the first atomic bombs to their use against Japan and subsequent proliferation, fission weapons established the foundation of nuclear weapons technology and the nuclear age.
+[Fission](/terms/nuclear-physics/fission) [weapons](/terms/nuclear-effects/yield-comparison), also known as atomic bombs or A-bombs, represent the first generation of [nuclear](/history/weapons-technology/nuclear-weapons-design) weapons and derive their explosive power from the splitting (fission) of heavy atomic nuclei such as uranium-235 or plutonium-239. These weapons unleashed the power of the atom for destructive purposes, fundamentally changing warfare and international relations. From the Manhattan Project's development of the first atomic bombs to their use against Japan and subsequent proliferation, fission weapons established the foundation of [nuclear weapons](/history/nuclear-programs/nuclear-weapons-by-country) technology and the nuclear age.
 
 ## Nuclear Fission Process
 
@@ -284,7 +284,7 @@ Fission weapons, also known as atomic bombs or A-bombs, represent the first gene
 ### Current Arsenals
 
 - **Strategic weapons**: Strategic nuclear weapons
-- **Tactical weapons**: Tactical nuclear weapons
+- **Tactical weapons**: [Tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
 - **Modernization**: Modernization of fission weapons
 - **Life extension**: Life extension programs
 

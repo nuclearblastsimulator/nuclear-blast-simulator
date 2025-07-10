@@ -7,7 +7,7 @@ description: "The world's first civilian nuclear power plant began operation in 
 
 ## The World's First Civilian Nuclear Power Plant
 
-The Obninsk Nuclear Power Plant, which began operation on June 27, 1954, in Obninsk, Soviet Union, was the world's first nuclear power plant designed for civilian electricity generation. This modest 5-megawatt reactor demonstrated that nuclear technology could be harnessed for peaceful purposes, marking the beginning of the global nuclear power industry. Though small by modern standards, Obninsk proved the feasibility of nuclear power and inspired the development of nuclear energy programs worldwide.
+The Obninsk [Nuclear](/history/weapons-technology/nuclear-weapons-design) Power Plant, which began operation on June 27, 1954, in Obninsk, Soviet Union, was the world's first nuclear power plant designed for civilian electricity generation. This modest 5-megawatt reactor demonstrated that nuclear technology could be harnessed for peaceful purposes, marking the beginning of the global nuclear power industry. Though small by modern standards, Obninsk proved the feasibility of nuclear power and inspired the development of nuclear energy programs worldwide.
 
 ## Background and Development
 
@@ -18,7 +18,7 @@ The Obninsk Nuclear Power Plant, which began operation on June 27, 1954, in Obni
 - **International prestige**: Demonstrating Soviet technological capabilities
 
 ### Location and Context
-- **Obninsk**: Scientific city 100 kilometers southwest of Moscow
+- **Obninsk**: Scientific city 100 kilometers southwest of [Moscow](/history/cold-war-crises/moscow-nuclear-program)
 - **Nuclear research center**: Home to Institute of Physics and Power Engineering
 - **Scientific community**: Established nuclear research infrastructure
 - **Strategic considerations**: Secure location for nuclear development
@@ -136,7 +136,7 @@ The Obninsk Nuclear Power Plant, which began operation on June 27, 1954, in Obni
 ### Scientific Advancement
 - **Nuclear engineering**: Advanced nuclear engineering discipline
 - **Reactor physics**: Contributed to reactor physics understanding
-- **Materials science**: Advanced nuclear materials science
+- **Materials science**: Advanced [nuclear materials](/history/weapons-technology/nuclear-materials) science
 - **Safety engineering**: Developed nuclear safety engineering
 
 ## Technical Legacy
@@ -458,7 +458,7 @@ The most significant development was the evolution of the Obninsk design into th
 
 The channel-type reactor design pioneered at Obninsk offered several advantages that made it attractive for large-scale deployment. The ability to refuel during operation meant that plants could achieve high capacity factors, while the use of natural uranium fuel eliminated the need for expensive enrichment facilities. The design's flexibility allowed for easy scaling to larger sizes.
 
-However, the design also had inherent limitations that would become apparent in later years. The positive void coefficient of reactivity and the reactor's large size made it challenging to control under certain conditions. These characteristics would eventually contribute to the Chernobyl accident in 1986, highlighting the importance of continuous safety improvements in reactor design.
+However, the design also had inherent limitations that would become apparent in later years. The positive void coefficient of reactivity and the reactor's large size made it challenging to control under certain conditions. These characteristics would eventually contribute to the [Chernobyl](/history/testing-disasters/chernobyl-disaster) accident in 1986, highlighting the importance of continuous safety improvements in reactor design.
 
 ### Educational and Training Impact
 
@@ -474,7 +474,7 @@ The plant's role in education extended beyond formal training programs. The exte
 
 ### Operational Improvements
 
-Throughout its 48-year operational life, the Obninsk plant underwent continuous improvements and modernization to enhance safety, efficiency, and reliability. These improvements reflected the evolution of nuclear technology and the growing understanding of nuclear safety requirements.
+Throughout its 48-year operational life, the Obninsk plant underwent continuous improvements and [modernization](/history/modern-developments/nuclear-modernization-programs) to enhance safety, efficiency, and reliability. These improvements reflected the evolution of nuclear technology and the growing understanding of nuclear safety requirements.
 
 One of the most significant improvements was the upgrade of the reactor's control systems. The original analog control systems were gradually replaced with more sophisticated digital systems that provided better control accuracy and enhanced safety features. These upgrades improved the reactor's operational flexibility and safety margins.
 

@@ -7,13 +7,13 @@ description: "President Eisenhower's 1953 Atoms for Peace speech to the United N
 
 ## The Promise of Peaceful Nuclear Technology
 
-On December 8, 1953, President Dwight D. Eisenhower delivered his "Atoms for Peace" speech to the United Nations General Assembly, proposing to share peaceful nuclear technology with the world. This historic speech marked a fundamental shift in nuclear policy from secrecy to openness, promising to harness the atom's power for human benefit rather than destruction. The initiative led to widespread nuclear technology sharing but also inadvertently contributed to nuclear weapons proliferation.
+On December 8, 1953, President Dwight D. Eisenhower delivered his "Atoms for Peace" speech to the United Nations General Assembly, proposing to share peaceful [nuclear](/terms/nuclear-effects/yield-comparison) technology with the world. This historic speech marked a fundamental shift in nuclear policy from secrecy to openness, promising to harness the atom's power for human benefit rather than destruction. The initiative led to widespread nuclear technology sharing but also inadvertently contributed to nuclear [weapons](/terms/weapons-delivery/tactical-nuclear-weapons) proliferation.
 
 ## Background
 
 ### Nuclear Monopoly Era
 
-- **U.S. advantage**: United States held nuclear weapons monopoly 1945-1949
+- **U.S. advantage**: United States held [nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones) monopoly 1945-1949
 - **Soviet breakthrough**: USSR tested nuclear weapon in 1949
 - **Arms race**: Rapid nuclear weapons development by both superpowers
 - **Hydrogen bomb**: Both nations developed thermonuclear weapons
@@ -45,7 +45,7 @@ On December 8, 1953, President Dwight D. Eisenhower delivered his "Atoms for Pea
 
 - **Nuclear sharing**: Share peaceful nuclear technology with other nations
 - **International agency**: Create international atomic energy agency
-- **Nuclear materials**: Provide fissionable materials for peaceful purposes
+- **[Nuclear materials](/history/weapons-technology/nuclear-materials)**: Provide fissionable materials for peaceful purposes
 - **Technical assistance**: Offer nuclear expertise and training
 
 ### Famous Quotes

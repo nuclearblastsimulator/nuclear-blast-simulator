@@ -7,7 +7,7 @@ description: 'Regional Nuclear Weapons Free Zones cover over 115 countries acros
 
 ## Regional Nuclear Disarmament
 
-Nuclear Weapons Free Zones (NWFZs) are regional treaties that prohibit the development, manufacture, acquisition, possession, testing, or stationing of nuclear weapons within defined geographical areas. Five zones currently cover over 115 countries across Latin America, the South Pacific, Southeast Asia, Africa, and Central Asia. These zones represent grassroots nuclear disarmament efforts, demonstrating that regions can choose to remain free of nuclear weapons and create frameworks for peaceful nuclear cooperation.
+[Nuclear](/terms/nuclear-effects/yield-comparison) Weapons Free Zones (NWFZs) are regional treaties that prohibit the development, manufacture, acquisition, possession, testing, or stationing of nuclear [weapons](/terms/weapons-delivery/tactical-nuclear-weapons) within defined geographical areas. Five zones currently cover over 115 countries across Latin America, the South Pacific, Southeast Asia, Africa, and Central Asia. These zones represent grassroots nuclear disarmament efforts, demonstrating that regions can choose to remain free of [nuclear weapons](/history/nuclear-programs/nuclear-weapons-by-country) and create frameworks for peaceful nuclear cooperation.
 
 ## Concept and Legal Framework
 
@@ -66,7 +66,7 @@ Nuclear Weapons Free Zones (NWFZs) are regional treaties that prohibit the devel
 
 ### Regional Context
 
-- **Nuclear testing**: Extensive nuclear testing by France, UK, and U.S.
+- **[Nuclear testing](/history/weapons-technology/nuclear-testing)**: Extensive nuclear testing by France, UK, and U.S.
 - **Environmental concerns**: Concerns about radioactive contamination
 - **Island vulnerability**: Small island states particularly vulnerable
 - **Anti-nuclear sentiment**: Strong regional anti-nuclear sentiment

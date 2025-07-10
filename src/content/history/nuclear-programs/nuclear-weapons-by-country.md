@@ -7,7 +7,7 @@ description: 'A comprehensive overview of nuclear weapons arsenals worldwide, de
 
 ## Global Nuclear Arsenals Overview
 
-A comprehensive overview of nuclear weapons arsenals worldwide reveals the distribution of nuclear capabilities among nine nuclear-armed states, with approximately 12,700 nuclear warheads globally as of 2024. From the massive arsenals of the United States and Russia to the smaller deterrent forces of newer nuclear powers, each nuclear-armed state maintains nuclear weapons for different strategic purposes and under varying doctrines. Understanding the size, composition, and doctrine of each nuclear arsenal is essential for comprehending global nuclear dynamics, strategic stability, and proliferation challenges.
+A comprehensive overview of [nuclear](/history/weapons-technology/nuclear-weapons-design) [weapons](/terms/nuclear-effects/yield-comparison) arsenals worldwide reveals the distribution of nuclear capabilities among nine nuclear-armed states, with approximately 12,700 nuclear warheads globally as of 2024. From the massive arsenals of the United States and Russia to the smaller deterrent forces of newer nuclear powers, each nuclear-armed state maintains [nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones) for different strategic purposes and under varying doctrines. Understanding the size, composition, and doctrine of each nuclear arsenal is essential for comprehending global nuclear dynamics, strategic stability, and proliferation challenges.
 
 ## Nuclear-Armed States
 
@@ -43,7 +43,7 @@ A comprehensive overview of nuclear weapons arsenals worldwide reveals the distr
 
 ### Nuclear Doctrine
 
-- **Deterrence**: Nuclear deterrence as primary purpose
+- **Deterrence**: [Nuclear deterrence](/terms/nuclear-strategy/nuclear-deterrence) as primary purpose
 - **Extended deterrence**: Extended deterrence for allies
 - **Flexible response**: Flexible response options
 - **No first use**: No declared no-first-use policy
@@ -62,7 +62,7 @@ A comprehensive overview of nuclear weapons arsenals worldwide reveals the distr
 - **Total warheads**: ~6,000 nuclear warheads
 - **Deployed warheads**: ~1,600 deployed warheads
 - **Reserve warheads**: ~4,400 in reserve
-- **Tactical weapons**: ~2,000 tactical nuclear weapons
+- **Tactical weapons**: ~2,000 [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
 
 ### Nuclear Forces
 

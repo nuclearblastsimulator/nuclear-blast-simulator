@@ -7,7 +7,7 @@ description: "Half-life is the time required for half of a radioactive substance
 
 ## Overview
 
-Half-life is the time required for half of a radioactive substance to decay into other elements. This constant decay rate provides a predictable "clock" for measuring time and understanding radioactive material behavior.
+Half-life is the time required for half of a radioactive substance to [decay](/terms/nuclear-physics/alpha-decay) into other elements. This constant decay rate provides a predictable "clock" for measuring time and understanding radioactive material behavior.
 
 ## Mathematical Properties
 
@@ -22,12 +22,12 @@ Half-life follows predictable patterns:
 Different isotopes have vastly different half-lives:
 - **Milliseconds**: Some artificial isotopes decay almost instantly
 - **Years**: Carbon-14 has a 5,730-year half-life
-- **Millennia**: Plutonium-239 has a 24,000-year half-life
+- **Millennia**: [Plutonium](/terms/nuclear-physics/plutonium)-239 has a 24,000-year half-life
 - **Geological**: Uranium-238 has a 4.5-billion-year half-life
 
 ## Discovery and History
 
-The concept emerged from early nuclear research:
+The concept emerged from early [nuclear](/history/weapons-technology/nuclear-weapons-design) research:
 - **Ernest Rutherford**: Coined the term "half-life" in 1903
 - **Thoron study**: Observed 11.5-minute decay pattern
 - **Atomic theory**: Proved atoms could spontaneously transform
@@ -59,7 +59,7 @@ Nuclear medicine uses half-life principles:
 
 ## Nuclear Weapons Relevance
 
-Half-life affects weapons in multiple ways:
+Half-life affects [weapons](/terms/nuclear-effects/yield-comparison) in multiple ways:
 - **Fissile material**: Determines weapon core longevity
 - **Plutonium aging**: Decay creates helium that affects weapons
 - **Fallout duration**: Short half-lives create intense initial radiation
@@ -75,7 +75,7 @@ Understanding the radiation-time relationship:
 
 ## Relevance to Nuclear Weapons
 
-Half-life is important in nuclear weapons because:
+Half-life is important in [nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons) because:
 - Determines how long weapons-grade materials remain viable
 - Affects fallout patterns and long-term contamination
 - Influences weapon maintenance and safety protocols

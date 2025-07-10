@@ -7,7 +7,7 @@ description: "Ground zero is the point on Earth's surface directly below or at a
 
 ## Overview
 
-Ground zero is the point on Earth's surface directly below or at a nuclear detonation. Originally a technical term for blast measurement, it became synonymous with total devastation and the epicenter of destruction.
+Ground zero is the point on Earth's surface directly below or at a [nuclear](/history/modern-developments/nuclear-weapons-free-zones) detonation. Originally a technical term for blast measurement, it became synonymous with total devastation and the epicenter of destruction.
 
 ## Technical Definition
 
@@ -19,7 +19,7 @@ Ground zero serves as a reference point for measuring nuclear effects:
 
 ## Historical Usage
 
-The term originated during nuclear weapons development:
+The term originated during nuclear [weapons](/terms/nuclear-effects/yield-comparison) development:
 - **Trinity Test (1945)**: First use for measuring blast effects
 - **Hiroshima**: Ground zero near Shima Hospital
 - **Nagasaki**: Ground zero in Urakami Valley
@@ -59,11 +59,11 @@ Major nuclear ground zeros:
 
 ## Modern Significance
 
-Ground zero remains relevant for understanding nuclear weapons:
-- **Damage assessment**: Calculating weapon effectiveness
+Ground zero remains relevant for understanding [nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons):
+- **Damage assessment**: Calculating [weapon](/history/weapons-technology/miniaturization) effectiveness
 - **Emergency planning**: Evacuation and response zones
 - **Historical memory**: Peace parks and memorials
-- **Educational value**: Understanding nuclear weapon effects
+- **Educational value**: Understanding [nuclear weapon effects](/history/weapons-technology/nuclear-weapon-effects)
 
 ## Relevance to Nuclear Weapons
 

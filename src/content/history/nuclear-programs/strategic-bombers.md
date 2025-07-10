@@ -7,7 +7,7 @@ description: 'Strategic bombers were the first nuclear delivery systems and rema
 
 ## The First Nuclear Delivery Platform
 
-Strategic bombers were the first platforms designed to deliver nuclear weapons and remain a crucial component of nuclear deterrence. These long-range aircraft offer unique capabilities that distinguish them from ballistic missiles: they can be recalled after launch, demonstrate resolve through visible deployment, penetrate enemy defenses, and carry both nuclear and conventional weapons. From the B-29 Superfortress that dropped the first atomic bombs to modern stealth bombers, these aircraft have evolved to remain relevant in an era of intercontinental missiles and advanced air defenses.
+Strategic bombers were the first platforms designed to deliver [nuclear](/history/weapons-technology/nuclear-weapons-design) [weapons](/terms/nuclear-effects/yield-comparison) and remain a crucial component of nuclear deterrence. These long-range aircraft offer unique capabilities that distinguish them from ballistic missiles: they can be recalled after launch, demonstrate resolve through visible deployment, penetrate enemy defenses, and carry both nuclear and conventional weapons. From the B-29 Superfortress that dropped the first atomic bombs to modern stealth bombers, these aircraft have evolved to remain relevant in an era of intercontinental missiles and advanced air defenses.
 
 ## Historical Development
 
@@ -47,7 +47,7 @@ Strategic bombers were the first platforms designed to deliver nuclear weapons a
 
 - **Service period**: 1955-present (70+ years of service)
 - **Characteristics**: Eight-engine subsonic strategic bomber
-- **Nuclear weapons**: Gravity bombs and cruise missiles
+- **[Nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones)**: Gravity bombs and cruise missiles
 - **Modernization**: Continuous upgrades and modifications
 - **Longevity**: Expected to serve until 2050s
 
@@ -121,7 +121,7 @@ Strategic bombers were the first platforms designed to deliver nuclear weapons a
 
 ### Nuclear Gravity Bombs
 
-- **B61 family**: U.S. tactical and strategic nuclear bombs
+- **B61 family**: U.S. [tactical](/terms/weapons-delivery/tactical-nuclear-weapons) and strategic nuclear bombs
 - **B83**: Most powerful U.S. nuclear bomb
 - **Variable yield**: Adjustable explosive yield
 - **Safety features**: Advanced safety and security systems

@@ -7,7 +7,7 @@ description: 'A comprehensive overview of nuclear test sites worldwide, from the
 
 ## Global Nuclear Testing Legacy
 
-A comprehensive overview of nuclear test sites worldwide reveals the locations where over 2,000 nuclear tests have been conducted by nuclear powers since 1945, leaving a lasting environmental and health legacy across the globe. From the Nevada Test Site in the United States to the remote Pacific atolls, these testing grounds witnessed the development and refinement of nuclear weapons that fundamentally changed warfare and international relations. Understanding the scope, scale, and consequences of nuclear testing is essential for comprehending the environmental costs of nuclear weapons and the ongoing challenges of nuclear cleanup and monitoring.
+A comprehensive overview of [nuclear](/history/testing-disasters/nuclear-testing-health-effects) test sites worldwide reveals the locations where over 2,000 nuclear tests have been conducted by nuclear powers since 1945, leaving a lasting environmental and health legacy across the globe. From the Nevada Test Site in the United States to the remote Pacific atolls, these testing grounds witnessed the development and refinement of nuclear weapons that fundamentally changed warfare and international relations. Understanding the scope, scale, and consequences of [nuclear testing](/history/weapons-technology/nuclear-testing) is essential for comprehending the environmental costs of nuclear weapons and the ongoing challenges of nuclear cleanup and monitoring.
 
 ## Overview of Nuclear Testing
 
@@ -24,7 +24,7 @@ A comprehensive overview of nuclear test sites worldwide reveals the locations w
 - **1945-1963**: Atmospheric testing era
 - **1963-1996**: Underground testing era
 - **1996-present**: Comprehensive test ban
-- **2017**: Last nuclear test (North Korea)
+- **2017**: Last nuclear test ([North](/history/nuclear-programs/north-korea-first-test) Korea)
 
 ### Environmental Impact
 
@@ -453,7 +453,7 @@ The health and environmental consequences of French nuclear testing continue to 
 
 China conducted 45 nuclear tests between 1964 and 1996, making it the fifth-largest nuclear testing program. The Chinese testing program was driven by the desire to develop an independent nuclear deterrent and to break free from dependence on the Soviet Union. The program was conducted at the Lop Nur test site in the Xinjiang region, one of the most remote locations in China.
 
-The Chinese testing program began with the successful test of China's first atomic bomb on October 16, 1964, making China the fifth nuclear weapon state. The program continued with the development of hydrogen bombs, intercontinental ballistic missiles, and other nuclear weapons systems. The testing program was conducted under extreme secrecy, with little information available about its environmental and health effects.
+The Chinese testing program began with the successful test of China's first atomic bomb on October 16, 1964, making China the fifth nuclear [weapon](/history/weapons-technology/nuclear-weapon-effects) state. The program continued with the development of hydrogen bombs, intercontinental ballistic missiles, and other nuclear weapons systems. The testing program was conducted under extreme secrecy, with little information available about its environmental and health effects.
 
 The Lop Nur test site was chosen for its remote location in the Taklamakan Desert, but it was home to Uyghur and other ethnic minority populations who were exposed to radioactive fallout. The testing program displaced local populations and created environmental contamination that affects the region today. The full extent of the health and environmental damage is unknown due to restrictions on information about the testing program.
 
@@ -527,7 +527,7 @@ The environmental studies conducted at nuclear test sites have advanced our unde
 
 The seismic monitoring systems developed to detect nuclear tests have contributed to our understanding of earthquakes and other seismic events. The global seismic monitoring network established for nuclear test detection has been used to study natural earthquakes and to develop early warning systems for tsunamis and other natural disasters.
 
-The technological developments associated with nuclear testing have also had broader applications. The development of radiation detection instruments, protective equipment, and decontamination techniques has benefited nuclear power, medical applications, and emergency response capabilities. The computational methods developed for nuclear weapons design have been applied to other scientific and engineering problems.
+The technological developments associated with nuclear testing have also had broader applications. The development of radiation detection instruments, protective equipment, and decontamination techniques has benefited nuclear power, medical applications, and emergency response capabilities. The computational methods developed for [nuclear weapons design](/history/weapons-technology/nuclear-weapons-design) have been applied to other scientific and engineering problems.
 
 ### The Path to the Test Ban
 

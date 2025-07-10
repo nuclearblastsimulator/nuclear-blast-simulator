@@ -7,7 +7,7 @@ description: "Los Alamos National Laboratory was the Manhattan Project's secret 
 
 ## The Manhattan Project's Secret Headquarters
 
-Los Alamos National Laboratory was the Manhattan Project's secret headquarters where J. Robert Oppenheimer led an international team of scientists to design and build the world's first atomic bombs. Established in 1943 on a remote mesa in northern New Mexico, Los Alamos became the epicenter of nuclear weapons development, where the physics of nuclear fission was transformed into the engineering reality of nuclear weapons. The laboratory's work culminated in the Trinity test and the atomic bombs dropped on Hiroshima and Nagasaki, fundamentally changing the course of human history and establishing Los Alamos as the birthplace of the nuclear age.
+Los Alamos National Laboratory was the Manhattan Project's secret headquarters where J. Robert Oppenheimer led an international team of scientists to design and build the world's first atomic bombs. Established in 1943 on a remote mesa in northern New Mexico, Los Alamos became the epicenter of [nuclear](/terms/nuclear-effects/yield-comparison) [weapons](/terms/weapons-delivery/tactical-nuclear-weapons) development, where the physics of nuclear fission was transformed into the engineering reality of [nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones). The laboratory's work culminated in the Trinity test and the atomic bombs dropped on Hiroshima and Nagasaki, fundamentally changing the course of human history and establishing Los Alamos as the birthplace of the nuclear age.
 
 ## Historical Origins
 
@@ -449,7 +449,7 @@ The most controversial chapter in Los Alamos's postwar history was the developme
 
 Oppenheimer opposed the hydrogen bomb development, arguing that such weapons were unnecessary for national security and would accelerate the arms race. Teller and others argued that the United States needed to develop these weapons before the Soviet Union did. The debate was resolved in favor of development when President Truman authorized the hydrogen bomb program in 1950, following the Soviet Union's first nuclear test in 1949.
 
-The hydrogen bomb program at Los Alamos pushed the boundaries of physics and engineering even further than the fission weapons had. The Teller-Ulam design, developed by Teller and Stanislaw Ulam, solved the technical challenges of creating thermonuclear reactions and led to the first successful hydrogen bomb test in 1952. This achievement established Los Alamos as the leading center for nuclear weapons design.
+The hydrogen bomb program at Los Alamos pushed the boundaries of physics and engineering even further than the fission weapons had. The Teller-Ulam design, developed by Teller and Stanislaw Ulam, solved the technical challenges of creating thermonuclear reactions and led to the first successful hydrogen bomb test in 1952. This achievement established Los Alamos as the leading center for [nuclear weapons design](/history/weapons-technology/nuclear-weapons-design).
 
 ### The Computing Revolution
 

@@ -7,7 +7,7 @@ description: "Beijing has coordinated China's nuclear weapons program since the 
 
 ## China's Nuclear Command Center
 
-Beijing has coordinated China's nuclear weapons program since the 1950s, developing the world's third nuclear arsenal with an estimated 350 warheads and maintaining a doctrine of minimum deterrence with a no-first-use policy. From the initial decision by Mao Zedong to develop nuclear weapons to the modern strategic nuclear forces under Xi Jinping, Beijing has maintained centralized control over China's nuclear program. The Chinese capital houses the political leadership, military command structures, and scientific institutions that have built and maintained China's nuclear deterrent, fundamentally altering the strategic balance in Asia and globally.
+Beijing has coordinated China's [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) [weapons](/terms/nuclear-effects/yield-comparison) program since the 1950s, developing the world's third nuclear arsenal with an estimated 350 warheads and maintaining a doctrine of minimum deterrence with a no-first-use policy. From the initial decision by Mao Zedong to develop [nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones) to the modern strategic nuclear forces under Xi Jinping, Beijing has maintained centralized control over China's nuclear program. The Chinese capital houses the political leadership, military command structures, and scientific institutions that have built and maintained China's nuclear deterrent, fundamentally altering the strategic balance in Asia and globally.
 
 ## Historical Development
 
@@ -91,7 +91,7 @@ Beijing has coordinated China's nuclear weapons program since the 1950s, develop
 
 - **Strategic warheads**: Long-range strategic warheads
 - **Theater warheads**: Medium-range theater warheads
-- **Tactical warheads**: Short-range tactical warheads
+- **[Tactical](/terms/weapons-delivery/tactical-nuclear-weapons) warheads**: Short-range tactical warheads
 - **Yield range**: 200 kilotons to 5 megatons
 
 ### Delivery Systems
@@ -405,7 +405,7 @@ However, the modernization program has raised concerns about China's nuclear int
 
 China's nuclear weapons program is supported by a comprehensive nuclear industrial complex that includes uranium mining, enrichment, plutonium production, and weapons manufacturing. This industrial base has been developed over several decades and represents a significant national investment in nuclear technology.
 
-The nuclear industrial complex is organized around several key facilities. The China Academy of Engineering Physics (CAEP) serves as the primary nuclear weapons research and development organization, responsible for weapons design and testing. The nuclear weapons production complex includes facilities for uranium enrichment, plutonium production, and weapons assembly.
+The nuclear industrial complex is organized around several key facilities. The China Academy of Engineering Physics (CAEP) serves as the primary nuclear weapons research and development organization, responsible for weapons [design](/history/weapons-technology/nuclear-weapons-design) and testing. The nuclear weapons production complex includes facilities for uranium enrichment, plutonium production, and weapons assembly.
 
 The industrial base has been modernized in recent years to support the nuclear modernization program. New facilities have been built, and existing facilities have been upgraded to improve safety, security, and efficiency. The modernization reflects China's commitment to maintaining and improving its nuclear capabilities.
 

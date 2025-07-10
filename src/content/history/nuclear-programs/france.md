@@ -7,7 +7,7 @@ description: "Paris coordinates France's nuclear weapons program, maintaining an
 
 ## France's Independent Nuclear Force
 
-Paris coordinates France's nuclear weapons program, maintaining an independent nuclear deterrent through the Force de dissuasion (nuclear deterrent force) with submarine and air-delivered nuclear weapons. Developed under Charles de Gaulle's vision of strategic independence, France became the world's fourth nuclear power in 1960. From the Élysée Palace's political control to the military's operational command, Paris oversees a nuclear arsenal of approximately 290 warheads deployed on submarines and aircraft, representing France's commitment to strategic autonomy and its role as a middle nuclear power.
+Paris coordinates France's [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) [weapons](/terms/nuclear-effects/yield-comparison) program, maintaining an independent nuclear deterrent through the Force de dissuasion (nuclear deterrent force) with submarine and air-delivered [nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones). Developed under Charles de Gaulle's vision of strategic independence, France became the world's fourth nuclear power in 1960. From the Élysée Palace's political control to the military's operational command, Paris oversees a nuclear arsenal of approximately 290 warheads deployed on submarines and aircraft, representing France's commitment to strategic autonomy and its role as a middle nuclear power.
 
 ## Historical Development
 
@@ -112,7 +112,7 @@ Paris coordinates France's nuclear weapons program, maintaining an independent n
 
 - **Rafale aircraft**: Nuclear-capable fighter aircraft
 - **ASMP-A missiles**: Air-launched nuclear missiles
-- **Tactical flexibility**: Tactical nuclear flexibility
+- **[Tactical](/terms/weapons-delivery/tactical-nuclear-weapons) flexibility**: Tactical nuclear flexibility
 - **Dual capability**: Conventional and nuclear capability
 
 ## Nuclear Submarines
@@ -166,7 +166,7 @@ Paris coordinates France's nuclear weapons program, maintaining an independent n
 ### CEA (Atomic Energy Commission)
 
 - **Nuclear research**: Nuclear weapons research
-- **Weapons design**: Nuclear weapons design
+- **Weapons design**: [Nuclear weapons design](/history/weapons-technology/nuclear-weapons-design)
 - **Safety research**: Nuclear safety research
 - **Technology development**: Nuclear technology development
 

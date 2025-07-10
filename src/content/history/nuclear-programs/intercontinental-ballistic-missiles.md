@@ -7,7 +7,7 @@ description: 'ICBMs revolutionized nuclear warfare by enabling rapid strike capa
 
 ## The Ultimate Strategic Weapon
 
-Intercontinental Ballistic Missiles (ICBMs) represent the pinnacle of nuclear weapons delivery technology, capable of striking targets thousands of miles away in under 30 minutes. These missiles fundamentally transformed nuclear strategy, making possible the concept of mutually assured destruction and reshaping global geopolitics. From the first Soviet R-7 in 1957 to modern systems like the U.S. Minuteman III and Russian RS-28 Sarmat, ICBMs have remained the most feared and strategically significant weapons ever created.
+Intercontinental Ballistic Missiles (ICBMs) represent the pinnacle of [nuclear](/history/weapons-technology/nuclear-weapons-design) [weapons](/history/nuclear-programs/nuclear-weapons-by-country) delivery technology, capable of striking targets thousands of miles away in under 30 minutes. These missiles fundamentally transformed nuclear strategy, making possible the concept of mutually assured destruction and reshaping global geopolitics. From the first Soviet R-7 in 1957 to modern systems like the U.S. Minuteman III and Russian RS-28 Sarmat, ICBMs have remained the most feared and strategically significant weapons ever created.
 
 ## Development Origins
 
@@ -16,7 +16,7 @@ Intercontinental Ballistic Missiles (ICBMs) represent the pinnacle of nuclear we
 - **German V-2**: World War II rocket technology foundation
 - **Wernher von Braun**: German rocket scientists recruited by both superpowers
 - **Cold War competition**: Intense competition between U.S. and Soviet Union
-- **Nuclear weapons integration**: Combining nuclear warheads with rocket technology
+- **[Nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons) integration**: Combining nuclear warheads with rocket technology
 
 ### Early Programs
 
@@ -76,7 +76,7 @@ Intercontinental Ballistic Missiles (ICBMs) represent the pinnacle of nuclear we
 
 - **R-7/SS-6 Sapwood (1957-1968)**: First operational ICBM
 - **R-16/SS-7 Saddler (1961-1976)**: Second-generation liquid-fueled
-- **R-36/SS-9 Scarp (1966-1983)**: Heavy, high-yield missiles
+- **R-36/SS-9 Scarp (1966-1983)**: Heavy, high-[yield](/terms/nuclear-effects/yield-comparison) missiles
 - **R-36M/SS-18 Satan (1974-present)**: Most powerful ICBM ever deployed
 - **RS-28 Sarmat**: Latest heavy ICBM replacing SS-18
 
@@ -174,7 +174,7 @@ Intercontinental Ballistic Missiles (ICBMs) represent the pinnacle of nuclear we
 
 - **Arms race acceleration**: Rapid increase in deployed warheads
 - **Targeting flexibility**: Ability to attack multiple targets
-- **Defense complexity**: Overwhelming missile defense systems
+- **Defense complexity**: Overwhelming [missile defense systems](/history/nuclear-programs/missile-defense-systems)
 - **Treaty complications**: Verification challenges for arms control
 
 ### Modern Developments

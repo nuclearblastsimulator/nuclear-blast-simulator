@@ -7,11 +7,11 @@ description: "Nuclear winter describes the global climatic catastrophe that woul
 
 ## Overview
 
-Nuclear winter describes the global climatic catastrophe that would follow large-scale nuclear war, where smoke and debris from burning cities would block sunlight, causing severe global cooling. This phenomenon could kill more people through environmental effects than the nuclear weapons themselves.
+[Nuclear](/terms/nuclear-effects/yield-comparison) winter describes the global climatic catastrophe that would follow large-scale nuclear war, where smoke and debris from burning cities would block sunlight, causing severe global cooling. This phenomenon could kill more people through environmental [effects](/history/weapons-technology/nuclear-weapon-effects) than the nuclear [weapons](/terms/weapons-delivery/tactical-nuclear-weapons) themselves.
 
 ## The Physical Process
 
-Nuclear weapons ignite fires across vast areas through thermal radiation:
+[Nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones) ignite fires across vast areas through thermal radiation:
 - **Fire ignition**: Thermal radiation ignites buildings, vegetation, and infrastructure
 - **Smoke production**: Urban fires produce fine black carbon particles
 - **Atmospheric injection**: Smoke rises into the stratosphere

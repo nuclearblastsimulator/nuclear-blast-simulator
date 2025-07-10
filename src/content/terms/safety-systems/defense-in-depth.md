@@ -7,7 +7,7 @@ description: 'Defense in depth is a fundamental safety philosophy used in nuclea
 
 ## Overview
 
-Defense in depth is a fundamental safety philosophy used in nuclear facilities that employs multiple independent layers of protection to prevent accidents and limit their consequences. This approach ensures that if one safety system fails, others remain available to maintain safety—a concept born from nuclear weapons security and refined through decades of reactor accidents.
+[Defense](/history/nuclear-programs/missile-defense-systems) in depth is a fundamental safety philosophy used in [nuclear](/history/weapons-technology/nuclear-weapons-design) facilities that employs multiple independent layers of protection to prevent accidents and limit their consequences. This approach ensures that if one safety system fails, others remain available to maintain safety—a concept born from nuclear [weapons](/history/nuclear-programs/nuclear-weapons-by-country) security and refined through decades of reactor accidents.
 
 ## Core Principles
 
@@ -45,7 +45,7 @@ Defense in depth is a fundamental safety philosophy used in nuclear facilities t
 
 - **Engineered safety systems**: Automatic accident response
 - **Emergency procedures**: Operator actions during accidents
-- **Containment systems**: Preventing radioactive release
+- **[Containment](/terms/safety-systems/containment) systems**: Preventing radioactive release
 - **Emergency core cooling**: Maintaining fuel integrity
 
 ### Level 4: Control of Severe Accidents
@@ -183,7 +183,7 @@ Defense in depth is a fundamental safety philosophy used in nuclear facilities t
 
 ## Relevance to Nuclear Weapons
 
-Defense in depth principles apply to nuclear weapons security:
+Defense in depth principles apply to [nuclear weapons](/terms/nuclear-effects/yield-comparison) security:
 
 - **Physical protection**: Multiple barriers to prevent theft
 - **Personnel security**: Background checks and monitoring

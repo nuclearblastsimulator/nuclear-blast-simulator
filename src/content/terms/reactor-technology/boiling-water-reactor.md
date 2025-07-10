@@ -7,12 +7,12 @@ description: "The Boiling Water Reactor (BWR) is the second most common type of 
 
 ## Overview
 
-The Boiling Water Reactor (BWR) is the second most common type of nuclear reactor, representing about 20% of the world's nuclear power plants. Unlike PWRs, BWRs allow water to boil directly in the reactor core, creating steam that drives the turbine-generator—a simpler design that came to symbolize both nuclear power's promise and its perils after Fukushima.
+The Boiling [Water](/terms/reactor-technology/pressurized-water-reactor) Reactor (BWR) is the second most common type of [nuclear](/history/weapons-technology/nuclear-weapons-design) [reactor](/history/modern-developments/obninsk-reactor), representing about 20% of the world's nuclear power plants. Unlike PWRs, BWRs allow water to boil directly in the reactor core, creating steam that drives the turbine-generator—a simpler design that came to symbolize both nuclear power's promise and its perils after Fukushima.
 
 ## Basic Design
 
 ### Single-Loop System
-- **Reactor pressure vessel**: Contains fuel, control rods, and steam separation
+- **Reactor pressure vessel**: Contains fuel, [control rods](/terms/reactor-technology/control-rods), and steam separation
 - **Steam separation**: Internal dryers remove moisture from steam
 - **Direct cycle**: Steam from reactor drives turbine directly
 - **Condensate return**: Water returns to reactor after turbine
@@ -41,7 +41,7 @@ The Boiling Water Reactor (BWR) is the second most common type of nuclear reacto
 ### Engineered Safety Features
 - **Emergency core cooling**: Multiple injection systems
 - **Reactor protection system**: Automatic scram capability
-- **Containment**: Primary and secondary containment structures
+- **[Containment](/terms/safety-systems/containment)**: Primary and secondary containment structures
 - **Isolation systems**: Automatic containment isolation
 
 ### Unique BWR Features
