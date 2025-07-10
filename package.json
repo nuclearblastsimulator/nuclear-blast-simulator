@@ -21,7 +21,8 @@
   "license": "CC-BY-NC-SA-4.0",
   "devDependencies": {
     "dotenv": "^17.0.0",
-    "eslint": "^9.30.0"
+    "eslint": "^9.30.0",
+    "terser": "^5.43.1"
   },
   "engines": {
     "node": ">=14.0.0"
