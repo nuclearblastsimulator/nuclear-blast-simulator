@@ -9,6 +9,7 @@ import screenshotCities from '../images/screenshots/screenshot-cities.png';
 import screenshotBlastEffects from '../images/screenshots/screenshot-blast-effects.png';
 import screenCapture from '../images/screenshots/screen-capture.gif';
 import howItWorks from '../images/screenshots/screen-capture-how-it-works.gif';
+import { cityArticleLinks, weaponArticleLinks, cityTooltips, weaponTooltips } from '../data/article-links.js';
 
 const terms = await getCollection('terms');
 const history = await getCollection('history');
@@ -461,16 +462,45 @@ const locations = data.locations;
             Pre-configured coordinates for major population centers worldwide. You can also search for any address or location.
           </p>
           <div class="grid grid-cols-2 gap-4">
-            {locations.map((location) => (
-              <div class="flex items-center gap-3 p-3 rounded-lg bg-base-100 border border-base-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span class="text-sm font-medium">{location.name}</span>
-                {location.default && <span class="badge badge-primary badge-sm">Default</span>}
-              </div>
-            ))}
+            {locations.map((location) => {
+              const articleLink = cityArticleLinks[location.id];
+              const hasArticle = !!articleLink;
+              
+              // Get tooltip text from imported data
+              const tooltipText = cityTooltips[location.id] || 'Read related article';
+              
+              const content = (
+                <>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span class="text-sm font-medium flex-1">{location.name}</span>
+                  {location.default && <span class="badge badge-primary badge-sm">Default</span>}
+                  {hasArticle && (
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-40 group-hover:opacity-70 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  )}
+                </>
+              );
+              
+              if (hasArticle) {
+                return (
+                  <div class="tooltip tooltip-top" data-tip={tooltipText}>
+                    <a href={articleLink} class="flex items-center gap-3 p-3 rounded-lg bg-base-100 border-2 border-primary/20 hover:border-primary/40 transition-colors group w-full">
+                      {content}
+                    </a>
+                  </div>
+                );
+              } else {
+                return (
+                  <div class="flex items-center gap-3 p-3 rounded-lg bg-base-100 border border-base-300">
+                    {content}
+                  </div>
+                );
+              }
+            })}
           </div>
         </div>
         
@@ -485,15 +515,42 @@ const locations = data.locations;
             <div>
               <h3 class="text-lg font-semibold mb-3 text-secondary">Conventional Explosives</h3>
               <div class="space-y-2">
-                {weapons.filter(w => w.category === 'non-nuclear').map((weapon) => (
-                  <div class="flex items-center justify-between p-3 rounded-lg bg-base-100 border border-base-300 hover:border-secondary/50 transition-colors">
-                    <div>
-                      <span class="font-medium">{weapon.name}</span>
-                      <span class="text-sm text-base-content/50 ml-2">{weapon.details}</span>
-                    </div>
-                    <span class="badge badge-outline">{weapon.yield < 1 ? `${weapon.yield * 1000} tons` : `${weapon.yield} kT`}</span>
-                  </div>
-                ))}
+                {weapons.filter(w => w.category === 'non-nuclear').map((weapon) => {
+                  const articleLink = weaponArticleLinks[weapon.id];
+                  const hasArticle = !!articleLink;
+                  const tooltipText = weaponTooltips[weapon.id] || 'Read technical details';
+                  
+                  const content = (
+                    <>
+                      <div class="flex-1">
+                        <span class="font-medium">{weapon.name}</span>
+                        <span class="text-sm text-base-content/50 ml-2">{weapon.details}</span>
+                      </div>
+                      <span class="badge badge-outline">{weapon.yield < 1 ? `${weapon.yield * 1000} tons` : `${weapon.yield} kT`}</span>
+                      {hasArticle && (
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-40 group-hover:opacity-70 transition-opacity ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                      )}
+                    </>
+                  );
+                  
+                  if (hasArticle) {
+                    return (
+                      <div class="tooltip tooltip-top w-full" data-tip={tooltipText}>
+                        <a href={articleLink} class="flex items-center justify-between p-3 rounded-lg bg-base-100 border-2 border-secondary/20 hover:border-secondary/40 transition-colors group w-full">
+                          {content}
+                        </a>
+                      </div>
+                    );
+                  } else {
+                    return (
+                      <div class="flex items-center justify-between p-3 rounded-lg bg-base-100 border border-base-300">
+                        {content}
+                      </div>
+                    );
+                  }
+                })}
               </div>
             </div>
             
@@ -501,35 +558,44 @@ const locations = data.locations;
             <div>
               <h3 class="text-lg font-semibold mb-3 text-primary">Historically Significant</h3>
               <div class="space-y-2">
-                {weapons.filter(w => w.category === 'historically-significant').slice(0, 5).map((weapon) => (
-                  <div class="flex items-center justify-between p-3 rounded-lg bg-base-100 border border-base-300 hover:border-primary/50 transition-colors">
-                    <div>
-                      <span class="font-medium">{weapon.name}</span>
-                      <span class="text-sm text-base-content/50 ml-2">{weapon.details}</span>
-                    </div>
-                    <span class="badge badge-outline">
-                      {weapon.yield > 1000 ? `${weapon.yield / 1000} MT` : `${weapon.yield} kT`}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <!-- Modern -->
-            <div>
-              <h3 class="text-lg font-semibold mb-3 text-accent">Modern Arsenal</h3>
-              <div class="space-y-2">
-                {weapons.filter(w => w.category === 'modern-strategic').slice(0, 3).map((weapon) => (
-                  <div class="flex items-center justify-between p-3 rounded-lg bg-base-100 border border-base-300 hover:border-accent/50 transition-colors">
-                    <div>
-                      <span class="font-medium">{weapon.name}</span>
-                      <span class="text-sm text-base-content/50 ml-2">{weapon.details}</span>
-                    </div>
-                    <span class="badge badge-outline">
-                      {weapon.yield > 1000 ? `${weapon.yield / 1000} MT` : `${weapon.yield} kT`}
-                    </span>
-                  </div>
-                ))}
+                {weapons.filter(w => w.category === 'historically-significant').slice(0, 5).map((weapon) => {
+                  const articleLink = weaponArticleLinks[weapon.id];
+                  const hasArticle = !!articleLink;
+                  const tooltipText = weaponTooltips[weapon.id] || 'Read historical details';
+                  
+                  const content = (
+                    <>
+                      <div class="flex-1">
+                        <span class="font-medium">{weapon.name}</span>
+                        <span class="text-sm text-base-content/50 ml-2">{weapon.details}</span>
+                      </div>
+                      <span class="badge badge-outline">
+                        {weapon.yield > 1000 ? `${weapon.yield / 1000} MT` : `${weapon.yield} kT`}
+                      </span>
+                      {hasArticle && (
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-40 group-hover:opacity-70 transition-opacity ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                      )}
+                    </>
+                  );
+                  
+                  if (hasArticle) {
+                    return (
+                      <div class="tooltip tooltip-top w-full" data-tip={tooltipText}>
+                        <a href={articleLink} class="flex items-center justify-between p-3 rounded-lg bg-base-100 border-2 border-primary/20 hover:border-primary/40 transition-colors group w-full">
+                          {content}
+                        </a>
+                      </div>
+                    );
+                  } else {
+                    return (
+                      <div class="flex items-center justify-between p-3 rounded-lg bg-base-100 border border-base-300">
+                        {content}
+                      </div>
+                    );
+                  }
+                })}
               </div>
             </div>
             
