@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config'
 import tailwindcss from '@tailwindcss/vite'
+import rehypeExternalLinks from 'rehype-external-links'
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,7 +23,14 @@ export default defineConfig({
     shikiConfig: {
       theme: 'github-dark',
       wrap: true
-    }
+    },
+    rehypePlugins: [
+      [rehypeExternalLinks, { 
+        target: '_blank', 
+        rel: ['noopener', 'noreferrer'],
+        content: { type: 'text', value: ' ↗' }
+      }]
+    ]
   },
 
   // Vite configuration (to integrate with existing setup)
