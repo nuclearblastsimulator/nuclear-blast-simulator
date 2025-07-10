@@ -788,11 +788,19 @@ input:focus {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Prevent horizontal scroll */
+    html, body {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+    
     .container {
         flex-direction: column;
         height: 100vh;
         /* Add safe area padding only on mobile */
         padding-top: env(safe-area-inset-top);
+        max-width: 100vw;
+        overflow-x: hidden;
     }
 
     /* Support for dynamic viewport height on mobile */
@@ -804,6 +812,7 @@ input:focus {
 
     .sidebar {
         width: 100%;
+        max-width: 100vw;
         height: auto;
         max-height: 50vh;
         border-right: none;
@@ -811,8 +820,10 @@ input:focus {
         padding: 1.5rem;
         /* Ensure sidebar is scrollable if content overflows */
         overflow-y: auto;
+        overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
         flex-shrink: 0;
+        box-sizing: border-box;
     }
 
     .section {
@@ -870,6 +881,9 @@ input:focus {
         flex: 1;
         min-height: 0; /* Important for flex children */
         position: relative;
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden;
     }
 
     .fullscreen-toggle {
@@ -951,6 +965,7 @@ input:focus {
         top: 0;
         left: 0;
         width: 100vw;
+        max-width: 100vw;
         height: 100vh;
         z-index: 1001;
         transform: translateX(100%);
@@ -959,6 +974,8 @@ input:focus {
         border-radius: 0;
         border: none;
         max-height: none;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     /* Support for dynamic viewport height */
