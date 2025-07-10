@@ -165,6 +165,39 @@ Where R is radius and Y is yield in kilotons.
 - Thermal effects reduced by 30%
 - Additional fallout considerations
 
+## 🎨 UI/UX Design Principles
+
+### Visual Design
+- **Dark Theme**: Optimized for extended viewing with reduced eye strain
+- **Color System**: 
+  - Primary (Blue): Interactive elements and CTAs
+  - Secondary (Orange): Highlighting and accents
+  - Warning (Yellow): Blast zones and cautions
+  - Base colors: Neutral grays for content hierarchy
+- **Typography**: 
+  - Headers: Rubik Mono One for distinctive branding
+  - Body: Inter for optimal readability
+- **Spacing**: Consistent 8px grid system for alignment
+
+### User Experience
+- **Progressive Disclosure**: Complex information revealed as needed
+- **Mobile-First**: Responsive design that works on all devices
+- **Accessibility**: High contrast ratios, keyboard navigation support
+- **Performance**: Static site generation for instant loading
+- **Educational Focus**: Clear labeling, helpful tooltips, contextual warnings
+
+### Interactive Elements
+- **Feedback**: Hover states, active states, and transitions
+- **Consistency**: Unified button styles, form controls, and navigation
+- **Hierarchy**: Clear visual distinction between primary and secondary actions
+- **Error Prevention**: Validation and helpful error messages
+
+### Component Patterns
+- **Cards**: Used for article previews and information grouping
+- **Collapsible Sidebars**: Organize complex navigation without overwhelming
+- **Modal-free Design**: Information stays in context
+- **Progressive Enhancement**: Core functionality works without JavaScript
+
 ## 🤝 Contributing
 
 We welcome contributions that improve the educational value and accuracy of this simulator. Please ensure all contributions:
@@ -173,6 +206,7 @@ We welcome contributions that improve the educational value and accuracy of this
 2. Use publicly available information only
 3. Follow the existing code style
 4. Include appropriate documentation
+5. Adhere to the UI/UX principles outlined above
 
 ## 📝 License
 
