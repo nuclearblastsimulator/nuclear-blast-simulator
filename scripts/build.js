@@ -47,22 +47,73 @@ function processHTML(htmlContent) {
     return htmlContent;
 }
 
-// Copy and process index.html
+// Copy and process HTML files
+function processAndCopyHTML(srcPath, destPath, fileName) {
+    if (fs.existsSync(srcPath)) {
+        let htmlContent = fs.readFileSync(srcPath, 'utf8');
+        
+        // Process HTML (add GA if production)
+        htmlContent = processHTML(htmlContent);
+        
+        // Write processed HTML
+        fs.writeFileSync(destPath, htmlContent);
+        console.log(`✅ Processed and copied ${fileName} to dist/`);
+        return true;
+    }
+    return false;
+}
+
+// Copy homepage
 const indexSrc = path.join(srcDir, 'index.html');
 const indexDest = path.join(distDir, 'index.html');
 
-if (fs.existsSync(indexSrc)) {
-    let htmlContent = fs.readFileSync(indexSrc, 'utf8');
-    
-    // Process HTML (add GA if production)
-    htmlContent = processHTML(htmlContent);
-    
-    // Write processed HTML
-    fs.writeFileSync(indexDest, htmlContent);
-    console.log('✅ Processed and copied index.html to dist/');
-} else {
+if (!processAndCopyHTML(indexSrc, indexDest, 'index.html')) {
     console.error('❌ index.html not found in root directory');
     process.exit(1);
+}
+
+// Copy simulator directory
+const simulatorDir = path.join(srcDir, 'simulator');
+const simulatorDistDir = path.join(distDir, 'simulator');
+
+if (fs.existsSync(simulatorDir)) {
+    // Create simulator directory in dist
+    if (!fs.existsSync(simulatorDistDir)) {
+        fs.mkdirSync(simulatorDistDir, { recursive: true });
+    }
+    
+    // Copy simulator index.html
+    const simulatorIndexSrc = path.join(simulatorDir, 'index.html');
+    const simulatorIndexDest = path.join(simulatorDistDir, 'index.html');
+    
+    if (!processAndCopyHTML(simulatorIndexSrc, simulatorIndexDest, 'simulator/index.html')) {
+        console.error('❌ simulator/index.html not found');
+        process.exit(1);
+    }
+} else {
+    console.error('❌ simulator/ directory not found');
+    process.exit(1);
+}
+
+// Copy learn directory
+const learnDir = path.join(srcDir, 'learn');
+const learnDistDir = path.join(distDir, 'learn');
+
+if (fs.existsSync(learnDir)) {
+    // Create learn directory in dist
+    if (!fs.existsSync(learnDistDir)) {
+        fs.mkdirSync(learnDistDir, { recursive: true });
+    }
+    
+    // Copy learn index.html
+    const learnIndexSrc = path.join(learnDir, 'index.html');
+    const learnIndexDest = path.join(learnDistDir, 'index.html');
+    
+    if (!processAndCopyHTML(learnIndexSrc, learnIndexDest, 'learn/index.html')) {
+        console.warn('⚠️  learn/index.html not found');
+    }
+} else {
+    console.log('ℹ️  learn/ directory not found (optional)');
 }
 
 // Copy assets folder recursively

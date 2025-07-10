@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Nuclear Blast Radius Calculator - Interactive Nuclear Weapon Effects Simulator</title>
+    <meta name="description"
+        content="Visualize nuclear weapon blast radius on any city. Compare atomic bomb effects from Hiroshima to Tsar Bomba. Educational nuclear explosion simulator with real-time calculations.">
+    <meta name="keywords"
+        content="nuclear blast radius, atomic bomb simulator, nuclear weapon effects, nukemap alternative, nuclear explosion calculator, hiroshima bomb radius, nuclear fallout map, nuclear damage calculator, atomic blast map">
+    <meta name="author" content="Nuclear Blast Simulator">
+    <meta property="og:title" content="Nuclear Blast Radius Calculator - Interactive Nuclear Weapon Effects Simulator">
+    <meta property="og:description"
+        content="Visualize the devastating effects of nuclear weapons on any city. Educational tool showing blast radius, thermal radiation, and damage zones.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../assets/images/nuclear-blast-preview.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nuclear Blast Radius Calculator">
+    <meta name="twitter:description"
+        content="Interactive nuclear weapon effects simulator. Visualize blast radius from Hiroshima to Tsar Bomba on any location.">
+    <link rel="canonical" href="https://nuclear-blast-simulator.tommytomatoe.com/simulator/">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="msapplication-TileColor" content="#247bac">
+    <meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#247bac">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Nuclear Blast Radius Calculator",
+        "alternativeHeadline": "NUKEMAP Alternative - Nuclear Weapon Effects Simulator",
+        "applicationCategory": "EducationalApplication",
+        "applicationSubCategory": "Science Education",
+        "description": "Interactive educational tool to visualize nuclear weapon blast effects and damage radius on any location worldwide. Compare different nuclear weapons from conventional explosives to thermonuclear bombs.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        },
+        "browserRequirements": "Requires JavaScript enabled",
+        "softwareVersion": "1.0",
+        "operatingSystem": "All",
+        "educationalUse": [
+            "Teaching nuclear physics",
+            "Understanding nuclear weapon effects",
+            "Historical education about atomic weapons",
+            "Civil defense planning education"
+        ],
+        "creator": {
+            "@type": "Organization",
+            "name": "Nuclear Blast Simulator"
+        },
+        "keywords": [
+            "nuclear blast radius",
+            "atomic bomb simulator",
+            "nuclear weapon effects",
+            "nukemap alternative",
+            "nuclear explosion calculator",
+            "blast damage assessment",
+            "thermal radiation radius",
+            "nuclear detonation effects"
+        ],
+        "educationalLevel": "High school and above",
+        "inLanguage": "en-US",
+        "isAccessibleForFree": true,
+        "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    }
+    </script>
+
+    <!-- Additional Schema for FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "How far does a nuclear blast radius extend?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The blast radius depends on the weapon's yield. A 15 kiloton bomb (Hiroshima-sized) creates severe damage within 1-2 miles, while a 50 megaton bomb (Tsar Bomba) can cause damage over 30 miles away."
+            }
+        }, {
+            "@type": "Question",
+            "name": "What are the different damage zones in a nuclear explosion?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nuclear explosions create multiple damage zones: the fireball (complete vaporization), heavy blast damage (5 psi), moderate damage (1 psi), light damage (0.25 psi), and thermal radiation zones extending furthest."
+            }
+        }, {
+            "@type": "Question",
+            "name": "Is this nuclear blast simulator accurate?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "This educational tool uses publicly available data and simplified models. Actual effects vary based on altitude, weather, terrain, and other factors. It's designed for educational purposes only."
+            }
+        }]
+    }
+    </script>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="header-container">
+                <img src="../assets/logo/logo.png" alt="Nuclear Blast Simulator Logo" class="logo">
+                <div class="title-wrapper">
+                    <h1 class="title-line">Nuclear Blast</h1>
+                    <h1 class="title-line">Simulator</h1>
+                </div>
+            </div>
+            <p class="subtitle">Educational visualization of nuclear weapon effects</p>
+
+            <button class="simulate-btn" id="simulate-btn" onclick="simulateBlast()">
+                🚀 Simulate Bomb Detonation
+            </button>
+
+            <div class="section">
+                <h3 class="section-title">Select Weapon</h3>
+                <select id="weapon-select"
+                    style="width: 100%; padding: 1rem; background: #2a2a2a; border: 2px solid #444; color: #fff; border-radius: 8px; font-size: 1rem;">
+                    <!-- Options will be populated from JSON data -->
+                </select>
+                <div id="weapon-details">
+                    <div class="bomb-name">Loading weapons...</div>
+                    <div class="bomb-details">Please wait</div>
+                </div>
+            </div>
+
+            <!-- Units preference hidden but still functional -->
+            <div style="display: none;">
+                <input type="radio" name="units" value="imperial" checked>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Detonation Type</h3>
+                <div class="detonation-options">
+                    <label class="radio-option">
+                        <input type="radio" name="detonation" value="air" checked>
+                        <span class="radio-label">
+                            <span class="radio-title">Air Burst</span>
+                            <span class="radio-description">Maximizes blast damage area</span>
+                        </span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="detonation" value="surface">
+                        <span class="radio-label">
+                            <span class="radio-title">Surface Burst</span>
+                            <span class="radio-description">Creates fallout & crater</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Select Location</h3>
+                <div class="location-selector">
+                    <select id="city-select">
+                        <!-- Options will be populated from JSON data -->
+                    </select>
+
+                    <div class="custom-location">
+                        <input type="text" id="custom-address" placeholder="Or enter any address...">
+                        <button class="search-btn" onclick="searchAddress()">Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Blast Effects</h3>
+                <div class="legend">
+                    <div class="legend-item" data-zone="fireball">
+                        <div class="legend-color" style="background: rgba(255, 0, 0, 0.6);"></div>
+                        <span>Fireball (vaporization)</span>
+                    </div>
+                    <div class="legend-item" data-zone="heavy">
+                        <div class="legend-color" style="background: rgba(255, 100, 0, 0.5);"></div>
+                        <span>Heavy blast damage (5 psi)</span>
+                    </div>
+                    <div class="legend-item" data-zone="moderate">
+                        <div class="legend-color" style="background: rgba(255, 200, 0, 0.4);"></div>
+                        <span>Moderate damage (1 psi)</span>
+                    </div>
+                    <div class="legend-item" data-zone="light">
+                        <div class="legend-color" style="background: rgba(255, 255, 0, 0.3);"></div>
+                        <span>Light damage (0.25 psi)</span>
+                    </div>
+                    <div class="legend-item" data-zone="thermal">
+                        <div class="legend-color" style="background: rgba(200, 200, 0, 0.2);"></div>
+                        <span>Thermal radiation (3rd degree burns)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="warning">
+                <strong>Educational Purpose:</strong> This simulation demonstrates the devastating scale of nuclear
+                weapons. The data is based on publicly available information and simplified models. Actual effects would
+                vary based on multiple factors, including but not limited to altitude, weather, and terrain.
+            </div>
+
+            <div class="footer">
+                <p>Made with ❤️ in Knoxville, TN</p>
+                <div class="social-links">
+                    <a href="https://github.com/nuclear-blast-simulator/nuclear-blast-simulator" target="_blank"
+                        rel="noopener noreferrer" class="social-link" title="View on GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="license"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"
+                        rel="noopener noreferrer">CC BY-NC-SA 4.0</a></p>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <div id="map"></div>
+
+            <!-- Wind Direction Indicator -->
+            <div class="wind-indicator" id="wind-indicator">
+                <div class="wind-compass">
+                    <div class="wind-arrow" id="wind-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L15.5 8.5H8.5L12 2Z" />
+                            <path d="M12 22L8.5 15.5H15.5L12 22Z" />
+                        </svg>
+                    </div>
+                    <div class="wind-speed" id="wind-speed">15 mph</div>
+                </div>
+                <div class="wind-label">Wind Direction</div>
+            </div>
+
+            <!-- Floating Action Button -->
+            <button class="fab-simulate" id="fab-simulate" onclick="simulateBlast()">
+                🚀
+            </button>
+
+            <!-- Mobile Fullscreen Toggle -->
+            <button class="fullscreen-toggle" id="fullscreen-toggle" onclick="toggleFullscreen()">
+                <svg class="fullscreen-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+                </svg>
+                <svg class="exit-fullscreen-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                    style="display: none;">
+                    <path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z" />
+                </svg>
+            </button>
+
+            <!-- Blast Effects Panel Toggle -->
+            <button class="effects-toggle" id="effects-toggle" onclick="toggleEffectsPanel()">
+                <img src="../assets/logo/logo.png" alt="Blast Effects" class="effects-toggle-logo">
+                <span class="effects-toggle-text">Blast Effects Details</span>
+            </button>
+
+            <!-- Slide-over Panel -->
+            <div class="effects-panel" id="effects-panel">
+                <div class="effects-panel-header">
+                    <h2>Blast Effects Summary</h2>
+                    <button class="effects-close" onclick="closeEffectsPanel()">×</button>
+                </div>
+                <div class="effects-panel-content" id="effects-content">
+                    <p class="effects-placeholder">Simulate a blast to see detailed effects data</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Analytics -->
+    <script src="../assets/js/analytics.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="../assets/js/app.js"></script>
+</body>
+
+</html>

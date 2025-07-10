@@ -55,6 +55,11 @@ function createServer() {
         if (pathname === '/') {
             pathname = '/index.html';
         }
+        
+        // Handle directory paths (add index.html)
+        if (pathname.endsWith('/')) {
+            pathname += 'index.html';
+        }
 
         const filepath = path.join(DIST_DIR, pathname);
         
@@ -101,6 +106,26 @@ function setupWatching() {
         fs.watch('index.html', (eventType) => {
             if (eventType === 'change') {
                 console.log(`${colors.blue}📝 Change detected in index.html${colors.reset}`);
+                triggerBuild();
+            }
+        });
+    }
+
+    // Watch simulator directory
+    if (fs.existsSync('simulator')) {
+        fs.watch('simulator', { recursive: true }, (eventType, filename) => {
+            if (eventType === 'change' && filename) {
+                console.log(`${colors.blue}📝 Change detected in simulator/${filename}${colors.reset}`);
+                triggerBuild();
+            }
+        });
+    }
+
+    // Watch learn directory
+    if (fs.existsSync('learn')) {
+        fs.watch('learn', { recursive: true }, (eventType, filename) => {
+            if (eventType === 'change' && filename) {
+                console.log(`${colors.blue}📝 Change detected in learn/${filename}${colors.reset}`);
                 triggerBuild();
             }
         });

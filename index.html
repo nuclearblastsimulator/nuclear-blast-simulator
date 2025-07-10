@@ -4,39 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Nuclear Blast Radius Calculator - Interactive Nuclear Weapon Effects Simulator</title>
+    <title>Nuclear Blast Simulator - Interactive Nuclear Weapon Effects Visualization</title>
     <meta name="description"
-        content="Visualize nuclear weapon blast radius on any city. Compare atomic bomb effects from Hiroshima to Tsar Bomba. Educational nuclear explosion simulator with real-time calculations.">
+        content="Visualize nuclear weapon effects with interactive maps. Explore blast radius, thermal radiation, and damage zones for weapons from Little Boy to Tsar Bomba. Real-time calculations and historical data.">
     <meta name="keywords"
-        content="nuclear blast radius, atomic bomb simulator, nuclear weapon effects, nukemap alternative, nuclear explosion calculator, hiroshima bomb radius, nuclear fallout map, nuclear damage calculator, atomic blast map">
+        content="nuclear blast simulator, nuclear weapons effects, atomic bomb simulator, blast radius calculator, nuclear explosion map, hiroshima nagasaki, tsar bomba, nuclear damage zones">
     <meta name="author" content="Nuclear Blast Simulator">
-    <meta property="og:title" content="Nuclear Blast Radius Calculator - Interactive Nuclear Weapon Effects Simulator">
+    <meta property="og:title" content="Nuclear Blast Simulator - Interactive Nuclear Weapon Effects Visualization">
     <meta property="og:description"
-        content="Visualize the devastating effects of nuclear weapons on any city. Educational tool showing blast radius, thermal radiation, and damage zones.">
+        content="Interactive platform for visualizing nuclear weapons effects. Real-time simulations, historical weapons data, and detailed damage calculations for any location worldwide.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nuclear-blast-simulator.tommytomatoe.com/">
     <meta property="og:image" content="/assets/images/nuclear-blast-preview.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Nuclear Blast Radius Calculator">
+    <meta name="twitter:title" content="Nuclear Blast Simulator - Interactive Visualization">
     <meta name="twitter:description"
-        content="Interactive nuclear weapon effects simulator. Visualize blast radius from Hiroshima to Tsar Bomba on any location.">
+        content="Visualize nuclear weapons effects on any location. Interactive maps, real-time calculations, and historical weapons data.">
     <link rel="canonical" href="https://nuclear-blast-simulator.tommytomatoe.com/">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/manifest.json">
-    <meta name="msapplication-TileColor" content="#247bac">
-    <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+    <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#247bac">
 
     <!-- Google Fonts -->
@@ -50,259 +40,1042 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "Nuclear Blast Radius Calculator",
-        "alternativeHeadline": "NUKEMAP Alternative - Nuclear Weapon Effects Simulator",
-        "applicationCategory": "EducationalApplication",
-        "applicationSubCategory": "Science Education",
-        "description": "Interactive educational tool to visualize nuclear weapon blast effects and damage radius on any location worldwide. Compare different nuclear weapons from conventional explosives to thermonuclear bombs.",
+        "name": "Nuclear Blast Simulator",
+        "description": "Interactive visualization platform for nuclear weapon effects. Calculate blast radius, view damage zones, and explore historical weapons data.",
+        "url": "https://nuclear-blast-simulator.tommytomatoe.com/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
         "offers": {
             "@type": "Offer",
             "price": "0",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
+            "priceCurrency": "USD"
         },
-        "browserRequirements": "Requires JavaScript enabled",
-        "softwareVersion": "1.0",
-        "operatingSystem": "All",
-        "educationalUse": [
-            "Teaching nuclear physics",
-            "Understanding nuclear weapon effects",
-            "Historical education about atomic weapons",
-            "Civil defense planning education"
-        ],
-        "creator": {
-            "@type": "Organization",
-            "name": "Nuclear Blast Simulator"
-        },
-        "keywords": [
-            "nuclear blast radius",
-            "atomic bomb simulator",
-            "nuclear weapon effects",
-            "nukemap alternative",
-            "nuclear explosion calculator",
-            "blast damage assessment",
-            "thermal radiation radius",
-            "nuclear detonation effects"
-        ],
-        "educationalLevel": "High school and above",
-        "inLanguage": "en-US",
-        "isAccessibleForFree": true,
-        "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+        "featureList": [
+            "Real-time blast radius calculations",
+            "Interactive global map",
+            "40+ historical and modern weapons",
+            "Multiple damage zone visualization",
+            "Air burst and surface burst modes"
+        ]
     }
     </script>
 
-    <!-- Additional Schema for FAQPage -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [{
-            "@type": "Question",
-            "name": "How far does a nuclear blast radius extend?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The blast radius depends on the weapon's yield. A 15 kiloton bomb (Hiroshima-sized) creates severe damage within 1-2 miles, while a 50 megaton bomb (Tsar Bomba) can cause damage over 30 miles away."
-            }
-        }, {
-            "@type": "Question",
-            "name": "What are the different damage zones in a nuclear explosion?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Nuclear explosions create multiple damage zones: the fireball (complete vaporization), heavy blast damage (5 psi), moderate damage (1 psi), light damage (0.25 psi), and thermal radiation zones extending furthest."
-            }
-        }, {
-            "@type": "Question",
-            "name": "Is this nuclear blast simulator accurate?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "This educational tool uses publicly available data and simplified models. Actual effects vary based on altitude, weather, terrain, and other factors. It's designed for educational purposes only."
-            }
-        }]
-    }
-    </script>
+    <style>
+        :root {
+            --color-primary: #247bac;
+            --color-primary-dark: #1a5a82;
+            --color-secondary: #ff9800;
+            --color-danger: #ff4757;
+            --color-warning: #feca57;
+            --color-success: #10ac84;
+            --color-info: #54a0ff;
+            --color-bg-dark: #0a0a0a;
+            --color-bg-card: #1a1a1a;
+            --color-bg-card-hover: #222;
+            --color-text-primary: #ffffff;
+            --color-text-secondary: #b0b0b0;
+            --color-border: #333;
+            --gradient-primary: linear-gradient(135deg, #247bac 0%, #1a5a82 100%);
+            --gradient-danger: linear-gradient(135deg, #ff4757 0%, #c44569 100%);
+            --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --shadow-card-hover: 0 8px 12px rgba(0, 0, 0, 0.4);
+            --transition-base: all 0.3s ease;
+        }
 
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--color-bg-dark);
+            color: var(--color-text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--color-text-primary);
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .logo-text {
+            font-family: 'Rubik Mono One', monospace;
+            font-size: 1.2rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 80px 0;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(36, 123, 172, 0.1) 0%, transparent 50%);
+        }
+
+        h1 {
+            font-family: 'Rubik Mono One', monospace;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition-base);
+            box-shadow: 0 4px 15px rgba(36, 123, 172, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(36, 123, 172, 0.4);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: var(--color-bg-card);
+        }
+
+        .section-title {
+            font-family: 'Rubik Mono One', monospace;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: var(--color-bg-dark);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--color-border);
+            transition: var(--transition-base);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--color-text-primary);
+        }
+
+        .feature-description {
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Educational Content Section */
+        .education {
+            padding: 80px 0;
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 3rem;
+        }
+
+        .education-card {
+            background: var(--color-bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            transition: var(--transition-base);
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .education-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(36, 123, 172, 0.1) 0%, rgba(26, 90, 130, 0.1) 100%);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .education-content {
+            padding: 2rem;
+        }
+
+        .education-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .education-list {
+            list-style: none;
+            color: var(--color-text-secondary);
+        }
+
+        .education-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .education-list li:before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+        }
+
+        /* Weapons Preview Section */
+        .weapons-preview {
+            padding: 80px 0;
+            background: var(--color-bg-card);
+        }
+
+        .weapons-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 3rem;
+        }
+
+        .category-badge {
+            background: var(--color-bg-dark);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--color-border);
+            transition: var(--transition-base);
+        }
+
+        .category-badge:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+
+        .category-name {
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .category-count {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(36, 123, 172, 0.1) 0%, transparent 50%);
+        }
+
+        .cta-title {
+            font-family: 'Rubik Mono One', monospace;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-bg-card);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .footer-content {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--color-primary);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: var(--transition-base);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-primary-dark);
+        }
+
+        /* Screenshots Section */
+        .screenshots {
+            padding: 80px 0;
+            background: var(--color-bg-dark);
+        }
+
+        .screenshot-container {
+            position: relative;
+            margin: 3rem auto;
+            max-width: 900px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .screenshot-container:first-of-type {
+            margin-top: 2rem;
+        }
+
+        .screenshot-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .screenshot-caption {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--color-text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* Historical Bombs Section */
+        .historical-bombs {
+            padding: 80px 0;
+            background: var(--color-bg-card);
+        }
+
+        .bombs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 3rem;
+        }
+
+        .bomb-card {
+            background: var(--color-bg-dark);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid var(--color-border);
+            transition: var(--transition-base);
+        }
+
+        .bomb-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .bomb-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .bomb-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .bomb-yield {
+            background: var(--gradient-danger);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .bomb-details {
+            color: var(--color-text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .bomb-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .bomb-stat {
+            text-align: center;
+            padding: 1rem;
+            background: var(--color-bg-card);
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+        }
+
+        .bomb-stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-warning);
+        }
+
+        .bomb-stat-label {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        /* Glossary Section */
+        .glossary {
+            padding: 80px 0;
+            background: var(--color-bg-dark);
+        }
+
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 3rem;
+        }
+
+        .glossary-item {
+            background: var(--color-bg-card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+        }
+
+        .glossary-term {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .glossary-definition {
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Sources Section */
+        .sources {
+            padding: 80px 0;
+            background: var(--color-bg-card);
+        }
+
+        .sources-list {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .source-item {
+            background: var(--color-bg-dark);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--color-border);
+            transition: var(--transition-base);
+        }
+
+        .source-item:hover {
+            border-color: var(--color-primary);
+        }
+
+        .source-title {
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .source-description {
+            color: var(--color-text-secondary);
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .source-link {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition-base);
+        }
+
+        .source-link:hover {
+            color: var(--color-primary-dark);
+            text-decoration: underline;
+        }
+
+        /* Animation for screenshot */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            }
+            50% {
+                box-shadow: 0 20px 40px rgba(36, 123, 172, 0.3);
+            }
+            100% {
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        .screenshot-container {
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0;
+            }
+
+            .features, .education, .weapons-preview {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .features-grid, .education-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .cta-button {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <div class="header-container">
-                <img src="/assets/logo/logo.png" alt="Nuclear Blast Simulator Logo" class="logo">
-                <div class="title-wrapper">
-                    <h1 class="title-line">Nuclear Blast</h1>
-                    <h1 class="title-line">Simulator</h1>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">
+                <img src="/assets/logo/logo.png" alt="Nuclear Blast Simulator Logo">
+                <span class="logo-text">Nuclear Blast Simulator</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Visualize Nuclear Weapon Effects Anywhere</h1>
+            <p class="hero-subtitle">
+                Interactive maps and real-time calculations showing blast radius, thermal radiation,
+                and damage zones for over 40 nuclear weapons.
+            </p>
+            <a href="/simulator/" class="cta-button">Launch Interactive Simulator</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <h3 class="feature-title">Global Visualization</h3>
+                    <p class="feature-description">
+                        Drop a nuclear weapon anywhere on Earth. Select from major cities
+                        or search for any address to see the blast effects.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💣</div>
+                    <h3 class="feature-title">40+ Weapons</h3>
+                    <p class="feature-description">
+                        From Little Boy to Tsar Bomba. Compare conventional explosives,
+                        tactical nukes, and city-destroying thermonuclear weapons.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Scientific Accuracy</h3>
+                    <p class="feature-description">
+                        Based on peer-reviewed scientific models and publicly available data to provide
+                        realistic blast radius and damage calculations.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Multiple Damage Zones</h3>
+                    <p class="feature-description">
+                        Visualize different effects zones including fireball, heavy blast damage, thermal
+                        radiation, and radioactive fallout patterns.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3 class="feature-title">Detailed Information</h3>
+                    <p class="feature-description">
+                        Click any damage zone for detailed effects. View casualty estimates,
+                        building damage, and radiation exposure levels.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Real-Time Calculations</h3>
+                    <p class="feature-description">
+                        Instantly see how different yields and detonation types affect blast radius
+                        and damage zones with interactive controls.
+                    </p>
                 </div>
             </div>
-            <p class="subtitle">Educational visualization of nuclear weapon effects</p>
+        </div>
+    </section>
 
-            <button class="simulate-btn" id="simulate-btn" onclick="simulateBlast()">
-                🚀 Simulate Bomb Detonation
-            </button>
-
-            <div class="section">
-                <h3 class="section-title">Select Weapon</h3>
-                <select id="weapon-select"
-                    style="width: 100%; padding: 1rem; background: #2a2a2a; border: 2px solid #444; color: #fff; border-radius: 8px; font-size: 1rem;">
-                    <!-- Options will be populated from JSON data -->
-                </select>
-                <div id="weapon-details">
-                    <div class="bomb-name">Loading weapons...</div>
-                    <div class="bomb-details">Please wait</div>
-                </div>
+    <!-- Screenshots Section -->
+    <section class="screenshots">
+        <div class="container">
+            <h2 class="section-title">See It In Action</h2>
+            
+            <div class="screenshot-container">
+                <img src="/assets/screenshots/simulator-initial.png" alt="Nuclear Blast Simulator interface showing interactive map and controls">
             </div>
-
-            <!-- Units preference hidden but still functional -->
-            <div style="display: none;">
-                <input type="radio" name="units" value="imperial" checked>
+            <p class="screenshot-caption">
+                Clean, intuitive interface with interactive world map and comprehensive weapon selection
+            </p>
+            
+            <div class="screenshot-container">
+                <img src="/assets/screenshots/simulator-weapon-selection.png" alt="Weapon selection dropdown showing various nuclear weapons">
             </div>
+            <p class="screenshot-caption">
+                Choose from over 40 weapons ranging from conventional explosives to thermonuclear devices
+            </p>
+        </div>
+    </section>
 
-            <div class="section">
-                <h3 class="section-title">Detonation Type</h3>
-                <div class="detonation-options">
-                    <label class="radio-option">
-                        <input type="radio" name="detonation" value="air" checked>
-                        <span class="radio-label">
-                            <span class="radio-title">Air Burst</span>
-                            <span class="radio-description">Maximizes blast damage area</span>
-                        </span>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="detonation" value="surface">
-                        <span class="radio-label">
-                            <span class="radio-title">Surface Burst</span>
-                            <span class="radio-description">Creates fallout & crater</span>
-                        </span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">Select Location</h3>
-                <div class="location-selector">
-                    <select id="city-select">
-                        <!-- Options will be populated from JSON data -->
-                    </select>
-
-                    <div class="custom-location">
-                        <input type="text" id="custom-address" placeholder="Or enter any address...">
-                        <button class="search-btn" onclick="searchAddress()">Search</button>
+    <!-- Historical Bombs Section -->
+    <section class="historical-bombs">
+        <div class="container">
+            <h2 class="section-title">Six Historic Nuclear Weapons</h2>
+            <div class="bombs-grid">
+                <div class="bomb-card">
+                    <div class="bomb-header">
+                        <h3 class="bomb-name">Little Boy</h3>
+                        <span class="bomb-yield">15 kt</span>
+                    </div>
+                    <p class="bomb-details">
+                        First nuclear weapon used in warfare. Dropped on Hiroshima, Japan on August 6, 1945.
+                        Gun-type uranium-235 bomb that killed an estimated 146,000 people.
+                    </p>
+                    <div class="bomb-stats">
+                        <div class="bomb-stat">
+                            <div class="bomb-stat-value">1.2 km</div>
+                            <div class="bomb-stat-label">Fireball Radius</div>
+                        </div>
+                        <div class="bomb-stat">
+                            <div class="bomb-stat-value">4.5 km</div>
+                            <div class="bomb-stat-label">Heavy Damage</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">Blast Effects</h3>
-                <div class="legend">
-                    <div class="legend-item" data-zone="fireball">
-                        <div class="legend-color" style="background: rgba(255, 0, 0, 0.6);"></div>
-                        <span>Fireball (vaporization)</span>
+                <div class="bomb-card">
+                    <div class="bomb-header">
+                        <h3 class="bomb-name">Fat Man</h3>
+                        <span class="bomb-yield">21 kt</span>
                     </div>
-                    <div class="legend-item" data-zone="heavy">
-                        <div class="legend-color" style="background: rgba(255, 100, 0, 0.5);"></div>
-                        <span>Heavy blast damage (5 psi)</span>
+                    <p class="bomb-details">
+                        Plutonium implosion bomb dropped on Nagasaki on August 9, 1945.
+                        More powerful than Little Boy but terrain limited casualties to ~80,000.
+                    </p>
+                    <div class="bomb-stats">
+                        <div class="bomb-stat">
+                            <div class="bomb-stat-value">1.3 km</div>
+                            <div class="bomb-stat-label">Fireball Radius</div>
+                        </div>
+                        <div class="bomb-stat">
+                            <div class="bomb-stat-value">5.2 km</div>
+                            <div class="bomb-stat-label">Heavy Damage</div>
+                        </div>
                     </div>
-                    <div class="legend-item" data-zone="moderate">
-                        <div class="legend-color" style="background: rgba(255, 200, 0, 0.4);"></div>
-                        <span>Moderate damage (1 psi)</span>
+                </div>
+                <div class="bomb-card">
+                    <div class="bomb-header">
+                        <h3 class="bomb-name">Castle Bravo</h3>
+                        <span class="bomb-yield">15,000 kt</span>
                     </div>
-                    <div class="legend-item" data-zone="light">
-                        <div class="legend-color" style="background: rgba(255, 255, 0, 0.3);"></div>
-                        <span>Light damage (0.25 psi)</span>
+                    <p class="bomb-details">
+                        Largest U.S. nuclear test. 1954 hydrogen bomb test that was 2.5x more powerful than expected,
+                        causing widespread radioactive contamination.
+                    </p>
+                    <div class="bomb-stats">
+                        <div class="bomb-stat">
+                            <div class="bomb-stat-value">7.2 km</div>
+                            <div class="bomb-stat-label">Fireball Radius</div>
+                        </div>
+                        <div class="bomb-stat">
+                            <div class="bomb-stat-value">57 km</div>
+                            <div class="bomb-stat-label">Heavy Damage</div>
+                        </div>
                     </div>
-                    <div class="legend-item" data-zone="thermal">
-                        <div class="legend-color" style="background: rgba(200, 200, 0, 0.2);"></div>
-                        <span>Thermal radiation (3rd degree burns)</span>
+                </div>
+                <div class="bomb-card">
+                    <div class="bomb-header">
+                        <h3 class="bomb-name">Tsar Bomba</h3>
+                        <span class="bomb-yield">50,000 kt</span>
+                    </div>
+                    <p class="bomb-details">
+                        Most powerful nuclear weapon ever tested. Soviet Union's 1961 test created a fireball
+                        visible 1,000 km away and broke windows 900 km from ground zero.
+                    </p>
+                    <div class="bomb-stats">
+                        <div class="bomb-stat">
+                            <div class="bomb-stat-value">8.0 km</div>
+                            <div class="bomb-stat-label">Fireball Radius</div>
+                        </div>
+                        <div class="bomb-stat">
+                            <div class="bomb-stat-value">85 km</div>
+                            <div class="bomb-stat-label">Heavy Damage</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bomb-card">
+                    <div class="bomb-header">
+                        <h3 class="bomb-name">W87</h3>
+                        <span class="bomb-yield">300 kt</span>
+                    </div>
+                    <p class="bomb-details">
+                        Current U.S. ICBM warhead deployed on Minuteman III missiles.
+                        Modern thermonuclear weapon with variable yield and enhanced safety features.
+                    </p>
+                    <div class="bomb-stats">
+                        <div class="bomb-stat">
+                            <div class="bomb-stat-value">2.3 km</div>
+                            <div class="bomb-stat-label">Fireball Radius</div>
+                        </div>
+                        <div class="bomb-stat">
+                            <div class="bomb-stat-value">11.8 km</div>
+                            <div class="bomb-stat-label">Heavy Damage</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bomb-card">
+                    <div class="bomb-header">
+                        <h3 class="bomb-name">B83</h3>
+                        <span class="bomb-yield">1,200 kt</span>
+                    </div>
+                    <p class="bomb-details">
+                        Most powerful weapon in current U.S. arsenal. Strategic gravity bomb
+                        with variable yield up to 1.2 megatons, deployed since 1983.
+                    </p>
+                    <div class="bomb-stats">
+                        <div class="bomb-stat">
+                            <div class="bomb-stat-value">3.8 km</div>
+                            <div class="bomb-stat-label">Fireball Radius</div>
+                        </div>
+                        <div class="bomb-stat">
+                            <div class="bomb-stat-value">20.7 km</div>
+                            <div class="bomb-stat-label">Heavy Damage</div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="warning">
-                <strong>Educational Purpose:</strong> This simulation demonstrates the devastating scale of nuclear
-                weapons. The data is based on publicly available information and simplified models. Actual effects would
-                vary based on multiple factors, including but not limited to altitude, weather, and terrain.
+    <!-- Weapons Preview -->
+    <section class="weapons-preview">
+        <div class="container">
+            <h2 class="section-title">Explore Different Weapon Categories</h2>
+            <div class="weapons-categories">
+                <div class="category-badge">
+                    <div class="category-name">Non-Nuclear</div>
+                    <div class="category-count">Reference weapons for comparison</div>
+                </div>
+                <div class="category-badge">
+                    <div class="category-name">Historical</div>
+                    <div class="category-count">WWII and early atomic weapons</div>
+                </div>
+                <div class="category-badge">
+                    <div class="category-name">Strategic</div>
+                    <div class="category-count">Modern warheads and ICBMs</div>
+                </div>
+                <div class="category-badge">
+                    <div class="category-name">Tactical</div>
+                    <div class="category-count">Battlefield nuclear weapons</div>
+                </div>
+                <div class="category-badge">
+                    <div class="category-name">Test Weapons</div>
+                    <div class="category-count">Experimental and test devices</div>
+                </div>
+                <div class="category-badge">
+                    <div class="category-name">International</div>
+                    <div class="category-count">Global nuclear arsenals</div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="footer">
-                <p>Made with ❤️ in Knoxville, TN</p>
-                <div class="social-links">
-                    <a href="https://github.com/nuclear-blast-simulator/nuclear-blast-simulator" target="_blank"
-                        rel="noopener noreferrer" class="social-link" title="View on GitHub">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
-                        </svg>
+    <!-- Glossary Section -->
+    <section class="glossary">
+        <div class="container">
+            <h2 class="section-title">Nuclear Weapons Glossary</h2>
+            <div class="glossary-grid">
+                <div class="glossary-item">
+                    <h3 class="glossary-term">Kiloton (kt)</h3>
+                    <p class="glossary-definition">
+                        Explosive yield equivalent to 1,000 tons of TNT. Used to measure smaller nuclear weapons.
+                    </p>
+                </div>
+                <div class="glossary-item">
+                    <h3 class="glossary-term">Megaton (Mt)</h3>
+                    <p class="glossary-definition">
+                        Explosive yield equivalent to 1 million tons of TNT. Used for strategic thermonuclear weapons.
+                    </p>
+                </div>
+                <div class="glossary-item">
+                    <h3 class="glossary-term">Air Burst</h3>
+                    <p class="glossary-definition">
+                        Detonation above ground level to maximize blast damage area while minimizing fallout.
+                    </p>
+                </div>
+                <div class="glossary-item">
+                    <h3 class="glossary-term">Surface Burst</h3>
+                    <p class="glossary-definition">
+                        Ground-level detonation that creates a crater and significant radioactive fallout.
+                    </p>
+                </div>
+                <div class="glossary-item">
+                    <h3 class="glossary-term">Overpressure</h3>
+                    <p class="glossary-definition">
+                        Blast wave pressure measured in PSI. 5 PSI collapses buildings, 1 PSI shatters windows.
+                    </p>
+                </div>
+                <div class="glossary-item">
+                    <h3 class="glossary-term">Thermal Radiation</h3>
+                    <p class="glossary-definition">
+                        Intense heat and light that causes burns and fires. Can blind or burn exposed skin miles away.
+                    </p>
+                </div>
+                <div class="glossary-item">
+                    <h3 class="glossary-term">Fireball</h3>
+                    <p class="glossary-definition">
+                        Superheated sphere of gas at detonation point. Everything inside is vaporized instantly.
+                    </p>
+                </div>
+                <div class="glossary-item">
+                    <h3 class="glossary-term">Fallout</h3>
+                    <p class="glossary-definition">
+                        Radioactive particles that fall from the mushroom cloud, contaminating large areas downwind.
+                    </p>
+                </div>
+                <div class="glossary-item">
+                    <h3 class="glossary-term">EMP</h3>
+                    <p class="glossary-definition">
+                        Electromagnetic pulse that damages electronics. High-altitude bursts can affect entire regions.
+                    </p>
+                </div>
+                <div class="glossary-item">
+                    <h3 class="glossary-term">Ground Zero</h3>
+                    <p class="glossary-definition">
+                        The point on Earth's surface directly below an air burst or at the center of a surface burst.
+                    </p>
+                </div>
+                <div class="glossary-item">
+                    <h3 class="glossary-term">CEP</h3>
+                    <p class="glossary-definition">
+                        Circular Error Probable - the radius within which a missile has a 50% chance of landing.
+                    </p>
+                </div>
+                <div class="glossary-item">
+                    <h3 class="glossary-term">MIRV</h3>
+                    <p class="glossary-definition">
+                        Multiple Independently-targetable Reentry Vehicle. One missile carrying multiple warheads.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sources Section -->
+    <section class="sources">
+        <div class="container">
+            <h2 class="section-title">Sources & References</h2>
+            <div class="sources-list">
+                <div class="source-item">
+                    <h3 class="source-title">The Effects of Nuclear Weapons</h3>
+                    <p class="source-description">
+                        Comprehensive technical reference by Samuel Glasstone and Philip J. Dolan. 
+                        The definitive U.S. government publication on nuclear weapons effects.
+                    </p>
+                    <a href="https://www.fourmilab.ch/etexts/www/effects/" class="source-link" target="_blank" rel="noopener">
+                        Read Online →
                     </a>
                 </div>
-                <p class="license"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"
-                        rel="noopener noreferrer">CC BY-NC-SA 4.0</a></p>
-            </div>
-        </div>
-
-        <div class="map-container">
-            <div id="map"></div>
-
-            <!-- Wind Direction Indicator -->
-            <div class="wind-indicator" id="wind-indicator">
-                <div class="wind-compass">
-                    <div class="wind-arrow" id="wind-arrow">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2L15.5 8.5H8.5L12 2Z" />
-                            <path d="M12 22L8.5 15.5H15.5L12 22Z" />
-                        </svg>
-                    </div>
-                    <div class="wind-speed" id="wind-speed">15 mph</div>
+                <div class="source-item">
+                    <h3 class="source-title">NUKEMAP by Alex Wellerstein</h3>
+                    <p class="source-description">
+                        Original nuclear weapons effects simulator that inspired many others.
+                        Created by nuclear weapons historian Alex Wellerstein.
+                    </p>
+                    <a href="https://nuclearsecrecy.com/nukemap/" class="source-link" target="_blank" rel="noopener">
+                        Visit NUKEMAP →
+                    </a>
                 </div>
-                <div class="wind-label">Wind Direction</div>
-            </div>
-
-            <!-- Floating Action Button -->
-            <button class="fab-simulate" id="fab-simulate" onclick="simulateBlast()">
-                🚀
-            </button>
-
-            <!-- Mobile Fullscreen Toggle -->
-            <button class="fullscreen-toggle" id="fullscreen-toggle" onclick="toggleFullscreen()">
-                <svg class="fullscreen-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
-                </svg>
-                <svg class="exit-fullscreen-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                    style="display: none;">
-                    <path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z" />
-                </svg>
-            </button>
-
-            <!-- Blast Effects Panel Toggle -->
-            <button class="effects-toggle" id="effects-toggle" onclick="toggleEffectsPanel()">
-                <img src="/assets/logo/logo.png" alt="Blast Effects" class="effects-toggle-logo">
-                <span class="effects-toggle-text">Blast Effects Details</span>
-            </button>
-
-            <!-- Slide-over Panel -->
-            <div class="effects-panel" id="effects-panel">
-                <div class="effects-panel-header">
-                    <h2>Blast Effects Summary</h2>
-                    <button class="effects-close" onclick="closeEffectsPanel()">×</button>
+                <div class="source-item">
+                    <h3 class="source-title">Nuclear Weapons Archive</h3>
+                    <p class="source-description">
+                        Comprehensive resource on nuclear weapons history, design, and effects.
+                        Detailed technical specifications and historical documentation.
+                    </p>
+                    <a href="https://nuclearweaponarchive.org/" class="source-link" target="_blank" rel="noopener">
+                        Explore Archive →
+                    </a>
                 </div>
-                <div class="effects-panel-content" id="effects-content">
-                    <p class="effects-placeholder">Simulate a blast to see detailed effects data</p>
+                <div class="source-item">
+                    <h3 class="source-title">Federation of American Scientists</h3>
+                    <p class="source-description">
+                        Nuclear weapons data, current arsenals, and policy analysis.
+                        Authoritative source for nuclear weapons information.
+                    </p>
+                    <a href="https://fas.org/issues/nuclear-weapons/" class="source-link" target="_blank" rel="noopener">
+                        View Resources →
+                    </a>
+                </div>
+                <div class="source-item">
+                    <h3 class="source-title">Los Alamos Primer</h3>
+                    <p class="source-description">
+                        Declassified document from the Manhattan Project explaining
+                        the fundamental principles of nuclear weapons design.
+                    </p>
+                    <a href="https://fas.org/sgp/othergov/doe/lanl/pubs/00285810.pdf" class="source-link" target="_blank" rel="noopener">
+                        Read Document →
+                    </a>
+                </div>
+                <div class="source-item">
+                    <h3 class="source-title">Atomic Bomb Casualty Commission</h3>
+                    <p class="source-description">
+                        Long-term studies of atomic bomb survivors in Japan.
+                        Critical data on radiation effects and casualty patterns.
+                    </p>
+                    <a href="https://www.rerf.or.jp/en/" class="source-link" target="_blank" rel="noopener">
+                        Learn More →
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Simulate?</h2>
+            <p class="cta-description">
+                Drop a nuclear weapon anywhere on Earth. See the blast radius, damage zones,
+                and understand the true scale of nuclear destruction.
+            </p>
+            <a href="/simulator/" class="cta-button">Start Learning Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2024 Nuclear Blast Simulator. Interactive nuclear weapons effects visualization.</p>
+                <p>Licensed under CC BY-NC-SA 4.0</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/tommytomatoe/nuclear-blast-simulator">GitHub</a>
+                <a href="/simulator/">Simulator</a>
+            </div>
+        </div>
+    </footer>
 
     <!-- Analytics -->
     <script src="/assets/js/analytics.js"></script>
-
-    <!-- Custom JavaScript -->
-    <script src="/assets/js/app.js"></script>
+    <script>
+        // Track homepage views
+        if (typeof Analytics !== 'undefined') {
+            Analytics.trackPageView('homepage');
+        }
+    </script>
 </body>
 
 </html>

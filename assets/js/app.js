@@ -20,7 +20,7 @@ let defaultWeapon = null
 window.addEventListener('DOMContentLoaded', async function () {
   // Load weapon data from JSON
   try {
-    const response = await fetch('/assets/data.json')
+    const response = await fetch('../assets/data.json')
     const data = await response.json()
 
     // Process weapons data
