@@ -1,9 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import screenshotDesktop from '../images/screenshots/screenshot-desktop.png';
+import screenshotMobile from '../images/screenshots/screenshot-mobile.png';
+import screenshotWeapons from '../images/screenshots/screenshot-weapons.png';
+import screenshotCities from '../images/screenshots/screenshot-cities.png';
+import screenshotBlastEffects from '../images/screenshots/screenshot-blast-effects.png';
+import screenCapture from '../images/screenshots/screen-capture.gif';
+import howItWorks from '../images/screenshots/screen-capture-how-it-works.gif';
 
 const terms = await getCollection('terms');
 const history = await getCollection('history');
+
+// Load data from public/assets/data.json
+const response = await fetch(new URL('/assets/data.json', Astro.url));
+const data = await response.json();
+const weapons = data.weapons;
+const locations = data.locations;
 ---
 
 <BaseLayout 
@@ -25,7 +39,7 @@ const history = await getCollection('history');
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
         <span class="text-primary text-sm font-medium">Educational Tool</span>
         <span class="text-base-content/50">•</span>
-        <span class="text-base-content/70 text-sm">40+ Nuclear Weapons Database</span>
+        <span class="text-base-content/70 text-sm">{weapons.length} Nuclear Weapons Database</span>
       </div>
       
       <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
@@ -58,12 +72,12 @@ const history = await getCollection('history');
       <!-- Stats -->
       <div class="grid grid-cols-3 gap-8 mt-20 pt-20 border-t border-base-300">
         <div class="text-center">
-          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">40+</div>
+          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">{weapons.length}</div>
           <div class="text-sm text-base-content/70">Nuclear Weapons</div>
         </div>
         <div class="text-center">
-          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">100+</div>
-          <div class="text-sm text-base-content/70">Major Cities</div>
+          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">{locations.length}</div>
+          <div class="text-sm text-base-content/70">Global Cities</div>
         </div>
         <div class="text-center">
           <div class="text-3xl md:text-4xl font-bold text-primary mb-2">Real-time</div>
@@ -77,6 +91,511 @@ const history = await getCollection('history');
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-base-content/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
       </svg>
+    </div>
+  </section>
+
+  <!-- Demo Preview Section -->
+  <section class="py-20 px-6 bg-gradient-to-b from-base-100 to-base-200">
+    <div class="container max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+          </span>
+          <span class="text-sm text-primary font-medium">Live Demo</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Watch It In Action</h2>
+        <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
+          See how easy it is to visualize nuclear weapon effects on any location
+        </p>
+      </div>
+      
+      <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-base-300 bg-base-200 p-4 md:p-4 lg:p-4">
+        <Image 
+          src={screenCapture} 
+          alt="Nuclear Blast Simulator Demo" 
+          class="w-full rounded-lg" 
+          loading="eager"
+        />
+      </div>
+      
+      <!-- CTA after demo -->
+      <div class="text-center mt-12">
+        <p class="text-lg text-base-content/70 mb-6">Ready to try it yourself?</p>
+        <a href="/simulator/" class="btn btn-primary btn-lg group">
+          <span>Launch Simulator</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+
+  <!-- Blast Effects Section -->
+  <section class="py-32 px-6 bg-base-100">
+    <div class="container max-w-6xl mx-auto">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Understanding Blast Effects</h2>
+        <p class="text-xl text-base-content/70 max-w-2xl mx-auto">
+          Five distinct damage zones calculated using peer-reviewed scientific models
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Fireball Zone -->
+        <div class="card bg-base-100 border-2 border-red-500/50 hover:border-red-500 transition-all">
+          <div class="card-body">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-4 h-4 rounded-full bg-red-500"></div>
+              <h3 class="text-lg font-semibold">Fireball Zone</h3>
+            </div>
+            <p class="text-sm text-base-content/70 mb-4">
+              Complete vaporization. Temperatures exceed 100 million °C. Everything instantly vaporized.
+            </p>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-base-content/50">Casualties:</span>
+                <span class="font-medium">100% fatalities</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-base-content/50">Pressure:</span>
+                <span class="font-medium">N/A</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Heavy Blast Damage -->
+        <div class="card bg-base-100 border-2 border-orange-500/50 hover:border-orange-500 transition-all">
+          <div class="card-body">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-4 h-4 rounded-full bg-orange-500"></div>
+              <h3 class="text-lg font-semibold">Heavy Blast Damage</h3>
+            </div>
+            <p class="text-sm text-base-content/70 mb-4">
+              Most buildings collapse. Concrete structures heavily damaged. Total infrastructure destruction.
+            </p>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-base-content/50">Casualties:</span>
+                <span class="font-medium">90% injuries, 50% fatalities</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-base-content/50">Pressure:</span>
+                <span class="font-medium">5 psi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Moderate Damage -->
+        <div class="card bg-base-100 border-2 border-yellow-600/50 hover:border-yellow-600 transition-all">
+          <div class="card-body">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-4 h-4 rounded-full bg-yellow-600"></div>
+              <h3 class="text-lg font-semibold">Moderate Damage</h3>
+            </div>
+            <p class="text-sm text-base-content/70 mb-4">
+              Residential buildings damaged. Walls crack, roofs cave in. Most vehicles damaged.
+            </p>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-base-content/50">Casualties:</span>
+                <span class="font-medium">50% injuries, 5% fatalities</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-base-content/50">Pressure:</span>
+                <span class="font-medium">1 psi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Light Damage -->
+        <div class="card bg-base-100 border-2 border-yellow-400/50 hover:border-yellow-400 transition-all">
+          <div class="card-body">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-4 h-4 rounded-full bg-yellow-400"></div>
+              <h3 class="text-lg font-semibold">Light Damage</h3>
+            </div>
+            <p class="text-sm text-base-content/70 mb-4">
+              Windows shatter causing injuries. Light frame buildings damaged.
+            </p>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-base-content/50">Casualties:</span>
+                <span class="font-medium">25% injuries, 1% fatalities</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-base-content/50">Pressure:</span>
+                <span class="font-medium">0.25 psi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Thermal Radiation -->
+        <div class="card bg-base-100 border-2 border-yellow-300/50 hover:border-yellow-300 transition-all">
+          <div class="card-body">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-4 h-4 rounded-full bg-yellow-300"></div>
+              <h3 class="text-lg font-semibold">Thermal Radiation</h3>
+            </div>
+            <p class="text-sm text-base-content/70 mb-4">
+              Third-degree burns to exposed skin. Fire storms likely. Thermal shock damage.
+            </p>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-base-content/50">Casualties:</span>
+                <span class="font-medium">Variable</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-base-content/50">Pressure:</span>
+                <span class="font-medium">N/A</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Surface vs Air Burst -->
+        <div class="card bg-base-100 border-2 border-primary/50 hover:border-primary transition-all">
+          <div class="card-body">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-4 h-4 rounded-full bg-primary"></div>
+              <h3 class="text-lg font-semibold">Detonation Types</h3>
+            </div>
+            <p class="text-sm text-base-content/70 mb-4">
+              <strong>Air Burst:</strong> Maximizes blast damage area<br/>
+              <strong>Surface Burst:</strong> Creates significant radioactive fallout
+            </p>
+            <div class="text-sm text-base-content/50">
+              Choose detonation type based on intended target and desired effects
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It's Calculated Section -->
+  <section class="py-32 px-6 bg-gradient-to-b from-base-100 to-base-200">
+    <div class="container max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          <span class="text-sm text-primary font-medium">Scientific Calculations</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">How It's Calculated</h2>
+        <p class="text-xl text-base-content/70 max-w-3xl mx-auto">
+          Our simulator uses peer-reviewed formulas from authoritative sources to calculate nuclear blast effects accurately
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+        <!-- Formulas and Explanation -->
+        <div class="lg:col-span-2 space-y-8">
+          <!-- Sources -->
+          <div class="card bg-base-100 border border-base-300">
+            <div class="card-body">
+              <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                Primary Sources
+              </h3>
+              <ol class="space-y-3">
+                <li class="flex gap-3">
+                  <span class="text-primary font-bold">1.</span>
+                  <div>
+                    <a href="https://www.fourmilab.ch/etexts/www/effects/" target="_blank" rel="noopener noreferrer" class="link link-primary font-bold hover:underline">
+                      "The Effects of Nuclear Weapons"
+                    </a> by Glasstone & Dolan (1977, 3rd Ed.)
+                    <div class="text-sm text-base-content/60 mt-1">U.S. Department of Defense/Energy official publication</div>
+                  </div>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-primary font-bold">2.</span>
+                  <div>
+                    <a href="https://nuclearweaponarchive.org/" target="_blank" rel="noopener noreferrer" class="link link-primary font-bold hover:underline">
+                      "Nuclear Weapons FAQ"
+                    </a> by Carey Sublette
+                    <div class="text-sm text-base-content/60 mt-1">Comprehensive technical archive</div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- Scaling Laws -->
+          <div class="card bg-base-100 border border-base-300">
+            <div class="card-body">
+              <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                </svg>
+                Scaling Laws
+              </h3>
+              <div class="space-y-4">
+                <div class="bg-base-200 rounded-lg p-4">
+                  <h4 class="font-semibold text-red-400 mb-2">Fireball Radius</h4>
+                  <code class="text-lg font-mono">R ∝ Y^0.4</code>
+                  <p class="text-sm text-base-content/70 mt-2">From Glasstone & Dolan: R ≈ 100W^0.4 (in feet)</p>
+                </div>
+                
+                <div class="bg-base-200 rounded-lg p-4">
+                  <h4 class="font-semibold text-orange-400 mb-2">Blast Radius</h4>
+                  <code class="text-lg font-mono">R ∝ Y^0.33</code>
+                  <p class="text-sm text-base-content/70 mt-2">Cube root law - pressure scales with volume</p>
+                </div>
+                
+                <div class="bg-base-200 rounded-lg p-4">
+                  <h4 class="font-semibold text-yellow-400 mb-2">Thermal Radiation</h4>
+                  <code class="text-lg font-mono">R ∝ Y^0.41</code>
+                  <p class="text-sm text-base-content/70 mt-2">Modified square root law due to atmospheric absorption</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Damage Thresholds -->
+          <div class="card bg-base-100 border border-base-300">
+            <div class="card-body">
+              <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Overpressure Damage Thresholds
+              </h3>
+              <div class="space-y-3">
+                <div class="flex items-center justify-between p-3 bg-base-200 rounded-lg">
+                  <span class="font-semibold text-orange-400">5 psi</span>
+                  <span class="text-sm">Heavy damage - most buildings collapse</span>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-base-200 rounded-lg">
+                  <span class="font-semibold text-yellow-600">1 psi</span>
+                  <span class="text-sm">Moderate damage - residential buildings damaged</span>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-base-200 rounded-lg">
+                  <span class="font-semibold text-yellow-400">0.25 psi</span>
+                  <span class="text-sm">Light damage - windows shatter</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Surface vs Air Burst -->
+          <div class="card bg-base-100 border border-base-300">
+            <div class="card-body">
+              <h3 class="text-2xl font-bold mb-4">Detonation Type Effects</h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-primary mb-2">Air Burst</h4>
+                  <ul class="text-sm space-y-1 text-base-content/80">
+                    <li>• Maximizes blast damage area</li>
+                    <li>• Optimum height ~1.5x fireball radius</li>
+                    <li>• Less local but potentially more global radioactive fallout</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-warning mb-2">Surface Burst</h4>
+                  <ul class="text-sm space-y-1 text-base-content/80">
+                    <li>• Blast radii reduced by 15-20%</li>
+                    <li>• Thermal effects reduced by ~30%</li>
+                    <li>• Creates significant local radioactive fallout</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Demo GIF -->
+        <div class="lg:col-span-1 lg:sticky lg:top-8">
+          <div class="card bg-base-100 border border-base-300 overflow-hidden scale-75 origin-top">
+            <div class="card-body p-2">
+              <h3 class="text-sm font-semibold mb-1">Calculations Demo</h3>
+              <div class="rounded overflow-hidden">
+                <Image 
+                  src={howItWorks} 
+                  alt="How calculations work demonstration" 
+                  class="w-full"
+                  loading="lazy"
+                />
+              </div>
+              <p class="text-xs text-base-content/70 mt-1">
+                Watch yield affect blast radius
+              </p>
+            </div>
+          </div>
+          
+          <!-- Important Note -->
+          <div class="alert alert-info mt-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <div>
+              <p class="text-sm">
+                These formulas provide educational approximations. Actual effects vary with height of burst, weather conditions, terrain, and atmospheric conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cities and Weapons Section -->
+  <section class="py-32 px-6 bg-gradient-to-b from-base-100 to-base-200">
+    <div class="container max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <!-- Cities -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-8">Global Cities Database</h2>
+          <p class="text-lg text-base-content/70 mb-8">
+            Pre-configured coordinates for major population centers worldwide. You can also search for any address or location.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            {locations.map((location) => (
+              <div class="flex items-center gap-3 p-3 rounded-lg bg-base-100 border border-base-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span class="text-sm font-medium">{location.name}</span>
+                {location.default && <span class="badge badge-primary badge-sm">Default</span>}
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <!-- Weapons -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-8">Weapons Arsenal</h2>
+          <p class="text-lg text-base-content/70 mb-8">
+            From conventional explosives to city-destroying thermonuclear weapons. Each with accurate yield data.
+          </p>
+          <div class="space-y-6">
+            <!-- Non-nuclear -->
+            <div>
+              <h3 class="text-lg font-semibold mb-3 text-secondary">Conventional Explosives</h3>
+              <div class="space-y-2">
+                {weapons.filter(w => w.category === 'non-nuclear').map((weapon) => (
+                  <div class="flex items-center justify-between p-3 rounded-lg bg-base-100 border border-base-300 hover:border-secondary/50 transition-colors">
+                    <div>
+                      <span class="font-medium">{weapon.name}</span>
+                      <span class="text-sm text-base-content/50 ml-2">{weapon.details}</span>
+                    </div>
+                    <span class="badge badge-outline">{weapon.yield < 1 ? `${weapon.yield * 1000} tons` : `${weapon.yield} kT`}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <!-- Historical -->
+            <div>
+              <h3 class="text-lg font-semibold mb-3 text-primary">Historically Significant</h3>
+              <div class="space-y-2">
+                {weapons.filter(w => w.category === 'historically-significant').slice(0, 5).map((weapon) => (
+                  <div class="flex items-center justify-between p-3 rounded-lg bg-base-100 border border-base-300 hover:border-primary/50 transition-colors">
+                    <div>
+                      <span class="font-medium">{weapon.name}</span>
+                      <span class="text-sm text-base-content/50 ml-2">{weapon.details}</span>
+                    </div>
+                    <span class="badge badge-outline">
+                      {weapon.yield > 1000 ? `${weapon.yield / 1000} MT` : `${weapon.yield} kT`}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <!-- Modern -->
+            <div>
+              <h3 class="text-lg font-semibold mb-3 text-accent">Modern Arsenal</h3>
+              <div class="space-y-2">
+                {weapons.filter(w => w.category === 'modern-strategic').slice(0, 3).map((weapon) => (
+                  <div class="flex items-center justify-between p-3 rounded-lg bg-base-100 border border-base-300 hover:border-accent/50 transition-colors">
+                    <div>
+                      <span class="font-medium">{weapon.name}</span>
+                      <span class="text-sm text-base-content/50 ml-2">{weapon.details}</span>
+                    </div>
+                    <span class="badge badge-outline">
+                      {weapon.yield > 1000 ? `${weapon.yield / 1000} MT` : `${weapon.yield} kT`}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div class="text-center mt-6">
+              <a href="/simulator/" class="btn btn-primary btn-sm">
+                Explore All {weapons.length} Weapons →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots Section -->
+  <section class="py-32 px-6 bg-base-100">
+    <div class="container max-w-7xl mx-auto">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Works Everywhere</h2>
+        <p class="text-xl text-base-content/70 max-w-2xl mx-auto">
+          Optimized for all devices and screen sizes
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 space-y-8">
+          <div class="card bg-base-100 border border-base-300 overflow-hidden">
+            <div class="relative" style="height: 600px;">
+              <Image src={screenshotDesktop} alt="Nuclear Blast Simulator Desktop View" class="w-full h-full object-contain bg-base-200" />
+            </div>
+            <div class="card-body">
+              <h3 class="text-xl font-semibold">Desktop Experience</h3>
+              <p class="text-base-content/70">Full-featured interface with comprehensive controls and detailed information panels</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lg:col-span-1 space-y-8">
+          <div class="card bg-base-100 border border-base-300 overflow-hidden">
+            <!-- iPhone Frame -->
+            <div class="flex items-center justify-center p-4 bg-gradient-to-br from-base-200 to-base-300" style="height: 600px;">
+              <div class="relative" style="width: 240px; height: 480px;">
+                <!-- iPhone Frame -->
+                <div class="absolute inset-0 bg-gray-900 rounded-[2.5rem] shadow-2xl"></div>
+                <!-- Screen Bezel -->
+                <div class="absolute inset-[3px] bg-black rounded-[2.3rem]"></div>
+                <!-- Screen -->
+                <div class="absolute inset-[10px] bg-white rounded-[2rem] overflow-hidden">
+                  <Image src={screenshotMobile} alt="Nuclear Blast Simulator Mobile View" class="w-full h-full object-cover object-top" />
+                </div>
+                <!-- Notch -->
+                <div class="absolute top-[10px] left-1/2 transform -translate-x-1/2 w-[100px] h-[20px] bg-black rounded-b-xl"></div>
+                <!-- Side Buttons -->
+                <div class="absolute -left-[3px] top-[60px] w-[3px] h-[30px] bg-gray-700 rounded-l-lg"></div>
+                <div class="absolute -left-[3px] top-[100px] w-[3px] h-[50px] bg-gray-700 rounded-l-lg"></div>
+                <div class="absolute -left-[3px] top-[160px] w-[3px] h-[50px] bg-gray-700 rounded-l-lg"></div>
+                <div class="absolute -right-[3px] top-[120px] w-[3px] h-[50px] bg-gray-700 rounded-r-lg"></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="text-xl font-semibold">Mobile Optimized</h3>
+              <p class="text-base-content/70">Responsive design works perfectly on phones and tablets</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -117,7 +636,7 @@ const history = await getCollection('history');
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-3">40+ Weapons Database</h3>
+              <h3 class="text-xl font-semibold mb-3">{weapons.length} Weapons Database</h3>
               <p class="text-base-content/70 leading-relaxed">
                 From Little Boy to Tsar Bomba. Compare conventional explosives, tactical nukes, and city-destroying thermonuclear weapons.
               </p>
