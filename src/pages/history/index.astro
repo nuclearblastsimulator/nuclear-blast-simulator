@@ -71,16 +71,16 @@ const categories = {
   'Philosophical & Ethical': [
     'philosophical-ethical/nuclear-ethics',
     'philosophical-ethical/nuclear-deterrence-theory',
-    'philosophical-ethical/nuclear-abolition-movement'
+    'philosophical-ethical/nuclear-abolition'
   ],
   'Weapons Technology': [
-    'weapons-technology/little-boy',
-    'weapons-technology/fat-man',
-    'weapons-technology/ivy-mike',
-    'weapons-technology/tsar-bomba',
-    'weapons-technology/bunker-buster',
-    'weapons-technology/uranium-enrichment',
-    'weapons-technology/synthesis'
+    'weapons-technology/fission-weapons',
+    'weapons-technology/fusion-weapons',
+    'weapons-technology/nuclear-materials',
+    'weapons-technology/nuclear-testing',
+    'weapons-technology/nuclear-weapon-effects',
+    'weapons-technology/nuclear-weapons-design',
+    'weapons-technology/weapons-manufacturing'
   ]
 };
 
@@ -116,7 +116,7 @@ function renderCategory(category: any, isNested = false) {
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
           <span class="text-secondary text-sm font-medium">Historical Archive</span>
           <span class="text-base-content/50">•</span>
-          <span class="text-base-content/70 text-sm">48 Articles</span>
+          <span class="text-base-content/70 text-sm">{sortedHistory.length} Articles</span>
         </div>
         <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
           Nuclear History Articles

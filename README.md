@@ -25,12 +25,12 @@ This simulator serves as an educational resource to help people understand:
 - **Detailed Effects**: Click zones for casualty estimates and damage info
 
 ### Educational Content
-- **Nuclear Terms Glossary**: 36 comprehensive articles covering:
+- **Nuclear Terms Glossary**: Comprehensive articles covering:
   - Nuclear physics fundamentals
   - Reactor technology
   - Weapons systems
   - Treaties and policy
-- **Historical Articles**: 48 in-depth articles including:
+- **Historical Articles**: In-depth articles including:
   - Scientific discoveries
   - Crisis events and close calls
   - Environmental impacts
@@ -99,8 +99,8 @@ nuclear-blast-simulator/
 │   │   └── config.ts
 │   └── styles/             # Global styles
 ├── content/                # Educational content (preserved)
-│   ├── terms/              # 36 nuclear terminology articles
-│   └── history/            # 48 historical articles
+│   ├── terms/              # Nuclear terminology articles
+│   └── history/            # Historical articles
 ├── public/                 # Static assets
 │   ├── assets/             # Images, fonts, etc.
 │   ├── simulator.html      # Original simulator

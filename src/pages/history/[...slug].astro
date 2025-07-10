@@ -8,83 +8,273 @@ export async function getStaticPaths() {
   
   return history.map((entry) => ({
     params: { slug: entry.slug.replace('history/', '') },
-    props: { entry },
+    props: { entry, allHistory: history },
   }));
 }
 
 interface Props {
   entry: CollectionEntry<'history'>;
+  allHistory: CollectionEntry<'history'>[];
 }
 
-const { entry } = Astro.props;
+const { entry, allHistory } = Astro.props;
 const { Content } = await entry.render();
+
+// Group articles by category for sidebar
+const categories = {
+  'Historical Events & Close Calls': {
+    'Scientific Discoveries': [
+      'historical-events/discovery-of-radioactivity',
+      'historical-events/neutron-discovery', 
+      'historical-events/nuclear-fission-discovery',
+      'historical-events/chicago-pile-1',
+      'historical-events/atoms-for-peace'
+    ],
+    'Crisis Events': [
+      'historical-events/cuban-missile-crisis',
+      'historical-events/able-archer-83',
+      'historical-events/stanislav-petrov-incident',
+      'historical-events/norwegian-rocket-incident',
+      'historical-events/kargil-conflict'
+    ]
+  },
+  'Testing Sites & Programs': [
+    'testing-sites/nevada-test-site',
+    'testing-sites/bikini-atoll',
+    'testing-sites/semipalatinsk-test-site',
+    'testing-sites/novaya-zemlya',
+    'testing-sites/lop-nur'
+  ],
+  'Treaties & Diplomacy': [
+    'treaties-diplomacy/non-proliferation-treaty',
+    'treaties-diplomacy/comprehensive-test-ban-treaty',
+    'treaties-diplomacy/start-treaties',
+    'treaties-diplomacy/intermediate-range-nuclear-forces-treaty',
+    'treaties-diplomacy/nuclear-weapons-free-zones'
+  ],
+  'Key Figures': [
+    'key-figures/oppenheimer',
+    'key-figures/edward-teller',
+    'key-figures/andrei-sakharov',
+    'key-figures/klaus-fuchs',
+    'key-figures/hyman-rickover'
+  ],
+  'Medical & Environmental Impact': [
+    'medical-environmental/three-mile-island',
+    'medical-environmental/chernobyl-disaster',
+    'medical-environmental/fukushima-daiichi',
+    'medical-environmental/nuclear-testing-health-effects',
+    'medical-environmental/hibakusha',
+    'medical-environmental/castle-bravo'
+  ],
+  'Delivery Systems & Strategy': [
+    'delivery-systems/nautilus-submarine',
+    'delivery-systems/nuclear-submarines',
+    'delivery-systems/intercontinental-ballistic-missiles',
+    'delivery-systems/nuclear-triad',
+    'delivery-systems/strategic-bombers',
+    'delivery-systems/missile-defense-systems'
+  ],
+  'Modern Developments': [
+    'modern-developments/obninsk-reactor',
+    'modern-developments/shippingport',
+    'modern-developments/small-modular-reactors',
+    'modern-developments/nuclear-fusion',
+    'modern-developments/nuclear-proliferation-21st-century',
+    'modern-developments/nuclear-modernization-programs',
+    'modern-developments/nuclear-terrorism'
+  ],
+  'Philosophical & Ethical': [
+    'philosophical-ethical/nuclear-ethics',
+    'philosophical-ethical/nuclear-deterrence-theory',
+    'philosophical-ethical/nuclear-abolition'
+  ],
+  'Weapons Technology': [
+    'weapons-technology/fission-weapons',
+    'weapons-technology/fusion-weapons',
+    'weapons-technology/nuclear-materials',
+    'weapons-technology/nuclear-testing',
+    'weapons-technology/nuclear-weapon-effects',
+    'weapons-technology/nuclear-weapons-design',
+    'weapons-technology/weapons-manufacturing'
+  ]
+};
+
+function getArticlesBySlug(slugs: string[]) {
+  return allHistory.filter(article => 
+    slugs.some(slug => article.slug.endsWith(slug))
+  ).sort((a, b) => a.data.title.localeCompare(b.data.title));
+}
+
+const currentSlug = entry.slug.replace('history/', '');
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
-  <div class="min-h-screen">
-    <!-- Hero Section -->
-    <section class="relative py-16 px-6 bg-gradient-to-b from-base-200 to-base-100">
-      <div class="absolute inset-0 opacity-5">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, hsl(var(--p)) 0%, transparent 50%), radial-gradient(circle at 75% 75%, hsl(var(--s)) 0%, transparent 50%);"></div>
-      </div>
-      <div class="relative container max-w-4xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-          <span class="text-secondary text-sm font-medium">Historical Article</span>
-        </div>
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-          {entry.data.title}
-        </h1>
-        <p class="text-xl text-base-content/70 max-w-3xl">
-          {entry.data.description}
-        </p>
-      </div>
-    </section>
+  <div class="min-h-screen flex">
+    <!-- Mobile Menu Toggle -->
+    <button class="lg:hidden fixed bottom-4 left-4 z-50 btn btn-circle btn-primary shadow-lg" onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full')">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
 
-    <!-- Content Section -->
-    <article class="container max-w-4xl mx-auto px-6 py-12">
-      <div class="bg-base-100 rounded-3xl border border-base-300 p-8 md:p-12 shadow-xl">
-        <!-- Content -->
-        <div class="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:leading-relaxed prose-a:transition-colors prose-a:duration-200 prose-strong:text-secondary prose-li:marker:text-secondary/60">
-          <Content />
+    <!-- Sidebar -->
+    <aside id="sidebar" class="fixed lg:sticky top-0 left-0 z-40 w-80 h-screen bg-base-200 border-r border-base-300 overflow-y-auto transition-transform -translate-x-full lg:translate-x-0">
+      <div class="p-6">
+        <div class="mb-6">
+          <a href="/history/" class="text-lg font-semibold text-primary hover:text-primary-focus transition-colors">
+            ← All History Articles
+          </a>
         </div>
-      </div>
-      
-      <!-- Navigation -->
-      <nav class="mt-12 flex items-center justify-between">
-        <a href="/history/" class="btn btn-outline gap-2 group">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:-translate-x-1" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-          </svg>
-          Back to History
-        </a>
         
-        <div class="flex gap-3">
-          <a href="/terms/" class="btn btn-ghost btn-sm">
-            Glossary
-          </a>
-          <a href="/simulator/" class="btn btn-primary btn-sm">
-            Launch Simulator
-          </a>
-        </div>
-      </nav>
-    </article>
-
-    <!-- Related Content Section -->
-    <section class="py-16 px-6 bg-gradient-to-t from-base-200 to-base-100">
-      <div class="container max-w-6xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8">Continue Exploring</h2>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/history/" class="btn btn-outline btn-lg">
-            More History Articles
-          </a>
-          <a href="/simulator/" class="btn btn-primary btn-lg group">
-            <span>Launch Simulator</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </a>
+        <!-- Categories -->
+        <div class="space-y-6">
+          {Object.entries(categories).map(([categoryName, categoryData]) => {
+            const isNested = !Array.isArray(categoryData);
+            
+            return (
+              <div class="space-y-2">
+                <h3 class="text-sm font-bold text-base-content/60 uppercase tracking-wider">{categoryName}</h3>
+                
+                {isNested ? (
+                  <div class="space-y-4 ml-2">
+                    {Object.entries(categoryData).map(([subcategory, slugs]) => (
+                      <div class="space-y-1">
+                        <h4 class="text-sm font-semibold text-base-content/80">{subcategory}</h4>
+                        <ul class="space-y-1 ml-2">
+                          {getArticlesBySlug(slugs as string[]).map((article) => {
+                            const isActive = article.slug.endsWith(currentSlug);
+                            return (
+                              <li>
+                                <a 
+                                  href={`/history/${article.slug.replace('history/', '')}/`}
+                                  class={`block text-sm py-1 px-2 rounded transition-all ${
+                                    isActive 
+                                      ? 'bg-primary text-primary-content font-medium active-article' 
+                                      : 'text-base-content/70 hover:text-base-content hover:bg-base-300'
+                                  }`}
+                                >
+                                  {article.data.title}
+                                </a>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <ul class="space-y-1 ml-2">
+                    {getArticlesBySlug(categoryData).map((article) => {
+                      const isActive = article.slug.endsWith(currentSlug);
+                      return (
+                        <li>
+                          <a 
+                            href={`/history/${article.slug.replace('history/', '')}/`}
+                            class={`block text-sm py-1 px-2 rounded transition-all ${
+                              isActive 
+                                ? 'bg-primary text-primary-content font-medium active-article' 
+                                : 'text-base-content/70 hover:text-base-content hover:bg-base-300'
+                            }`}
+                          >
+                            {article.data.title}
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
-    </section>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 lg:ml-0">
+      <!-- Hero Section -->
+      <section class="relative py-16 px-6 bg-gradient-to-b from-base-200 to-base-100">
+        <div class="absolute inset-0 opacity-5">
+          <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, hsl(var(--p)) 0%, transparent 50%), radial-gradient(circle at 75% 75%, hsl(var(--s)) 0%, transparent 50%);"></div>
+        </div>
+        <div class="relative container max-w-4xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+            <span class="text-secondary text-sm font-medium">Historical Article</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            {entry.data.title}
+          </h1>
+          <p class="text-xl text-base-content/70 max-w-3xl">
+            {entry.data.description}
+          </p>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <article class="container max-w-4xl mx-auto px-6 py-12">
+        <div class="bg-base-100 rounded-3xl border border-base-300 p-8 md:p-12 shadow-xl">
+          <!-- Content -->
+          <div class="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:leading-relaxed prose-a:transition-colors prose-a:duration-200 prose-strong:text-secondary prose-li:marker:text-secondary/60">
+            <Content />
+          </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="mt-12 flex items-center justify-between">
+          <a href="/history/" class="btn btn-outline gap-2 group lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:-translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+            </svg>
+            Back to History
+          </a>
+          
+          <div class="flex gap-3 ml-auto">
+            <a href="/terms/" class="btn btn-ghost btn-sm">
+              Glossary
+            </a>
+            <a href="/simulator/" class="btn btn-primary btn-sm">
+              Launch Simulator
+            </a>
+          </div>
+        </nav>
+      </article>
+
+      <!-- Related Content Section -->
+      <section class="py-16 px-6 bg-gradient-to-t from-base-200 to-base-100">
+        <div class="container max-w-6xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-8">Continue Exploring</h2>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/history/" class="btn btn-outline btn-lg">
+              More History Articles
+            </a>
+            <a href="/simulator/" class="btn btn-primary btn-lg group">
+              <span>Launch Simulator</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
+  
+  <script>
+    // Scroll to the active article in the sidebar on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const activeArticle = document.querySelector('.active-article');
+      if (activeArticle) {
+        const sidebar = document.getElementById('sidebar');
+        const sidebarRect = sidebar.getBoundingClientRect();
+        const activeRect = activeArticle.getBoundingClientRect();
+        
+        // Calculate the scroll position to center the active article in the viewport
+        const scrollTop = activeArticle.offsetTop - (sidebar.clientHeight / 2) + (activeArticle.clientHeight / 2);
+        
+        // Scroll the sidebar
+        sidebar.scrollTop = scrollTop;
+      }
+    });
+  </script>
 </BaseLayout>
