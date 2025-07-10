@@ -82,6 +82,12 @@ window.addEventListener('DOMContentLoaded', async function () {
 
     // Set up event listeners
     setupEventListeners();
+    
+    // Initialize map visibility
+    updateMapVisibility();
+    
+    // Update map visibility on window resize
+    window.addEventListener('resize', updateMapVisibility);
 });
 
 // Format distance with both units
@@ -229,6 +235,12 @@ function clearBlast() {
     // Hide effects panel and button
     document.getElementById('effects-toggle').classList.remove('visible');
     closeEffectsPanel();
+}
+
+// Update map visibility based on mobile and blast state
+function updateMapVisibility() {
+    // Map is now always visible - this function kept for potential future use
+    return;
 }
 
 // Simulate blast with animation
