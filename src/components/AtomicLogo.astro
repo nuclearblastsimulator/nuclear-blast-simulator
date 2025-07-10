@@ -1,4 +1,6 @@
 ---
+import logoImage from '../images/logo.png';
+
 export interface Props {
   size?: 'sm' | 'md' | 'lg';
   showOrbits?: boolean;
@@ -57,7 +59,7 @@ const sizeConfig = sizes[size];
   
   <!-- Central logo (nucleus) -->
   <img 
-    src="/assets/logo/logo.png" 
+    src={logoImage.src} 
     alt="Nuclear Blast Simulator Logo" 
     class={`${sizeConfig.logo} object-contain relative z-10`}
   />
