@@ -1,6 +1,7 @@
 ---
 import '../assets/app.css';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import AtomicLogo from '../components/AtomicLogo.astro';
 import ogImage from '../images/og-preview.png';
 
 export interface Props {
@@ -80,9 +81,7 @@ const ogImageURL = image || new URL(ogImage.src, Astro.site).href;
         </div>
         
         <a href="/" class="flex items-center gap-3 group">
-          <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <img src="/assets/logo/logo.png" alt="Nuclear Blast Simulator Logo" class="w-6 h-6">
-          </div>
+          <AtomicLogo size="sm" class="transition-transform group-hover:scale-110" />
           <span class="navbar-app-name text-xl font-bold hidden sm:inline-block">
             Nuclear Blast Simulator
           </span>
