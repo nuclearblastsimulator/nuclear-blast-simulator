@@ -436,6 +436,98 @@ input:focus {
     filter: brightness(5) contrast(0.7);
 }
 
+/* Wind Direction Indicator */
+.wind-indicator {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(34, 34, 34, 0.9);
+    border: 2px solid #444;
+    border-radius: 12px;
+    padding: 1rem;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.wind-compass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.wind-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(36, 123, 172, 0.2);
+    border: 2px solid #247bac;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #247bac;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.wind-arrow svg {
+    transform: rotate(-45deg);
+}
+
+.wind-speed {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.wind-label {
+    font-size: 0.75rem;
+    color: #888;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Mobile Floating Action Button */
+.fab-simulate {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #247bac, #f77f00);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0 8px 25px rgba(247, 127, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.fab-simulate:hover {
+    background: linear-gradient(135deg, #1d6290, #e56f00);
+    box-shadow: 0 12px 35px rgba(247, 127, 0, 0.5);
+    transform: translateY(-2px) scale(1.05);
+}
+
+.fab-simulate:active {
+    transform: translateY(0) scale(0.95);
+}
+
+.fab-simulate svg {
+    width: 28px;
+    height: 28px;
+}
+
 /* Effects Panel Toggle Button */
 .effects-toggle {
     position: absolute;
@@ -697,6 +789,49 @@ input:focus {
     .map-container {
         flex: 1;
         min-height: 40vh;
+    }
+
+    .wind-indicator {
+        top: 10px;
+        left: 10px;
+        padding: 0.75rem;
+        transform: scale(0.9);
+    }
+
+    .wind-compass {
+        gap: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .wind-arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    .wind-arrow svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .wind-speed {
+        font-size: 0.75rem;
+    }
+
+    .wind-label {
+        font-size: 0.6875rem;
+    }
+
+    .fab-simulate {
+        display: flex;
+        bottom: 80px;
+        right: 15px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .fab-simulate svg {
+        width: 24px;
+        height: 24px;
     }
 
     .effects-toggle {

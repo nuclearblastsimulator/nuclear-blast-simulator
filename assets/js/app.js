@@ -8,6 +8,8 @@ let groundZeroMarker = null;
 let currentLocation = { lat: 36.0104, lng: -84.2696 };
 let previousDetonationType = 'air'; // Track for analytics
 let previousWeapon = null; // Track for weapon comparison
+let windDirection = 45; // Wind direction in degrees (0 = North, 90 = East, etc.)
+let windSpeed = 15; // Wind speed in mph
 
 // Bomb data - will be populated from JSON
 let bombData = {};
@@ -88,6 +90,16 @@ window.addEventListener('DOMContentLoaded', async function () {
     
     // Update map visibility on window resize
     window.addEventListener('resize', updateMapVisibility);
+    
+    // Initialize wind direction
+    updateWindDirection();
+    
+    // Simulate random wind changes every 30 seconds
+    setInterval(() => {
+        windDirection = Math.random() * 360;
+        windSpeed = 10 + Math.random() * 20; // 10-30 mph
+        updateWindDirection();
+    }, 30000);
 });
 
 // Format distance with both units
@@ -241,6 +253,17 @@ function clearBlast() {
 function updateMapVisibility() {
     // Map is now always visible - this function kept for potential future use
     return;
+}
+
+// Update wind direction indicator
+function updateWindDirection() {
+    const windArrow = document.getElementById('wind-arrow');
+    const windSpeedElement = document.getElementById('wind-speed');
+    
+    if (windArrow && windSpeedElement) {
+        windArrow.style.transform = `rotate(${windDirection}deg)`;
+        windSpeedElement.textContent = `${Math.round(windSpeed)} mph`;
+    }
 }
 
 // Simulate blast with animation
@@ -446,6 +469,11 @@ function drawBlast(lat, lng) {
     setTimeout(() => {
         document.getElementById('effects-toggle').classList.add('visible');
         updateEffectsPanel(bomb, radii, isSurfaceBurst);
+        
+        // Add fallout pattern for surface bursts
+        if (isSurfaceBurst) {
+            drawFalloutPattern(lat, lng, bomb.yield);
+        }
     }, circleOrder.length * 150 + 200);
 
     // Adjust map view to show all circles
@@ -459,6 +487,65 @@ function getZoomLevel(maxRadius) {
     if (maxRadius > 10000) return 10;
     if (maxRadius > 5000) return 11;
     return 12;
+}
+
+// Draw fallout pattern for surface bursts
+function drawFalloutPattern(lat, lng, yieldKt) {
+    const falloutDistance = Math.pow(yieldKt, 0.25) * 15000; // Approximate fallout distance in meters
+    
+    // Calculate fallout ellipse based on wind direction
+    const windRadians = (windDirection * Math.PI) / 180;
+    const falloutWidth = falloutDistance * 0.3; // Fallout pattern width
+    
+    // Create fallout pattern points
+    const falloutPoints = [];
+    const numPoints = 50;
+    
+    for (let i = 0; i <= numPoints; i++) {
+        const angle = (i / numPoints) * 2 * Math.PI;
+        let distance, width;
+        
+        // Create elongated pattern in wind direction
+        if (angle >= 0 && angle <= Math.PI) {
+            // Downwind side - longer pattern
+            distance = falloutDistance * (0.3 + 0.7 * Math.cos(angle - windRadians));
+            width = falloutWidth * (0.5 + 0.5 * Math.abs(Math.sin(angle - windRadians)));
+        } else {
+            // Upwind side - shorter pattern
+            distance = falloutDistance * 0.2;
+            width = falloutWidth * 0.3;
+        }
+        
+        const offsetLat = (distance * Math.cos(angle)) / 111000; // Convert to degrees
+        const offsetLng = (distance * Math.sin(angle)) / (111000 * Math.cos(lat * Math.PI / 180));
+        
+        falloutPoints.push([lat + offsetLat, lng + offsetLng]);
+    }
+    
+    // Create fallout pattern polygon
+    const falloutPattern = L.polygon(falloutPoints, {
+        fillColor: '#8B4513',
+        fillOpacity: 0.15,
+        color: '#8B4513',
+        weight: 1,
+        dashArray: '5, 5',
+        className: 'blast-circle'
+    }).addTo(map);
+    
+    falloutPattern.bindPopup(createZonePopup(
+        'Radioactive Fallout Zone',
+        falloutDistance,
+        `Deadly radioactive fallout carried by wind at ${Math.round(windSpeed)} mph. Lethal radiation doses within hours. Evacuation required for weeks to months. Pattern based on current wind direction.`
+    ));
+    
+    // Add click tracking
+    falloutPattern.on('click', () => {
+        if (typeof Analytics !== 'undefined') {
+            Analytics.trackZoneClicked('fallout');
+        }
+    });
+    
+    blastCircles.fallout = falloutPattern;
 }
 
 // Search for custom address

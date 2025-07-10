@@ -190,9 +190,12 @@
                         <option value="40.7128,-74.0060">New York City</option>
                         <option value="51.5074,-0.1278">London</option>
                         <option value="35.6762,139.6503">Tokyo</option>
+                        <option value="34.3853,132.4553">Hiroshima</option>
+                        <option value="32.7503,129.8779">Nagasaki</option>
                         <option value="48.8566,2.3522">Paris</option>
                         <option value="55.7558,37.6173">Moscow</option>
                         <option value="39.9042,116.4074">Beijing</option>
+                        <option value="35.6892,51.3890">Tehran</option>
                         <option value="34.0522,-118.2437">Los Angeles</option>
                         <option value="41.8781,-87.6298">Chicago</option>
                         <option value="52.5200,13.4050">Berlin</option>
@@ -256,6 +259,28 @@
 
         <div class="map-container">
             <div id="map"></div>
+
+            <!-- Wind Direction Indicator -->
+            <div class="wind-indicator" id="wind-indicator">
+                <div class="wind-compass">
+                    <div class="wind-arrow" id="wind-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L15.5 8.5H8.5L12 2Z" />
+                            <path d="M12 22L8.5 15.5H15.5L12 22Z" />
+                        </svg>
+                    </div>
+                    <div class="wind-speed" id="wind-speed">15 mph</div>
+                </div>
+                <div class="wind-label">Wind Direction</div>
+            </div>
+
+            <!-- Mobile Floating Action Button -->
+            <button class="fab-simulate" id="fab-simulate" onclick="simulateBlast()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L13.5 2.5L16.17 5.17C15.24 5.06 14.32 5 13.38 5C10.38 5 7.68 6.64 6.11 9.27C5.8 9.82 6.04 10.54 6.67 10.81C7.18 11.03 7.79 10.8 8.08 10.33C9.18 8.5 11.18 7.5 13.38 7.5C14.32 7.5 15.24 7.69 16.08 8.03L13.5 10.5L15 12L21 6V4C21 3.45 20.55 3 20 3S19 3.45 19 4V9M4.27 5.27C4.68 4.86 5.32 4.86 5.73 5.27L6.8 6.34C7.21 6.75 7.21 7.39 6.8 7.8C6.39 8.21 5.75 8.21 5.34 7.8L4.27 6.73C3.86 6.32 3.86 5.68 4.27 5.27M2 10.5H3C3.55 10.5 4 10.95 4 11.5S3.55 12.5 3 12.5H2C1.45 12.5 1 12.05 1 11.5S1.45 10.5 2 10.5Z" />
+                </svg>
+            </button>
 
             <!-- Blast Effects Panel Toggle -->
             <button class="effects-toggle" id="effects-toggle" onclick="toggleEffectsPanel()">
