@@ -1,0 +1,28 @@
+{
+  "name": "nuclear-blast-simulator",
+  "version": "1.0.0",
+  "description": "Educational visualization of nuclear weapon effects",
+  "main": "index.html",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "clean": "rm -rf dist",
+    "serve": "node scripts/watch.js",
+    "serve:simple": "npm run build && npx http-server dist -p 8080 -o",
+    "deploy": "netlify deploy"
+  },
+  "keywords": [
+    "nuclear",
+    "blast",
+    "simulator",
+    "educational",
+    "visualization"
+  ],
+  "author": "Nuclear Blast Simulator",
+  "license": "CC-BY-NC-SA-4.0",
+  "devDependencies": {
+    "eslint": "^9.30.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
