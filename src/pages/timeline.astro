@@ -1,0 +1,514 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AtomicLogo from '../components/AtomicLogo.astro';
+
+// Timeline data with events, dates, and links to articles
+const timelineEvents = [
+  {
+    year: 1896,
+    date: "1896",
+    title: "Discovery of Radioactivity",
+    description: "Henri Becquerel discovers radioactivity, laying the foundation for nuclear physics.",
+    category: "discovery",
+    link: "/history/foundational-events/discovery-of-radioactivity/",
+    hasArticle: true
+  },
+  {
+    year: 1932,
+    date: "1932",
+    title: "Neutron Discovery",
+    description: "James Chadwick discovers the neutron, crucial for understanding nuclear fission.",
+    category: "discovery",
+    link: "/history/foundational-events/neutron-discovery/",
+    hasArticle: true
+  },
+  {
+    year: 1938,
+    date: "December 1938",
+    title: "Nuclear Fission Discovered",
+    description: "Otto Hahn and Fritz Strassmann discover nuclear fission, opening the path to nuclear energy.",
+    category: "discovery",
+    link: "/history/foundational-events/nuclear-fission-discovery/",
+    hasArticle: true
+  },
+  {
+    year: 1942,
+    date: "December 2, 1942",
+    title: "Chicago Pile-1",
+    description: "First controlled nuclear chain reaction achieved under Enrico Fermi's leadership.",
+    category: "milestone",
+    link: "/history/foundational-events/chicago-pile-1/",
+    hasArticle: true
+  },
+  {
+    year: 1945,
+    date: "July 16, 1945",
+    title: "Trinity Test",
+    description: "First nuclear weapon successfully detonated in New Mexico desert.",
+    category: "weapon",
+    link: "/history/foundational-events/los-alamos/",
+    hasArticle: true
+  },
+  {
+    year: 1945,
+    date: "August 6 & 9, 1945",
+    title: "Hiroshima and Nagasaki",
+    description: "Atomic bombs dropped on Japan, ending World War II and beginning the nuclear age.",
+    category: "weapon",
+    link: "/history/testing-disasters/hibakusha/",
+    hasArticle: true
+  },
+  {
+    year: 1949,
+    date: "August 29, 1949",
+    title: "Soviet Union's First Nuclear Test",
+    description: "USSR detonates its first nuclear device, starting the nuclear arms race.",
+    category: "weapon",
+    link: "/history/testing-sites/semipalatinsk-test-site/",
+    hasArticle: true
+  },
+  {
+    year: 1952,
+    date: "November 1, 1952",
+    title: "Ivy Mike - First Hydrogen Bomb",
+    description: "First full-scale thermonuclear device tested by the United States.",
+    category: "weapon",
+    link: "/history/weapons-technology/fusion-weapons/",
+    hasArticle: true
+  },
+  {
+    year: 1953,
+    date: "December 8, 1953",
+    title: "Atoms for Peace",
+    description: "President Eisenhower proposes peaceful uses of nuclear energy to the UN.",
+    category: "diplomacy",
+    link: "/history/foundational-events/atoms-for-peace/",
+    hasArticle: true
+  },
+  {
+    year: 1954,
+    date: "March 1, 1954",
+    title: "Castle Bravo Disaster",
+    description: "Largest U.S. nuclear test goes wrong, yielding 15 megatons instead of expected 6.",
+    category: "accident",
+    link: "/history/testing-disasters/castle-bravo/",
+    hasArticle: true
+  },
+  {
+    year: 1954,
+    date: "June 27, 1954",
+    title: "World's First Nuclear Power Plant",
+    description: "Obninsk Nuclear Power Plant begins operation in the Soviet Union.",
+    category: "power",
+    link: "/history/modern-developments/obninsk-reactor/",
+    hasArticle: true
+  },
+  {
+    year: 1957,
+    date: "December 2, 1957",
+    title: "First U.S. Commercial Nuclear Plant",
+    description: "Shippingport Atomic Power Station begins operation in Pennsylvania.",
+    category: "power",
+    link: "/history/modern-developments/shippingport/",
+    hasArticle: true
+  },
+  {
+    year: 1961,
+    date: "October 30, 1961",
+    title: "Tsar Bomba",
+    description: "Soviet Union detonates the largest nuclear weapon ever tested - 50 megatons.",
+    category: "weapon",
+    link: "/history/testing-disasters/novaya-zemlya/",
+    hasArticle: true
+  },
+  {
+    year: 1962,
+    date: "October 14-28, 1962",
+    title: "Cuban Missile Crisis",
+    description: "Closest the world has come to nuclear war as U.S. and USSR face off over missiles in Cuba.",
+    category: "crisis",
+    link: "/history/cold-war-crises/cuban-missile-crisis/",
+    hasArticle: true
+  },
+  {
+    year: 1968,
+    date: "July 1, 1968",
+    title: "Non-Proliferation Treaty Signed",
+    description: "NPT signed to prevent spread of nuclear weapons and promote peaceful nuclear energy.",
+    category: "diplomacy",
+    link: "/history/modern-developments/non-proliferation-treaty/",
+    hasArticle: true
+  },
+  {
+    year: 1979,
+    date: "March 28, 1979",
+    title: "Three Mile Island Accident",
+    description: "Partial meltdown at Pennsylvania nuclear plant becomes worst U.S. nuclear accident.",
+    category: "accident",
+    link: "/history/testing-disasters/three-mile-island/",
+    hasArticle: true
+  },
+  {
+    year: 1983,
+    date: "September 26, 1983",
+    title: "Stanislav Petrov Saves the World",
+    description: "Soviet officer prevents nuclear war by refusing to launch missiles despite false alarm.",
+    category: "crisis",
+    link: "/history/cold-war-crises/stanislav-petrov-incident/",
+    hasArticle: true
+  },
+  {
+    year: 1983,
+    date: "November 2-11, 1983",
+    title: "Able Archer 83",
+    description: "NATO exercise nearly triggers Soviet nuclear response due to miscommunication.",
+    category: "crisis",
+    link: "/history/cold-war-crises/able-archer-83/",
+    hasArticle: true
+  },
+  {
+    year: 1986,
+    date: "April 26, 1986",
+    title: "Chernobyl Disaster",
+    description: "Worst nuclear accident in history releases radioactive material across Europe.",
+    category: "accident",
+    link: "/history/testing-disasters/chernobyl-disaster/",
+    hasArticle: true
+  },
+  {
+    year: 1987,
+    date: "December 8, 1987",
+    title: "INF Treaty Signed",
+    description: "U.S. and USSR agree to eliminate intermediate-range nuclear missiles.",
+    category: "diplomacy",
+    link: "/history/modern-developments/intermediate-range-nuclear-forces-treaty/",
+    hasArticle: true
+  },
+  {
+    year: 1991,
+    date: "July 31, 1991",
+    title: "START I Treaty",
+    description: "Major nuclear arms reduction treaty between U.S. and USSR.",
+    category: "diplomacy",
+    link: "/history/modern-developments/start-treaties/",
+    hasArticle: true
+  },
+  {
+    year: 1995,
+    date: "January 25, 1995",
+    title: "Norwegian Rocket Incident",
+    description: "Scientific rocket launch nearly triggers Russian nuclear response.",
+    category: "crisis",
+    link: "/history/cold-war-crises/norwegian-rocket-incident/",
+    hasArticle: true
+  },
+  {
+    year: 1998,
+    date: "May 1998",
+    title: "India and Pakistan Nuclear Tests",
+    description: "Both nations conduct nuclear tests, becoming declared nuclear powers.",
+    category: "weapon",
+    link: "/history/nuclear-programs/india/",
+    hasArticle: true
+  },
+  {
+    year: 1999,
+    date: "May-July 1999",
+    title: "Kargil Conflict",
+    description: "First military conflict between two nuclear-armed states.",
+    category: "crisis",
+    link: "/history/cold-war-crises/kargil-conflict/",
+    hasArticle: true
+  },
+  {
+    year: 2006,
+    date: "October 9, 2006",
+    title: "North Korea's First Nuclear Test",
+    description: "North Korea joins the nuclear club with underground test.",
+    category: "weapon",
+    link: "/history/nuclear-programs/north-korea-first-test/",
+    hasArticle: true
+  },
+  {
+    year: 2011,
+    date: "March 11, 2011",
+    title: "Fukushima Disaster",
+    description: "Earthquake and tsunami cause nuclear meltdowns at Japanese power plant.",
+    category: "accident",
+    link: "/history/testing-disasters/fukushima-daiichi/",
+    hasArticle: true
+  }
+];
+
+// Sort events by year
+const sortedEvents = timelineEvents.sort((a, b) => a.year - b.year);
+
+// Category colors and icons
+const categoryConfig = {
+  discovery: {
+    color: "text-blue-500",
+    bgColor: "bg-blue-500/10",
+    borderColor: "border-blue-500/30",
+    icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+    label: "Discovery"
+  },
+  weapon: {
+    color: "text-red-500",
+    bgColor: "bg-red-500/10",
+    borderColor: "border-red-500/30",
+    icon: "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z",
+    label: "Weapon Test"
+  },
+  crisis: {
+    color: "text-orange-500",
+    bgColor: "bg-orange-500/10",
+    borderColor: "border-orange-500/30",
+    icon: "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z",
+    label: "Crisis"
+  },
+  accident: {
+    color: "text-yellow-500",
+    bgColor: "bg-yellow-500/10",
+    borderColor: "border-yellow-500/30",
+    icon: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+    label: "Accident"
+  },
+  diplomacy: {
+    color: "text-green-500",
+    bgColor: "bg-green-500/10",
+    borderColor: "border-green-500/30",
+    icon: "M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z",
+    label: "Treaty/Diplomacy"
+  },
+  power: {
+    color: "text-purple-500",
+    bgColor: "bg-purple-500/10",
+    borderColor: "border-purple-500/30",
+    icon: "M13 10V3L4 14h7v7l9-11h-7z",
+    label: "Nuclear Power"
+  },
+  milestone: {
+    color: "text-primary",
+    bgColor: "bg-primary/10",
+    borderColor: "border-primary/30",
+    icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z",
+    label: "Milestone"
+  }
+};
+
+// Articles that need to be written
+const missingArticles = sortedEvents.filter(event => event.needsArticle);
+---
+
+<BaseLayout 
+  title="Nuclear History Timeline" 
+  description="Explore the complete timeline of nuclear history from discovery to modern day. Major events, crises, treaties, and technological milestones."
+>
+  <!-- Hero Section -->
+  <section class="relative py-20 px-6 bg-gradient-to-b from-base-100 to-base-200 overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, hsl(var(--p)) 0%, transparent 50%), radial-gradient(circle at 75% 75%, hsl(var(--s)) 0%, transparent 50%);"></div>
+    </div>
+    
+    <div class="container max-w-6xl mx-auto relative z-10">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm text-primary font-medium">Historical Timeline</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+            Nuclear History Timeline
+          </span>
+        </h1>
+        
+        <p class="text-xl text-base-content/70 max-w-3xl mx-auto mb-12">
+          From the discovery of radioactivity to modern nuclear challenges, explore the events that shaped our nuclear world.
+        </p>
+        
+        <!-- Category Legend -->
+        <div class="flex flex-wrap gap-3 justify-center">
+          {Object.entries(categoryConfig).map(([key, config]) => (
+            <div class={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full ${config.bgColor} border ${config.borderColor}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" class={`h-4 w-4 ${config.color}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d={config.icon} />
+              </svg>
+              <span class={`text-sm font-medium ${config.color}`}>{config.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="py-20 px-6">
+    <div class="container max-w-4xl mx-auto">
+      <div class="relative">
+        <!-- Timeline Line -->
+        <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-base-300 transform md:-translate-x-1/2"></div>
+        
+        <!-- Timeline Events -->
+        <div class="space-y-12">
+          {sortedEvents.map((event, index) => {
+            const config = categoryConfig[event.category];
+            const isEven = index % 2 === 0;
+            
+            return (
+              <div class={`relative flex items-center ${isEven ? 'md:justify-start' : 'md:justify-end'}`}>
+                <!-- Mobile: All cards on right -->
+                <!-- Desktop: Alternating sides -->
+                <div class={`w-full md:w-5/12 ${isEven ? 'md:pr-8' : 'md:pl-8'}`}>
+                  {event.hasArticle ? (
+                    <a 
+                      href={event.link} 
+                      class={`block group relative bg-base-100 rounded-2xl p-6 shadow-lg border-2 ${config.borderColor} hover:border-opacity-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
+                    >
+                      <!-- Year Badge -->
+                      <div class={`absolute -top-3 ${isEven ? 'md:right-6' : 'md:left-6'} left-6`}>
+                        <span class={`inline-flex items-center px-3 py-1 rounded-full text-sm font-bold ${config.bgColor} ${config.color} border ${config.borderColor}`}>
+                          {event.year}
+                        </span>
+                      </div>
+                      
+                      <!-- Content -->
+                      <div class="pt-3">
+                        <div class="flex items-start justify-between mb-3">
+                          <h3 class="text-xl font-bold group-hover:text-primary transition-colors flex-1 pr-4">
+                            {event.title}
+                          </h3>
+                          <svg xmlns="http://www.w3.org/2000/svg" class={`h-6 w-6 ${config.color} opacity-50 group-hover:opacity-100 transition-opacity flex-shrink-0`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d={config.icon} />
+                          </svg>
+                        </div>
+                        
+                        <p class="text-sm text-base-content/60 mb-3">{event.date}</p>
+                        <p class="text-base-content/80 leading-relaxed">{event.description}</p>
+                        
+                        <div class="mt-4 flex items-center gap-2 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                          <span>Read more</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
+                      </div>
+                    </a>
+                  ) : (
+                    <div class={`relative bg-base-100/50 rounded-2xl p-6 shadow-lg border-2 ${config.borderColor} border-opacity-50 opacity-80`}>
+                      <!-- Year Badge -->
+                      <div class={`absolute -top-3 ${isEven ? 'md:right-6' : 'md:left-6'} left-6`}>
+                        <span class={`inline-flex items-center px-3 py-1 rounded-full text-sm font-bold ${config.bgColor} ${config.color} border ${config.borderColor}`}>
+                          {event.year}
+                        </span>
+                      </div>
+                      
+                      <!-- Content -->
+                      <div class="pt-3">
+                        <div class="flex items-start justify-between mb-3">
+                          <h3 class="text-xl font-bold flex-1 pr-4">
+                            {event.title}
+                          </h3>
+                          <svg xmlns="http://www.w3.org/2000/svg" class={`h-6 w-6 ${config.color} opacity-50 flex-shrink-0`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d={config.icon} />
+                          </svg>
+                        </div>
+                        
+                        <p class="text-sm text-base-content/60 mb-3">{event.date}</p>
+                        <p class="text-base-content/80 leading-relaxed">{event.description}</p>
+                        
+                        {event.needsArticle && (
+                          <div class="mt-4 text-sm text-base-content/50 italic">
+                            Article coming soon
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </div>
+                
+                <!-- Timeline Dot -->
+                <div class={`absolute left-8 md:left-1/2 transform md:-translate-x-1/2 ${config.bgColor} ${config.borderColor} border-4 w-4 h-4 rounded-full`}></div>
+              </div>
+            );
+          })}
+        </div>
+        
+        <!-- Timeline End -->
+        <div class="flex justify-center mt-12">
+          <div class="relative">
+            <AtomicLogo size="sm" class="opacity-50" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Missing Articles Section -->
+  {missingArticles.length > 0 && (
+    <section class="py-20 px-6 bg-base-200">
+      <div class="container max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Articles in Development</h2>
+          <p class="text-lg text-base-content/70">
+            These important events need detailed articles:
+          </p>
+        </div>
+        
+        <div class="grid gap-4">
+          {missingArticles.map(event => (
+            <div class="bg-base-100 rounded-lg p-4 border border-base-300">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="font-semibold">{event.title}</h3>
+                  <p class="text-sm text-base-content/60">{event.date}</p>
+                </div>
+                <span class={`text-sm px-3 py-1 rounded-full ${categoryConfig[event.category].bgColor} ${categoryConfig[event.category].color}`}>
+                  {categoryConfig[event.category].label}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA Section -->
+  <section class="py-20 px-6 bg-gradient-to-b from-base-200 to-base-100">
+    <div class="container max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Explore More Nuclear History</h2>
+      <p class="text-lg text-base-content/70 mb-8">
+        Dive deeper into the science, politics, and human stories behind these events.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/history/" class="btn btn-primary">
+          Browse All Articles
+        </a>
+        <a href="/simulator/" class="btn btn-outline">
+          Try the Simulator
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Custom animation for timeline dots */
+  @keyframes pulse-dot {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+  }
+  
+  .absolute.left-8.md\:left-1\/2.transform:hover {
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+</style>
