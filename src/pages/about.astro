@@ -1,0 +1,217 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="About" 
+  description="Learn about the Nuclear Blast Simulator - an educational platform for understanding nuclear weapon effects."
+>
+  <section class="min-h-screen pt-20">
+    <div class="container mx-auto px-6 py-12">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-8">About Nuclear Blast Simulator</h1>
+        
+        <!-- Mission Statement -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+              <span class="text-primary">🎯</span>
+            </div>
+            Our Mission
+          </h2>
+          <p class="text-lg text-base-content/80 mb-4">
+            The Nuclear Blast Simulator is an educational platform designed to help people understand the devastating 
+            effects of nuclear weapons through interactive visualization. By providing accurate, science-based simulations, 
+            we aim to promote awareness about nuclear weapons and contribute to informed discussions about global security 
+            and disarmament.
+          </p>
+        </div>
+
+        <!-- Educational Purpose -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+              <span class="text-primary">📚</span>
+            </div>
+            Educational Purpose
+          </h2>
+          <p class="text-base-content/80 mb-4">
+            This simulator serves as an educational tool for:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-base-content/80 ml-4">
+            <li>Students learning about nuclear physics and international relations</li>
+            <li>Educators teaching about the nuclear age and its implications</li>
+            <li>Researchers studying nuclear weapon effects and policy</li>
+            <li>Citizens seeking to understand nuclear weapons and their impact</li>
+            <li>Policy makers and analysts working on nuclear disarmament</li>
+          </ul>
+        </div>
+
+        <!-- Features -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+              <span class="text-primary">✨</span>
+            </div>
+            Key Features
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="/simulator/" class="block p-6 rounded-2xl bg-base-200 border border-base-300 hover:border-primary/50 transition-all group">
+              <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Interactive Blast Simulator</h3>
+              <p class="text-base-content/70 mb-3">
+                Visualize nuclear weapon effects on any location worldwide with scientifically accurate blast radius calculations.
+              </p>
+              <span class="text-primary text-sm font-medium">Launch Simulator →</span>
+            </a>
+            <a href="/simulator/" class="block p-6 rounded-2xl bg-base-200 border border-base-300 hover:border-primary/50 transition-all group">
+              <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Comprehensive Weapon Database</h3>
+              <p class="text-base-content/70 mb-3">
+                Access data on nuclear weapons from history, including yields and deployment information.
+              </p>
+              <span class="text-primary text-sm font-medium">View Weapons →</span>
+            </a>
+            <a href="/history/" class="block p-6 rounded-2xl bg-base-200 border border-base-300 hover:border-primary/50 transition-all group">
+              <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Educational Articles</h3>
+              <p class="text-base-content/70 mb-3">
+                Explore extensive articles covering nuclear history, technology, key figures, and modern developments.
+              </p>
+              <span class="text-primary text-sm font-medium">Browse Articles →</span>
+            </a>
+            <a href="/timeline/" class="block p-6 rounded-2xl bg-base-200 border border-base-300 hover:border-primary/50 transition-all group">
+              <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Historical Timeline</h3>
+              <p class="text-base-content/70 mb-3">
+                Navigate through major events in nuclear history from 1895 to present day.
+              </p>
+              <span class="text-primary text-sm font-medium">View Timeline →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Scientific Basis -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+              <span class="text-primary">🔬</span>
+            </div>
+            Scientific Accuracy
+          </h2>
+          <p class="text-base-content/80 mb-4">
+            Our simulations are based on established scientific models and publicly available data:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-base-content/80 ml-4">
+            <li>Blast scaling laws from "The Effects of Nuclear Weapons" (Glasstone & Dolan)</li>
+            <li>Overpressure calculations using standard atmospheric models</li>
+            <li>Thermal radiation effects based on weapon yield</li>
+            <li>Fireball radius calculations using established formulas</li>
+            <li>Surface vs. air burst optimization models</li>
+          </ul>
+          <p class="text-base-content/80 mt-4">
+            Note: Actual effects would vary based on altitude, weather conditions, terrain, and other factors. 
+            Our simulations provide educational approximations, not precise predictions.
+          </p>
+        </div>
+
+        <!-- Privacy & Ethics -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+              <span class="text-primary">🛡️</span>
+            </div>
+            Privacy & Ethics
+          </h2>
+          <p class="text-base-content/80 mb-4">
+            We are committed to responsible use of this educational tool:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-base-content/80 ml-4">
+            <li>No personal data collection beyond basic analytics</li>
+            <li>All calculations performed locally in your browser</li>
+            <li>No targeting data or sensitive information stored</li>
+            <li>Educational purpose only - not for military or harmful use</li>
+            <li>Open source code for transparency and trust</li>
+          </ul>
+        </div>
+
+        <!-- Team -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+              <span class="text-primary">👥</span>
+            </div>
+            Development
+          </h2>
+          <p class="text-base-content/80 mb-4">
+            The Nuclear Blast Simulator would love to collaborate with educators, historians, 
+            and technical experts to ensure accuracy and educational value. 
+          </p>
+          <p class="text-base-content/80 mb-4">
+            Based in Knoxville, Tennessee, we're committed to providing free, accessible educational resources 
+            about one of humanity's most significant technological developments.
+          </p>
+          <p class="text-base-content/80">
+            <strong>Contact us:</strong> 
+            <a href="mailto:nuclearblastsimulator@gmail.com" class="text-primary hover:text-primary/80 transition-colors">
+              nuclearblastsimulator@gmail.com
+            </a>
+          </p>
+        </div>
+
+        <!-- Connect -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+              <span class="text-primary">🤝</span>
+            </div>
+            Connect With Us
+          </h2>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://github.com/nuclear-blast-simulator" target="_blank" rel="noopener noreferrer" 
+               class="btn btn-primary btn-sm gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+              </svg>
+              GitHub
+            </a>
+            <a href="https://www.reddit.com/user/nuclearblastsim/" target="_blank" rel="noopener noreferrer" 
+               class="btn btn-primary btn-sm gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+              </svg>
+              Reddit
+            </a>
+            <a href="https://www.tiktok.com/@nuclearblastsimulator" target="_blank" rel="noopener noreferrer" 
+               class="btn btn-primary btn-sm gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+              </svg>
+              TikTok
+            </a>
+            <a href="https://www.youtube.com/@NuclearBlastSimulator" target="_blank" rel="noopener noreferrer" 
+               class="btn btn-primary btn-sm gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              YouTube
+            </a>
+            <a href="/feedback/" class="btn btn-outline btn-sm">
+              Share Feedback
+            </a>
+          </div>
+        </div>
+
+        <!-- License -->
+        <div class="mt-12 p-6 rounded-2xl bg-base-200 border border-base-300">
+          <h3 class="text-lg font-bold text-white mb-2">License</h3>
+          <p class="text-base-content/70">
+            This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. 
+            You are free to share and adapt the material for non-commercial purposes, provided you give appropriate credit 
+            and distribute your contributions under the same license.
+          </p>
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" 
+             class="text-primary hover:text-primary/80 text-sm mt-2 inline-block">
+            Learn more about CC BY-NC-SA 4.0 →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
