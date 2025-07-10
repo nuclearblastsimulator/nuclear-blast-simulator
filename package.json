@@ -10,6 +10,7 @@
     "start": "astro dev",
     "prebuild": "npm run update-links",
     "build": "astro build",
+    "postbuild": "npm run test:links",
     "preview": "astro preview",
     "astro": "astro",
     "build:legacy": "node scripts/build.js",
@@ -18,7 +19,8 @@
     "serve:simple": "npm run build:legacy && npx http-server dist -p 8080 -o",
     "deploy": "netlify deploy --prod",
     "update-links": "node scripts/update-article-links.js",
-    "reorganize-content": "node scripts/reorganize-content.js"
+    "reorganize-content": "node scripts/reorganize-content.js",
+    "test:links": "node scripts/test-links-deploy.js"
   },
   "keywords": [
     "nuclear",
@@ -30,9 +32,11 @@
   "author": "Nuclear Blast Simulator",
   "license": "CC-BY-NC-SA-4.0",
   "devDependencies": {
+    "chalk": "^5.4.1",
     "daisyui": "^5.0.46",
     "dotenv": "^17.0.0",
     "eslint": "^9.30.0",
+    "glob": "^11.0.3",
     "sharp": "^0.34.2"
   },
   "engines": {
