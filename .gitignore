@@ -51,3 +51,5 @@ netlify-dist
 version.json
 
 archive
+
+.astro
