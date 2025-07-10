@@ -1,6 +1,7 @@
 ---
 import '../assets/app.css';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import ogImage from '../images/screenshots/screenshot-desktop.png';
 
 export interface Props {
   title: string;
@@ -11,10 +12,11 @@ export interface Props {
 const { 
   title, 
   description = "Interactive visualization platform for nuclear weapon effects. Calculate blast radius, view damage zones, and explore historical weapons data.",
-  image = "/assets/images/nuclear-blast-preview.jpg"
+  image
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = image || new URL(ogImage.src, Astro.site).href;
 ---
 
 <!DOCTYPE html>
@@ -33,14 +35,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta property="og:url" content={canonicalURL}>
   <meta property="og:title" content={`${title} - Nuclear Blast Simulator`}>
   <meta property="og:description" content={description}>
-  <meta property="og:image" content={image}>
+  <meta property="og:image" content={ogImageURL}>
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content={canonicalURL}>
   <meta property="twitter:title" content={`${title} - Nuclear Blast Simulator`}>
   <meta property="twitter:description" content={description}>
-  <meta property="twitter:image" content={image}>
+  <meta property="twitter:image" content={ogImageURL}>
   
   <link rel="canonical" href={canonicalURL}>
   

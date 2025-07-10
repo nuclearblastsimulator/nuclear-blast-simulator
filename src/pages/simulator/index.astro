@@ -1,6 +1,10 @@
 ---
 import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
+import ogImage from '../../images/screenshots/screenshot-desktop.png';
 // Since the simulator needs full screen without header/footer, we'll handle it directly
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage.src, Astro.site).href;
 ---
 
 <!DOCTYPE html>
@@ -11,6 +15,20 @@ import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
   <title>Nuclear Blast Radius Calculator - Nuclear Blast Simulator</title>
   <meta name="description" content="Visualize nuclear weapon blast radius on any city. Compare atomic bomb effects from Hiroshima to Tsar Bomba. Educational nuclear explosion simulator with real-time calculations.">
   <meta name="author" content="Nuclear Blast Simulator">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:title" content="Nuclear Blast Radius Calculator - Nuclear Blast Simulator">
+  <meta property="og:description" content="Visualize nuclear weapon blast radius on any city. Compare atomic bomb effects from Hiroshima to Tsar Bomba. Educational nuclear explosion simulator with real-time calculations.">
+  <meta property="og:image" content={ogImageURL}>
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content={canonicalURL}>
+  <meta property="twitter:title" content="Nuclear Blast Radius Calculator - Nuclear Blast Simulator">
+  <meta property="twitter:description" content="Visualize nuclear weapon blast radius on any city. Compare atomic bomb effects from Hiroshima to Tsar Bomba. Educational nuclear explosion simulator with real-time calculations.">
+  <meta property="twitter:image" content={ogImageURL}>
   
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
