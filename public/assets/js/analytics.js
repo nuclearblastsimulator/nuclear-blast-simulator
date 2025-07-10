@@ -1,7 +1,17 @@
 // Google Analytics Event Tracking for Nuclear Blast Simulator
 // This file handles all analytics events for user behavior tracking
 
-console.log('📊 Analytics.js loaded!', {
+// Helper to check if we're in development
+const isDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+// Console log wrapper that only logs in development
+const devLog = (...args) => {
+  if (isDev) {
+    console.log(...args);
+  }
+};
+
+devLog('📊 Analytics.js loaded!', {
   gtag_defined: typeof gtag !== 'undefined',
   dataLayer_defined: typeof window.dataLayer !== 'undefined',
   url: window.location.href,
@@ -22,7 +32,7 @@ const Analytics = {
   sendEvent: function (eventName, parameters = {}) {
     if (this.isAvailable()) {
       // Enhanced debug logging
-      console.log(`📊 Analytics Event: ${eventName}`, {
+      devLog(`📊 Analytics Event: ${eventName}`, {
         parameters: parameters,
         timestamp: new Date().toISOString(),
         gtag_available: true
@@ -30,7 +40,7 @@ const Analytics = {
 
       gtag('event', eventName, parameters)
     } else {
-      console.warn('⚠️ Analytics not available - gtag is undefined', {
+      devLog('⚠️ Analytics not available - gtag is undefined', {
         event: eventName,
         parameters: parameters
       })
@@ -47,7 +57,7 @@ const Analytics = {
 
   // Core simulation events
   trackBlastSimulation: function (weaponType, location, detonationType) {
-    console.log('💥 Tracking blast simulation:', {
+    devLog('💥 Tracking blast simulation:', {
       weapon: weaponType,
       location: location,
       type: detonationType,
@@ -192,7 +202,7 @@ const Analytics = {
 
   // Initialize analytics
   init: function () {
-    console.log('🚀 Initializing Analytics...', {
+    devLog('🚀 Initializing Analytics...', {
       gtag_available: this.isAvailable(),
       current_page: window.location.pathname,
       hostname: window.location.hostname
@@ -200,7 +210,7 @@ const Analytics = {
 
     // Track session summary when user leaves
     window.addEventListener('beforeunload', () => {
-      console.log('👋 User leaving - tracking session summary')
+      devLog('👋 User leaving - tracking session summary')
       this.trackSessionSummary()
     })
 
@@ -217,12 +227,12 @@ const Analytics = {
           linkType = 'license'
         }
 
-        console.log('🔗 External link clicked:', href)
+        devLog('🔗 External link clicked:', href)
         this.trackExternalLinkClicked(linkType, href)
       }
     })
 
-    console.log('✅ Analytics initialized successfully!')
+    devLog('✅ Analytics initialized successfully!')
   }
 }
 
@@ -233,7 +243,7 @@ window.Analytics = Analytics
 function initializeAnalytics() {
   // Wait a bit for gtag to be fully loaded
   setTimeout(() => {
-    console.log('⏰ Checking gtag availability after delay...', {
+    devLog('⏰ Checking gtag availability after delay...', {
       gtag_defined: typeof gtag !== 'undefined',
       dataLayer_defined: typeof window.dataLayer !== 'undefined'
     })

@@ -1,6 +1,16 @@
 // Learning Roadmap JavaScript
 // Handles the interactive nuclear energy learning path visualization
 
+// Helper to check if we're in development
+const isDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+// Console log wrapper that only logs in development
+const devLog = (...args) => {
+  if (isDev) {
+    console.log(...args);
+  }
+};
+
 // State management
 const appState = {
     completedNodes: JSON.parse(localStorage.getItem('completedNodes') || '[]'),
@@ -20,7 +30,7 @@ async function loadRoadmapData() {
         };
         return true;
     } catch (error) {
-        console.error('Failed to load roadmap data:', error);
+        devLog('Failed to load roadmap data:', error);
         return false;
     }
 }
@@ -243,7 +253,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Load data first
     const dataLoaded = await loadRoadmapData();
     if (!dataLoaded) {
-        console.error('Failed to initialize roadmap');
+        devLog('Failed to initialize roadmap');
         return;
     }
     

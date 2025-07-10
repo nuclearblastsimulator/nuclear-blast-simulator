@@ -1,3 +1,13 @@
+// Helper to check if we're in development
+const isDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+// Console log wrapper that only logs in development
+const devLog = (...args) => {
+  if (isDev) {
+    console.log(...args);
+  }
+};
+
 // Global variables
 let map
 let currentBomb = null // Will be set from JSON data
@@ -52,7 +62,7 @@ window.addEventListener('DOMContentLoaded', async function () {
     // Update initial weapon details
     updateWeaponDetails()
   } catch (error) {
-    console.error('Error loading weapons data:', error)
+    devLog('Error loading weapons data:', error)
     // Fallback to hardcoded data if JSON fails to load
     alert('Error loading weapons data. Please refresh the page.')
   }
