@@ -49,3 +49,5 @@ netlify-dist
 .nuxt-routes.json
 *.bak
 version.json
+
+archive

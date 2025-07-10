@@ -1,13 +1,18 @@
 {
   "name": "nuclear-blast-simulator",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Educational visualization of nuclear weapon effects",
   "main": "index.html",
   "scripts": {
-    "build": "node scripts/build.js",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "build:legacy": "node scripts/build.js",
     "clean": "rm -rf dist",
-    "serve": "node scripts/watch.js",
-    "serve:simple": "npm run build && npx http-server dist -p 8080 -o",
+    "serve:legacy": "node scripts/watch.js",
+    "serve:simple": "npm run build:legacy && npx http-server dist -p 8080 -o",
     "deploy": "netlify deploy --prod"
   },
   "keywords": [
@@ -20,10 +25,17 @@
   "author": "Nuclear Blast Simulator",
   "license": "CC-BY-NC-SA-4.0",
   "devDependencies": {
+    "daisyui": "^5.0.46",
     "dotenv": "^17.0.0",
     "eslint": "^9.30.0"
   },
   "engines": {
     "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.1.11",
+    "astro": "^5.11.0",
+    "tailwindcss": "^4.1.11"
   }
 }

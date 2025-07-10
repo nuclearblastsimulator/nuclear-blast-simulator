@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const terms = await getCollection('terms');
+const sortedTerms = terms.sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+// Group terms by category based on the TOC structure
+const categories = {
+  'Nuclear Physics': [
+    'alpha-decay', 'binding-energy', 'critical-mass', 'fission', 
+    'fusion', 'half-life', 'neutron-cross-section', 'plutonium'
+  ],
+  'Nuclear Effects': [
+    'electromagnetic-pulse', 'ground-zero', 'megaton', 'nuclear-fallout',
+    'nuclear-winter', 'yield'
+  ],
+  'Nuclear Technology': ['enrichment'],
+  'Reactor Types': [
+    'boiling-water-reactor', 'generation-iv', 'pressurized-water-reactor',
+    'small-modular-reactors', 'thorium-cycle', 'tokamak'
+  ],
+  'Reactor Components': ['control-rods', 'coolant', 'moderator'],
+  'Safety Systems': ['alara-principle', 'containment', 'defense-in-depth', 'scram'],
+  'Weapons & Delivery Systems': [
+    'first-strike', 'icbm', 'nuclear-triad', 'tactical-nuclear-weapons'
+  ],
+  'Strategy & Policy': ['mutual-assured-destruction', 'nuclear-deterrence'],
+  'Treaties & Agreements': ['non-proliferation-treaty', 'start-treaty']
+};
+
+function getTermsByCategory(categoryTerms: string[]) {
+  return sortedTerms.filter(term => categoryTerms.includes(term.slug));
+}
+---
+
+<BaseLayout 
+  title="Nuclear Terms Glossary" 
+  description="Complete index of nuclear terms, reactor technology, weapons systems, and policy concepts."
+>
+  <div class="container mx-auto px-4 py-12">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-5xl font-mono font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        Nuclear Terms Glossary
+      </h1>
+      <p class="text-xl opacity-80 max-w-3xl mx-auto">
+        This glossary provides clear definitions and historical context for essential nuclear weapons terminology, 
+        focusing on educational understanding and humanitarian impact.
+      </p>
+    </div>
+
+    <!-- Categories -->
+    <div class="space-y-12">
+      {Object.entries(categories).map(([category, termSlugs]) => {
+        const categoryTerms = getTermsByCategory(termSlugs);
+        if (categoryTerms.length === 0) return null;
+        
+        return (
+          <section>
+            <h2 class="text-3xl font-bold mb-6 text-primary">{category}</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {categoryTerms.map((term) => (
+                <a 
+                  href={`/terms/${term.slug}/`} 
+                  class="card bg-base-200 hover:bg-base-300 transition-all hover:shadow-lg group"
+                >
+                  <div class="card-body p-6">
+                    <h3 class="card-title text-xl group-hover:text-primary transition-colors">
+                      {term.data.title}
+                    </h3>
+                    <p class="text-sm opacity-70 line-clamp-2">
+                      {term.data.description}
+                    </p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+    
+    <!-- Footer Stats -->
+    <div class="text-center mt-16 pt-8 border-t border-base-300">
+      <p class="text-lg opacity-70">
+        Total Terms: <span class="font-bold text-primary">{sortedTerms.length}</span> glossary entries
+      </p>
+    </div>
+  </div>
+</BaseLayout>

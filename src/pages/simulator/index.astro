@@ -1,0 +1,283 @@
+---
+// Since the simulator needs full screen without header/footer, we'll handle it directly
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Nuclear Blast Radius Calculator - Nuclear Blast Simulator</title>
+  <meta name="description" content="Visualize nuclear weapon blast radius on any city. Compare atomic bomb effects from Hiroshima to Tsar Bomba. Educational nuclear explosion simulator with real-time calculations.">
+  <meta name="author" content="Nuclear Blast Simulator">
+  
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#247bac">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  
+  <style>
+    .header-link {
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+    
+    .header-link:hover {
+      opacity: 0.8;
+    }
+    
+    .header-link h1 {
+      transition: transform 0.3s ease;
+    }
+    
+    .header-link:hover h1 {
+      transform: translateX(5px);
+    }
+    
+    /* Reset any Tailwind styles and ensure effects panel is hidden initially */
+    .effects-panel {
+      all: unset !important;
+      position: absolute !important;
+      top: 20px !important;
+      right: 20px !important;
+      width: 400px !important;
+      height: calc(100% - 40px) !important;
+      max-height: 600px !important;
+      background: #222 !important;
+      border: 1px solid #444 !important;
+      border-radius: 12px !important;
+      transform: translateX(calc(100% + 40px)) !important;
+      transition: transform 0.3s ease !important;
+      z-index: 1001 !important;
+      overflow-y: auto !important;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    .effects-panel.open {
+      transform: translateX(0) !important;
+    }
+    
+    /* Ensure map container and map take full width */
+    .map-container {
+      position: relative !important;
+      flex: 1 !important;
+      width: 100% !important;
+      height: 100% !important;
+      overflow: hidden !important;
+    }
+    
+    #map {
+      width: 100% !important;
+      height: 100% !important;
+    }
+    
+    /* Ensure container uses flex layout */
+    .container {
+      display: flex !important;
+      height: 100vh !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      max-width: none !important;
+    }
+    
+    /* Ensure body has no padding/margin */
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <a href="/" class="header-container header-link" title="Back to Home">
+        <img src="/assets/logo/logo.png" alt="Nuclear Blast Simulator Logo" class="logo">
+        <div class="title-wrapper">
+          <h1 class="title-line">Nuclear Blast</h1>
+          <h1 class="title-line">Simulator</h1>
+        </div>
+      </a>
+      <p class="subtitle">Educational visualization of nuclear weapon effects</p>
+
+      <button class="simulate-btn" id="simulate-btn" onclick="simulateBlast()">
+        🚀 Simulate Bomb Detonation
+      </button>
+
+      <div class="section">
+        <h3 class="section-title">Select Weapon</h3>
+        <select id="weapon-select"
+          style="width: 100%; padding: 1rem; background: #2a2a2a; border: 2px solid #444; color: #fff; border-radius: 8px; font-size: 1rem;">
+          <!-- Options will be populated from JSON data -->
+        </select>
+        <div id="weapon-details">
+          <div class="bomb-name">Loading weapons...</div>
+          <div class="bomb-details">Please wait</div>
+        </div>
+      </div>
+
+      <!-- Units preference hidden but still functional -->
+      <div style="display: none;">
+        <input type="radio" name="units" value="imperial" checked>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Detonation Type</h3>
+        <div class="detonation-options">
+          <label class="radio-option">
+            <input type="radio" name="detonation" value="air" checked>
+            <span class="radio-label">
+              <span class="radio-title">Air Burst</span>
+              <span class="radio-description">Maximizes blast damage area</span>
+            </span>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="detonation" value="surface">
+            <span class="radio-label">
+              <span class="radio-title">Surface Burst</span>
+              <span class="radio-description">Creates fallout & crater</span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Select Location</h3>
+        <div class="location-selector">
+          <select id="city-select">
+            <!-- Options will be populated from JSON data -->
+          </select>
+
+          <div class="custom-location">
+            <input type="text" id="custom-address" placeholder="Or enter any address...">
+            <button class="search-btn" onclick="searchAddress()">Search</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Blast Effects</h3>
+        <div class="legend">
+          <div class="legend-item" data-zone="fireball">
+            <div class="legend-color" style="background: rgba(255, 0, 0, 0.6);"></div>
+            <span>Fireball (vaporization)</span>
+          </div>
+          <div class="legend-item" data-zone="heavy">
+            <div class="legend-color" style="background: rgba(255, 100, 0, 0.5);"></div>
+            <span>Heavy blast damage (5 psi)</span>
+          </div>
+          <div class="legend-item" data-zone="moderate">
+            <div class="legend-color" style="background: rgba(255, 200, 0, 0.4);"></div>
+            <span>Moderate damage (1 psi)</span>
+          </div>
+          <div class="legend-item" data-zone="light">
+            <div class="legend-color" style="background: rgba(255, 255, 0, 0.3);"></div>
+            <span>Light damage (0.25 psi)</span>
+          </div>
+          <div class="legend-item" data-zone="thermal">
+            <div class="legend-color" style="background: rgba(200, 200, 0, 0.2);"></div>
+            <span>Thermal radiation (3rd degree burns)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="warning">
+        <strong>Educational Purpose:</strong> This simulation demonstrates the devastating scale of nuclear
+        weapons. The data is based on publicly available information and simplified models. Actual effects would
+        vary based on multiple factors, including but not limited to altitude, weather, and terrain.
+      </div>
+
+      <div class="footer">
+        <p>Made with ❤️ in Knoxville, TN</p>
+        <div class="social-links">
+          <a href="https://github.com/tommytomatoe/nuclear-blast-simulator" target="_blank"
+            rel="noopener noreferrer" class="social-link" title="View on GitHub">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+        </div>
+        <p class="license"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"
+            rel="noopener noreferrer">CC BY-NC-SA 4.0</a></p>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <div id="map"></div>
+
+      <!-- Wind Direction Indicator -->
+      <div class="wind-indicator" id="wind-indicator">
+        <div class="wind-compass">
+          <div class="wind-arrow" id="wind-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L15.5 8.5H8.5L12 2Z" />
+              <path d="M12 22L8.5 15.5H15.5L12 22Z" />
+            </svg>
+          </div>
+          <div class="wind-speed" id="wind-speed">15 mph</div>
+        </div>
+        <div class="wind-label">Wind Direction</div>
+      </div>
+
+      <!-- Floating Action Button -->
+      <button class="fab-simulate" id="fab-simulate" onclick="simulateBlast()">
+        🚀
+      </button>
+
+      <!-- Mobile Fullscreen Toggle -->
+      <button class="fullscreen-toggle" id="fullscreen-toggle" onclick="toggleFullscreen()">
+        <svg class="fullscreen-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+        </svg>
+        <svg class="exit-fullscreen-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+          style="display: none;">
+          <path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z" />
+        </svg>
+      </button>
+
+      <!-- Blast Effects Panel Toggle -->
+      <button class="effects-toggle" id="effects-toggle" onclick="toggleEffectsPanel()">
+        <img src="/assets/logo/logo.png" alt="Blast Effects" class="effects-toggle-logo">
+        <span class="effects-toggle-text">Blast Effects Details</span>
+      </button>
+
+      <!-- Slide-over Panel -->
+      <div class="effects-panel" id="effects-panel">
+        <div class="effects-panel-header">
+          <h2>Blast Effects Summary</h2>
+          <button class="effects-close" onclick="closeEffectsPanel()">×</button>
+        </div>
+        <div class="effects-panel-content" id="effects-content">
+          <p class="effects-placeholder">Simulate a blast to see detailed effects data</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Analytics -->
+  <script src="/assets/js/analytics.js" is:inline></script>
+
+  <!-- Custom JavaScript -->
+  <script src="/assets/js/app.js" is:inline></script>
+</body>
+</html>

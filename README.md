@@ -18,42 +18,44 @@ This simulator serves as an educational resource to help people understand:
 
 ## 🚀 Features
 
-### Weapon Selection
-- **Non-Nuclear Reference**: TNT, Tomahawk Missile, MOAB
-- **Historical Weapons**: Little Boy (Hiroshima), Fat Man (Nagasaki)
-- **Modern Arsenal**: W88 Warhead, B83 Strategic Bomb
-- **Test Weapons**: Castle Bravo, Tsar Bomba
+### Interactive Blast Simulator
+- **Weapon Selection**: 40+ weapons from TNT to Tsar Bomba
+- **Detonation Options**: Air burst or surface burst
+- **Real-time Visualization**: Interactive map with damage zones
+- **Detailed Effects**: Click zones for casualty estimates and damage info
 
-### Detonation Options
-- **Air Burst**: Maximizes blast damage area (default)
-- **Surface Burst**: Creates radioactive fallout and crater
+### Educational Content
+- **Nuclear Terms Glossary**: 36 comprehensive articles covering:
+  - Nuclear physics fundamentals
+  - Reactor technology
+  - Weapons systems
+  - Treaties and policy
+- **Historical Articles**: 48 in-depth articles including:
+  - Scientific discoveries
+  - Crisis events and close calls
+  - Environmental impacts
+  - Key figures in nuclear history
 
-### Interactive Visualization
-- Real-time blast radius calculations on interactive map
-- Multiple damage zones with distinct visual representation
-- Click on any zone for detailed information
-- Toggle individual zones on/off
-
-### Damage Zones
-1. **Fireball** (Red): Complete vaporization
-2. **Heavy Blast** (Orange): 5 psi overpressure
-3. **Moderate Damage** (Yellow-Orange): 1 psi overpressure
-4. **Light Damage** (Yellow): 0.25 psi overpressure
-5. **Thermal Radiation** (Light Yellow): 3rd degree burns
-
-### Additional Features
-- Search any global location or select from major cities
-- Detailed effects panel with comprehensive blast data
-- Mobile-responsive design
-- Dark theme optimized for contrast
+### Technical Features
+- **Damage Zones**:
+  1. Fireball (Red): Complete vaporization
+  2. Heavy Blast (Orange): 5 psi overpressure
+  3. Moderate Damage (Yellow-Orange): 1 psi overpressure
+  4. Light Damage (Yellow): 0.25 psi overpressure
+  5. Thermal Radiation (Light Yellow): 3rd degree burns
+- **Mobile-responsive design**
+- **Dark theme optimized for readability**
+- **Fast static site generation with Astro**
 
 ## 🛠️ Technology Stack
 
+- **Framework**: Astro v5.11 (Static Site Generator)
 - **Frontend**: Vanilla JavaScript, HTML5, CSS3
 - **Mapping**: Leaflet.js with OpenStreetMap
+- **Content**: Markdown with frontmatter (40+ educational articles)
 - **Styling**: Custom CSS with Inter and Rubik Mono One fonts
 - **Icons**: Custom SVG graphics
-- **Build System**: Node.js-based build scripts
+- **Build System**: Astro + Node.js-based build scripts
 
 ## 📦 Installation
 
@@ -76,52 +78,75 @@ npm install
 
 3. Run the development server:
 ```bash
-npm run serve
+npm run dev
 ```
 
-4. Open your browser to `http://localhost:8080`
+4. Open your browser to `http://localhost:3000`
 
 ## 🏗️ Project Structure
 
 ```
 nuclear-blast-simulator/
-├── index.html              # Main HTML file
-├── assets/
-│   ├── css/
-│   │   └── styles.css     # Main stylesheet
-│   ├── js/
-│   │   └── app.js         # Application logic
-│   ├── logo/
-│   │   └── logo.png       # Application logo
-│   └── favicon/           # Favicon files
-├── scripts/
-│   ├── build.js           # Build script
-│   └── watch.js           # Development server with hot reload
-├── dist/                  # Production build output (generated)
-├── manifest.json          # Web app manifest
-├── package.json           # Project configuration
-└── README.md             # This file
+├── src/
+│   ├── pages/              # Astro pages
+│   │   ├── index.astro     # Homepage
+│   │   ├── terms/          # Glossary pages
+│   │   ├── history/        # History articles
+│   │   └── simulator/      # Blast simulator
+│   ├── layouts/            # Page layouts
+│   │   └── BaseLayout.astro
+│   ├── content/            # Content collections config
+│   │   └── config.ts
+│   └── styles/             # Global styles
+├── content/                # Educational content (preserved)
+│   ├── terms/              # 36 nuclear terminology articles
+│   └── history/            # 48 historical articles
+├── public/                 # Static assets
+│   ├── assets/             # Images, fonts, etc.
+│   ├── simulator.html      # Original simulator
+│   └── manifest.json       # PWA manifest
+├── scripts/                # Legacy build scripts
+├── astro.config.mjs        # Astro configuration
+├── package.json            # Project configuration
+└── README.md              # This file
 ```
 
 ## 📜 Available Scripts
 
-- `npm run build` - Build the project to `dist/` folder
-- `npm run serve` - Start development server with hot reload
-- `npm run serve:simple` - Build and serve with simple HTTP server
+### Astro Commands (Primary)
+- `npm run dev` - Start Astro development server at http://localhost:3000
+- `npm run build` - Build the Astro site for production
+- `npm run preview` - Preview the production build locally
+- `npm start` - Alias for `npm run dev`
+
+### Legacy Commands
+- `npm run build:legacy` - Run original build script
+- `npm run serve:legacy` - Original development server
 - `npm run clean` - Remove the `dist/` folder
 - `npm run deploy` - Deploy to Netlify (requires configuration)
 
 ## 🚀 Deployment
 
-The application is designed to be deployed as a static site. The build process creates a `dist/` folder with all necessary files.
+The application is built with Astro and generates a static site that can be deployed anywhere.
 
 ### Netlify Deployment
 1. Build the project: `npm run build`
 2. Deploy: `npm run deploy`
+3. Set build command to `npm run build` and publish directory to `dist`
+
+### Vercel Deployment
+1. Import your Git repository
+2. Framework preset: Astro
+3. Build command: `npm run build`
+4. Output directory: `dist`
 
 ### Manual Deployment
 1. Run `npm run build`
 2. Upload contents of `dist/` folder to your web server
+
+### Environment Requirements
+- Node.js 14+ for building
+- Static file hosting (no server-side runtime required)
 
 ## 📊 Technical Details
 

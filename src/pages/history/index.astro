@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const history = await getCollection('history');
+const sortedHistory = history.sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+// Group articles by category based on the TOC structure
+const categories = {
+  'Historical Events & Close Calls': {
+    'Scientific Discoveries': [
+      'historical-events/discovery-of-radioactivity',
+      'historical-events/neutron-discovery', 
+      'historical-events/nuclear-fission-discovery',
+      'historical-events/chicago-pile-1',
+      'historical-events/atoms-for-peace'
+    ],
+    'Crisis Events': [
+      'historical-events/cuban-missile-crisis',
+      'historical-events/able-archer-83',
+      'historical-events/stanislav-petrov-incident',
+      'historical-events/norwegian-rocket-incident',
+      'historical-events/kargil-conflict'
+    ]
+  },
+  'Testing Sites & Programs': [
+    'testing-sites/nevada-test-site',
+    'testing-sites/bikini-atoll',
+    'testing-sites/semipalatinsk-test-site',
+    'testing-sites/novaya-zemlya',
+    'testing-sites/lop-nur'
+  ],
+  'Treaties & Diplomacy': [
+    'treaties-diplomacy/non-proliferation-treaty',
+    'treaties-diplomacy/comprehensive-test-ban-treaty',
+    'treaties-diplomacy/start-treaties',
+    'treaties-diplomacy/intermediate-range-nuclear-forces-treaty',
+    'treaties-diplomacy/nuclear-weapons-free-zones'
+  ],
+  'Key Figures': [
+    'key-figures/oppenheimer',
+    'key-figures/edward-teller',
+    'key-figures/andrei-sakharov',
+    'key-figures/klaus-fuchs',
+    'key-figures/hyman-rickover'
+  ],
+  'Medical & Environmental Impact': [
+    'medical-environmental/three-mile-island',
+    'medical-environmental/chernobyl-disaster',
+    'medical-environmental/fukushima-daiichi',
+    'medical-environmental/nuclear-testing-health-effects',
+    'medical-environmental/hibakusha',
+    'medical-environmental/castle-bravo'
+  ],
+  'Delivery Systems & Strategy': [
+    'delivery-systems/nautilus-submarine',
+    'delivery-systems/nuclear-submarines',
+    'delivery-systems/intercontinental-ballistic-missiles',
+    'delivery-systems/nuclear-triad',
+    'delivery-systems/strategic-bombers',
+    'delivery-systems/missile-defense-systems'
+  ],
+  'Modern Developments': [
+    'modern-developments/obninsk-reactor',
+    'modern-developments/shippingport',
+    'modern-developments/small-modular-reactors',
+    'modern-developments/nuclear-proliferation-21st-century',
+    'modern-developments/nuclear-modernization-programs',
+    'modern-developments/nuclear-terrorism'
+  ],
+  'Philosophical & Ethical': [
+    'philosophical-ethical/nuclear-ethics',
+    'philosophical-ethical/nuclear-deterrence-theory',
+    'philosophical-ethical/nuclear-abolition-movement'
+  ],
+  'Weapons Technology': [
+    'weapons-technology/little-boy',
+    'weapons-technology/fat-man',
+    'weapons-technology/ivy-mike',
+    'weapons-technology/tsar-bomba',
+    'weapons-technology/bunker-buster',
+    'weapons-technology/uranium-enrichment',
+    'weapons-technology/synthesis'
+  ]
+};
+
+function getArticlesBySlug(slugs: string[]) {
+  return sortedHistory.filter(article => 
+    slugs.some(slug => article.slug.endsWith(slug))
+  );
+}
+
+function renderCategory(category: any, isNested = false) {
+  if (Array.isArray(category)) {
+    return getArticlesBySlug(category);
+  }
+  
+  return Object.entries(category).map(([subcat, slugs]) => ({
+    name: subcat,
+    articles: getArticlesBySlug(slugs as string[])
+  }));
+}
+---
+
+<BaseLayout 
+  title="Nuclear History Articles" 
+  description="Comprehensive historical coverage of nuclear weapons development, testing, and impact through human stories and documented events."
+>
+  <div class="container mx-auto px-4 py-12">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-5xl font-mono font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        Nuclear History Articles
+      </h1>
+      <p class="text-xl opacity-80 max-w-3xl mx-auto">
+        This collection provides comprehensive historical coverage of nuclear weapons development, testing, 
+        and impact through human stories and documented events.
+      </p>
+    </div>
+
+    <!-- Categories -->
+    <div class="space-y-12">
+      {Object.entries(categories).map(([categoryName, categoryData]) => {
+        const isNested = !Array.isArray(categoryData);
+        
+        return (
+          <section>
+            <h2 class="text-3xl font-bold mb-6 text-primary">{categoryName}</h2>
+            
+            {isNested ? (
+              <div class="space-y-8">
+                {renderCategory(categoryData).map((subcat: any) => (
+                  <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">{subcat.name}</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {subcat.articles.map((article: any) => (
+                        <a 
+                          href={`/history/${article.slug.replace('history/', '')}/`} 
+                          class="card bg-base-200 hover:bg-base-300 transition-all hover:shadow-lg group"
+                        >
+                          <div class="card-body p-6">
+                            <h4 class="card-title text-lg group-hover:text-primary transition-colors">
+                              {article.data.title}
+                            </h4>
+                            <p class="text-sm opacity-70 line-clamp-2">
+                              {article.data.description}
+                            </p>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {renderCategory(categoryData).map((article: any) => (
+                  <a 
+                    href={`/history/${article.slug.replace('history/', '')}/`} 
+                    class="card bg-base-200 hover:bg-base-300 transition-all hover:shadow-lg group"
+                  >
+                    <div class="card-body p-6">
+                      <h4 class="card-title text-lg group-hover:text-primary transition-colors">
+                        {article.data.title}
+                      </h4>
+                      <p class="text-sm opacity-70 line-clamp-2">
+                        {article.data.description}
+                      </p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            )}
+          </section>
+        );
+      })}
+    </div>
+    
+    <!-- Footer Stats -->
+    <div class="text-center mt-16 pt-8 border-t border-base-300">
+      <p class="text-lg opacity-70">
+        Total Articles: <span class="font-bold text-primary">{sortedHistory.length}</span> articles across <span class="font-bold text-secondary">{Object.keys(categories).length}</span> categories
+      </p>
+    </div>
+  </div>
+</BaseLayout>

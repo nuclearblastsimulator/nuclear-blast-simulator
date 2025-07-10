@@ -1,0 +1,176 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Interactive Nuclear Weapon Effects Visualization" 
+  description="Visualize nuclear weapon effects with interactive maps. Explore blast radius, thermal radiation, and damage zones for weapons from Little Boy to Tsar Bomba. Real-time calculations and historical data."
+>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-base-100 to-base-200">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-mono font-bold mb-8 leading-tight text-primary">
+        Visualize Nuclear Weapon Effects Anywhere
+      </h1>
+      <p class="text-lg md:text-xl lg:text-2xl mb-10 text-base-content opacity-70 max-w-2xl mx-auto">
+        Interactive maps and real-time calculations showing blast radius, thermal radiation,
+        and damage zones for over 40 nuclear weapons.
+      </p>
+      <a href="/simulator/" class="btn btn-primary btn-lg gap-2">
+        <span class="text-xl">🚀</span>
+        <span>Launch Interactive Simulator</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 px-4 bg-base-200">
+    <div class="container max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-mono font-bold text-center mb-16">Powerful Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <div class="text-4xl mb-4">🗺️</div>
+            <h3 class="card-title text-xl">Global Visualization</h3>
+            <p class="text-base-content opacity-70">
+              Drop a nuclear weapon anywhere on Earth. Select from major cities
+              or search for any address to see the blast effects.
+            </p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <div class="text-4xl mb-4">💣</div>
+            <h3 class="card-title text-xl">40+ Weapons</h3>
+            <p class="text-base-content opacity-70">
+              From Little Boy to Tsar Bomba. Compare conventional explosives,
+              tactical nukes, and city-destroying thermonuclear weapons.
+            </p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <div class="text-4xl mb-4">📊</div>
+            <h3 class="card-title text-xl">Scientific Accuracy</h3>
+            <p class="text-base-content opacity-70">
+              Based on peer-reviewed scientific models and publicly available data to provide
+              realistic blast radius and damage calculations.
+            </p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <div class="text-4xl mb-4">🎯</div>
+            <h3 class="card-title text-xl">Multiple Damage Zones</h3>
+            <p class="text-base-content opacity-70">
+              Visualize different effects zones including fireball, heavy blast damage, thermal
+              radiation, and radioactive fallout patterns.
+            </p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <div class="text-4xl mb-4">📚</div>
+            <h3 class="card-title text-xl">Detailed Information</h3>
+            <p class="text-base-content opacity-70">
+              Click any damage zone for detailed effects. View casualty estimates,
+              building damage, and radiation exposure levels.
+            </p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <div class="text-4xl mb-4">⚡</div>
+            <h3 class="card-title text-xl">Real-Time Calculations</h3>
+            <p class="text-base-content opacity-70">
+              Instantly see how different yields and detonation types affect blast radius
+              and damage zones with interactive controls.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educational Content Section -->
+  <section class="py-20 px-4 bg-base-100">
+    <div class="container max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-mono font-bold text-center mb-16">Learn More About Nuclear Weapons</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="card bg-base-200 border border-primary/20">
+          <div class="card-body">
+            <h3 class="card-title text-2xl mb-4 text-primary">Nuclear Terms Glossary</h3>
+            <p class="text-base-content opacity-70 mb-6">
+              Understand the science and technology behind nuclear weapons with our comprehensive glossary.
+            </p>
+            <ul class="space-y-2 mb-6 text-base-content opacity-70">
+              <li class="flex items-center gap-2">
+                <span class="text-primary">▶</span>
+                <span>Nuclear physics fundamentals</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">▶</span>
+                <span>Weapons effects and terminology</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">▶</span>
+                <span>Reactor technology explained</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">▶</span>
+                <span>Treaties and policy concepts</span>
+              </li>
+            </ul>
+            <div class="card-actions">
+              <a href="/terms/" class="btn btn-primary">Explore Glossary →</a>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-base-200 border border-secondary/20">
+          <div class="card-body">
+            <h3 class="card-title text-2xl mb-4 text-secondary">Historical Articles</h3>
+            <p class="text-base-content opacity-70 mb-6">
+              Dive deep into the history of nuclear weapons through documented events and human stories.
+            </p>
+            <ul class="space-y-2 mb-6 text-base-content opacity-70">
+              <li class="flex items-center gap-2">
+                <span class="text-secondary">▶</span>
+                <span>Scientific discoveries</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-secondary">▶</span>
+                <span>Crisis events and close calls</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-secondary">▶</span>
+                <span>Environmental impact studies</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-secondary">▶</span>
+                <span>Key figures and their contributions</span>
+              </li>
+            </ul>
+            <div class="card-actions">
+              <a href="/history/" class="btn btn-secondary">Read History →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 px-4 bg-base-200">
+    <div class="container max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-mono font-bold mb-6">Ready to Simulate?</h2>
+      <p class="text-lg md:text-xl mb-10 text-base-content opacity-70 max-w-2xl mx-auto">
+        Drop a nuclear weapon anywhere on Earth. See the blast radius, damage zones,
+        and understand the true scale of nuclear destruction.
+      </p>
+      <a href="/simulator/" class="btn btn-primary btn-lg gap-2">
+        <span class="text-xl">🚀</span>
+        <span>Start Learning Now</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
