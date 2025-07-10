@@ -1,4 +1,5 @@
 ---
+import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
 // Since the simulator needs full screen without header/footer, we'll handle it directly
 ---
 
@@ -29,20 +30,8 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/assets/css/styles.css" />
   
-  <!-- Google Analytics (Production Only) -->
-  {import.meta.env.PROD && import.meta.env.PUBLIC_GA_MEASUREMENT_ID && (
-    <>
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_MEASUREMENT_ID}`}></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', import.meta.env.PUBLIC_GA_MEASUREMENT_ID, {
-          page_path: window.location.pathname
-        });
-      </script>
-    </>
-  )}
+  <!-- Analytics -->
+  <GoogleAnalytics />
   
   <style>
     .header-link {
@@ -289,10 +278,10 @@
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" is:inline></script>
 
-  <!-- Analytics -->
-  <script src="/assets/js/analytics.js" is:inline></script>
-
   <!-- Custom JavaScript -->
   <script src="/assets/js/app.js" is:inline></script>
+  
+  <!-- Analytics - Load after app.js so it can access app variables -->
+  <script src="/assets/js/analytics.js" is:inline></script>
 </body>
 </html>

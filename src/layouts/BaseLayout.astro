@@ -1,5 +1,6 @@
 ---
 import '../assets/app.css';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 
 export interface Props {
   title: string;
@@ -55,14 +56,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Google Analytics -->
-  <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-NQR1693Q51'}`}></script>
-  <script is:inline define:vars={{ GA_ID: import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-NQR1693Q51' }}>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', GA_ID);
-  </script>
+  <!-- Analytics -->
+  <GoogleAnalytics />
 </head>
 <body class="min-h-screen bg-base-100 text-base-content flex flex-col">
   <!-- Header -->

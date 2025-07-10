@@ -1,0 +1,25 @@
+---
+const GA_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+const { partytown = false } = Astro.props;
+---
+
+<!-- Google Analytics -->
+{GA_ID && (
+  <>
+    <script 
+      async 
+      src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+      type={partytown ? 'text/partytown' : undefined}
+    ></script>
+    <script 
+      set:html={`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', '${GA_ID}');
+      `}
+      type={partytown ? 'text/partytown' : undefined}
+    ></script>
+  </>
+)}

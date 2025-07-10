@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "astro dev",
+    "dev:prod": "astro dev --mode production",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
