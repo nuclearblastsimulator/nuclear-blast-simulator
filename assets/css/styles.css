@@ -131,6 +131,59 @@ body {
     font-weight: 400;
 }
 
+/* Detonation Type Selection */
+.detonation-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: flex-start;
+    background: #2a2a2a;
+    border: 2px solid #444;
+    border-radius: 8px;
+    padding: 0.875rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.radio-option:hover {
+    border-color: #247bac;
+    background: #333;
+}
+
+.radio-option input[type="radio"] {
+    width: auto;
+    margin-right: 0.75rem;
+    margin-top: 0.125rem;
+    cursor: pointer;
+}
+
+.radio-label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.radio-title {
+    font-weight: 600;
+    color: #fff;
+    font-size: 0.9375rem;
+}
+
+.radio-description {
+    font-size: 0.8125rem;
+    color: #888;
+    font-weight: 400;
+}
+
+.radio-option:has(input:checked) {
+    border-color: #247bac;
+    background: rgba(36, 123, 172, 0.15);
+}
+
 /* Location Selection */
 .location-selector {
     display: flex;
@@ -195,7 +248,7 @@ input:focus {
     transition: all 0.3s ease;
     width: 100%;
     box-shadow: 0 4px 15px rgba(247, 127, 0, 0.3);
-    margin-top: 1rem;
+    margin-bottom: 2rem;
     font-family: 'Inter', sans-serif;
 }
 
@@ -283,6 +336,39 @@ input:focus {
     margin: 0.25rem 0;
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #2a2a2a;
+    border: 2px solid #444;
+    border-radius: 8px;
+    color: #888;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background: #333;
+    border-color: #247bac;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
+}
+
 .footer .license {
     font-size: 0.75rem;
     color: #666;
@@ -350,6 +436,198 @@ input:focus {
     filter: brightness(5) contrast(0.7);
 }
 
+/* Effects Panel Toggle Button */
+.effects-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #222;
+    border: 2px solid #247bac;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.effects-toggle:hover {
+    background: #333;
+    transform: translateX(-5px);
+}
+
+.effects-toggle.visible {
+    display: flex;
+}
+
+.effects-toggle-icon {
+    font-size: 1.1rem;
+}
+
+.effects-toggle-logo {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+/* Slide-over Panel */
+.effects-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background: #222;
+    border-left: 1px solid #444;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1001;
+    overflow-y: auto;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.effects-panel.open {
+    transform: translateX(0);
+}
+
+.effects-panel-header {
+    position: sticky;
+    top: 0;
+    background: #222;
+    border-bottom: 2px solid #247bac;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.effects-panel-header h2 {
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 1.25rem;
+    margin: 0;
+    background: linear-gradient(135deg, #247bac, #f77f00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.effects-close {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.effects-close:hover {
+    background: #333;
+    color: #fff;
+}
+
+.effects-panel-content {
+    padding: 1.5rem;
+}
+
+.effects-placeholder {
+    color: #888;
+    text-align: center;
+    font-style: italic;
+    margin-top: 2rem;
+}
+
+.effect-zone {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.effect-zone-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.effect-zone-color {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.effect-zone-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.effect-zone-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.effect-stat {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+}
+
+.effect-stat-label {
+    color: #888;
+}
+
+.effect-stat-value {
+    color: #fff;
+    font-weight: 500;
+}
+
+.effect-zone-description {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #bbb;
+    padding-top: 0.75rem;
+    border-top: 1px solid #333;
+}
+
+.blast-summary {
+    background: rgba(36, 123, 172, 0.1);
+    border: 1px solid rgba(36, 123, 172, 0.3);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.blast-summary-title {
+    font-weight: 600;
+    color: #247bac;
+    margin-bottom: 0.5rem;
+}
+
+.blast-summary-details {
+    font-size: 0.875rem;
+    color: #8bbfe0;
+    line-height: 1.5;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -392,7 +670,7 @@ input:focus {
     }
 
     .simulate-btn {
-        margin-top: 0.75rem;
+        margin-bottom: 1rem;
         padding: 0.875rem 1.5rem;
         font-size: 1rem;
     }
@@ -419,5 +697,42 @@ input:focus {
     .map-container {
         flex: 1;
         min-height: 40vh;
+    }
+
+    .effects-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 0.5rem 0.875rem;
+        font-size: 0.8rem;
+    }
+
+    .effects-toggle-icon {
+        font-size: 1rem;
+    }
+
+    .effects-toggle-logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .effects-panel {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .effects-panel-header {
+        padding: 1rem;
+    }
+
+    .effects-panel-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .effects-panel-content {
+        padding: 1rem;
+    }
+
+    .effect-zone {
+        padding: 1rem;
     }
 }
