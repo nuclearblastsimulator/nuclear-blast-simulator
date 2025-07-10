@@ -535,45 +535,6 @@ input:focus {
     transform: translateY(0) scale(0.95);
 }
 
-/* Mobile Fullscreen Toggle */
-.fullscreen-toggle {
-    position: absolute;
-    top: 78px;
-    left: 10px;
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    background: rgba(34, 34, 34, 0.9);
-    border: 2px solid #444;
-    color: #fff;
-    cursor: pointer;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.fullscreen-toggle:hover {
-    background: rgba(34, 34, 34, 0.95);
-    border-color: #247bac;
-}
-
-/* Fullscreen mode styles */
-.map-fullscreen {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    z-index: 9999 !important;
-}
-
-.map-fullscreen .fullscreen-toggle {
-    background: rgba(34, 34, 34, 0.95);
-    backdrop-filter: blur(10px);
-}
-
 /* Effects Panel Toggle Button */
 .effects-toggle {
     position: absolute;
@@ -766,6 +727,45 @@ input:focus {
     line-height: 1.5;
 }
 
+/* Mobile Fullscreen Toggle */
+.fullscreen-toggle {
+    position: absolute;
+    top: 78px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: rgba(34, 34, 34, 0.9);
+    border: 2px solid #444;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.fullscreen-toggle:hover {
+    background: rgba(34, 34, 34, 0.95);
+    border-color: #247bac;
+}
+
+/* Fullscreen mode styles */
+.map-fullscreen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 9999 !important;
+}
+
+.map-fullscreen .fullscreen-toggle {
+    background: rgba(34, 34, 34, 0.95);
+    backdrop-filter: blur(10px);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -845,17 +845,19 @@ input:focus {
         position: relative;
     }
 
-    .map-fullscreen .fullscreen-toggle {
-        top: calc(10px + env(safe-area-inset-top));
+    .fullscreen-toggle {
+        display: flex;
     }
 
     .wind-indicator {
-        bottom: 10px;
-        bottom: calc(10px + env(safe-area-inset-bottom));
+        bottom: 70px; /* Move up to avoid Safari URL bar */
         left: 10px;
-        left: calc(10px + env(safe-area-inset-left));
         padding: 0.75rem;
         transform: scale(0.9);
+    }
+
+    .map-fullscreen .wind-indicator {
+        bottom: 70px; /* Keep consistent position in fullscreen */
     }
 
     .wind-compass {
@@ -883,20 +885,11 @@ input:focus {
 
     .fab-simulate {
         display: flex;
-        bottom: 20px;
+        bottom: 80px; /* Move up to avoid Safari URL bar */
         right: 15px;
         width: 56px;
         height: 56px;
         font-size: 20px;
-    }
-
-    .fullscreen-toggle {
-        display: flex;
-    }
-
-    .map-fullscreen .wind-indicator {
-        bottom: 60px;
-        left: 10px;
     }
 
     .map-fullscreen .fab-simulate {
