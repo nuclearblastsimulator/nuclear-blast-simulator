@@ -30,6 +30,22 @@ html {
 body {
   background-color: hsl(var(--b1));
   color: hsl(var(--bc));
+  font-family: 'Inter', sans-serif;
+}
+
+/* Heading styles */
+h1, h2 {
+  font-family: 'Rubik Mono One', monospace;
+}
+
+/* Ensure font-mono uses Rubik Mono One */
+.font-mono {
+  font-family: 'Rubik Mono One', monospace !important;
+}
+
+/* Navbar app name */
+.navbar-app-name {
+  font-family: 'Rubik Mono One', monospace;
 }
 
 /* Fix container widths */
