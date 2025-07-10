@@ -3,20 +3,20 @@
 
 // Mapping of cities to related articles
 export const cityArticleLinks = {
-  "oak-ridge": "/history/nuclear-facilities/oak-ridge/",
+  "oak-ridge": "/history/foundational-events/oak-ridge/",
   "new-york": "/history/key-figures/oppenheimer/",
-  "london": null,
-  "tokyo": "/history/medical-environmental/fukushima-daiichi/",
+  "london": "/history/nuclear-programs/united-kingdom/",
+  "tokyo": "/history/testing-disasters/fukushima-daiichi/",
   "hiroshima": "/history/medical-environmental/hibakusha/",
   "nagasaki": "/history/medical-environmental/hibakusha/",
-  "paris": "/history/delivery-systems/nuclear-submarines/",
-  "moscow": "/history/treaties-diplomacy/intermediate-range-nuclear-forces-treaty/",
-  "beijing": "/history/testing-sites/lop-nur/",
-  "tehran": "/history/modern-developments/nuclear-proliferation-21st-century/",
+  "paris": "/history/nuclear-programs/france/",
+  "moscow": "/history/cold-war-crises/moscow-nuclear-program/",
+  "beijing": "/history/nuclear-programs/china/",
+  "tehran": "/history/nuclear-programs/iran-nuclear-program/",
   "los-angeles": null,
   "chicago": "/history/historical-events/chicago-pile-1/",
   "berlin": null,
-  "sydney": null
+  "sydney": "/history/testing-disasters/overview/"
 };
 
 // Mapping of weapons to related articles
@@ -29,19 +29,19 @@ export const weaponArticleLinks = {
   "ivy-mike": "/history/weapons-technology/fusion-weapons/",
   "castle-bravo": "/history/medical-environmental/castle-bravo/",
   "tsar-bomba": "/history/testing-sites/novaya-zemlya/",
-  "mop": null,
+  "mop": "/history/weapons-technology/gbu-57-mop/",
   "aman": null,
-  "ghauri": null,
-  "df-5": "/history/delivery-systems/intercontinental-ballistic-missiles/",
+  "ghauri": "/history/nuclear-programs/pakistan/",
+  "df-5": "/history/cold-war-crises/broken-arrows/",
   "iskander": "/terms/weapons-delivery-systems/tactical-nuclear-weapons/",
   "b61-12": "/terms/weapons-delivery-systems/tactical-nuclear-weapons/",
   "w76-1": null,
   "polaris-a3": "/history/delivery-systems/nuclear-submarines/",
-  "w87": null,
+  "w87": "/history/weapons-technology/w87/",
   "w78": null,
   "b61-13": null,
   "b61-11": null,
-  "w88": null,
+  "w88": "/history/weapons-technology/w88/",
   "kinzhal": null,
   "ss-18-satan": null,
   "b83": "/history/weapons-technology/b83/",
@@ -132,8 +132,8 @@ export const relatedArticles = {
 // Statistics
 export const linkStats = {
   totalCities: 14,
-  linkedCities: 10,
+  linkedCities: 12,
   totalWeapons: 28,
-  linkedWeapons: 12,
-  lastUpdated: '2025-07-08T16:09:57.744Z'
+  linkedWeapons: 16,
+  lastUpdated: '2025-07-08T18:03:20.824Z'
 };

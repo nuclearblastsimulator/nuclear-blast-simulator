@@ -16,7 +16,8 @@
     "serve:legacy": "node scripts/watch.js",
     "serve:simple": "npm run build:legacy && npx http-server dist -p 8080 -o",
     "deploy": "netlify deploy --prod",
-    "update-links": "node scripts/update-article-links.js"
+    "update-links": "node scripts/update-article-links.js",
+    "reorganize-content": "node scripts/reorganize-content.js"
   },
   "keywords": [
     "nuclear",
