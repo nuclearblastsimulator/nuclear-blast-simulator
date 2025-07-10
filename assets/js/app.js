@@ -825,5 +825,31 @@ function updateEffectsPanel(bomb, radii, isSurfaceBurst) {
     content.innerHTML = html;
 }
 
+// Fullscreen toggle function
+function toggleFullscreen() {
+    const mapContainer = document.querySelector('.map-container');
+    const fullscreenToggle = document.getElementById('fullscreen-toggle');
+    const fullscreenIcon = fullscreenToggle.querySelector('.fullscreen-icon');
+    const exitFullscreenIcon = fullscreenToggle.querySelector('.exit-fullscreen-icon');
+    
+    if (mapContainer.classList.contains('map-fullscreen')) {
+        // Exit fullscreen
+        mapContainer.classList.remove('map-fullscreen');
+        fullscreenIcon.style.display = 'block';
+        exitFullscreenIcon.style.display = 'none';
+    } else {
+        // Enter fullscreen
+        mapContainer.classList.add('map-fullscreen');
+        fullscreenIcon.style.display = 'none';
+        exitFullscreenIcon.style.display = 'block';
+    }
+    
+    // Force map to recalculate its size
+    setTimeout(() => {
+        map.invalidateSize();
+    }, 300);
+}
+
 window.toggleEffectsPanel = toggleEffectsPanel;
 window.closeEffectsPanel = closeEffectsPanel;
+window.toggleFullscreen = toggleFullscreen;

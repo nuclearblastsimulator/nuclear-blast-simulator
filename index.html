@@ -274,11 +274,19 @@
                 <div class="wind-label">Wind Direction</div>
             </div>
 
-            <!-- Mobile Floating Action Button -->
+            <!-- Floating Action Button -->
             <button class="fab-simulate" id="fab-simulate" onclick="simulateBlast()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L13.5 2.5L16.17 5.17C15.24 5.06 14.32 5 13.38 5C10.38 5 7.68 6.64 6.11 9.27C5.8 9.82 6.04 10.54 6.67 10.81C7.18 11.03 7.79 10.8 8.08 10.33C9.18 8.5 11.18 7.5 13.38 7.5C14.32 7.5 15.24 7.69 16.08 8.03L13.5 10.5L15 12L21 6V4C21 3.45 20.55 3 20 3S19 3.45 19 4V9M4.27 5.27C4.68 4.86 5.32 4.86 5.73 5.27L6.8 6.34C7.21 6.75 7.21 7.39 6.8 7.8C6.39 8.21 5.75 8.21 5.34 7.8L4.27 6.73C3.86 6.32 3.86 5.68 4.27 5.27M2 10.5H3C3.55 10.5 4 10.95 4 11.5S3.55 12.5 3 12.5H2C1.45 12.5 1 12.05 1 11.5S1.45 10.5 2 10.5Z" />
+                🚀
+            </button>
+
+            <!-- Mobile Fullscreen Toggle -->
+            <button class="fullscreen-toggle" id="fullscreen-toggle" onclick="toggleFullscreen()">
+                <svg class="fullscreen-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+                </svg>
+                <svg class="exit-fullscreen-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                    style="display: none;">
+                    <path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z" />
                 </svg>
             </button>
 
