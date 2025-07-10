@@ -200,19 +200,3 @@ if (document.readyState === 'loading') {
 } else {
     Analytics.init();
 }
-
-// Helper function to get weapon category
-function getWeaponCategory(weaponId) {
-    const categories = {
-        'tnt': 'non-nuclear',
-        'tomahawk': 'non-nuclear',
-        'moab': 'non-nuclear',
-        'little-boy': 'atomic',
-        'fat-man': 'atomic',
-        'w88': 'strategic',
-        'b83': 'strategic',
-        'castle-bravo': 'test',
-        'tsar-bomba': 'test'
-    };
-    return categories[weaponId] || 'unknown';
-}

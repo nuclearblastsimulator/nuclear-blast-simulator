@@ -9,17 +9,17 @@ let currentLocation = { lat: 36.0104, lng: -84.2696 };
 let previousDetonationType = 'air'; // Track for analytics
 let previousWeapon = 'little-boy'; // Track for weapon comparison
 
-// Bomb data (yields in kilotons)
+// Bomb data (yields in kilotons) with categories
 const bombData = {
-    'tnt': { name: '1 Ton TNT', yield: 0.001, details: 'Reference explosive' },
-    'tomahawk': { name: 'Tomahawk Missile', yield: 0.5, details: '1,000 lbs warhead • Cruise missile' },
-    'moab': { name: 'MOAB (Mother of All Bombs)', yield: 11, details: '21,600 lbs • Largest conventional' },
-    'little-boy': { name: 'Little Boy', yield: 15, details: '15 kilotons • Hiroshima 1945' },
-    'fat-man': { name: 'Fat Man', yield: 21, details: '21 kilotons • Nagasaki 1945' },
-    'w88': { name: 'W88 Warhead', yield: 475, details: '475 kilotons • Modern US SLBM' },
-    'b83': { name: 'B83', yield: 1200, details: '1.2 megatons • US Strategic Bomb' },
-    'castle-bravo': { name: 'Castle Bravo', yield: 15000, details: '15 megatons • Largest US test' },
-    'tsar-bomba': { name: 'Tsar Bomba', yield: 50000, details: '50 megatons • Largest ever tested' }
+    'tnt': { name: '1 Ton TNT', yield: 0.001, details: 'Reference explosive', category: 'non-nuclear' },
+    'tomahawk': { name: 'Tomahawk Missile', yield: 0.5, details: '1,000 lbs warhead • Cruise missile', category: 'non-nuclear' },
+    'moab': { name: 'MOAB (Mother of All Bombs)', yield: 11, details: '21,600 lbs • Largest conventional', category: 'non-nuclear' },
+    'little-boy': { name: 'Little Boy', yield: 15, details: '15 kilotons • Hiroshima 1945', category: 'atomic' },
+    'fat-man': { name: 'Fat Man', yield: 21, details: '21 kilotons • Nagasaki 1945', category: 'atomic' },
+    'w88': { name: 'W88 Warhead', yield: 475, details: '475 kilotons • Modern US SLBM', category: 'strategic' },
+    'b83': { name: 'B83', yield: 1200, details: '1.2 megatons • US Strategic Bomb', category: 'strategic' },
+    'castle-bravo': { name: 'Castle Bravo', yield: 15000, details: '15 megatons • Largest US test', category: 'test' },
+    'tsar-bomba': { name: 'Tsar Bomba', yield: 50000, details: '50 megatons • Largest ever tested', category: 'test' }
 };
 
 // Initialize everything after page loads
@@ -428,8 +428,7 @@ function setupEventListeners() {
         // Track weapon selection
         if (typeof Analytics !== 'undefined') {
             const weapon = bombData[currentBomb];
-            const category = getWeaponCategory(currentBomb);
-            Analytics.trackWeaponSelected(weapon.name, weapon.yield, category);
+            Analytics.trackWeaponSelected(weapon.name, weapon.yield, weapon.category);
         }
         
         previousWeapon = currentBomb;
@@ -650,22 +649,6 @@ function updateEffectsPanel(bomb, radii, isSurfaceBurst) {
     });
 
     content.innerHTML = html;
-}
-
-// Helper function to get weapon category
-function getWeaponCategory(weaponId) {
-    const categories = {
-        'tnt': 'non-nuclear',
-        'tomahawk': 'non-nuclear',
-        'moab': 'non-nuclear',
-        'little-boy': 'atomic',
-        'fat-man': 'atomic',
-        'w88': 'strategic',
-        'b83': 'strategic',
-        'castle-bravo': 'test',
-        'tsar-bomba': 'test'
-    };
-    return categories[weaponId] || 'unknown';
 }
 
 window.toggleEffectsPanel = toggleEffectsPanel;
