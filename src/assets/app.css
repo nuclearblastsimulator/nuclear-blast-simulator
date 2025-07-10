@@ -1,9 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "daisyui";
 @plugin "@tailwindcss/typography";
 
 /* Ensure dark theme is applied */
-[data-theme="dark"] {
+[data-theme='dark'] {
   --p: 199 89% 48%;
   --pf: 199 89% 41%;
   --pc: 0 0% 100%;
@@ -34,7 +34,8 @@ body {
 }
 
 /* Heading styles */
-h1, h2 {
+h1,
+h2 {
   font-family: 'Rubik', sans-serif;
   font-weight: 800;
 }
@@ -187,7 +188,7 @@ h1, h2 {
   max-width: 65ch;
 }
 
-.prose :where(h1):not(:where([class~="not-prose"] *)) {
+.prose :where(h1):not(:where([class~='not-prose'] *)) {
   font-family: 'Rubik', sans-serif;
   font-weight: 900;
   font-size: 2.5em;
@@ -201,7 +202,7 @@ h1, h2 {
   text-align: center;
 }
 
-.prose :where(h2):not(:where([class~="not-prose"] *)) {
+.prose :where(h2):not(:where([class~='not-prose'] *)) {
   color: hsl(var(--p));
   font-family: 'Rubik', sans-serif;
   font-weight: 800;
@@ -211,7 +212,7 @@ h1, h2 {
   line-height: 1.3333333;
 }
 
-.prose :where(h3):not(:where([class~="not-prose"] *)) {
+.prose :where(h3):not(:where([class~='not-prose'] *)) {
   color: hsl(var(--p));
   font-family: 'Rubik', sans-serif;
   font-weight: 700;
@@ -221,42 +222,49 @@ h1, h2 {
   line-height: 1.6;
 }
 
-.prose :where(p):not(:where([class~="not-prose"] *)) {
+.prose :where(p):not(:where([class~='not-prose'] *)) {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
 }
 
-.prose :where(a):not(:where([class~="not-prose"] *)) {
+.prose :where(a):not(:where([class~='not-prose'] *)) {
   color: var(--tw-prose-links);
   text-decoration: none;
   font-weight: 500;
 }
 
-.prose :where(a):not(:where([class~="not-prose"] *)):hover {
+.prose :where(a):not(:where([class~='not-prose'] *)):hover {
   text-decoration: underline;
 }
 
 /* External link icon styling */
-.prose :where(a[target="_blank"]):not(:where([class~="not-prose"] *))::after {
-  content: "";
+.prose :where(a[target='_blank']):not(:where([class~='not-prose'] *))::after {
+  content: '';
   display: inline-block;
-  width: 0.75em;
-  height: 0.75em;
-  margin-left: 0.25em;
+  width: 0.85em; /* Slightly larger */
+  height: 0.85em;
+  margin-left: 0.3em; /* Slightly more spacing */
   vertical-align: baseline;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' x2='21' y1='14' y2='3'/%3E%3C/svg%3E");
+  /* Updated SVG with thicker stroke and better color */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' x2='21' y1='14' y2='3'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.5;
+  opacity: 0.8; /* Increased opacity for better visibility */
+  transition: opacity 0.2s ease;
 }
 
-.prose :where(strong):not(:where([class~="not-prose"] *)) {
+/* Hover state for better interactivity */
+.prose :where(a[target='_blank']):not(:where([class~='not-prose'] *)):hover::after {
+  opacity: 1;
+}
+
+.prose :where(strong):not(:where([class~='not-prose'] *)) {
   color: hsl(var(--a));
   font-weight: 600;
 }
 
-.prose :where(code):not(:where([class~="not-prose"] *)) {
+.prose :where(code):not(:where([class~='not-prose'] *)) {
   color: var(--tw-prose-code);
   font-weight: 600;
   font-size: 0.875em;
@@ -265,7 +273,7 @@ h1, h2 {
   border-radius: 0.25rem;
 }
 
-.prose :where(pre):not(:where([class~="not-prose"] *)) {
+.prose :where(pre):not(:where([class~='not-prose'] *)) {
   color: var(--tw-prose-pre-code);
   background-color: var(--tw-prose-pre-bg);
   overflow-x: auto;
@@ -278,31 +286,31 @@ h1, h2 {
   padding: 0.8571429em 1.1428571em;
 }
 
-.prose :where(ul):not(:where([class~="not-prose"] *)) {
+.prose :where(ul):not(:where([class~='not-prose'] *)) {
   list-style-type: disc;
   margin-top: 1.25em;
   margin-bottom: 1.25em;
   padding-left: 1.625em;
 }
 
-.prose :where(li):not(:where([class~="not-prose"] *)) {
+.prose :where(li):not(:where([class~='not-prose'] *)) {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 
-.prose :where(blockquote):not(:where([class~="not-prose"] *)) {
+.prose :where(blockquote):not(:where([class~='not-prose'] *)) {
   font-weight: 500;
   font-style: italic;
   color: var(--tw-prose-quotes);
   border-left-width: 0.25rem;
   border-left-color: var(--tw-prose-quote-borders);
-  quotes: "\201C""\201D""\2018""\2019";
+  quotes: '\201C''\201D''\2018''\2019';
   margin-top: 1.6em;
   margin-bottom: 1.6em;
   padding-left: 1em;
 }
 
-.prose :where(hr):not(:where([class~="not-prose"] *)) {
+.prose :where(hr):not(:where([class~='not-prose'] *)) {
   border-color: var(--tw-prose-hr);
   border-top-width: 1px;
   margin-top: 3em;
