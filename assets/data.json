@@ -1,4 +1,90 @@
 {
+  "locations": [
+    {
+      "id": "oak-ridge",
+      "name": "Oak Ridge (TN)",
+      "coordinates": "36.0104,-84.2696",
+      "default": true
+    },
+    {
+      "id": "new-york",
+      "name": "New York City",
+      "coordinates": "40.7128,-74.0060",
+      "default": false
+    },
+    {
+      "id": "london",
+      "name": "London",
+      "coordinates": "51.5074,-0.1278",
+      "default": false
+    },
+    {
+      "id": "tokyo",
+      "name": "Tokyo",
+      "coordinates": "35.6762,139.6503",
+      "default": false
+    },
+    {
+      "id": "hiroshima",
+      "name": "Hiroshima",
+      "coordinates": "34.3853,132.4553",
+      "default": false
+    },
+    {
+      "id": "nagasaki",
+      "name": "Nagasaki",
+      "coordinates": "32.7503,129.8779",
+      "default": false
+    },
+    {
+      "id": "paris",
+      "name": "Paris",
+      "coordinates": "48.8566,2.3522",
+      "default": false
+    },
+    {
+      "id": "moscow",
+      "name": "Moscow",
+      "coordinates": "55.7558,37.6173",
+      "default": false
+    },
+    {
+      "id": "beijing",
+      "name": "Beijing",
+      "coordinates": "39.9042,116.4074",
+      "default": false
+    },
+    {
+      "id": "tehran",
+      "name": "Tehran",
+      "coordinates": "35.6892,51.3890",
+      "default": false
+    },
+    {
+      "id": "los-angeles",
+      "name": "Los Angeles",
+      "coordinates": "34.0522,-118.2437",
+      "default": false
+    },
+    {
+      "id": "chicago",
+      "name": "Chicago",
+      "coordinates": "41.8781,-87.6298",
+      "default": false
+    },
+    {
+      "id": "berlin",
+      "name": "Berlin",
+      "coordinates": "52.5200,13.4050",
+      "default": false
+    },
+    {
+      "id": "sydney",
+      "name": "Sydney",
+      "coordinates": "-33.8688,151.2093",
+      "default": false
+    }
+  ],
   "weapons": [
     {
       "id": "tnt",
