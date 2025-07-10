@@ -7,14 +7,14 @@ export const cityArticleLinks = {
   "new-york": "/history/key-figures/oppenheimer/",
   "london": "/history/nuclear-programs/united-kingdom/",
   "tokyo": "/history/testing-disasters/fukushima-daiichi/",
-  "hiroshima": "/history/medical-environmental/hibakusha/",
-  "nagasaki": "/history/medical-environmental/hibakusha/",
+  "hiroshima": "/history/testing-disasters/hibakusha/",
+  "nagasaki": "/history/testing-disasters/hibakusha/",
   "paris": "/history/nuclear-programs/france/",
   "moscow": "/history/cold-war-crises/moscow-nuclear-program/",
   "beijing": "/history/nuclear-programs/china/",
   "tehran": "/history/nuclear-programs/iran-nuclear-program/",
   "los-angeles": null,
-  "chicago": "/history/historical-events/chicago-pile-1/",
+  "chicago": "/history/foundational-events/chicago-pile-1/",
   "berlin": null,
   "sydney": "/history/testing-disasters/overview/"
 };
@@ -27,16 +27,16 @@ export const weaponArticleLinks = {
   "little-boy": "/history/weapons-technology/fission-weapons/",
   "fat-man": "/history/weapons-technology/fission-weapons/",
   "ivy-mike": "/history/weapons-technology/fusion-weapons/",
-  "castle-bravo": "/history/medical-environmental/castle-bravo/",
-  "tsar-bomba": "/history/testing-sites/novaya-zemlya/",
+  "castle-bravo": "/history/testing-disasters/castle-bravo/",
+  "tsar-bomba": "/history/testing-disasters/novaya-zemlya/",
   "mop": "/history/weapons-technology/gbu-57-mop/",
   "aman": null,
   "ghauri": "/history/nuclear-programs/pakistan/",
   "df-5": "/history/cold-war-crises/broken-arrows/",
-  "iskander": "/terms/weapons-delivery-systems/tactical-nuclear-weapons/",
-  "b61-12": "/terms/weapons-delivery-systems/tactical-nuclear-weapons/",
+  "iskander": "/terms/weapons-delivery/tactical-nuclear-weapons/",
+  "b61-12": "/terms/weapons-delivery/tactical-nuclear-weapons/",
   "w76-1": null,
-  "polaris-a3": "/history/delivery-systems/nuclear-submarines/",
+  "polaris-a3": "/history/nuclear-programs/nuclear-submarines/",
   "w87": "/history/weapons-technology/w87/",
   "w78": null,
   "b61-13": null,
@@ -49,8 +49,8 @@ export const weaponArticleLinks = {
   "burevestnik": null,
   "an-602-original": null,
   "chernobyl-equivalent": null,
-  "trident-ii-d5": "/terms/weapons-delivery-systems/nuclear-triad/",
-  "minuteman-iii": "/terms/weapons-delivery-systems/icbm/"
+  "trident-ii-d5": "/terms/weapons-delivery/nuclear-triad/",
+  "minuteman-iii": "/terms/weapons-delivery/icbm/"
 };
 
 // Tooltip text for cities
@@ -135,5 +135,5 @@ export const linkStats = {
   linkedCities: 12,
   totalWeapons: 28,
   linkedWeapons: 17,
-  lastUpdated: '2025-07-08T18:12:29.478Z'
+  lastUpdated: '2025-07-08T18:47:36.787Z'
 };

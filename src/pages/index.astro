@@ -26,7 +26,7 @@ const locations = data.locations;
   description="Visualize nuclear weapon effects with interactive maps. Explore blast radius, thermal radiation, and damage zones for weapons from Little Boy to Tsar Bomba. Real-time calculations and historical data."
 >
   <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden isolate">
     <!-- Background gradient -->
     <div class="absolute inset-0 bg-gradient-to-br from-base-100 via-base-200 to-base-100"></div>
     
@@ -81,14 +81,14 @@ const locations = data.locations;
           <div class="text-sm text-base-content/70">Global Cities</div>
         </div>
         <div class="text-center">
-          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">Real-time</div>
-          <div class="text-sm text-base-content/70">Calculations</div>
+          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">100+</div>
+          <div class="text-sm text-base-content/70">Resources</div>
         </div>
       </div>
     </div>
     
     <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce z-0">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-base-content/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
       </svg>
@@ -475,9 +475,7 @@ const locations = data.locations;
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  <span class="text-sm font-medium flex-1">{location.name}</span>
-                  {location.default && <span class="badge badge-primary badge-sm">Default</span>}
-                  {hasArticle && (
+                  <span class="text-sm font-medium flex-1">{location.name}</span>                  {hasArticle && (
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-40 group-hover:opacity-70 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>

@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AtomicLogo from '../components/AtomicLogo.astro';
+---
+
+<BaseLayout 
+  title="404 - Page Not Found" 
+  description="The page you're looking for doesn't exist. Return to the Nuclear Blast Simulator."
+>
+  <div class="min-h-screen bg-base-100 flex items-center justify-center px-6">
+    <div class="text-center max-w-md mx-auto">
+      <!-- Logo with atomic spin animation -->
+      <div class="mb-8 flex justify-center animate-fade-in">
+        <AtomicLogo size="md" />
+      </div>
+      
+      <!-- 404 Message -->
+      <h1 class="text-6xl md:text-8xl font-bold text-primary mb-4 animate-fade-in-up">404</h1>
+      
+      <p class="text-xl md:text-2xl text-base-content/70 mb-8 animate-fade-in-up animation-delay-100">
+        Oops! Nothing to see here.
+      </p>
+      
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-200">
+        <a href="/" class="btn btn-primary group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 transition-transform group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a2 2 0 002 2h10a2 2 0 002-2V10M9 21h6" />
+          </svg>
+          Go Home
+        </a>
+        <a href="/simulator/" class="btn btn-outline group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 transition-transform group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+          Open Simulator
+        </a>
+      </div>
+      
+      <!-- Additional Help Text -->
+      <p class="text-sm text-base-content/50 mt-12 animate-fade-in animation-delay-300">
+        The page you're looking for might have been moved or doesn't exist.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Background Pattern -->
+  <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, hsl(var(--p)) 0%, transparent 50%), radial-gradient(circle at 75% 75%, hsl(var(--s)) 0%, transparent 50%);"></div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out;
+    animation-fill-mode: both;
+  }
+  
+  .animation-delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+</style>

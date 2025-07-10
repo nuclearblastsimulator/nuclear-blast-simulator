@@ -145,29 +145,83 @@ async function updateArticleLinks() {
     // These are high-confidence matches based on article content
     const manualOverrides = {
       cities: {
-        'hiroshima': '/history/medical-environmental/hibakusha/',
-        'nagasaki': '/history/medical-environmental/hibakusha/',
-        'chicago': '/history/historical-events/chicago-pile-1/'
+        'hiroshima': '/history/testing-disasters/hibakusha/',
+        'nagasaki': '/history/testing-disasters/hibakusha/',
+        'chicago': '/history/foundational-events/chicago-pile-1/'
       },
       weapons: {
         'little-boy': '/history/weapons-technology/fission-weapons/',
         'fat-man': '/history/weapons-technology/fission-weapons/',
-        'castle-bravo': '/history/medical-environmental/castle-bravo/',
-        'tsar-bomba': '/history/testing-sites/novaya-zemlya/',
+        'castle-bravo': '/history/testing-disasters/castle-bravo/',
+        'tsar-bomba': '/history/testing-disasters/novaya-zemlya/',
         'ivy-mike': '/history/weapons-technology/fusion-weapons/',
-        'polaris-a3': '/history/delivery-systems/nuclear-submarines/',
-        'trident-ii-d5': '/terms/weapons-delivery-systems/nuclear-triad/',
-        'minuteman-iii': '/terms/weapons-delivery-systems/icbm/',
-        'iskander': '/terms/weapons-delivery-systems/tactical-nuclear-weapons/',
-        'b61-12': '/terms/weapons-delivery-systems/tactical-nuclear-weapons/',
+        'polaris-a3': '/history/nuclear-programs/nuclear-submarines/',
+        'trident-ii-d5': '/terms/weapons-delivery/nuclear-triad/',
+        'minuteman-iii': '/terms/weapons-delivery/icbm/',
+        'iskander': '/terms/weapons-delivery/tactical-nuclear-weapons/',
+        'b61-12': '/terms/weapons-delivery/tactical-nuclear-weapons/',
         'moab': '/history/weapons-technology/moab/',
-        'mop': '/history/weapons-technology/gbu-57-mop/'
+        'mop': '/history/weapons-technology/gbu-57-mop/',
+        'b83': '/history/weapons-technology/b83/',
+        'w87': '/history/weapons-technology/w87/',
+        'w88': '/history/weapons-technology/w88/'
       }
     };
     
     // Apply manual overrides
     Object.assign(cityArticleLinks, manualOverrides.cities);
     Object.assign(weaponArticleLinks, manualOverrides.weapons);
+    
+    // Verify all links actually exist
+    console.log('\n🔍 Verifying links...');
+    let brokenLinks = [];
+    
+    // Check city links
+    for (const [cityId, link] of Object.entries(cityArticleLinks)) {
+      if (link && !allArticles.find(article => article.path === link)) {
+        brokenLinks.push({ type: 'city', id: cityId, link });
+      }
+    }
+    
+    // Check weapon links
+    for (const [weaponId, link] of Object.entries(weaponArticleLinks)) {
+      if (link && !allArticles.find(article => article.path === link)) {
+        brokenLinks.push({ type: 'weapon', id: weaponId, link });
+      }
+    }
+    
+    if (brokenLinks.length > 0) {
+      console.error('\n❌ Found broken links:');
+      brokenLinks.forEach(({ type, id, link }) => {
+        console.error(`   ${type}: ${id} -> ${link}`);
+      });
+      console.log('\n💡 Attempting to fix broken links...');
+      
+      // Try to find correct paths
+      for (const broken of brokenLinks) {
+        const searchTerm = broken.link.split('/').pop().replace(/\/$/, '');
+        const possibleMatch = allArticles.find(article => 
+          article.path.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        
+        if (possibleMatch) {
+          console.log(`   ✓ Fixed ${broken.id}: ${broken.link} -> ${possibleMatch.path}`);
+          if (broken.type === 'city') {
+            cityArticleLinks[broken.id] = possibleMatch.path;
+          } else {
+            weaponArticleLinks[broken.id] = possibleMatch.path;
+          }
+        } else {
+          console.log(`   ✗ Could not find match for ${broken.id}: ${broken.link}`);
+          // Remove broken link
+          if (broken.type === 'city') {
+            cityArticleLinks[broken.id] = null;
+          } else {
+            weaponArticleLinks[broken.id] = null;
+          }
+        }
+      }
+    }
     
     // Generate tooltip texts
     const cityTooltips = {
