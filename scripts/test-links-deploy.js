@@ -5,6 +5,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { glob } from 'glob';
 import chalk from 'chalk';
+import https from 'https';
+import http from 'http';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,11 +17,14 @@ class LinkTester {
   constructor() {
     this.errors = [];
     this.warnings = [];
-    this.checkedLinks = new Set();
+    this.checkedInternalLinks = new Map(); // Map of link -> result
+    this.checkedExternalLinks = new Map(); // Map of URL -> status code
     this.totalLinks = 0;
     this.validLinks = 0;
     this.brokenLinks = 0;
     this.externalLinks = 0;
+    this.validExternalLinks = 0;
+    this.brokenExternalLinks = 0;
     this.startTime = Date.now();
   }
 
@@ -56,6 +61,60 @@ class LinkTester {
   // Check if a link is a mailto
   isMailtoLink(link) {
     return link.startsWith('mailto:');
+  }
+
+  // Check external link status
+  async checkExternalLink(url) {
+    // Check cache first
+    if (this.checkedExternalLinks.has(url)) {
+      return this.checkedExternalLinks.get(url);
+    }
+
+    return new Promise((resolve) => {
+      try {
+        const urlObj = new URL(url);
+        const protocol = urlObj.protocol === 'https:' ? https : http;
+        
+        const options = {
+          method: 'HEAD',
+          timeout: 10000,
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (compatible; Nuclear-Blast-Simulator-Link-Checker/1.0)'
+          }
+        };
+
+        const req = protocol.request(url, options, (res) => {
+          const status = res.statusCode;
+          this.checkedExternalLinks.set(url, status);
+          
+          // Handle redirects
+          if (status >= 300 && status < 400 && res.headers.location) {
+            // For redirects, we'll consider them valid
+            resolve({ valid: true, status, redirect: res.headers.location });
+          } else if (status >= 200 && status < 300) {
+            resolve({ valid: true, status });
+          } else {
+            resolve({ valid: false, status });
+          }
+        });
+
+        req.on('error', (err) => {
+          this.checkedExternalLinks.set(url, 0);
+          resolve({ valid: false, status: 0, error: err.message });
+        });
+
+        req.on('timeout', () => {
+          req.destroy();
+          this.checkedExternalLinks.set(url, 0);
+          resolve({ valid: false, status: 0, error: 'Timeout' });
+        });
+
+        req.end();
+      } catch (err) {
+        this.checkedExternalLinks.set(url, 0);
+        resolve({ valid: false, status: 0, error: err.message });
+      }
+    });
   }
 
   // Normalize a link path
@@ -111,6 +170,7 @@ class LinkTester {
     // Build status message
     let statusSymbol = '';
     let statusColor = chalk.gray;
+    let statusText = status;
     
     switch(status) {
       case 'checking':
@@ -129,6 +189,16 @@ class LinkTester {
         statusSymbol = '🌐';
         statusColor = chalk.blue;
         break;
+      case 'external-valid':
+        statusSymbol = '🌐✓';
+        statusColor = chalk.green;
+        statusText = 'ext-ok';
+        break;
+      case 'external-broken':
+        statusSymbol = '🌐✗';
+        statusColor = chalk.red;
+        statusText = 'ext-404';
+        break;
       case 'skipped':
         statusSymbol = '⏭';
         statusColor = chalk.gray;
@@ -140,7 +210,7 @@ class LinkTester {
     
     process.stdout.write(
       `${progressBar} ${percentage}% | ` +
-      `${statusSymbol} ${statusColor(status.padEnd(8))} | ` +
+      `${statusSymbol} ${statusColor(statusText.padEnd(8))} | ` +
       `${chalk.dim(fileDisplay.padEnd(32))} → ${chalk.dim(linkDisplay)}`
     );
   }
@@ -174,26 +244,19 @@ class LinkTester {
         continue;
       }
       
-      // Handle external links
+      // Skip external links
       if (this.isExternalLink(link)) {
-        this.externalLinks++;
-        this.warnings.push({
-          file: fileRelative,
-          link: link,
-          type: 'external'
-        });
-        this.showProgress(this.totalLinks, this.totalLinks, filePath, link, 'external');
+        this.showProgress(this.totalLinks, this.totalLinks, filePath, link, 'skipped');
         continue;
       }
       
       // Check internal links
-      const linkPath = this.normalizePath(link, filePath);
-      const linkKey = `${filePath}:${link}`;
+      const normalizedLink = this.normalizePath(link, filePath);
       
-      if (!this.checkedLinks.has(linkKey)) {
-        this.checkedLinks.add(linkKey);
-        
-        if (this.checkFileExists(linkPath)) {
+      // Check cache first
+      if (this.checkedInternalLinks.has(link)) {
+        const isValid = this.checkedInternalLinks.get(link);
+        if (isValid) {
           this.validLinks++;
           this.showProgress(this.totalLinks, this.totalLinks, filePath, link, 'valid');
         } else {
@@ -202,7 +265,25 @@ class LinkTester {
             file: fileRelative,
             link: link,
             type: 'broken',
-            expected: path.relative(distDir, linkPath)
+            expected: path.relative(distDir, normalizedLink)
+          });
+          this.showProgress(this.totalLinks, this.totalLinks, filePath, link, 'broken');
+        }
+      } else {
+        // Test internal link
+        const exists = this.checkFileExists(normalizedLink);
+        this.checkedInternalLinks.set(link, exists);
+        
+        if (exists) {
+          this.validLinks++;
+          this.showProgress(this.totalLinks, this.totalLinks, filePath, link, 'valid');
+        } else {
+          this.brokenLinks++;
+          this.errors.push({
+            file: fileRelative,
+            link: link,
+            type: 'broken',
+            expected: path.relative(distDir, normalizedLink)
           });
           this.showProgress(this.totalLinks, this.totalLinks, filePath, link, 'broken');
           
@@ -221,18 +302,18 @@ class LinkTester {
     console.log('═'.repeat(50));
     
     // Statistics
-    console.log(`${chalk.green('✓ Valid links:')}      ${this.validLinks}`);
-    console.log(`${chalk.red('✗ Broken links:')}     ${this.brokenLinks}`);
-    console.log(`${chalk.blue('🌐 External links:')}  ${this.externalLinks}`);
-    console.log(`${chalk.gray('📎 Total links:')}     ${this.totalLinks}`);
-    console.log(`${chalk.gray('⏱  Test duration:')}   ${duration}s`);
+    console.log(`${chalk.green('✓ Valid internal links:')}     ${this.validLinks}`);
+    console.log(`${chalk.red('✗ Broken internal links:')}    ${this.brokenLinks}`);
+    console.log(`${chalk.gray('📎 Total links tested:')}      ${this.totalLinks}`);
+    console.log(`${chalk.gray('⏱  Test duration:')}          ${duration}s`);
     console.log('═'.repeat(50));
     
     // Display errors
     if (this.errors.length > 0) {
       console.log(`\n${chalk.red.bold('❌ Broken Links Found:')}\n`);
       
-      // Group errors by file
+      // Display internal broken links
+      console.log(chalk.red.bold('Internal Broken Links:'));
       const errorsByFile = {};
       this.errors.forEach(error => {
         if (!errorsByFile[error.file]) {
@@ -250,27 +331,14 @@ class LinkTester {
       });
     }
     
-    // Display warnings (external links)
-    if (this.warnings.length > 0) {
-      console.log(`\n${chalk.blue.bold('🌐 External Links (not validated):')}\n`);
-      
-      // Show first 10 external links as examples
-      const externalSample = this.warnings.slice(0, 10);
-      externalSample.forEach(warning => {
-        console.log(`   ${chalk.blue('•')} ${warning.link} ${chalk.dim(`(in ${warning.file})`)}`);
-      });
-      
-      if (this.warnings.length > 10) {
-        console.log(chalk.dim(`   ... and ${this.warnings.length - 10} more`));
-      }
-    }
     
     // Final status
     if (this.errors.length === 0) {
-      console.log(chalk.green.bold('\n✅ All internal links are valid! Safe to deploy.'));
+      console.log(chalk.green.bold('\n✅ All links are valid! Safe to deploy.'));
       return true;
     } else {
-      console.log(chalk.red.bold(`\n❌ Found ${this.errors.length} broken links. Please fix before deploying.`));
+      console.log(chalk.red.bold(`\n❌ Found ${this.errors.length} broken internal links.`));
+      console.log(chalk.yellow('Please fix these issues before deploying.'));
       return false;
     }
   }
