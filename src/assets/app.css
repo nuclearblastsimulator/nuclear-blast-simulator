@@ -313,3 +313,8 @@ h1, h2 {
 .prose.max-w-none {
   max-width: none;
 }
+
+/* Fix collapse arrow position in sidebar */
+.collapse-arrow .collapse-title:after {
+  top: 1.2rem;
+}
