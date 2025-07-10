@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Educational Resources" 
+  description="External educational resources for learning about nuclear weapons, their effects, and global nuclear policy."
+>
+  <section class="min-h-screen pt-20">
+    <div class="container mx-auto px-6 py-12">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Educational Resources</h1>
+        <p class="text-lg text-base-content/70 mb-12">
+          Explore additional tools, educational sites, and academic resources to deepen your understanding of nuclear weapons and their effects.
+        </p>
+
+        <!-- Interactive Tools -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+              <span class="text-primary">🛠️</span>
+            </div>
+            Interactive Tools
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="https://nuclearsecrecy.com/nukemap/" target="_blank" rel="noopener noreferrer" 
+               class="block p-6 rounded-2xl bg-base-200 border border-base-300 hover:border-primary/50 transition-all group">
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">NUKEMAP</h3>
+              <p class="text-base-content/70 mb-3">
+                The original interactive nuclear weapons effects simulator. Visualize the effects of nuclear detonations on any location worldwide with detailed fallout modeling.
+              </p>
+              <span class="text-primary text-sm font-medium">Visit NUKEMAP →</span>
+            </a>
+            
+            <a href="https://nuclearweaponsedproj.mit.edu/nuclear-weapons-blast-effects-calculator/" target="_blank" rel="noopener noreferrer"
+               class="block p-6 rounded-2xl bg-base-200 border border-base-300 hover:border-primary/50 transition-all group">
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">MIT Blast Effects Calculator</h3>
+              <p class="text-base-content/70 mb-3">
+                Academic tool providing detailed calculations of nuclear weapon effects including overpressure, thermal radiation, and initial nuclear radiation.
+              </p>
+              <span class="text-primary text-sm font-medium">Visit Calculator →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Educational Sites -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+              <span class="text-primary">📚</span>
+            </div>
+            Educational Sites
+          </h2>
+          <div class="grid grid-cols-1 gap-6">
+            <a href="https://nuclearweaponsedproj.mit.edu/" target="_blank" rel="noopener noreferrer"
+               class="block p-6 rounded-2xl bg-base-200 border border-base-300 hover:border-primary/50 transition-all group">
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">MIT Nuclear Weapons Education Project</h3>
+              <p class="text-base-content/70 mb-3">
+                Comprehensive educational resource from MIT covering nuclear weapons physics, effects, history, and policy. Features interactive tools, educational materials, and expert analysis.
+              </p>
+              <span class="text-primary text-sm font-medium">Visit MIT Project →</span>
+            </a>
+
+            <a href="https://www.atomicarchive.com/" target="_blank" rel="noopener noreferrer"
+               class="block p-6 rounded-2xl bg-base-200 border border-base-300 hover:border-primary/50 transition-all group">
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">The Atomic Archive</h3>
+              <p class="text-base-content/70 mb-3">
+                Extensive collection of documents, images, and educational materials about nuclear weapons history, including declassified government documents and historical photographs.
+              </p>
+              <span class="text-primary text-sm font-medium">Visit Archive →</span>
+            </a>
+
+            <a href="https://www.nti.org/" target="_blank" rel="noopener noreferrer"
+               class="block p-6 rounded-2xl bg-base-200 border border-base-300 hover:border-primary/50 transition-all group">
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Nuclear Threat Initiative (NTI)</h3>
+              <p class="text-base-content/70 mb-3">
+                Global security organization working to prevent catastrophic attacks with weapons of mass destruction. Provides policy analysis, educational resources, and threat assessments.
+              </p>
+              <span class="text-primary text-sm font-medium">Visit NTI →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Academic Resources -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+              <span class="text-primary">🎓</span>
+            </div>
+            Academic & Research Resources
+          </h2>
+          <div class="grid grid-cols-1 gap-6">
+            <a href="https://www.fas.org/nuclear/" target="_blank" rel="noopener noreferrer"
+               class="block p-6 rounded-2xl bg-base-200 border border-base-300 hover:border-primary/50 transition-all group">
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Federation of American Scientists</h3>
+              <p class="text-base-content/70 mb-3">
+                Expert analysis and research on nuclear weapons, including the Nuclear Information Project tracking global nuclear arsenals and modernization programs.
+              </p>
+              <span class="text-primary text-sm font-medium">Visit FAS →</span>
+            </a>
+
+            <a href="https://www.sipri.org/" target="_blank" rel="noopener noreferrer"
+               class="block p-6 rounded-2xl bg-base-200 border border-base-300 hover:border-primary/50 transition-all group">
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Stockholm International Peace Research Institute</h3>
+              <p class="text-base-content/70 mb-3">
+                Independent research institute dedicated to research on conflict, armaments, arms control and disarmament. Publishes annual data on world nuclear forces.
+              </p>
+              <span class="text-primary text-sm font-medium">Visit SIPRI →</span>
+            </a>
+
+            <a href="https://thebulletin.org/" target="_blank" rel="noopener noreferrer"
+               class="block p-6 rounded-2xl bg-base-200 border border-base-300 hover:border-primary/50 transition-all group">
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Bulletin of the Atomic Scientists</h3>
+              <p class="text-base-content/70 mb-3">
+                Academic journal covering nuclear risk, climate change, and emerging technologies. Home of the famous Doomsday Clock measuring humanity's proximity to catastrophe.
+              </p>
+              <span class="text-primary text-sm font-medium">Visit Bulletin →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Policy & Advocacy -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+              <span class="text-primary">🌍</span>
+            </div>
+            Policy & Advocacy Organizations
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="https://www.icanw.org/" target="_blank" rel="noopener noreferrer"
+               class="block p-6 rounded-2xl bg-base-200 border border-base-300 hover:border-primary/50 transition-all group">
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">ICAN</h3>
+              <p class="text-base-content/70 mb-3">
+                International Campaign to Abolish Nuclear Weapons. Nobel Peace Prize laureate working for nuclear disarmament globally.
+              </p>
+              <span class="text-primary text-sm font-medium">Visit ICAN →</span>
+            </a>
+
+            <a href="https://www.ploughshares.org/" target="_blank" rel="noopener noreferrer"
+               class="block p-6 rounded-2xl bg-base-200 border border-base-300 hover:border-primary/50 transition-all group">
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Ploughshares Fund</h3>
+              <p class="text-base-content/70 mb-3">
+                Foundation supporting initiatives to prevent the spread and use of nuclear weapons and promote global security.
+              </p>
+              <span class="text-primary text-sm font-medium">Visit Ploughshares →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="mt-12 p-6 rounded-2xl bg-warning/10 border border-warning/30">
+          <h3 class="text-lg font-bold text-warning mb-2">External Resources Notice</h3>
+          <p class="text-base-content/70">
+            These are external resources not affiliated with the Nuclear Blast Simulator. We provide these links for educational purposes, but cannot guarantee the accuracy or availability of external content.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
