@@ -10,7 +10,7 @@ async function generateRedditBanner() {
   try {
     // Input and output paths
     const screenshotPath = path.join(__dirname, '../src/images/screenshots/screenshot-desktop.png')
-    const logoPath = path.join(__dirname, '../public/assets/logo/logo.png')
+    const logoPath = path.join(__dirname, '../src/images/logo.png')
     const outputPath = path.join(__dirname, '../src/images/reddit-banner.png')
 
     // Reddit banner dimensions
