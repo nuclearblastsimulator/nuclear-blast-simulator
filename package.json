@@ -8,6 +8,7 @@
     "dev": "astro dev",
     "dev:prod": "astro dev --mode production",
     "start": "astro dev",
+    "prebuild": "npm run update-links",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",

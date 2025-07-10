@@ -46,7 +46,9 @@ const weaponKeywords = {
   'yars': ['yars', 'russia', 'icbm'],
   'sarmat': ['sarmat', 'russia', 'satan'],
   'bulava': ['bulava', 'russia', 'slbm'],
-  'm51': ['m51', 'france', 'slbm']
+  'm51': ['m51', 'france', 'slbm'],
+  'moab': ['moab', 'massive ordnance air blast', 'mother of all bombs', 'gbu-43'],
+  'mop': ['mop', 'massive ordnance penetrator', 'gbu-57', 'bunker buster']
 };
 
 async function findArticles(directory) {
@@ -157,7 +159,9 @@ async function updateArticleLinks() {
         'trident-ii-d5': '/terms/weapons-delivery-systems/nuclear-triad/',
         'minuteman-iii': '/terms/weapons-delivery-systems/icbm/',
         'iskander': '/terms/weapons-delivery-systems/tactical-nuclear-weapons/',
-        'b61-12': '/terms/weapons-delivery-systems/tactical-nuclear-weapons/'
+        'b61-12': '/terms/weapons-delivery-systems/tactical-nuclear-weapons/',
+        'moab': '/history/weapons-technology/moab/',
+        'mop': '/history/weapons-technology/gbu-57-mop/'
       }
     };
     

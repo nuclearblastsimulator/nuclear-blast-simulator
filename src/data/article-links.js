@@ -23,7 +23,7 @@ export const cityArticleLinks = {
 export const weaponArticleLinks = {
   "tnt": null,
   "tomahawk": null,
-  "moab": null,
+  "moab": "/history/weapons-technology/moab/",
   "little-boy": "/history/weapons-technology/fission-weapons/",
   "fat-man": "/history/weapons-technology/fission-weapons/",
   "ivy-mike": "/history/weapons-technology/fusion-weapons/",
@@ -134,6 +134,6 @@ export const linkStats = {
   totalCities: 14,
   linkedCities: 12,
   totalWeapons: 28,
-  linkedWeapons: 16,
-  lastUpdated: '2025-07-08T18:03:20.824Z'
+  linkedWeapons: 17,
+  lastUpdated: '2025-07-08T18:12:29.478Z'
 };
