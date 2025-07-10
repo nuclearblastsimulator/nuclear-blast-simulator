@@ -7,85 +7,185 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Visualize nuclear weapon effects with interactive maps. Explore blast radius, thermal radiation, and damage zones for weapons from Little Boy to Tsar Bomba. Real-time calculations and historical data."
 >
   <!-- Hero Section -->
-  <section class="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-base-100 to-base-200">
-    <div class="text-center max-w-4xl mx-auto">
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-mono font-bold mb-8 leading-tight text-primary">
-        Visualize Nuclear Weapon Effects Anywhere
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-base-100 via-base-200 to-base-100"></div>
+    
+    <!-- Animated background pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, hsl(var(--p)) 0%, transparent 50%), radial-gradient(circle at 75% 75%, hsl(var(--s)) 0%, transparent 50%);"></div>
+    </div>
+    
+    <!-- Content -->
+    <div class="relative z-10 text-center max-w-5xl mx-auto px-6">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+        <span class="text-primary text-sm font-medium">Educational Tool</span>
+        <span class="text-base-content/50">•</span>
+        <span class="text-base-content/70 text-sm">40+ Nuclear Weapons Database</span>
+      </div>
+      
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+          Visualize Nuclear
+        </span>
+        <br />
+        <span class="text-base-content">
+          Weapon Effects
+        </span>
       </h1>
-      <p class="text-lg md:text-xl lg:text-2xl mb-10 text-base-content opacity-70 max-w-2xl mx-auto">
-        Interactive maps and real-time calculations showing blast radius, thermal radiation,
-        and damage zones for over 40 nuclear weapons.
+      
+      <p class="text-xl md:text-2xl mb-12 text-base-content/70 max-w-3xl mx-auto leading-relaxed">
+        Interactive maps showing blast radius, thermal radiation, and damage zones. 
+        Understand the devastating scale of nuclear weapons through scientific visualization.
       </p>
-      <a href="/simulator/" class="btn btn-primary btn-lg gap-2">
-        <span class="text-xl">🚀</span>
-        <span>Launch Interactive Simulator</span>
-      </a>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/simulator/" class="btn btn-primary btn-lg group">
+          <span>Launch Simulator</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+        <a href="/terms/" class="btn btn-outline btn-lg">
+          Learn the Science
+        </a>
+      </div>
+      
+      <!-- Stats -->
+      <div class="grid grid-cols-3 gap-8 mt-20 pt-20 border-t border-base-300">
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">40+</div>
+          <div class="text-sm text-base-content/70">Nuclear Weapons</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">100+</div>
+          <div class="text-sm text-base-content/70">Major Cities</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">Real-time</div>
+          <div class="text-sm text-base-content/70">Calculations</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-base-content/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
     </div>
   </section>
 
   <!-- Features Section -->
-  <section class="py-20 px-4 bg-base-200">
+  <section class="py-32 px-6 relative">
     <div class="container max-w-7xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-mono font-bold text-center mb-16">Powerful Features</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="card bg-base-100 shadow-xl">
-          <div class="card-body">
-            <div class="text-4xl mb-4">🗺️</div>
-            <h3 class="card-title text-xl">Global Visualization</h3>
-            <p class="text-base-content opacity-70">
-              Drop a nuclear weapon anywhere on Earth. Select from major cities
-              or search for any address to see the blast effects.
-            </p>
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Powerful Visualization Tools</h2>
+        <p class="text-xl text-base-content/70 max-w-2xl mx-auto">
+          Everything you need to understand the devastating scale and effects of nuclear weapons
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Global Visualization -->
+        <div class="group relative">
+          <div class="card bg-base-100 border border-base-300 hover:border-primary/50 transition-all duration-300 h-full">
+            <div class="card-body">
+              <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Global Visualization</h3>
+              <p class="text-base-content/70 leading-relaxed">
+                Drop a nuclear weapon anywhere on Earth. Select from major cities or search for any address to see the blast effects.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card bg-base-100 shadow-xl">
-          <div class="card-body">
-            <div class="text-4xl mb-4">💣</div>
-            <h3 class="card-title text-xl">40+ Weapons</h3>
-            <p class="text-base-content opacity-70">
-              From Little Boy to Tsar Bomba. Compare conventional explosives,
-              tactical nukes, and city-destroying thermonuclear weapons.
-            </p>
+
+        <!-- Weapons Database -->
+        <div class="group relative">
+          <div class="card bg-base-100 border border-base-300 hover:border-primary/50 transition-all duration-300 h-full">
+            <div class="card-body">
+              <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">40+ Weapons Database</h3>
+              <p class="text-base-content/70 leading-relaxed">
+                From Little Boy to Tsar Bomba. Compare conventional explosives, tactical nukes, and city-destroying thermonuclear weapons.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card bg-base-100 shadow-xl">
-          <div class="card-body">
-            <div class="text-4xl mb-4">📊</div>
-            <h3 class="card-title text-xl">Scientific Accuracy</h3>
-            <p class="text-base-content opacity-70">
-              Based on peer-reviewed scientific models and publicly available data to provide
-              realistic blast radius and damage calculations.
-            </p>
+
+        <!-- Scientific Accuracy -->
+        <div class="group relative">
+          <div class="card bg-base-100 border border-base-300 hover:border-primary/50 transition-all duration-300 h-full">
+            <div class="card-body">
+              <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Scientific Accuracy</h3>
+              <p class="text-base-content/70 leading-relaxed">
+                Based on peer-reviewed scientific models and publicly available data to provide realistic blast radius and damage calculations.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card bg-base-100 shadow-xl">
-          <div class="card-body">
-            <div class="text-4xl mb-4">🎯</div>
-            <h3 class="card-title text-xl">Multiple Damage Zones</h3>
-            <p class="text-base-content opacity-70">
-              Visualize different effects zones including fireball, heavy blast damage, thermal
-              radiation, and radioactive fallout patterns.
-            </p>
+
+        <!-- Damage Zones -->
+        <div class="group relative">
+          <div class="card bg-base-100 border border-base-300 hover:border-primary/50 transition-all duration-300 h-full">
+            <div class="card-body">
+              <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Multiple Damage Zones</h3>
+              <p class="text-base-content/70 leading-relaxed">
+                Visualize different effects zones including fireball, heavy blast damage, thermal radiation, and radioactive fallout patterns.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card bg-base-100 shadow-xl">
-          <div class="card-body">
-            <div class="text-4xl mb-4">📚</div>
-            <h3 class="card-title text-xl">Detailed Information</h3>
-            <p class="text-base-content opacity-70">
-              Click any damage zone for detailed effects. View casualty estimates,
-              building damage, and radiation exposure levels.
-            </p>
+
+        <!-- Detailed Information -->
+        <div class="group relative">
+          <div class="card bg-base-100 border border-base-300 hover:border-primary/50 transition-all duration-300 h-full">
+            <div class="card-body">
+              <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Detailed Information</h3>
+              <p class="text-base-content/70 leading-relaxed">
+                Click any damage zone for detailed effects. View casualty estimates, building damage, and radiation exposure levels.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card bg-base-100 shadow-xl">
-          <div class="card-body">
-            <div class="text-4xl mb-4">⚡</div>
-            <h3 class="card-title text-xl">Real-Time Calculations</h3>
-            <p class="text-base-content opacity-70">
-              Instantly see how different yields and detonation types affect blast radius
-              and damage zones with interactive controls.
-            </p>
+
+        <!-- Real-Time Calculations -->
+        <div class="group relative">
+          <div class="card bg-base-100 border border-base-300 hover:border-primary/50 transition-all duration-300 h-full">
+            <div class="card-body">
+              <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Real-Time Calculations</h3>
+              <p class="text-base-content/70 leading-relaxed">
+                Instantly see how different yields and detonation types affect blast radius and damage zones with interactive controls.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -93,65 +193,128 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- Educational Content Section -->
-  <section class="py-20 px-4 bg-base-100">
+  <section class="py-32 px-6 bg-gradient-to-b from-base-100 to-base-200">
     <div class="container max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-mono font-bold text-center mb-16">Learn More About Nuclear Weapons</h2>
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Learn the Science & History</h2>
+        <p class="text-xl text-base-content/70 max-w-2xl mx-auto">
+          Comprehensive resources to understand nuclear weapons from scientific principles to historical events
+        </p>
+      </div>
+      
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div class="card bg-base-200 border border-primary/20">
-          <div class="card-body">
-            <h3 class="card-title text-2xl mb-4 text-primary">Nuclear Terms Glossary</h3>
-            <p class="text-base-content opacity-70 mb-6">
-              Understand the science and technology behind nuclear weapons with our comprehensive glossary.
-            </p>
-            <ul class="space-y-2 mb-6 text-base-content opacity-70">
-              <li class="flex items-center gap-2">
-                <span class="text-primary">▶</span>
-                <span>Nuclear physics fundamentals</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-primary">▶</span>
-                <span>Weapons effects and terminology</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-primary">▶</span>
-                <span>Reactor technology explained</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-primary">▶</span>
-                <span>Treaties and policy concepts</span>
-              </li>
-            </ul>
-            <div class="card-actions">
-              <a href="/terms/" class="btn btn-primary">Explore Glossary →</a>
+        <!-- Glossary Card -->
+        <div class="group relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-3xl blur-xl group-hover:blur-2xl transition-all"></div>
+          <div class="relative card bg-base-100 border border-base-300 rounded-3xl overflow-hidden h-full">
+            <div class="card-body p-8">
+              <div class="flex items-start justify-between mb-6">
+                <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <span class="badge badge-primary badge-outline">36 Terms</span>
+              </div>
+              
+              <h3 class="text-2xl font-bold mb-4">Nuclear Terms Glossary</h3>
+              <p class="text-base-content/70 mb-8 leading-relaxed">
+                Understand the science and technology behind nuclear weapons with our comprehensive glossary.
+              </p>
+              
+              <div class="space-y-4 mb-8">
+                <div class="flex items-center gap-3 text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Nuclear physics fundamentals</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Weapons effects and terminology</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Reactor technology explained</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Treaties and policy concepts</span>
+                </div>
+              </div>
+              
+              <div class="card-actions">
+                <a href="/terms/" class="btn btn-primary btn-block group">
+                  <span>Explore Glossary</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="card bg-base-200 border border-secondary/20">
-          <div class="card-body">
-            <h3 class="card-title text-2xl mb-4 text-secondary">Historical Articles</h3>
-            <p class="text-base-content opacity-70 mb-6">
-              Dive deep into the history of nuclear weapons through documented events and human stories.
-            </p>
-            <ul class="space-y-2 mb-6 text-base-content opacity-70">
-              <li class="flex items-center gap-2">
-                <span class="text-secondary">▶</span>
-                <span>Scientific discoveries</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-secondary">▶</span>
-                <span>Crisis events and close calls</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-secondary">▶</span>
-                <span>Environmental impact studies</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-secondary">▶</span>
-                <span>Key figures and their contributions</span>
-              </li>
-            </ul>
-            <div class="card-actions">
-              <a href="/history/" class="btn btn-secondary">Read History →</a>
+
+        <!-- History Card -->
+        <div class="group relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-secondary/20 to-transparent rounded-3xl blur-xl group-hover:blur-2xl transition-all"></div>
+          <div class="relative card bg-base-100 border border-base-300 rounded-3xl overflow-hidden h-full">
+            <div class="card-body p-8">
+              <div class="flex items-start justify-between mb-6">
+                <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <span class="badge badge-secondary badge-outline">48 Articles</span>
+              </div>
+              
+              <h3 class="text-2xl font-bold mb-4">Historical Articles</h3>
+              <p class="text-base-content/70 mb-8 leading-relaxed">
+                Dive deep into the history of nuclear weapons through documented events and human stories.
+              </p>
+              
+              <div class="space-y-4 mb-8">
+                <div class="flex items-center gap-3 text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Scientific discoveries</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Crisis events and close calls</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Environmental impact studies</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Key figures and their contributions</span>
+                </div>
+              </div>
+              
+              <div class="card-actions">
+                <a href="/history/" class="btn btn-secondary btn-block group">
+                  <span>Read History</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -160,17 +323,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- CTA Section -->
-  <section class="py-20 px-4 bg-base-200">
-    <div class="container max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-mono font-bold mb-6">Ready to Simulate?</h2>
-      <p class="text-lg md:text-xl mb-10 text-base-content opacity-70 max-w-2xl mx-auto">
-        Drop a nuclear weapon anywhere on Earth. See the blast radius, damage zones,
-        and understand the true scale of nuclear destruction.
+  <section class="relative py-32 px-6 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5"></div>
+    <div class="relative container max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+        <span class="relative flex h-3 w-3">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+        </span>
+        <span class="text-sm text-primary font-medium">Interactive Simulator</span>
+      </div>
+      
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        Ready to See the Impact?
+      </h2>
+      <p class="text-xl text-base-content/70 mb-12 max-w-2xl mx-auto leading-relaxed">
+        Experience our interactive simulator to truly understand the devastating scale of nuclear weapons. 
+        Drop any weapon, anywhere on Earth.
       </p>
-      <a href="/simulator/" class="btn btn-primary btn-lg gap-2">
-        <span class="text-xl">🚀</span>
-        <span>Start Learning Now</span>
-      </a>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/simulator/" class="btn btn-primary btn-lg group">
+          <span>Launch Simulator</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+        <a href="/terms/" class="btn btn-outline btn-lg">
+          Learn First
+        </a>
+      </div>
     </div>
   </section>
 </BaseLayout>

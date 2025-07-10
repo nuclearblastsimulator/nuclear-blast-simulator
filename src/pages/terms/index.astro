@@ -38,17 +38,30 @@ function getTermsByCategory(categoryTerms: string[]) {
   title="Nuclear Terms Glossary" 
   description="Complete index of nuclear terms, reactor technology, weapons systems, and policy concepts."
 >
-  <div class="container mx-auto px-4 py-12">
-    <!-- Header -->
-    <div class="text-center mb-12">
-      <h1 class="text-5xl font-mono font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-        Nuclear Terms Glossary
-      </h1>
-      <p class="text-xl opacity-80 max-w-3xl mx-auto">
-        This glossary provides clear definitions and historical context for essential nuclear weapons terminology, 
-        focusing on educational understanding and humanitarian impact.
-      </p>
-    </div>
+  <div class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="relative py-20 px-6 bg-gradient-to-b from-base-200 to-base-100">
+      <div class="absolute inset-0 opacity-5">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, hsl(var(--p)) 0%, transparent 50%), radial-gradient(circle at 75% 75%, hsl(var(--s)) 0%, transparent 50%);"></div>
+      </div>
+      <div class="relative container max-w-6xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+          <span class="text-primary text-sm font-medium">Educational Resource</span>
+          <span class="text-base-content/50">•</span>
+          <span class="text-base-content/70 text-sm">36 Nuclear Terms</span>
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          Nuclear Terms Glossary
+        </h1>
+        <p class="text-xl text-base-content/70 max-w-3xl mx-auto leading-relaxed">
+          Clear definitions and historical context for essential nuclear weapons terminology, 
+          focusing on educational understanding and humanitarian impact.
+        </p>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <div class="container max-w-7xl mx-auto px-6 py-16">
 
     <!-- Categories -->
     <div class="space-y-12">
@@ -59,19 +72,27 @@ function getTermsByCategory(categoryTerms: string[]) {
         return (
           <section>
             <h2 class="text-3xl font-bold mb-6 text-primary">{category}</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {categoryTerms.map((term) => (
                 <a 
                   href={`/terms/${term.slug}/`} 
-                  class="card bg-base-200 hover:bg-base-300 transition-all hover:shadow-lg group"
+                  class="group relative"
                 >
-                  <div class="card-body p-6">
-                    <h3 class="card-title text-xl group-hover:text-primary transition-colors">
-                      {term.data.title}
-                    </h3>
-                    <p class="text-sm opacity-70 line-clamp-2">
-                      {term.data.description}
-                    </p>
+                  <div class="card bg-base-100 border border-base-300 hover:border-primary/50 transition-all duration-300 h-full hover:shadow-2xl hover:scale-[1.02]">
+                    <div class="card-body p-6">
+                      <h3 class="card-title text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                        {term.data.title}
+                      </h3>
+                      <p class="text-sm text-base-content/70 line-clamp-3 leading-relaxed">
+                        {term.data.description}
+                      </p>
+                      <div class="mt-4 flex items-center text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-sm font-medium">Read more</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                 </a>
               ))}
@@ -81,11 +102,34 @@ function getTermsByCategory(categoryTerms: string[]) {
       })}
     </div>
     
-    <!-- Footer Stats -->
-    <div class="text-center mt-16 pt-8 border-t border-base-300">
-      <p class="text-lg opacity-70">
-        Total Terms: <span class="font-bold text-primary">{sortedTerms.length}</span> glossary entries
-      </p>
     </div>
+    
+    <!-- CTA Section -->
+    <section class="py-16 px-6 bg-gradient-to-t from-base-200 to-base-100">
+      <div class="container max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Ready to See the Effects?</h2>
+        <p class="text-xl text-base-content/70 mb-8 max-w-2xl mx-auto">
+          Now that you understand the terminology, experience our interactive simulator to visualize these concepts.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/simulator/" class="btn btn-primary btn-lg group">
+            <span>Launch Simulator</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+          <a href="/history/" class="btn btn-outline btn-lg">
+            Explore History
+          </a>
+        </div>
+        
+        <!-- Stats -->
+        <div class="mt-12 pt-8 border-t border-base-300 inline-block">
+          <p class="text-lg text-base-content/70">
+            <span class="font-bold text-primary">{sortedTerms.length}</span> comprehensive glossary entries across <span class="font-bold text-secondary">{Object.keys(categories).length}</span> categories
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
 </BaseLayout>

@@ -106,17 +106,30 @@ function renderCategory(category: any, isNested = false) {
   title="Nuclear History Articles" 
   description="Comprehensive historical coverage of nuclear weapons development, testing, and impact through human stories and documented events."
 >
-  <div class="container mx-auto px-4 py-12">
-    <!-- Header -->
-    <div class="text-center mb-12">
-      <h1 class="text-5xl font-mono font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-        Nuclear History Articles
-      </h1>
-      <p class="text-xl opacity-80 max-w-3xl mx-auto">
-        This collection provides comprehensive historical coverage of nuclear weapons development, testing, 
-        and impact through human stories and documented events.
-      </p>
-    </div>
+  <div class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="relative py-20 px-6 bg-gradient-to-b from-base-200 to-base-100">
+      <div class="absolute inset-0 opacity-5">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, hsl(var(--p)) 0%, transparent 50%), radial-gradient(circle at 75% 75%, hsl(var(--s)) 0%, transparent 50%);"></div>
+      </div>
+      <div class="relative container max-w-6xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
+          <span class="text-secondary text-sm font-medium">Historical Archive</span>
+          <span class="text-base-content/50">•</span>
+          <span class="text-base-content/70 text-sm">48 Articles</span>
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          Nuclear History Articles
+        </h1>
+        <p class="text-xl text-base-content/70 max-w-3xl mx-auto leading-relaxed">
+          Comprehensive historical coverage of nuclear weapons development, testing, 
+          and impact through human stories and documented events.
+        </p>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <div class="container max-w-7xl mx-auto px-6 py-16">
 
     <!-- Categories -->
     <div class="space-y-12">
@@ -132,19 +145,27 @@ function renderCategory(category: any, isNested = false) {
                 {renderCategory(categoryData).map((subcat: any) => (
                   <div>
                     <h3 class="text-2xl font-semibold mb-4 text-secondary">{subcat.name}</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {subcat.articles.map((article: any) => (
                         <a 
                           href={`/history/${article.slug.replace('history/', '')}/`} 
-                          class="card bg-base-200 hover:bg-base-300 transition-all hover:shadow-lg group"
+                          class="group relative"
                         >
-                          <div class="card-body p-6">
-                            <h4 class="card-title text-lg group-hover:text-primary transition-colors">
-                              {article.data.title}
-                            </h4>
-                            <p class="text-sm opacity-70 line-clamp-2">
-                              {article.data.description}
-                            </p>
+                          <div class="card bg-base-100 border border-base-300 hover:border-secondary/50 transition-all duration-300 h-full hover:shadow-2xl hover:scale-[1.02]">
+                            <div class="card-body p-6">
+                              <h4 class="card-title text-lg font-semibold mb-2 group-hover:text-secondary transition-colors">
+                                {article.data.title}
+                              </h4>
+                              <p class="text-sm text-base-content/70 line-clamp-3 leading-relaxed">
+                                {article.data.description}
+                              </p>
+                              <div class="mt-4 flex items-center text-secondary opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="text-sm font-medium">Read article</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                              </div>
+                            </div>
                           </div>
                         </a>
                       ))}
@@ -153,19 +174,27 @@ function renderCategory(category: any, isNested = false) {
                 ))}
               </div>
             ) : (
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {renderCategory(categoryData).map((article: any) => (
                   <a 
                     href={`/history/${article.slug.replace('history/', '')}/`} 
-                    class="card bg-base-200 hover:bg-base-300 transition-all hover:shadow-lg group"
+                    class="group relative"
                   >
-                    <div class="card-body p-6">
-                      <h4 class="card-title text-lg group-hover:text-primary transition-colors">
-                        {article.data.title}
-                      </h4>
-                      <p class="text-sm opacity-70 line-clamp-2">
-                        {article.data.description}
-                      </p>
+                    <div class="card bg-base-100 border border-base-300 hover:border-secondary/50 transition-all duration-300 h-full hover:shadow-2xl hover:scale-[1.02]">
+                      <div class="card-body p-6">
+                        <h4 class="card-title text-lg font-semibold mb-2 group-hover:text-secondary transition-colors">
+                          {article.data.title}
+                        </h4>
+                        <p class="text-sm text-base-content/70 line-clamp-3 leading-relaxed">
+                          {article.data.description}
+                        </p>
+                        <div class="mt-4 flex items-center text-secondary opacity-0 group-hover:opacity-100 transition-opacity">
+                          <span class="text-sm font-medium">Read article</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </a>
                 ))}
@@ -176,11 +205,34 @@ function renderCategory(category: any, isNested = false) {
       })}
     </div>
     
-    <!-- Footer Stats -->
-    <div class="text-center mt-16 pt-8 border-t border-base-300">
-      <p class="text-lg opacity-70">
-        Total Articles: <span class="font-bold text-primary">{sortedHistory.length}</span> articles across <span class="font-bold text-secondary">{Object.keys(categories).length}</span> categories
-      </p>
     </div>
+    
+    <!-- CTA Section -->
+    <section class="py-16 px-6 bg-gradient-to-t from-base-200 to-base-100">
+      <div class="container max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Visualize the Impact</h2>
+        <p class="text-xl text-base-content/70 mb-8 max-w-2xl mx-auto">
+          After learning the history, see the devastating effects of these weapons with our interactive simulator.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/simulator/" class="btn btn-primary btn-lg group">
+            <span>Launch Simulator</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+          <a href="/terms/" class="btn btn-outline btn-lg">
+            Study Terminology
+          </a>
+        </div>
+        
+        <!-- Stats -->
+        <div class="mt-12 pt-8 border-t border-base-300 inline-block">
+          <p class="text-lg text-base-content/70">
+            <span class="font-bold text-primary">{sortedHistory.length}</span> historical articles across <span class="font-bold text-secondary">{Object.keys(categories).length}</span> categories
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
 </BaseLayout>
