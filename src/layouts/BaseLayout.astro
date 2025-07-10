@@ -227,7 +227,70 @@ const ogImageURL = image || new URL(ogImage.src, Astro.site).href;
     </div>
   </footer>
   
+  <!-- Floating Action Button to Simulator (shown on all pages except simulator) -->
+  {Astro.url.pathname !== '/simulator/' && (
+    <a href="/simulator/" class="fab-launch-simulator" aria-label="Launch Nuclear Blast Simulator">
+      🚀
+    </a>
+  )}
+  
   <!-- Analytics -->
   <script src="/assets/js/analytics.js" is:inline></script>
 </body>
 </html>
+
+<style>
+  /* Floating Action Button */
+  .fab-launch-simulator {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, hsl(var(--p)), hsl(var(--s)));
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 25px hsl(var(--p) / 0.4);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    z-index: 50;
+    animation: fabPulseGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes fabPulseGlow {
+    0%, 100% {
+      box-shadow: 0 8px 25px hsl(var(--p) / 0.4);
+    }
+    50% {
+      box-shadow: 0 12px 35px hsl(var(--s) / 0.6);
+    }
+  }
+
+  .fab-launch-simulator:hover {
+    background: linear-gradient(135deg, hsl(var(--pf)), hsl(var(--sf)));
+    box-shadow: 0 12px 35px hsl(var(--s) / 0.5);
+    transform: translateY(-2px) scale(1.05);
+    animation: none;
+  }
+
+  .fab-launch-simulator:active {
+    transform: translateY(0) scale(0.95);
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .fab-launch-simulator {
+      bottom: 2rem;
+      right: 2rem;
+      width: 56px;
+      height: 56px;
+      font-size: 1.25rem;
+    }
+  }
+</style>

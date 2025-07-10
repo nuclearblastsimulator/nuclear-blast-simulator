@@ -641,8 +641,8 @@ const locations = data.locations;
         <div class="lg:col-span-1">
           <div class="card bg-base-100 border border-base-300 overflow-hidden h-full flex flex-col">
             <!-- iPhone Frame -->
-            <div class="flex items-center justify-center p-4 bg-gradient-to-br from-base-200 to-base-300 flex-1">
-              <div class="relative" style="width: 240px; height: 480px;">
+            <div class="flex items-center justify-center p-4 sm:p-8 bg-gradient-to-br from-base-200 to-base-300 flex-1">
+              <div class="relative w-full max-w-[240px] mx-auto" style="aspect-ratio: 240/480;">
                 <!-- iPhone Frame -->
                 <div class="absolute inset-0 bg-gray-900 rounded-[2.5rem] shadow-2xl"></div>
                 <!-- Screen Bezel -->
@@ -652,12 +652,12 @@ const locations = data.locations;
                   <Image src={screenshotMobile} alt="Nuclear Blast Simulator Mobile View" class="w-full h-full object-cover object-top" />
                 </div>
                 <!-- Notch -->
-                <div class="absolute top-[10px] left-1/2 transform -translate-x-1/2 w-[100px] h-[20px] bg-black rounded-b-xl"></div>
+                <div class="absolute top-[2%] left-1/2 transform -translate-x-1/2 w-[42%] h-[4%] bg-black rounded-b-xl"></div>
                 <!-- Side Buttons -->
-                <div class="absolute -left-[3px] top-[60px] w-[3px] h-[30px] bg-gray-700 rounded-l-lg"></div>
-                <div class="absolute -left-[3px] top-[100px] w-[3px] h-[50px] bg-gray-700 rounded-l-lg"></div>
-                <div class="absolute -left-[3px] top-[160px] w-[3px] h-[50px] bg-gray-700 rounded-l-lg"></div>
-                <div class="absolute -right-[3px] top-[120px] w-[3px] h-[50px] bg-gray-700 rounded-r-lg"></div>
+                <div class="absolute -left-[1.5%] top-[12.5%] w-[1.5%] h-[6%] bg-gray-700 rounded-l-lg"></div>
+                <div class="absolute -left-[1.5%] top-[21%] w-[1.5%] h-[10%] bg-gray-700 rounded-l-lg"></div>
+                <div class="absolute -left-[1.5%] top-[33%] w-[1.5%] h-[10%] bg-gray-700 rounded-l-lg"></div>
+                <div class="absolute -right-[1.5%] top-[25%] w-[1.5%] h-[10%] bg-gray-700 rounded-r-lg"></div>
               </div>
             </div>
             <div class="card-body">
@@ -949,4 +949,14 @@ const locations = data.locations;
       </div>
     </div>
   </section>
+
 </BaseLayout>
+
+<style>
+  /* Prevent horizontal scroll on mobile */
+  @media (max-width: 768px) {
+    html, body {
+      overflow-x: hidden;
+    }
+  }
+</style>

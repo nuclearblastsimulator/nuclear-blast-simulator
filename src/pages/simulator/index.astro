@@ -1,6 +1,7 @@
 ---
 import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
 import ogImage from '../../images/og-preview.png';
+import logoImage from '../../images/logo.png';
 // Since the simulator needs full screen without header/footer, we'll handle it directly
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -69,6 +70,72 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
       transform: translateX(5px);
     }
     
+    /* Simulate button hint */
+    .simulate-btn-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #222;
+      padding: 1rem 0;
+      margin: -2rem -2rem 2rem -2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      border-bottom: 1px solid #444;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Remove bottom margin from button when sticky */
+    .simulate-btn-container .simulate-btn {
+      margin-bottom: 0;
+    }
+    
+    .simulate-hint {
+      position: absolute;
+      bottom: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+      animation: fadeInHint 0.5s ease-in-out 3s forwards;
+      pointer-events: none;
+      z-index: 101;
+    }
+    
+    .hint-arrow {
+      font-size: 1.5rem;
+      animation: bounce 1s ease-in-out infinite;
+    }
+    
+    .hint-text {
+      color: #f77f00;
+      font-weight: 600;
+      font-size: 0.875rem;
+      white-space: nowrap;
+    }
+    
+    @keyframes fadeInHint {
+      to {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    
+    /* Hide hint after button is clicked */
+    .simulate-btn:active ~ .simulate-hint,
+    .simulate-btn.clicked ~ .simulate-hint {
+      display: none;
+    }
+    
     /* Reset any Tailwind styles and ensure effects panel is hidden initially */
     .effects-panel {
       all: unset !important;
@@ -130,7 +197,7 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
   <div class="container">
     <div class="sidebar">
       <a href="/" class="header-container header-link" title="Back to Home">
-        <img src="/assets/logo/logo.png" alt="Nuclear Blast Simulator Logo" class="logo">
+        <img src={logoImage.src} alt="Nuclear Blast Simulator Logo" class="logo">
         <div class="title-wrapper">
           <h1 class="title-line">Nuclear Blast</h1>
           <h1 class="title-line">Simulator</h1>
@@ -138,9 +205,15 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
       </a>
       <p class="subtitle">Educational visualization of nuclear weapon effects</p>
 
-      <button class="simulate-btn" id="simulate-btn" onclick="simulateBlast()">
-        🚀 Simulate Bomb Detonation
-      </button>
+      <div class="simulate-btn-container">
+        <button class="simulate-btn" id="simulate-btn" onclick="simulateBlast()">
+          🚀 Detonate Selected Weapon
+        </button>
+        <div class="simulate-hint" id="simulate-hint">
+          <span class="hint-arrow">👆</span>
+          <span class="hint-text">Click here to start!</span>
+        </div>
+      </div>
 
       <div class="section">
         <h3 class="section-title">Select Weapon</h3>
@@ -192,6 +265,7 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
           </div>
         </div>
       </div>
+
 
       <div class="section">
         <h3 class="section-title">Blast Effects</h3>
@@ -327,7 +401,7 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
 
       <!-- Blast Effects Panel Toggle -->
       <button class="effects-toggle" id="effects-toggle" onclick="toggleEffectsPanel()">
-        <img src="/assets/logo/logo.png" alt="Blast Effects" class="effects-toggle-logo">
+        <img src={logoImage.src} alt="Blast Effects" class="effects-toggle-logo">
         <span class="effects-toggle-text">Blast Effects Details</span>
       </button>
 
@@ -352,5 +426,29 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
   
   <!-- Analytics - Load after app.js so it can access app variables -->
   <script src="/assets/js/analytics.js" is:inline></script>
+  
+  <!-- Hint management -->
+  <script>
+    // Hide hint when button is clicked
+    document.addEventListener('DOMContentLoaded', function() {
+      const simulateBtn = document.getElementById('simulate-btn');
+      const hint = document.getElementById('simulate-hint');
+      
+      if (simulateBtn && hint) {
+        simulateBtn.addEventListener('click', function() {
+          hint.style.display = 'none';
+          simulateBtn.classList.add('clicked');
+        });
+        
+        // Also hide hint after first interaction with any control
+        const controls = document.querySelectorAll('#weapon-select, input[name="detonation"], #city-select, #custom-address');
+        controls.forEach(control => {
+          control.addEventListener('change', function() {
+            if (hint) hint.style.display = 'none';
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
