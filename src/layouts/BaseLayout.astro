@@ -3,6 +3,7 @@ import '../assets/app.css';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import AtomicLogo from '../components/AtomicLogo.astro';
 import ogImage from '../images/og-preview.png';
+import logoImage from '../images/logo.png';
 
 export interface Props {
   title: string;
@@ -73,12 +74,12 @@ const ogImageURL = image || new URL(ogImage.src, Astro.site).href;
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </div>
-          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-2xl w-56 border border-base-300">
-            <li><a href="/simulator/" class="rounded-lg hover:bg-primary/10 hover:text-primary">Simulator</a></li>
-            <li><a href="/timeline/" class="rounded-lg hover:bg-primary/10 hover:text-primary">Timeline</a></li>
-            <li><a href="/terms/" class="rounded-lg hover:bg-primary/10 hover:text-primary">Glossary</a></li>
-            <li><a href="/history/" class="rounded-lg hover:bg-primary/10 hover:text-primary">History</a></li>
-            <li><a href="/resources/" class="rounded-lg hover:bg-primary/10 hover:text-primary">Resources</a></li>
+          <ul tabindex="0" class="menu menu-lg dropdown-content mt-3 z-[1] p-3 shadow-xl bg-base-100 rounded-2xl w-64 border border-base-300">
+            <li><a href="/simulator/" class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-3">Simulator</a></li>
+            <li><a href="/timeline/" class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-3">Timeline</a></li>
+            <li><a href="/terms/" class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-3">Glossary</a></li>
+            <li><a href="/history/" class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-3">History</a></li>
+            <li><a href="/resources/" class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-3">Resources</a></li>
           </ul>
         </div>
         
@@ -143,7 +144,7 @@ const ogImageURL = image || new URL(ogImage.src, Astro.site).href;
         <div class="md:col-span-2">
           <div class="flex items-center gap-2 mb-4">
             <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-              <img src="/assets/logo/logo.png" alt="Nuclear Blast Simulator Logo" class="w-5 h-5">
+              <img src={logoImage.src} alt="Nuclear Blast Simulator Logo" class="w-5 h-5">
             </div>
             <span class="text-lg font-bold">Nuclear Blast Simulator</span>
           </div>
