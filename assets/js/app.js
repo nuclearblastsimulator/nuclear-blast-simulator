@@ -1,29 +1,58 @@
 // Global variables
 let map;
-let currentBomb = 'little-boy';
+let currentBomb = null; // Will be set from JSON data
 let blastCircles = {};
 let useMetric = false;
 let hiddenZones = new Set();
 let groundZeroMarker = null;
 let currentLocation = { lat: 36.0104, lng: -84.2696 };
 let previousDetonationType = 'air'; // Track for analytics
-let previousWeapon = 'little-boy'; // Track for weapon comparison
+let previousWeapon = null; // Track for weapon comparison
 
-// Bomb data (yields in kilotons) with categories
-const bombData = {
-    'tnt': { name: '1 Ton TNT', yield: 0.001, details: 'Reference explosive', category: 'non-nuclear' },
-    'tomahawk': { name: 'Tomahawk Missile', yield: 0.5, details: '1,000 lbs warhead • Cruise missile', category: 'non-nuclear' },
-    'moab': { name: 'MOAB (Mother of All Bombs)', yield: 11, details: '21,600 lbs • Largest conventional', category: 'non-nuclear' },
-    'little-boy': { name: 'Little Boy', yield: 15, details: '15 kilotons • Hiroshima 1945', category: 'atomic' },
-    'fat-man': { name: 'Fat Man', yield: 21, details: '21 kilotons • Nagasaki 1945', category: 'atomic' },
-    'w88': { name: 'W88 Warhead', yield: 475, details: '475 kilotons • Modern US SLBM', category: 'strategic' },
-    'b83': { name: 'B83', yield: 1200, details: '1.2 megatons • US Strategic Bomb', category: 'strategic' },
-    'castle-bravo': { name: 'Castle Bravo', yield: 15000, details: '15 megatons • Largest US test', category: 'test' },
-    'tsar-bomba': { name: 'Tsar Bomba', yield: 50000, details: '50 megatons • Largest ever tested', category: 'test' }
-};
+// Bomb data - will be populated from JSON
+let bombData = {};
+let weaponCategories = {};
+let defaultWeapon = null;
 
 // Initialize everything after page loads
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', async function () {
+    // Load weapon data from JSON
+    try {
+        const response = await fetch('/assets/data.json');
+        const data = await response.json();
+        
+        // Process weapons data
+        data.weapons.forEach(weapon => {
+            bombData[weapon.id] = {
+                name: weapon.name,
+                yield: weapon.yield,
+                details: weapon.details,
+                category: weapon.category
+            };
+            
+            // Set default weapon
+            if (weapon.default) {
+                defaultWeapon = weapon.id;
+                currentBomb = weapon.id;
+                previousWeapon = weapon.id;
+            }
+        });
+        
+        // Store categories
+        weaponCategories = data.categories;
+        
+        // Populate weapon select dropdown
+        populateWeaponSelect(data.weapons);
+        
+        // Update initial weapon details
+        updateWeaponDetails();
+        
+    } catch (error) {
+        console.error('Error loading weapons data:', error);
+        // Fallback to hardcoded data if JSON fails to load
+        alert('Error loading weapons data. Please refresh the page.');
+    }
+    
     // Initialize map
     map = L.map('map').setView([36.0104, -84.2696], 12);
 
@@ -39,6 +68,17 @@ window.addEventListener('DOMContentLoaded', function () {
     const style = document.createElement('style');
     style.textContent = '.map-tiles { filter: brightness(5) contrast(0.7); }';
     document.head.appendChild(style);
+
+    // Track map interactions
+    let mapInteractionTimeout;
+    map.on('moveend', function() {
+        clearTimeout(mapInteractionTimeout);
+        mapInteractionTimeout = setTimeout(() => {
+            if (typeof Analytics !== 'undefined') {
+                Analytics.trackMapInteraction('pan_zoom', map.getZoom());
+            }
+        }, 1000); // Debounce to avoid too many events
+    });
 
     // Set up event listeners
     setupEventListeners();
@@ -68,6 +108,41 @@ function formatDistance(meters) {
             return `${miles.toFixed(2)} miles`;
         }
     }
+}
+
+// Populate weapon select dropdown from JSON data
+function populateWeaponSelect(weapons) {
+    const select = document.getElementById('weapon-select');
+    select.innerHTML = ''; // Clear existing options
+    
+    // Group weapons by category
+    const weaponsByCategory = {};
+    weapons.forEach(weapon => {
+        if (!weaponsByCategory[weapon.category]) {
+            weaponsByCategory[weapon.category] = [];
+        }
+        weaponsByCategory[weapon.category].push(weapon);
+    });
+    
+    // Create optgroups and options
+    Object.keys(weaponCategories).forEach(categoryKey => {
+        if (weaponsByCategory[categoryKey]) {
+            const optgroup = document.createElement('optgroup');
+            optgroup.label = weaponCategories[categoryKey];
+            
+            weaponsByCategory[categoryKey].forEach(weapon => {
+                const option = document.createElement('option');
+                option.value = weapon.id;
+                option.textContent = weapon.displayText;
+                if (weapon.default) {
+                    option.selected = true;
+                }
+                optgroup.appendChild(option);
+            });
+            
+            select.appendChild(optgroup);
+        }
+    });
 }
 
 // Nuclear weapon effects scaling formulas based on authoritative sources
