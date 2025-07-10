@@ -24,6 +24,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <title>{title} - Nuclear Blast Simulator</title>
   <meta name="description" content={description}>
   <meta name="author" content="Nuclear Blast Simulator">
+
+  <meta name="google-site-verification" content="M5rXsNworpSxOqmAn4-hM5dkayYb7z6F9g9Nf-Qf-qU" />
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -53,18 +55,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Google Analytics (Production Only) -->
-  {import.meta.env.PROD && import.meta.env.PUBLIC_GA_MEASUREMENT_ID && (
-    <>
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_MEASUREMENT_ID}`}></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', import.meta.env.PUBLIC_GA_MEASUREMENT_ID);
-      </script>
-    </>
-  )}
+  <!-- Google Analytics -->
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-NQR1693Q51'}`}></script>
+  <script is:inline define:vars={{ GA_ID: import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-NQR1693Q51' }}>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  </script>
 </head>
 <body class="min-h-screen bg-base-100 text-base-content flex flex-col">
   <!-- Header -->
