@@ -28,7 +28,8 @@
   "devDependencies": {
     "daisyui": "^5.0.46",
     "dotenv": "^17.0.0",
-    "eslint": "^9.30.0"
+    "eslint": "^9.30.0",
+    "sharp": "^0.34.2"
   },
   "engines": {
     "node": ">=14.0.0"
