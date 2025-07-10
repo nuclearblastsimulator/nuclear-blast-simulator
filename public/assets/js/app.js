@@ -1,12 +1,16 @@
 // Helper to check if we're in development
-const isDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+if (typeof isDev === 'undefined') {
+  window.isDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+}
 
 // Console log wrapper that only logs in development
-const devLog = (...args) => {
-  if (isDev) {
-    console.log(...args);
-  }
-};
+if (typeof devLog === 'undefined') {
+  window.devLog = (...args) => {
+    if (window.isDev) {
+      console.log(...args);
+    }
+  };
+}
 
 // Global variables
 let map
