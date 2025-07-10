@@ -6,6 +6,8 @@ let useMetric = false;
 let hiddenZones = new Set();
 let groundZeroMarker = null;
 let currentLocation = { lat: 36.0104, lng: -84.2696 };
+let previousDetonationType = 'air'; // Track for analytics
+let previousWeapon = 'little-boy'; // Track for weapon comparison
 
 // Bomb data (yields in kilotons)
 const bombData = {
@@ -164,6 +166,15 @@ function simulateBlast() {
         return;
     }
 
+    // Get current detonation type for analytics
+    const detonationType = document.querySelector('input[name="detonation"]:checked').value;
+    const locationName = citySelect.options[citySelect.selectedIndex]?.text || customAddress || 'Custom Location';
+    
+    // Track blast simulation
+    if (typeof Analytics !== 'undefined') {
+        Analytics.trackBlastSimulation(currentBomb, locationName, detonationType);
+    }
+
     // Clear existing blast
     clearBlast();
 
@@ -181,6 +192,15 @@ function drawBlast(lat, lng) {
 
     // Store the circles in order from largest to smallest for staggered animation
     const circleOrder = [];
+
+    // Helper function to add click tracking to circles
+    const addZoneClickTracking = (circle, zoneType) => {
+        circle.on('click', () => {
+            if (typeof Analytics !== 'undefined') {
+                Analytics.trackZoneClicked(zoneType);
+            }
+        });
+    };
 
     // Thermal radiation (outermost)
     if (!hiddenZones.has('thermal')) {
@@ -202,6 +222,8 @@ function drawBlast(lat, lng) {
             radii.thermalRadiation,
             thermalEffects
         ));
+        
+        addZoneClickTracking(thermalCircle, 'thermal');
         blastCircles.thermal = thermalCircle;
         circleOrder.push({ circle: thermalCircle, opacity: 0.2 });
     }
@@ -226,6 +248,8 @@ function drawBlast(lat, lng) {
             radii.lightBlast,
             lightEffects
         ));
+        
+        addZoneClickTracking(lightCircle, 'light');
         blastCircles.light = lightCircle;
         circleOrder.push({ circle: lightCircle, opacity: 0.3 });
     }
@@ -250,6 +274,8 @@ function drawBlast(lat, lng) {
             radii.moderateBlast,
             moderateEffects
         ));
+        
+        addZoneClickTracking(moderateCircle, 'moderate');
         blastCircles.moderate = moderateCircle;
         circleOrder.push({ circle: moderateCircle, opacity: 0.4 });
     }
@@ -274,6 +300,8 @@ function drawBlast(lat, lng) {
             radii.heavyBlast,
             heavyEffects
         ));
+        
+        addZoneClickTracking(heavyCircle, 'heavy');
         blastCircles.heavy = heavyCircle;
         circleOrder.push({ circle: heavyCircle, opacity: 0.5 });
     }
@@ -298,6 +326,8 @@ function drawBlast(lat, lng) {
             radii.fireball,
             fireballEffects
         ));
+        
+        addZoneClickTracking(fireballCircle, 'fireball');
         blastCircles.fireball = fireballCircle;
         circleOrder.push({ circle: fireballCircle, opacity: 0.6 });
     }
@@ -360,11 +390,24 @@ async function searchAddress() {
             map.setView([lat, lng], 12);
             document.getElementById('city-select').value = '';
             clearBlast(); // Clear blast when location changes
+            
+            // Track successful search
+            if (typeof Analytics !== 'undefined') {
+                Analytics.trackCustomLocationSearched(address, true);
+            }
         } else {
             alert('Location not found. Please try a different address.');
+            // Track failed search
+            if (typeof Analytics !== 'undefined') {
+                Analytics.trackCustomLocationSearched(address, false);
+            }
         }
     } catch (error) {
         alert('Error searching for location. Please try again.');
+        // Track failed search
+        if (typeof Analytics !== 'undefined') {
+            Analytics.trackCustomLocationSearched(address, false);
+        }
     }
 }
 
@@ -372,8 +415,24 @@ async function searchAddress() {
 function setupEventListeners() {
     // Handle weapon selection
     document.getElementById('weapon-select').addEventListener('change', function () {
+        const blastActive = Object.keys(blastCircles).length > 0;
+        
+        // Track weapon comparison if blast is active
+        if (typeof Analytics !== 'undefined' && blastActive) {
+            Analytics.trackWeaponComparison(previousWeapon, this.value, true);
+        }
+        
         currentBomb = this.value;
         updateWeaponDetails();
+        
+        // Track weapon selection
+        if (typeof Analytics !== 'undefined') {
+            const weapon = bombData[currentBomb];
+            const category = getWeaponCategory(currentBomb);
+            Analytics.trackWeaponSelected(weapon.name, weapon.yield, category);
+        }
+        
+        previousWeapon = currentBomb;
         clearBlast(); // Clear blast when weapon changes
     });
 
@@ -384,6 +443,12 @@ function setupEventListeners() {
             currentLocation = { lat, lng };
             map.setView([lat, lng], 12);
             clearBlast(); // Clear blast when city changes
+            
+            // Track city selection
+            if (typeof Analytics !== 'undefined') {
+                const cityName = this.options[this.selectedIndex].text;
+                Analytics.trackPresetCitySelected(cityName, this.value);
+            }
         }
     });
 
@@ -400,6 +465,15 @@ function setupEventListeners() {
     // Handle detonation type change
     document.querySelectorAll('input[name="detonation"]').forEach(radio => {
         radio.addEventListener('change', function() {
+            const newType = this.value;
+            
+            // Track detonation type change
+            if (typeof Analytics !== 'undefined') {
+                Analytics.trackDetonationTypeChanged(newType, previousDetonationType);
+            }
+            
+            previousDetonationType = newType;
+            
             // If blast is currently shown, redraw it
             if (Object.keys(blastCircles).length > 0) {
                 clearBlast();
@@ -447,12 +521,27 @@ window.searchAddress = searchAddress;
 // Effects panel functions
 function toggleEffectsPanel() {
     const panel = document.getElementById('effects-panel');
-    panel.classList.toggle('open');
+    const isOpening = !panel.classList.contains('open');
+    
+    if (isOpening) {
+        panel.classList.add('open');
+        // Track panel opened
+        if (typeof Analytics !== 'undefined') {
+            Analytics.trackEffectsPanelOpened();
+        }
+    } else {
+        closeEffectsPanel();
+    }
 }
 
 function closeEffectsPanel() {
     const panel = document.getElementById('effects-panel');
     panel.classList.remove('open');
+    
+    // Track panel closed
+    if (typeof Analytics !== 'undefined') {
+        Analytics.trackEffectsPanelClosed();
+    }
 }
 
 function updateEffectsPanel(bomb, radii, isSurfaceBurst) {
@@ -561,6 +650,22 @@ function updateEffectsPanel(bomb, radii, isSurfaceBurst) {
     });
 
     content.innerHTML = html;
+}
+
+// Helper function to get weapon category
+function getWeaponCategory(weaponId) {
+    const categories = {
+        'tnt': 'non-nuclear',
+        'tomahawk': 'non-nuclear',
+        'moab': 'non-nuclear',
+        'little-boy': 'atomic',
+        'fat-man': 'atomic',
+        'w88': 'strategic',
+        'b83': 'strategic',
+        'castle-bravo': 'test',
+        'tsar-bomba': 'test'
+    };
+    return categories[weaponId] || 'unknown';
 }
 
 window.toggleEffectsPanel = toggleEffectsPanel;
