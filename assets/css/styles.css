@@ -433,11 +433,6 @@ input:focus {
     }
 }
 
-.blast-circle {
-    animation: blastExpand 0.8s ease-out;
-    transform-origin: center;
-}
-
 /* Leaflet Popup Styling */
 .leaflet-popup-content-wrapper {
     background: #333;
@@ -593,17 +588,19 @@ input:focus {
 /* Slide-over Panel */
 .effects-panel {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 20px;
+    right: 20px;
     width: 400px;
-    height: 100%;
+    height: calc(100% - 40px);
+    max-height: 600px;
     background: #222;
-    border-left: 1px solid #444;
-    transform: translateX(100%);
+    border: 1px solid #444;
+    border-radius: 12px;
+    transform: translateX(calc(100% + 40px));
     transition: transform 0.3s ease;
     z-index: 1001;
     overflow-y: auto;
-    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 .effects-panel.open {
@@ -620,6 +617,7 @@ input:focus {
     justify-content: space-between;
     align-items: center;
     z-index: 10;
+    border-radius: 12px 12px 0 0;
 }
 
 .effects-panel-header h2 {
@@ -885,9 +883,9 @@ input:focus {
         transform: scale(0.9);
     }
 
-    /* .map-fullscreen .wind-indicator {
+    .map-fullscreen .wind-indicator {
         bottom: 10px; /* Keep consistent position in fullscreen */
-    } */
+    }
 
     .wind-compass {
         gap: 0.25rem;
@@ -926,10 +924,10 @@ input:focus {
         right: 15px;
     }
 
-    /* .map-fullscreen .effects-toggle {
+    .map-fullscreen .effects-toggle {
         top: 60px;
         right: 10px;
-    } */
+    }
 
     .effects-toggle {
         top: 10px;
@@ -958,6 +956,9 @@ input:focus {
         transform: translateX(100%);
         transition: transform 0.3s ease;
         box-shadow: none;
+        border-radius: 0;
+        border: none;
+        max-height: none;
     }
 
     /* Support for dynamic viewport height */
@@ -969,6 +970,7 @@ input:focus {
 
     .effects-panel-header {
         padding: 1rem;
+        border-radius: 0;
     }
 
     .effects-panel-header h2 {

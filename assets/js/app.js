@@ -334,7 +334,29 @@ function drawBlast(lat, lng) {
   const isSurfaceBurst =
     document.querySelector('input[name="detonation"]:checked').value === 'surface'
 
-  // Store the circles in order from largest to smallest for staggered animation
+  // Add ground zero marker first
+  const detonationType = isSurfaceBurst ? 'Surface Burst' : 'Air Burst'
+  const detonationNote = isSurfaceBurst
+    ? 'Creates significant radioactive fallout and crater'
+    : 'Optimized for maximum blast damage area'
+
+  groundZeroMarker = L.marker([lat, lng]).addTo(map)
+    .bindPopup(`<div style="background: #222; color: #fff; padding: 12px; border-radius: 6px;">
+              <h4 style="margin: 0 0 8px 0; color: #f77f00; font-family: 'Rubik Mono One', monospace; font-size: 14px; text-transform: uppercase;">${
+                bomb.name
+              }</h4>
+              <p style="margin: 4px 0; font-size: 14px; font-family: 'Inter', sans-serif;"><strong>Yield:</strong> ${
+                bomb.yield < 1
+                  ? bomb.yield * 1000 + ' tons TNT'
+                  : bomb.yield > 1000
+                  ? bomb.yield / 1000 + ' MT'
+                  : bomb.yield + ' kT'
+              }</p>
+              <p style="margin: 4px 0; font-size: 13px; font-family: 'Inter', sans-serif;"><strong>Type:</strong> ${detonationType}</p>
+              <p style="margin: 4px 0; font-size: 12px; color: #ccc; font-family: 'Inter', sans-serif;">${detonationNote}</p>
+          </div>`)
+
+  // Store the circles for animation
   const circleOrder = []
 
   // Helper function to add click tracking to circles
@@ -346,15 +368,18 @@ function drawBlast(lat, lng) {
     })
   }
 
-  // Thermal radiation (outermost)
+  // Add circles from largest to smallest (so smaller ones are on top)
+  // But store them in reverse order for animation
+
+  // Thermal radiation (outermost - add first so it's at the bottom)
   if (!hiddenZones.has('thermal')) {
     const thermalCircle = L.circle([lat, lng], {
-      radius: radii.thermalRadiation,
+      radius: 0, // Start with 0 radius for animation
       fillColor: '#c8c800',
       fillOpacity: 0,
       color: '#c8c800',
-      weight: 1,
-      className: 'blast-circle'
+      weight: 0, // Start with 0 weight
+      opacity: 1
     }).addTo(map)
 
     const thermalEffects = isSurfaceBurst
@@ -367,18 +392,17 @@ function drawBlast(lat, lng) {
 
     addZoneClickTracking(thermalCircle, 'thermal')
     blastCircles.thermal = thermalCircle
-    circleOrder.push({ circle: thermalCircle, opacity: 0.2 })
   }
 
   // Light damage
   if (!hiddenZones.has('light')) {
     const lightCircle = L.circle([lat, lng], {
-      radius: radii.lightBlast,
+      radius: 0, // Start with 0 radius for animation
       fillColor: '#ffff00',
       fillOpacity: 0,
       color: '#ffff00',
-      weight: 1,
-      className: 'blast-circle'
+      weight: 0, // Start with 0 weight
+      opacity: 1
     }).addTo(map)
 
     const lightEffects = isSurfaceBurst
@@ -391,18 +415,17 @@ function drawBlast(lat, lng) {
 
     addZoneClickTracking(lightCircle, 'light')
     blastCircles.light = lightCircle
-    circleOrder.push({ circle: lightCircle, opacity: 0.3 })
   }
 
   // Moderate damage
   if (!hiddenZones.has('moderate')) {
     const moderateCircle = L.circle([lat, lng], {
-      radius: radii.moderateBlast,
+      radius: 0, // Start with 0 radius for animation
       fillColor: '#ffc800',
       fillOpacity: 0,
       color: '#ffc800',
-      weight: 1,
-      className: 'blast-circle'
+      weight: 0, // Start with 0 weight
+      opacity: 1
     }).addTo(map)
 
     const moderateEffects = isSurfaceBurst
@@ -415,18 +438,17 @@ function drawBlast(lat, lng) {
 
     addZoneClickTracking(moderateCircle, 'moderate')
     blastCircles.moderate = moderateCircle
-    circleOrder.push({ circle: moderateCircle, opacity: 0.4 })
   }
 
   // Heavy blast damage
   if (!hiddenZones.has('heavy')) {
     const heavyCircle = L.circle([lat, lng], {
-      radius: radii.heavyBlast,
+      radius: 0, // Start with 0 radius for animation
       fillColor: '#ff6400',
       fillOpacity: 0,
       color: '#ff6400',
-      weight: 1,
-      className: 'blast-circle'
+      weight: 0, // Start with 0 weight
+      opacity: 1
     }).addTo(map)
 
     const heavyEffects = isSurfaceBurst
@@ -439,18 +461,17 @@ function drawBlast(lat, lng) {
 
     addZoneClickTracking(heavyCircle, 'heavy')
     blastCircles.heavy = heavyCircle
-    circleOrder.push({ circle: heavyCircle, opacity: 0.5 })
   }
 
-  // Fireball
+  // Fireball (innermost - add last so it's on top)
   if (!hiddenZones.has('fireball')) {
     const fireballCircle = L.circle([lat, lng], {
-      radius: radii.fireball,
+      radius: 0, // Start with 0 radius for animation
       fillColor: '#ff0000',
       fillOpacity: 0,
       color: '#ff0000',
-      weight: 2,
-      className: 'blast-circle'
+      weight: 0, // Start with 0 weight
+      opacity: 1
     }).addTo(map)
 
     const fireballEffects = isSurfaceBurst
@@ -461,39 +482,72 @@ function drawBlast(lat, lng) {
 
     addZoneClickTracking(fireballCircle, 'fireball')
     blastCircles.fireball = fireballCircle
-    circleOrder.push({ circle: fireballCircle, opacity: 0.6 })
   }
 
-  // Animate opacity for each circle with staggered timing
+  // Build animation order from inside out
+  if (blastCircles.fireball)
+    circleOrder.push({
+      circle: blastCircles.fireball,
+      opacity: 0.6,
+      targetRadius: radii.fireball,
+      targetWeight: 2
+    })
+  if (blastCircles.heavy)
+    circleOrder.push({
+      circle: blastCircles.heavy,
+      opacity: 0.5,
+      targetRadius: radii.heavyBlast,
+      targetWeight: 1
+    })
+  if (blastCircles.moderate)
+    circleOrder.push({
+      circle: blastCircles.moderate,
+      opacity: 0.4,
+      targetRadius: radii.moderateBlast,
+      targetWeight: 1
+    })
+  if (blastCircles.light)
+    circleOrder.push({
+      circle: blastCircles.light,
+      opacity: 0.3,
+      targetRadius: radii.lightBlast,
+      targetWeight: 1
+    })
+  if (blastCircles.thermal)
+    circleOrder.push({
+      circle: blastCircles.thermal,
+      opacity: 0.2,
+      targetRadius: radii.thermalRadiation,
+      targetWeight: 1
+    })
+
+  // Animate radius and opacity for each circle with staggered timing
   circleOrder.forEach((item, index) => {
     setTimeout(() => {
-      item.circle.setStyle({ fillOpacity: item.opacity })
-    }, index * 150)
+      animateCircle(item.circle, item.targetRadius, item.opacity, item.targetWeight)
+    }, index * 100)
   })
 
-  // Add marker at ground zero after circles animate
-  setTimeout(() => {
-    const detonationType = isSurfaceBurst ? 'Surface Burst' : 'Air Burst'
-    const detonationNote = isSurfaceBurst
-      ? 'Creates significant radioactive fallout and crater'
-      : 'Optimized for maximum blast damage area'
+  // Helper function to animate a single circle
+  function animateCircle(circle, targetRadius, targetOpacity, targetWeight) {
+    let startTime = Date.now()
+    const duration = 400
 
-    groundZeroMarker = L.marker([lat, lng]).addTo(map)
-      .bindPopup(`<div style="background: #222; color: #fff; padding: 12px; border-radius: 6px;">
-                <h4 style="margin: 0 0 8px 0; color: #f77f00; font-family: 'Rubik Mono One', monospace; font-size: 14px; text-transform: uppercase;">${
-                  bomb.name
-                }</h4>
-                <p style="margin: 4px 0; font-size: 14px; font-family: 'Inter', sans-serif;"><strong>Yield:</strong> ${
-                  bomb.yield < 1
-                    ? bomb.yield * 1000 + ' tons TNT'
-                    : bomb.yield > 1000
-                    ? bomb.yield / 1000 + ' MT'
-                    : bomb.yield + ' kT'
-                }</p>
-                <p style="margin: 4px 0; font-size: 13px; font-family: 'Inter', sans-serif;"><strong>Type:</strong> ${detonationType}</p>
-                <p style="margin: 4px 0; font-size: 12px; color: #ccc; font-family: 'Inter', sans-serif;">${detonationNote}</p>
-            </div>`)
-  }, circleOrder.length * 150)
+    function animate() {
+      const progress = Math.min((Date.now() - startTime) / duration, 1)
+      const eased = 1 - Math.pow(1 - progress, 4) // easeOutQuart
+
+      circle.setRadius(targetRadius * eased)
+      circle.setStyle({
+        fillOpacity: targetOpacity * progress,
+        weight: targetWeight * progress
+      })
+
+      if (progress < 1) requestAnimationFrame(animate)
+    }
+
+    requestAnimationFrame(animate)
+  }
 
   // Show effects panel button and update panel content
   setTimeout(() => {
@@ -504,7 +558,7 @@ function drawBlast(lat, lng) {
     if (isSurfaceBurst) {
       drawFalloutPattern(lat, lng, bomb.yield)
     }
-  }, circleOrder.length * 150 + 200)
+  }, circleOrder.length * 100 + 200)
 
   // Adjust map view to show all circles
   map.setView([lat, lng], getZoomLevel(radii.thermalRadiation))
@@ -710,6 +764,16 @@ function setupEventListeners() {
         simulateBlast()
       }
     })
+  })
+
+  // Handle escape key to close effects panel
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      const panel = document.getElementById('effects-panel')
+      if (panel.classList.contains('open')) {
+        closeEffectsPanel()
+      }
+    }
   })
 }
 
