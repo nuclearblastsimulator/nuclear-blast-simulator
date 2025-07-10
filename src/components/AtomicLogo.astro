@@ -1,0 +1,158 @@
+---
+export interface Props {
+  size?: 'sm' | 'md' | 'lg';
+  showOrbits?: boolean;
+  class?: string;
+}
+
+const { 
+  size = 'md', 
+  showOrbits = true,
+  class: className = ''
+} = Astro.props;
+
+// Size configurations
+const sizes = {
+  sm: {
+    container: 'w-10 h-10',
+    logo: 'w-8 h-8',  // Increased from w-6 h-6
+    orbit1: 'w-10 h-10',
+    orbit2: 'w-9 h-9',
+    orbit3: 'w-8 h-8',
+    electron: 'w-1 h-1',
+    electronOffset: '-0.5px'
+  },
+  md: {
+    container: 'w-32 h-32 md:w-40 md:h-40',
+    logo: 'w-24 h-24 md:w-32 md:h-32',  // Increased from w-20/w-24
+    orbit1: 'w-28 h-28 md:w-32 md:h-32',  // Decreased from w-32/w-40
+    orbit2: 'w-24 h-24 md:w-28 md:h-28',  // Decreased
+    orbit3: 'w-20 h-20 md:w-24 md:h-24',  // Decreased
+    electron: 'w-1.5 h-1.5',
+    electronOffset: '-3px'
+  },
+  lg: {
+    container: 'w-44 h-44',
+    logo: 'w-36 h-36',  // Increased from w-32
+    orbit1: 'w-36 h-36',  // Decreased from w-40
+    orbit2: 'w-32 h-32',  // Decreased from w-35
+    orbit3: 'w-28 h-28',  // Decreased from w-30
+    electron: 'w-2 h-2',
+    electronOffset: '-4px'
+  }
+};
+
+const sizeConfig = sizes[size];
+---
+
+<div class={`relative atomic-logo ${sizeConfig.container} ${className}`} data-size={size}>
+  {showOrbits && (
+    <>
+      <!-- Rotating atomic rings -->
+      <div class={`atomic-orbit atomic-orbit-1 ${sizeConfig.orbit1}`}></div>
+      <div class={`atomic-orbit atomic-orbit-2 ${sizeConfig.orbit2}`}></div>
+      <div class={`atomic-orbit atomic-orbit-3 ${sizeConfig.orbit3}`}></div>
+    </>
+  )}
+  
+  <!-- Central logo (nucleus) -->
+  <img 
+    src="/assets/logo/logo.png" 
+    alt="Nuclear Blast Simulator Logo" 
+    class={`${sizeConfig.logo} object-contain relative z-10`}
+  />
+</div>
+
+<style define:vars={{ electronOffset: sizeConfig.electronOffset, electronSize: sizeConfig.electron }}>
+  @keyframes orbit-3d {
+    from {
+      transform: rotateY(0deg) rotateX(60deg);
+    }
+    to {
+      transform: rotateY(360deg) rotateX(60deg);
+    }
+  }
+  
+  @keyframes orbit-3d-reverse {
+    from {
+      transform: rotateY(360deg) rotateX(45deg) rotateZ(45deg);
+    }
+    to {
+      transform: rotateY(0deg) rotateX(45deg) rotateZ(45deg);
+    }
+  }
+  
+  @keyframes orbit-3d-alt {
+    from {
+      transform: rotateY(0deg) rotateX(30deg) rotateZ(-45deg);
+    }
+    to {
+      transform: rotateY(360deg) rotateX(30deg) rotateZ(-45deg);
+    }
+  }
+  
+  .atomic-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .atomic-orbit {
+    position: absolute;
+    border: 2px solid;
+    border-radius: 50%;
+    opacity: 0.5;
+    transform-style: preserve-3d;
+  }
+  
+  .atomic-orbit-1 {
+    border-color: hsl(var(--p));
+    animation: orbit-3d 15s linear infinite;
+  }
+  
+  .atomic-orbit-2 {
+    border-color: hsl(var(--s));
+    animation: orbit-3d-reverse 12s linear infinite;
+  }
+  
+  .atomic-orbit-3 {
+    border-color: hsl(var(--a));
+    animation: orbit-3d-alt 10s linear infinite;
+  }
+  
+  /* Add glowing electrons on the orbits */
+  .atomic-orbit::before,
+  .atomic-orbit::after {
+    content: '';
+    position: absolute;
+    width: var(--electronSize);
+    height: var(--electronSize);
+    background: currentColor;
+    border-radius: 50%;
+  }
+  
+  .atomic-orbit::before {
+    top: var(--electronOffset);
+    left: calc(50% - var(--electronSize) / 2);
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+  
+  .atomic-orbit::after {
+    bottom: var(--electronOffset);
+    right: calc(50% - var(--electronSize) / 2);
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+  
+  /* Smaller animations for navbar size */
+  .atomic-logo[data-size="sm"] .atomic-orbit {
+    border-width: 1px;
+    opacity: 0.4;
+  }
+  
+  .atomic-logo[data-size="sm"] .atomic-orbit::before,
+  .atomic-logo[data-size="sm"] .atomic-orbit::after {
+    box-shadow: 0 0 4px currentColor;
+  }
+</style>
