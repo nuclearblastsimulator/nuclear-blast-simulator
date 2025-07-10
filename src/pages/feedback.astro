@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import AtomicLogo from '../components/AtomicLogo.astro';
 ---
 
 <BaseLayout
@@ -113,4 +114,57 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
     </div>
   </div>
+
+  <!-- Thank You Modal -->
+  <dialog id="thankYouModal" class="modal">
+    <div class="modal-box text-center">
+      <div class="flex justify-center mb-6">
+        <AtomicLogo size="lg" showOrbits={true} />
+      </div>
+      <h3 class="font-bold text-2xl mb-4">Thank You!</h3>
+      <p class="text-lg mb-6">Your feedback has been successfully submitted. We appreciate your input in making this educational resource better.</p>
+      <div class="modal-action justify-center">
+        <button class="btn btn-primary" onclick="document.getElementById('thankYouModal').close()">Close</button>
+      </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+      <button>close</button>
+    </form>
+  </dialog>
+
+  <script>
+    // Handle form submission
+    const form = document.querySelector('form[name="feedback"]');
+    const modal = document.getElementById('thankYouModal');
+    
+    if (form && modal) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(form);
+        
+        try {
+          // Submit to Netlify
+          const response = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
+          });
+          
+          if (response.ok) {
+            // Show thank you modal
+            modal.showModal();
+            // Reset form
+            form.reset();
+          } else {
+            alert('There was an error submitting your feedback. Please try again.');
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          alert('There was an error submitting your feedback. Please try again.');
+        }
+      });
+    }
+  </script>
 </BaseLayout>
