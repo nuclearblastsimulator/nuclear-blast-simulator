@@ -345,7 +345,7 @@ Their experiences provide the most powerful argument for nuclear disarmament and
 
 <!-- SUMMARY_END -->
 
-## Full Article
+## Deep Dive
 
 ### The Flash That Changed Everything
 

@@ -1,5 +1,5 @@
 ---
-title: "Novaya Zemlya"
+title: 'Novaya Zemlya'
 description: "The Soviet Union's Arctic nuclear test site hosted 224 nuclear tests from 1955 to 1990, including the largest nuclear explosion in history - the 50-megaton Tsar Bomba..."
 ---
 
@@ -12,6 +12,7 @@ Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Un
 ## Background
 
 ### Geographic Setting
+
 - **Arctic archipelago**: Two main islands in the Barents Sea
 - **Extreme isolation**: Remote location far from populated areas
 - **Harsh climate**: Extreme Arctic weather conditions
@@ -19,12 +20,14 @@ Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Un
 - **Natural barriers**: Ice and weather providing natural security
 
 ### Indigenous Peoples
+
 - **Nenets people**: Indigenous Arctic peoples affected by testing
 - **Traditional lifestyle**: Reindeer herding and fishing
 - **Forced evacuation**: Displaced from traditional territories
 - **Cultural impact**: Disruption of traditional Arctic culture
 
 ### Soviet Nuclear Program
+
 - **Expanding program**: Need for additional testing site
 - **Atmospheric testing**: Site for large atmospheric tests
 - **Hydrogen bomb**: Testing of thermonuclear weapons
@@ -33,18 +36,21 @@ Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Un
 ## Establishment as Test Site
 
 ### Site Selection (1954)
+
 - **Remote location**: Chosen for extreme isolation
 - **Weather conditions**: Harsh weather provided additional security
 - **Fallout patterns**: Prevailing winds carried fallout over uninhabited areas
 - **Military control**: Direct military administration
 
 ### Initial Testing (1955)
+
 - **First test**: RDS-37 hydrogen bomb test
 - **Atmospheric testing**: Focus on atmospheric nuclear tests
 - **Large yields**: Testing of high-yield nuclear weapons
 - **Scientific instrumentation**: Extensive scientific equipment
 
 ### Infrastructure Development
+
 - **Military facilities**: Construction of military support facilities
 - **Airfields**: Airfields for bomber aircraft
 - **Scientific stations**: Research stations and monitoring equipment
@@ -53,18 +59,21 @@ Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Un
 ## Major Tests
 
 ### RDS-37 (November 22, 1955)
+
 - **First hydrogen bomb**: First Soviet hydrogen bomb test
 - **1.6 megaton yield**: Significant increase in Soviet nuclear capability
 - **Dropped from aircraft**: Delivered by Tu-16 bomber
 - **Scientific success**: Demonstrated Soviet thermonuclear capability
 
 ### Tsar Bomba (October 30, 1961)
+
 - **Largest nuclear explosion**: 50 megaton yield
 - **Modified design**: Reduced from planned 100 megaton yield
 - **Global impact**: Detected worldwide by seismic stations
 - **Propaganda value**: Demonstrated Soviet nuclear supremacy
 
 ### Other Significant Tests
+
 - **RDS-202**: Original designation for Tsar Bomba
 - **High-yield tests**: Multiple tests in multi-megaton range
 - **Weapons development**: Testing of various weapon designs
@@ -73,24 +82,28 @@ Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Un
 ## Tsar Bomba Test
 
 ### Technical Specifications
+
 - **Yield**: 50 megatons (3,800 times Hiroshima bomb)
 - **Weight**: 27 tons
 - **Dimensions**: 8 meters long, 2 meters diameter
 - **Design**: Three-stage thermonuclear weapon
 
 ### Test Execution
+
 - **October 30, 1961**: Test conducted at 11:32 Moscow time
 - **Tu-95 bomber**: Dropped from specially modified aircraft
 - **Parachute delivery**: Parachute slowed descent for aircraft escape
 - **Detonation altitude**: Exploded at 4,000 meters altitude
 
 ### Immediate Effects
+
 - **Fireball**: Fireball reached 8 kilometers diameter
 - **Mushroom cloud**: Cloud reached 64 kilometers altitude
 - **Thermal radiation**: Thermal effects detected 1,000 kilometers away
 - **Seismic impact**: Equivalent to 5.25 magnitude earthquake
 
 ### Global Impact
+
 - **Worldwide detection**: Detected by monitoring stations globally
 - **Atmospheric effects**: Affected global atmospheric conditions
 - **International concern**: Raised international concern about nuclear testing
@@ -99,18 +112,21 @@ Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Un
 ## Environmental Impact
 
 ### Radioactive Contamination
+
 - **Atmospheric fallout**: Widespread radioactive fallout
 - **Local contamination**: Severe contamination of test areas
 - **Marine contamination**: Contamination of Arctic marine environment
 - **Long-lived isotopes**: Cesium-137, strontium-90, and plutonium
 
 ### Arctic Ecosystem
+
 - **Pristine environment**: Contamination of pristine Arctic environment
 - **Marine life**: Impact on Arctic marine ecosystems
 - **Terrestrial impact**: Contamination of Arctic tundra
 - **Food chain**: Radioactive contamination in Arctic food chains
 
 ### Permafrost and Ice
+
 - **Permafrost contamination**: Radioactive materials in permafrost
 - **Ice contamination**: Contamination of sea ice and glaciers
 - **Thawing effects**: Potential release of contamination as climate warms
@@ -119,18 +135,21 @@ Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Un
 ## Human Impact
 
 ### Indigenous Populations
+
 - **Forced displacement**: Nenets people displaced from traditional territories
 - **Cultural disruption**: Disruption of traditional Arctic culture
 - **Health effects**: Exposure to radioactive contamination
 - **Subsistence impact**: Contamination of traditional food sources
 
 ### Military Personnel
+
 - **Radiation exposure**: Personnel exposed to radioactive contamination
 - **Health monitoring**: Limited health monitoring of exposed personnel
 - **Occupational hazards**: Extreme working conditions and radiation exposure
 - **Long-term effects**: Potential long-term health effects
 
 ### Scientific Teams
+
 - **Research exposure**: Scientists exposed to radiation during studies
 - **Data collection**: Extensive data collection on nuclear effects
 - **Health risks**: Occupational health risks from radiation exposure
@@ -139,18 +158,21 @@ Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Un
 ## International Consequences
 
 ### Cold War Context
+
 - **Nuclear competition**: Demonstration of Soviet nuclear superiority
 - **Deterrence strategy**: Contribution to nuclear deterrence
 - **International prestige**: Enhanced Soviet international prestige
 - **Arms race acceleration**: Accelerated nuclear arms race
 
 ### Test Ban Negotiations
+
 - **International pressure**: Increased pressure for test ban treaties
 - **Atmospheric testing**: Contributed to end of atmospheric testing
 - **Limited Test Ban Treaty**: Influenced 1963 treaty negotiations
 - **Underground testing**: Shift to underground testing
 
 ### Environmental Awareness
+
 - **Global fallout**: Increased awareness of global fallout effects
 - **Environmental movement**: Contributed to environmental movement
 - **Nuclear dangers**: Raised awareness of nuclear weapons dangers
@@ -159,18 +181,21 @@ Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Un
 ## Scientific Significance
 
 ### Nuclear Physics
+
 - **Weapons science**: Advanced understanding of nuclear weapons physics
 - **Yield scaling**: Understanding of nuclear yield scaling
 - **Fusion research**: Advancement in thermonuclear fusion research
 - **Atmospheric effects**: Study of atmospheric nuclear effects
 
 ### Seismic Research
+
 - **Seismic monitoring**: Development of seismic monitoring techniques
 - **Detection methods**: Improved methods for detecting nuclear tests
 - **Verification**: Contribution to nuclear test verification
 - **International monitoring**: Enhanced international monitoring capabilities
 
 ### Atmospheric Studies
+
 - **Fallout patterns**: Study of global fallout patterns
 - **Atmospheric circulation**: Understanding of atmospheric circulation
 - **Climate effects**: Study of nuclear effects on climate
@@ -179,18 +204,21 @@ Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Un
 ## Site Closure and Legacy
 
 ### End of Testing
+
 - **1990**: Last nuclear test at Novaya Zemlya
 - **Soviet collapse**: End of Soviet Union ended testing
 - **Environmental concerns**: Growing environmental concerns
 - **International pressure**: International pressure to end testing
 
 ### Cleanup Efforts
+
 - **Limited cleanup**: Minimal cleanup of contaminated areas
 - **Access restrictions**: Restricted access to contaminated areas
 - **Monitoring**: Continued monitoring of contamination
 - **International cooperation**: Limited international cooperation
 
 ### Contemporary Status
+
 - **Military use**: Continued military use of some areas
 - **Restricted access**: Large areas remain restricted
 - **Scientific research**: Limited scientific research access
@@ -199,18 +227,21 @@ Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Un
 ## Modern Relevance
 
 ### Climate Change
+
 - **Arctic warming**: Climate change affecting Arctic contamination
 - **Permafrost thaw**: Potential release of contamination from thawing permafrost
 - **Ice melt**: Contamination release from melting ice
 - **Environmental monitoring**: Need for continued environmental monitoring
 
 ### Nuclear Archaeology
+
 - **Historical research**: Research into nuclear testing history
 - **Contamination mapping**: Detailed mapping of contamination
 - **Archaeological sites**: Nuclear test sites as archaeological sites
 - **Documentation**: Documentation of testing legacy
 
 ### Arctic Sovereignty
+
 - **Russian sovereignty**: Russian control over Arctic territories
 - **International law**: Application of international law to Arctic
 - **Environmental protection**: Arctic environmental protection
@@ -219,18 +250,21 @@ Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Un
 ## Lessons Learned
 
 ### Environmental Protection
+
 - **Pristine environments**: Vulnerability of pristine environments
 - **Global effects**: Global effects of nuclear testing
 - **Long-term contamination**: Long-term environmental contamination
 - **Prevention**: Importance of preventing environmental contamination
 
 ### Indigenous Rights
+
 - **Informed consent**: Lack of informed consent from indigenous peoples
 - **Cultural protection**: Need to protect indigenous cultures
 - **Land rights**: Indigenous land rights and sovereignty
 - **Environmental justice**: Environmental justice for indigenous peoples
 
 ### Nuclear Governance
+
 - **International oversight**: Need for international oversight
 - **Transparency**: Importance of transparency in nuclear activities
 - **Environmental assessment**: Environmental impact assessment
@@ -239,18 +273,21 @@ Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Un
 ## Scientific Legacy
 
 ### Nuclear Science
+
 - **Weapons physics**: Advancement in nuclear weapons physics
 - **Fusion research**: Contribution to fusion research
 - **Atmospheric science**: Understanding of atmospheric nuclear effects
 - **Seismic science**: Development of seismic monitoring
 
 ### Environmental Science
+
 - **Arctic ecology**: Understanding of Arctic ecosystem impacts
 - **Radiation ecology**: Study of radiation effects on ecosystems
 - **Contamination studies**: Long-term contamination studies
 - **Climate science**: Understanding of nuclear effects on climate
 
 ### Monitoring Technology
+
 - **Detection systems**: Development of nuclear detection systems
 - **Verification technology**: Nuclear test verification technology
 - **Environmental monitoring**: Environmental monitoring techniques
@@ -269,7 +306,7 @@ The site's legacy demonstrates the environmental and human costs of nuclear weap
 
 <!-- SUMMARY_END -->
 
-## Full Article
+## Deep Dive
 
 ### The Arctic Crucible of Nuclear Power
 
