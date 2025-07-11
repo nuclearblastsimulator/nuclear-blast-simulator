@@ -316,6 +316,18 @@ All educational articles include authoritative sources and references from:
 - Map data courtesy of OpenStreetMap contributors
 - Icons and graphics designed for educational clarity
 
+## 🔮 Future Features / TODO
+
+### Live Activity Feed (Removed - To Be Reimplemented)
+The live activity feed displayed recent detonations from other users in real-time. This feature has been temporarily removed and can be reimplemented with the following components:
+
+- **UI Components**: DaisyUI timeline component for displaying recent detonations
+- **Data Structure**: City, weapon name, and timestamp for each detonation
+- **Update Mechanism**: Fetch activity data every 30 seconds from `/api/analytics?type=live`
+- **Display Format**: Vertical timeline with weapon/time on left, explosion icon in middle, location on right
+- **Empty State**: Icon and message when no recent activity
+- **Responsive Design**: Hidden on mobile devices to preserve screen space
+
 ---
 
 **Remember**: The goal of this simulator is to educate about the devastating effects of nuclear weapons and promote peace through understanding.
