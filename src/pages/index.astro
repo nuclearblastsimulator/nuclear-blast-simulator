@@ -37,11 +37,15 @@ const locations = data.locations;
     
     <!-- Content -->
     <div class="relative z-10 text-center max-w-5xl mx-auto px-6">
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
-        <span class="text-primary text-sm font-medium">Educational Tool</span>
+      <a href="/simulator/" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 hover:bg-primary/20 hover:scale-105 transition-all cursor-pointer">
+        <span class="relative flex h-3 w-3">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+        </span>
+        <span class="text-primary text-sm font-medium">Nuclear Blast Simulator</span>
         <span class="text-base-content/50">•</span>
-        <span class="text-base-content/70 text-sm">{weapons.length} Nuclear Weapons Database</span>
-      </div>
+        <span class="text-base-content/70 text-sm">1,234,567 Detonations</span>
+      </a>
       
       <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
@@ -99,13 +103,13 @@ const locations = data.locations;
   <section class="py-20 px-6 bg-gradient-to-b from-base-100 to-base-200">
     <div class="container max-w-6xl mx-auto">
       <div class="text-center mb-12">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+        <a href="/simulator/" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 hover:bg-primary/20 hover:scale-105 transition-all cursor-pointer">
           <span class="relative flex h-3 w-3">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
             <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
           </span>
           <span class="text-sm text-primary font-medium">Live Demo</span>
-        </div>
+        </a>
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Watch It In Action</h2>
         <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
           See how easy it is to visualize nuclear weapon effects on any location
