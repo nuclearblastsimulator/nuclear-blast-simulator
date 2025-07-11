@@ -42,6 +42,15 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ['@astrojs/prism']
     },
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    // Proxy API requests to Netlify Dev server during development
+    server: {
+      proxy: {
+        '/api': {
+          target: 'http://localhost:8888',
+          changeOrigin: true
+        }
+      }
+    }
   }
 })

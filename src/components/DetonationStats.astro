@@ -1,0 +1,222 @@
+---
+import logoImage from '../images/logo.png';
+---
+
+<div class="stats-widget" id="stats-widget">
+  <div class="stats-widget-title">
+    <img src={logoImage.src} alt="Nuclear Blast Simulator" class="stats-logo" />
+    <span>Global Impact Statistics</span>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-label" data-tooltip="Total explosive power compared to the Hiroshima bomb (15 kilotons)">Hiroshima Equivalents</div>
+      <div class="stat-value" id="stat-hiroshima">0</div>
+    </div>
+    <div class="stat-item danger">
+      <div class="stat-label" data-tooltip="The city that has been targeted the most times in simulations">Most Nuked City</div>
+      <div class="stat-value" id="stat-most-nuked">—</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label" data-tooltip="Combined explosive yield of all detonations in megatons">Total Yield</div>
+      <div class="stat-value" id="stat-yield">0 MT</div>
+    </div>
+    <div class="stat-item success">
+      <div class="stat-label" data-tooltip="Time since the last detonation anywhere in the world">Peace Streak</div>
+      <div class="stat-value" id="stat-peace">0s</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label" data-tooltip="The nuclear weapon selected most frequently by users">Most Used Weapon</div>
+      <div class="stat-value" id="stat-weapon">—</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label" data-tooltip="Total area destroyed across all simulations">Area Destroyed</div>
+      <div class="stat-value" id="stat-area">0 km²</div>
+    </div>
+  </div>
+  <div class="nuclear-winter-bar">
+    <div class="nuclear-winter-label">
+      <span data-tooltip="Progress toward the theoretical 100,000 MT threshold that could trigger nuclear winter - a global climatic catastrophe causing widespread crop failure and famine">Nuclear Winter Progress</span>
+      <span id="nuclear-winter-percent">0%</span>
+    </div>
+    <div class="nuclear-winter-progress">
+      <div class="nuclear-winter-fill" id="nuclear-winter-fill" style="width: 0%"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .stats-widget {
+    width: 320px;
+    background: rgba(34, 34, 34, 0.95);
+    border: 2px solid #444;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+  }
+  
+  
+  .stats-widget-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .stats-logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  
+  .stat-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.6rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+    position: relative;
+  }
+  
+  .stat-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+    color: #999;
+    margin-bottom: 0.25rem;
+    position: relative;
+    cursor: help;
+  }
+  
+  .stat-label:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.95);
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    z-index: 1002;
+    pointer-events: none;
+    margin-bottom: 0.5rem;
+    max-width: 200px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.4;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .stat-label:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.95);
+    margin-bottom: -0.25rem;
+    z-index: 1002;
+    pointer-events: none;
+  }
+  
+  .stat-value {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  .stat-item.danger .stat-value {
+    color: #ff6b6b;
+  }
+  
+  .stat-item.success .stat-value {
+    color: #51cf66;
+  }
+  
+  .nuclear-winter-bar {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+  }
+  
+  .nuclear-winter-label {
+    font-size: 0.75rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .nuclear-winter-label > span:first-child {
+    cursor: help;
+    position: relative;
+  }
+  
+  .nuclear-winter-label > span:first-child:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.95);
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    z-index: 1002;
+    pointer-events: none;
+    margin-bottom: 0.5rem;
+    max-width: 250px;
+    white-space: normal;
+    text-align: left;
+    line-height: 1.4;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .nuclear-winter-label > span:first-child:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 20px;
+    border: 6px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.95);
+    margin-bottom: -0.25rem;
+    z-index: 1002;
+    pointer-events: none;
+  }
+  
+  .nuclear-winter-progress {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .nuclear-winter-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff9a00 0%, #ff0000 100%);
+    transition: width 0.5s ease;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    .stats-widget {
+      width: 100% !important;
+      max-width: 320px !important;
+    }
+  }
+</style>

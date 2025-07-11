@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "astro dev",
     "dev:prod": "astro dev --mode production",
+    "dev:netlify": "netlify dev",
     "start": "astro dev",
     "prebuild": "npm run update-links",
     "build": "astro build",

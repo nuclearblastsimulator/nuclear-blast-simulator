@@ -1,8 +1,32 @@
-# example netlify.toml
+# Nuclear Blast Simulator netlify.toml
 [build]
   command = "npm run build --prod"
   # functions = "netlify/functions"
   publish = "dist"
+
+[dev]
+  command = "npm run dev"
+  targetPort = 3000
+  port = 8888
+  publish = "dist"
+  autoLaunch = false
+
+# Edge Functions Configuration
+[[edge_functions]]
+  function = "detonate"
+  path = "/api/detonate"
+
+[[edge_functions]]
+  function = "counter"
+  path = "/api/counter"
+
+[[edge_functions]]
+  function = "analytics"
+  path = "/api/analytics"
+
+# Environment Variables (set these in Netlify UI)
+# TURSO_URL = "libsql://your-database.turso.io"
+# TURSO_AUTH_TOKEN = "your-auth-token"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.

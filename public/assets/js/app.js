@@ -19,7 +19,7 @@ let blastCircles = {}
 let useMetric = false
 let hiddenZones = new Set()
 let groundZeroMarker = null
-let currentLocation = { lat: 36.0104, lng: -84.2696 }
+let currentLocation = { lat: 36.0104, lng: -84.2696, country: 'United States' }
 let previousDetonationType = 'air' // Track for analytics
 let previousWeapon = null // Track for weapon comparison
 let windDirection = 45 // Wind direction in degrees (0 = North, 90 = East, etc.)
@@ -117,6 +117,12 @@ window.addEventListener('DOMContentLoaded', async function () {
     windSpeed = 10 + Math.random() * 20 // 10-30 mph
     updateWindDirection()
   }, 30000)
+
+  // Fetch initial counter
+  fetchInitialCounter()
+  
+  // Start peace streak timer
+  startPeaceStreakTimer()
 })
 
 // Format distance with both units
@@ -195,11 +201,19 @@ function populateLocationSelect(locations) {
     const option = document.createElement('option')
     option.value = location.coordinates
     option.textContent = location.name
+    option.dataset.country = location.country || 'Unknown'
+    option.dataset.locationId = location.id
     if (location.default) {
       option.selected = true
       // Set initial location
       const [lat, lng] = location.coordinates.split(',').map(Number)
-      currentLocation = { lat, lng }
+      currentLocation = { 
+        lat, 
+        lng, 
+        country: location.country || 'Unknown',
+        cityName: location.name,
+        isCustom: false
+      }
     }
     select.appendChild(option)
   })
@@ -324,13 +338,68 @@ function simulateBlast() {
 
   // Get current detonation type for analytics
   const detonationType = document.querySelector('input[name="detonation"]:checked').value
-  const locationName =
-    citySelect.options[citySelect.selectedIndex]?.text || customAddress || 'Custom Location'
+  
+  // Determine location name based on whether it's a preset city or custom location
+  let locationName;
+  let cityId = null;
+  let cityName = null;
+  
+  if (citySelect.value) {
+    // Preset city selected
+    const selectedOption = citySelect.options[citySelect.selectedIndex]
+    locationName = selectedOption.text
+    cityId = selectedOption.dataset.locationId
+    cityName = locationName
+  } else if (currentLocation.isCustom) {
+    // Custom location searched
+    locationName = currentLocation.cityName || customAddress || 'Custom Location'
+    cityName = currentLocation.cityName || customAddress
+  } else {
+    locationName = 'Custom Location'
+  }
 
   // Track blast simulation
   if (typeof Analytics !== 'undefined') {
     Analytics.trackBlastSimulation(currentBomb, locationName, detonationType)
   }
+
+  // Send detonation data to API
+  const weapon = bombData[currentBomb]
+  
+  const detonationData = {
+    weaponId: currentBomb,
+    weaponName: weapon.name,
+    weaponYieldKt: weapon.yield,
+    cityId: cityId,
+    cityName: cityName,
+    country: currentLocation.country || null,
+    latitude: currentLocation.lat,
+    longitude: currentLocation.lng,
+    blastType: detonationType
+  }
+
+  // Send to API (fire and forget - don't block the UI)
+  fetch('/api/detonate', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(detonationData)
+  }).then(response => response.json())
+    .then(data => {
+      if (data.totalDetonations) {
+        // Update counter if it exists
+        updateDetonationCounter(data.totalDetonations)
+        // Update statistics widget
+        updateStatisticsWidget(data)
+      }
+      // Reset peace streak
+      lastDetonationTime = Date.now()
+      updatePeaceStreak()
+    })
+    .catch(error => {
+      devLog('Failed to record detonation:', error)
+    })
 
   // Clear existing blast
   clearBlast()
@@ -593,7 +662,6 @@ function drawFalloutPattern(lat, lng, yieldKt) {
 
   // Calculate fallout ellipse based on wind direction
   const windRadians = (windDirection * Math.PI) / 180
-  const falloutWidth = falloutDistance * 0.3 // Fallout pattern width
 
   // Create fallout pattern points
   const falloutPoints = []
@@ -601,17 +669,15 @@ function drawFalloutPattern(lat, lng, yieldKt) {
 
   for (let i = 0; i <= numPoints; i++) {
     const angle = (i / numPoints) * 2 * Math.PI
-    let distance, width
+    let distance
 
     // Create elongated pattern in wind direction
     if (angle >= 0 && angle <= Math.PI) {
       // Downwind side - longer pattern
       distance = falloutDistance * (0.3 + 0.7 * Math.cos(angle - windRadians))
-      width = falloutWidth * (0.5 + 0.5 * Math.abs(Math.sin(angle - windRadians)))
     } else {
       // Upwind side - shorter pattern
       distance = falloutDistance * 0.2
-      width = falloutWidth * 0.3
     }
 
     const offsetLat = (distance * Math.cos(angle)) / 111000 // Convert to degrees
@@ -657,14 +723,62 @@ async function searchAddress() {
 
   try {
     const response = await fetch(
-      `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`
+      `https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&q=${encodeURIComponent(address)}`
     )
     const data = await response.json()
 
     if (data.length > 0) {
       const lat = parseFloat(data[0].lat)
       const lng = parseFloat(data[0].lon)
-      currentLocation = { lat, lng }
+      
+      // Extract city name and country from the geocoding result
+      // Nominatim returns data with 'address' object containing structured data
+      const result = data[0]
+      let cityName = address; // fallback to search query
+      let country = null;
+      
+      // Try to get structured address data if available
+      if (result.address) {
+        // Priority order for city name: city, town, village, suburb, county
+        cityName = result.address.city || 
+                   result.address.town || 
+                   result.address.village || 
+                   result.address.suburb ||
+                   result.address.county ||
+                   result.address.state ||
+                   address;
+        
+        country = result.address.country || null;
+      } else {
+        // Fallback: parse display_name
+        const displayName = result.display_name || address
+        const addressComponents = displayName.split(',').map(s => s.trim())
+        
+        // Skip street-level details (usually first 1-2 components are street/building)
+        // City is typically the 3rd or 4th component
+        if (addressComponents.length >= 3) {
+          // Try to find city-like component (skip numbers and short strings)
+          for (let i = 1; i < addressComponents.length - 1; i++) {
+            const component = addressComponents[i];
+            // Skip if it's just numbers or very short
+            if (!/^\d+$/.test(component) && component.length > 3) {
+              cityName = component;
+              break;
+            }
+          }
+        }
+        
+        // Country is usually the last component
+        country = addressComponents.length > 1 ? addressComponents[addressComponents.length - 1] : null;
+      }
+      
+      currentLocation = { 
+        lat, 
+        lng, 
+        country: country,
+        cityName: cityName,
+        isCustom: true
+      }
       map.setView([lat, lng], 12)
       document.getElementById('city-select').value = ''
       clearBlast() // Clear blast when location changes
@@ -717,9 +831,20 @@ function setupEventListeners() {
   document.getElementById('city-select').addEventListener('change', function () {
     if (this.value) {
       const [lat, lng] = this.value.split(',').map(Number)
-      currentLocation = { lat, lng }
+      const selectedOption = this.options[this.selectedIndex]
+      const country = selectedOption.dataset.country || 'Unknown'
+      currentLocation = { 
+        lat, 
+        lng, 
+        country,
+        cityName: selectedOption.text,
+        isCustom: false 
+      }
       map.setView([lat, lng], 12)
       clearBlast() // Clear blast when city changes
+      
+      // Clear custom address field when preset city is selected
+      document.getElementById('custom-address').value = ''
 
       // Track city selection
       if (typeof Analytics !== 'undefined') {
@@ -799,6 +924,124 @@ function updateWeaponDetails() {
         <div class="bomb-name">${weapon.name}</div>
         <div class="bomb-details">${weapon.details}</div>
     `
+}
+
+// Update detonation counter display
+function updateDetonationCounter(count) {
+  const counterElement = document.getElementById('detonation-counter')
+  if (counterElement) {
+    const displayElement = counterElement.querySelector('.counter-number')
+    if (displayElement) {
+      // Animate the counter
+      const currentCount = parseInt(displayElement.textContent.replace(/,/g, '')) || 0
+      animateCounter(displayElement, currentCount, count, 1000)
+    }
+  }
+}
+
+// Animate counter from one value to another
+function animateCounter(element, from, to, duration) {
+  const start = Date.now()
+  const timer = setInterval(() => {
+    const progress = (Date.now() - start) / duration
+    if (progress >= 1) {
+      clearInterval(timer)
+      element.textContent = to.toLocaleString()
+    } else {
+      const current = Math.floor(from + (to - from) * progress)
+      element.textContent = current.toLocaleString()
+    }
+  }, 16)
+}
+
+// Fetch initial counter on page load
+async function fetchInitialCounter() {
+  try {
+    const response = await fetch('/api/counter')
+    const data = await response.json()
+    if (data.totalDetonations) {
+      updateDetonationCounter(data.totalDetonations)
+      updateStatisticsWidget(data)
+    }
+  } catch (error) {
+    devLog('Failed to fetch counter:', error)
+  }
+}
+
+// Update statistics widget
+function updateStatisticsWidget(data) {
+  // Update Hiroshima equivalents
+  const hiroshimaEl = document.getElementById('stat-hiroshima')
+  if (hiroshimaEl && data.hiroshimaEquivalents !== undefined) {
+    hiroshimaEl.textContent = data.hiroshimaEquivalents.toLocaleString()
+  }
+  
+  // Update most nuked city
+  const mostNukedEl = document.getElementById('stat-most-nuked')
+  if (mostNukedEl && data.mostTargetedCity) {
+    mostNukedEl.textContent = `${data.mostTargetedCity.city_name} (${data.mostTargetedCity.detonation_count})`
+  }
+  
+  // Update total yield
+  const yieldEl = document.getElementById('stat-yield')
+  if (yieldEl && data.totalYieldMT !== undefined) {
+    yieldEl.textContent = `${data.totalYieldMT.toLocaleString()} MT`
+  }
+  
+  // Update most used weapon
+  const weaponEl = document.getElementById('stat-weapon')
+  if (weaponEl && data.mostUsedWeapon) {
+    weaponEl.textContent = data.mostUsedWeapon.weapon_name
+  }
+  
+  // Update area destroyed (estimate based on yield)
+  const areaEl = document.getElementById('stat-area')
+  if (areaEl && data.totalYieldMT !== undefined) {
+    // Rough estimate: 1 MT destroys about 100 km² of urban area
+    const areaDestroyed = Math.round(data.totalYieldMT * 100)
+    areaEl.textContent = `${areaDestroyed.toLocaleString()} km²`
+  }
+  
+  // Update nuclear winter progress (assuming 100,000 MT threshold)
+  const nuclearWinterThreshold = 100000 // MT
+  const progress = Math.min((data.totalYieldMT / nuclearWinterThreshold) * 100, 100)
+  const fillEl = document.getElementById('nuclear-winter-fill')
+  const percentEl = document.getElementById('nuclear-winter-percent')
+  if (fillEl) {
+    fillEl.style.width = `${progress}%`
+  }
+  if (percentEl) {
+    percentEl.textContent = `${progress.toFixed(2)}%`
+  }
+}
+
+// Peace streak timer
+let peaceStreakInterval = null
+let lastDetonationTime = Date.now()
+
+function updatePeaceStreak() {
+  const now = Date.now()
+  const secondsSinceLastDetonation = Math.floor((now - lastDetonationTime) / 1000)
+  
+  const peaceEl = document.getElementById('stat-peace')
+  if (peaceEl) {
+    if (secondsSinceLastDetonation < 60) {
+      peaceEl.textContent = `${secondsSinceLastDetonation}s`
+    } else if (secondsSinceLastDetonation < 3600) {
+      const minutes = Math.floor(secondsSinceLastDetonation / 60)
+      peaceEl.textContent = `${minutes}m`
+    } else {
+      const hours = Math.floor(secondsSinceLastDetonation / 3600)
+      peaceEl.textContent = `${hours}h`
+    }
+  }
+}
+
+// Start peace streak timer
+function startPeaceStreakTimer() {
+  if (peaceStreakInterval) clearInterval(peaceStreakInterval)
+  peaceStreakInterval = setInterval(updatePeaceStreak, 1000)
+  updatePeaceStreak()
 }
 
 // Make functions globally accessible for onclick handlers

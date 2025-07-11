@@ -2,85 +2,99 @@
   "locations": [
     {
       "id": "oak-ridge",
-      "name": "Oak Ridge (TN)",
+      "name": "Oak Ridge",
+      "country": "United States",
       "coordinates": "36.0104,-84.2696",
       "default": true
     },
     {
       "id": "new-york",
       "name": "New York City",
+      "country": "United States",
       "coordinates": "40.7128,-74.0060",
       "default": false
     },
     {
       "id": "london",
       "name": "London",
+      "country": "United Kingdom",
       "coordinates": "51.5074,-0.1278",
       "default": false
     },
     {
       "id": "tokyo",
       "name": "Tokyo",
+      "country": "Japan",
       "coordinates": "35.6762,139.6503",
       "default": false
     },
     {
       "id": "hiroshima",
       "name": "Hiroshima",
+      "country": "Japan",
       "coordinates": "34.3853,132.4553",
       "default": false
     },
     {
       "id": "nagasaki",
       "name": "Nagasaki",
+      "country": "Japan",
       "coordinates": "32.7503,129.8779",
       "default": false
     },
     {
       "id": "paris",
       "name": "Paris",
+      "country": "France",
       "coordinates": "48.8566,2.3522",
       "default": false
     },
     {
       "id": "moscow",
       "name": "Moscow",
+      "country": "Russia",
       "coordinates": "55.7558,37.6173",
       "default": false
     },
     {
       "id": "beijing",
       "name": "Beijing",
+      "country": "China",
       "coordinates": "39.9042,116.4074",
       "default": false
     },
     {
       "id": "tehran",
       "name": "Tehran",
+      "country": "Iran",
       "coordinates": "35.6892,51.3890",
       "default": false
     },
     {
       "id": "los-angeles",
       "name": "Los Angeles",
+      "country": "United States",
       "coordinates": "34.0522,-118.2437",
       "default": false
     },
     {
       "id": "chicago",
       "name": "Chicago",
+      "country": "United States",
       "coordinates": "41.8781,-87.6298",
       "default": false
     },
     {
       "id": "berlin",
       "name": "Berlin",
+      "country": "Germany",
       "coordinates": "52.5200,13.4050",
       "default": false
     },
     {
       "id": "sydney",
       "name": "Sydney",
+      "country": "Australia",
       "coordinates": "-33.8688,151.2093",
       "default": false
     }
@@ -158,7 +172,7 @@
       "displayText": "Tsar Bomba • 50 MT • Largest Ever",
       "default": false
     },
-        {
+    {
       "id": "mop",
       "name": "GBU-57 MOP",
       "yield": 35,
@@ -467,7 +481,11 @@
       "time": "10-12 hours",
       "position": { "x": "25%", "y": "560px" },
       "description": "Generation IV, SMRs, thorium cycle",
-      "links": ["terms/generation-iv.md", "terms/small-modular-reactors.md", "terms/thorium-cycle.md"]
+      "links": [
+        "terms/generation-iv.md",
+        "terms/small-modular-reactors.md",
+        "terms/thorium-cycle.md"
+      ]
     },
     {
       "id": "nuclear-economics",
