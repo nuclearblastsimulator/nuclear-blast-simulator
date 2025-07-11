@@ -49,6 +49,8 @@ Even limited nuclear conflicts could trigger global effects:
 - **Food security**: International famine risks
 - **Superpower war**: Complete civilization collapse possible
 
+Research indicates that a total yield of approximately 100,000 megatons (MT) would represent a critical threshold for triggering a full-scale nuclear winter scenario. This threshold would require the detonation of thousands of strategic nuclear weapons, representing a significant portion of global nuclear arsenals. Such an exchange would inject enough smoke and particulates into the stratosphere to cause catastrophic global cooling and agricultural collapse. According to climate models by Robock and colleagues, this level of nuclear exchange would produce enough black carbon to reduce global temperatures by up to 10°C and devastate global agriculture for over a decade.
+
 ## Modern Research
 
 Current studies suggest more severe effects than originally predicted:
@@ -76,6 +78,7 @@ Nuclear winter is crucial to understanding nuclear warfare because:
 - [Los Alamos National Laboratory](https://www.lanl.gov) - Nuclear weapons physics and research
 - [Lawrence Livermore National Laboratory](https://www.llnl.gov) - Nuclear science and technology
 - [Atomic Heritage Foundation](https://www.atomicheritage.org) - Nuclear history and science education
+- [Robock et al. (2007) - Nuclear Winter Revisited](https://climate.envsci.rutgers.edu/pdf/RobockNW2006JD008235.pdf) - Comprehensive analysis of nuclear winter thresholds and climate impacts
 
 ---
 
