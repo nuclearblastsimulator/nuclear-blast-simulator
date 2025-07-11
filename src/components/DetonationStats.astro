@@ -1,65 +1,73 @@
 ---
 import logoImage from '../images/logo.png';
+
+export interface Props {
+  hideViewAllButton?: boolean;
+}
+
+const { hideViewAllButton = false } = Astro.props;
 ---
 
-<div class="stats-widget" id="stats-widget">
-  <div class="stats-widget-title">
-    <img src={logoImage.src} alt="Nuclear Blast Simulator" class="stats-logo" />
-    <span>Global Impact Statistics</span>
-  </div>
-  <div class="stats-grid">
-    <div class="stat-item">
-      <div class="stat-label" data-tooltip="Total explosive power compared to the Hiroshima bomb (15 kilotons)">Hiroshima Equivalents</div>
-      <div class="stat-value" id="stat-hiroshima">0</div>
+<div class="card bg-base-100 border border-base-300 overflow-hidden h-full flex flex-col stats-widget" id="stats-widget">
+  <div class="card-body">
+    <div class="stats-widget-title">
+      <img src={logoImage.src} alt="Nuclear Blast Simulator" class="stats-logo" />
+      <span class="text-lg font-semibold">Global Impact Statistics</span>
     </div>
-    <div class="stat-item danger">
-      <div class="stat-label" data-tooltip="The city that has been targeted the most times in simulations">Most Nuked City</div>
-      <div class="stat-value" id="stat-most-nuked">—</div>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-label" data-tooltip="Total explosive power compared to the Hiroshima bomb (15 kilotons)">Hiroshima Equivalents</div>
+        <div class="stat-value" id="stat-hiroshima">0</div>
+      </div>
+      <div class="stat-item danger">
+        <div class="stat-label" data-tooltip="The city that has been targeted the most times in simulations">Most Nuked City</div>
+        <div class="stat-value" id="stat-most-nuked">—</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label" data-tooltip="Combined explosive yield of all detonations in megatons">Total Yield</div>
+        <div class="stat-value" id="stat-yield">0 MT</div>
+      </div>
+      <div class="stat-item success">
+        <div class="stat-label" data-tooltip="Time since the last detonation anywhere in the world">Peace Streak</div>
+        <div class="stat-value" id="stat-peace">0s</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label" data-tooltip="The nuclear weapon selected most frequently by users">Most Used Weapon</div>
+        <div class="stat-value" id="stat-weapon">—</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label" data-tooltip="Total area destroyed across all simulations">Area Destroyed</div>
+        <div class="stat-value" id="stat-area">0 km²</div>
+      </div>
     </div>
-    <div class="stat-item">
-      <div class="stat-label" data-tooltip="Combined explosive yield of all detonations in megatons">Total Yield</div>
-      <div class="stat-value" id="stat-yield">0 MT</div>
+    <div class="nuclear-winter-bar">
+      <div class="nuclear-winter-label">
+        <span data-tooltip="Progress toward the theoretical 100,000 MT threshold that could trigger nuclear winter - a global climatic catastrophe causing widespread crop failure and famine">Nuclear Winter Progress</span>
+        <span id="nuclear-winter-percent">0%</span>
+      </div>
+      <div class="nuclear-winter-progress">
+        <div class="nuclear-winter-fill" id="nuclear-winter-fill" style="width: 0%"></div>
+      </div>
     </div>
-    <div class="stat-item success">
-      <div class="stat-label" data-tooltip="Time since the last detonation anywhere in the world">Peace Streak</div>
-      <div class="stat-value" id="stat-peace">0s</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-label" data-tooltip="The nuclear weapon selected most frequently by users">Most Used Weapon</div>
-      <div class="stat-value" id="stat-weapon">—</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-label" data-tooltip="Total area destroyed across all simulations">Area Destroyed</div>
-      <div class="stat-value" id="stat-area">0 km²</div>
-    </div>
-  </div>
-  <div class="nuclear-winter-bar">
-    <div class="nuclear-winter-label">
-      <span data-tooltip="Progress toward the theoretical 100,000 MT threshold that could trigger nuclear winter - a global climatic catastrophe causing widespread crop failure and famine">Nuclear Winter Progress</span>
-      <span id="nuclear-winter-percent">0%</span>
-    </div>
-    <div class="nuclear-winter-progress">
-      <div class="nuclear-winter-fill" id="nuclear-winter-fill" style="width: 0%"></div>
-    </div>
+    {!hideViewAllButton && (
+      <div class="stats-widget-footer">
+        <a href="/stats/" class="view-all-stats-btn">
+          View All Statistics
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    )}
   </div>
 </div>
 
 <style>
   .stats-widget {
     width: 320px;
-    background: rgba(34, 34, 34, 0.95);
-    border: 2px solid #444;
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    padding: 1rem;
   }
   
-  
   .stats-widget-title {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #fff;
     margin-bottom: 0.75rem;
     display: flex;
     align-items: center;
@@ -92,7 +100,7 @@ import logoImage from '../images/logo.png';
   
   .stat-label {
     font-size: 0.75rem;
-    color: #999;
+    color: rgb(156 163 175);
     margin-bottom: 0.25rem;
     position: relative;
     cursor: help;
@@ -139,11 +147,11 @@ import logoImage from '../images/logo.png';
   }
   
   .stat-item.danger .stat-value {
-    color: #ff6b6b;
+    color: hsl(var(--er));
   }
   
   .stat-item.success .stat-value {
-    color: #51cf66;
+    color: hsl(var(--su));
   }
   
   .nuclear-winter-bar {
@@ -211,6 +219,42 @@ import logoImage from '../images/logo.png';
     background: linear-gradient(90deg, #ff9a00 0%, #ff0000 100%);
     transition: width 0.5s ease;
     border-radius: 4px;
+  }
+  
+  .stats-widget-footer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .view-all-stats-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background: hsl(var(--p) / 0.1);
+    color: hsl(var(--p));
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: var(--rounded-btn, 0.5rem);
+    transition: all 0.2s;
+    border: 1px solid hsl(var(--p) / 0.2);
+  }
+  
+  .view-all-stats-btn:hover {
+    background: hsl(var(--p) / 0.2);
+    transform: translateY(-1px);
+  }
+  
+  .view-all-stats-btn svg {
+    transition: transform 0.2s;
+  }
+  
+  .view-all-stats-btn:hover svg {
+    transform: translateX(2px);
   }
   
   @media (max-width: 768px) {

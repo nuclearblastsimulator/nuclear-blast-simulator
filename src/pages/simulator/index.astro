@@ -1,4 +1,5 @@
 ---
+import '../../assets/app.css';
 import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
 import DetonationStats from '../../components/DetonationStats.astro';
 import ogImage from '../../images/og-preview.png';
@@ -10,7 +11,7 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -43,6 +44,20 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS v3 (v4 not available via CDN yet) and DaisyUI -->
+  <script src="https://cdn.tailwindcss.com/"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.46/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {}
+      },
+      daisyui: {
+        themes: ["dark"]
+      }
+    }
+  </script>
   
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -115,7 +130,7 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
       pointer-events: none;
       transform: translateY(10px);
       transition: opacity 0.3s ease, transform 0.3s ease;
-      padding-bottom: 10px; /* Add padding to create hover bridge */
+      padding: 10px; /* Add padding to create hover bridge */
     }
     
     /* Show stats on counter hover */
@@ -483,7 +498,7 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
       </div>
 
       <!-- Statistics Widget -->
-      <div class="stats-widget-wrapper" id="stats-widget-wrapper">
+      <div class="stats-widget-wrapper bg-base-100 border border-base-300 overflow-hidden" id="stats-widget-wrapper">
         <DetonationStats />
       </div>
 
