@@ -1,0 +1,223 @@
+# Redirects for reorganized content structure
+
+# Nuclear Effects -> effects/
+/terms/nuclear-effects/blast-effects /terms/effects/blast-effects 301
+/terms/nuclear-effects/thermal-radiation /terms/effects/thermal-radiation 301
+/terms/nuclear-effects/electromagnetic-pulse /terms/effects/electromagnetic-pulse 301
+/terms/nuclear-effects/nuclear-winter /terms/effects/nuclear-winter 301
+/terms/nuclear-effects/ground-zero /terms/effects/ground-zero 301
+
+# Radiation sickness moved
+/terms/radiation-sickness /terms/effects/radiation-sickness 301
+
+# Yield-related to weapons/
+/terms/nuclear-effects/yield /terms/weapons/yield 301
+/terms/nuclear-effects/megaton /terms/weapons/megaton 301
+/terms/nuclear-effects/yield-comparison /terms/weapons/yield-comparison 301
+
+# Nuclear Physics -> weapons/
+/terms/nuclear-physics/critical-mass /terms/weapons/critical-mass 301
+/terms/nuclear-physics/fission /terms/weapons/fission-weapons 301
+/terms/nuclear-physics/fusion /terms/weapons/fusion-weapons 301
+/terms/nuclear-physics/plutonium /terms/weapons/plutonium 301
+/terms/nuclear-physics/enrichment /terms/weapons/enrichment 301
+
+# Nuclear Physics -> physics/
+/terms/nuclear-physics/alpha-decay /terms/physics/alpha-decay 301
+/terms/nuclear-physics/half-life /terms/physics/half-life 301
+/terms/nuclear-physics/binding-energy /terms/physics/binding-energy 301
+/terms/nuclear-physics/neutron-cross-section /terms/physics/neutron-cross-section 301
+
+# Fallout moved
+/terms/nuclear-physics/nuclear-fallout /terms/effects/fallout 301
+
+# Weapons Delivery -> delivery/
+/terms/weapons-delivery/icbm /terms/delivery/icbm 301
+/terms/weapons-delivery/nuclear-triad /terms/delivery/nuclear-triad 301
+/terms/weapons-delivery/first-strike /terms/delivery/first-strike 301
+/terms/weapons-delivery/tactical-nuclear-weapons /terms/delivery/tactical-nuclear-weapons 301
+/terms/weapons-delivery/nuclear-weapons /terms/nuclear-weapons 301
+
+# EMP weapons moved
+/terms/nuclear-effects/emp-weapons /terms/delivery/emp-weapons 301
+
+# Reactor Technology -> power/
+/terms/reactor-technology/pressurized-water-reactor /terms/power/pressurized-water-reactor 301
+/terms/reactor-technology/boiling-water-reactor /terms/power/boiling-water-reactor 301
+/terms/reactor-technology/small-modular-reactors /terms/power/small-modular-reactors 301
+/terms/reactor-technology/control-rods /terms/power/control-rods 301
+/terms/reactor-technology/coolant /terms/power/coolant 301
+/terms/reactor-technology/moderator /terms/power/moderator 301
+/terms/reactor-technology/generation-iv /terms/power/generation-iv 301
+/terms/reactor-technology/thorium-cycle /terms/power/thorium-cycle 301
+/terms/reactor-technology/tokamak /terms/power/tokamak 301
+
+# Safety Systems -> power/
+/terms/safety-systems/containment /terms/power/containment 301
+/terms/safety-systems/scram /terms/power/scram 301
+/terms/safety-systems/defense-in-depth /terms/power/defense-in-depth 301
+/terms/safety-systems/alara-principle /terms/power/alara-principle 301
+
+# Nuclear Strategy -> strategy/
+/terms/nuclear-strategy/nuclear-deterrence /terms/strategy/nuclear-deterrence 301
+/terms/nuclear-strategy/mutual-assured-destruction /terms/strategy/mutual-assured-destruction 301
+
+# Treaties -> strategy/
+/terms/treaties-agreements/non-proliferation-treaty /terms/strategy/non-proliferation-treaty 301
+/terms/treaties-agreements/start-treaty /terms/strategy/start-treaty 301
+
+# History article redirects (generated from reorganization)
+# Both with and without trailing slashes are handled
+
+/history/cold-war-crises/able-archer-83 /history/events/able-archer-83 301
+/history/cold-war-crises/able-archer-83/ /history/events/able-archer-83 301
+/history/cold-war-crises/broken-arrows /history/events/broken-arrows 301
+/history/cold-war-crises/broken-arrows/ /history/events/broken-arrows 301
+/history/cold-war-crises/cuban-missile-crisis /history/events/cuban-missile-crisis 301
+/history/cold-war-crises/cuban-missile-crisis/ /history/events/cuban-missile-crisis 301
+/history/cold-war-crises/kargil-conflict /history/events/kargil-conflict 301
+/history/cold-war-crises/kargil-conflict/ /history/events/kargil-conflict 301
+/history/cold-war-crises/moscow-nuclear-program /history/programs/soviet-nuclear-program 301
+/history/cold-war-crises/moscow-nuclear-program/ /history/programs/soviet-nuclear-program 301
+/history/cold-war-crises/norwegian-rocket-incident /history/events/norwegian-rocket-incident 301
+/history/cold-war-crises/norwegian-rocket-incident/ /history/events/norwegian-rocket-incident 301
+/history/cold-war-crises/nuclear-close-calls /history/events/nuclear-close-calls 301
+/history/cold-war-crises/nuclear-close-calls/ /history/events/nuclear-close-calls 301
+/history/cold-war-crises/stanislav-petrov-incident /history/events/stanislav-petrov-incident 301
+/history/cold-war-crises/stanislav-petrov-incident/ /history/events/stanislav-petrov-incident 301
+/history/cold-war-crises/washington-dc /history/events/washington-nuclear-policy 301
+/history/cold-war-crises/washington-dc/ /history/events/washington-nuclear-policy 301
+/history/foundational-events/atoms-for-peace /history/events/atoms-for-peace 301
+/history/foundational-events/atoms-for-peace/ /history/events/atoms-for-peace 301
+/history/foundational-events/chicago-met-lab /history/events/manhattan-project-chicago 301
+/history/foundational-events/chicago-met-lab/ /history/events/manhattan-project-chicago 301
+/history/foundational-events/chicago-pile-1 /history/events/chicago-pile-1 301
+/history/foundational-events/chicago-pile-1/ /history/events/chicago-pile-1 301
+/history/foundational-events/discovery-of-radioactivity /history/events/discovery-of-radioactivity 301
+/history/foundational-events/discovery-of-radioactivity/ /history/events/discovery-of-radioactivity 301
+/history/foundational-events/los-alamos /history/events/manhattan-project-los-alamos 301
+/history/foundational-events/los-alamos/ /history/events/manhattan-project-los-alamos 301
+/history/foundational-events/neutron-discovery /history/events/neutron-discovery 301
+/history/foundational-events/neutron-discovery/ /history/events/neutron-discovery 301
+/history/foundational-events/nuclear-fission-discovery /history/events/nuclear-fission-discovery 301
+/history/foundational-events/nuclear-fission-discovery/ /history/events/nuclear-fission-discovery 301
+/history/foundational-events/oak-ridge /history/events/manhattan-project-oak-ridge 301
+/history/foundational-events/oak-ridge/ /history/events/manhattan-project-oak-ridge 301
+/history/key-figures/andrei-sakharov /history/people/andrei-sakharov 301
+/history/key-figures/andrei-sakharov/ /history/people/andrei-sakharov 301
+/history/key-figures/edward-teller /history/people/edward-teller 301
+/history/key-figures/edward-teller/ /history/people/edward-teller 301
+/history/key-figures/hyman-rickover /history/people/hyman-rickover 301
+/history/key-figures/hyman-rickover/ /history/people/hyman-rickover 301
+/history/key-figures/klaus-fuchs /history/people/klaus-fuchs 301
+/history/key-figures/klaus-fuchs/ /history/people/klaus-fuchs 301
+/history/key-figures/oppenheimer /history/people/oppenheimer 301
+/history/key-figures/oppenheimer/ /history/people/oppenheimer 301
+/history/modern-developments/comprehensive-test-ban-treaty /history/treaties/comprehensive-test-ban-treaty 301
+/history/modern-developments/comprehensive-test-ban-treaty/ /history/treaties/comprehensive-test-ban-treaty 301
+/history/modern-developments/intermediate-range-nuclear-forces-treaty /history/treaties/inf-treaty 301
+/history/modern-developments/intermediate-range-nuclear-forces-treaty/ /history/treaties/inf-treaty 301
+/history/modern-developments/non-proliferation-treaty /history/treaties/non-proliferation-treaty 301
+/history/modern-developments/non-proliferation-treaty/ /history/treaties/non-proliferation-treaty 301
+/history/modern-developments/nuclear-abolition /history/events/nuclear-abolition-movement 301
+/history/modern-developments/nuclear-abolition/ /history/events/nuclear-abolition-movement 301
+/history/modern-developments/nuclear-deterrence-theory /history/events/nuclear-deterrence-theory 301
+/history/modern-developments/nuclear-deterrence-theory/ /history/events/nuclear-deterrence-theory 301
+/history/modern-developments/nuclear-ethics /history/events/nuclear-ethics-debate 301
+/history/modern-developments/nuclear-ethics/ /history/events/nuclear-ethics-debate 301
+/history/modern-developments/nuclear-fusion /history/programs/fusion-energy-research 301
+/history/modern-developments/nuclear-fusion/ /history/programs/fusion-energy-research 301
+/history/modern-developments/nuclear-modernization-programs /history/programs/nuclear-modernization 301
+/history/modern-developments/nuclear-modernization-programs/ /history/programs/nuclear-modernization 301
+/history/modern-developments/nuclear-terrorism /history/events/nuclear-terrorism-concerns 301
+/history/modern-developments/nuclear-terrorism/ /history/events/nuclear-terrorism-concerns 301
+/history/modern-developments/nuclear-weapons-free-zones /history/treaties/nuclear-weapons-free-zones 301
+/history/modern-developments/nuclear-weapons-free-zones/ /history/treaties/nuclear-weapons-free-zones 301
+/history/modern-developments/obninsk-reactor /history/events/obninsk-first-power-reactor 301
+/history/modern-developments/obninsk-reactor/ /history/events/obninsk-first-power-reactor 301
+/history/modern-developments/shippingport /history/events/shippingport-reactor 301
+/history/modern-developments/shippingport/ /history/events/shippingport-reactor 301
+/history/modern-developments/small-modular-reactors /history/programs/small-modular-reactors 301
+/history/modern-developments/small-modular-reactors/ /history/programs/small-modular-reactors 301
+/history/modern-developments/start-treaties /history/treaties/start-treaties 301
+/history/modern-developments/start-treaties/ /history/treaties/start-treaties 301
+/history/nuclear-programs/china /history/programs/china-nuclear-program 301
+/history/nuclear-programs/china/ /history/programs/china-nuclear-program 301
+/history/nuclear-programs/france /history/programs/france-nuclear-program 301
+/history/nuclear-programs/france/ /history/programs/france-nuclear-program 301
+/history/nuclear-programs/india /history/programs/india-nuclear-program 301
+/history/nuclear-programs/india/ /history/programs/india-nuclear-program 301
+/history/nuclear-programs/intercontinental-ballistic-missiles /history/programs/icbm-development 301
+/history/nuclear-programs/intercontinental-ballistic-missiles/ /history/programs/icbm-development 301
+/history/nuclear-programs/iran-nuclear-program /history/programs/iran-nuclear-program 301
+/history/nuclear-programs/iran-nuclear-program/ /history/programs/iran-nuclear-program 301
+/history/nuclear-programs/israel /history/programs/israel-nuclear-program 301
+/history/nuclear-programs/israel/ /history/programs/israel-nuclear-program 301
+/history/nuclear-programs/missile-defense-systems /history/programs/missile-defense-systems 301
+/history/nuclear-programs/missile-defense-systems/ /history/programs/missile-defense-systems 301
+/history/nuclear-programs/nautilus-submarine /history/programs/nautilus-submarine 301
+/history/nuclear-programs/nautilus-submarine/ /history/programs/nautilus-submarine 301
+/history/nuclear-programs/north-korea-first-test /history/programs/north-korea-nuclear-program 301
+/history/nuclear-programs/north-korea-first-test/ /history/programs/north-korea-nuclear-program 301
+/history/nuclear-programs/nuclear-proliferation-21st-century /history/events/nuclear-proliferation-21st-century 301
+/history/nuclear-programs/nuclear-proliferation-21st-century/ /history/events/nuclear-proliferation-21st-century 301
+/history/nuclear-programs/nuclear-submarines /history/programs/nuclear-submarines 301
+/history/nuclear-programs/nuclear-submarines/ /history/programs/nuclear-submarines 301
+/history/nuclear-programs/nuclear-triad /history/programs/nuclear-triad 301
+/history/nuclear-programs/nuclear-triad/ /history/programs/nuclear-triad 301
+/history/nuclear-programs/nuclear-weapons-by-country /history/programs/nuclear-weapons-by-country 301
+/history/nuclear-programs/nuclear-weapons-by-country/ /history/programs/nuclear-weapons-by-country 301
+/history/nuclear-programs/pakistan /history/programs/pakistan-nuclear-program 301
+/history/nuclear-programs/pakistan/ /history/programs/pakistan-nuclear-program 301
+/history/nuclear-programs/strategic-bombers /history/programs/strategic-bombers 301
+/history/nuclear-programs/strategic-bombers/ /history/programs/strategic-bombers 301
+/history/nuclear-programs/united-kingdom /history/programs/uk-nuclear-program 301
+/history/nuclear-programs/united-kingdom/ /history/programs/uk-nuclear-program 301
+/history/testing-disasters/bikini-atoll /history/testing/bikini-atoll 301
+/history/testing-disasters/bikini-atoll/ /history/testing/bikini-atoll 301
+/history/testing-disasters/castle-bravo /history/testing/castle-bravo 301
+/history/testing-disasters/castle-bravo/ /history/testing/castle-bravo 301
+/history/testing-disasters/chernobyl-disaster /history/events/chernobyl-disaster 301
+/history/testing-disasters/chernobyl-disaster/ /history/events/chernobyl-disaster 301
+/history/testing-disasters/fukushima-daiichi /history/events/fukushima-daiichi 301
+/history/testing-disasters/fukushima-daiichi/ /history/events/fukushima-daiichi 301
+/history/testing-disasters/hibakusha /history/testing/hibakusha 301
+/history/testing-disasters/hibakusha/ /history/testing/hibakusha 301
+/history/testing-disasters/lop-nur /history/testing/lop-nur 301
+/history/testing-disasters/lop-nur/ /history/testing/lop-nur 301
+/history/testing-disasters/nevada-test-site /history/testing/nevada-test-site 301
+/history/testing-disasters/nevada-test-site/ /history/testing/nevada-test-site 301
+/history/testing-disasters/novaya-zemlya /history/testing/novaya-zemlya 301
+/history/testing-disasters/novaya-zemlya/ /history/testing/novaya-zemlya 301
+/history/testing-disasters/nuclear-testing-health-effects /history/testing/nuclear-testing-health-effects 301
+/history/testing-disasters/nuclear-testing-health-effects/ /history/testing/nuclear-testing-health-effects 301
+/history/testing-disasters/semipalatinsk-test-site /history/testing/semipalatinsk-test-site 301
+/history/testing-disasters/semipalatinsk-test-site/ /history/testing/semipalatinsk-test-site 301
+/history/testing-disasters/three-mile-island /history/events/three-mile-island 301
+/history/testing-disasters/three-mile-island/ /history/events/three-mile-island 301
+/history/weapons-technology/b83 /history/programs/b83-nuclear-bomb 301
+/history/weapons-technology/b83/ /history/programs/b83-nuclear-bomb 301
+/history/weapons-technology/fission-weapons /history/events/fission-weapons-development 301
+/history/weapons-technology/fission-weapons/ /history/events/fission-weapons-development 301
+/history/weapons-technology/fusion-weapons /history/events/fusion-weapons-development 301
+/history/weapons-technology/fusion-weapons/ /history/events/fusion-weapons-development 301
+/history/weapons-technology/gbu-57-mop /history/programs/bunker-buster-weapons 301
+/history/weapons-technology/gbu-57-mop/ /history/programs/bunker-buster-weapons 301
+/history/weapons-technology/miniaturization /history/programs/warhead-miniaturization 301
+/history/weapons-technology/miniaturization/ /history/programs/warhead-miniaturization 301
+/history/weapons-technology/moab /history/programs/moab-conventional-weapon 301
+/history/weapons-technology/moab/ /history/programs/moab-conventional-weapon 301
+/history/weapons-technology/nuclear-materials /history/programs/nuclear-materials-production 301
+/history/weapons-technology/nuclear-materials/ /history/programs/nuclear-materials-production 301
+/history/weapons-technology/nuclear-testing /history/testing/nuclear-testing-overview 301
+/history/weapons-technology/nuclear-testing/ /history/testing/nuclear-testing-overview 301
+/history/weapons-technology/nuclear-weapon-effects /history/events/nuclear-weapon-effects-studies 301
+/history/weapons-technology/nuclear-weapon-effects/ /history/events/nuclear-weapon-effects-studies 301
+/history/weapons-technology/nuclear-weapons-design /history/programs/nuclear-weapons-design 301
+/history/weapons-technology/nuclear-weapons-design/ /history/programs/nuclear-weapons-design 301
+/history/weapons-technology/w87 /history/programs/w87-warhead 301
+/history/weapons-technology/w87/ /history/programs/w87-warhead 301
+/history/weapons-technology/w88 /history/programs/w88-warhead 301
+/history/weapons-technology/w88/ /history/programs/w88-warhead 301
+/history/weapons-technology/weapons-manufacturing /history/programs/weapons-manufacturing 301
+/history/weapons-technology/weapons-manufacturing/ /history/programs/weapons-manufacturing 301
