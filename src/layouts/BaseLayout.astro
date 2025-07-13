@@ -2,6 +2,7 @@
 import '../assets/app.css';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import AtomicLogo from '../components/AtomicLogo.astro';
+import StructuredData from '../components/StructuredData.astro';
 import ogImage from '../images/og-preview.png';
 import logoImage from '../images/logo.png';
 
@@ -9,12 +10,37 @@ export interface Props {
   title: string;
   description?: string;
   image?: string;
+  schemaType?: 'WebApplication' | 'Article' | 'FAQPage' | 'HowTo' | 'Organization';
+  articleData?: {
+    datePublished?: string;
+    dateModified?: string;
+    author?: string;
+    keywords?: string[];
+  };
+  faqData?: Array<{
+    question: string;
+    answer: string;
+  }>;
+  howToData?: {
+    totalTime?: string;
+    supply?: string[];
+    tool?: string[];
+    steps?: Array<{
+      name: string;
+      text: string;
+      image?: string;
+    }>;
+  };
 }
 
 const { 
   title, 
   description = "Interactive visualization platform for nuclear weapon effects. Calculate blast radius, view damage zones, and explore historical weapons data.",
-  image
+  image,
+  schemaType,
+  articleData,
+  faqData,
+  howToData
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -62,6 +88,16 @@ const ogImageURL = image || new URL(ogImage.src, Astro.site).href;
   
   <!-- Analytics -->
   <GoogleAnalytics />
+  
+  <!-- Structured Data -->
+  <StructuredData 
+    type={schemaType}
+    title={title}
+    description={description}
+    articleData={articleData}
+    faqData={faqData}
+    howToData={howToData}
+  />
 </head>
 <body class="min-h-screen bg-base-100 text-base-content flex flex-col">
   <!-- Header -->

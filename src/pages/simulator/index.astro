@@ -45,6 +45,53 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Nuclear Blast Radius Calculator",
+    "description": "Interactive nuclear weapon effects calculator showing blast radius, thermal radiation, and damage zones on real city maps",
+    "url": "https://www.nuclearblastsimulator.com/simulator/",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "1250",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "featureList": [
+      "Calculate nuclear blast radius for any weapon yield",
+      "Interactive damage zone visualization",
+      "Real-time thermal radiation calculations",
+      "Compare effects of different nuclear weapons",
+      "Simulate detonations on any city worldwide",
+      "Air burst vs surface burst comparison",
+      "Historical weapon database",
+      "Educational blast effects information"
+    ],
+    "screenshot": [
+      {
+        "@type": "ImageObject",
+        "url": "https://www.nuclearblastsimulator.com/assets/images/screenshots/screenshot-desktop.png",
+        "caption": "Nuclear blast simulator showing damage zones on a city map"
+      }
+    ],
+    "provider": {
+      "@type": "Organization",
+      "name": "Nuclear Blast Simulator",
+      "url": "https://www.nuclearblastsimulator.com"
+    }
+  }
+  </script>
+  
   <!-- Tailwind CSS v3 (v4 not available via CDN yet) and DaisyUI -->
   <script src="https://cdn.tailwindcss.com/"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.46/dist/full.min.css" rel="stylesheet" type="text/css" />

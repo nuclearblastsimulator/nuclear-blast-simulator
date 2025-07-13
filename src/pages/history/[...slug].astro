@@ -21,6 +21,17 @@ interface Props {
 const { entry, allHistory } = Astro.props;
 const { Content } = await entry.render();
 
+// Prepare article data for schema
+const articleData = {
+  datePublished: new Date().toISOString(), // You might want to add actual dates to frontmatter
+  keywords: [
+    'nuclear history',
+    'nuclear weapons',
+    'cold war',
+    entry.data.title.toLowerCase()
+  ]
+};
+
 // Check if content has the summary marker
 const hasTabSeparator = entry.body.includes('<!-- SUMMARY_END -->');
 
@@ -68,7 +79,12 @@ const sortedCategories = Object.keys(categories).sort().reduce((acc, key) => {
 const currentSlug = entry.slug.replace('history/', '');
 ---
 
-<BaseLayout title={entry.data.title} description={entry.data.description}>
+<BaseLayout 
+  title={entry.data.title} 
+  description={entry.data.description}
+  schemaType="Article"
+  articleData={articleData}
+>
   <div class="min-h-screen flex">
     <!-- Mobile Menu Toggle -->
     <button class="lg:hidden fixed bottom-4 left-4 z-50 btn btn-circle btn-primary shadow-lg" onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full')">

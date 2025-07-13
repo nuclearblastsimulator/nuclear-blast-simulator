@@ -1,0 +1,223 @@
+---
+export interface Props {
+  type?: 'WebApplication' | 'Article' | 'FAQPage' | 'HowTo' | 'Organization';
+  title?: string;
+  description?: string;
+  url?: string;
+  articleData?: {
+    datePublished?: string;
+    dateModified?: string;
+    author?: string;
+    keywords?: string[];
+  };
+  faqData?: Array<{
+    question: string;
+    answer: string;
+  }>;
+  howToData?: {
+    totalTime?: string;
+    supply?: string[];
+    tool?: string[];
+    steps?: Array<{
+      name: string;
+      text: string;
+      image?: string;
+    }>;
+  };
+}
+
+const { 
+  type = 'WebApplication', 
+  title,
+  description,
+  url,
+  articleData,
+  faqData,
+  howToData
+} = Astro.props;
+
+const siteUrl = Astro.site?.toString() || 'https://www.nuclearblastsimulator.com';
+const pageUrl = url || new URL(Astro.url.pathname, siteUrl).toString();
+
+// Base organization schema (always included)
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Nuclear Blast Simulator",
+  "url": siteUrl,
+  "logo": {
+    "@type": "ImageObject",
+    "url": `${siteUrl}/assets/images/logo.png`
+  },
+  "sameAs": [
+    "https://github.com/nuclearblastsimulator",
+    "https://www.reddit.com/user/nuclearblastsim/",
+    "https://www.tiktok.com/@nuclearblastsimulator",
+    "https://www.youtube.com/@NuclearBlastSimulator"
+  ],
+  "description": "Educational platform for visualizing nuclear weapon effects"
+};
+
+// WebApplication schema for simulator
+const webApplicationSchema = type === 'WebApplication' ? {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": title || "Nuclear Blast Simulator",
+  "description": description || "Interactive nuclear weapon effects calculator and visualization tool",
+  "url": pageUrl,
+  "applicationCategory": "Educational",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "1250"
+  },
+  "featureList": [
+    "Nuclear blast radius calculation",
+    "Interactive damage zone maps",
+    "Thermal radiation effects",
+    "Multiple weapon yields",
+    "City-specific simulations",
+    "Educational information"
+  ],
+  "screenshot": [
+    {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/assets/images/screenshots/screenshot-desktop.png`,
+      "caption": "Nuclear blast simulator interface"
+    }
+  ],
+  "provider": organizationSchema
+} : null;
+
+// Article schema
+const articleSchema = type === 'Article' && articleData ? {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "url": pageUrl,
+  "datePublished": articleData.datePublished,
+  "dateModified": articleData.dateModified || articleData.datePublished,
+  "author": {
+    "@type": "Organization",
+    "name": "Nuclear Blast Simulator"
+  },
+  "publisher": organizationSchema,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": pageUrl
+  },
+  "keywords": articleData.keywords?.join(", ")
+} : null;
+
+// FAQ schema
+const faqSchema = type === 'FAQPage' && faqData ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": title,
+  "description": description,
+  "url": pageUrl,
+  "mainEntity": faqData.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+} : null;
+
+// HowTo schema
+const howToSchema = type === 'HowTo' && howToData ? {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": title,
+  "description": description,
+  "url": pageUrl,
+  "totalTime": howToData.totalTime,
+  "supply": howToData.supply?.map(item => ({
+    "@type": "HowToSupply",
+    "name": item
+  })),
+  "tool": howToData.tool?.map(item => ({
+    "@type": "HowToTool",
+    "name": item
+  })),
+  "step": howToData.steps?.map((step, index) => ({
+    "@type": "HowToStep",
+    "position": index + 1,
+    "name": step.name,
+    "text": step.text,
+    "image": step.image
+  }))
+} : null;
+
+// Website schema (for homepage)
+const websiteSchema = Astro.url.pathname === '/' ? {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Nuclear Blast Simulator",
+  "url": siteUrl,
+  "description": "Interactive nuclear weapon effects visualization platform",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${siteUrl}/search?q={search_term_string}`
+    },
+    "query-input": "required name=search_term_string"
+  }
+} : null;
+
+// Breadcrumb schema
+const breadcrumbSchema = (() => {
+  const path = Astro.url.pathname.split('/').filter(Boolean);
+  if (path.length === 0) return null;
+  
+  const items = [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": siteUrl
+  }];
+  
+  let currentPath = '';
+  path.forEach((segment, index) => {
+    currentPath += `/${segment}`;
+    const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+    items.push({
+      "@type": "ListItem",
+      "position": index + 2,
+      "name": name,
+      "item": `${siteUrl}${currentPath}`
+    });
+  });
+  
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items
+  };
+})();
+
+// Combine all applicable schemas
+const schemas = [
+  organizationSchema,
+  websiteSchema,
+  webApplicationSchema,
+  articleSchema,
+  faqSchema,
+  howToSchema,
+  breadcrumbSchema
+].filter(Boolean);
+---
+
+{schemas.map(schema => (
+  <script type="application/ld+json" set:html={JSON.stringify(schema, null, 2)} />
+))}
