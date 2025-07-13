@@ -77,10 +77,17 @@ const ogImageURL = image || new URL(ogImage.src, Astro.site).href;
           <ul tabindex="0" class="menu menu-lg dropdown-content mt-3 z-[1] p-3 shadow-xl bg-base-100 rounded-2xl w-64 border border-base-300">
             <li><a href="/simulator/" class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-3">Simulator</a></li>
             <li><a href="/stats/" class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-3">Stats</a></li>
-            <li><a href="/timeline/" class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-3">Timeline</a></li>
-            <li><a href="/terms/" class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-3">Glossary</a></li>
-            <li><a href="/history/" class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-3">History</a></li>
-            <li><a href="/resources/" class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-3">Resources</a></li>
+            <li>
+              <details>
+                <summary class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-3">Resources</summary>
+                <ul>
+                  <li><a href="/timeline/" class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-2">Timeline</a></li>
+                  <li><a href="/terms/" class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-2">Glossary</a></li>
+                  <li><a href="/history/" class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-2">History</a></li>
+                  <li><a href="/resources/" class="rounded-lg hover:bg-primary/10 hover:text-primary text-base py-2">Educational Resources</a></li>
+                </ul>
+              </details>
+            </li>
           </ul>
         </div>
         
@@ -104,25 +111,19 @@ const ogImageURL = image || new URL(ogImage.src, Astro.site).href;
               Stats
             </a>
           </li>
-          <li>
-            <a href="/timeline/" class="rounded-lg hover:bg-primary/10 hover:text-primary transition-all font-medium">
-              Timeline
-            </a>
-          </li>
-          <li>
-            <a href="/terms/" class="rounded-lg hover:bg-primary/10 hover:text-primary transition-all font-medium">
-              Glossary
-            </a>
-          </li>
-          <li>
-            <a href="/history/" class="rounded-lg hover:bg-primary/10 hover:text-primary transition-all font-medium">
-              History
-            </a>
-          </li>
-          <li>
-            <a href="/resources/" class="rounded-lg hover:bg-primary/10 hover:text-primary transition-all font-medium">
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="rounded-lg hover:bg-primary/10 hover:text-primary transition-all font-medium">
               Resources
-            </a>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-xl border border-base-300 mt-0">
+              <li><a href="/timeline/" class="rounded-lg hover:bg-primary/10 hover:text-primary">Timeline</a></li>
+              <li><a href="/terms/" class="rounded-lg hover:bg-primary/10 hover:text-primary">Glossary</a></li>
+              <li><a href="/history/" class="rounded-lg hover:bg-primary/10 hover:text-primary">History</a></li>
+              <li><a href="/resources/" class="rounded-lg hover:bg-primary/10 hover:text-primary">Educational Resources</a></li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -195,9 +196,10 @@ const ogImageURL = image || new URL(ogImage.src, Astro.site).href;
         
         <!-- Quick Links -->
         <div>
-          <h3 class="text-sm font-semibold mb-3 uppercase tracking-wider">Resources</h3>
+          <h3 class="text-sm font-semibold mb-3 uppercase tracking-wider">Quick Links</h3>
           <ul class="space-y-2 text-sm">
             <li><a href="/simulator/" class="link link-hover opacity-70 hover:opacity-100">Simulator</a></li>
+            <li><a href="/stats/" class="link link-hover opacity-70 hover:opacity-100">Stats</a></li>
             <li><a href="/timeline/" class="link link-hover opacity-70 hover:opacity-100">Timeline</a></li>
             <li><a href="/terms/" class="link link-hover opacity-70 hover:opacity-100">Glossary</a></li>
             <li><a href="/history/" class="link link-hover opacity-70 hover:opacity-100">History</a></li>
@@ -246,6 +248,20 @@ const ogImageURL = image || new URL(ogImage.src, Astro.site).href;
 </html>
 
 <style>
+  /* Dropdown hover fix */
+  .dropdown-hover:hover .dropdown-content,
+  .dropdown-hover:focus-within .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Ensure smooth transition and no gap */
+  .dropdown-content {
+    margin-top: -4px;
+    padding-top: 8px;
+  }
+
   /* Floating Action Button */
   .fab-launch-simulator {
     position: fixed;
