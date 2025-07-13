@@ -135,5 +135,5 @@ export const linkStats = {
   linkedCities: 12,
   totalWeapons: 28,
   linkedWeapons: 17,
-  lastUpdated: '2025-07-10T04:19:33.637Z'
+  lastUpdated: '2025-07-13T02:24:25.043Z'
 };

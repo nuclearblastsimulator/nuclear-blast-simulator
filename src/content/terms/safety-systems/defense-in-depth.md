@@ -1,6 +1,6 @@
 ---
-title: 'Defense in Depth'
-description: 'Defense in depth is a fundamental safety philosophy used in nuclear facilities that employs multiple independent layers of protection to prevent accidents an...'
+title: "Defense in Depth"
+description: "Defense in depth is a fundamental safety philosophy used in nuclear facilities that employs multiple independent layers of protection to prevent accidents and mitigate consequences."
 ---
 
 # Defense in Depth

@@ -5,16 +5,20 @@ import { getCollection } from 'astro:content';
 const terms = await getCollection('terms');
 const sortedTerms = terms.sort((a, b) => a.data.title.localeCompare(b.data.title));
 
-// Dynamically group articles by their directory structure
+// Separate root level articles from categorized ones
+const rootArticles: any[] = [];
 const categories: Record<string, any[]> = {};
 
-// Group articles by category folder
+// Group articles by category folder or identify root articles
 sortedTerms.forEach(term => {
   // Remove 'terms/' prefix from slug to get the actual path
   const path = term.slug.replace('terms/', '');
   const parts = path.split('/');
   
-  if (parts.length > 1) {
+  if (parts.length === 1) {
+    // This is a root level article
+    rootArticles.push(term);
+  } else if (parts.length > 1) {
     const categoryFolder = parts[0]; // Get the category folder name
     
     // Convert folder name to display name (e.g., 'nuclear-physics' -> 'Nuclear Physics')
@@ -64,6 +68,46 @@ const sortedCategories = Object.keys(categories).sort().reduce((acc, key) => {
 
     <!-- Content Section -->
     <div class="container max-w-7xl mx-auto px-6 py-16">
+
+    <!-- Root Articles (if any) -->
+    {rootArticles.length > 0 && (
+      <section class="mb-16">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold mb-3 text-primary">Featured Topics</h2>
+          <p class="text-base-content/70 max-w-2xl mx-auto">
+            Essential nuclear concepts providing comprehensive overviews and foundational knowledge
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {rootArticles.map((term) => (
+            <a 
+              href={`/terms/${term.slug.replace('terms/', '')}/`} 
+              class="group relative"
+            >
+              <div class="card bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 h-full hover:shadow-2xl hover:scale-[1.02]">
+                <div class="card-body p-8">
+                  <div class="flex items-start justify-between mb-3">
+                    <h3 class="card-title text-2xl font-bold group-hover:text-primary transition-colors">
+                      {term.data.title}
+                    </h3>
+                    <span class="badge badge-primary badge-outline">Featured</span>
+                  </div>
+                  <p class="text-base text-base-content/80 leading-relaxed">
+                    {term.data.description}
+                  </p>
+                  <div class="mt-6 flex items-center text-primary opacity-70 group-hover:opacity-100 transition-opacity">
+                    <span class="text-sm font-semibold uppercase tracking-wide">Explore Topic</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
 
     <!-- Categories -->
     <div class="space-y-12">
