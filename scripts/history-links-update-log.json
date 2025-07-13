@@ -1,0 +1,33 @@
+{
+  "updateDate": "2025-07-13",
+  "description": "Updated all internal history links after reorganization from old category-based structure to new structure",
+  "oldStructure": [
+    "cold-war-crises",
+    "foundational-events", 
+    "key-figures",
+    "modern-developments",
+    "nuclear-programs",
+    "testing-disasters",
+    "weapons-technology"
+  ],
+  "newStructure": [
+    "events",
+    "people",
+    "programs", 
+    "testing",
+    "treaties"
+  ],
+  "filesUpdated": [
+    {
+      "file": "src/pages/timeline.astro",
+      "linksUpdated": 26
+    },
+    {
+      "file": "src/data/article-links.js",
+      "linksUpdated": 30
+    }
+  ],
+  "totalFilesProcessed": 135,
+  "totalFilesUpdated": 2,
+  "totalLinksUpdated": 56
+}
