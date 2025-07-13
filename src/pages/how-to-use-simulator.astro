@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const howToSteps = [
+  {
+    name: "Select a Location",
+    text: "Click on any location on the interactive map or use the search box to find a specific city. You can zoom in/out and pan the map to find your desired location. The simulator works for any location worldwide."
+  },
+  {
+    name: "Choose a Nuclear Weapon",
+    text: "Select from our database of real nuclear weapons ranging from the 15 kt Hiroshima bomb to the 50 Mt Tsar Bomba. Each weapon shows its yield in kilotons or megatons. You can also enter a custom yield value."
+  },
+  {
+    name: "Select Detonation Type",
+    text: "Choose between air burst (maximizes blast damage) or surface burst (creates more fallout). Air burst is typically used for destroying cities, while surface burst targets hardened facilities."
+  },
+  {
+    name: "Click 'Detonate'",
+    text: "Press the red Detonate button to simulate the nuclear explosion. The map will display color-coded damage zones showing different effects at various distances from ground zero."
+  },
+  {
+    name: "Explore the Damage Zones",
+    text: "Click on any colored zone to see detailed information about effects in that area. The zones show: Fireball (vaporization), heavy blast damage (5 psi), moderate damage (1 psi), thermal radiation burns, and light damage."
+  },
+  {
+    name: "Compare Different Scenarios",
+    text: "Try different weapons, locations, and burst types to understand how nuclear weapon effects vary. Use the clear button to reset and start a new simulation."
+  }
+];
+
+const howToData = {
+  totalTime: "PT5M",
+  tool: ["Web browser with internet connection", "Computer or mobile device"],
+  supply: ["Location you want to simulate", "Nuclear weapon selection"],
+  steps: howToSteps
+};
+---
+
+<BaseLayout 
+  title="How to Use Nuclear Blast Simulator" 
+  description="Step-by-step guide for using our nuclear explosion simulator. Learn to calculate blast radius, compare weapons, and understand damage zones."
+  schemaType="HowTo"
+  howToData={howToData}
+>
+  <div class="container mx-auto px-6 py-12 max-w-4xl">
+    <h1 class="text-4xl font-bold mb-8">How to Use the Nuclear Blast Simulator</h1>
+    
+    <div class="prose prose-lg max-w-none mb-12">
+      <p class="text-xl text-base-content/70">
+        Our nuclear blast simulator helps visualize the devastating effects of nuclear weapons on any location. 
+        Follow this guide to effectively use all features of the simulator for educational purposes.
+      </p>
+    </div>
+
+    <div class="alert alert-info mb-8">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <div>
+        <h3 class="font-bold">Before You Start</h3>
+        <div class="text-sm">The simulator requires an internet connection and works best on desktop browsers, though mobile devices are supported.</div>
+      </div>
+    </div>
+
+    <div class="space-y-8">
+      {howToSteps.map((step, index) => (
+        <div class="card bg-base-200 border border-base-300" key={index}>
+          <div class="card-body">
+            <h2 class="card-title text-2xl">
+              <span class="badge badge-primary badge-lg">{index + 1}</span>
+              {step.name}
+            </h2>
+            <p class="text-base-content/80 mt-2">
+              {step.text}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="divider my-12"></div>
+
+    <div class="space-y-8">
+      <div>
+        <h2 class="text-2xl font-bold mb-4">Understanding the Damage Zones</h2>
+        <div class="grid gap-4">
+          <div class="flex gap-4 items-start">
+            <div class="w-6 h-6 rounded-full bg-red-600 flex-shrink-0 mt-1"></div>
+            <div>
+              <h3 class="font-semibold">Fireball Radius (Red)</h3>
+              <p class="text-base-content/70">Complete vaporization. Everything is destroyed.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-6 h-6 rounded-full bg-orange-600 flex-shrink-0 mt-1"></div>
+            <div>
+              <h3 class="font-semibold">Heavy Blast Damage (Orange)</h3>
+              <p class="text-base-content/70">20 psi overpressure. Heavily built concrete buildings destroyed.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-6 h-6 rounded-full bg-yellow-600 flex-shrink-0 mt-1"></div>
+            <div>
+              <h3 class="font-semibold">Moderate Blast Damage (Yellow)</h3>
+              <p class="text-base-content/70">5 psi overpressure. Most residential buildings collapse.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-6 h-6 rounded-full bg-gray-400 flex-shrink-0 mt-1"></div>
+            <div>
+              <h3 class="font-semibold">Thermal Radiation (Gray)</h3>
+              <p class="text-base-content/70">3rd degree burns to exposed skin. Fires ignited.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-6 h-6 rounded-full bg-gray-300 flex-shrink-0 mt-1"></div>
+            <div>
+              <h3 class="font-semibold">Light Damage (Light Gray)</h3>
+              <p class="text-base-content/70">1 psi overpressure. Windows shattered, light injuries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold mb-4">Pro Tips</h2>
+        <ul class="list-disc list-inside space-y-2 text-base-content/80">
+          <li>Use keyboard shortcuts: 'D' to detonate, 'C' to clear, 'R' to reset view</li>
+          <li>Click and drag to pan the map, scroll to zoom</li>
+          <li>Double-click any location for quick positioning</li>
+          <li>Compare multiple weapons by clearing and re-detonating</li>
+          <li>Screenshot results for educational presentations</li>
+          <li>Check the statistics panel for cumulative data</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold mb-4">Educational Applications</h2>
+        <p class="text-base-content/80 mb-4">
+          The simulator can be used for various educational purposes:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-base-content/80">
+          <li>History classes studying World War II and the Cold War</li>
+          <li>Physics courses exploring energy release and scaling laws</li>
+          <li>Political science discussions on nuclear deterrence</li>
+          <li>Emergency management training and planning</li>
+          <li>Public education about nuclear weapon effects</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 p-8 bg-primary/10 rounded-lg border border-primary/20">
+      <h2 class="text-2xl font-bold mb-4">Ready to Start?</h2>
+      <p class="mb-6">Now that you know how to use the simulator, explore the devastating effects of nuclear weapons and understand why they must never be used.</p>
+      <a href="/simulator/" class="btn btn-primary btn-lg">
+        Launch Simulator
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</BaseLayout>

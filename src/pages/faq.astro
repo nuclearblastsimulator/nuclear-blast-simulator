@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    question: "How far does a nuclear blast reach?",
+    answer: "The blast radius depends on the weapon's yield. A 1 megaton bomb creates severe damage within 4 miles, moderate damage to 10 miles, and can cause burns up to 20 miles away. Use our simulator to see specific ranges for different weapons."
+  },
+  {
+    question: "What would happen if a nuclear bomb hit my city?",
+    answer: "Use our nuclear blast simulator to visualize the effects on any city worldwide. See damage zones, casualty estimates, and understand the different blast effects from overpressure to thermal radiation."
+  },
+  {
+    question: "How big is the Hiroshima bomb blast radius?",
+    answer: "The Hiroshima bomb (15 kilotons) created total destruction within 1 mile, severe damage to 2 miles, and caused burns up to 3 miles from ground zero. Modern weapons are 50-3,000 times more powerful."
+  },
+  {
+    question: "What's the difference between air burst and surface burst?",
+    answer: "Air burst detonations maximize blast damage over a wider area, while surface bursts create more radioactive fallout but less blast damage. Most military planners use air bursts for maximum destruction."
+  },
+  {
+    question: "How accurate is this nuclear blast simulator?",
+    answer: "Our calculations are based on peer-reviewed formulas from 'The Effects of Nuclear Weapons' by Glasstone & Dolan. While simplified for educational purposes, they provide scientifically accurate approximations of blast effects."
+  },
+  {
+    question: "What is nuclear blast radius?",
+    answer: "Nuclear blast radius is the distance from ground zero where specific effects of a nuclear explosion occur. Different damage zones extend to different distances based on the weapon's yield. The main zones include the fireball radius, heavy blast damage radius (5 psi overpressure), moderate damage radius (1 psi), thermal radiation radius, and light damage radius."
+  },
+  {
+    question: "How do you calculate nuclear bomb blast radius?",
+    answer: "Nuclear blast radius is calculated using scaling laws based on weapon yield. The general formula is: Radius = Constant × Yield^(1/3) for blast effects, where yield is measured in kilotons. Different constants apply for different effects - blast damage, thermal radiation, and initial nuclear radiation each have their own scaling relationships."
+  },
+  {
+    question: "What is the blast radius of a 1 megaton nuclear bomb?",
+    answer: "A 1 megaton nuclear bomb creates multiple damage zones: Fireball radius: 0.9 km (everything vaporized), Heavy blast damage (20 psi): 2.5 km radius, Moderate blast damage (5 psi): 5.4 km radius, Thermal radiation (3rd degree burns): 11 km radius, Light damage (1 psi): 17 km radius. The total affected area can exceed 900 square kilometers."
+  },
+  {
+    question: "How far does nuclear radiation travel?",
+    answer: "Initial nuclear radiation (emitted in the first minute) is lethal up to about 2-3 km for a 1 megaton weapon. However, radioactive fallout can travel hundreds of kilometers downwind, creating dangerous radiation levels far from ground zero. The exact distance depends on weapon yield, burst height, and weather conditions."
+  },
+  {
+    question: "Can you survive a nuclear blast?",
+    answer: "Survival depends on distance from ground zero, available shelter, and preparation. Beyond the heavy damage radius, survival chances increase significantly with proper shelter. Duck and cover behind solid objects, avoid windows, and seek shelter in basements or interior rooms. The first 48-72 hours are critical for avoiding fallout radiation."
+  },
+  {
+    question: "What is the most powerful nuclear weapon ever tested?",
+    answer: "The Tsar Bomba, detonated by the Soviet Union in 1961, was the most powerful nuclear weapon ever tested at 50 megatons. It created a fireball 8 km in diameter, and the blast wave circled Earth three times. Windows were broken up to 900 km away. It was originally designed for 100 megatons but was scaled down for the test."
+  },
+  {
+    question: "What are the main effects of a nuclear explosion?",
+    answer: "Nuclear explosions produce four main effects: 1) Blast/shock wave (50% of energy) causing overpressure damage, 2) Thermal radiation (35%) causing burns and fires, 3) Initial nuclear radiation (5%) causing immediate radiation sickness, 4) Electromagnetic pulse (EMP) damaging electronics, and 5) Radioactive fallout causing long-term contamination."
+  },
+  {
+    question: "Why is nuclear weapon education important?",
+    answer: "Understanding nuclear weapons effects helps inform public policy debates, supports civil defense planning, and reinforces why these weapons must never be used. Education about their devastating humanitarian consequences has been crucial for arms control efforts and motivates continued work toward nuclear disarmament."
+  }
+];
+
+---
+
+<BaseLayout 
+  title="Frequently Asked Questions" 
+  description="Common questions about nuclear blast radius, weapon effects, survival, and using our nuclear explosion simulator. Get answers from experts."
+  schemaType="FAQPage"
+  faqData={faqs}
+>
+  <div class="container mx-auto px-6 py-12 max-w-4xl">
+    <h1 class="text-4xl font-bold mb-8">Frequently Asked Questions</h1>
+    
+    <div class="prose prose-lg max-w-none">
+      <p class="text-xl text-base-content/70 mb-12">
+        Find answers to common questions about nuclear weapons, blast effects, and using our simulator. 
+        Understanding these concepts is crucial for appreciating the devastating scale of nuclear weapons.
+      </p>
+    </div>
+
+    <div class="space-y-6">
+      {faqs.map((faq, index) => (
+        <div class="collapse collapse-plus bg-base-200 border border-base-300" key={index}>
+          <input type="radio" name="faq-accordion" checked={index === 0} />
+          <div class="collapse-title text-xl font-medium">
+            {faq.question}
+          </div>
+          <div class="collapse-content">
+            <p class="pt-4 text-base-content/80">
+              {faq.answer}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-16 p-8 bg-base-200 rounded-lg border border-base-300">
+      <h2 class="text-2xl font-bold mb-4">Have More Questions?</h2>
+      <p class="text-base-content/70 mb-6">
+        If you have questions not covered here, we'd love to hear from you. Your questions help us improve our educational resources.
+      </p>
+      <div class="flex gap-4">
+        <a href="/feedback/" class="btn btn-primary">
+          Send Us Your Question
+        </a>
+        <a href="/resources/" class="btn btn-outline">
+          Browse Resources
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="text-sm text-base-content/60">
+        This FAQ is regularly updated based on user questions and the latest scientific understanding of nuclear weapons effects.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
