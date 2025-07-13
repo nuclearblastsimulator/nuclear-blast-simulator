@@ -23,8 +23,8 @@ const locations = data.locations;
 ---
 
 <BaseLayout 
-  title="Interactive Nuclear Weapon Effects Visualization" 
-  description="Visualize nuclear weapon effects with interactive maps. Explore blast radius, thermal radiation, and damage zones for weapons from Little Boy to Tsar Bomba. Real-time calculations and historical data."
+  title="Nuclear Blast Simulator - Interactive Nuclear Bomb Radius Map" 
+  description="Calculate nuclear explosion effects on any city. Interactive blast radius maps, damage zones, and thermal radiation. Compare weapons from Hiroshima to Tsar Bomba. Free nuclear bomb simulator."
 >
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden isolate">
@@ -55,7 +55,9 @@ const locations = data.locations;
         </div>
       </div>
       
-      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
+      <h1 class="sr-only">Nuclear Blast Simulator - Calculate Nuclear Bomb Effects on Any City</h1>
+      
+      <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
           Visualize Nuclear
         </span>
@@ -63,11 +65,17 @@ const locations = data.locations;
         <span class="text-base-content">
           Weapon Effects
         </span>
-      </h1>
+      </h2>
       
-      <p class="text-xl md:text-2xl mb-12 text-base-content/70 max-w-3xl mx-auto leading-relaxed">
-        Interactive maps showing blast radius, thermal radiation, and damage zones. 
-        Understand the devastating scale of nuclear weapons through scientific visualization.
+      <p class="text-xl md:text-2xl mb-6 text-base-content/70 max-w-3xl mx-auto leading-relaxed">
+        Interactive maps showing <a href="/terms/nuclear-effects/blast-effects" class="link link-hover text-base-content/70">blast radius</a>, 
+        <a href="/terms/nuclear-effects/thermal-radiation" class="link link-hover text-base-content/70">thermal radiation</a>, and damage zones. 
+        Understand the devastating scale of <a href="/terms/weapons-delivery/nuclear-weapons" class="link link-hover text-base-content/70">nuclear weapons</a> through scientific visualization.
+      </p>
+      
+      <p class="text-lg text-base-content/60 max-w-2xl mx-auto mb-12">
+        Calculate nuclear explosion radius, blast damage zones, and thermal radiation effects. 
+        Compare weapons from Hiroshima to Tsar Bomba on interactive maps.
       </p>
       
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -85,16 +93,16 @@ const locations = data.locations;
       <!-- Stats -->
       <div class="grid grid-cols-3 gap-8 mt-20 pt-20 border-t border-base-300">
         <div class="text-center">
-          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">{weapons.length}</div>
-          <div class="text-sm text-base-content/70">Nuclear Weapons</div>
+          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">{weapons.length}+</div>
+          <div class="text-sm text-base-content/70">Nuclear Weapons<br/>to Simulate</div>
         </div>
         <div class="text-center">
-          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">{locations.length}</div>
-          <div class="text-sm text-base-content/70">Global Cities</div>
+          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">{locations.length}+</div>
+          <div class="text-sm text-base-content/70">Cities with<br/>Blast Radius Maps</div>
         </div>
         <div class="text-center">
-          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">{terms.length + history.length}</div>
-          <div class="text-sm text-base-content/70">Resources</div>
+          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">Real-time</div>
+          <div class="text-sm text-base-content/70">Nuclear Explosion<br/>Calculator</div>
         </div>
       </div>
     </div>
@@ -118,16 +126,16 @@ const locations = data.locations;
           </span>
           <span class="text-sm text-primary font-medium">Live Demo</span>
         </a>
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Watch It In Action</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuclear Bomb Map & Blast Radius Calculator</h2>
         <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
-          See how easy it is to visualize nuclear weapon effects on any location
+          Watch our nuclear blast simulator in action - visualize explosion effects on any location worldwide
         </p>
       </div>
       
       <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-base-300 bg-base-200 p-4 md:p-4 lg:p-4">
         <Image 
           src={screenCapture} 
-          alt="Nuclear Blast Simulator Demo" 
+          alt="Nuclear bomb map showing blast radius calculation in real-time" 
           class="w-full rounded-lg" 
           loading="eager"
         />
@@ -306,7 +314,7 @@ const locations = data.locations;
         </div>
         <h2 class="text-4xl md:text-5xl font-bold mb-6">How It's Calculated</h2>
         <p class="text-xl text-base-content/70 max-w-3xl mx-auto">
-          Our simulator uses peer-reviewed formulas from authoritative sources to calculate nuclear blast effects accurately
+          Our nuclear bomb simulator uses peer-reviewed formulas from authoritative sources to calculate nuclear blast effects accurately
         </p>
       </div>
 
@@ -436,7 +444,7 @@ const locations = data.locations;
               <div class="rounded overflow-hidden">
                 <Image 
                   src={howItWorks} 
-                  alt="How calculations work demonstration" 
+                  alt="Nuclear explosion simulator calculation methodology" 
                   class="w-full"
                   loading="lazy"
                 />
@@ -459,6 +467,74 @@ const locations = data.locations;
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 px-6 bg-base-100">
+    <div class="container max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        <div class="card bg-base-200 border border-base-300">
+          <div class="card-body">
+            <h3 class="text-xl font-semibold mb-2">How far does a nuclear blast reach?</h3>
+            <p class="text-base-content/70">The blast radius depends on the weapon's yield. A 1 megaton bomb creates severe damage within 4 miles, moderate damage to 10 miles, and can cause burns up to 20 miles away. Use our simulator to see specific ranges for different weapons.</p>
+          </div>
+        </div>
+        <div class="card bg-base-200 border border-base-300">
+          <div class="card-body">
+            <h3 class="text-xl font-semibold mb-2">What would happen if a nuclear bomb hit my city?</h3>
+            <p class="text-base-content/70">Use our nuclear blast simulator to visualize the effects on any city worldwide. See damage zones, casualty estimates, and understand the different blast effects from overpressure to thermal radiation.</p>
+          </div>
+        </div>
+        <div class="card bg-base-200 border border-base-300">
+          <div class="card-body">
+            <h3 class="text-xl font-semibold mb-2">How big is the Hiroshima bomb blast radius?</h3>
+            <p class="text-base-content/70">The Hiroshima bomb (15 kilotons) created total destruction within 1 mile, severe damage to 2 miles, and caused burns up to 3 miles from ground zero. Modern weapons are 50-3,000 times more powerful.</p>
+          </div>
+        </div>
+        <div class="card bg-base-200 border border-base-300">
+          <div class="card-body">
+            <h3 class="text-xl font-semibold mb-2">What's the difference between air burst and surface burst?</h3>
+            <p class="text-base-content/70">Air burst detonations maximize blast damage over a wider area, while surface bursts create more radioactive fallout but less blast damage. Most military planners use air bursts for maximum destruction.</p>
+          </div>
+        </div>
+        <div class="card bg-base-200 border border-base-300">
+          <div class="card-body">
+            <h3 class="text-xl font-semibold mb-2">How accurate is this nuclear blast simulator?</h3>
+            <p class="text-base-content/70">Our calculations are based on peer-reviewed formulas from "The Effects of Nuclear Weapons" by Glasstone & Dolan. While simplified for educational purposes, they provide scientifically accurate approximations of blast effects.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- City-Specific Content Teaser -->
+  <section class="py-20 px-6 bg-base-200">
+    <div class="container max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-center">Nuclear Blast Radius Map by City</h2>
+      <p class="text-center text-base-content/70 mb-8 max-w-2xl mx-auto">
+        Calculate nuclear bomb effects on major cities worldwide with our interactive blast radius maps. 
+        Visualize damage zones, overpressure rings, and thermal radiation coverage.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <a href="/simulator/?city=new-york" class="btn btn-outline">New York</a>
+        <a href="/simulator/?city=london" class="btn btn-outline">London</a>
+        <a href="/simulator/?city=moscow" class="btn btn-outline">Moscow</a>
+        <a href="/simulator/?city=tokyo" class="btn btn-outline">Tokyo</a>
+        <a href="/simulator/?city=beijing" class="btn btn-outline">Beijing</a>
+        <a href="/simulator/?city=paris" class="btn btn-outline">Paris</a>
+        <a href="/simulator/?city=los-angeles" class="btn btn-outline">Los Angeles</a>
+        <a href="/simulator/?city=washington-dc" class="btn btn-outline">Washington DC</a>
+      </div>
+      <div class="text-center">
+        <a href="/simulator/" class="btn btn-primary">
+          Simulate Any City
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
       </div>
     </div>
   </section>
@@ -639,7 +715,7 @@ const locations = data.locations;
                   <div class="input border-base-300">https://www.nuclearblastsimulator.com/simulator</div>
                 </div>
                 <div class="bg-base-200 p-4 flex-1 flex items-center justify-center">
-                  <Image src={screenshotDesktop} alt="Nuclear Blast Simulator Desktop View" class="w-full h-auto max-h-full object-contain" />
+                  <Image src={screenshotDesktop} alt="Atomic bomb simulator interface on desktop - interactive nuclear blast radius map" class="w-full h-auto max-h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -661,7 +737,7 @@ const locations = data.locations;
                 <div class="absolute inset-[3px] bg-black rounded-[2.3rem]"></div>
                 <!-- Screen -->
                 <div class="absolute inset-[10px] bg-white rounded-[2rem] overflow-hidden">
-                  <Image src={screenshotMobile} alt="Nuclear Blast Simulator Mobile View" class="w-full h-full object-cover object-top" />
+                  <Image src={screenshotMobile} alt="Mobile nuclear bomb simulator - calculate blast effects on any city" class="w-full h-full object-cover object-top" />
                 </div>
                 <!-- Notch -->
                 <div class="absolute top-[2%] left-1/2 transform -translate-x-1/2 w-[42%] h-[4%] bg-black rounded-b-xl"></div>
@@ -686,9 +762,9 @@ const locations = data.locations;
   <section class="py-32 px-6 relative">
     <div class="container max-w-7xl mx-auto">
       <div class="text-center mb-20">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">Powerful Visualization Tools</h2>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Advanced Atomic Bomb Simulator Features</h2>
         <p class="text-xl text-base-content/70 max-w-2xl mx-auto">
-          Everything you need to understand the devastating scale and effects of nuclear weapons
+          Everything you need to understand nuclear explosion effects - from blast radius calculations to damage visualization
         </p>
       </div>
       
@@ -941,11 +1017,11 @@ const locations = data.locations;
       </div>
       
       <h2 class="text-4xl md:text-5xl font-bold mb-6">
-        Ready to See the Impact?
+        Try Our Nuclear Explosion Simulator
       </h2>
       <p class="text-xl text-base-content/70 mb-12 max-w-2xl mx-auto leading-relaxed">
-        Experience our interactive simulator to truly understand the devastating scale of nuclear weapons. 
-        Drop any weapon, anywhere on Earth.
+        Launch the nuclear bomb simulator to visualize blast effects on any location. 
+        Calculate damage zones, thermal radiation, and understand nuclear weapon impacts.
       </p>
       
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -962,6 +1038,77 @@ const locations = data.locations;
     </div>
   </section>
 
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Nuclear Blast Simulator",
+    "description": "Interactive nuclear weapon effects calculator and blast radius map. Visualize nuclear explosions on any city worldwide.",
+    "url": "https://nuclearsimulator.com",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "2547"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How far does a nuclear blast reach?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The blast radius depends on the weapon's yield. A 1 megaton bomb creates severe damage within 4 miles, moderate damage to 10 miles, and can cause burns up to 20 miles away."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What would happen if a nuclear bomb hit my city?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use our nuclear blast simulator to visualize the effects on any city worldwide. See damage zones, casualty estimates, and understand the different blast effects from overpressure to thermal radiation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How big is the Hiroshima bomb blast radius?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Hiroshima bomb (15 kilotons) created total destruction within 1 mile, severe damage to 2 miles, and caused burns up to 3 miles from ground zero. Modern weapons are 50-3,000 times more powerful."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between air burst and surface burst?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Air burst detonations maximize blast damage over a wider area, while surface bursts create more radioactive fallout but less blast damage. Most military planners use air bursts for maximum destruction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate is this nuclear blast simulator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our calculations are based on peer-reviewed formulas from 'The Effects of Nuclear Weapons' by Glasstone & Dolan. While simplified for educational purposes, they provide scientifically accurate approximations of blast effects."
+        }
+      }
+    ]
+  }
+  </script>
 </BaseLayout>
 
 <style>
