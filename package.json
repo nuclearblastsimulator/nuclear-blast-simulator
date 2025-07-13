@@ -21,8 +21,6 @@
     "deploy": "netlify deploy --prod",
     "update-links": "node scripts/update-article-links.js",
     "reorganize-content": "node scripts/reorganize-content.js",
-    "analyze-links": "node scripts/analyze-internal-links-v2.js",
-    "implement-links": "node scripts/implement-internal-links-v2.js",
     "test:links": "node scripts/test-links-deploy.js",
     "version:patch": "node scripts/bump-version.js patch",
     "version:minor": "node scripts/bump-version.js minor",

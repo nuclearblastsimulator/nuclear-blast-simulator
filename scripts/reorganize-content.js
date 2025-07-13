@@ -1,270 +1,142 @@
-import fs from 'fs/promises';
+#!/usr/bin/env node
+
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// New organization structure
-const termsReorganization = {
-  'nuclear-physics': [
-    'nuclear-physics/alpha-decay',
-    'nuclear-physics/binding-energy',
-    'nuclear-physics/critical-mass',
-    'nuclear-physics/fission',
-    'nuclear-physics/fusion',
-    'nuclear-physics/half-life',
-    'nuclear-physics/neutron-cross-section',
-    'nuclear-physics/plutonium',
-    'nuclear-technology/enrichment',
-    'nuclear-effects/nuclear-fallout'
-  ],
-  'nuclear-effects': [
-    'nuclear-effects/electromagnetic-pulse',
-    'nuclear-effects/emp-weapons',
-    'nuclear-effects/ground-zero',
-    'nuclear-effects/megaton',
-    'nuclear-effects/nuclear-winter',
-    'nuclear-effects/yield-comparison',
-    'nuclear-effects/yield'
-  ],
-  'reactor-technology': [
-    'reactor-types/boiling-water-reactor',
-    'reactor-types/generation-iv',
-    'reactor-types/pressurized-water-reactor',
-    'reactor-types/small-modular-reactors',
-    'reactor-types/thorium-cycle',
-    'reactor-types/tokamak',
-    'reactor-components/control-rods',
-    'reactor-components/coolant',
-    'reactor-components/moderator'
-  ],
-  'safety-systems': [
-    'safety-systems/alara-principle',
-    'safety-systems/containment',
-    'safety-systems/defense-in-depth',
-    'safety-systems/scram'
-  ],
-  'weapons-delivery': [
-    'weapons-delivery-systems/first-strike',
-    'weapons-delivery-systems/icbm',
-    'weapons-delivery-systems/nuclear-triad',
-    'weapons-delivery-systems/tactical-nuclear-weapons'
-  ],
-  'nuclear-strategy': [
-    'strategy-policy/mutual-assured-destruction',
-    'strategy-policy/nuclear-deterrence'
-  ],
-  'treaties-agreements': [
-    'treaties-agreements/non-proliferation-treaty',
-    'treaties-agreements/start-treaty'
-  ]
+// Mapping of old paths to new paths based on SEO recommendations
+const reorganizationMap = {
+  // Nuclear Effects -> effects/
+  'src/content/terms/nuclear-effects/blast-effects.md': 'src/content/terms/effects/blast-effects.md',
+  'src/content/terms/nuclear-effects/thermal-radiation.md': 'src/content/terms/effects/thermal-radiation.md',
+  'src/content/terms/nuclear-effects/electromagnetic-pulse.md': 'src/content/terms/effects/electromagnetic-pulse.md',
+  'src/content/terms/nuclear-effects/nuclear-winter.md': 'src/content/terms/effects/nuclear-winter.md',
+  'src/content/terms/nuclear-effects/ground-zero.md': 'src/content/terms/effects/ground-zero.md',
+  'src/content/terms/radiation-sickness.md': 'src/content/terms/effects/radiation-sickness.md',
+  
+  // Yield-related to weapons/
+  'src/content/terms/nuclear-effects/yield.md': 'src/content/terms/weapons/yield.md',
+  'src/content/terms/nuclear-effects/megaton.md': 'src/content/terms/weapons/megaton.md',
+  'src/content/terms/nuclear-effects/yield-comparison.md': 'src/content/terms/weapons/yield-comparison.md',
+  'src/content/terms/nuclear-physics/critical-mass.md': 'src/content/terms/weapons/critical-mass.md',
+  'src/content/terms/nuclear-physics/fission.md': 'src/content/terms/weapons/fission-weapons.md',
+  'src/content/terms/nuclear-physics/fusion.md': 'src/content/terms/weapons/fusion-weapons.md',
+  'src/content/terms/nuclear-physics/plutonium.md': 'src/content/terms/weapons/plutonium.md',
+  'src/content/terms/nuclear-physics/enrichment.md': 'src/content/terms/weapons/enrichment.md',
+  
+  // Weapons Delivery -> delivery/
+  'src/content/terms/weapons-delivery/icbm.md': 'src/content/terms/delivery/icbm.md',
+  'src/content/terms/weapons-delivery/nuclear-triad.md': 'src/content/terms/delivery/nuclear-triad.md',
+  'src/content/terms/weapons-delivery/first-strike.md': 'src/content/terms/delivery/first-strike.md',
+  'src/content/terms/weapons-delivery/tactical-nuclear-weapons.md': 'src/content/terms/delivery/tactical-nuclear-weapons.md',
+  'src/content/terms/nuclear-effects/emp-weapons.md': 'src/content/terms/delivery/emp-weapons.md',
+  
+  // Nuclear Physics -> physics/
+  'src/content/terms/nuclear-physics/alpha-decay.md': 'src/content/terms/physics/alpha-decay.md',
+  'src/content/terms/nuclear-physics/half-life.md': 'src/content/terms/physics/half-life.md',
+  'src/content/terms/nuclear-physics/binding-energy.md': 'src/content/terms/physics/binding-energy.md',
+  'src/content/terms/nuclear-physics/neutron-cross-section.md': 'src/content/terms/physics/neutron-cross-section.md',
+  'src/content/terms/nuclear-physics/nuclear-fallout.md': 'src/content/terms/effects/fallout.md',
+  
+  // Reactor Technology -> power/
+  'src/content/terms/reactor-technology/pressurized-water-reactor.md': 'src/content/terms/power/pressurized-water-reactor.md',
+  'src/content/terms/reactor-technology/boiling-water-reactor.md': 'src/content/terms/power/boiling-water-reactor.md',
+  'src/content/terms/reactor-technology/small-modular-reactors.md': 'src/content/terms/power/small-modular-reactors.md',
+  'src/content/terms/reactor-technology/control-rods.md': 'src/content/terms/power/control-rods.md',
+  'src/content/terms/reactor-technology/coolant.md': 'src/content/terms/power/coolant.md',
+  'src/content/terms/reactor-technology/moderator.md': 'src/content/terms/power/moderator.md',
+  'src/content/terms/reactor-technology/generation-iv.md': 'src/content/terms/power/generation-iv.md',
+  'src/content/terms/reactor-technology/thorium-cycle.md': 'src/content/terms/power/thorium-cycle.md',
+  'src/content/terms/reactor-technology/tokamak.md': 'src/content/terms/power/tokamak.md',
+  
+  // Safety Systems -> power/
+  'src/content/terms/safety-systems/containment.md': 'src/content/terms/power/containment.md',
+  'src/content/terms/safety-systems/scram.md': 'src/content/terms/power/scram.md',
+  'src/content/terms/safety-systems/defense-in-depth.md': 'src/content/terms/power/defense-in-depth.md',
+  'src/content/terms/safety-systems/alara-principle.md': 'src/content/terms/power/alara-principle.md',
+  
+  // Nuclear Strategy -> strategy/
+  'src/content/terms/nuclear-strategy/nuclear-deterrence.md': 'src/content/terms/strategy/nuclear-deterrence.md',
+  'src/content/terms/nuclear-strategy/mutual-assured-destruction.md': 'src/content/terms/strategy/mutual-assured-destruction.md',
+  'src/content/terms/treaties-agreements/non-proliferation-treaty.md': 'src/content/terms/strategy/non-proliferation-treaty.md',
+  'src/content/terms/treaties-agreements/start-treaty.md': 'src/content/terms/strategy/start-treaty.md',
 };
 
-const historyReorganization = {
-  'foundational-events': [
-    'historical-events/discovery-of-radioactivity',
-    'historical-events/neutron-discovery',
-    'historical-events/nuclear-fission-discovery',
-    'historical-events/chicago-pile-1',
-    'historical-events/atoms-for-peace',
-    'nuclear-facilities/chicago-met-lab',
-    'nuclear-facilities/los-alamos',
-    'nuclear-facilities/oak-ridge'
-  ],
-  'key-figures': [
-    'key-figures/andrei-sakharov',
-    'key-figures/edward-teller',
-    'key-figures/hyman-rickover',
-    'key-figures/klaus-fuchs',
-    'key-figures/oppenheimer'
-  ],
-  'cold-war-crises': [
-    'historical-events/cuban-missile-crisis',
-    'historical-events/able-archer-83',
-    'historical-events/kargil-conflict',
-    'historical-events/norwegian-rocket-incident',
-    'historical-events/stanislav-petrov-incident',
-    'historical-events/nuclear-close-calls',
-    'historical-events/broken-arrows',
-    'nuclear-command/moscow-nuclear-program',
-    'nuclear-command/washington-dc'
-  ],
-  'weapons-technology': [
-    'weapons-technology/fission-weapons',
-    'weapons-technology/fusion-weapons',
-    'weapons-technology/nuclear-weapons-design',
-    'weapons-technology/nuclear-materials',
-    'weapons-technology/weapons-manufacturing',
-    'weapons-technology/nuclear-weapon-effects',
-    'weapons-technology/nuclear-testing',
-    'weapons-technology/miniaturization',
-    'weapons-technology/b83',
-    'weapons-technology/w87',
-    'weapons-technology/w88',
-    'weapons-technology/gbu-57-mop',
-    'weapons-technology/moab'
-  ],
-  'nuclear-programs': [
-    'nuclear-programs/china',
-    'nuclear-programs/france',
-    'nuclear-programs/india',
-    'nuclear-programs/israel',
-    'nuclear-programs/pakistan',
-    'nuclear-programs/united-kingdom',
-    'overview/nuclear-weapons-by-country',
-    'modern-developments/nuclear-proliferation-21st-century',
-    'modern-developments/iran-nuclear-program',
-    'delivery-systems/intercontinental-ballistic-missiles',
-    'delivery-systems/missile-defense-systems',
-    'delivery-systems/nautilus-submarine',
-    'delivery-systems/nuclear-submarines',
-    'delivery-systems/nuclear-triad',
-    'delivery-systems/strategic-bombers'
-  ],
-  'testing-disasters': [
-    'testing-sites/bikini-atoll',
-    'testing-sites/lop-nur',
-    'testing-sites/nevada-test-site',
-    'testing-sites/novaya-zemlya',
-    'testing-sites/semipalatinsk-test-site',
-    'testing-sites/overview',
-    'medical-environmental/castle-bravo',
-    'medical-environmental/chernobyl-disaster',
-    'medical-environmental/fukushima-daiichi',
-    'medical-environmental/three-mile-island',
-    'medical-environmental/hibakusha',
-    'medical-environmental/nuclear-testing-health-effects'
-  ],
-  'modern-developments': [
-    'modern-developments/nuclear-fusion',
-    'modern-developments/nuclear-modernization-programs',
-    'modern-developments/nuclear-terrorism',
-    'modern-developments/obninsk-reactor',
-    'modern-developments/shippingport',
-    'modern-developments/small-modular-reactors',
-    'treaties-diplomacy/comprehensive-test-ban-treaty',
-    'treaties-diplomacy/intermediate-range-nuclear-forces-treaty',
-    'treaties-diplomacy/non-proliferation-treaty',
-    'treaties-diplomacy/nuclear-weapons-free-zones',
-    'treaties-diplomacy/start-treaties',
-    'philosophical-ethical/nuclear-abolition',
-    'philosophical-ethical/nuclear-deterrence-theory',
-    'philosophical-ethical/nuclear-ethics'
-  ]
-};
+// Track moved files for redirect creation
+const movedFiles = [];
 
-async function moveFile(oldPath, newPath) {
+// Function to move files
+function moveFile(oldPath, newPath) {
   try {
-    // Ensure the target directory exists
-    await fs.mkdir(path.dirname(newPath), { recursive: true });
+    // Ensure the destination directory exists
+    const newDir = path.dirname(newPath);
+    if (!fs.existsSync(newDir)) {
+      fs.mkdirSync(newDir, { recursive: true });
+    }
     
-    // Move the file
-    await fs.rename(oldPath, newPath);
-    console.log(`✓ Moved: ${oldPath} → ${newPath}`);
+    // Check if source file exists
+    if (fs.existsSync(oldPath)) {
+      // Read the file content
+      const content = fs.readFileSync(oldPath, 'utf8');
+      
+      // Write to new location
+      fs.writeFileSync(newPath, content);
+      
+      // Delete old file
+      fs.unlinkSync(oldPath);
+      
+      // Track for redirects
+      const oldUrl = oldPath.replace('src/content', '').replace('.md', '');
+      const newUrl = newPath.replace('src/content', '').replace('.md', '');
+      movedFiles.push({ from: oldUrl, to: newUrl });
+      
+      console.log(`Moved: ${oldPath} -> ${newPath}`);
+    } else {
+      console.log(`Skipping (not found): ${oldPath}`);
+    }
   } catch (error) {
-    console.error(`✗ Error moving ${oldPath}: ${error.message}`);
+    console.error(`Error moving ${oldPath}:`, error.message);
   }
 }
 
-async function reorganizeContent() {
-  console.log('🔄 Starting content reorganization...\n');
-  
-  // Process terms
-  console.log('📚 Reorganizing Terms...');
-  const termsBase = path.join(__dirname, '../src/content/terms');
-  
-  for (const [newCategory, files] of Object.entries(termsReorganization)) {
-    console.log(`\n  Category: ${newCategory}`);
-    
-    for (const file of files) {
-      const oldPath = path.join(termsBase, `${file}.md`);
-      const fileName = path.basename(file);
-      const newPath = path.join(termsBase, newCategory, `${fileName}.md`);
-      
-      // Skip if it's already in the right place
-      if (oldPath === newPath) {
-        console.log(`    ✓ Already in place: ${fileName}`);
-        continue;
-      }
-      
-      await moveFile(oldPath, newPath);
-    }
-  }
-  
-  // Process history
-  console.log('\n\n📜 Reorganizing History...');
-  const historyBase = path.join(__dirname, '../src/content/history');
-  
-  for (const [newCategory, files] of Object.entries(historyReorganization)) {
-    console.log(`\n  Category: ${newCategory}`);
-    
-    for (const file of files) {
-      const oldPath = path.join(historyBase, `${file}.md`);
-      const fileName = path.basename(file);
-      const newPath = path.join(historyBase, newCategory, `${fileName}.md`);
-      
-      // Skip if it's already in the right place
-      if (oldPath === newPath) {
-        console.log(`    ✓ Already in place: ${fileName}`);
-        continue;
-      }
-      
-      await moveFile(oldPath, newPath);
-    }
-  }
-  
-  // Clean up empty directories
-  console.log('\n\n🧹 Cleaning up empty directories...');
-  await cleanEmptyDirs(termsBase);
-  await cleanEmptyDirs(historyBase);
-  
-  console.log('\n\n✅ Reorganization complete!');
-  console.log('\n📊 Summary:');
-  console.log('  Terms: 7 categories, 38 articles');
-  console.log('  History: 7 categories, 76 articles');
-}
+// Execute the reorganization
+console.log('Starting content reorganization...\n');
 
-async function cleanEmptyDirs(dir) {
-  const entries = await fs.readdir(dir, { withFileTypes: true });
-  
-  for (const entry of entries) {
-    if (entry.isDirectory()) {
-      const fullPath = path.join(dir, entry.name);
-      await cleanEmptyDirs(fullPath);
-      
-      // Check if directory is empty after recursive cleaning
-      const contents = await fs.readdir(fullPath);
-      if (contents.length === 0) {
-        await fs.rmdir(fullPath);
-        console.log(`  ✓ Removed empty directory: ${entry.name}`);
-      }
+Object.entries(reorganizationMap).forEach(([oldPath, newPath]) => {
+  moveFile(oldPath, newPath);
+});
+
+// Clean up empty directories
+const dirsToCheck = [
+  'src/content/terms/nuclear-effects',
+  'src/content/terms/nuclear-physics',
+  'src/content/terms/nuclear-strategy',
+  'src/content/terms/reactor-technology',
+  'src/content/terms/safety-systems',
+  'src/content/terms/treaties-agreements',
+  'src/content/terms/weapons-delivery'
+];
+
+dirsToCheck.forEach(dir => {
+  try {
+    if (fs.existsSync(dir) && fs.readdirSync(dir).length === 0) {
+      fs.rmdirSync(dir);
+      console.log(`Removed empty directory: ${dir}`);
     }
+  } catch (error) {
+    console.error(`Error removing directory ${dir}:`, error.message);
   }
-}
+});
 
-// Add confirmation prompt
-console.log('⚠️  This script will reorganize all content files!');
-console.log('Make sure you have committed your changes first.');
-console.log('\nNew structure:');
-console.log('\nTerms (7 categories):');
-console.log('  - nuclear-physics');
-console.log('  - nuclear-effects');
-console.log('  - reactor-technology');
-console.log('  - safety-systems');
-console.log('  - weapons-delivery');
-console.log('  - nuclear-strategy');
-console.log('  - treaties-agreements');
-console.log('\nHistory (7 categories):');
-console.log('  - foundational-events');
-console.log('  - key-figures');
-console.log('  - cold-war-crises');
-console.log('  - weapons-technology');
-console.log('  - nuclear-programs');
-console.log('  - testing-disasters');
-console.log('  - modern-developments');
-console.log('\nPress Ctrl+C to cancel, or wait 5 seconds to continue...\n');
+// Save redirect map for later use
+fs.writeFileSync(
+  'scripts/redirect-map.json',
+  JSON.stringify(movedFiles, null, 2)
+);
 
-setTimeout(() => {
-  reorganizeContent();
-}, 5000);
+console.log('\nReorganization complete!');
+console.log(`Moved ${movedFiles.length} files`);
+console.log('Redirect map saved to scripts/redirect-map.json');

@@ -1,7 +1,7 @@
 ---
 title: "Nuclear Weapons"
 description: "Comprehensive guide to nuclear weapons including types, effects, physics, and global arsenals - everything you need to know about atomic and hydrogen bombs"
-related: ["fission", "fusion", "critical-mass", "nuclear-effects", "radiation", "fallout", "icbm", "nuclear-triad"]
+related: ["fission-weapons", "fusion-weapons", "critical-mass", "nuclear-effects", "radiation", "fallout", "icbm", "nuclear-triad"]
 ---
 
 # Nuclear Weapons
