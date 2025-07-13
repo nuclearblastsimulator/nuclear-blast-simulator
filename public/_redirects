@@ -187,8 +187,10 @@
 /history/testing-disasters/lop-nur/ /history/testing/lop-nur 301
 /history/testing-disasters/nevada-test-site /history/testing/nevada-test-site 301
 /history/testing-disasters/nevada-test-site/ /history/testing/nevada-test-site 301
-/history/testing-disasters/novaya-zemlya /history/testing/novaya-zemlya 301
-/history/testing-disasters/novaya-zemlya/ /history/testing/novaya-zemlya 301
+/history/testing-disasters/novaya-zemlya /history/testing/tsar-bomba-novaya-zemlya 301
+/history/testing-disasters/novaya-zemlya/ /history/testing/tsar-bomba-novaya-zemlya 301
+/history/testing/novaya-zemlya /history/testing/tsar-bomba-novaya-zemlya 301
+/history/testing/novaya-zemlya/ /history/testing/tsar-bomba-novaya-zemlya 301
 /history/testing-disasters/nuclear-testing-health-effects /history/testing/nuclear-testing-health-effects 301
 /history/testing-disasters/nuclear-testing-health-effects/ /history/testing/nuclear-testing-health-effects 301
 /history/testing-disasters/semipalatinsk-test-site /history/testing/semipalatinsk-test-site 301
@@ -221,3 +223,28 @@
 /history/weapons-technology/w88/ /history/programs/w88-warhead 301
 /history/weapons-technology/weapons-manufacturing /history/programs/weapons-manufacturing 301
 /history/weapons-technology/weapons-manufacturing/ /history/programs/weapons-manufacturing 301
+
+# Root-level article redirects (articles moved to root for SEO)
+# Terms articles moved to root
+/terms/weapons/fission-weapons /terms/fission 301
+/terms/weapons/fission-weapons/ /terms/fission 301
+/terms/weapons/fusion-weapons /terms/fusion 301
+/terms/weapons/fusion-weapons/ /terms/fusion 301
+/terms/strategy/nuclear-deterrence /terms/nuclear-deterrence 301
+/terms/strategy/nuclear-deterrence/ /terms/nuclear-deterrence 301
+/terms/effects/nuclear-winter /terms/nuclear-winter 301
+/terms/effects/nuclear-winter/ /terms/nuclear-winter 301
+/terms/weapons/yield /terms/yield 301
+/terms/weapons/yield/ /terms/yield 301
+/terms/effects/fallout /terms/fallout 301
+/terms/effects/fallout/ /terms/fallout 301
+
+# History articles moved to root
+/history/events/cuban-missile-crisis /history/cuban-missile-crisis 301
+/history/events/cuban-missile-crisis/ /history/cuban-missile-crisis 301
+/history/people/oppenheimer /history/oppenheimer 301
+/history/people/oppenheimer/ /history/oppenheimer 301
+/history/events/chernobyl-disaster /history/chernobyl-disaster 301
+/history/events/chernobyl-disaster/ /history/chernobyl-disaster 301
+/history/testing/castle-bravo /history/castle-bravo 301
+/history/testing/castle-bravo/ /history/castle-bravo 301
