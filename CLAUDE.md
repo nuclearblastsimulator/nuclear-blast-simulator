@@ -109,3 +109,4 @@ The blast simulator (`/public/assets/js/app.js`) implements:
 7. **Link Integrity**: Automated link checking ensures all references work correctly
 8. **SEO & Accessibility**: Proper semantic HTML, alt text, and meta descriptions throughout
 9. **Avoid Specific Counts**: Don't mention specific numbers of articles, weapons, or other content items as these change over time. Use general terms like "extensive", "comprehensive", or "numerous" instead
+10. **UI Component Styling**: When creating UI sections or cards, use the standard card setup: `<div class="card bg-base-100 border border-base-300 overflow-hidden h-full flex flex-col"><div class="card-body">...</div></div>`. This ensures consistent styling across the site
