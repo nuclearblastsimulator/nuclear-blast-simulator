@@ -46,16 +46,20 @@ if (hasTabSeparator) {
 
 const readingMeta = hasTabSeparator ? getReadingMeta(summaryText, fullText) : null;
 
-// Dynamically group articles by their directory structure
+// Separate root articles from categorized ones
+const rootArticles: any[] = [];
 const categories: Record<string, any[]> = {};
 
-// Group articles by category folder
+// Group articles by category folder or identify root articles
 allHistory.forEach(article => {
   // Remove 'history/' prefix from slug to get the actual path
   const path = article.slug.replace('history/', '');
   const parts = path.split('/');
   
-  if (parts.length >= 1) {
+  if (parts.length === 1) {
+    // This is a root level article
+    rootArticles.push(article);
+  } else if (parts.length > 1) {
     const categoryFolder = parts[0]; // Get the category folder name
     
     // Convert folder name to display name (e.g., 'historical-events' -> 'Historical Events')
@@ -69,6 +73,9 @@ allHistory.forEach(article => {
     categories[displayName].push(article);
   }
 });
+
+// Sort root articles alphabetically
+const sortedRootArticles = rootArticles.sort((a, b) => a.data.title.localeCompare(b.data.title));
 
 // Sort articles within each category and sort categories alphabetically
 const sortedCategories = Object.keys(categories).sort().reduce((acc, key) => {
@@ -104,6 +111,42 @@ const currentSlug = entry.slug.replace('history/', '');
         
         <!-- Categories -->
         <div class="space-y-4">
+          {/* Featured Articles (Root Level) */}
+          {sortedRootArticles.length > 0 && (
+            <div class="collapse collapse-arrow bg-base-300/50 rounded-lg">
+              <input 
+                type="checkbox" 
+                id="featured-category"
+                checked={sortedRootArticles.some(article => article.slug.endsWith(currentSlug))}
+              />
+              <label for="featured-category" class="collapse-title text-sm font-bold text-secondary py-2 px-3 min-h-0 cursor-pointer">
+                Featured
+              </label>
+              <div class="collapse-content px-1">
+                <ul class="space-y-0.5 mt-1">
+                  {sortedRootArticles.map((article) => {
+                    const isActive = article.slug.endsWith(currentSlug);
+                    return (
+                      <li>
+                        <a 
+                          href={`/history/${article.slug.replace('history/', '')}/`}
+                          class={`block text-sm py-1.5 px-3 rounded transition-all ${
+                            isActive 
+                              ? 'bg-secondary text-secondary-content font-medium active-article' 
+                              : 'text-base-content/70 hover:text-base-content hover:bg-base-300'
+                          }`}
+                        >
+                          {article.data.title}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+          )}
+          
+          {/* Regular Categories */}
           {Object.entries(sortedCategories).map(([categoryName, articles], index) => {
             // Check if current article is in this category
             const hasActiveArticle = articles.some(article => article.slug.endsWith(currentSlug));
