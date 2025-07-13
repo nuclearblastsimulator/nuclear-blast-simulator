@@ -7,7 +7,7 @@ description: 'In 1932, James Chadwick discovered the neutron, completing our und
 
 ## The Missing Piece
 
-In 1932, British physicist James Chadwick discovered the [neutron](/terms/nuclear-physics/neutron-cross-section), the electrically neutral particle that, along with protons, makes up atomic nuclei. This discovery completed the basic understanding of atomic structure and provided the crucial key to [nuclear](/history/foundational-events/nuclear-fission-discovery) [fission](/terms/nuclear-physics/fission), making nuclear weapons possible. The neutron's ability to penetrate atomic nuclei without electrical repulsion made it the ideal trigger for nuclear reactions.
+In 1932, British physicist James Chadwick discovered the neutron, the electrically neutral particle that, along with protons, makes up atomic nuclei. This discovery completed the basic understanding of atomic structure and provided the crucial key to nuclear fission, making nuclear weapons possible. The neutron's ability to penetrate atomic nuclei without electrical repulsion made it the ideal trigger for nuclear reactions.
 
 ## Background
 
@@ -174,7 +174,7 @@ In 1932, British physicist James Chadwick discovered the [neutron](/terms/nuclea
 ### Defense Applications
 
 - **Neutron weapons**: Development of enhanced radiation weapons
-- **Neutron detection**: Detecting [nuclear materials](/history/weapons-technology/nuclear-materials) and weapons
+- **Neutron detection**: Detecting nuclear materials and weapons
 - **Reactor monitoring**: Neutron monitoring for reactor safety
 - **Nuclear forensics**: Neutron signatures for nuclear material identification
 
@@ -277,7 +277,7 @@ The neutron's properties made it uniquely suited for triggering nuclear fission.
 
 The neutron discovery also led to the development of the critical mass concept, which is fundamental to both nuclear weapons and nuclear reactors. Critical mass is the minimum amount of fissile material needed to sustain a nuclear chain reaction. This concept depends entirely on the behavior of neutrons—their production during fission, their absorption by nuclei, and their leakage from the system.
 
-Understanding neutron behavior became crucial for [nuclear weapons design](/history/weapons-technology/nuclear-weapons-design). The efficiency of a nuclear weapon depends on maintaining a high neutron density within the fissile material long enough for a significant fraction of the nuclei to undergo fission. This requires precise control of neutron production, absorption, and leakage—all concepts that emerged from the study of neutron physics.
+Understanding neutron behavior became crucial for nuclear weapons design. The efficiency of a nuclear weapon depends on maintaining a high neutron density within the fissile material long enough for a significant fraction of the nuclei to undergo fission. This requires precise control of neutron production, absorption, and leakage—all concepts that emerged from the study of neutron physics.
 
 ### The Manhattan Project Applications
 

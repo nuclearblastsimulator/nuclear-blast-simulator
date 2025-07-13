@@ -7,7 +7,7 @@ description: 'The 1999 Kargil War between India and Pakistan became the first ar
 
 ## First Nuclear War
 
-The Kargil War of 1999 holds the dubious distinction of being the first armed conflict between two [nuclear](/history/nuclear-programs/nuclear-weapons-by-country)-armed nations. When Pakistani forces infiltrated across the Line of Control into Indian-administered Kashmir, it triggered a limited but intense conflict that brought two nuclear powers to the brink of wider war. Pakistan's reported preparation of nuclear [weapons](/terms/nuclear-effects/yield-comparison) during the conflict demonstrated how regional conflicts between nuclear powers carry global implications.
+The Kargil War of 1999 holds the dubious distinction of being the first armed conflict between two nuclear-armed nations. When Pakistani forces infiltrated across the Line of Control into Indian-administered Kashmir, it triggered a limited but intense conflict that brought two nuclear powers to the brink of wider war. Pakistan's reported preparation of nuclear weapons during the conflict demonstrated how regional conflicts between nuclear powers carry global implications.
 
 ## Background
 
@@ -21,7 +21,7 @@ The Kargil War of 1999 holds the dubious distinction of being the first armed co
 ### Nuclear Context
 
 - **Indian tests**: India conducted nuclear tests in May 1998
-- **Pakistani response**: Pakistan tested [nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones) weeks later
+- **Pakistani response**: Pakistan tested nuclear weapons weeks later
 - **Nuclear doctrines**: Both nations developed nuclear doctrines
 - **Deterrence theory**: Belief that nuclear weapons would prevent war
 
@@ -128,7 +128,7 @@ The Kargil War of 1999 holds the dubious distinction of being the first armed co
 
 ### Deterrence Failure
 
-- **Limited effectiveness**: [Nuclear deterrence](/terms/nuclear-strategy/nuclear-deterrence) didn't prevent conflict
+- **Limited effectiveness**: Nuclear deterrence didn't prevent conflict
 - **Escalation risks**: Nuclear weapons created escalation risks
 - **Conventional conflict**: Conventional conflict possible between nuclear powers
 - **Stability paradox**: Nuclear weapons created instability paradox
@@ -159,7 +159,7 @@ The Kargil War of 1999 holds the dubious distinction of being the first armed co
 ### Nuclear Doctrine
 
 - **Doctrine development**: Both nations refined nuclear doctrines
-- **Tactical weapons**: Interest in [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
+- **Tactical weapons**: Interest in tactical nuclear weapons
 - **Escalation control**: Focus on escalation control
 - **Crisis stability**: Concerns about crisis stability
 

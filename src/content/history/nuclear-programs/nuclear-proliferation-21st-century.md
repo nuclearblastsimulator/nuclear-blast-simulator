@@ -7,7 +7,7 @@ description: 'The 21st century has seen new nuclear weapon states emerge while o
 
 ## New Nuclear Realities
 
-The 21st century has witnessed significant changes in [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) proliferation dynamics, with new countries acquiring nuclear weapons capabilities while others have abandoned their nuclear programs. From North Korea's nuclear tests to Iran's controversial nuclear program, from Pakistan and India's nuclear rivalry to Libya's disarmament, the nuclear landscape has become increasingly complex. These developments have challenged traditional non-proliferation approaches and created new diplomatic, security, and technological challenges for the international community.
+The 21st century has witnessed significant changes in nuclear proliferation dynamics, with new countries acquiring nuclear weapons capabilities while others have abandoned their nuclear programs. From North Korea's nuclear tests to Iran's controversial nuclear program, from Pakistan and India's nuclear rivalry to Libya's disarmament, the nuclear landscape has become increasingly complex. These developments have challenged traditional non-proliferation approaches and created new diplomatic, security, and technological challenges for the international community.
 
 ## Nuclear Landscape Evolution
 
@@ -30,7 +30,7 @@ The 21st century has witnessed significant changes in [nuclear](/history/nuclear
 - **Vertical proliferation**: Modernization of existing arsenals
 - **Horizontal proliferation**: Spread to new countries
 - **Technology diffusion**: Spread of nuclear technology and knowledge
-- **Non-state actors**: Concerns about [nuclear terrorism](/history/modern-developments/nuclear-terrorism)
+- **Non-state actors**: Concerns about nuclear terrorism
 
 ## New Nuclear Weapon States
 
@@ -66,7 +66,7 @@ The 21st century has witnessed significant changes in [nuclear](/history/nuclear
 
 - **India**: No-first-use doctrine with credible minimum deterrent
 - **Pakistan**: First-use option to counter conventional superiority
-- **Tactical weapons**: Pakistan's development of [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
+- **Tactical weapons**: Pakistan's development of tactical nuclear weapons
 - **Delivery systems**: Continuous development of delivery systems
 
 #### Crisis Management
@@ -155,7 +155,7 @@ The 21st century has witnessed significant changes in [nuclear](/history/nuclear
 ### Nuclear Terrorism
 
 - **Threat assessment**: Assessment of nuclear terrorism threats
-- **Material security**: Securing [nuclear materials](/history/weapons-technology/nuclear-materials) from theft
+- **Material security**: Securing nuclear materials from theft
 - **Technology barriers**: Technical barriers to nuclear terrorism
 - **International cooperation**: International cooperation on nuclear security
 
@@ -505,7 +505,7 @@ The future of nuclear proliferation in the 21st century will be shaped by severa
 
 The rise of new great powers, particularly China, will have significant implications for nuclear proliferation dynamics. China's growing economic and military power will likely lead to changes in regional security dynamics that could create new incentives for nuclear weapons acquisition. The country's nuclear modernization program and its evolving nuclear doctrine will also influence the nuclear policies of other countries in the region.
 
-The development of new nuclear technologies will create both opportunities and challenges for nonproliferation efforts. Advances in uranium enrichment technology, plutonium processing, and [nuclear weapons design](/history/weapons-technology/nuclear-weapons-design) could make it easier for countries to acquire nuclear weapons capabilities. However, new technologies for nuclear security, safeguards, and verification could also enhance the international community's ability to prevent proliferation.
+The development of new nuclear technologies will create both opportunities and challenges for nonproliferation efforts. Advances in uranium enrichment technology, plutonium processing, and nuclear weapons design could make it easier for countries to acquire nuclear weapons capabilities. However, new technologies for nuclear security, safeguards, and verification could also enhance the international community's ability to prevent proliferation.
 
 The effectiveness of international nonproliferation mechanisms will be crucial for preventing future proliferation. The ability of the international community to adapt existing mechanisms to address new challenges and develop new approaches to proliferation problems will determine the success of nonproliferation efforts. The importance of maintaining international cooperation and consensus on nonproliferation objectives will be critical for addressing future challenges.
 

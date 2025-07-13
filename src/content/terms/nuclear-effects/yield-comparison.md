@@ -7,7 +7,7 @@ description: "A comprehensive comparison of nuclear weapon yields from conventio
 
 ## The Scale of Nuclear Destructive Power
 
-[Nuclear](/history/weapons-technology/nuclear-weapons-design) weapons [yield](/terms/nuclear-effects/yield) comparison demonstrates the dramatic scale of nuclear destructive power, from the smallest [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons) to the largest thermonuclear bombs ever tested. This comparison illustrates how nuclear [weapons](/history/modern-developments/nuclear-weapons-free-zones) represent an unprecedented leap in destructive capability compared to conventional explosives, with yields ranging from sub-kiloton tactical weapons to multi-megaton strategic weapons. Understanding these comparisons is essential for comprehending the true magnitude of [nuclear weapons](/history/nuclear-programs/nuclear-weapons-by-country) and their effects on human civilization.
+Nuclear weapons yield comparison demonstrates the dramatic scale of nuclear destructive power, from the smallest tactical nuclear weapons to the largest thermonuclear bombs ever tested. This comparison illustrates how nuclear weapons represent an unprecedented leap in destructive capability compared to conventional explosives, with yields ranging from sub-kiloton tactical weapons to multi-megaton strategic weapons. Understanding these comparisons is essential for comprehending the true magnitude of nuclear weapons and their effects on human civilization.
 
 ## Conventional Explosives Reference
 

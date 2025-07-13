@@ -7,13 +7,13 @@ description: 'Nuclear ethics examines the moral questions surrounding nuclear we
 
 ## Moral Questions of the Nuclear Age
 
-[Nuclear](/history/nuclear-programs/nuclear-weapons-by-country) ethics addresses the profound moral questions raised by nuclear [weapons](/terms/nuclear-effects/yield-comparison) and nuclear technology. From the moment scientists realized they could harness the power of the atom for destructive purposes, philosophers, theologians, policymakers, and ordinary citizens have grappled with fundamental questions about the morality of threatening mass destruction, the ethics of nuclear deterrence, and the responsibility of nuclear-armed states. These debates touch on fundamental principles of morality, justice, and human survival.
+Nuclear ethics addresses the profound moral questions raised by nuclear weapons and nuclear technology. From the moment scientists realized they could harness the power of the atom for destructive purposes, philosophers, theologians, policymakers, and ordinary citizens have grappled with fundamental questions about the morality of threatening mass destruction, the ethics of nuclear deterrence, and the responsibility of nuclear-armed states. These debates touch on fundamental principles of morality, justice, and human survival.
 
 ## Foundational Moral Questions
 
 ### The Fundamental Dilemma
 
-- **Ultimate weapon**: [Nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones) as ultimate destructive force
+- **Ultimate weapon**: Nuclear weapons as ultimate destructive force
 - **Moral paradox**: Threatening evil to prevent greater evil
 - **Collective survival**: Weapons threatening human survival
 - **Moral responsibility**: Responsibility for species-threatening weapons
@@ -186,7 +186,7 @@ description: 'Nuclear ethics examines the moral questions surrounding nuclear we
 
 - **Battlefield use**: Moral evaluation of battlefield nuclear weapons
 - **Escalation risks**: Moral risks of escalation from tactical use
-- **Proportionality**: Proportionality of [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
+- **Proportionality**: Proportionality of tactical nuclear weapons
 - **War fighting**: Moral evaluation of nuclear war fighting
 
 ## Intergenerational Ethics

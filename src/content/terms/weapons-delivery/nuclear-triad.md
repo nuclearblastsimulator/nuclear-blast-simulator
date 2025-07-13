@@ -7,7 +7,7 @@ description: "The nuclear triad consists of three distinct nuclear weapon delive
 
 ## Overview
 
-The [nuclear triad](/history/nuclear-programs/nuclear-triad) consists of three distinct nuclear weapon delivery systems: land-based ICBMs, submarine-launched ballistic missiles (SLBMs), and strategic bombers. This redundant structure ensures survivable [nuclear deterrence](/terms/nuclear-strategy/nuclear-deterrence) even after absorbing a [first strike](/terms/weapons-delivery/first-strike).
+The nuclear triad consists of three distinct nuclear weapon delivery systems: land-based ICBMs, submarine-launched ballistic missiles (SLBMs), and strategic bombers. This redundant structure ensures survivable nuclear deterrence even after absorbing a first strike.
 
 ## Strategic Components
 
@@ -34,10 +34,10 @@ Sea-based deterrent provides survivability:
 
 ## Strategic Bombers
 
-Aircraft-delivered [weapons](/terms/weapons-delivery/tactical-nuclear-weapons) offer flexibility:
+Aircraft-delivered weapons offer flexibility:
 - **Platforms**: B-52 Stratofortress and B-2 Spirit bombers
 - **Recall capability**: Can be returned to base after launch
-- **Payload options**: Various [nuclear](/terms/nuclear-effects/yield-comparison) weapons configurations
+- **Payload options**: Various nuclear weapons configurations
 - **Penetration**: Can assess and adapt to target defenses
 
 ## Operational Doctrine

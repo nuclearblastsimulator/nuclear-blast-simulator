@@ -7,7 +7,7 @@ description: "Oak Ridge National Laboratory was the Manhattan Project's 'Secret 
 
 ## The Manhattan Project's Secret City
 
-Oak Ridge National Laboratory, originally known as the Clinton Engineer Works, was the Manhattan Project's "Secret City" where massive uranium enrichment facilities produced the fissile material for the world's first atomic bombs. Built in secrecy during World War II in the hills of Tennessee, Oak Ridge became one of the most important [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) facilities in history, employing over 75,000 people at its peak to produce enriched uranium for the Hiroshima bomb and other nuclear [weapons](/history/weapons-technology/nuclear-weapons-design). Today, it remains one of the world's premier nuclear research centers, continuing to advance nuclear science and technology.
+Oak Ridge National Laboratory, originally known as the Clinton Engineer Works, was the Manhattan Project's "Secret City" where massive uranium enrichment facilities produced the fissile material for the world's first atomic bombs. Built in secrecy during World War II in the hills of Tennessee, Oak Ridge became one of the most important nuclear facilities in history, employing over 75,000 people at its peak to produce enriched uranium for the Hiroshima bomb and other nuclear weapons. Today, it remains one of the world's premier nuclear research centers, continuing to advance nuclear science and technology.
 
 ## Historical Origins
 
@@ -91,7 +91,7 @@ Oak Ridge National Laboratory, originally known as the Clinton Engineer Works, w
 
 - **Isotope separation**: Advanced isotope separation research
 - **Nuclear reactions**: Fundamental nuclear physics research
-- **Materials science**: [Nuclear materials](/history/weapons-technology/nuclear-materials) research
+- **Materials science**: Nuclear materials research
 - **Radiation effects**: Radiation effects on materials
 
 ### Reactor Development
@@ -114,7 +114,7 @@ Oak Ridge National Laboratory, originally known as the Clinton Engineer Works, w
 
 - **1946**: Transferred to civilian Atomic Energy Commission
 - **Research mission**: Focused on nuclear research and development
-- **Weapons work**: Continued [nuclear weapons](/terms/nuclear-effects/yield-comparison) research
+- **Weapons work**: Continued nuclear weapons research
 - **Peaceful applications**: Developed peaceful nuclear applications
 
 ### Cold War Role

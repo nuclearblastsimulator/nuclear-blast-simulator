@@ -7,7 +7,7 @@ description: 'The 1987 INF Treaty eliminated an entire class of nuclear weapons,
 
 ## The First Nuclear Elimination Treaty
 
-The Intermediate-Range [Nuclear](/terms/weapons-delivery/tactical-nuclear-weapons) Forces (INF) Treaty, signed by Ronald Reagan and Mikhail Gorbachev on December 8, 1987, was a groundbreaking arms control agreement that eliminated an entire class of nuclear [weapons](/history/nuclear-programs/nuclear-weapons-by-country). The treaty required both the United States and Soviet Union to destroy all ground-launched ballistic and cruise missiles with ranges between 500 and 5,500 kilometers, along with their launchers and support equipment. This unprecedented agreement removed over 2,600 missiles from Europe and marked the first time nuclear superpowers agreed to reduce their nuclear arsenals.
+The Intermediate-Range Nuclear Forces (INF) Treaty, signed by Ronald Reagan and Mikhail Gorbachev on December 8, 1987, was a groundbreaking arms control agreement that eliminated an entire class of nuclear weapons. The treaty required both the United States and Soviet Union to destroy all ground-launched ballistic and cruise missiles with ranges between 500 and 5,500 kilometers, along with their launchers and support equipment. This unprecedented agreement removed over 2,600 missiles from Europe and marked the first time nuclear superpowers agreed to reduce their nuclear arsenals.
 
 ## Background
 
@@ -36,7 +36,7 @@ The Intermediate-Range [Nuclear](/terms/weapons-delivery/tactical-nuclear-weapon
 
 ### Reykjavik Summit (1986)
 
-- **Near agreement**: Near agreement on eliminating all [nuclear weapons](/terms/nuclear-effects/yield-comparison)
+- **Near agreement**: Near agreement on eliminating all nuclear weapons
 - **INF progress**: Significant progress on INF issues
 - **SDI obstacle**: Strategic Defense Initiative blocked overall agreement
 - **Foundation**: Laid foundation for separate INF agreement
@@ -163,7 +163,7 @@ The Intermediate-Range [Nuclear](/terms/weapons-delivery/tactical-nuclear-weapon
 - **Improved relations**: Marked improvement in superpower relations
 - **Trust building**: Built trust between former adversaries
 - **Precedent**: Set precedent for future arms control agreements
-- **Momentum**: Created momentum for [START](/terms/treaties-agreements/start-treaty) negotiations
+- **Momentum**: Created momentum for START negotiations
 
 ### Military Balance
 
@@ -394,7 +394,7 @@ The treaty's longevity was remarkable given the dramatic changes in the internat
 
 The INF Treaty's collapse began with a gradual erosion of compliance and confidence between the United States and Russia. American officials began raising concerns about potential Russian violations as early as 2008, focusing on the development of what they claimed was a prohibited intermediate-range missile. These concerns intensified as U.S.-Russia relations deteriorated following the 2014 Ukraine crisis.
 
-The specific focus of American concerns was the Russian 9M729 missile, which the United States claimed violated the treaty's range restrictions. Russia denied these allegations and countered with its own complaints about American missile defense systems in Europe, which [Moscow](/history/cold-war-crises/moscow-nuclear-program) claimed could be used to launch offensive missiles. The mutual recriminations created a spiral of mistrust that ultimately doomed the treaty.
+The specific focus of American concerns was the Russian 9M729 missile, which the United States claimed violated the treaty's range restrictions. Russia denied these allegations and countered with its own complaints about American missile defense systems in Europe, which Moscow claimed could be used to launch offensive missiles. The mutual recriminations created a spiral of mistrust that ultimately doomed the treaty.
 
 The broader context of the treaty's collapse included several factors that had undermined its relevance. The rise of China as a major military power with a large intermediate-range missile force created questions about the wisdom of bilateral U.S.-Russian restrictions. The development of new military technologies, including hypersonic weapons and dual-use systems, created new challenges for arms control verification.
 

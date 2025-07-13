@@ -7,7 +7,7 @@ description: 'For thirteen days in October 1962, the world stood on the brink of
 
 ## Thirteen Days That Nearly Ended the World
 
-From October 14-28, 1962, the world came closer to [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) war than at any other time during the Cold War. The Cuban Missile Crisis began when American spy planes discovered Soviet nuclear missiles being installed in Cuba, just 90 miles from the U.S. mainland. For thirteen terrifying days, President John F. Kennedy and Premier Nikita Khrushchev engaged in a deadly game of nuclear brinkmanship that brought humanity to the edge of annihilation.
+From October 14-28, 1962, the world came closer to nuclear war than at any other time during the Cold War. The Cuban Missile Crisis began when American spy planes discovered Soviet nuclear missiles being installed in Cuba, just 90 miles from the U.S. mainland. For thirteen terrifying days, President John F. Kennedy and Premier Nikita Khrushchev engaged in a deadly game of nuclear brinkmanship that brought humanity to the edge of annihilation.
 
 ## Background
 
@@ -67,7 +67,7 @@ From October 14-28, 1962, the world came closer to [nuclear](/history/nuclear-pr
 ### October 18: Soviet Denials
 
 - **Gromyko meeting**: Soviet Foreign Minister met with Kennedy
-- **Continued denials**: Soviets denied offensive [weapons](/terms/nuclear-effects/yield-comparison) in Cuba
+- **Continued denials**: Soviets denied offensive weapons in Cuba
 - **Diplomatic deception**: Kennedy knew Soviets were lying
 - **Tension building**: Crisis atmosphere in White House
 
@@ -156,7 +156,7 @@ From October 14-28, 1962, the world came closer to [nuclear](/history/nuclear-pr
 
 - **Missile deployment**: 42 medium-range missiles in Cuba
 - **Nuclear warheads**: 36 nuclear warheads already in Cuba
-- **[Tactical](/terms/weapons-delivery/tactical-nuclear-weapons) weapons**: Short-range nuclear weapons for battlefield use
+- **Tactical weapons**: Short-range nuclear weapons for battlefield use
 - **Military personnel**: 43,000 Soviet military personnel in Cuba
 
 ### Nuclear Weapons Status
@@ -255,7 +255,7 @@ From October 14-28, 1962, the world came closer to [nuclear](/history/nuclear-pr
 ### Nuclear Doctrine
 
 - **Mutual vulnerability**: Acceptance of mutual vulnerability
-- **Deterrence theory**: Refinement of [nuclear deterrence](/terms/nuclear-strategy/nuclear-deterrence) theory
+- **Deterrence theory**: Refinement of nuclear deterrence theory
 - **Crisis management**: Development of crisis management doctrine
 - **Risk assessment**: Better understanding of nuclear risks
 
@@ -309,7 +309,7 @@ The roots of the Cuban Missile Crisis lay in the complex relationship between th
 
 The failed Bay of Pigs invasion in April 1961 further complicated the situation. The CIA-sponsored attempt to overthrow Castro not only failed militarily but also pushed Cuba firmly into the Soviet sphere of influence. Khrushchev, recognizing an opportunity to both protect his new Caribbean ally and address the Soviet Union's strategic nuclear disadvantage, decided to secretly deploy medium-range ballistic missiles to Cuba.
 
-From the Soviet perspective, the missile deployment served multiple strategic purposes. First, it would provide credible deterrence against future American attempts to invade Cuba. Second, it would help balance the nuclear equation by giving the Soviet Union the ability to strike American cities with the same short flight time that American Jupiter missiles in Turkey could reach Soviet targets. Third, it would demonstrate Soviet power and resolve to the world, potentially enhancing [Moscow](/history/cold-war-crises/moscow-nuclear-program)'s position in other Cold War confrontations.
+From the Soviet perspective, the missile deployment served multiple strategic purposes. First, it would provide credible deterrence against future American attempts to invade Cuba. Second, it would help balance the nuclear equation by giving the Soviet Union the ability to strike American cities with the same short flight time that American Jupiter missiles in Turkey could reach Soviet targets. Third, it would demonstrate Soviet power and resolve to the world, potentially enhancing Moscow's position in other Cold War confrontations.
 
 ### The Discovery That Changed Everything
 

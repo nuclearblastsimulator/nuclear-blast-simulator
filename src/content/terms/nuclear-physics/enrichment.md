@@ -7,7 +7,7 @@ description: "Uranium enrichment is the process of increasing the concentration 
 
 ## Overview
 
-Uranium enrichment is the process of increasing the concentration of uranium-235, the fissile isotope needed for [nuclear](/history/weapons-technology/nuclear-weapons-design) reactions. Natural uranium contains only 0.7% U-235, while nuclear power requires 3-5% enrichment and [weapons](/terms/nuclear-effects/yield-comparison) need 90% or higher.
+Uranium enrichment is the process of increasing the concentration of uranium-235, the fissile isotope needed for nuclear reactions. Natural uranium contains only 0.7% U-235, while nuclear power requires 3-5% enrichment and weapons need 90% or higher.
 
 ## Enrichment Process
 
@@ -121,7 +121,7 @@ Uranium enrichment is the process of increasing the concentration of uranium-235
 ## Relevance to Nuclear Weapons
 
 **Critical Component:**
-- HEU is essential for uranium-based [nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
+- HEU is essential for uranium-based nuclear weapons
 - Determines weapon size, weight, and yield
 - Alternative to plutonium for fissile material
 

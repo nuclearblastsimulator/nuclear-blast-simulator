@@ -7,7 +7,7 @@ description: "Small Modular Reactors (SMRs) are advanced nuclear reactors with p
 
 ## Overview
 
-[Small Modular Reactors](/history/modern-developments/small-modular-reactors) (SMRs) are advanced [nuclear](/history/weapons-technology/nuclear-weapons-design) reactors with power outputs typically less than 300 MWe, designed for factory fabrication and modular deployment. They represent a paradigm shift toward smaller, more flexible nuclear power systems that can be deployed in locations unsuitable for large conventional plants—potentially democratizing nuclear energy for smaller communities and developing nations.
+Small Modular Reactors (SMRs) are advanced nuclear reactors with power outputs typically less than 300 MWe, designed for factory fabrication and modular deployment. They represent a paradigm shift toward smaller, more flexible nuclear power systems that can be deployed in locations unsuitable for large conventional plants—potentially democratizing nuclear energy for smaller communities and developing nations.
 
 ## Key Characteristics
 
@@ -52,7 +52,7 @@ description: "Small Modular Reactors (SMRs) are advanced nuclear reactors with p
 ## Major SMR Designs
 
 ### NuScale Power Module
-- **Technology**: Integral [pressurized water reactor](/terms/reactor-technology/pressurized-water-reactor)
+- **Technology**: Integral pressurized water reactor
 - **Power**: 77 MWe per module
 - **Safety**: Passive safety systems
 - **Status**: NRC design certification approved
@@ -213,11 +213,11 @@ description: "Small Modular Reactors (SMRs) are advanced nuclear reactors with p
 - **Decarbonization**: Climate change mitigation
 - **Energy security**: Reliable baseload power
 - **Economic development**: Industrial growth
-- **Grid [modernization](/history/modern-developments/nuclear-modernization-programs)**: Flexible power systems
+- **Grid modernization**: Flexible power systems
 
 ## Relevance to Nuclear Weapons
 
-SMR technology is relevant to nuclear [weapons](/history/modern-developments/nuclear-weapons-free-zones) programs because:
+SMR technology is relevant to nuclear weapons programs because:
 - **Nuclear expertise**: Demonstrates nuclear technology capability
 - **Fuel cycle**: Uranium enrichment and fuel fabrication
 - **Dual-use technology**: Peaceful applications with weapons relevance

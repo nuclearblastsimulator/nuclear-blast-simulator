@@ -7,7 +7,7 @@ description: "The 1979 partial meltdown at Three Mile Island nuclear power plant
 
 ## America's Nuclear Wake-Up Call
 
-The Three Mile Island accident on March 28, 1979, was the most serious [nuclear](/history/testing-disasters/nuclear-testing-health-effects) power plant accident in United States commercial nuclear power history. A partial meltdown of the reactor core at Unit 2 of the Three Mile Island Nuclear Generating Station near Middletown, Pennsylvania, led to the release of radioactive gases and the evacuation of pregnant women and children from the surrounding area. While no deaths were directly attributed to the accident, it fundamentally changed nuclear power regulation and public perception of nuclear energy in America.
+The Three Mile Island accident on March 28, 1979, was the most serious nuclear power plant accident in United States commercial nuclear power history. A partial meltdown of the reactor core at Unit 2 of the Three Mile Island Nuclear Generating Station near Middletown, Pennsylvania, led to the release of radioactive gases and the evacuation of pregnant women and children from the surrounding area. While no deaths were directly attributed to the accident, it fundamentally changed nuclear power regulation and public perception of nuclear energy in America.
 
 ## Background
 
@@ -114,7 +114,7 @@ The Three Mile Island accident on March 28, 1979, was the most serious [nuclear]
 - **Noble gases**: Primary release was radioactive noble gases
 - **Limited exposure**: Public radiation exposure very limited
 - **Environmental monitoring**: Extensive environmental radiation monitoring
-- **Health assessment**: No immediate health [effects](/history/weapons-technology/nuclear-weapon-effects) detected
+- **Health assessment**: No immediate health effects detected
 
 ### Hydrogen Bubble
 
@@ -365,7 +365,7 @@ The Three Mile Island accident on March 28, 1979, was the most serious [nuclear]
 
 ## Connection to Nuclear Weapons
 
-While Three Mile Island was a civilian nuclear power accident, it connected to nuclear [weapons](/history/weapons-technology/nuclear-weapons-design) issues:
+While Three Mile Island was a civilian nuclear power accident, it connected to nuclear weapons issues:
 
 - **Nuclear technology**: Highlighted challenges of nuclear technology
 - **Public perception**: Affected public perception of all nuclear technology
@@ -382,7 +382,7 @@ The accident demonstrated the importance of nuclear safety across all applicatio
 
 At 4:00 AM on March 28, 1979, a series of seemingly routine equipment failures at the Three Mile Island Nuclear Generating Station near Harrisburg, Pennsylvania, began a chain of events that would become the most serious nuclear accident in U.S. commercial nuclear power history. What started as a minor problem with water pumps quickly escalated into a partial meltdown of the reactor core, a massive release of radioactive gases, and a crisis that would fundamentally change how America thinks about nuclear energy.
 
-The accident occurred at Unit 2, a [pressurized water reactor](/terms/reactor-technology/pressurized-water-reactor) that had been operating for less than four months. The plant, operated by Metropolitan Edison Company, had been considered a model of nuclear safety, representing the promise of clean, abundant energy that had driven the rapid expansion of nuclear power in the 1970s. But on that March morning, the complex interplay of equipment failures, design deficiencies, and human error would shatter that promise and usher in a new era of nuclear caution.
+The accident occurred at Unit 2, a pressurized water reactor that had been operating for less than four months. The plant, operated by Metropolitan Edison Company, had been considered a model of nuclear safety, representing the promise of clean, abundant energy that had driven the rapid expansion of nuclear power in the 1970s. But on that March morning, the complex interplay of equipment failures, design deficiencies, and human error would shatter that promise and usher in a new era of nuclear caution.
 
 The crisis unfolded over several days, with confused and contradictory information flowing from the plant, government agencies, and the media. As radiation levels rose and the extent of the accident became clear, Pennsylvania Governor Dick Thornburgh made the unprecedented decision to recommend the evacuation of pregnant women and children from within a five-mile radius of the plant. The image of families fleeing their homes due to an invisible radioactive threat would become one of the defining moments of the nuclear age in America.
 
@@ -550,7 +550,7 @@ The debate over Three Mile Island also reflects broader questions about technolo
 
 ### Conclusion: The Accident That Changed Everything
 
-The Three Mile Island accident stands as one of the most significant events in the history of nuclear power. The accident was not the catastrophic [disaster](/history/testing-disasters/chernobyl-disaster) that many feared, but it was serious enough to fundamentally change how nuclear power is regulated, operated, and perceived in the United States and around the world.
+The Three Mile Island accident stands as one of the most significant events in the history of nuclear power. The accident was not the catastrophic disaster that many feared, but it was serious enough to fundamentally change how nuclear power is regulated, operated, and perceived in the United States and around the world.
 
 The accident demonstrated the complex interplay of factors that can lead to technological failures. It was not caused by a single mistake or equipment failure, but by a combination of equipment problems, design deficiencies, inadequate procedures, and human error. The accident showed that even sophisticated safety systems can be overwhelmed by unexpected combinations of problems.
 

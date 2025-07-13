@@ -7,7 +7,7 @@ description: 'Nuclear-powered submarines revolutionized naval warfare and became
 
 ## The Ultimate Strategic Weapon Platform
 
-[Nuclear](/history/weapons-technology/nuclear-weapons-design)-powered submarines have fundamentally transformed naval warfare and strategic [nuclear deterrence](/terms/nuclear-strategy/nuclear-deterrence) since the 1950s. These vessels combine the stealth and mobility of submarines with the unlimited endurance provided by nuclear propulsion, creating the most survivable platforms for nuclear [weapons](/terms/weapons-delivery/tactical-nuclear-weapons). From attack submarines hunting enemy vessels to ballistic missile submarines providing assured destruction capability, nuclear submarines have become central to modern military strategy and global nuclear balance.
+Nuclear-powered submarines have fundamentally transformed naval warfare and strategic nuclear deterrence since the 1950s. These vessels combine the stealth and mobility of submarines with the unlimited endurance provided by nuclear propulsion, creating the most survivable platforms for nuclear weapons. From attack submarines hunting enemy vessels to ballistic missile submarines providing assured destruction capability, nuclear submarines have become central to modern military strategy and global nuclear balance.
 
 ## Evolution of Nuclear Submarine Technology
 
@@ -353,7 +353,7 @@ description: 'Nuclear-powered submarines revolutionized naval warfare and became
 
 ## Connection to Nuclear Weapons
 
-Nuclear submarines are fundamentally connected to [nuclear weapons](/terms/nuclear-effects/yield-comparison):
+Nuclear submarines are fundamentally connected to nuclear weapons:
 
 - **Delivery platforms**: Primary platforms for submarine-launched nuclear weapons
 - **Strategic deterrence**: Core component of nuclear deterrence strategy
@@ -438,7 +438,7 @@ The nuclear submarine crew must also be prepared to execute nuclear weapons miss
 
 ### The Global Nuclear Submarine Fleet
 
-The development of nuclear submarines has been undertaken by only a handful of nations, reflecting the enormous technical challenges and financial costs associated with these vessels. The United States, Soviet Union/Russia, United Kingdom, France, and China have all developed nuclear submarine capabilities, each with their own approaches to submarine design and operations. The proliferation of nuclear submarines has been limited by the complexity of nuclear propulsion technology and the stringent safeguards required for [nuclear materials](/history/weapons-technology/nuclear-materials).
+The development of nuclear submarines has been undertaken by only a handful of nations, reflecting the enormous technical challenges and financial costs associated with these vessels. The United States, Soviet Union/Russia, United Kingdom, France, and China have all developed nuclear submarine capabilities, each with their own approaches to submarine design and operations. The proliferation of nuclear submarines has been limited by the complexity of nuclear propulsion technology and the stringent safeguards required for nuclear materials.
 
 The United States has maintained the world's largest nuclear submarine fleet, with dozens of attack submarines and ballistic missile submarines in service. The U.S. Navy's nuclear submarine force includes the Ohio-class ballistic missile submarines, which form the backbone of America's strategic nuclear deterrent, and the Los Angeles, Seawolf, and Virginia-class attack submarines that provide anti-submarine warfare and multi-mission capabilities. The U.S. submarine force has been continuously modernized with new technologies and capabilities, maintaining its position as the world's most advanced submarine fleet.
 

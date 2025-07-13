@@ -7,7 +7,7 @@ description: "Electromagnetic pulse (EMP) is a burst of electromagnetic energy p
 
 ## Overview
 
-Electromagnetic pulse (EMP) is a burst of electromagnetic energy produced by [nuclear](/terms/nuclear-effects/emp-weapons) explosions that can disable or destroy electronic devices across vast areas. EMP represents an invisible threat capable of crippling technological [systems](/history/nuclear-programs/missile-defense-systems) without directly harming people.
+Electromagnetic pulse (EMP) is a burst of electromagnetic energy produced by nuclear explosions that can disable or destroy electronic devices across vast areas. EMP represents an invisible threat capable of crippling technological systems without directly harming people.
 
 ## Physical Mechanism
 
@@ -27,11 +27,11 @@ Nuclear EMP consists of three distinct phases:
 
 ## High-Altitude EMP
 
-Detonations above 30 km altitude maximize EMP [effects](/history/testing-disasters/nuclear-testing-health-effects):
+Detonations above 30 km altitude maximize EMP effects:
 - **Coverage area**: Single burst can affect entire continents
 - **Field strength**: Can reach tens of thousands of volts per meter
 - **Starfish Prime**: 1962 test damaged electronics 900 miles away
-- **Strategic [weapon](/history/weapons-technology/nuclear-weapon-effects)**: Designed to disable enemy electronics
+- **Strategic weapon**: Designed to disable enemy electronics
 
 ## Electronic Vulnerability
 
@@ -91,7 +91,7 @@ Modern society faces increasing EMP risks:
 
 ## Relevance to Nuclear Weapons
 
-EMP is significant to [nuclear weapons](/history/weapons-technology/nuclear-testing) because:
+EMP is significant to nuclear weapons because:
 - High-altitude detonations maximize EMP effects over conventional damage
 - Can disable enemy military systems without physical destruction
 - Creates strategic advantage by disrupting technological superiority

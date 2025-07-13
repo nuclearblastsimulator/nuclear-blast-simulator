@@ -7,7 +7,7 @@ description: 'The 1954 Castle Bravo hydrogen bomb test became the largest U.S. n
 
 ## When Nuclear Testing Went Catastrophically Wrong
 
-Castle Bravo, detonated on March 1, 1954, at Bikini Atoll in the Marshall Islands, was the largest [nuclear](/history/testing-disasters/nuclear-testing-health-effects) [weapon](/history/weapons-technology/nuclear-weapon-effects) ever tested by the United States. The 15-megaton hydrogen bomb explosion was more than twice the expected [yield](/terms/nuclear-effects/yield), creating a massive radioactive fallout cloud that contaminated inhabited islands, exposed the crew of a Japanese fishing vessel to lethal radiation, and caused an international incident. The test highlighted the dangers of nuclear [weapons](/terms/nuclear-effects/yield-comparison) testing and contributed to growing global opposition to atmospheric [nuclear testing](/history/weapons-technology/nuclear-testing).
+Castle Bravo, detonated on March 1, 1954, at Bikini Atoll in the Marshall Islands, was the largest nuclear weapon ever tested by the United States. The 15-megaton hydrogen bomb explosion was more than twice the expected yield, creating a massive radioactive fallout cloud that contaminated inhabited islands, exposed the crew of a Japanese fishing vessel to lethal radiation, and caused an international incident. The test highlighted the dangers of nuclear weapons testing and contributed to growing global opposition to atmospheric nuclear testing.
 
 ## Background
 

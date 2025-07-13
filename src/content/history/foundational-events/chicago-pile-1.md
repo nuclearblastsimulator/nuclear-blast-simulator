@@ -7,14 +7,14 @@ description: "On December 2, 1942, Enrico Fermi's team achieved the first contro
 
 ## The First Nuclear Chain Reaction
 
-On December 2, 1942, at 3:25 PM, Enrico Fermi and his team achieved the first controlled, self-sustaining [nuclear](/history/weapons-technology/nuclear-weapons-design) chain reaction in human history. Built in a converted squash court beneath the University of Chicago's football stadium, Chicago Pile-1 (CP-1) proved that nuclear fission could be controlled and sustained, directly demonstrating the feasibility of nuclear [weapons](/terms/nuclear-effects/yield-comparison) and nuclear power.
+On December 2, 1942, at 3:25 PM, Enrico Fermi and his team achieved the first controlled, self-sustaining nuclear chain reaction in human history. Built in a converted squash court beneath the University of Chicago's football stadium, Chicago Pile-1 (CP-1) proved that nuclear fission could be controlled and sustained, directly demonstrating the feasibility of nuclear weapons and nuclear power.
 
 ## Background
 
 ### Manhattan Project Context
 
 - **Weapons program**: Part of secret U.S. effort to develop atomic bomb
-- **German competition**: Fear that Nazi Germany was developing [nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
+- **German competition**: Fear that Nazi Germany was developing nuclear weapons
 - **Scientific challenge**: Need to prove controlled chain reaction was possible
 - **Timeline pressure**: Urgent need to demonstrate nuclear feasibility
 
@@ -163,7 +163,7 @@ On December 2, 1942, at 3:25 PM, Enrico Fermi and his team achieved the first co
 - **Reactor physics**: Established field of nuclear engineering
 - **Safety analysis**: Developed nuclear safety analysis methods
 - **Instrumentation**: Advanced nuclear instrumentation and control
-- **Materials science**: [Nuclear materials](/history/weapons-technology/nuclear-materials) research and development
+- **Materials science**: Nuclear materials research and development
 
 ### Scientific Applications
 

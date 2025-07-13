@@ -7,7 +7,7 @@ description: "Plutonium is a radioactive, man-made element that serves as the pr
 
 ## Overview
 
-Plutonium is a radioactive, man-made element that serves as the primary fissile material in [nuclear](/terms/nuclear-effects/yield-comparison) [weapons](/history/weapons-technology/nuclear-weapons-design) and nuclear reactors. Created in nuclear reactors through neutron bombardment of uranium-238, plutonium-239 can sustain nuclear chain reactions with smaller critical masses than uranium-235.
+Plutonium is a radioactive, man-made element that serves as the primary fissile material in nuclear weapons and nuclear reactors. Created in nuclear reactors through neutron bombardment of uranium-238, plutonium-239 can sustain nuclear chain reactions with smaller critical masses than uranium-235.
 
 ## Physical Properties
 
@@ -37,7 +37,7 @@ Plutonium poses severe health risks:
 
 ## Nuclear Weapons Applications
 
-Plutonium enables compact [nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons):
+Plutonium enables compact nuclear weapons:
 - **Critical mass**: Only 4-6 kg needed for weapons (vs. 15-20 kg uranium)
 - **Implosion design**: Fat Man bomb used plutonium implosion
 - **Weapon efficiency**: Higher yield per unit mass than uranium

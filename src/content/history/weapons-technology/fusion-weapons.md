@@ -7,13 +7,13 @@ description: 'Fusion weapons, or hydrogen bombs, derive their immense destructiv
 
 ## The Ultimate Weapon
 
-[Fusion](/terms/nuclear-physics/fusion) [weapons](/terms/nuclear-effects/yield-comparison), also known as hydrogen bombs, thermonuclear weapons, or H-bombs, represent the most powerful weapons ever created by humanity. These weapons derive their explosive energy from [nuclear](/history/weapons-technology/nuclear-weapons-design) fusion reactions, the same process that powers the sun and stars. With yields potentially thousands of times greater than [fission weapons](/history/weapons-technology/fission-weapons), fusion weapons fundamentally changed the nature of warfare and international relations, creating the possibility of destroying entire cities with a single weapon and threatening the very survival of human civilization.
+Fusion weapons, also known as hydrogen bombs, thermonuclear weapons, or H-bombs, represent the most powerful weapons ever created by humanity. These weapons derive their explosive energy from nuclear fusion reactions, the same process that powers the sun and stars. With yields potentially thousands of times greater than fission weapons, fusion weapons fundamentally changed the nature of warfare and international relations, creating the possibility of destroying entire cities with a single weapon and threatening the very survival of human civilization.
 
 ## Nuclear Fusion Process
 
 ### Basic Fusion Physics
 
-- **[Nuclear fusion](/history/modern-developments/nuclear-fusion)**: Combining light atomic nuclei to form heavier nuclei
+- **Nuclear fusion**: Combining light atomic nuclei to form heavier nuclei
 - **Fusion fuels**: Hydrogen isotopes - deuterium and tritium
 - **Energy release**: Massive energy release from mass-energy conversion
 - **Stellar process**: Same process that powers stars

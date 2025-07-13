@@ -7,7 +7,7 @@ description: "The Soviet Union's primary nuclear test site in Kazakhstan hosted 
 
 ## The Soviet Union's Nuclear Proving Ground
 
-The Semipalatinsk Test Site, located in northeastern Kazakhstan, served as the [Soviet](/history/cold-war-crises/moscow-nuclear-program) Union's primary [nuclear testing](/history/weapons-technology/nuclear-testing) facility from 1949 to 1989. Also known as "The Polygon," this 18,500-square-kilometer site witnessed 456 [nuclear](/history/testing-disasters/nuclear-testing-health-effects) tests, including the first Soviet atomic bomb test. The testing program exposed over one million people to radiation, created vast contaminated areas, and left a legacy of environmental destruction and health problems that persists today.
+The Semipalatinsk Test Site, located in northeastern Kazakhstan, served as the Soviet Union's primary nuclear testing facility from 1949 to 1989. Also known as "The Polygon," this 18,500-square-kilometer site witnessed 456 nuclear tests, including the first Soviet atomic bomb test. The testing program exposed over one million people to radiation, created vast contaminated areas, and left a legacy of environmental destruction and health problems that persists today.
 
 ## Background
 
@@ -21,7 +21,7 @@ The Semipalatinsk Test Site, located in northeastern Kazakhstan, served as the [
 
 ### Soviet Nuclear Program
 
-- **Manhattan Project response**: Soviet effort to develop nuclear [weapons](/history/modern-developments/nuclear-weapons-free-zones)
+- **Manhattan Project response**: Soviet effort to develop nuclear weapons
 - **Stalin's directive**: Personal commitment from Stalin to develop bomb
 - **Scientific leadership**: Led by Igor Kurchatov and other scientists
 - **Rapid development**: Accelerated program to match U.S. capabilities
@@ -151,7 +151,7 @@ The Semipalatinsk Test Site, located in northeastern Kazakhstan, served as the [
 ### Military Applications
 
 - **Strategic weapons**: Development of strategic nuclear weapons
-- **Tactical weapons**: Development of [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
+- **Tactical weapons**: Development of tactical nuclear weapons
 - **Defense systems**: Research into nuclear defense systems
 - **Nuclear doctrine**: Influence on Soviet nuclear doctrine
 

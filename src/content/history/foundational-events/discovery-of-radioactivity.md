@@ -76,7 +76,7 @@ In 1896, French physicist Henri Becquerel made a serendipitous discovery that wo
 ### Atomic Structure Revolution
 
 - **Atomic stability**: Challenged belief that atoms were indivisible and unchanging
-- **[Nuclear](/history/foundational-events/nuclear-fission-discovery) model**: Led to understanding of atomic nucleus and electron shells
+- **Nuclear model**: Led to understanding of atomic nucleus and electron shells
 - **Isotopes**: Revealed existence of different forms of same element
 - **Transmutation**: Showed atoms could change into other elements
 
@@ -105,7 +105,7 @@ In 1896, French physicist Henri Becquerel made a serendipitous discovery that wo
 
 ### Uranium Significance
 
-- **[Weapons](/terms/nuclear-effects/yield-comparison) material**: Uranium became key material for [nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
+- **Weapons material**: Uranium became key material for nuclear weapons
 - **Enrichment**: Led to development of uranium enrichment technologies
 - **Critical mass**: Understanding of critical mass required for weapons
 - **Plutonium production**: Uranium reactors became source of weapons-grade plutonium
@@ -242,7 +242,7 @@ The discovery of radioactivity marked the beginning of nuclear physics as a dist
 
 Rutherford's work on radioactive decay led to the discovery of different types of radiation: alpha particles (helium nuclei), beta particles (electrons), and gamma rays (electromagnetic radiation). Each type of radiation had different properties and required different shielding materials. This work laid the foundation for understanding nuclear reactions and radiation protection.
 
-The study of radioactive decay also led to the development of the concept of half-life—the time required for half of a radioactive sample to decay. This concept proved crucial for understanding the stability of different isotopes and would later be essential for [nuclear weapons design](/history/weapons-technology/nuclear-weapons-design).
+The study of radioactive decay also led to the development of the concept of half-life—the time required for half of a radioactive sample to decay. This concept proved crucial for understanding the stability of different isotopes and would later be essential for nuclear weapons design.
 
 ### Medical Applications and Dangers
 

@@ -7,7 +7,7 @@ description: "The Soviet Union's Arctic nuclear test site hosted 224 nuclear tes
 
 ## The Arctic Nuclear Testing Ground
 
-Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Union's northern [nuclear testing](/history/weapons-technology/nuclear-testing) site from 1955 to 1990. This remote location hosted 224 [nuclear](/history/testing-disasters/nuclear-testing-health-effects) tests, including the most powerful nuclear explosion in human history - the 50-megaton Tsar Bomba on October 30, 1961. The harsh Arctic environment provided isolation for testing the Soviet Union's most powerful nuclear [weapons](/terms/nuclear-effects/yield-comparison) while creating long-lasting environmental contamination in one of the world's most pristine wilderness areas.
+Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Union's northern nuclear testing site from 1955 to 1990. This remote location hosted 224 nuclear tests, including the most powerful nuclear explosion in human history - the 50-megaton Tsar Bomba on October 30, 1961. The harsh Arctic environment provided isolation for testing the Soviet Union's most powerful nuclear weapons while creating long-lasting environmental contamination in one of the world's most pristine wilderness areas.
 
 ## Background
 
@@ -68,7 +68,7 @@ Novaya Zemlya, an Arctic archipelago in the Barents Sea, served as the Soviet Un
 ### Tsar Bomba (October 30, 1961)
 
 - **Largest nuclear explosion**: 50 megaton yield
-- **Modified [design](/history/weapons-technology/nuclear-weapons-design)**: Reduced from planned 100 megaton yield
+- **Modified design**: Reduced from planned 100 megaton yield
 - **Global impact**: Detected worldwide by seismic stations
 - **Propaganda value**: Demonstrated Soviet nuclear supremacy
 
@@ -386,7 +386,7 @@ The political impact of the Novaya Zemlya tests was equally significant. The dem
 
 ### The Arctic Environment as Nuclear Battlefield
 
-The use of Novaya Zemlya as a nuclear testing site transformed one of the world's most pristine environments into a nuclear battlefield. The Arctic ecosystem, which had remained largely unchanged for thousands of years, was suddenly subjected to levels of radioactive contamination that were unprecedented in Earth's history. The tests fundamentally altered the character of the Arctic environment, creating contaminated [zones](/history/modern-developments/nuclear-weapons-free-zones) that will remain dangerous for thousands of years.
+The use of Novaya Zemlya as a nuclear testing site transformed one of the world's most pristine environments into a nuclear battlefield. The Arctic ecosystem, which had remained largely unchanged for thousands of years, was suddenly subjected to levels of radioactive contamination that were unprecedented in Earth's history. The tests fundamentally altered the character of the Arctic environment, creating contaminated zones that will remain dangerous for thousands of years.
 
 The impact on Arctic wildlife was particularly severe. The marine mammals that were central to the Arctic ecosystem—seals, whales, and polar bears—were exposed to high levels of radioactive contamination through the food chain. The contamination affected their reproduction, health, and survival, leading to population declines in some species. The effects were particularly pronounced in species that were long-lived and fed at the top of the food chain, where radioactive materials concentrated.
 

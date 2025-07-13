@@ -7,7 +7,7 @@ description: 'Israel maintains a policy of nuclear ambiguity while possessing an
 
 ## Nuclear Ambiguity and Regional Deterrence
 
-Israel maintains a policy of [nuclear](/history/weapons-technology/nuclear-weapons-design) ambiguity while possessing an estimated 80-90 nuclear warheads, developing its nuclear capability in response to existential security threats from neighboring Arab states. Since the 1950s, Israel has pursued nuclear [weapons](/history/nuclear-programs/nuclear-weapons-by-country) as the ultimate guarantee of national survival, adopting a doctrine of nuclear opacity that neither confirms nor denies its nuclear capabilities. From the Dimona reactor to the Jericho missile program, Israel has built a sophisticated nuclear deterrent while maintaining strategic ambiguity about its [nuclear weapons](/terms/nuclear-effects/yield-comparison) status.
+Israel maintains a policy of nuclear ambiguity while possessing an estimated 80-90 nuclear warheads, developing its nuclear capability in response to existential security threats from neighboring Arab states. Since the 1950s, Israel has pursued nuclear weapons as the ultimate guarantee of national survival, adopting a doctrine of nuclear opacity that neither confirms nor denies its nuclear capabilities. From the Dimona reactor to the Jericho missile program, Israel has built a sophisticated nuclear deterrent while maintaining strategic ambiguity about its nuclear weapons status.
 
 ## Historical Development
 
@@ -290,7 +290,7 @@ Israel maintains a policy of [nuclear](/history/weapons-technology/nuclear-weapo
 - **Transparency demands**: International transparency demands
 - **Safeguards pressure**: IAEA safeguards pressure
 - **Disarmament calls**: Nuclear disarmament calls
-- **Regional initiatives**: Regional nuclear-[free](/history/modern-developments/nuclear-weapons-free-zones) zone initiatives
+- **Regional initiatives**: Regional nuclear-free zone initiatives
 
 ## Future Scenarios
 
@@ -476,7 +476,7 @@ The backbone of Israel's nuclear delivery capabilities is the Jericho ballistic 
 
 The most advanced system in Israel's nuclear arsenal is believed to be the Jericho III intercontinental ballistic missile, which has an estimated range of 4,800 to 6,500 kilometers. This missile provides Israel with the capability to strike targets well beyond the Middle East, including potential adversaries in Asia and elsewhere. The missile is believed to be solid-fueled, making it more reliable and responsive than liquid-fueled systems.
 
-Israel has also developed nuclear-capable aircraft, including specially modified F-16I and F-15I fighter aircraft. These aircraft provide Israel with flexible nuclear delivery capabilities and can be used for both strategic and [tactical](/terms/weapons-delivery/tactical-nuclear-weapons) nuclear missions. The aircraft are believed to be equipped with nuclear gravity bombs and possibly nuclear-armed standoff missiles, providing multiple options for nuclear delivery.
+Israel has also developed nuclear-capable aircraft, including specially modified F-16I and F-15I fighter aircraft. These aircraft provide Israel with flexible nuclear delivery capabilities and can be used for both strategic and tactical nuclear missions. The aircraft are believed to be equipped with nuclear gravity bombs and possibly nuclear-armed standoff missiles, providing multiple options for nuclear delivery.
 
 The most significant recent development in Israel's nuclear delivery capabilities has been the acquisition of German-built Dolphin-class submarines. These submarines are believed to be equipped with nuclear-capable cruise missiles, providing Israel with a survivable second-strike capability. The submarines can remain submerged for extended periods and can operate far from Israeli waters, making them virtually invulnerable to first-strike attacks.
 

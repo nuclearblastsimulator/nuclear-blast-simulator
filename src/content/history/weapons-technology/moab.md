@@ -7,7 +7,7 @@ description: 'The GBU-43/B Massive Ordnance Air Blast bomb, known as the Mother 
 
 ## Mother of All Bombs
 
-The GBU-43/B Massive Ordnance Air Blast bomb (MOAB), popularly known as the "Mother of All Bombs," is the largest non-[nuclear](/history/weapons-technology/nuclear-weapon-effects) bomb in the U.S. arsenal with an 18,700-pound explosive payload. Weighing 21,600 pounds total, the MOAB represents the pinnacle of conventional explosive technology, designed to create devastating blast effects over a wide area. Developed during the Iraq War as a psychological [weapon](/history/weapons-technology/miniaturization) and bunker-buster, the MOAB bridges the gap between conventional [weapons](/history/weapons-technology/nuclear-weapons-design) and nuclear weapons, demonstrating the increasing power of non-nuclear explosives.
+The GBU-43/B Massive Ordnance Air Blast bomb (MOAB), popularly known as the "Mother of All Bombs," is the largest non-nuclear bomb in the U.S. arsenal with an 18,700-pound explosive payload. Weighing 21,600 pounds total, the MOAB represents the pinnacle of conventional explosive technology, designed to create devastating blast effects over a wide area. Developed during the Iraq War as a psychological weapon and bunker-buster, the MOAB bridges the gap between conventional weapons and nuclear weapons, demonstrating the increasing power of non-nuclear explosives.
 
 ## Development History
 
@@ -182,7 +182,7 @@ The GBU-43/B Massive Ordnance Air Blast bomb (MOAB), popularly known as the "Mot
 ### Nuclear Comparison
 
 - **Sub-nuclear**: Below nuclear weapon yields
-- **0.011 kilotons**: TNT equivalent [yield](/terms/nuclear-effects/yield-comparison)
+- **0.011 kilotons**: TNT equivalent yield
 - **Nuclear threshold**: Below nuclear threshold
 - **Escalation control**: Controlled escalation option
 
@@ -336,7 +336,7 @@ The GBU-43/B Massive Ordnance Air Blast bomb (MOAB), popularly known as the "Mot
 The MOAB has important connections to nuclear weapons issues:
 
 - **Nuclear threshold**: Raises the nuclear use threshold
-- **Conventional alternative**: Conventional alternative to [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
+- **Conventional alternative**: Conventional alternative to tactical nuclear weapons
 - **Escalation control**: Provides escalation control options
 - **Deterrence complement**: Complements nuclear deterrence
 

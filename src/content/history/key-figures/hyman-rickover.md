@@ -7,7 +7,7 @@ description: "Admiral Hyman Rickover developed the world's first nuclear-powered
 
 ## Father of the Nuclear Navy
 
-Admiral Hyman George Rickover (1900-1986) was the driving force behind the development of [nuclear](/history/cold-war-crises/moscow-nuclear-program)-powered naval vessels, earning him the title "Father of the Nuclear Navy." His relentless pursuit of nuclear propulsion revolutionized naval warfare and demonstrated the peaceful applications of nuclear technology. Rickover's uncompromising standards for nuclear safety and his autocratic leadership style created the world's most successful [nuclear power](/history/testing-disasters/chernobyl-disaster) program, with an unprecedented safety record spanning decades of operation.
+Admiral Hyman George Rickover (1900-1986) was the driving force behind the development of nuclear-powered naval vessels, earning him the title "Father of the Nuclear Navy." His relentless pursuit of nuclear propulsion revolutionized naval warfare and demonstrated the peaceful applications of nuclear technology. Rickover's uncompromising standards for nuclear safety and his autocratic leadership style created the world's most successful nuclear power program, with an unprecedented safety record spanning decades of operation.
 
 ## Early Life and Naval Career
 
@@ -110,7 +110,7 @@ Admiral Hyman George Rickover (1900-1986) was the driving force behind the devel
 
 ### Training Programs
 
-- **Nuclear training**: Established comprehensive nuclear training [programs](/history/modern-developments/nuclear-modernization-programs)
+- **Nuclear training**: Established comprehensive nuclear training programs
 - **Theoretical foundation**: Required solid theoretical foundation
 - **Practical experience**: Combined theory with hands-on experience
 - **Continuous education**: Emphasized continuous learning and improvement
@@ -126,7 +126,7 @@ Admiral Hyman George Rickover (1900-1986) was the driving force behind the devel
 
 ### Submarine Fleet
 
-- **Multiple classes**: Developed multiple classes of [nuclear submarines](/history/nuclear-programs/nuclear-submarines)
+- **Multiple classes**: Developed multiple classes of nuclear submarines
 - **Attack submarines**: Fast attack submarines for various missions
 - **Ballistic missile submarines**: Strategic deterrent submarines
 - **Special purpose**: Special purpose submarines for unique missions
@@ -276,7 +276,7 @@ Admiral Hyman George Rickover (1900-1986) was the driving force behind the devel
 
 ### Materials Science
 
-- **[Nuclear materials](/history/weapons-technology/nuclear-materials)**: Advanced development of nuclear materials
+- **Nuclear materials**: Advanced development of nuclear materials
 - **Corrosion resistance**: Developed corrosion-resistant materials
 - **Radiation effects**: Studied radiation effects on materials
 - **Quality control**: Rigorous quality control for nuclear materials

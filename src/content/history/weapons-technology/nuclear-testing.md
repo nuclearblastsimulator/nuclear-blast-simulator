@@ -7,7 +7,7 @@ description: 'Nuclear testing was essential for developing and validating nuclea
 
 ## Proving the Power of the Atom
 
-[Nuclear](/history/testing-disasters/nuclear-testing-health-effects) testing has been an integral part of nuclear [weapons](/terms/nuclear-effects/yield-comparison) development since the first atomic bomb [test](/history/testing-disasters/overview) at Trinity in 1945. Over the following decades, nuclear weapon states conducted more than 2,000 nuclear tests to develop new weapons, validate designs, understand effects, and demonstrate nuclear capabilities. These tests took place in the atmosphere, underground, underwater, and in space, contaminating vast areas with radioactive fallout and affecting the health of millions of people worldwide. The era of large-scale nuclear testing largely ended with comprehensive test ban treaties, but the legacy of these tests continues to impact global health and the environment.
+Nuclear testing has been an integral part of nuclear weapons development since the first atomic bomb test at Trinity in 1945. Over the following decades, nuclear weapon states conducted more than 2,000 nuclear tests to develop new weapons, validate designs, understand effects, and demonstrate nuclear capabilities. These tests took place in the atmosphere, underground, underwater, and in space, contaminating vast areas with radioactive fallout and affecting the health of millions of people worldwide. The era of large-scale nuclear testing largely ended with comprehensive test ban treaties, but the legacy of these tests continues to impact global health and the environment.
 
 ## Historical Overview
 
@@ -37,7 +37,7 @@ description: 'Nuclear testing was essential for developing and validating nuclea
 - **Total tests**: Over 2,000 nuclear tests conducted
 - **United States**: 1,032 tests
 - **Soviet Union**: 715 tests
-- **Other nations**: Tests by UK, France, China, India, Pakistan, [North](/history/nuclear-programs/north-korea-first-test) Korea
+- **Other nations**: Tests by UK, France, China, India, Pakistan, North Korea
 
 ## Types of Nuclear Tests
 
@@ -256,7 +256,7 @@ description: 'Nuclear testing was essential for developing and validating nuclea
 
 ### Regional Test Bans
 
-- **Nuclear weapon [free](/history/modern-developments/nuclear-weapons-free-zones) zones**: Regional nuclear weapon free zones
+- **Nuclear weapon free zones**: Regional nuclear weapon free zones
 - **Testing prohibitions**: Prohibitions on testing in regions
 - **Environmental protection**: Environmental protection measures
 - **Peace zones**: Declaring regions as peace zones

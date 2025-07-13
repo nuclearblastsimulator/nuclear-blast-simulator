@@ -7,13 +7,13 @@ description: 'On April 26, 1986, at 1:23 AM local time, reactor 4 at the Chernob
 
 ## The Catastrophe
 
-On April 26, 1986, at 1:23 AM local time, reactor 4 at the Chernobyl [Nuclear](/history/testing-disasters/nuclear-testing-health-effects) Power Plant in Ukraine (then Soviet Union) exploded during a safety [test](/history/testing-disasters/overview), creating the worst nuclear accident in history. The disaster released massive amounts of radioactive material across Europe, forced the evacuation of over 100,000 people, and fundamentally changed global nuclear safety practices.
+On April 26, 1986, at 1:23 AM local time, reactor 4 at the Chernobyl Nuclear Power Plant in Ukraine (then Soviet Union) exploded during a safety test, creating the worst nuclear accident in history. The disaster released massive amounts of radioactive material across Europe, forced the evacuation of over 100,000 people, and fundamentally changed global nuclear safety practices.
 
 ## Background
 
 ### Chernobyl Nuclear Power Plant
 
-- **Location**: Pripyat, Ukrainian SSR, [Soviet](/history/cold-war-crises/moscow-nuclear-program) Union (now Ukraine)
+- **Location**: Pripyat, Ukrainian SSR, Soviet Union (now Ukraine)
 - **Reactor type**: RBMK-1000 (graphite-moderated, water-cooled)
 - **Design**: Soviet-designed dual-purpose reactor for power and plutonium production
 - **Units**: Four operational reactors, two more under construction
@@ -77,7 +77,7 @@ On April 26, 1986, at 1:23 AM local time, reactor 4 at the Chernobyl [Nuclear](/
 
 ### Heroic Actions
 
-- **Firefighters**: [First](/history/nuclear-programs/north-korea-first-test) responders fought graphite fires with extreme bravery
+- **Firefighters**: First responders fought graphite fires with extreme bravery
 - **Plant operators**: Remaining operators tried to assess and control situation
 - **Liquidators**: Emergency workers who responded to contain disaster
 - **Helicopter pilots**: Dropped materials to smother burning reactor core
@@ -268,7 +268,7 @@ On April 26, 1986, at 1:23 AM local time, reactor 4 at the Chernobyl [Nuclear](/
 
 ## Connection to Nuclear Weapons
 
-Chernobyl highlighted important connections to nuclear [weapons](/history/weapons-technology/nuclear-weapons-design) issues:
+Chernobyl highlighted important connections to nuclear weapons issues:
 
 - **Dual-use reactors**: RBMK reactors were designed for both power and plutonium production
 - **Military secrecy**: Military control contributed to poor safety culture

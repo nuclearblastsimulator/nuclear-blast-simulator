@@ -7,7 +7,7 @@ description: 'The nuclear abolition movement seeks the complete elimination of n
 
 ## The Dream of a World Without Nuclear Weapons
 
-The [nuclear](/history/modern-developments/nuclear-weapons-free-zones) abolition movement represents one of the most ambitious and morally urgent campaigns in human history - the complete elimination of nuclear [weapons](/terms/weapons-delivery/tactical-nuclear-weapons) from the face of the Earth. Driven by the recognition that [nuclear weapons](/terms/nuclear-effects/yield-comparison) pose an existential threat to human civilization and are fundamentally indefensible on moral grounds, abolitionists argue that only the complete elimination of these weapons can ensure human survival and create a just world order. From Nobel Peace Prize winners to world leaders, from religious figures to ordinary citizens, the movement has attracted diverse voices united by a common vision of a nuclear-weapon-free world.
+The nuclear abolition movement represents one of the most ambitious and morally urgent campaigns in human history - the complete elimination of nuclear weapons from the face of the Earth. Driven by the recognition that nuclear weapons pose an existential threat to human civilization and are fundamentally indefensible on moral grounds, abolitionists argue that only the complete elimination of these weapons can ensure human survival and create a just world order. From Nobel Peace Prize winners to world leaders, from religious figures to ordinary citizens, the movement has attracted diverse voices united by a common vision of a nuclear-weapon-free world.
 
 ## Historical Origins
 

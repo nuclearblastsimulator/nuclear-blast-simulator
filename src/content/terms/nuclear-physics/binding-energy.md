@@ -7,7 +7,7 @@ description: "Binding energy is the energy required to completely separate all n
 
 ## Overview
 
-Binding energy is the energy required to completely separate all nucleons (protons and neutrons) in an atomic nucleus. It represents the "[nuclear](/terms/nuclear-effects/yield-comparison) glue" that holds the nucleus together and is the source of all nuclear energy.
+Binding energy is the energy required to completely separate all nucleons (protons and neutrons) in an atomic nucleus. It represents the "nuclear glue" that holds the nucleus together and is the source of all nuclear energy.
 
 ## The Mass-Energy Connection
 
@@ -78,8 +78,8 @@ Where:
 - Much larger energy release per unit mass
 
 ### Weapon Efficiency
-- **[Fission](/terms/nuclear-physics/fission)**: ~200 MeV per fission event
-- **[Fusion](/terms/nuclear-physics/fusion)**: ~17.6 MeV per D-T reaction
+- **Fission**: ~200 MeV per fission event
+- **Fusion**: ~17.6 MeV per D-T reaction
 - **Mass efficiency**: Fusion releases more energy per unit mass
 
 ## Applications
@@ -102,7 +102,7 @@ Where:
 ## Relevance to Nuclear Weapons Effects
 
 Understanding binding energy explains:
-- **Why nuclear [weapons](/history/weapons-technology/nuclear-weapons-design) are so powerful**: Enormous energy stored in nuclear bonds
+- **Why nuclear weapons are so powerful**: Enormous energy stored in nuclear bonds
 - **Weapon design principles**: Optimizing energy release
 - **Isotope selection**: Choosing materials with appropriate binding energy
 - **Energy scaling**: Relationship between fissile material and yield

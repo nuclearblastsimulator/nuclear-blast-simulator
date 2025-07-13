@@ -7,12 +7,12 @@ description: "Nuclear fusion is the process by which two light atomic nuclei com
 
 ## Overview
 
-[Nuclear fusion](/history/modern-developments/nuclear-fusion) is the process by which two light atomic nuclei combine to form a single heavier nucleus while releasing massive amounts of energy. This process powers the sun and all other stars, and represents the ultimate clean energy source for humanity.
+Nuclear fusion is the process by which two light atomic nuclei combine to form a single heavier nucleus while releasing massive amounts of energy. This process powers the sun and all other stars, and represents the ultimate clean energy source for humanity.
 
 ## Fusion Process
 
 When light nuclei undergo fusion:
-- **[Nuclear](/terms/nuclear-effects/yield-comparison) combination**: Two or more light nuclei overcome electromagnetic repulsion
+- **Nuclear combination**: Two or more light nuclei overcome electromagnetic repulsion
 - **Energy release**: Mass is converted to energy according to E=mc²
 - **Helium formation**: Most fusion reactions produce helium as the primary product
 - **Neutron emission**: Many reactions also release high-energy neutrons
@@ -38,14 +38,14 @@ Fusion requires extreme conditions:
 Fusion energy characteristics:
 - **Energy density**: 4 times more energy per kilogram than fission
 - **Fuel efficiency**: Nearly 4 million times more energy than fossil fuels
-- **[Binding energy](/terms/nuclear-physics/binding-energy)**: Energy comes from nuclear binding energy curve
+- **Binding energy**: Energy comes from nuclear binding energy curve
 - **Mass-energy conversion**: Small mass loss creates enormous energy
 
 ## Applications
 
 Current and potential fusion applications:
 - **Stellar energy**: Powers all stars including the sun
-- **Hydrogen bombs**: Thermonuclear [weapons](/history/modern-developments/nuclear-weapons-free-zones) use fusion reactions
+- **Hydrogen bombs**: Thermonuclear weapons use fusion reactions
 - **Research reactors**: Experimental facilities like ITER and NIF
 - **Future power**: Potential clean electricity generation
 - **Space propulsion**: Proposed fusion rocket engines
@@ -66,7 +66,7 @@ Fusion is critical to nuclear weapons because:
 - **Fission-fusion design**: Most modern weapons combine fission and fusion
 - **Yield enhancement**: Fusion enables megaton-class weapons
 - **Tritium production**: Fusion reactions can breed tritium for weapons
-- **Strategic implications**: [Fusion weapons](/history/weapons-technology/fusion-weapons) changed nuclear deterrence
+- **Strategic implications**: Fusion weapons changed nuclear deterrence
 
 ---
 

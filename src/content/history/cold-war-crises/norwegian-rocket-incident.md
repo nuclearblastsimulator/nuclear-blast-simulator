@@ -7,7 +7,7 @@ description: 'On January 25, 1995, Russia nearly launched nuclear missiles when 
 
 ## The Last Nuclear Near-Miss
 
-On January 25, 1995, Russia came within minutes of launching [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) missiles when they mistook a Norwegian scientific rocket for a U.S. submarine-launched ballistic missile. The incident occurred when Norway launched a Black Brant XII rocket to study the northern lights, but Russian radar operators interpreted it as a potential U.S. first strike. For the first time in history, a Russian president activated his nuclear briefcase, bringing the world to the brink of nuclear war over a scientific experiment.
+On January 25, 1995, Russia came within minutes of launching nuclear missiles when they mistook a Norwegian scientific rocket for a U.S. submarine-launched ballistic missile. The incident occurred when Norway launched a Black Brant XII rocket to study the northern lights, but Russian radar operators interpreted it as a potential U.S. first strike. For the first time in history, a Russian president activated his nuclear briefcase, bringing the world to the brink of nuclear war over a scientific experiment.
 
 ## Background
 
@@ -202,12 +202,12 @@ On January 25, 1995, Russia came within minutes of launching [nuclear](/history/
 
 ## Connection to Nuclear Weapons
 
-The Norwegian Rocket Incident was entirely about nuclear [weapons](/terms/weapons-delivery/tactical-nuclear-weapons) and their command systems:
+The Norwegian Rocket Incident was entirely about nuclear weapons and their command systems:
 
 - **Nuclear alert**: Russian nuclear forces placed on high alert
 - **Nuclear briefcase**: Russian president activated nuclear command system
 - **Nuclear response**: Russia prepared for nuclear response
-- **Nuclear decision**: Decision-making about [nuclear weapons](/terms/nuclear-effects/yield-comparison) use
+- **Nuclear decision**: Decision-making about nuclear weapons use
 
 The incident demonstrated how nuclear weapons remain dangerous even after the Cold War, and how scientific activities can be misinterpreted as military threats, potentially triggering nuclear war.
 

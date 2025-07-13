@@ -7,7 +7,7 @@ description: "Tactical nuclear weapons are smaller, shorter-range nuclear weapon
 
 ## Overview
 
-Tactical [nuclear](/terms/nuclear-effects/yield-comparison) [weapons](/history/modern-developments/nuclear-weapons-free-zones) are smaller, shorter-range [nuclear weapons](/history/nuclear-programs/nuclear-weapons-by-country) designed for battlefield use rather than strategic targets. With yields typically under 100 kilotons, they are intended for military formations and infrastructure while supposedly limiting civilian casualties.
+Tactical nuclear weapons are smaller, shorter-range nuclear weapons designed for battlefield use rather than strategic targets. With yields typically under 100 kilotons, they are intended for military formations and infrastructure while supposedly limiting civilian casualties.
 
 ## Technical Characteristics
 
@@ -65,7 +65,7 @@ Tactical nuclear weapons create escalation dangers:
 Tactical nuclear weapons are significant because:
 - They lower the threshold for nuclear use
 - They blur the line between conventional and nuclear warfare
-- They increase risks of [nuclear terrorism](/history/modern-developments/nuclear-terrorism)
+- They increase risks of nuclear terrorism
 - They complicate arms control verification
 
 ---

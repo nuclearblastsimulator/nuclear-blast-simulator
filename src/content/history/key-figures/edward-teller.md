@@ -7,7 +7,7 @@ description: "Known as the 'father of the hydrogen bomb,' Edward Teller was a ke
 
 ## The Father of the Hydrogen Bomb
 
-Edward Teller (1908-2003) was a Hungarian-American physicist known as the "father of the hydrogen bomb" for his central role in developing thermonuclear [weapons](/history/nuclear-programs/nuclear-weapons-by-country). A brilliant and controversial figure, Teller was instrumental in creating America's most powerful [nuclear](/history/weapons-technology/nuclear-weapons-design) weapons while becoming a persistent advocate for nuclear superiority throughout the Cold War. His support for the Strategic Defense Initiative and his testimony against J. Robert Oppenheimer made him one of the most polarizing figures in the nuclear age.
+Edward Teller (1908-2003) was a Hungarian-American physicist known as the "father of the hydrogen bomb" for his central role in developing thermonuclear weapons. A brilliant and controversial figure, Teller was instrumental in creating America's most powerful nuclear weapons while becoming a persistent advocate for nuclear superiority throughout the Cold War. His support for the Strategic Defense Initiative and his testimony against J. Robert Oppenheimer made him one of the most polarizing figures in the nuclear age.
 
 ## Early Life and Education
 
@@ -76,7 +76,7 @@ Edward Teller (1908-2003) was a Hungarian-American physicist known as the "fathe
 
 - **Scientific collaboration**: Initially collaborated with Oppenheimer
 - **Growing tensions**: Tensions over hydrogen bomb development
-- **Policy disagreements**: Disagreements over [nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones) policy
+- **Policy disagreements**: Disagreements over nuclear weapons policy
 - **Personal animosity**: Developing personal animosity
 
 ## Hydrogen Bomb Development
@@ -98,7 +98,7 @@ Edward Teller (1908-2003) was a Hungarian-American physicist known as the "fathe
 ### Mike Test Success
 
 - **November 1, 1952**: First successful hydrogen bomb test
-- **10.4 megatons**: Massive explosive [yield](/terms/nuclear-effects/yield-comparison)
+- **10.4 megatons**: Massive explosive yield
 - **Technical validation**: Validated Teller-Ulam design
 - **Strategic impact**: Fundamentally changed nuclear warfare
 
@@ -121,7 +121,7 @@ Edward Teller (1908-2003) was a Hungarian-American physicist known as the "fathe
 ### Weapon Development
 
 - **Clean bombs**: Advocated for "clean" nuclear weapons
-- **Tactical weapons**: Supported [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
+- **Tactical weapons**: Supported tactical nuclear weapons
 - **Nuclear artillery**: Promoted nuclear artillery and rockets
 - **Weapon diversity**: Supported diverse nuclear arsenal
 

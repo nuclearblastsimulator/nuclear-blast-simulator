@@ -7,7 +7,7 @@ description: 'Nuclear deterrence theory argues that nuclear weapons prevent war 
 
 ## The Logic of Nuclear Peace
 
-[Nuclear deterrence](/terms/nuclear-strategy/nuclear-deterrence) theory represents one of the most influential and controversial concepts in international relations and strategic studies. The theory argues that [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) [weapons](/terms/nuclear-effects/yield-comparison) can prevent war by threatening unacceptable retaliation against any aggressor, creating a "balance of terror" that maintains peace through fear. While proponents argue that nuclear deterrence has prevented major power conflicts since World War II, critics contend that it is inherently unstable, morally questionable, and ultimately unsustainable in the long term.
+Nuclear deterrence theory represents one of the most influential and controversial concepts in international relations and strategic studies. The theory argues that nuclear weapons can prevent war by threatening unacceptable retaliation against any aggressor, creating a "balance of terror" that maintains peace through fear. While proponents argue that nuclear deterrence has prevented major power conflicts since World War II, critics contend that it is inherently unstable, morally questionable, and ultimately unsustainable in the long term.
 
 ## Theoretical Foundations
 
@@ -28,7 +28,7 @@ description: 'Nuclear deterrence theory argues that nuclear weapons prevent war 
 ### Requirements for Deterrence
 
 - **Capability**: Ability to inflict unacceptable damage
-- **Credibility**: Believable willingness to use [nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones)
+- **Credibility**: Believable willingness to use nuclear weapons
 - **Communication**: Clear communication of deterrent threats
 - **Survivability**: Ability to retaliate after being attacked
 
@@ -166,7 +166,7 @@ description: 'Nuclear deterrence theory argues that nuclear weapons prevent war 
 - **India-Pakistan**: Nuclear deterrence between India and Pakistan
 - **Kargil conflict**: Nuclear deterrence during Kargil War
 - **Crisis stability**: Crisis stability in South Asia
-- **Tactical weapons**: Impact of [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
+- **Tactical weapons**: Impact of tactical nuclear weapons
 
 ### Middle East Deterrence
 

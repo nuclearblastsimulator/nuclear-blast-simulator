@@ -7,7 +7,7 @@ description: 'Over 2,000 nuclear tests exposed millions of people worldwide to r
 
 ## The Human Cost of Nuclear Weapons Development
 
-Between 1945 and 1996, over 2,000 [nuclear](/history/weapons-technology/nuclear-weapon-effects) [weapons](/history/weapons-technology/nuclear-weapons-design) tests were conducted by nine countries, exposing millions of people worldwide to radioactive fallout. These tests released massive amounts of radioactive materials into the atmosphere, contaminating air, water, soil, and food chains across the globe. The health consequences have been devastating, including increased cancer rates, genetic damage, birth defects, and other long-term health effects that continue to impact affected populations today.
+Between 1945 and 1996, over 2,000 nuclear weapons tests were conducted by nine countries, exposing millions of people worldwide to radioactive fallout. These tests released massive amounts of radioactive materials into the atmosphere, contaminating air, water, soil, and food chains across the globe. The health consequences have been devastating, including increased cancer rates, genetic damage, birth defects, and other long-term health effects that continue to impact affected populations today.
 
 ## Scale of Nuclear Testing
 
@@ -21,7 +21,7 @@ Between 1945 and 1996, over 2,000 [nuclear](/history/weapons-technology/nuclear-
 ### Major Testing Periods
 
 - **1945-1963**: Peak atmospheric testing period
-- **1963-1996**: Underground testing after Partial [Test](/history/testing-disasters/overview) Ban Treaty
+- **1963-1996**: Underground testing after Partial Test Ban Treaty
 - **Cold War peak**: 1950s-1960s saw most intensive testing
 - **Atmospheric ban**: 1963 Limited Test Ban Treaty ended atmospheric testing
 
@@ -366,7 +366,7 @@ Between 1945 and 1996, over 2,000 [nuclear](/history/weapons-technology/nuclear-
 
 ## Connection to Nuclear Weapons
 
-[Nuclear testing](/history/weapons-technology/nuclear-testing) health effects are directly connected to nuclear weapons:
+Nuclear testing health effects are directly connected to nuclear weapons:
 
 - **Weapons development**: Health effects resulted from weapons development testing
 - **Fallout production**: Nuclear weapons produce radioactive fallout
@@ -393,7 +393,7 @@ The story of nuclear testing health effects is not just about radiation and canc
 
 The radioactive fallout from nuclear testing was unlike any environmental contamination humans had previously experienced. When a nuclear weapon explodes, it creates a fireball that vaporizes everything in its immediate vicinity, including the weapon itself, any structures nearby, and millions of tons of earth and debris. This material, now intensely radioactive, is lifted high into the atmosphere, where it begins its global journey.
 
-The composition of [nuclear fallout](/terms/nuclear-physics/nuclear-fallout) is complex and deadly. The fission process that powers nuclear weapons creates over 300 different radioactive isotopes, each with its own unique properties and health effects. Some, like iodine-131, are intensely radioactive but short-lived, posing immediate danger but decaying within weeks. Others, like cesium-137 and strontium-90, remain dangerous for decades. Still others, like plutonium-239, will remain hazardous for thousands of years.
+The composition of nuclear fallout is complex and deadly. The fission process that powers nuclear weapons creates over 300 different radioactive isotopes, each with its own unique properties and health effects. Some, like iodine-131, are intensely radioactive but short-lived, posing immediate danger but decaying within weeks. Others, like cesium-137 and strontium-90, remain dangerous for decades. Still others, like plutonium-239, will remain hazardous for thousands of years.
 
 The distribution of this fallout depended on numerous factors: the size and design of the weapon, the height of the explosion, weather patterns, and seasonal variations in atmospheric circulation. Large thermonuclear tests could inject fallout into the stratosphere, where it would circle the globe for months or years before slowly settling to earth. Smaller tests might contaminate only local areas, but even these "local" effects could extend for hundreds of miles.
 

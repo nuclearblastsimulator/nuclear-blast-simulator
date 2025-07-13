@@ -7,12 +7,12 @@ description: "The Nuclear Non-Proliferation Treaty (NPT) is a 1968 international
 
 ## Overview
 
-The [Nuclear](/history/weapons-technology/miniaturization) Non-Proliferation Treaty (NPT) is a 1968 international agreement designed to prevent the spread of nuclear [weapons](/history/modern-developments/nuclear-weapons-free-zones) while promoting peaceful nuclear technology and eventual disarmament. It represents the world's most comprehensive multilateral arms control treaty.
+The Nuclear Non-Proliferation Treaty (NPT) is a 1968 international agreement designed to prevent the spread of nuclear weapons while promoting peaceful nuclear technology and eventual disarmament. It represents the world's most comprehensive multilateral arms control treaty.
 
 ## Treaty Structure
 
 The NPT is built on three fundamental pillars:
-- **Non-Proliferation**: Nuclear [weapon](/history/weapons-technology/nuclear-weapon-effects) states cannot transfer weapons or technology to non-nuclear states
+- **Non-Proliferation**: Nuclear weapon states cannot transfer weapons or technology to non-nuclear states
 - **Peaceful Use**: All parties have an "inalienable right" to peaceful nuclear technology
 - **Disarmament**: Nuclear weapon states must pursue negotiations for nuclear disarmament
 
@@ -20,7 +20,7 @@ The NPT is built on three fundamental pillars:
 
 ### Non-Proliferation
 - **Nuclear weapon states**: US, Russia, UK, France, China (recognized by NPT)
-- **Prohibition**: No transfer of [nuclear weapons](/terms/nuclear-effects/yield-comparison) or weapons technology
+- **Prohibition**: No transfer of nuclear weapons or weapons technology
 - **Commitment**: Non-nuclear states pledge never to develop nuclear weapons
 - **Verification**: International Atomic Energy Agency (IAEA) safeguards
 
@@ -42,7 +42,7 @@ The IAEA implements NPT safeguards through:
 - **Comprehensive safeguards**: Applied to all nuclear activities in non-nuclear weapon states
 - **Additional protocols**: Enhanced verification measures
 - **Inspections**: Regular and special inspections of nuclear facilities
-- **Reporting requirements**: Detailed accounts of [nuclear materials](/history/weapons-technology/nuclear-materials) and activities
+- **Reporting requirements**: Detailed accounts of nuclear materials and activities
 
 ## Achievements
 

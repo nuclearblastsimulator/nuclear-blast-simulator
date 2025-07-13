@@ -7,7 +7,7 @@ description: "The Pressurized Water Reactor (PWR) is the most common type of nuc
 
 ## Overview
 
-The Pressurized Water Reactor (PWR) is the most common type of [nuclear](/history/weapons-technology/nuclear-weapons-design) reactor worldwide, accounting for about 65% of all nuclear power plants. It uses ordinary water as both [coolant](/terms/reactor-technology/coolant) and neutron moderator, operating under high pressure to prevent [boiling](/terms/reactor-technology/boiling-water-reactor) in the reactor core—a design that emerged from Admiral Rickover's nuclear navy and now powers millions of homes globally.
+The Pressurized Water Reactor (PWR) is the most common type of nuclear reactor worldwide, accounting for about 65% of all nuclear power plants. It uses ordinary water as both coolant and neutron moderator, operating under high pressure to prevent boiling in the reactor core—a design that emerged from Admiral Rickover's nuclear navy and now powers millions of homes globally.
 
 ## Basic Design
 
@@ -54,7 +54,7 @@ The Pressurized Water Reactor (PWR) is the most common type of [nuclear](/histor
 - **Uranium dioxide pellets**: Ceramic fuel form
 - **Zircaloy cladding**: Corrosion-resistant fuel rods
 - **Control rod assemblies**: Neutron-absorbing materials
-- **Fuel [enrichment](/terms/nuclear-physics/enrichment)**: Typically 3-5% U-235
+- **Fuel enrichment**: Typically 3-5% U-235
 
 ### Core Configuration
 - **Fuel assembly array**: Usually 15×15 or 17×17 rod arrays
@@ -107,7 +107,7 @@ The Pressurized Water Reactor (PWR) is the most common type of [nuclear](/histor
 
 ## Relevance to Nuclear Weapons
 
-PWR technology is relevant to [weapons](/terms/nuclear-effects/yield-comparison) programs because:
+PWR technology is relevant to weapons programs because:
 - **Plutonium production**: Can produce weapons-grade plutonium
 - **Enrichment capability**: Requires uranium enrichment infrastructure
 - **Nuclear technology**: Demonstrates nuclear competence

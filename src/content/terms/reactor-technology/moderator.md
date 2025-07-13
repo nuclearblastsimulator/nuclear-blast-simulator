@@ -7,7 +7,7 @@ description: "A moderator is a material used in nuclear reactors to slow down (t
 
 ## Overview
 
-A moderator is a material used in nuclear reactors to slow down (thermalize) fast neutrons produced by [fission](/terms/nuclear-physics/fission), making them more likely to cause additional fission reactions. This [neutron](/terms/nuclear-physics/neutron-cross-section) moderation is essential for sustaining controlled nuclear chain reactions in most reactor designs—the invisible dance between matter and energy that powers reactors and enabled the first nuclear weapons.
+A moderator is a material used in nuclear reactors to slow down (thermalize) fast neutrons produced by fission, making them more likely to cause additional fission reactions. This neutron moderation is essential for sustaining controlled nuclear chain reactions in most reactor designs—the invisible dance between matter and energy that powers reactors and enabled the first nuclear weapons.
 
 ## Physics of Moderation
 
@@ -72,7 +72,7 @@ A moderator is a material used in nuclear reactors to slow down (thermalize) fas
 - **Neutron leakage**: Neutrons escaping the core
 
 ### Engineering Factors
-- **Heat removal**: Moderator often serves as [coolant](/terms/reactor-technology/coolant)
+- **Heat removal**: Moderator often serves as coolant
 - **Structural support**: May provide mechanical structure
 - **Neutron reflector**: Can reflect neutrons back to core
 - **Radiation shielding**: Provides some gamma shielding
@@ -80,8 +80,8 @@ A moderator is a material used in nuclear reactors to slow down (thermalize) fas
 ## Reactor Types by Moderator
 
 ### Light Water Reactors
-- **PWR**: [Pressurized](/terms/reactor-technology/pressurized-water-reactor) water moderator/coolant
-- **BWR**: [Boiling](/terms/reactor-technology/boiling-water-reactor) water moderator/coolant
+- **PWR**: Pressurized water moderator/coolant
+- **BWR**: Boiling water moderator/coolant
 - **Advantages**: Proven technology, compact design
 - **Disadvantages**: Requires enriched uranium
 

@@ -7,7 +7,7 @@ description: "China's nuclear test site in the Taklamakan Desert hosted 45 nucle
 
 ## China's Nuclear Testing Ground
 
-Lop Nur, a salt lake in the Taklamakan Desert of Xinjiang province, served as China's primary [nuclear testing](/history/weapons-technology/nuclear-testing) site from 1964 to 1996. This remote location in western China witnessed 45 [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) tests, including China's first atomic bomb in 1964 and its first hydrogen bomb in 1967. The testing program established China as the world's fifth nuclear power but also exposed the indigenous Uyghur population to radioactive fallout and environmental contamination that persists today.
+Lop Nur, a salt lake in the Taklamakan Desert of Xinjiang province, served as China's primary nuclear testing site from 1964 to 1996. This remote location in western China witnessed 45 nuclear tests, including China's first atomic bomb in 1964 and its first hydrogen bomb in 1967. The testing program established China as the world's fifth nuclear power but also exposed the indigenous Uyghur population to radioactive fallout and environmental contamination that persists today.
 
 ## Background
 
@@ -24,7 +24,7 @@ Lop Nur, a salt lake in the Taklamakan Desert of Xinjiang province, served as Ch
 - **Xinjiang province**: Autonomous region with diverse ethnic populations
 - **Uyghur homeland**: Traditional homeland of Uyghur people
 - **Silk Road history**: Historic Silk Road trading route location
-- **Border region**: Near borders with [Soviet](/history/cold-war-crises/moscow-nuclear-program) Union and other countries
+- **Border region**: Near borders with Soviet Union and other countries
 
 ### Chinese Nuclear Program
 
@@ -197,7 +197,7 @@ Lop Nur, a salt lake in the Taklamakan Desert of Xinjiang province, served as Ch
 ### Military Applications
 
 - **Strategic weapons**: Development of strategic nuclear weapons
-- **Tactical weapons**: Development of [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
+- **Tactical weapons**: Development of tactical nuclear weapons
 - **Defense systems**: Research into nuclear defense systems
 - **Command and control**: Nuclear command and control systems
 
@@ -437,7 +437,7 @@ The conclusion of the testing program also marked the end of an era in Chinese n
 
 The health effects of nuclear testing at Lop Nur represent one of the most serious but least documented public health crises in modern history. The exposure of an estimated 1.48 million people to radioactive fallout from nuclear testing has created a legacy of increased cancer rates, birth defects, and other health problems that continues to affect the region today.
 
-The health crisis at Lop Nur has been largely hidden from international view by Chinese government secrecy and restrictions on research. Unlike other countries that have conducted extensive studies of [nuclear testing health effects](/history/testing-disasters/nuclear-testing-health-effects), China has provided limited information about the health consequences of its testing program. Independent researchers have been denied access to the region, and Chinese scientists have been restricted in their ability to study and publish research on nuclear testing health effects.
+The health crisis at Lop Nur has been largely hidden from international view by Chinese government secrecy and restrictions on research. Unlike other countries that have conducted extensive studies of nuclear testing health effects, China has provided limited information about the health consequences of its testing program. Independent researchers have been denied access to the region, and Chinese scientists have been restricted in their ability to study and publish research on nuclear testing health effects.
 
 The available evidence suggests that the health effects of nuclear testing at Lop Nur have been severe and widespread. Cancer rates in the region are significantly higher than the national average, with particular increases in leukemia, lung cancer, thyroid cancer, and other radiation-related cancers. Birth defects and genetic abnormalities have also been reported at higher rates, suggesting that radiation exposure has caused genetic damage that is being passed to subsequent generations.
 

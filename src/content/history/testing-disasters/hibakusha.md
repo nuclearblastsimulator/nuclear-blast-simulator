@@ -7,7 +7,7 @@ description: 'The atomic bomb survivors of Hiroshima and Nagasaki, known as Hiba
 
 ## Voices of Nuclear Survival
 
-Hibakusha (被爆者), literally meaning "explosion-affected people," are the survivors of the atomic bombings of Hiroshima and Nagasaki in August 1945. These individuals witnessed humanity's first and only use of [nuclear](/history/modern-developments/nuclear-weapons-free-zones) [weapons](/history/weapons-technology/nuclear-weapons-design) in warfare, experiencing unimaginable suffering while becoming living testimonies to the catastrophic humanitarian consequences of [nuclear weapons](/terms/nuclear-effects/yield-comparison). For over seven decades, the Hibakusha have courageously shared their stories, undergone extensive medical studies, and advocated tirelessly for nuclear disarmament and world peace.
+Hibakusha (被爆者), literally meaning "explosion-affected people," are the survivors of the atomic bombings of Hiroshima and Nagasaki in August 1945. These individuals witnessed humanity's first and only use of nuclear weapons in warfare, experiencing unimaginable suffering while becoming living testimonies to the catastrophic humanitarian consequences of nuclear weapons. For over seven decades, the Hibakusha have courageously shared their stories, undergone extensive medical studies, and advocated tirelessly for nuclear disarmament and world peace.
 
 ## Definition and Recognition
 

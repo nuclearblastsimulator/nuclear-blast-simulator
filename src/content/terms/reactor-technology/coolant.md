@@ -7,7 +7,7 @@ description: "Nuclear reactor coolant is a fluid that removes heat from the reac
 
 ## Overview
 
-[Nuclear](/history/weapons-technology/nuclear-materials) [reactor](/terms/reactor-technology/pressurized-water-reactor) coolant is a fluid that removes heat from the reactor core and transfers it to the power conversion system. The coolant must efficiently transport heat while maintaining nuclear, chemical, and physical stability under extreme conditions of temperature, pressure, and radiation—serving as the vital circulation system that keeps [nuclear power](/history/modern-developments/obninsk-reactor) safe and nuclear accidents catastrophic when it fails.
+Nuclear reactor coolant is a fluid that removes heat from the reactor core and transfers it to the power conversion system. The coolant must efficiently transport heat while maintaining nuclear, chemical, and physical stability under extreme conditions of temperature, pressure, and radiation—serving as the vital circulation system that keeps nuclear power safe and nuclear accidents catastrophic when it fails.
 
 ## Functions of Coolant
 
@@ -21,7 +21,7 @@ description: "Nuclear reactor coolant is a fluid that removes heat from the reac
 - **Corrosion protection**: Prevent fuel cladding degradation
 - **Structural support**: Hydraulic forces on fuel assemblies
 - **Shielding**: Radiation protection for personnel
-- **Chemical control**: Maintain proper [water](/terms/reactor-technology/boiling-water-reactor) chemistry
+- **Chemical control**: Maintain proper water chemistry
 
 ## Coolant Types
 
@@ -157,7 +157,7 @@ description: "Nuclear reactor coolant is a fluid that removes heat from the reac
 
 ## Relevance to Nuclear Weapons
 
-Coolant technology is relevant to [weapons](/history/weapons-technology/nuclear-weapons-design) programs because:
+Coolant technology is relevant to weapons programs because:
 - **Production reactors**: Plutonium production requires cooling
 - **Reactor operation**: Safe operation of production facilities
 - **Nuclear expertise**: Understanding reactor technology

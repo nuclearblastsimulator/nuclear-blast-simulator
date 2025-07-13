@@ -7,7 +7,7 @@ description: 'Nuclear weapon miniaturization has enabled the development of smal
 
 ## The Evolution to Smaller Nuclear Weapons
 
-[Nuclear](/history/weapons-technology/nuclear-weapons-design) weapon miniaturization has enabled the development of smaller, lighter nuclear [weapons](/terms/nuclear-effects/yield-comparison) that maintain high yields while fitting into compact delivery systems like missiles and artillery shells. From the massive early [nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones) that required large bombers to deliver, nuclear weapons have evolved into highly compact warheads that can be deployed on intercontinental ballistic missiles, submarine-launched missiles, and even tactical delivery systems. This technological achievement has fundamentally changed nuclear strategy, enabling multiple warheads per missile, [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons), and more survivable delivery systems.
+Nuclear weapon miniaturization has enabled the development of smaller, lighter nuclear weapons that maintain high yields while fitting into compact delivery systems like missiles and artillery shells. From the massive early nuclear weapons that required large bombers to deliver, nuclear weapons have evolved into highly compact warheads that can be deployed on intercontinental ballistic missiles, submarine-launched missiles, and even tactical delivery systems. This technological achievement has fundamentally changed nuclear strategy, enabling multiple warheads per missile, tactical nuclear weapons, and more survivable delivery systems.
 
 ## Historical Development
 

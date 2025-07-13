@@ -7,7 +7,7 @@ description: 'The 1996 Comprehensive Test Ban Treaty prohibits all nuclear weapo
 
 ## The Unfinished Ban
 
-The Comprehensive [Nuclear](/history/testing-disasters/nuclear-testing-health-effects) Test Ban Treaty (CTBT), signed in 1996, represents the international community's commitment to ending all nuclear [weapons](/terms/nuclear-effects/yield-comparison) testing. The [treaty](/history/modern-developments/intermediate-range-nuclear-forces-treaty) prohibits any nuclear weapon test explosion or any other nuclear explosion anywhere in the world. Despite widespread support with 185 signatures and 170 ratifications, the CTBT has not entered into force due to the requirement that all 44 states with nuclear technology must ratify it. The treaty established a sophisticated global monitoring system that detects nuclear explosions worldwide.
+The Comprehensive Nuclear Test Ban Treaty (CTBT), signed in 1996, represents the international community's commitment to ending all nuclear weapons testing. The treaty prohibits any nuclear weapon test explosion or any other nuclear explosion anywhere in the world. Despite widespread support with 185 signatures and 170 ratifications, the CTBT has not entered into force due to the requirement that all 44 states with nuclear technology must ratify it. The treaty established a sophisticated global monitoring system that detects nuclear explosions worldwide.
 
 ## Background
 
@@ -15,7 +15,7 @@ The Comprehensive [Nuclear](/history/testing-disasters/nuclear-testing-health-ef
 
 - **2,000+ tests**: Over 2,000 nuclear tests conducted globally
 - **Environmental damage**: Massive environmental and health damage
-- **Arms race**: [Nuclear testing](/history/weapons-technology/nuclear-testing) fueled Cold War arms race
+- **Arms race**: Nuclear testing fueled Cold War arms race
 - **Public opposition**: Growing public opposition to nuclear testing
 
 ### Previous Test Bans
@@ -240,7 +240,7 @@ The Comprehensive [Nuclear](/history/testing-disasters/nuclear-testing-health-ef
 ### Middle East
 
 - **Regional tensions**: Impact of regional tensions on treaty
-- **WMD-[free](/history/modern-developments/nuclear-weapons-free-zones) zone**: Connection to WMD-free zone proposals
+- **WMD-free zone**: Connection to WMD-free zone proposals
 - **Verification challenges**: Regional verification challenges
 - **Confidence building**: Potential for confidence building
 

@@ -7,7 +7,7 @@ description: 'Washington D.C. serves as the command center for U.S. nuclear forc
 
 ## The Heart of American Nuclear Authority
 
-Washington D.C. serves as the command center for U.S. [nuclear](/terms/weapons-delivery/tactical-nuclear-weapons) forces, housing the Pentagon, National Security Council, and Presidential nuclear authority including the nuclear football. As the seat of American government, the capital coordinates all aspects of U.S. nuclear policy, from strategic planning and force development to crisis management and arms control negotiations. The city contains the ultimate nuclear decision-making authority in the President, supported by a complex network of military, civilian, and intelligence institutions that maintain America's nuclear deterrent and manage nuclear crises.
+Washington D.C. serves as the command center for U.S. nuclear forces, housing the Pentagon, National Security Council, and Presidential nuclear authority including the nuclear football. As the seat of American government, the capital coordinates all aspects of U.S. nuclear policy, from strategic planning and force development to crisis management and arms control negotiations. The city contains the ultimate nuclear decision-making authority in the President, supported by a complex network of military, civilian, and intelligence institutions that maintain America's nuclear deterrent and manage nuclear crises.
 
 ## Presidential Nuclear Authority
 
@@ -64,7 +64,7 @@ Washington D.C. serves as the command center for U.S. [nuclear](/terms/weapons-d
 
 ### Defense Intelligence
 
-- **Nuclear intelligence**: Nuclear [weapons](/history/modern-developments/nuclear-weapons-free-zones) intelligence
+- **Nuclear intelligence**: Nuclear weapons intelligence
 - **Threat assessment**: Nuclear threat assessment
 - **Foreign capabilities**: Foreign nuclear capabilities
 - **Early warning**: Nuclear attack warning
@@ -119,7 +119,7 @@ Washington D.C. serves as the command center for U.S. [nuclear](/terms/weapons-d
 
 ### National Security Strategy
 
-- **Nuclear role**: [Nuclear weapons](/terms/nuclear-effects/yield-comparison) role
+- **Nuclear role**: Nuclear weapons role
 - **Strategic objectives**: Nuclear strategic objectives
 - **Alliance commitments**: Nuclear alliance commitments
 - **Threat environment**: Nuclear threat environment
@@ -248,7 +248,7 @@ Washington D.C. serves as the command center for U.S. [nuclear](/terms/weapons-d
 
 ### Counterterrorism
 
-- **[Nuclear terrorism](/history/modern-developments/nuclear-terrorism)**: Nuclear terrorism prevention
+- **Nuclear terrorism**: Nuclear terrorism prevention
 - **Threat assessment**: Nuclear terrorism threats
 - **Response planning**: Nuclear terrorism response
 - **International cooperation**: Nuclear security cooperation

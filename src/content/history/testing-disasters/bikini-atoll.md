@@ -7,7 +7,7 @@ description: 'From 1946 to 1958, the United States conducted 23 nuclear tests at
 
 ## Paradise Lost to Nuclear Testing
 
-Bikini Atoll, a remote coral atoll in the Marshall Islands, became synonymous with [nuclear testing](/history/weapons-technology/nuclear-testing) when the United States conducted 23 [nuclear](/history/testing-disasters/nuclear-testing-health-effects) tests there between 1946 and 1958. The testing program displaced the indigenous Marshallese people from their ancestral homeland and contaminated the atoll with radioactive fallout. The name "bikini" became globally known through both the nuclear tests and the swimsuit named after the atoll, but for the Marshallese people, it represents a paradise lost to the nuclear age.
+Bikini Atoll, a remote coral atoll in the Marshall Islands, became synonymous with nuclear testing when the United States conducted 23 nuclear tests there between 1946 and 1958. The testing program displaced the indigenous Marshallese people from their ancestral homeland and contaminated the atoll with radioactive fallout. The name "bikini" became globally known through both the nuclear tests and the swimsuit named after the atoll, but for the Marshallese people, it represents a paradise lost to the nuclear age.
 
 ## Background
 
@@ -27,7 +27,7 @@ Bikini Atoll, a remote coral atoll in the Marshall Islands, became synonymous wi
 
 ### Post-War Nuclear Testing
 
-- **Manhattan Project completion**: Need for continued nuclear [weapons](/terms/nuclear-effects/yield-comparison) development
+- **Manhattan Project completion**: Need for continued nuclear weapons development
 - **Cold War beginning**: Nuclear competition with Soviet Union
 - **Pacific testing**: Remote Pacific location chosen for large-scale tests
 - **Military control**: U.S. Navy administered Marshall Islands as UN trust territory
@@ -237,7 +237,7 @@ Bikini Atoll, a remote coral atoll in the Marshall Islands, became synonymous wi
 - **Informed consent**: Questions about informed consent for displacement
 - **Coercion**: Allegations of coercion in displacement
 - **Trust responsibility**: U.S. trust responsibility to Marshallese
-- **Self-determination**: Right to self-determination and [free](/history/modern-developments/nuclear-weapons-free-zones) choice
+- **Self-determination**: Right to self-determination and free choice
 
 ### Compensation and Justice
 
@@ -350,7 +350,7 @@ While the world watched the spectacular nuclear tests at Bikini, the Bikinian pe
 
 The Bikinians began to suffer from malnutrition and disease. Children became sick, and some died. The traditional social structure began to break down as families struggled to survive in an environment that couldn't support them. The U.S. authorities, focused on their nuclear testing program, provided minimal assistance and seemed unaware of the suffering they had caused.
 
-In 1948, the situation became so desperate that the Bikinians had to be moved again, this time to Kwajalein Atoll, where they lived in tents on a small island. The conditions there were even worse, with no privacy, no traditional food sources, and no connection to their ancestral lands. The Bikinians were essentially refugees in their own [country](/history/nuclear-programs/nuclear-weapons-by-country), dependent on U.S. authorities for basic survival needs.
+In 1948, the situation became so desperate that the Bikinians had to be moved again, this time to Kwajalein Atoll, where they lived in tents on a small island. The conditions there were even worse, with no privacy, no traditional food sources, and no connection to their ancestral lands. The Bikinians were essentially refugees in their own country, dependent on U.S. authorities for basic survival needs.
 
 Finally, in 1948, the Bikinians were moved to Kili Island, a small single island that became their permanent home. But Kili was fundamentally different from Bikini – it had no lagoon, was regularly swept by dangerous waves, and couldn't support the traditional Marshallese way of life based on fishing and marine resources. The Bikinians had to learn new ways of living, but they never stopped longing for their home.
 

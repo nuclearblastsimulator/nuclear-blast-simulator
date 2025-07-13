@@ -7,7 +7,7 @@ description: "A tokamak is a type of magnetic confinement fusion device designed
 
 ## Overview
 
-A tokamak is a type of magnetic confinement [fusion](/terms/nuclear-physics/fusion) device designed to harness the energy of [nuclear fusion](/history/modern-developments/nuclear-fusion) reactions. It uses powerful magnetic fields to confine extremely hot plasma in a doughnut-shaped chamber, creating conditions where hydrogen isotopes can fuse to form helium and release enormous amounts of [energy](/terms/nuclear-physics/binding-energy)—attempting to recreate the power of the sun in a machine on Earth.
+A tokamak is a type of magnetic confinement fusion device designed to harness the energy of nuclear fusion reactions. It uses powerful magnetic fields to confine extremely hot plasma in a doughnut-shaped chamber, creating conditions where hydrogen isotopes can fuse to form helium and release enormous amounts of energy—attempting to recreate the power of the sun in a machine on Earth.
 
 ## Historical Development
 
@@ -176,7 +176,7 @@ A tokamak is a type of magnetic confinement [fusion](/terms/nuclear-physics/fusi
 ### Safety Benefits
 - **No meltdown**: Plasma naturally terminates
 - **No long-lived waste**: Short-lived radioactive products
-- **No [weapons](/history/weapons-technology/fusion-weapons) proliferation**: Cannot produce weapons materials
+- **No weapons proliferation**: Cannot produce weapons materials
 - **Passive safety**: Inherently safe operation
 
 ## Challenges and Limitations
@@ -229,7 +229,7 @@ A tokamak is a type of magnetic confinement [fusion](/terms/nuclear-physics/fusi
 
 ## Relevance to Nuclear Weapons
 
-Tokamak technology has limited relevance to [nuclear](/history/weapons-technology/nuclear-materials) weapons:
+Tokamak technology has limited relevance to nuclear weapons:
 - **Tritium production**: Could produce tritium for weapons
 - **Nuclear expertise**: Demonstrates nuclear technology capability
 - **Dual-use concerns**: Some technologies have weapons applications

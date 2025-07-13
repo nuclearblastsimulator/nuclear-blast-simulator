@@ -7,14 +7,14 @@ description: 'Missile defense systems attempt to intercept and destroy incoming 
 
 ## The Shield Against Nuclear Attack
 
-[Missile](/history/cold-war-crises/cuban-missile-crisis) [defense](/terms/safety-systems/defense-in-depth) systems represent humanity's attempt to defend against ballistic missile attacks, including those carrying [nuclear](/terms/nuclear-effects/yield-comparison) warheads. From early Cold War concepts to modern multi-layered defense networks, these systems have created complex strategic dynamics between offensive and defensive capabilities. While no system can provide perfect protection against nuclear attack, missile defenses have influenced nuclear strategy, arms control negotiations, and the global balance of power.
+Missile defense systems represent humanity's attempt to defend against ballistic missile attacks, including those carrying nuclear warheads. From early Cold War concepts to modern multi-layered defense networks, these systems have created complex strategic dynamics between offensive and defensive capabilities. While no system can provide perfect protection against nuclear attack, missile defenses have influenced nuclear strategy, arms control negotiations, and the global balance of power.
 
 ## Historical Development
 
 ### Early Concepts (1940s-1950s)
 
 - **Nike Ajax**: Early surface-to-air missile system
-- **Nuclear warhead interceptors**: Using nuclear [weapons](/history/modern-developments/nuclear-weapons-free-zones) to destroy incoming missiles
+- **Nuclear warhead interceptors**: Using nuclear weapons to destroy incoming missiles
 - **Technical challenges**: Enormous technical challenges of intercept
 - **Limited effectiveness**: Recognition of limited effectiveness against ICBMs
 
@@ -372,7 +372,7 @@ The story of missile defense is ultimately a story about the intersection of tec
 
 The concept of missile defense predates the nuclear age, emerging from the early attempts to defend against the ballistic missiles of World War II. The German V-2 rocket, which terrorized London in 1944-45, represented the first practical ballistic missile and sparked the first serious attempts at missile interception. However, the technical challenges of intercepting a ballistic missile were immediately apparent—the V-2 traveled at speeds and altitudes that made interception with existing anti-aircraft weapons virtually impossible.
 
-The development of nuclear weapons transformed missile defense from a [tactical](/terms/weapons-delivery/tactical-nuclear-weapons) problem into a strategic imperative. The realization that a single nuclear warhead could destroy an entire city meant that allowing even one missile to penetrate defenses could be catastrophic. This challenge was compounded by the development of intercontinental ballistic missiles in the 1950s, which could deliver nuclear warheads across continents in less than 30 minutes.
+The development of nuclear weapons transformed missile defense from a tactical problem into a strategic imperative. The realization that a single nuclear warhead could destroy an entire city meant that allowing even one missile to penetrate defenses could be catastrophic. This challenge was compounded by the development of intercontinental ballistic missiles in the 1950s, which could deliver nuclear warheads across continents in less than 30 minutes.
 
 The first serious missile defense system was the Nike Zeus program, developed by the United States in the late 1950s. This system attempted to intercept incoming warheads using nuclear-tipped interceptor missiles, based on the reasoning that nuclear explosions could destroy incoming warheads even without direct hits. The system required massive phased-array radars to track incoming missiles and nuclear-tipped interceptors to destroy them. However, the system faced immediate technical challenges, including the problem of radar blackout caused by nuclear explosions and the difficulty of discriminating between real warheads and decoys.
 

@@ -7,7 +7,7 @@ description: "Generation IV reactors represent the next evolution in nuclear pow
 
 ## Overview
 
-Generation IV reactors represent the next evolution in [nuclear power](/terms/reactor-technology/pressurized-water-reactor) technology, designed to meet ambitious goals for sustainability, safety, proliferation resistance, and economic competitiveness. These advanced [reactor](/history/modern-developments/obninsk-reactor) concepts aim to address current limitations of nuclear power while expanding its applications—potentially making nuclear energy safer, cleaner, and more accessible to the world.
+Generation IV reactors represent the next evolution in nuclear power technology, designed to meet ambitious goals for sustainability, safety, proliferation resistance, and economic competitiveness. These advanced reactor concepts aim to address current limitations of nuclear power while expanding its applications—potentially making nuclear energy safer, cleaner, and more accessible to the world.
 
 ## Generation IV International Forum (GIF)
 
@@ -26,7 +26,7 @@ Generation IV reactors represent the next evolution in [nuclear power](/terms/re
 ## The Six Generation IV Technologies
 
 ### 1. Very High Temperature Reactor (VHTR)
-- **[Coolant](/terms/reactor-technology/coolant)**: Helium gas
+- **Coolant**: Helium gas
 - **Moderator**: Graphite
 - **Fuel**: TRISO particles in graphite blocks
 - **Temperature**: 850-1000°C
@@ -40,7 +40,7 @@ Generation IV reactors represent the next evolution in [nuclear power](/terms/re
 - **Applications**: Electricity, actinide burning, breeding
 
 ### 3. Supercritical Water Reactor (SCWR)
-- **Coolant**: Supercritical [water](/terms/reactor-technology/boiling-water-reactor)
+- **Coolant**: Supercritical water
 - **Pressure**: 25 MPa
 - **Temperature**: 625°C
 - **Efficiency**: ~44% thermal efficiency
@@ -76,7 +76,7 @@ Generation IV reactors represent the next evolution in [nuclear power](/terms/re
 - **Elimination of accidents**: Physically impossible scenarios
 
 ### Sustainability
-- **Closed fuel cycle**: Recycling of [nuclear materials](/history/weapons-technology/nuclear-materials)
+- **Closed fuel cycle**: Recycling of nuclear materials
 - **Waste reduction**: Minimized long-lived waste
 - **Resource efficiency**: Better uranium utilization
 - **Thorium utilization**: Alternative fuel cycle

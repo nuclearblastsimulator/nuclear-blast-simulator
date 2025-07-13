@@ -7,7 +7,7 @@ description: "America's first commercial nuclear power plant, opened in 1957, de
 
 ## America's Nuclear Power Pioneer
 
-The Shippingport Atomic Power Station, which began commercial operation on December 2, 1957, was the [first](/history/nuclear-programs/north-korea-first-test) large-scale [nuclear](/history/testing-disasters/chernobyl-disaster) power plant in the United States and the world's first nuclear power plant devoted exclusively to peaceful purposes. Located in Pennsylvania along the Ohio River, Shippingport demonstrated the commercial viability of nuclear energy and launched America's nuclear power industry. The plant operated successfully for 25 years, proving that nuclear technology developed for naval propulsion could be adapted for civilian electricity generation.
+The Shippingport Atomic Power Station, which began commercial operation on December 2, 1957, was the first large-scale nuclear power plant in the United States and the world's first nuclear power plant devoted exclusively to peaceful purposes. Located in Pennsylvania along the Ohio River, Shippingport demonstrated the commercial viability of nuclear energy and launched America's nuclear power industry. The plant operated successfully for 25 years, proving that nuclear technology developed for naval propulsion could be adapted for civilian electricity generation.
 
 ## Background and Development
 
@@ -99,10 +99,10 @@ The Shippingport Atomic Power Station, which began commercial operation on Decem
 - **Fuel development**: Advanced nuclear fuel development
 - **Operating procedures**: Developed commercial nuclear operating procedures
 - **Maintenance techniques**: Pioneered nuclear maintenance techniques
-- **Training [programs](/history/modern-developments/nuclear-modernization-programs)**: Established nuclear operator training programs
+- **Training programs**: Established nuclear operator training programs
 
 ### Research and Development
-- **Light Water Breeder Reactor**: Later converted to breeder reactor [test](/history/testing-disasters/overview)
+- **Light Water Breeder Reactor**: Later converted to breeder reactor test
 - **Fuel testing**: Testing of various fuel designs and concepts
 - **Technology development**: Continued technology development throughout operation
 - **International cooperation**: Hosted international technical exchanges
@@ -311,7 +311,7 @@ The Shippingport Atomic Power Station, which began commercial operation on Decem
 
 ## Connection to Nuclear Weapons
 
-While Shippingport was purely civilian, it connected to nuclear [weapons](/history/weapons-technology/nuclear-weapons-design) in several ways:
+While Shippingport was purely civilian, it connected to nuclear weapons in several ways:
 
 - **Naval technology**: Based on nuclear submarine reactor technology
 - **Enriched uranium**: Used weapons-grade uranium in early operations

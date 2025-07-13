@@ -7,13 +7,13 @@ description: 'The 1968 Nuclear Non-Proliferation Treaty became the cornerstone o
 
 ## The Cornerstone of Nuclear Governance
 
-The Treaty on the Non-Proliferation of [Nuclear](/history/modern-developments/nuclear-weapons-free-zones) Weapons (NPT), which entered into force on March 5, 1970, stands as the most widely adhered to arms control agreement in history. With 191 parties, the NPT established the global framework for preventing nuclear [weapons](/history/nuclear-programs/nuclear-weapons-by-country) proliferation while promoting peaceful nuclear cooperation and eventual nuclear disarmament. Despite its successes, the treaty faces ongoing challenges from nuclear proliferation, modernization programs, and questions about its long-term effectiveness.
+The Treaty on the Non-Proliferation of Nuclear Weapons (NPT), which entered into force on March 5, 1970, stands as the most widely adhered to arms control agreement in history. With 191 parties, the NPT established the global framework for preventing nuclear weapons proliferation while promoting peaceful nuclear cooperation and eventual nuclear disarmament. Despite its successes, the treaty faces ongoing challenges from nuclear proliferation, modernization programs, and questions about its long-term effectiveness.
 
 ## Background
 
 ### Nuclear Proliferation Concerns
 
-- **Rapid spread**: Fear that [nuclear weapons](/history/weapons-technology/nuclear-weapons-design) would spread to many countries
+- **Rapid spread**: Fear that nuclear weapons would spread to many countries
 - **Atoms for Peace**: Eisenhower's program inadvertently aided proliferation
 - **Technology diffusion**: Peaceful nuclear technology had weapons applications
 - **Regional conflicts**: Nuclear weapons could destabilize regional conflicts
@@ -172,7 +172,7 @@ The Treaty on the Non-Proliferation of [Nuclear](/history/modern-developments/nu
 - **Modernization**: Continued nuclear weapons modernization
 - **New capabilities**: Development of new nuclear capabilities
 - **Quantitative limits**: No quantitative limits on nuclear weapons
-- **Tactical weapons**: Concerns about [tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)
+- **Tactical weapons**: Concerns about tactical nuclear weapons
 
 ### Discrimination Issues
 
@@ -415,7 +415,7 @@ The 2015 Review Conference failed to reach consensus on a final document, largel
 
 ### Contemporary Challenges
 
-The NPT faces several contemporary challenges that threaten its effectiveness and relevance. The nuclear modernization programs underway in all nuclear-weapon states raise questions about their commitment to disarmament. The development of new nuclear weapons capabilities, including low-[yield](/terms/nuclear-effects/yield-comparison) weapons and new delivery systems, contradicts the disarmament spirit of the treaty.
+The NPT faces several contemporary challenges that threaten its effectiveness and relevance. The nuclear modernization programs underway in all nuclear-weapon states raise questions about their commitment to disarmament. The development of new nuclear weapons capabilities, including low-yield weapons and new delivery systems, contradicts the disarmament spirit of the treaty.
 
 The emergence of new technologies, including cyber capabilities and artificial intelligence, creates new challenges for nuclear governance. These technologies could affect nuclear command and control systems, alter the nuclear balance, and create new pathways to nuclear weapons development. The NPT's framework was not designed to address these technological developments.
 

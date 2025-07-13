@@ -7,7 +7,7 @@ description: "India's nuclear weapons program began in the 1960s, culminating in
 
 ## The World's Fifth Nuclear Power
 
-India's [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) [weapons](/terms/nuclear-effects/yield-comparison) program began in the 1960s under the leadership of scientists like Homi Bhabha and culminated in the 1974 "Smiling Buddha" test, making India the sixth country to demonstrate [nuclear weapons](/history/modern-developments/nuclear-weapons-free-zones) capability. After a 24-year testing moratorium, India conducted the Pokhran-II series in 1998, establishing itself as a declared nuclear power with an estimated 160-170 nuclear warheads. India maintains a doctrine of credible minimum deterrence with a no-first-use policy, emphasizing defensive nuclear posture while developing a nuclear triad for strategic stability.
+India's nuclear weapons program began in the 1960s under the leadership of scientists like Homi Bhabha and culminated in the 1974 "Smiling Buddha" test, making India the sixth country to demonstrate nuclear weapons capability. After a 24-year testing moratorium, India conducted the Pokhran-II series in 1998, establishing itself as a declared nuclear power with an estimated 160-170 nuclear warheads. India maintains a doctrine of credible minimum deterrence with a no-first-use policy, emphasizing defensive nuclear posture while developing a nuclear triad for strategic stability.
 
 ## Historical Development
 
@@ -211,7 +211,7 @@ India's [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) [weapons
 ### Recent Developments
 
 - **Doctrinal evolution**: Gradual doctrinal evolution
-- **Tactical weapons**: [Tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons) development
+- **Tactical weapons**: Tactical nuclear weapons development
 - **Cold Start**: Response to conventional threats
 - **Flexibility**: Increased doctrinal flexibility
 
@@ -372,7 +372,7 @@ The decision to conduct India's first nuclear test was made by Prime Minister In
 
 The test site at Pokhran was chosen for its remoteness and security, located in the Thar Desert of Rajasthan far from populated areas. The device was placed in a shaft 107 meters underground, with extensive instrumentation to measure the explosion's effects. The test was conducted at 8:05 AM local time on May 18, 1974, Buddha Purnima, the birthday of the Buddha, leading to the operation's codename "Smiling Buddha."
 
-The explosion yielded approximately 8-12 kilotons, confirming the success of India's [nuclear weapons design](/history/weapons-technology/nuclear-weapons-design). The test was immediately detected by international monitoring stations, ending decades of speculation about India's nuclear capabilities. The Indian government's official statement described the test as a "peaceful nuclear explosion" conducted for scientific purposes, though few observers were convinced by this characterization.
+The explosion yielded approximately 8-12 kilotons, confirming the success of India's nuclear weapons design. The test was immediately detected by international monitoring stations, ending decades of speculation about India's nuclear capabilities. The Indian government's official statement described the test as a "peaceful nuclear explosion" conducted for scientific purposes, though few observers were convinced by this characterization.
 
 The international reaction to the test was swift and severe. The United States, Canada, and other nuclear suppliers imposed comprehensive sanctions on India, cutting off nuclear technology transfers and imposing restrictions on dual-use technologies. The sanctions were designed to punish India for its nuclear test and to deter other countries from following India's example. The test also accelerated efforts to strengthen the nuclear non-proliferation regime, leading to the formation of the Nuclear Suppliers Group in 1975.
 

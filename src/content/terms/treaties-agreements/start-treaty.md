@@ -7,7 +7,7 @@ description: "The Strategic Arms Reduction Treaty (START) represents the most su
 
 ## Overview
 
-The Strategic Arms Reduction Treaty (START) represents the most successful [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) disarmament effort in history. These treaties reduced U.S. and Russian strategic nuclear arsenals from over 12,000 deployed warheads in the 1980s to approximately 1,550 each today.
+The Strategic Arms Reduction Treaty (START) represents the most successful nuclear disarmament effort in history. These treaties reduced U.S. and Russian strategic nuclear arsenals from over 12,000 deployed warheads in the 1980s to approximately 1,550 each today.
 
 ## Treaty Evolution
 
@@ -23,7 +23,7 @@ The original treaty established key principles:
 - **Warhead limits**: 6,000 strategic warheads maximum
 - **Delivery vehicle limits**: 1,600 ICBMs, SLBMs, and bombers
 - **Verification**: Intrusive on-site inspections
-- **Elimination**: Actual destruction of excess [weapons](/history/modern-developments/nuclear-weapons-free-zones)
+- **Elimination**: Actual destruction of excess weapons
 
 ## New START Framework
 
@@ -35,7 +35,7 @@ The current treaty (extended to 2026) includes:
 
 ## Verification Mechanisms
 
-[START treaties](/history/modern-developments/start-treaties) employ comprehensive monitoring:
+START treaties employ comprehensive monitoring:
 - **On-site inspections**: Regular facility visits
 - **Satellite surveillance**: National technical means
 - **Data exchanges**: Regular force structure reports
@@ -61,7 +61,7 @@ Treaty implementation faces challenges:
 ## Excluded Weapons
 
 START treaties do not cover:
-- **[Tactical nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons)**: Short-range battlefield systems
+- **Tactical nuclear weapons**: Short-range battlefield systems
 - **Non-deployed warheads**: Reserve and storage stockpiles
 - **Delivery systems**: Conventional long-range missiles
 - **Third countries**: China, France, UK nuclear forces
@@ -90,6 +90,6 @@ START treaties are crucial because:
 
 - [International Atomic Energy Agency (IAEA)](https://www.iaea.org) - Nuclear science and safety standards
 - [Nuclear Regulatory Commission](https://www.nrc.gov) - Radiation protection and nuclear physics
-- [Los Alamos National Laboratory](https://www.lanl.gov) - [Nuclear weapons](/terms/nuclear-effects/yield-comparison) physics and research
+- [Los Alamos National Laboratory](https://www.lanl.gov) - Nuclear weapons physics and research
 - [Lawrence Livermore National Laboratory](https://www.llnl.gov) - Nuclear science and technology
 - [Atomic Heritage Foundation](https://www.atomicheritage.org) - Nuclear history and science education

@@ -7,7 +7,7 @@ description: "Control rods are neutron-absorbing devices used to control the rat
 
 ## Overview
 
-Control rods are neutron-absorbing devices used to control the rate of [nuclear](/history/weapons-technology/nuclear-weapons-design) [fission](/history/foundational-events/nuclear-fission-discovery) in reactors and to shut down reactors safely. They are essential safety and control components that regulate [reactor](/terms/reactor-technology/pressurized-water-reactor) power by absorbing neutrons and preventing them from causing additional fission reactions—serving as both the accelerator and emergency brake of nuclear power.
+Control rods are neutron-absorbing devices used to control the rate of nuclear fission in reactors and to shut down reactors safely. They are essential safety and control components that regulate reactor power by absorbing neutrons and preventing them from causing additional fission reactions—serving as both the accelerator and emergency brake of nuclear power.
 
 ## Function and Purpose
 
@@ -21,7 +21,7 @@ Control rods are neutron-absorbing devices used to control the rate of [nuclear]
 - **Neutron absorption**: High neutron absorption cross-section materials
 - **Reactivity insertion**: Inserting rods reduces reactor power
 - **Reactivity withdrawal**: Removing rods increases reactor power
-- **[Scram](/terms/safety-systems/scram) function**: Emergency rapid insertion for shutdown
+- **Scram function**: Emergency rapid insertion for shutdown
 
 ## Materials
 
@@ -48,7 +48,7 @@ Control rods are neutron-absorbing devices used to control the rate of [nuclear]
 ### Boiling Water Reactors (BWR)
 - **Bottom insertion**: Control rods enter from below
 - **Cruciform shape**: Cross-shaped design
-- **Hydraulic drive**: [Water](/terms/reactor-technology/boiling-water-reactor) pressure for insertion/withdrawal
+- **Hydraulic drive**: Water pressure for insertion/withdrawal
 - **Control rod drive mechanism**: Below reactor vessel
 
 ## Control Systems

@@ -7,7 +7,7 @@ description: "London coordinates the United Kingdom's nuclear weapons program, m
 
 ## Britain's Independent Nuclear Deterrent
 
-London coordinates the United Kingdom's [nuclear](/history/nuclear-programs/nuclear-weapons-by-country) [weapons](/terms/nuclear-effects/yield-comparison) program, maintaining an independent nuclear deterrent with Trident submarines and close nuclear cooperation with the United States. As the world's third nuclear power, the UK developed [nuclear weapons](/terms/weapons-delivery/tactical-nuclear-weapons) in the 1950s to maintain great power status and ensure national security independence. From Downing Street's political control to the Ministry of Defence's operational management, London oversees a nuclear arsenal of approximately 225 warheads deployed on four Vanguard-class submarines, representing the UK's commitment to nuclear deterrence and its special relationship with the United States.
+London coordinates the United Kingdom's nuclear weapons program, maintaining an independent nuclear deterrent with Trident submarines and close nuclear cooperation with the United States. As the world's third nuclear power, the UK developed nuclear weapons in the 1950s to maintain great power status and ensure national security independence. From Downing Street's political control to the Ministry of Defence's operational management, London oversees a nuclear arsenal of approximately 225 warheads deployed on four Vanguard-class submarines, representing the UK's commitment to nuclear deterrence and its special relationship with the United States.
 
 ## Historical Development
 
@@ -110,7 +110,7 @@ London coordinates the United Kingdom's [nuclear](/history/nuclear-programs/nucl
 
 ### Nuclear Infrastructure
 
-- **Atomic Weapons Establishment**: [Nuclear weapons design](/history/weapons-technology/nuclear-weapons-design)
+- **Atomic Weapons Establishment**: Nuclear weapons design
 - **Rolls-Royce**: Nuclear reactor manufacturing
 - **BAE Systems**: Submarine construction
 - **Nuclear facilities**: Nuclear infrastructure support

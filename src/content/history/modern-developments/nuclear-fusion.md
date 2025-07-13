@@ -7,7 +7,7 @@ description: 'Nuclear fusion research aims to harness the same process that powe
 
 ## The Ultimate Energy Source
 
-[Nuclear](/history/weapons-technology/nuclear-weapons-design) [fusion](/terms/nuclear-physics/fusion), the process that powers the sun and stars, represents the holy grail of clean [energy](/terms/nuclear-physics/binding-energy) production. By fusing light atomic nuclei together to form heavier elements, fusion releases enormous amounts of energy while producing minimal radioactive waste. After decades of research and billions of dollars in investment, scientists are finally approaching the threshold of achieving controlled fusion reactions that produce more energy than they consume, potentially revolutionizing global energy production and offering a virtually limitless source of clean power.
+Nuclear fusion, the process that powers the sun and stars, represents the holy grail of clean energy production. By fusing light atomic nuclei together to form heavier elements, fusion releases enormous amounts of energy while producing minimal radioactive waste. After decades of research and billions of dollars in investment, scientists are finally approaching the threshold of achieving controlled fusion reactions that produce more energy than they consume, potentially revolutionizing global energy production and offering a virtually limitless source of clean power.
 
 ## The Science of Fusion
 
@@ -50,7 +50,7 @@ description: 'Nuclear fusion research aims to harness the same process that powe
 
 ### Military Applications
 
-- **Hydrogen bomb**: [Fusion weapons](/history/weapons-technology/fusion-weapons) development in 1950s
+- **Hydrogen bomb**: Fusion weapons development in 1950s
 - **Teller-Ulam design**: Two-stage fusion weapon design
 - **Weapons testing**: Fusion weapons testing programs
 - **Military funding**: Early fusion research driven by weapons applications
@@ -67,7 +67,7 @@ description: 'Nuclear fusion research aims to harness the same process that powe
 - **U.S. program**: U.S. controlled fusion research program
 - **Magnetic confinement**: Focus on magnetic confinement approaches
 - **Stellarator**: Early stellarator concept development
-- **[Tokamak](/terms/reactor-technology/tokamak) discovery**: Discovery of Soviet tokamak success
+- **Tokamak discovery**: Discovery of Soviet tokamak success
 
 ## Magnetic Confinement Fusion
 
