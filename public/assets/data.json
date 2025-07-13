@@ -5,98 +5,125 @@
       "name": "Oak Ridge",
       "country": "United States",
       "coordinates": "36.0104,-84.2696",
-      "default": true
+      "default": true,
+      "articleLink": "/history/events/manhattan-project-oak-ridge/",
+      "tooltip": "Manhattan Project uranium enrichment"
     },
     {
       "id": "new-york",
       "name": "New York City",
       "country": "United States",
       "coordinates": "40.7128,-74.0060",
-      "default": false
+      "default": false,
+      "tooltip": "Manhattan Project connections"
     },
     {
       "id": "london",
       "name": "London",
       "country": "United Kingdom",
       "coordinates": "51.5074,-0.1278",
-      "default": false
+      "default": false,
+      "articleLink": "/history/programs/uk-nuclear-program/",
+      "tooltip": "British nuclear program"
     },
     {
       "id": "tokyo",
       "name": "Tokyo",
       "country": "Japan",
       "coordinates": "35.6762,139.6503",
-      "default": false
+      "default": false,
+      "articleLink": "/history/events/fukushima-daiichi/",
+      "tooltip": "Fukushima nuclear disaster"
     },
     {
       "id": "hiroshima",
       "name": "Hiroshima",
       "country": "Japan",
       "coordinates": "34.3853,132.4553",
-      "default": false
+      "default": false,
+      "articleLink": "/history/events/little-boy-hiroshima/",
+      "tooltip": "Learn about atomic bomb survivors"
     },
     {
       "id": "nagasaki",
       "name": "Nagasaki",
       "country": "Japan",
       "coordinates": "32.7503,129.8779",
-      "default": false
+      "default": false,
+      "articleLink": "/history/events/fat-man-nagasaki/",
+      "tooltip": "Learn about atomic bomb survivors"
     },
     {
       "id": "paris",
       "name": "Paris",
       "country": "France",
       "coordinates": "48.8566,2.3522",
-      "default": false
+      "default": false,
+      "articleLink": "/history/programs/france-nuclear-program/",
+      "tooltip": "French nuclear submarine program"
     },
     {
       "id": "moscow",
       "name": "Moscow",
       "country": "Russia",
       "coordinates": "55.7558,37.6173",
-      "default": false
+      "default": false,
+      "articleLink": "/history/programs/soviet-nuclear-program/",
+      "tooltip": "Nuclear arms control treaties"
     },
     {
       "id": "beijing",
       "name": "Beijing",
       "country": "China",
       "coordinates": "39.9042,116.4074",
-      "default": false
+      "default": false,
+      "articleLink": "/history/programs/china-nuclear-program/",
+      "tooltip": "Chinese nuclear testing program"
     },
     {
       "id": "tehran",
       "name": "Tehran",
       "country": "Iran",
       "coordinates": "35.6892,51.3890",
-      "default": false
+      "default": false,
+      "articleLink": "/history/programs/iran-nuclear-program/",
+      "tooltip": "Nuclear proliferation in the 21st century"
     },
     {
       "id": "los-angeles",
       "name": "Los Angeles",
       "country": "United States",
       "coordinates": "34.0522,-118.2437",
-      "default": false
+      "default": false,
+      "articleLink": "/history/programs/w87-warhead/",
+      "tooltip": "Nuclear research facilities"
     },
     {
       "id": "chicago",
       "name": "Chicago",
       "country": "United States",
       "coordinates": "41.8781,-87.6298",
-      "default": false
+      "default": false,
+      "articleLink": "/history/events/chicago-pile-1/",
+      "tooltip": "Read about the first nuclear reactor"
     },
     {
       "id": "berlin",
       "name": "Berlin",
       "country": "Germany",
       "coordinates": "52.5200,13.4050",
-      "default": false
+      "default": false,
+      "articleLink": "/history/cuban-missile-crisis/",
+      "tooltip": "Cold War nuclear tensions"
     },
     {
       "id": "sydney",
       "name": "Sydney",
       "country": "Australia",
       "coordinates": "-33.8688,151.2093",
-      "default": false
+      "default": false,
+      "articleLink": "/history/treaties/nuclear-weapons-free-zones/",
+      "tooltip": "Nuclear-free zone movements"
     }
   ],
   "weapons": [
@@ -107,7 +134,8 @@
       "details": "Reference explosive",
       "category": "non-nuclear",
       "displayText": "1 Ton TNT • Reference Explosive",
-      "default": false
+      "default": false,
+      "tooltip": "Reference explosive baseline"
     },
     {
       "id": "tomahawk",
@@ -116,7 +144,8 @@
       "details": "1,000 lbs warhead • Cruise missile",
       "category": "non-nuclear",
       "displayText": "Tomahawk Missile • 1,000 lbs • Cruise Missile",
-      "default": false
+      "default": false,
+      "tooltip": "Cruise missile capabilities"
     },
     {
       "id": "moab",
@@ -125,7 +154,9 @@
       "details": "21,600 lbs • Largest conventional",
       "category": "non-nuclear",
       "displayText": "MOAB • 21,600 lbs • Largest Conventional",
-      "default": false
+      "default": false,
+      "articleLink": "/history/programs/moab-conventional-weapon/",
+      "tooltip": "Largest conventional explosive"
     },
     {
       "id": "little-boy",
@@ -134,7 +165,9 @@
       "details": "15 kilotons • Hiroshima 1945",
       "category": "historically-significant",
       "displayText": "Little Boy • 15 kT • Hiroshima 1945",
-      "default": true
+      "default": true,
+      "articleLink": "/history/events/little-boy-hiroshima/",
+      "tooltip": "Learn about fission weapon design"
     },
     {
       "id": "fat-man",
@@ -143,7 +176,9 @@
       "details": "21 kilotons • Nagasaki 1945",
       "category": "historically-significant",
       "displayText": "Fat Man • 21 kT • Nagasaki 1945",
-      "default": false
+      "default": false,
+      "articleLink": "/history/events/fat-man-nagasaki/",
+      "tooltip": "Learn about implosion-type weapons"
     },
     {
       "id": "ivy-mike",
@@ -152,7 +187,9 @@
       "details": "10.4 megatons • First hydrogen bomb 1952",
       "category": "historically-significant",
       "displayText": "Ivy Mike • 10.4 MT • First H-Bomb 1952",
-      "default": false
+      "default": false,
+      "articleLink": "/history/events/ivy-mike-hydrogen-bomb/",
+      "tooltip": "Discover the first hydrogen bomb"
     },
     {
       "id": "castle-bravo",
@@ -161,7 +198,9 @@
       "details": "15 megatons • Largest US test",
       "category": "historically-significant",
       "displayText": "Castle Bravo • 15 MT • Largest US Test",
-      "default": false
+      "default": false,
+      "articleLink": "/history/castle-bravo/",
+      "tooltip": "Read about the test gone wrong"
     },
     {
       "id": "tsar-bomba",
@@ -170,7 +209,9 @@
       "details": "50 megatons • Largest ever tested",
       "category": "historically-significant",
       "displayText": "Tsar Bomba • 50 MT • Largest Ever",
-      "default": false
+      "default": false,
+      "articleLink": "/history/testing/tsar-bomba-novaya-zemlya/",
+      "tooltip": "Explore the largest bomb ever tested"
     },
     {
       "id": "mop",
@@ -179,7 +220,9 @@
       "details": "30,000 lbs • Bunker buster Iran 2025",
       "category": "historically-significant",
       "displayText": "GBU-57 MOP • 30k lbs • Bunker Buster Iran 2025",
-      "default": false
+      "default": false,
+      "articleLink": "/history/programs/bunker-buster-weapons/",
+      "tooltip": "Modern bunker buster technology"
     },
     {
       "id": "aman",
@@ -188,7 +231,8 @@
       "details": "12-20 kilotons • Pakistan nuclear weapon",
       "category": "international",
       "displayText": "Aman • 16 kT • Pakistan",
-      "default": false
+      "default": false,
+      "tooltip": "Pakistani nuclear program"
     },
     {
       "id": "ghauri",
@@ -197,7 +241,9 @@
       "details": "5-15 kilotons • Pakistan medium-range missile",
       "category": "international",
       "displayText": "Ghauri • 10 kT • Pakistan MRBM",
-      "default": false
+      "default": false,
+      "articleLink": "/history/programs/pakistan-nuclear-program/",
+      "tooltip": "Pakistani missile technology"
     },
     {
       "id": "df-5",
@@ -206,7 +252,8 @@
       "details": "3-5 megatons • Chinese ICBM",
       "category": "international",
       "displayText": "DF-5 • 4 MT • Chinese ICBM",
-      "default": false
+      "default": false,
+      "tooltip": "Chinese ICBM capabilities"
     },
     {
       "id": "iskander",
@@ -215,7 +262,8 @@
       "details": "50 kilotons • Russian tactical missile",
       "category": "tactical",
       "displayText": "Iskander • 50 kT • Russian Tactical",
-      "default": false
+      "default": false,
+      "tooltip": "Russian tactical nuclear systems"
     },
     {
       "id": "b61-12",
@@ -224,7 +272,8 @@
       "details": "50 kilotons • US precision gravity bomb",
       "category": "tactical",
       "displayText": "B61-12 • 50 kT • US Precision Bomb",
-      "default": false
+      "default": false,
+      "tooltip": "Modern tactical nuclear weapons"
     },
     {
       "id": "w76-1",
@@ -233,7 +282,8 @@
       "details": "90-100 kilotons • US submarine warhead",
       "category": "tactical",
       "displayText": "W76-1 • 100 kT • US SLBM",
-      "default": false
+      "default": false,
+      "tooltip": "Submarine-launched warheads"
     },
     {
       "id": "polaris-a3",
@@ -242,7 +292,8 @@
       "details": "200 kilotons • Early US submarine missile",
       "category": "tactical",
       "displayText": "Polaris A-3 • 200 kT • Early SLBM",
-      "default": false
+      "default": false,
+      "tooltip": "Early submarine missiles"
     },
     {
       "id": "w87",
@@ -251,7 +302,8 @@
       "details": "300 kilotons • US Minuteman III warhead",
       "category": "strategic",
       "displayText": "W87 • 300 kT • US ICBM",
-      "default": false
+      "default": false,
+      "tooltip": "Minuteman III warhead technology"
     },
     {
       "id": "w78",
@@ -260,7 +312,8 @@
       "details": "335 kilotons • US ICBM warhead",
       "category": "strategic",
       "displayText": "W78 • 335 kT • US ICBM",
-      "default": false
+      "default": false,
+      "tooltip": "ICBM warhead systems"
     },
     {
       "id": "b61-13",
@@ -269,7 +322,8 @@
       "details": "360 kilotons • US Gravity Bomb 2025",
       "category": "strategic",
       "displayText": "B61-13 • 360 kT • US Gravity Bomb 2025",
-      "default": false
+      "default": false,
+      "tooltip": "Variable yield weapons"
     },
     {
       "id": "b61-11",
@@ -278,7 +332,8 @@
       "details": "400 kilotons • US bunker buster",
       "category": "strategic",
       "displayText": "B61-11 • 400 kT • US Bunker Buster",
-      "default": false
+      "default": false,
+      "tooltip": "Earth penetrating weapons"
     },
     {
       "id": "w88",
@@ -287,7 +342,8 @@
       "details": "475 kilotons • Modern US SLBM",
       "category": "strategic",
       "displayText": "W88 Warhead • 475 kT • US SLBM",
-      "default": false
+      "default": false,
+      "tooltip": "Trident II warhead design"
     },
     {
       "id": "kinzhal",
@@ -296,7 +352,8 @@
       "details": "~500 kilotons • Russian hypersonic missile",
       "category": "strategic",
       "displayText": "Kinzhal • 500 kT • Russian Hypersonic",
-      "default": false
+      "default": false,
+      "tooltip": "Hypersonic missile technology"
     },
     {
       "id": "ss-18-satan",
@@ -305,7 +362,8 @@
       "details": "750kT-1MT • Soviet/Russian heavy ICBM",
       "category": "strategic",
       "displayText": "SS-18 Satan • 875 kT • Russian ICBM",
-      "default": false
+      "default": false,
+      "tooltip": "Heavy ICBM systems"
     },
     {
       "id": "b83",
@@ -314,7 +372,9 @@
       "details": "1.2 megatons • US Strategic Bomb",
       "category": "strategic",
       "displayText": "B83 • 1.2 MT • US Strategic Bomb",
-      "default": false
+      "default": false,
+      "articleLink": "/history/programs/b83-nuclear-bomb/",
+      "tooltip": "Strategic bomber deployments"
     },
     {
       "id": "poseidon",
@@ -323,7 +383,8 @@
       "details": "2-100 megatons • Russian nuclear torpedo",
       "category": "modern-threats",
       "displayText": "Poseidon • 50 MT • Russian Torpedo",
-      "default": false
+      "default": false,
+      "tooltip": "Nuclear-powered torpedoes"
     },
     {
       "id": "burevestnik",
@@ -332,7 +393,8 @@
       "details": "Unknown yield • Russian nuclear cruise missile",
       "category": "modern-threats",
       "displayText": "Burevestnik • 1 MT • Russian Cruise Missile",
-      "default": false
+      "default": false,
+      "tooltip": "Nuclear-powered cruise missiles"
     },
     {
       "id": "an-602-original",
@@ -341,7 +403,8 @@
       "details": "100 megatons • Tsar Bomba original design",
       "category": "test",
       "displayText": "AN-602 Original • 100 MT • Tsar Bomba Design",
-      "default": false
+      "default": false,
+      "tooltip": "Original 100 megaton design"
     },
     {
       "id": "chernobyl-equivalent",
@@ -350,7 +413,8 @@
       "details": "400x Hiroshima radiation • Nuclear accident",
       "category": "test",
       "displayText": "Chernobyl Equivalent • 6 MT • Radiation Comparison",
-      "default": false
+      "default": false,
+      "tooltip": "Nuclear accident comparison"
     }
   ],
   "categories": {
