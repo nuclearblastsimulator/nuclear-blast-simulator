@@ -3,54 +3,54 @@
 
 // Mapping of cities to related articles
 export const cityArticleLinks = {
-  "oak-ridge": "/history/foundational-events/oak-ridge/",
-  "new-york": "/history/key-figures/oppenheimer/",
-  "london": "/history/nuclear-programs/united-kingdom/",
-  "tokyo": "/history/testing-disasters/fukushima-daiichi/",
-  "hiroshima": "/history/testing-disasters/hibakusha/",
-  "nagasaki": "/history/testing-disasters/hibakusha/",
-  "paris": "/history/nuclear-programs/france/",
-  "moscow": "/history/cold-war-crises/moscow-nuclear-program/",
-  "beijing": "/history/nuclear-programs/china/",
-  "tehran": "/history/nuclear-programs/iran-nuclear-program/",
+  "oak-ridge": "/history/events/manhattan-project-oak-ridge/",
+  "new-york": "/history/people/oppenheimer/",
+  "london": "/history/programs/uk-nuclear-program/",
+  "tokyo": "/history/events/fukushima-daiichi/",
+  "hiroshima": "/history/testing/hibakusha/",
+  "nagasaki": "/history/testing/hibakusha/",
+  "paris": "/history/programs/france-nuclear-program/",
+  "moscow": "/history/programs/soviet-nuclear-program/",
+  "beijing": "/history/programs/china-nuclear-program/",
+  "tehran": "/history/programs/iran-nuclear-program/",
   "los-angeles": null,
-  "chicago": "/history/foundational-events/chicago-pile-1/",
+  "chicago": "/history/events/chicago-pile-1/",
   "berlin": null,
-  "sydney": "/history/testing-disasters/overview/"
+  "sydney": null
 };
 
 // Mapping of weapons to related articles
 export const weaponArticleLinks = {
   "tnt": null,
   "tomahawk": null,
-  "moab": "/history/weapons-technology/moab/",
-  "little-boy": "/history/weapons-technology/fission-weapons/",
-  "fat-man": "/history/weapons-technology/fission-weapons/",
-  "ivy-mike": "/history/weapons-technology/fusion-weapons/",
-  "castle-bravo": "/history/testing-disasters/castle-bravo/",
-  "tsar-bomba": "/history/testing-disasters/novaya-zemlya/",
-  "mop": "/history/weapons-technology/gbu-57-mop/",
+  "moab": "/history/programs/moab-conventional-weapon/",
+  "little-boy": "/history/events/fission-weapons-development/",
+  "fat-man": "/history/events/fission-weapons-development/",
+  "ivy-mike": "/history/events/fusion-weapons-development/",
+  "castle-bravo": "/history/testing/castle-bravo/",
+  "tsar-bomba": "/history/testing/novaya-zemlya/",
+  "mop": "/history/programs/bunker-buster-weapons/",
   "aman": null,
-  "ghauri": "/history/nuclear-programs/pakistan/",
-  "df-5": "/history/modern-developments/nuclear-modernization-programs/",
-  "iskander": "/terms/weapons-delivery/tactical-nuclear-weapons/",
-  "b61-12": "/terms/weapons-delivery/tactical-nuclear-weapons/",
+  "ghauri": "/history/programs/pakistan-nuclear-program/",
+  "df-5": "/history/programs/nuclear-modernization/",
+  "iskander": "/terms/delivery/tactical-nuclear-weapons/",
+  "b61-12": "/terms/delivery/tactical-nuclear-weapons/",
   "w76-1": null,
-  "polaris-a3": "/history/nuclear-programs/nuclear-submarines/",
-  "w87": "/history/weapons-technology/w87/",
+  "polaris-a3": "/history/programs/nuclear-submarines/",
+  "w87": "/history/programs/w87-warhead/",
   "w78": null,
   "b61-13": null,
   "b61-11": null,
-  "w88": "/history/weapons-technology/w88/",
+  "w88": "/history/programs/w88-warhead/",
   "kinzhal": null,
   "ss-18-satan": null,
-  "b83": "/history/weapons-technology/b83/",
+  "b83": "/history/programs/b83-nuclear-bomb/",
   "poseidon": null,
   "burevestnik": null,
   "an-602-original": null,
   "chernobyl-equivalent": null,
-  "trident-ii-d5": "/terms/weapons-delivery/nuclear-triad/",
-  "minuteman-iii": "/terms/weapons-delivery/icbm/"
+  "trident-ii-d5": "/terms/delivery/nuclear-triad/",
+  "minuteman-iii": "/terms/delivery/icbm/"
 };
 
 // Tooltip text for cities
@@ -108,32 +108,32 @@ export const weaponTooltips = {
 // Related articles for specific topics
 export const relatedArticles = {
   'hiroshima': [
-    '/history/key-figures/oppenheimer/',
-    '/terms/nuclear-physics/fission/',
-    '/terms/nuclear-technology/enrichment/'
+    '/history/people/oppenheimer/',
+    '/terms/weapons/fission-weapons/',
+    '/terms/weapons/enrichment/'
   ],
   'nagasaki': [
-    '/history/key-figures/oppenheimer/',
-    '/terms/nuclear-physics/plutonium/',
-    '/terms/nuclear-physics/fission/'
+    '/history/people/oppenheimer/',
+    '/terms/weapons/plutonium/',
+    '/terms/weapons/fission-weapons/'
   ],
   'tsar-bomba': [
-    '/history/key-figures/andrei-sakharov/',
-    '/history/weapons-technology/fusion-weapons/',
-    '/terms/nuclear-effects/megaton/'
+    '/history/people/andrei-sakharov/',
+    '/history/events/fusion-weapons-development/',
+    '/terms/weapons/megaton/'
   ],
   'castle-bravo': [
-    '/history/testing-sites/bikini-atoll/',
-    '/history/weapons-technology/fusion-weapons/',
-    '/history/weapons-technology/nuclear-testing/'
+    '/history/testing/bikini-atoll/',
+    '/history/events/fusion-weapons-development/',
+    '/history/testing/nuclear-testing-overview/'
   ]
 };
 
 // Statistics
 export const linkStats = {
   totalCities: 14,
-  linkedCities: 12,
+  linkedCities: 11,
   totalWeapons: 28,
   linkedWeapons: 17,
-  lastUpdated: '2025-07-13T02:24:25.043Z'
+  lastUpdated: '2025-07-13T04:07:17.622Z'
 };

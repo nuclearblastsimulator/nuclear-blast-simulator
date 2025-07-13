@@ -145,26 +145,26 @@ async function updateArticleLinks() {
     // These are high-confidence matches based on article content
     const manualOverrides = {
       cities: {
-        'hiroshima': '/history/testing-disasters/hibakusha/',
-        'nagasaki': '/history/testing-disasters/hibakusha/',
-        'chicago': '/history/foundational-events/chicago-pile-1/'
+        'hiroshima': '/history/testing/hibakusha/',
+        'nagasaki': '/history/testing/hibakusha/',
+        'chicago': '/history/events/chicago-pile-1/'
       },
       weapons: {
-        'little-boy': '/history/weapons-technology/fission-weapons/',
-        'fat-man': '/history/weapons-technology/fission-weapons/',
-        'castle-bravo': '/history/testing-disasters/castle-bravo/',
-        'tsar-bomba': '/history/testing-disasters/novaya-zemlya/',
-        'ivy-mike': '/history/weapons-technology/fusion-weapons/',
-        'polaris-a3': '/history/nuclear-programs/nuclear-submarines/',
-        'trident-ii-d5': '/terms/weapons-delivery/nuclear-triad/',
-        'minuteman-iii': '/terms/weapons-delivery/icbm/',
-        'iskander': '/terms/weapons-delivery/tactical-nuclear-weapons/',
-        'b61-12': '/terms/weapons-delivery/tactical-nuclear-weapons/',
-        'moab': '/history/weapons-technology/moab/',
-        'mop': '/history/weapons-technology/gbu-57-mop/',
-        'b83': '/history/weapons-technology/b83/',
-        'w87': '/history/weapons-technology/w87/',
-        'w88': '/history/weapons-technology/w88/'
+        'little-boy': '/history/events/fission-weapons-development/',
+        'fat-man': '/history/events/fission-weapons-development/',
+        'castle-bravo': '/history/testing/castle-bravo/',
+        'tsar-bomba': '/history/testing/novaya-zemlya/',
+        'ivy-mike': '/history/events/fusion-weapons-development/',
+        'polaris-a3': '/history/programs/nuclear-submarines/',
+        'trident-ii-d5': '/terms/delivery/nuclear-triad/',
+        'minuteman-iii': '/terms/delivery/icbm/',
+        'iskander': '/terms/delivery/tactical-nuclear-weapons/',
+        'b61-12': '/terms/delivery/tactical-nuclear-weapons/',
+        'moab': '/history/programs/moab-conventional-weapon/',
+        'mop': '/history/programs/bunker-buster-weapons/',
+        'b83': '/history/programs/b83-nuclear-bomb/',
+        'w87': '/history/programs/w87-warhead/',
+        'w88': '/history/programs/w88-warhead/'
       }
     };
     
@@ -307,24 +307,24 @@ export const weaponTooltips = ${JSON.stringify(weaponTooltips, null, 2)};
 // Related articles for specific topics
 export const relatedArticles = {
   'hiroshima': [
-    '/history/key-figures/oppenheimer/',
-    '/terms/nuclear-physics/fission/',
-    '/terms/nuclear-technology/enrichment/'
+    '/history/people/oppenheimer/',
+    '/terms/weapons/fission-weapons/',
+    '/terms/weapons/enrichment/'
   ],
   'nagasaki': [
-    '/history/key-figures/oppenheimer/',
-    '/terms/nuclear-physics/plutonium/',
-    '/terms/nuclear-physics/fission/'
+    '/history/people/oppenheimer/',
+    '/terms/weapons/plutonium/',
+    '/terms/weapons/fission-weapons/'
   ],
   'tsar-bomba': [
-    '/history/key-figures/andrei-sakharov/',
-    '/history/weapons-technology/fusion-weapons/',
-    '/terms/nuclear-effects/megaton/'
+    '/history/people/andrei-sakharov/',
+    '/history/events/fusion-weapons-development/',
+    '/terms/weapons/megaton/'
   ],
   'castle-bravo': [
-    '/history/testing-sites/bikini-atoll/',
-    '/history/weapons-technology/fusion-weapons/',
-    '/history/weapons-technology/nuclear-testing/'
+    '/history/testing/bikini-atoll/',
+    '/history/events/fusion-weapons-development/',
+    '/history/testing/nuclear-testing-overview/'
   ]
 };
 
