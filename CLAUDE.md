@@ -110,3 +110,33 @@ The blast simulator (`/public/assets/js/app.js`) implements:
 8. **SEO & Accessibility**: Proper semantic HTML, alt text, and meta descriptions throughout
 9. **Avoid Specific Counts**: Don't mention specific numbers of articles, weapons, or other content items as these change over time. Use general terms like "extensive", "comprehensive", or "numerous" instead
 10. **UI Component Styling**: When creating UI sections or cards, use the standard card setup: `<div class="card bg-base-100 border border-base-300 overflow-hidden h-full flex flex-col"><div class="card-body">...</div></div>`. This ensures consistent styling across the site
+
+## Content Creation Guidelines
+
+When creating or editing educational content, follow these style guides:
+
+### History Articles
+Follow the comprehensive style guide at `/guides/HISTORY_ARTICLE_STYLE_GUIDE.md` which covers:
+- Article structure and frontmatter requirements
+- Writing style (professional, objective, engaging)
+- Content organization patterns
+- Cross-referencing and linking standards
+- Emphasis on human stories and specific details
+- Proper source attribution
+
+### Terms Articles
+Follow the detailed style guide at `/guides/TERMS_ARTICLE_STYLE_GUIDE.md` which covers:
+- Technical terminology standards
+- Definition and explanation patterns
+- Balance between technical accuracy and accessibility
+- Mathematical formulas and specifications formatting
+- Article length guidelines by complexity
+- Cross-referencing within the terms collection
+
+### General Content Principles
+- **Dual-content structure**: Summary before `<!-- SUMMARY_END -->`, then full content
+- **Educational focus**: Always prioritize learning and understanding
+- **Authoritative sources**: Reference credible, recognized authorities
+- **Neutral tone**: Maintain objectivity, especially on sensitive topics
+- **Comprehensive coverage**: Provide both overview and detailed information
+- **Clear progression**: From simple concepts to complex details
