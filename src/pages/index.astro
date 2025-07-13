@@ -1052,6 +1052,12 @@ const locations = data.locations;
       areaEl.textContent = `${areaDestroyed.toLocaleString()} km²`;
     }
     
+    // Update total detonations
+    const detonationsEl = document.getElementById('stat-detonations');
+    if (detonationsEl && data.totalDetonations !== undefined) {
+      detonationsEl.textContent = data.totalDetonations.toLocaleString();
+    }
+    
     // Update nuclear winter progress (assuming 100,000 MT threshold)
     const nuclearWinterThreshold = 100000; // MT
     const progress = Math.min((data.totalYieldMT / nuclearWinterThreshold) * 100, 100);
@@ -1065,37 +1071,6 @@ const locations = data.locations;
     }
   }
 
-  // Peace streak timer
-  let peaceStreakInterval: number | null = null;
-  let lastDetonationTime = Date.now();
-
-  function updatePeaceStreak() {
-    const now = Date.now();
-    const timeSince = now - lastDetonationTime;
-    const seconds = Math.floor(timeSince / 1000);
-    const minutes = Math.floor(seconds / 60);
-    const hours = Math.floor(minutes / 60);
-    
-    let displayText = '';
-    if (hours > 0) {
-      displayText = `${hours}h ${minutes % 60}m`;
-    } else if (minutes > 0) {
-      displayText = `${minutes}m ${seconds % 60}s`;
-    } else {
-      displayText = `${seconds}s`;
-    }
-    
-    const peaceEl = document.getElementById('stat-peace');
-    if (peaceEl) {
-      peaceEl.textContent = displayText;
-    }
-  }
-
-  function startPeaceStreakTimer() {
-    if (peaceStreakInterval) clearInterval(peaceStreakInterval);
-    peaceStreakInterval = setInterval(updatePeaceStreak, 1000);
-    updatePeaceStreak();
-  }
 
   // Fetch and display counter
   async function fetchCounter() {
@@ -1111,9 +1086,6 @@ const locations = data.locations;
         
         // Update the statistics widget
         updateStatisticsWidget(data);
-        
-        // Start peace streak timer
-        startPeaceStreakTimer();
       }
     } catch (error) {
       console.error('Failed to fetch counter:', error);

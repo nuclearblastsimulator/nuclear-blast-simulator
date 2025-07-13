@@ -27,6 +27,16 @@ try {
       </p>
     </div>
 
+    <!-- World Heatmap -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 text-center">Global Detonation Heatmap</h2>
+      <div class="card bg-base-100 border border-base-300 overflow-hidden">
+        <div class="card-body p-4">
+          <div id="heatmap" style="height: 500px; width: 100%; border-radius: 8px;"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- 3 Column Layout: Stats Widget, Top Cities, Top Weapons -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
       <!-- Column 1: Stats Widget -->
@@ -66,149 +76,11 @@ try {
       </div>
     </div>
 
-    <!-- World Heatmap -->
-    <div class="mb-16">
-      <h2 class="text-2xl font-bold mb-6 text-center">Global Detonation Heatmap</h2>
-      <div class="card bg-base-100 border border-base-300 overflow-hidden">
-        <div class="card-body p-4">
-          <div id="heatmap" style="height: 500px; width: 100%; border-radius: 8px;"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Additional Statistics Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-      <!-- Time-based Stats -->
-      <div class="card bg-base-100 border border-base-300 overflow-hidden h-full flex flex-col">
-        <div class="card-body">
-          <h3 class="text-lg font-semibold mb-4">Temporal Analysis</h3>
-          <div class="space-y-3">
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Peak Hour (UTC)</span>
-              <span class="font-medium" id="peak-hour">14:00</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Peak Day</span>
-              <span class="font-medium" id="peak-day">Tuesday</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Avg. per Hour</span>
-              <span class="font-medium" id="avg-per-hour">52</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Weapon Stats -->
-      <div class="card bg-base-100 border border-base-300 overflow-hidden h-full flex flex-col">
-        <div class="card-body">
-          <h3 class="text-lg font-semibold mb-4">Weapon Analytics</h3>
-          <div class="space-y-3">
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Most Powerful Used</span>
-              <span class="font-medium" id="most-powerful">Tsar Bomba</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Average Yield</span>
-              <span class="font-medium" id="avg-yield">245 kt</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Unique Weapons</span>
-              <span class="font-medium" id="unique-weapons">47</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Geographic Stats -->
-      <div class="card bg-base-100 border border-base-300 overflow-hidden h-full flex flex-col">
-        <div class="card-body">
-          <h3 class="text-lg font-semibold mb-4">Geographic Distribution</h3>
-          <div class="space-y-3">
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Countries Targeted</span>
-              <span class="font-medium" id="countries-targeted">156</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Most Active Region</span>
-              <span class="font-medium" id="most-active-region">North America</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Coastal vs Inland</span>
-              <span class="font-medium" id="coastal-ratio">65% / 35%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Blast Type Stats -->
-      <div class="card bg-base-100 border border-base-300 overflow-hidden h-full flex flex-col">
-        <div class="card-body">
-          <h3 class="text-lg font-semibold mb-4">Detonation Types</h3>
-          <div class="space-y-3">
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Air Burst</span>
-              <span class="font-medium text-primary" id="air-burst-pct">78%</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Surface Burst</span>
-              <span class="font-medium text-warning" id="surface-burst-pct">22%</span>
-            </div>
-            <div class="progress mt-2">
-              <div class="progress-bar bg-primary" style="width: 78%"></div>
-              <div class="progress-bar bg-warning" style="width: 22%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Environmental Impact -->
-      <div class="card bg-base-100 border border-base-300 overflow-hidden h-full flex flex-col">
-        <div class="card-body">
-          <h3 class="text-lg font-semibold mb-4">Environmental Impact</h3>
-          <div class="space-y-3">
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Total Fallout Area</span>
-              <span class="font-medium" id="fallout-area">125,400 km²</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Est. Casualties</span>
-              <span class="font-medium text-error" id="casualties">2.4M</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Infrastructure Loss</span>
-              <span class="font-medium" id="infrastructure">$4.2T</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- User Engagement -->
-      <div class="card bg-base-100 border border-base-300 overflow-hidden h-full flex flex-col">
-        <div class="card-body">
-          <h3 class="text-lg font-semibold mb-4">User Engagement</h3>
-          <div class="space-y-3">
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Unique Users</span>
-              <span class="font-medium" id="unique-users">45,678</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Avg. Session Time</span>
-              <span class="font-medium" id="avg-session">4m 32s</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-base-content/50">Return Rate</span>
-              <span class="font-medium text-success" id="return-rate">34%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
     <!-- Historical Chart -->
     <div class="mb-16">
-      <h2 class="text-2xl font-bold mb-6 text-center">Detonation Timeline</h2>
+      <h2 class="text-2xl font-bold mb-6 text-center">All-Time Detonation Timeline</h2>
       <div class="card bg-base-100 border border-base-300 overflow-hidden">
         <div class="card-body">
           <canvas id="timeline-chart" style="max-height: 300px;"></canvas>
@@ -286,6 +158,8 @@ try {
 
 <!-- Load Leaflet CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<!-- Load Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 
 <script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
@@ -334,9 +208,11 @@ try {
         winterFillEl.style.width = `${Math.min(winterPercent, 100)}%`;
       }
       
-      // Start peace streak timer
-      updatePeaceStreak();
-      setInterval(updatePeaceStreak, 1000);
+      // Update total detonations
+      const detonationsEl = document.getElementById('stat-detonations');
+      if (detonationsEl && counterData.totalDetonations !== undefined) {
+        detonationsEl.textContent = counterData.totalDetonations.toLocaleString();
+      }
       
     } catch (error) {
       console.error('Failed to populate stats widget:', error);
@@ -442,45 +318,6 @@ try {
         }).join('');
       }
 
-      // Fetch general analytics
-      const allStatsResponse = await fetch('/api/analytics');
-      const allStats = await allStatsResponse.json();
-      
-      if (allStats.data && allStats.data.general) {
-        const general = allStats.data.general;
-        
-        // Update stats with real data
-        updateElementText('unique-weapons', general.unique_weapons || '0');
-        updateElementText('avg-yield', `${Math.round(general.avg_yield_kt || 0)} kt`);
-        updateElementText('countries-targeted', general.unique_cities || '0');
-        
-        // Calculate percentages for burst types (mock for now)
-        const totalDets = general.total_detonations || 1;
-        const airBurstPct = 78; // Would need to query from DB
-        const surfaceBurstPct = 22;
-        updateElementText('air-burst-pct', `${airBurstPct}%`);
-        updateElementText('surface-burst-pct', `${surfaceBurstPct}%`);
-        
-        // Update progress bars
-        const progressBar = document.querySelector('.progress-bar.bg-primary');
-        if (progressBar) progressBar.style.width = `${airBurstPct}%`;
-        const progressBar2 = document.querySelector('.progress-bar.bg-warning');
-        if (progressBar2) progressBar2.style.width = `${surfaceBurstPct}%`;
-      }
-      
-      // Get time patterns
-      if (allStats.data && allStats.data.hourlyPatterns) {
-        const maxHour = allStats.data.hourlyPatterns.reduce((max, curr) => 
-          curr.count > max.count ? curr : max, allStats.data.hourlyPatterns[0]);
-        updateElementText('peak-hour', `${maxHour.hour_of_day || 14}:00 UTC`);
-      }
-      
-      if (allStats.data && allStats.data.dayOfWeekPatterns) {
-        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        const maxDay = allStats.data.dayOfWeekPatterns.reduce((max, curr) => 
-          curr.count > max.count ? curr : max, allStats.data.dayOfWeekPatterns[0]);
-        updateElementText('peak-day', days[maxDay.day_of_week] || 'Tuesday');
-      }
 
     } catch (error) {
       console.error('Failed to load detailed stats:', error);
@@ -490,50 +327,237 @@ try {
     initializeTimelineChart();
   });
 
-  function updateElementText(id, text) {
-    const element = document.getElementById(id);
-    if (element) element.textContent = text;
-  }
   
-  // Update peace streak timer
-  let lastDetonationTime = Date.now() - (30 * 60 * 1000); // Default to 30 minutes ago
-  
-  function updatePeaceStreak() {
-    const now = Date.now();
-    const timeSince = now - lastDetonationTime;
-    
-    const seconds = Math.floor(timeSince / 1000);
-    const minutes = Math.floor(seconds / 60);
-    const hours = Math.floor(minutes / 60);
-    const days = Math.floor(hours / 24);
-    
-    let streakText;
-    if (days > 0) {
-      streakText = `${days}d ${hours % 24}h`;
-    } else if (hours > 0) {
-      streakText = `${hours}h ${minutes % 60}m`;
-    } else if (minutes > 0) {
-      streakText = `${minutes}m ${seconds % 60}s`;
-    } else {
-      streakText = `${seconds}s`;
-    }
-    
-    const peaceEl = document.getElementById('stat-peace');
-    if (peaceEl) peaceEl.textContent = streakText;
-  }
 
-  function initializeTimelineChart() {
+  async function initializeTimelineChart() {
     const canvas = document.getElementById('timeline-chart');
     if (!canvas) return;
 
-    // This would typically use Chart.js or similar
-    // For now, just a placeholder
-    const ctx = canvas.getContext('2d');
-    ctx.fillStyle = '#444';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#888';
-    ctx.font = '16px sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText('Timeline visualization would go here', canvas.width / 2, canvas.height / 2);
+    try {
+      // Fetch timeline data
+      const response = await fetch('/api/analytics?type=timeline');
+      const result = await response.json();
+      
+      if (!result.data) {
+        console.error('No timeline data available');
+        return;
+      }
+
+      // Use daily data for all-time view
+      let chartData, labels, detonationCounts, yieldData;
+      
+      if (result.data.daily && result.data.daily.length > 0) {
+        // Process daily data (all-time)
+        const dailyData = result.data.daily.reverse(); // Reverse to show oldest first
+        
+        labels = dailyData.map(d => {
+          const date = new Date(d.date);
+          return date.toLocaleDateString('en-US', { 
+            month: 'short',
+            day: 'numeric'
+          });
+        });
+        
+        detonationCounts = dailyData.map(d => d.total_detonations);
+        yieldData = dailyData.map(d => d.total_yield_mt || 0);
+      } else if (result.data.hourly) {
+        // Fallback to hourly data if daily not available
+        const hourlyData = result.data.hourly.reverse();
+        
+        labels = hourlyData.map(d => {
+          const date = new Date(d.hour);
+          return date.toLocaleString('en-US', { 
+            month: 'short',
+            day: 'numeric',
+            hour: 'numeric',
+            hour12: true 
+          });
+        });
+        
+        detonationCounts = hourlyData.map(d => d.detonations);
+        yieldData = hourlyData.map(d => d.total_yield_mt || 0);
+      } else {
+        console.error('No timeline data in response');
+        return;
+      }
+
+      // Create gradient
+      const ctx = canvas.getContext('2d');
+      const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+      gradient.addColorStop(0, 'rgba(255, 99, 71, 0.8)');
+      gradient.addColorStop(1, 'rgba(255, 99, 71, 0.1)');
+
+      const gradientYield = ctx.createLinearGradient(0, 0, 0, 300);
+      gradientYield.addColorStop(0, 'rgba(255, 206, 86, 0.8)');
+      gradientYield.addColorStop(1, 'rgba(255, 206, 86, 0.1)');
+
+      // Chart configuration
+      const config = {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: 'Detonations',
+              data: detonationCounts,
+              borderColor: 'rgb(255, 99, 71)',
+              backgroundColor: gradient,
+              fill: true,
+              tension: 0.4,
+              pointRadius: 4,
+              pointHoverRadius: 6,
+              pointBackgroundColor: 'rgb(255, 99, 71)',
+              pointBorderColor: '#1a1a1a',
+              pointBorderWidth: 2,
+              yAxisID: 'y-detonations',
+            },
+            {
+              label: 'Total Yield (MT)',
+              data: yieldData,
+              borderColor: 'rgb(255, 206, 86)',
+              backgroundColor: gradientYield,
+              fill: true,
+              tension: 0.4,
+              pointRadius: 4,
+              pointHoverRadius: 6,
+              pointBackgroundColor: 'rgb(255, 206, 86)',
+              pointBorderColor: '#1a1a1a',
+              pointBorderWidth: 2,
+              yAxisID: 'y-yield',
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: {
+            mode: 'index',
+            intersect: false,
+          },
+          plugins: {
+            title: {
+              display: false
+            },
+            legend: {
+              display: true,
+              position: 'top',
+              labels: {
+                color: '#999',
+                font: {
+                  size: 12
+                },
+                padding: 20,
+                usePointStyle: true,
+                pointStyle: 'circle'
+              }
+            },
+            tooltip: {
+              backgroundColor: 'rgba(34, 34, 34, 0.95)',
+              titleColor: '#fff',
+              bodyColor: '#ccc',
+              borderColor: '#444',
+              borderWidth: 1,
+              padding: 12,
+              cornerRadius: 8,
+              displayColors: true,
+              callbacks: {
+                label: function(context) {
+                  let label = context.dataset.label || '';
+                  if (label) {
+                    label += ': ';
+                  }
+                  if (context.parsed.y !== null) {
+                    if (context.dataset.yAxisID === 'y-yield') {
+                      label += context.parsed.y.toFixed(2) + ' MT';
+                    } else {
+                      label += context.parsed.y;
+                    }
+                  }
+                  return label;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              display: true,
+              grid: {
+                display: true,
+                color: 'rgba(255, 255, 255, 0.05)',
+                drawBorder: false
+              },
+              ticks: {
+                color: '#666',
+                font: {
+                  size: 11
+                },
+                maxRotation: 45,
+                minRotation: 45,
+                autoSkip: true,
+                maxTicksLimit: 20
+              }
+            },
+            'y-detonations': {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              grid: {
+                display: true,
+                color: 'rgba(255, 255, 255, 0.05)',
+                drawBorder: false
+              },
+              ticks: {
+                color: '#666',
+                font: {
+                  size: 11
+                },
+                callback: function(value) {
+                  return value;
+                }
+              },
+              title: {
+                display: true,
+                text: 'Detonations',
+                color: '#999',
+                font: {
+                  size: 12
+                }
+              }
+            },
+            'y-yield': {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              grid: {
+                display: false
+              },
+              ticks: {
+                color: '#666',
+                font: {
+                  size: 11
+                },
+                callback: function(value) {
+                  return value.toFixed(1) + ' MT';
+                }
+              },
+              title: {
+                display: true,
+                text: 'Total Yield',
+                color: '#999',
+                font: {
+                  size: 12
+                }
+              }
+            }
+          }
+        }
+      };
+
+      // Create the chart
+      new Chart(ctx, config);
+
+    } catch (error) {
+      console.error('Failed to initialize timeline chart:', error);
+    }
   }
 </script>

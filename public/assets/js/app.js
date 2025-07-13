@@ -121,8 +121,6 @@ window.addEventListener('DOMContentLoaded', async function () {
   // Fetch initial counter
   fetchInitialCounter()
   
-  // Start peace streak timer
-  startPeaceStreakTimer()
 })
 
 // Format distance with both units
@@ -393,9 +391,6 @@ function simulateBlast() {
         // Update statistics widget
         updateStatisticsWidget(data)
       }
-      // Reset peace streak
-      lastDetonationTime = Date.now()
-      updatePeaceStreak()
     })
     .catch(error => {
       devLog('Failed to record detonation:', error)
@@ -1002,6 +997,12 @@ function updateStatisticsWidget(data) {
     areaEl.textContent = `${areaDestroyed.toLocaleString()} km²`
   }
   
+  // Update total detonations
+  const detonationsEl = document.getElementById('stat-detonations')
+  if (detonationsEl && data.totalDetonations !== undefined) {
+    detonationsEl.textContent = data.totalDetonations.toLocaleString()
+  }
+  
   // Update nuclear winter progress (assuming 100,000 MT threshold)
   const nuclearWinterThreshold = 100000 // MT
   const progress = Math.min((data.totalYieldMT / nuclearWinterThreshold) * 100, 100)
@@ -1015,34 +1016,6 @@ function updateStatisticsWidget(data) {
   }
 }
 
-// Peace streak timer
-let peaceStreakInterval = null
-let lastDetonationTime = Date.now()
-
-function updatePeaceStreak() {
-  const now = Date.now()
-  const secondsSinceLastDetonation = Math.floor((now - lastDetonationTime) / 1000)
-  
-  const peaceEl = document.getElementById('stat-peace')
-  if (peaceEl) {
-    if (secondsSinceLastDetonation < 60) {
-      peaceEl.textContent = `${secondsSinceLastDetonation}s`
-    } else if (secondsSinceLastDetonation < 3600) {
-      const minutes = Math.floor(secondsSinceLastDetonation / 60)
-      peaceEl.textContent = `${minutes}m`
-    } else {
-      const hours = Math.floor(secondsSinceLastDetonation / 3600)
-      peaceEl.textContent = `${hours}h`
-    }
-  }
-}
-
-// Start peace streak timer
-function startPeaceStreakTimer() {
-  if (peaceStreakInterval) clearInterval(peaceStreakInterval)
-  peaceStreakInterval = setInterval(updatePeaceStreak, 1000)
-  updatePeaceStreak()
-}
 
 // Make functions globally accessible for onclick handlers
 window.simulateBlast = simulateBlast

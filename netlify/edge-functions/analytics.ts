@@ -98,14 +98,13 @@ async function getTimelineData(client: any): Promise<AnalyticsResponse> {
     ORDER BY hour DESC
   `);
 
-  // Get daily data for the last 30 days
+  // Get all daily data (all-time)
   const dailyData = await client.execute(`
     SELECT 
       date,
       total_detonations,
       total_yield_mt
     FROM daily_stats
-    WHERE date > date('now', '-30 days')
     ORDER BY date DESC
   `);
 
