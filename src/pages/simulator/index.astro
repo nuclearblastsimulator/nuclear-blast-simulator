@@ -152,6 +152,16 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
       transition: border-color 0.3s ease;
     }
     
+    /* Mobile positioning for detonations counter */
+    @media (max-width: 768px) {
+      .detonations-counter-map {
+        bottom: calc(20px + env(safe-area-inset-bottom));
+        left: 10px;
+        padding: 0.75rem;
+        font-size: 0.875rem;
+      }
+    }
+    
     .detonations-counter-map .info-icon {
       width: 16px;
       height: 16px;
@@ -178,6 +188,81 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
       transform: translateY(10px);
       transition: opacity 0.3s ease, transform 0.3s ease;
       padding: 10px; /* Add padding to create hover bridge */
+    }
+    
+    /* Close button for stats widget */
+    .stats-close-btn {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: #fff;
+      z-index: 10;
+    }
+    
+    .stats-close-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1);
+    }
+    
+    /* Mobile positioning adjustment - full screen */
+    @media (max-width: 768px) {
+      .stats-widget-wrapper {
+        position: fixed !important; /* Use fixed to go outside map container */
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        max-width: 100vw !important;
+        max-height: 100vh !important;
+        z-index: 9999 !important; /* Ensure it's on top */
+        background: rgba(0, 0, 0, 0.9) !important; /* Dark overlay background */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transform: none !important;
+        padding: 20px !important;
+      }
+      
+      /* Keep transform when visible */
+      .stats-widget-wrapper[style*="opacity: 1"] {
+        transform: none !important;
+      }
+      
+      /* Ensure the stats widget itself is centered */
+      .stats-widget-wrapper .stats-widget {
+        max-width: calc(100vw - 40px);
+        margin: 0 auto;
+      }
+      
+      /* Show close button on mobile */
+      .stats-close-btn {
+        display: flex !important;
+        position: fixed !important;
+        top: 20px !important;
+        right: 20px !important;
+        z-index: 10000 !important;
+        background: rgba(255, 255, 255, 0.2) !important;
+        backdrop-filter: blur(10px) !important;
+      }
+      
+      /* Support for dynamic viewport height */
+      @supports (height: 100dvh) {
+        .stats-widget-wrapper {
+          height: 100dvh !important;
+        }
+      }
     }
     
     /* Show stats on counter hover */
@@ -319,6 +404,36 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
       transform: translateX(0) !important;
     }
     
+    /* Mobile overrides for effects panel */
+    @media (max-width: 768px) {
+      .effects-panel {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        max-width: 100vw !important;
+        max-height: 100vh !important;
+        z-index: 9999 !important;
+        border-radius: 0 !important;
+        border: none !important;
+        transform: translateX(100vw) !important;
+      }
+      
+      .effects-panel.open {
+        transform: translateX(0) !important;
+      }
+      
+      /* Support for dynamic viewport height */
+      @supports (height: 100dvh) {
+        .effects-panel {
+          height: 100dvh !important;
+        }
+      }
+    }
+    
     /* Ensure map container and map take full width */
     .map-container {
       position: relative !important;
@@ -341,11 +456,105 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
       max-width: none !important;
     }
     
+    /* Support for dynamic viewport height */
+    @supports (height: 100dvh) {
+      .container {
+        height: 100dvh !important;
+      }
+    }
+    
     /* Ensure body has no padding/margin */
     body {
       margin: 0 !important;
       padding: 0 !important;
       overflow: hidden !important;
+    }
+    
+    /* Mobile divider - hidden by default */
+    .mobile-divider {
+      display: none;
+    }
+    
+    /* Mobile-specific divider styles */
+    @media (max-width: 768px) {
+      .mobile-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 24px;
+        background: transparent;
+        position: relative;
+        z-index: 1002;
+        margin: -2px 0; /* Overlap the borders */
+      }
+      
+      .divider-toggle {
+        background: #222;
+        border: 1px solid #444;
+        border-radius: 12px;
+        padding: 4px 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        color: #888;
+        font-size: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+      
+      .divider-toggle:hover,
+      .divider-toggle:active {
+        background: #2a2a2a;
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+      
+      .chevron-icon {
+        transition: transform 0.3s ease;
+      }
+      
+      /* Rotate chevron when map is expanded */
+      body.map-expanded .chevron-icon {
+        transform: rotate(180deg);
+      }
+      
+      /* Adjust container for divider */
+      .container {
+        padding-top: env(safe-area-inset-top) !important;
+      }
+      
+      /* Default mobile sizing - 70% sidebar, 30% map */
+      .sidebar {
+        height: 70% !important;
+        max-height: 70% !important;
+        transition: height 0.3s ease;
+      }
+      
+      .map-container {
+        height: calc(30% - 24px) !important; /* Minus divider height */
+        transition: height 0.3s ease;
+      }
+      
+      /* When map is expanded manually - 30% sidebar, 70% map */
+      body.map-expanded .sidebar {
+        height: 30% !important;
+        max-height: 30% !important;
+      }
+      
+      body.map-expanded .map-container {
+        height: calc(70% - 24px) !important;
+      }
+      
+      /* When detonation active - auto expand map if not manually toggled */
+      body.has-detonation:not(.user-toggled) .sidebar {
+        height: 30% !important;
+        max-height: 30% !important;
+      }
+      
+      body.has-detonation:not(.user-toggled) .map-container {
+        height: calc(70% - 24px) !important;
+      }
     }
   </style>
 </head>
@@ -529,6 +738,15 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
       </div>
     </div>
 
+    <!-- Toggle divider for mobile -->
+    <div class="mobile-divider" id="mobile-divider">
+      <button class="divider-toggle" onclick="toggleMapSize()">
+        <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+    </div>
+
     <div class="map-container">
       <div id="map"></div>
 
@@ -546,6 +764,11 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
 
       <!-- Statistics Widget -->
       <div class="stats-widget-wrapper bg-base-100 border border-base-300 overflow-hidden" id="stats-widget-wrapper">
+        <button class="stats-close-btn" onclick="this.parentElement.style.opacity='0'; this.parentElement.style.pointerEvents='none';">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
         <DetonationStats />
       </div>
 
@@ -570,16 +793,6 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
         🚀
       </button>
 
-      <!-- Mobile Fullscreen Toggle -->
-      <button class="fullscreen-toggle" id="fullscreen-toggle" onclick="toggleFullscreen()">
-        <svg class="fullscreen-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
-        </svg>
-        <svg class="exit-fullscreen-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-          style="display: none;">
-          <path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z" />
-        </svg>
-      </button>
 
       <!-- Blast Effects Panel Toggle -->
       <button class="effects-toggle" id="effects-toggle" onclick="toggleEffectsPanel()">
@@ -630,6 +843,52 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
           });
         });
       }
+    });
+    
+    // Toggle map size function
+    function toggleMapSize() {
+      document.body.classList.toggle('map-expanded');
+      document.body.classList.add('user-toggled');
+      
+      // Invalidate map size after transition
+      if (window.map) {
+        setTimeout(() => {
+          window.map.invalidateSize();
+        }, 350);
+      }
+    }
+    
+    // Make it globally accessible
+    window.toggleMapSize = toggleMapSize;
+    
+    // Auto-expand map on detonation (if user hasn't manually toggled)
+    document.addEventListener('DOMContentLoaded', function() {
+      // Watch for detonation class changes
+      const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.attributeName === 'class') {
+            const hasDetonation = document.body.classList.contains('has-detonation');
+            const userToggled = document.body.classList.contains('user-toggled');
+            
+            // Auto-expand map when detonation happens (if not manually toggled)
+            if (hasDetonation && !userToggled && !document.body.classList.contains('map-expanded')) {
+              document.body.classList.add('map-expanded');
+            }
+            
+            // Invalidate map size after any class change
+            setTimeout(() => {
+              if (window.map) {
+                window.map.invalidateSize();
+              }
+            }, 350);
+          }
+        });
+      });
+      
+      observer.observe(document.body, {
+        attributes: true,
+        attributeFilter: ['class']
+      });
     });
     
     // Handle stats widget hover

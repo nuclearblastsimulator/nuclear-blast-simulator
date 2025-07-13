@@ -116,6 +116,9 @@ window.addEventListener('DOMContentLoaded', async function () {
   // Initialize map with coordinates from query param or default
   const initialCoords = window.initialCityCoords || [36.0104, -84.2696]
   map = L.map('map').setView(initialCoords, 12)
+  
+  // Make map globally accessible for other scripts
+  window.map = map
 
   // Add medium-dark tile layer (slightly brighter)
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
@@ -344,6 +347,9 @@ function clearBlast() {
     map.removeLayer(groundZeroMarker)
     groundZeroMarker = null
   }
+  
+  // Remove detonation class when clearing
+  document.body.classList.remove('has-detonation')
 
   // Hide effects panel and button
   document.getElementById('effects-toggle').classList.remove('visible')
@@ -441,6 +447,9 @@ function simulateBlast() {
 
   // Clear existing blast
   clearBlast()
+  
+  // Add detonation class to body for mobile layout adjustment
+  document.body.classList.add('has-detonation')
 
   // Animate the blast circles appearing
   setTimeout(() => {
@@ -1211,30 +1220,6 @@ function updateEffectsPanel(bomb, radii, isSurfaceBurst) {
 }
 
 // Fullscreen toggle function
-function toggleFullscreen() {
-  const mapContainer = document.querySelector('.map-container')
-  const fullscreenToggle = document.getElementById('fullscreen-toggle')
-  const fullscreenIcon = fullscreenToggle.querySelector('.fullscreen-icon')
-  const exitFullscreenIcon = fullscreenToggle.querySelector('.exit-fullscreen-icon')
-
-  if (mapContainer.classList.contains('map-fullscreen')) {
-    // Exit fullscreen
-    mapContainer.classList.remove('map-fullscreen')
-    fullscreenIcon.style.display = 'block'
-    exitFullscreenIcon.style.display = 'none'
-  } else {
-    // Enter fullscreen
-    mapContainer.classList.add('map-fullscreen')
-    fullscreenIcon.style.display = 'none'
-    exitFullscreenIcon.style.display = 'block'
-  }
-
-  // Force map to recalculate its size
-  setTimeout(() => {
-    map.invalidateSize()
-  }, 300)
-}
 
 window.toggleEffectsPanel = toggleEffectsPanel
 window.closeEffectsPanel = closeEffectsPanel
-window.toggleFullscreen = toggleFullscreen
