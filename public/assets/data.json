@@ -124,6 +124,15 @@
       "default": false,
       "articleLink": "/history/treaties/nuclear-weapons-free-zones/",
       "tooltip": "Nuclear-free zone movements"
+    },
+    {
+      "id": "washington-dc",
+      "name": "Washington DC",
+      "country": "United States",
+      "coordinates": "38.8977,-77.0365",
+      "default": false,
+      "articleLink": "/history/events/washington-nuclear-policy/",
+      "tooltip": "US nuclear policy center"
     }
   ],
   "weapons": [
