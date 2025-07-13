@@ -63,6 +63,48 @@ window.addEventListener('DOMContentLoaded', async function () {
     // Populate location select dropdown
     populateLocationSelect(data.locations)
 
+    // Check for city query parameter
+    const urlParams = new URLSearchParams(window.location.search)
+    const cityParam = urlParams.get('city')
+    
+    if (cityParam) {
+      // Find the city in the locations data
+      const targetCity = data.locations.find(loc => loc.id === cityParam.toLowerCase())
+      
+      if (targetCity) {
+        // City found in data.json
+        const [lat, lng] = targetCity.coordinates.split(',').map(Number)
+        currentLocation = {
+          lat,
+          lng,
+          country: targetCity.country || 'Unknown',
+          cityName: targetCity.name,
+          isCustom: false
+        }
+        
+        // Update the select dropdown
+        const citySelect = document.getElementById('city-select')
+        citySelect.value = targetCity.coordinates
+        
+        // Update map view (will be done after map initialization)
+        window.initialCityCoords = [lat, lng]
+        
+        devLog(`City parameter found: ${targetCity.name}`)
+      } else {
+        // City not found in data.json
+        devLog(`City parameter '${cityParam}' not found in data.json`)
+        
+        // Show a message to the user
+        setTimeout(() => {
+          const message = `The city '${cityParam}' is not in our predefined list. You can:\n\n` +
+                         `1. Use the custom address search to find any location\n` +
+                         `2. Select from our available cities in the dropdown\n` +
+                         `3. Contact us to suggest adding this city to our list`
+          alert(message)
+        }, 1000)
+      }
+    }
+
     // Update initial weapon details
     updateWeaponDetails()
   } catch (error) {
@@ -71,8 +113,9 @@ window.addEventListener('DOMContentLoaded', async function () {
     alert('Error loading weapons data. Please refresh the page.')
   }
 
-  // Initialize map
-  map = L.map('map').setView([36.0104, -84.2696], 12)
+  // Initialize map with coordinates from query param or default
+  const initialCoords = window.initialCityCoords || [36.0104, -84.2696]
+  map = L.map('map').setView(initialCoords, 12)
 
   // Add medium-dark tile layer (slightly brighter)
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
