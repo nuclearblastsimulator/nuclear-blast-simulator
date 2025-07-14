@@ -133,6 +133,11 @@ Follow the detailed style guide at `/guides/TERMS_ARTICLE_STYLE_GUIDE.md` which 
 - Article length guidelines by complexity
 - Cross-referencing within the terms collection
 
+### Article Structure & SEO Hierarchy
+- **Pillar Pages (Root Articles)**: Articles in the root folder of content collections (e.g., `/terms/fission`, `/history/cuban-missile-crisis`) are content clusters and high-value SEO articles
+- **Supporting Articles**: Articles in subdirectories (e.g., `/terms/physics/half-life`, `/history/cold-war-crises/able-archer`) are supporting content that enhances the pillar pages
+- **Content Hierarchy**: Pillar pages should be comprehensive and link to supporting articles, while supporting articles provide depth on specific topics and link back to relevant pillar pages
+
 ### General Content Principles
 - **Dual-content structure**: Summary before `<!-- SUMMARY_END -->`, then full content
 - **Educational focus**: Always prioritize learning and understanding
