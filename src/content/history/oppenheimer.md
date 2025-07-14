@@ -21,7 +21,7 @@ links:
   - anchorText: 'security clearance revocation'
     targetURL: '/history/oppenheimer'
     contextQuote: "Oppenheimer's security clearance was revoked in 1954 during McCarthyism, ending his influence on nuclear policy despite his wartime service."
-    valueProp: 'Cold War persecution of America's most important nuclear scientist.'
+    valueProp: "Cold War persecution of America's most important nuclear scientist."
   - anchorText: 'hydrogen bomb opposition'
     targetURL: '/history/oppenheimer'
     contextQuote: 'Oppenheimer opposed the hydrogen bomb on moral and strategic grounds, arguing it was a weapon of genocide rather than defense.'
@@ -33,7 +33,7 @@ links:
   - anchorText: 'atomic scientist'
     targetURL: '/history/oppenheimer'
     contextQuote: 'The archetypal atomic scientist, Oppenheimer embodied both the promise and peril of nuclear technology throughout his controversial career.'
-    valueProp: 'Life story of the man who personified the nuclear age's moral dilemmas.'
+    valueProp: "Life story of the man who personified the nuclear age's moral dilemmas."
   - anchorText: 'nuclear arms control advocate'
     targetURL: '/history/oppenheimer'
     contextQuote: 'After Hiroshima, Oppenheimer became a leading advocate for international nuclear arms control, warning of an uncontrolled arms race.'
@@ -41,7 +41,7 @@ links:
   - anchorText: 'Trinity Test leader'
     targetURL: '/history/oppenheimer'
     contextQuote: 'Oppenheimer supervised the Trinity Test, witnessing the first nuclear explosion that validated years of theoretical and engineering work.'
-    valueProp: 'First-hand account of humanity's entry into the nuclear age.'
+    valueProp: "First-hand account of humanity's entry into the nuclear age."
 ---
 
 # J. Robert Oppenheimer

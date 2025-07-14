@@ -37,11 +37,11 @@ links:
   - anchorText: 'Soviet nuclear secrecy'
     targetURL: '/history/chernobyl-disaster'
     contextQuote: 'Soviet authorities initially tried to hide the Chernobyl disaster, only acknowledging it after radiation was detected in Sweden.'
-    valueProp: 'How nuclear secrecy worsened the disaster's human impact.'
+    valueProp: "How nuclear secrecy worsened the disaster's human impact."
   - anchorText: 'worst nuclear accident'
     targetURL: '/history/chernobyl-disaster'
     contextQuote: 'Chernobyl remains the worst nuclear accident in history, fundamentally changing nuclear safety culture and reactor design worldwide.'
-    valueProp: 'Lessons learned from history's most catastrophic nuclear failure.'
+    valueProp: "Lessons learned from history's most catastrophic nuclear failure."
 ---
 
 # Chernobyl Nuclear Disaster

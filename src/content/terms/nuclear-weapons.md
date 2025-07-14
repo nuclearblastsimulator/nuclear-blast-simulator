@@ -111,7 +111,7 @@ Modern strategic weapons use staged radiation implosion:
 
 #### Three-Stage Weapons
 - **Additional stage**: Third fusion stage for extreme yields
-- **Example**: [Tsar Bomba](/history/testing/tsar-bomba-novaya-zemlya) (50 megatons tested, 100 megaton design)
+- **Example**: [Tsar Bomba](/history/testing/tsar-bomba) (50 megatons tested, 100 megaton design)
 - **Purpose**: City-destroying strategic weapons
 
 ### Specialized Nuclear Weapons

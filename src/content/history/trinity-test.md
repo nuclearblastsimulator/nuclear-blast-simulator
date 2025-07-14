@@ -4,11 +4,11 @@ description: "The first detonation of a nuclear weapon on July 16, 1945, in the 
 links:
   - anchorText: 'Trinity Test'
     targetURL: '/history/trinity-test'
-    contextQuote: 'The Trinity Test on July 16, 1945, marked humanity's entry into the atomic age, demonstrating that nuclear weapons were not just theoretical but terrifyingly real.'
+    contextQuote: "The Trinity Test on July 16, 1945, marked humanity's entry into the atomic age, demonstrating that nuclear weapons were not just theoretical but terrifyingly real."
     valueProp: 'Complete account of the first nuclear explosion that changed warfare and human history forever.'
   - anchorText: 'first atomic bomb test'
     targetURL: '/history/trinity-test'
-    contextQuote: 'The success of the first atomic bomb test in New Mexico validated the Manhattan Project's massive investment and opened the door to nuclear warfare.'
+    contextQuote: "The success of the first atomic bomb test in New Mexico validated the Manhattan Project's massive investment and opened the door to nuclear warfare."
     valueProp: 'Details the culmination of the Manhattan Project and birth of the nuclear weapons era.'
   - anchorText: 'July 16, 1945'
     targetURL: '/history/trinity-test'
@@ -16,7 +16,7 @@ links:
     valueProp: 'Precise timeline of the historic day that ushered in the atomic age.'
   - anchorText: 'Alamogordo test'
     targetURL: '/history/trinity-test'
-    contextQuote: 'The Alamogordo test site in New Mexico was chosen for its isolation, allowing scientists to detonate the world's first nuclear weapon in secrecy.'
+    contextQuote: "The Alamogordo test site in New Mexico was chosen for its isolation, allowing scientists to detonate the world's first nuclear weapon in secrecy."
     valueProp: 'Explains site selection and preparation for this unprecedented experiment.'
   - anchorText: 'Manhattan Project culmination'
     targetURL: '/history/trinity-test'
@@ -36,8 +36,8 @@ links:
     valueProp: 'Vivid description of the visual and physical phenomena of the first nuclear explosion.'
   - anchorText: 'trinitite formation'
     targetURL: '/history/trinity-test'
-    contextQuote: 'The intense heat of Trinity created trinitite, radioactive green glass formed when desert sand was fused by the nuclear fireball.'
-    valueProp: 'Explains unique physical evidence left by the world's first nuclear explosion.'
+    contextQuote: "The intense heat of Trinity created trinitite, radioactive green glass formed when desert sand was fused by the nuclear fireball."
+    valueProp: "Explains unique physical evidence left by the world's first nuclear explosion."
   - anchorText: 'birth of atomic age'
     targetURL: '/history/trinity-test'
     contextQuote: 'The Trinity Test marked the birth of the atomic age, fundamentally altering the balance of power and nature of warfare forever.'

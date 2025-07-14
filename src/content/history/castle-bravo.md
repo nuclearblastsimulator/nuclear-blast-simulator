@@ -41,7 +41,7 @@ links:
   - anchorText: 'largest U.S. nuclear test'
     targetURL: '/history/castle-bravo'
     contextQuote: 'Castle Bravo remains the largest nuclear weapon ever tested by the United States, demonstrating the terrifying power of hydrogen bombs.'
-    valueProp: 'Historical significance of America's most powerful nuclear detonation.'
+    valueProp: "Historical significance of America's most powerful nuclear detonation."
 ---
 
 # Castle Bravo
