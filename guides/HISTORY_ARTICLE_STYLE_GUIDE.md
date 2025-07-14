@@ -6,6 +6,8 @@ This document defines the writing style and structure for history articles in th
 
 ### 1. Front Matter
 
+The frontmatter schema is defined in `/src/content/config.ts` (see the `historyCollection` definition). Here's the structure:
+
 ```yaml
 ---
 title: 'Article Title'  # Required: The exact title of the article
@@ -27,6 +29,13 @@ links:  # Required for ALL articles - these are INBOUND link opportunities
   #   The scientist's observation that "this changes everything" marked a turning point.
 ---
 ```
+
+**Schema Details:**
+The frontmatter fields are validated by the Astro content collection schema defined in `/src/content/config.ts`. The `linkSchema` specifically defines:
+- `anchorText`: string (required) - The clickable text
+- `targetURL`: string (required) - Must be this article's path
+- `contextQuote`: string (optional) - Example usage in context
+- `valueProp`: string (optional) - Value proposition for the link
 
 **Frontmatter Field Details:**
 - **title** (required): Must match the H1 heading in the article body

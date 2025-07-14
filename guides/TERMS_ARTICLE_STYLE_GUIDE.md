@@ -6,6 +6,8 @@ This guide defines the standards for writing nuclear terminology articles in the
 
 ### Frontmatter Requirements
 
+The frontmatter schema is defined in `/src/content/config.ts` (see the `termsCollection` definition). Here's the structure:
+
 ```yaml
 ---
 title: "Precise Technical Term"  # Required: The exact technical term
@@ -27,6 +29,13 @@ links:  # Required for ALL articles - these are INBOUND link opportunities
   # - Comparative phrases
 ---
 ```
+
+**Schema Details:**
+The frontmatter fields are validated by the Astro content collection schema defined in `/src/content/config.ts`. The `linkSchema` specifically defines:
+- `anchorText`: string (required) - The clickable text
+- `targetURL`: string (required) - Must be this article's path
+- `contextQuote`: string (optional) - Example usage in context
+- `valueProp`: string (optional) - Value proposition for the link
 
 **Frontmatter Field Details:**
 - **title** (required): Must match the H1 heading exactly; use proper capitalization
