@@ -17,7 +17,6 @@ This is the Nuclear Blast Simulator - an educational web application that visual
 - `npm run astro` - Run Astro CLI commands
 
 ### Content Management
-- `npm run update-links` - Update article cross-references and links
 - `npm run reorganize-content` - Reorganize content structure (maintenance)
 
 ### Testing & Quality
@@ -91,12 +90,11 @@ The blast simulator (`/public/assets/js/app.js`) implements:
 - Click handlers for zone-specific information
 
 ### Build Process
-1. **Pre-build**: Update article links and cross-references (`npm run update-links`)
-2. **Astro Build**: Process all `.astro` files and content collections
-3. **Tailwind CSS**: Process styles through Vite integration
-4. **Static Assets**: Copy assets directly to `dist/`
-5. **Post-build**: Test all links for deployment readiness (`npm run test:links`)
-6. **Result**: Fully static site requiring no server runtime, optimized for CDN deployment
+1. **Astro Build**: Process all `.astro` files and content collections
+2. **Tailwind CSS**: Process styles through Vite integration
+3. **Static Assets**: Copy assets directly to `dist/`
+4. **Post-build**: Test all links for deployment readiness (`npm run test:links`)
+5. **Result**: Fully static site requiring no server runtime, optimized for CDN deployment
 
 ## Important Considerations
 

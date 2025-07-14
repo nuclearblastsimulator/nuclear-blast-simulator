@@ -158,7 +158,6 @@ nuclear-blast-simulator/
 - `npm run astro` - Run Astro CLI commands directly
 
 ### Content Management
-- `npm run update-links` - Update article cross-references and navigation
 - `npm run reorganize-content` - Reorganize content structure (maintenance)
 
 ### Testing & Quality Assurance
