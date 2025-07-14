@@ -2,21 +2,21 @@
 title: 'Intermediate-Range Nuclear Forces Treaty'
 description: 'The 1987 INF Treaty eliminated an entire class of nuclear weapons, removing over 2,600 missiles from Europe and marking the first nuclear arms reduction agreement...'
 links:
-  - text: "INF Treaty"
+  - anchorText: "INF Treaty"
     targetURL: "/history/treaties/inf-treaty"
-  - text: "Intermediate-Range Nuclear Forces Treaty"
+  - anchorText: "Intermediate-Range Nuclear Forces Treaty"
     targetURL: "/history/treaties/inf-treaty"
-  - text: "missile elimination"
+  - anchorText: "missile elimination"
     targetURL: "/history/treaties/inf-treaty"
-  - text: "nuclear disarmament success"
+  - anchorText: "nuclear disarmament success"
     targetURL: "/history/treaties/inf-treaty"
-  - text: "Reagan-Gorbachev summit"
+  - anchorText: "Reagan-Gorbachev summit"
     targetURL: "/history/treaties/inf-treaty"
-  - text: "nuclear verification breakthrough"
+  - anchorText: "nuclear verification breakthrough"
     targetURL: "/history/treaties/inf-treaty"
-  - text: "European missile crisis"
+  - anchorText: "European missile crisis"
     targetURL: "/history/treaties/inf-treaty"
-  - text: "arms control success"
+  - anchorText: "arms control success"
     targetURL: "/history/treaties/inf-treaty"
 ---
 

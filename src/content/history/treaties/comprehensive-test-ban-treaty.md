@@ -2,21 +2,21 @@
 title: 'Comprehensive Test Ban Treaty'
 description: 'The 1996 Comprehensive Test Ban Treaty prohibits all nuclear weapons testing but remains unenforceable, awaiting ratification by key nuclear powers for entry into force...'
 links:
-  - text: "nuclear testing ban"
+  - anchorText: "nuclear testing ban"
     targetURL: "/history/treaties/comprehensive-test-ban-treaty"
-  - text: "comprehensive test ban treaty"
+  - anchorText: "comprehensive test ban treaty"
     targetURL: "/history/treaties/comprehensive-test-ban-treaty"
-  - text: "CTBT"
+  - anchorText: "CTBT"
     targetURL: "/history/treaties/comprehensive-test-ban-treaty"
-  - text: "global monitoring system"
+  - anchorText: "global monitoring system"
     targetURL: "/history/treaties/comprehensive-test-ban-treaty"
-  - text: "nuclear test verification"
+  - anchorText: "nuclear test verification"
     targetURL: "/history/treaties/comprehensive-test-ban-treaty"
-  - text: "International Monitoring System"
+  - anchorText: "International Monitoring System"
     targetURL: "/history/treaties/comprehensive-test-ban-treaty"
-  - text: "seismic monitoring"
+  - anchorText: "seismic monitoring"
     targetURL: "/history/treaties/comprehensive-test-ban-treaty"
-  - text: "nuclear testing moratorium"
+  - anchorText: "nuclear testing moratorium"
     targetURL: "/history/treaties/comprehensive-test-ban-treaty"
 ---
 
