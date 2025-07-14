@@ -195,7 +195,7 @@ export default async (request: Request) => {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "GET, OPTIONS",
-    "Cache-Control": "public, max-age=300", // Cache for 5 minutes
+    "Cache-Control": "public, max-age=1800", // Cache for 30 minutes
   };
 
   if (request.method === "OPTIONS") {

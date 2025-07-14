@@ -6,7 +6,7 @@ export default async (request: Request) => {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "GET, OPTIONS",
-    "Cache-Control": "public, max-age=60", // Cache for 1 minute
+    "Cache-Control": "public, max-age=1800", // Cache for 30 minutes
   };
 
   // Handle preflight
