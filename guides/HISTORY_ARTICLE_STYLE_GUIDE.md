@@ -14,12 +14,17 @@ date: 2024-01-15  # Optional: Date the article was generated or written (YYYY-MM
 category: 'category-name'  # Optional: e.g., 'foundational-events', 'cold-war-crises', 'key-figures', 'modern-developments'
 keywords: ['keyword1', 'keyword2', 'keyword3']  # Optional: For SEO and discoverability (5-10 keywords)
 related: ['related-article-1', 'related-article-2']  # Optional: Slugs of related articles without path
-links:  # Required for ALL articles
+links:  # Required for ALL articles - these are INBOUND link opportunities
   - anchorText: "primary term"
-    targetURL: "/history/article-slug"
-    contextQuote: "Example sentence showing how this anchor text would naturally appear in another article about this topic."
-    valueProp: "Brief explanation of what value users get from clicking this link."
+    targetURL: "/history/THIS-ARTICLE-SLUG"  # ALWAYS the current article's path
+    contextQuote: "Example sentence showing how this anchor text would naturally appear in ANOTHER article when linking TO this article."
+    valueProp: "Brief explanation of what value users get from clicking TO this article."
   # Include 8-10 link entries for pillar pages
+  # IMPORTANT: Use double quotes and escape any quotes inside, or use YAML block syntax:
+  # contextQuote: "The scientist said, \"This changes everything,\" after the test."
+  # OR use block syntax for complex quotes:
+  # contextQuote: |
+  #   The scientist's observation that "this changes everything" marked a turning point.
 ---
 ```
 
@@ -31,11 +36,13 @@ links:  # Required for ALL articles
 - **keywords** (optional): Important for SEO; include event names, dates, locations, key figures
 - **related** (optional): Creates cross-references between articles; use just the slug (not full path)
 - **links** (required for ALL articles): 
-  - Every article must include 5-10 link entries
+  - Every article must include 5-10 link entries identifying INBOUND link opportunities
   - Pillar/root articles should have 8-10 entries
   - Supporting articles should have 5-8 entries
-  - Each link entry helps identify natural anchor texts for internal linking
+  - Each link identifies how OTHER articles should link TO this article
+  - The targetURL must ALWAYS be this article's own path
   - Include varied anchor texts: event names, dates, locations, people, variations
+  - Think: "What terms would other articles use when they want to link to THIS article?"
 
 ### 2. Title Section
 
