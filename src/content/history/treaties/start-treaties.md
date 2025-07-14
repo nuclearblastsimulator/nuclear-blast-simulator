@@ -1,6 +1,23 @@
 ---
 title: 'START Treaties'
 description: 'The Strategic Arms Reduction Treaties between the U.S. and Soviet Union/Russia achieved massive nuclear weapons reductions, cutting deployed warheads from 12,000 to 1,550...'
+links:
+  - text: "START Treaties"
+    targetURL: "/history/treaties/start-treaties"
+  - text: "Strategic Arms Reduction Treaties"
+    targetURL: "/history/treaties/start-treaties"
+  - text: "nuclear weapons reductions"
+    targetURL: "/history/treaties/start-treaties"
+  - text: "New START"
+    targetURL: "/history/treaties/start-treaties"
+  - text: "strategic arms control"
+    targetURL: "/history/treaties/start-treaties"
+  - text: "nuclear disarmament success"
+    targetURL: "/history/treaties/start-treaties"
+  - text: "arms control verification"
+    targetURL: "/history/treaties/start-treaties"
+  - text: "U.S.-Russia arms control"
+    targetURL: "/history/treaties/start-treaties"
 ---
 
 # START Treaties

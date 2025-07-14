@@ -1,6 +1,39 @@
 ---
 title: 'Klaus Fuchs'
 description: 'The German-born physicist who passed crucial Manhattan Project secrets to the Soviet Union, accelerating Soviet nuclear weapons development and changing Cold War dynamics...'
+links:
+  - anchorText: "Klaus Fuchs"
+    targetURL: "/history/people/klaus-fuchs"
+    contextQuote: "Klaus Fuchs, the atomic spy who passed Manhattan Project secrets to the Soviet Union, fundamentally altered the Cold War nuclear balance."
+    valueProp: "Learn about the physicist whose espionage ended America's nuclear monopoly."
+  - anchorText: "atomic spy"
+    targetURL: "/history/people/klaus-fuchs"
+    contextQuote: "The atomic spy Klaus Fuchs accelerated Soviet nuclear weapons development by years through his espionage."
+    valueProp: "Discover how one spy changed the course of nuclear history."
+  - anchorText: "Fuchs"
+    targetURL: "/history/people/klaus-fuchs"
+    contextQuote: "Fuchs provided the Soviets with detailed nuclear weapons designs, including implosion calculations and hydrogen bomb concepts."
+    valueProp: "Explore the most damaging nuclear espionage case in history."
+  - anchorText: "Soviet nuclear espionage"
+    targetURL: "/history/people/klaus-fuchs"
+    contextQuote: "The Soviet nuclear espionage network, with Fuchs as its most valuable asset, stole crucial atomic secrets from the Manhattan Project."
+    valueProp: "Understand how Soviet spies penetrated the West's most secret program."
+  - anchorText: "Manhattan Project spy"
+    targetURL: "/history/people/klaus-fuchs"
+    contextQuote: "As a Manhattan Project spy, Fuchs had access to the highest levels of nuclear weapons research at Los Alamos."
+    valueProp: "Read about the trusted scientist who betrayed atomic secrets."
+  - anchorText: "nuclear secrets betrayal"
+    targetURL: "/history/people/klaus-fuchs"
+    contextQuote: "Fuchs' betrayal of nuclear secrets gave Stalin the knowledge needed to build Soviet atomic weapons years earlier."
+    valueProp: "Learn how espionage accelerated the nuclear arms race."
+  - anchorText: "Los Alamos espionage"
+    targetURL: "/history/people/klaus-fuchs"
+    contextQuote: "The Los Alamos espionage conducted by Fuchs compromised America's most sensitive nuclear weapons designs."
+    valueProp: "Discover the extent of Soviet penetration of the atomic bomb project."
+  - anchorText: "Venona revelations"
+    targetURL: "/history/people/klaus-fuchs"
+    contextQuote: "The Venona code-breaking program exposed Fuchs and other atomic spies who had infiltrated Western nuclear programs."
+    valueProp: "Explore how American intelligence uncovered the Soviet spy network."
 ---
 
 # Klaus Fuchs

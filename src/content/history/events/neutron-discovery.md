@@ -1,6 +1,35 @@
 ---
 title: 'Neutron Discovery'
 description: 'In 1932, James Chadwick discovered the neutron, completing our understanding of atomic structure and providing the key to nuclear fission and weapons development...'
+links:
+  - anchorText: "neutron discovery"
+    targetURL: "/history/events/neutron-discovery"
+    contextQuote: "James Chadwick's 1932 neutron discovery made nuclear weapons possible"
+    valueProp: "Learn about the fundamental discovery that enabled nuclear fission"
+  - anchorText: "Chadwick's discovery"
+    targetURL: "/history/events/neutron-discovery"
+    contextQuote: "Chadwick discovered the neutron at the Cavendish Laboratory"
+    valueProp: "Explore the breakthrough that completed atomic understanding"
+  - anchorText: "1932 neutron discovery"
+    targetURL: "/history/events/neutron-discovery"
+    contextQuote: "The 1932 discovery of neutrons was crucial for nuclear physics"
+    valueProp: "Understand the missing piece of atomic structure"
+  - anchorText: "neutron physics breakthrough"
+    targetURL: "/history/events/neutron-discovery"
+    contextQuote: "The neutron physics breakthrough enabled nuclear reactions"
+    valueProp: "See how neutrons became the key to nuclear energy"
+  - anchorText: "atomic structure completion"
+    targetURL: "/history/events/neutron-discovery"
+    contextQuote: "The neutron completed our understanding of atomic structure"
+    valueProp: "Discover how the neutron solved the mass mystery"
+  - anchorText: "pre-Manhattan physics"
+    targetURL: "/history/events/neutron-discovery"
+    contextQuote: "This pre-Manhattan Project discovery was essential"
+    valueProp: "Learn about the physics that preceded nuclear weapons"
+  - anchorText: "Cavendish Laboratory discovery"
+    targetURL: "/history/events/neutron-discovery"
+    contextQuote: "The Cavendish Laboratory neutron discovery changed history"
+    valueProp: "Explore Cambridge's role in nuclear history"
 ---
 
 # Neutron Discovery

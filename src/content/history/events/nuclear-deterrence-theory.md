@@ -1,6 +1,35 @@
 ---
 title: 'Nuclear Deterrence Theory'
 description: 'Nuclear deterrence theory argues that nuclear weapons prevent war through the threat of mutual destruction, but critics question its logic and long-term stability...'
+links:
+  - anchorText: "nuclear deterrence theory"
+    targetURL: "/history/events/nuclear-deterrence-theory"
+    contextQuote: "Nuclear deterrence theory shaped Cold War strategy"
+    valueProp: "Understand the logic of nuclear peace through terror"
+  - anchorText: "deterrence strategy"
+    targetURL: "/history/events/nuclear-deterrence-theory"
+    contextQuote: "Deterrence strategy prevents war through threat of destruction"
+    valueProp: "Learn about the strategic basis of nuclear weapons"
+  - anchorText: "balance of terror"
+    targetURL: "/history/events/nuclear-deterrence-theory"
+    contextQuote: "The balance of terror maintained Cold War stability"
+    valueProp: "Explore how mutual fear prevented nuclear war"
+  - anchorText: "nuclear strategy theory"
+    targetURL: "/history/events/nuclear-deterrence-theory"
+    contextQuote: "Nuclear strategy theory developed at RAND Corporation"
+    valueProp: "Discover the intellectual foundations of deterrence"
+  - anchorText: "MAD doctrine"
+    targetURL: "/history/events/nuclear-deterrence-theory"
+    contextQuote: "Mutual Assured Destruction became nuclear policy"
+    valueProp: "Understand the doctrine of mutual vulnerability"
+  - anchorText: "deterrence concepts"
+    targetURL: "/history/events/nuclear-deterrence-theory"
+    contextQuote: "Deterrence concepts continue to guide nuclear policy"
+    valueProp: "Learn the key concepts of nuclear deterrence"
+  - anchorText: "strategic stability"
+    targetURL: "/history/events/nuclear-deterrence-theory"
+    contextQuote: "Strategic stability through nuclear deterrence"
+    valueProp: "See how nuclear weapons create stability paradoxes"
 ---
 
 # Nuclear Deterrence Theory

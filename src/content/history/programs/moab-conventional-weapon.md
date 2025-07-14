@@ -1,6 +1,31 @@
 ---
 title: 'MOAB'
 description: 'The GBU-43/B Massive Ordnance Air Blast bomb, known as the Mother of All Bombs, is the largest non-nuclear bomb in the U.S. arsenal with an 18,700-pound explosive payload...'
+links:
+  - anchorText: "largest conventional bomb"
+    targetURL: "/history/programs/moab-conventional-weapon"
+    contextQuote: "The most powerful conventional weapon available, with 18,700 pounds of explosive"
+    valueProp: "Learn about the MOAB, the Mother of All Bombs"
+  - anchorText: "Mother of All Bombs"
+    targetURL: "/history/programs/moab-conventional-weapon"
+    contextQuote: "Nicknamed the Mother of All Bombs for its unprecedented conventional destructive power"
+    valueProp: "Discover the most powerful non-nuclear bomb in the US arsenal"
+  - anchorText: "non-nuclear alternative"
+    targetURL: "/history/programs/moab-conventional-weapon"
+    contextQuote: "Provides massive conventional firepower as an alternative to tactical nuclear weapons"
+    valueProp: "Explore conventional alternatives to nuclear weapons"
+  - anchorText: "Afghanistan deployment"
+    targetURL: "/history/programs/moab-conventional-weapon"
+    contextQuote: "First used in combat in Afghanistan in 2017 against ISIS tunnel complexes"
+    valueProp: "Read about the MOAB's combat deployment"
+  - anchorText: "bunker-busting capabilities"
+    targetURL: "/history/programs/moab-conventional-weapon"
+    contextQuote: "Designed to destroy underground facilities and cave complexes"
+    valueProp: "Learn about massive conventional bunker-busting weapons"
+  - anchorText: "thermobaric weapon"
+    targetURL: "/history/programs/moab-conventional-weapon"
+    contextQuote: "Uses thermobaric effects to create devastating overpressure"
+    valueProp: "Understand advanced conventional explosive technology"
 ---
 
 # MOAB

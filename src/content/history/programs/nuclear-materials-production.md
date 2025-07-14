@@ -1,6 +1,39 @@
 ---
 title: 'Nuclear Materials'
 description: 'Nuclear materials like uranium and plutonium are the essential components of nuclear weapons, requiring sophisticated production and enrichment processes that pose proliferation risks...'
+links:
+  - anchorText: "nuclear materials production"
+    targetURL: "/history/programs/nuclear-materials-production"
+    contextQuote: "The production of fissile materials like uranium and plutonium is essential for nuclear weapons"
+    valueProp: "Learn about nuclear materials production processes"
+  - anchorText: "fissile material production"
+    targetURL: "/history/programs/nuclear-materials-production"
+    contextQuote: "Weapons require highly enriched uranium or weapons-grade plutonium"
+    valueProp: "Understand how nuclear weapon materials are made"
+  - anchorText: "uranium enrichment facilities"
+    targetURL: "/history/programs/nuclear-materials-production"
+    contextQuote: "Gas centrifuge and gaseous diffusion facilities enrich uranium for weapons"
+    valueProp: "Explore uranium enrichment technology and facilities"
+  - anchorText: "plutonium production reactors"
+    targetURL: "/history/programs/nuclear-materials-production"
+    contextQuote: "Dedicated reactors produce plutonium through neutron irradiation of uranium"
+    valueProp: "Learn about plutonium production methods"
+  - anchorText: "nuclear fuel cycle"
+    targetURL: "/history/programs/nuclear-materials-production"
+    contextQuote: "The nuclear fuel cycle can be diverted to produce weapons materials"
+    valueProp: "Understand the dual-use nature of nuclear technology"
+  - anchorText: "material security"
+    targetURL: "/history/programs/nuclear-materials-production"
+    contextQuote: "Securing nuclear materials is crucial for preventing proliferation"
+    valueProp: "Discover nuclear material security challenges"
+  - anchorText: "A.Q. Khan network"
+    targetURL: "/history/programs/nuclear-materials-production"
+    contextQuote: "The A.Q. Khan network illegally traded nuclear materials production technology"
+    valueProp: "Read about nuclear material trafficking and proliferation"
+  - anchorText: "HEU and plutonium stockpiles"
+    targetURL: "/history/programs/nuclear-materials-production"
+    contextQuote: "Global stockpiles of weapons-usable materials pose security risks"
+    valueProp: "Learn about nuclear material inventories and controls"
 ---
 
 # Nuclear Materials

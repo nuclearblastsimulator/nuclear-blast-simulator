@@ -1,6 +1,31 @@
 ---
 title: "Shippingport"
 description: "America's first commercial nuclear power plant, opened in 1957, demonstrated the viability of nuclear energy for civilian electricity generation and launched the U.S. nuclear industry..."
+links:
+  - anchorText: "Shippingport"
+    targetURL: "/history/events/shippingport-reactor"
+    contextQuote: "America's first commercial nuclear power plant"
+    valueProp: "Learn about the 1957 plant that launched the U.S. nuclear industry"
+  - anchorText: "first U.S. nuclear plant"
+    targetURL: "/history/events/shippingport-reactor"
+    contextQuote: "First commercial nuclear power plant in the United States"
+    valueProp: "Discover how America entered the nuclear power era"
+  - anchorText: "1957 reactor"
+    targetURL: "/history/events/shippingport-reactor"
+    contextQuote: "The reactor that began operation in 1957"
+    valueProp: "Explore the historic Pennsylvania nuclear power plant"
+  - anchorText: "American nuclear power"
+    targetURL: "/history/events/shippingport-reactor"
+    contextQuote: "Birth of the American nuclear power industry"
+    valueProp: "Understand how the U.S. developed commercial nuclear energy"
+  - anchorText: "PWR development"
+    targetURL: "/history/events/shippingport-reactor"
+    contextQuote: "First demonstration of pressurized water reactor technology"
+    valueProp: "Learn about the PWR technology that became the industry standard"
+  - anchorText: "commercial nuclear"
+    targetURL: "/history/events/shippingport-reactor"
+    contextQuote: "Demonstrated commercial viability of nuclear power"
+    valueProp: "Discover how nuclear power became economically competitive"
 ---
 
 # Shippingport Atomic Power Station

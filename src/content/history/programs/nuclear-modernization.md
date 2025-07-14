@@ -1,6 +1,35 @@
 ---
 title: 'Nuclear Modernization Programs'
 description: 'All nuclear weapon states are modernizing their arsenals with new delivery systems, warheads, and command systems, raising questions about disarmament commitments...'
+links:
+  - anchorText: "nuclear modernization programs"
+    targetURL: "/history/programs/nuclear-modernization"
+    contextQuote: "All nuclear weapon states are modernizing their arsenals with new warheads and delivery systems"
+    valueProp: "Learn about global nuclear modernization efforts"
+  - anchorText: "$1.7 trillion modernization"
+    targetURL: "/history/programs/nuclear-modernization"
+    contextQuote: "The U.S. nuclear modernization program will cost an estimated $1.7 trillion over 30 years"
+    valueProp: "Understand the massive scale of nuclear upgrades"
+  - anchorText: "nuclear arms race"
+    targetURL: "/history/programs/nuclear-modernization"
+    contextQuote: "Critics see modernization as a new nuclear arms race contradicting disarmament"
+    valueProp: "Explore debates over nuclear modernization"
+  - anchorText: "next-generation nuclear weapons"
+    targetURL: "/history/programs/nuclear-modernization"
+    contextQuote: "New warheads, missiles, submarines, and bombers are being developed worldwide"
+    valueProp: "Discover the future of nuclear arsenals"
+  - anchorText: "life extension programs"
+    targetURL: "/history/programs/nuclear-modernization"
+    contextQuote: "Warhead life extension programs maintain nuclear weapons without testing"
+    valueProp: "Learn how aging nuclear weapons are maintained"
+  - anchorText: "hypersonic nuclear systems"
+    targetURL: "/history/programs/nuclear-modernization"
+    contextQuote: "Russia and China are developing hypersonic nuclear delivery systems"
+    valueProp: "Understand new nuclear delivery technologies"
+  - anchorText: "nuclear infrastructure"
+    targetURL: "/history/programs/nuclear-modernization"
+    contextQuote: "Modernizing the nuclear weapons complex and production facilities"
+    valueProp: "Explore nuclear infrastructure upgrades"
 ---
 
 # Nuclear Modernization Programs

@@ -1,6 +1,35 @@
 ---
 title: 'Pakistani Nuclear Weapons'
 description: "Pakistan's nuclear weapons program began in the 1970s, culminating in nuclear tests in 1998 and establishing Pakistan as the world's sixth nuclear power with an arsenal designed to deter India..."
+links:
+  - anchorText: "Pakistan nuclear program"
+    targetURL: "/history/programs/pakistan-nuclear-program"
+    contextQuote: "Pakistan's nuclear weapons program began in the 1970s under A.Q. Khan's leadership"
+    valueProp: "Learn about Pakistan's path to nuclear weapons"
+  - anchorText: "Pakistani nuclear arsenal"
+    targetURL: "/history/programs/pakistan-nuclear-program"
+    contextQuote: "Pakistan possesses 160-170 nuclear warheads, the world's fastest-growing arsenal"
+    valueProp: "Explore Pakistan's nuclear capabilities and growth"
+  - anchorText: "A.Q. Khan"
+    targetURL: "/history/programs/pakistan-nuclear-program"
+    contextQuote: "A.Q. Khan stole centrifuge technology and built Pakistan's nuclear program"
+    valueProp: "Discover the father of Pakistan's atomic bomb"
+  - anchorText: "Chagai nuclear tests"
+    targetURL: "/history/programs/pakistan-nuclear-program"
+    contextQuote: "Pakistan conducted six nuclear tests in May 1998 in response to India"
+    valueProp: "Read about Pakistan's nuclear testing in Balochistan"
+  - anchorText: "Pakistan deterrence"
+    targetURL: "/history/programs/pakistan-nuclear-program"
+    contextQuote: "Pakistan's nuclear doctrine focuses on deterring India's conventional superiority"
+    valueProp: "Understand Pakistan's nuclear strategy"
+  - anchorText: "Khan proliferation network"
+    targetURL: "/history/programs/pakistan-nuclear-program"
+    contextQuote: "The A.Q. Khan network spread nuclear technology to Libya, Iran, and North Korea"
+    valueProp: "Learn about history's worst nuclear proliferation scandal"
+  - anchorText: "South Asian nuclear competition"
+    targetURL: "/history/programs/pakistan-nuclear-program"
+    contextQuote: "Pakistan's nuclear rivalry with India creates regional instability"
+    valueProp: "Explore the India-Pakistan nuclear dimension"
 ---
 
 # Pakistani Nuclear Weapons

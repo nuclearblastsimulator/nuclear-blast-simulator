@@ -1,6 +1,23 @@
 ---
 title: 'B83 Nuclear Bomb'
 description: 'The B83 is the most powerful nuclear weapon currently in the United States arsenal, with a maximum yield of 1.2 megatons, serving as a strategic gravity bomb since 1983...'
+links:
+  - text: "most powerful U.S. nuclear weapon"
+    targetURL: "/history/programs/b83-nuclear-bomb"
+  - text: "1.2 megaton nuclear bomb"
+    targetURL: "/history/programs/b83-nuclear-bomb"
+  - text: "B83 thermonuclear weapon"
+    targetURL: "/history/programs/b83-nuclear-bomb"
+  - text: "America's bunker-busting nuclear bomb"
+    targetURL: "/history/programs/b83-nuclear-bomb"
+  - text: "B-2 delivered nuclear weapon"
+    targetURL: "/history/programs/b83-nuclear-bomb"
+  - text: "gravity bomb with variable yield"
+    targetURL: "/history/programs/b83-nuclear-bomb"
+  - text: "strategic nuclear gravity bomb"
+    targetURL: "/history/programs/b83-nuclear-bomb"
+  - text: "dial-a-yield nuclear weapon"
+    targetURL: "/history/programs/b83-nuclear-bomb"
 ---
 
 # B83 Nuclear Bomb

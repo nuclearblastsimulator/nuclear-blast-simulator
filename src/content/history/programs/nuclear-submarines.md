@@ -1,6 +1,35 @@
 ---
 title: 'Nuclear Submarines'
 description: 'Nuclear-powered submarines revolutionized naval warfare and became the most survivable platforms for nuclear weapons, forming the backbone of strategic deterrence...'
+links:
+  - anchorText: "nuclear submarines"
+    targetURL: "/history/programs/nuclear-submarines"
+    contextQuote: "Nuclear-powered submarines revolutionized naval warfare and strategic deterrence"
+    valueProp: "Learn about nuclear submarine technology and capabilities"
+  - anchorText: "ballistic missile submarines"
+    targetURL: "/history/programs/nuclear-submarines"
+    contextQuote: "SSBNs carry submarine-launched ballistic missiles as the most survivable nuclear deterrent"
+    valueProp: "Explore the sea-based leg of nuclear deterrence"
+  - anchorText: "nuclear attack submarines"
+    targetURL: "/history/programs/nuclear-submarines"
+    contextQuote: "Nuclear-powered attack submarines hunt enemy vessels and protect strategic forces"
+    valueProp: "Discover nuclear hunter-killer submarines"
+  - anchorText: "Trident submarines"
+    targetURL: "/history/programs/nuclear-submarines"
+    contextQuote: "Ohio-class submarines carry Trident missiles with multiple nuclear warheads"
+    valueProp: "Learn about America's strategic submarine force"
+  - anchorText: "continuous at-sea deterrent"
+    targetURL: "/history/programs/nuclear-submarines"
+    contextQuote: "Nuclear powers maintain submarines on patrol 24/7 for assured retaliation"
+    valueProp: "Understand how submarine patrols ensure deterrence"
+  - anchorText: "submarine nuclear propulsion"
+    targetURL: "/history/programs/nuclear-submarines"
+    contextQuote: "Nuclear reactors allow submarines to remain submerged for months"
+    valueProp: "See how nuclear power transformed submarine operations"
+  - anchorText: "SSBN force"
+    targetURL: "/history/programs/nuclear-submarines"
+    contextQuote: "Strategic submarine forces provide survivable second-strike capability"
+    valueProp: "Explore the role of nuclear missile submarines"
 ---
 
 # Nuclear Submarines

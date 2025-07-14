@@ -1,6 +1,39 @@
 ---
 title: 'Broken Arrows'
 description: 'Broken Arrows are nuclear weapon accidents involving the accidental launching, firing, detonating, theft, or loss of nuclear weapons, highlighting the inherent risks of nuclear arsenals...'
+links:
+  - anchorText: "Broken Arrow incidents"
+    targetURL: "/history/events/broken-arrows"
+    contextQuote: "U.S. military term for nuclear weapon accidents"
+    valueProp: "Learn about the 32 officially acknowledged nuclear weapon accidents"
+  - anchorText: "nuclear weapon accidents"
+    targetURL: "/history/events/broken-arrows"
+    contextQuote: "Serious incidents involving nuclear weapons safety"
+    valueProp: "Discover how close the world has come to accidental nuclear detonation"
+  - anchorText: "Palomares incident"
+    targetURL: "/history/events/broken-arrows"
+    contextQuote: "1966 B-52 crash that scattered nuclear weapons over Spain"
+    valueProp: "Explore the diplomatic crisis and cleanup of this major nuclear accident"
+  - anchorText: "Thule nuclear accident"
+    targetURL: "/history/events/broken-arrows"
+    contextQuote: "1968 crash that contaminated Greenland with plutonium"
+    valueProp: "Learn about the Arctic nuclear accident that ended Chrome Dome patrols"
+  - anchorText: "Damascus missile explosion"
+    targetURL: "/history/events/broken-arrows"
+    contextQuote: "1980 Titan II silo accident that ejected a nuclear warhead"
+    valueProp: "Read about the dropped wrench that nearly caused nuclear disaster"
+  - anchorText: "Goldsboro near-miss"
+    targetURL: "/history/events/broken-arrows"
+    contextQuote: "1961 accident where a nuclear bomb nearly detonated over North Carolina"
+    valueProp: "Understand how one safety switch prevented nuclear catastrophe"
+  - anchorText: "nuclear safety failures"
+    targetURL: "/history/events/broken-arrows"
+    contextQuote: "History of nuclear weapon safety system failures"
+    valueProp: "Examine the inherent risks of maintaining nuclear arsenals"
+  - anchorText: "B-52 nuclear accidents"
+    targetURL: "/history/events/broken-arrows"
+    contextQuote: "Multiple incidents involving nuclear-armed bombers"
+    valueProp: "Learn about the dangers of airborne nuclear deterrent operations"
 ---
 
 # Broken Arrows

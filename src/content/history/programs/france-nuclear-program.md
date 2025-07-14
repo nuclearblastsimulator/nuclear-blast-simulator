@@ -1,6 +1,23 @@
 ---
 title: 'Paris - French Nuclear Program'
 description: "Paris coordinates France's nuclear weapons program, maintaining an independent nuclear deterrent through the Force de dissuasion with submarine and air-delivered nuclear weapons..."
+links:
+  - text: "French nuclear arsenal"
+    targetURL: "/history/programs/france-nuclear-program"
+  - text: "Force de dissuasion"
+    targetURL: "/history/programs/france-nuclear-program"
+  - text: "France's 290 warheads"
+    targetURL: "/history/programs/france-nuclear-program"
+  - text: "Paris nuclear program"
+    targetURL: "/history/programs/france-nuclear-program"
+  - text: "fourth nuclear power"
+    targetURL: "/history/programs/france-nuclear-program"
+  - text: "de Gaulle's nuclear vision"
+    targetURL: "/history/programs/france-nuclear-program"
+  - text: "Le Triomphant submarines"
+    targetURL: "/history/programs/france-nuclear-program"
+  - text: "French strategic autonomy"
+    targetURL: "/history/programs/france-nuclear-program"
 ---
 
 # Paris - French Nuclear Program

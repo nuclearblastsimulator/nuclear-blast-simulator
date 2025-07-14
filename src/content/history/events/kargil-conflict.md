@@ -1,6 +1,31 @@
 ---
 title: 'Kargil Conflict'
 description: 'The 1999 Kargil War between India and Pakistan became the first armed conflict between nuclear-armed nations, with Pakistan reportedly readying nuclear weapons...'
+links:
+  - anchorText: "first conflict between nuclear-armed nations"
+    targetURL: "/history/events/kargil-conflict"
+    contextQuote: "The 1999 Kargil War marked the first armed conflict between nuclear powers"
+    valueProp: "Learn about the dangerous precedent of nuclear-armed conflict"
+  - anchorText: "Kargil War"
+    targetURL: "/history/events/kargil-conflict"
+    contextQuote: "The Kargil War tested nuclear deterrence between India and Pakistan"
+    valueProp: "Understand how nuclear weapons affected this 1999 conflict"
+  - anchorText: "India-Pakistan nuclear crisis"
+    targetURL: "/history/events/kargil-conflict"
+    contextQuote: "The 1999 India-Pakistan crisis brought nuclear weapons to readiness"
+    valueProp: "Explore the nuclear dimensions of this regional conflict"
+  - anchorText: "stability-instability paradox"
+    targetURL: "/history/events/kargil-conflict"
+    contextQuote: "Kargil demonstrated the stability-instability paradox in practice"
+    valueProp: "See real-world examples of nuclear deterrence complexities"
+  - anchorText: "nuclear crisis management"
+    targetURL: "/history/events/kargil-conflict"
+    contextQuote: "The Kargil crisis required urgent international intervention"
+    valueProp: "Learn how nuclear crises are managed in practice"
+  - anchorText: "Pakistani nuclear preparations"
+    targetURL: "/history/events/kargil-conflict"
+    contextQuote: "Pakistan reportedly prepared nuclear weapons during Kargil"
+    valueProp: "Understand nuclear escalation risks in regional conflicts"
 ---
 
 # Kargil Conflict

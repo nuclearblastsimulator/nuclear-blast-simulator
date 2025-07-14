@@ -1,6 +1,39 @@
 ---
 title: 'Nuclear Weapon Miniaturization'
 description: 'Nuclear weapon miniaturization has enabled the development of smaller, lighter nuclear weapons that maintain high yields while fitting into compact delivery systems like missiles and artillery shells...'
+links:
+  - anchorText: "warhead miniaturization"
+    targetURL: "/history/programs/warhead-miniaturization"
+    contextQuote: "Warhead miniaturization has enabled smaller, lighter nuclear weapons"
+    valueProp: "Learn about the evolution to compact nuclear weapons"
+  - anchorText: "miniaturized nuclear weapons"
+    targetURL: "/history/programs/warhead-miniaturization"
+    contextQuote: "Miniaturized nuclear weapons fit into missiles and artillery shells"
+    valueProp: "Discover how nuclear weapons became smaller"
+  - anchorText: "nuclear weapon miniaturization"
+    targetURL: "/history/programs/warhead-miniaturization"
+    contextQuote: "Nuclear weapon miniaturization enabled MIRVs and tactical weapons"
+    valueProp: "Understand the technology behind smaller warheads"
+  - anchorText: "miniaturization technology"
+    targetURL: "/history/programs/warhead-miniaturization"
+    contextQuote: "Miniaturization technology achieved 1000x improvement in efficiency"
+    valueProp: "Explore advanced warhead miniaturization techniques"
+  - anchorText: "miniaturization advances"
+    targetURL: "/history/programs/warhead-miniaturization"
+    contextQuote: "Miniaturization advances dramatically improved yield-to-weight ratios"
+    valueProp: "Learn about breakthroughs in warhead design"
+  - anchorText: "compact nuclear design"
+    targetURL: "/history/programs/warhead-miniaturization"
+    contextQuote: "Compact nuclear design uses spherical implosion and levitated cores"
+    valueProp: "Discover the physics of smaller weapons"
+  - anchorText: "miniaturization challenges"
+    targetURL: "/history/programs/warhead-miniaturization"
+    contextQuote: "Miniaturization creates proliferation and verification challenges"
+    valueProp: "Understand the risks of smaller nuclear weapons"
+  - anchorText: "advanced miniaturization"
+    targetURL: "/history/programs/warhead-miniaturization"
+    contextQuote: "Advanced miniaturization enables modern strategic arsenals"
+    valueProp: "Explore cutting-edge warhead technology"
 ---
 
 # Nuclear Weapon Miniaturization

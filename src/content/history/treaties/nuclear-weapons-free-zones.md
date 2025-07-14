@@ -1,6 +1,23 @@
 ---
 title: 'Nuclear Weapons Free Zones'
 description: 'Regional Nuclear Weapons Free Zones cover over 115 countries across Latin America, South Pacific, Southeast Asia, Africa, and Central Asia, prohibiting nuclear weapons...'
+links:
+  - text: "Nuclear Weapons Free Zones"
+    targetURL: "/history/treaties/nuclear-weapons-free-zones"
+  - text: "NWFZ"
+    targetURL: "/history/treaties/nuclear-weapons-free-zones"
+  - text: "regional disarmament"
+    targetURL: "/history/treaties/nuclear-weapons-free-zones"
+  - text: "Treaty of Tlatelolco"
+    targetURL: "/history/treaties/nuclear-weapons-free-zones"
+  - text: "Treaty of Rarotonga"
+    targetURL: "/history/treaties/nuclear-weapons-free-zones"
+  - text: "nuclear-free regions"
+    targetURL: "/history/treaties/nuclear-weapons-free-zones"
+  - text: "regional nuclear prohibition"
+    targetURL: "/history/treaties/nuclear-weapons-free-zones"
+  - text: "nuclear weapons prohibition zones"
+    targetURL: "/history/treaties/nuclear-weapons-free-zones"
 ---
 
 # Nuclear Weapons Free Zones

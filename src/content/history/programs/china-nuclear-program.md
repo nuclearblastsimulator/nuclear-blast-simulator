@@ -1,6 +1,23 @@
 ---
 title: 'Beijing - Chinese Nuclear Program'
 description: "Beijing has coordinated China's nuclear weapons program since the 1950s, developing the world's third nuclear arsenal with an estimated 350 warheads and a no-first-use policy..."
+links:
+  - text: "Chinese nuclear arsenal"
+    targetURL: "/history/programs/china-nuclear-program"
+  - text: "Beijing nuclear program"
+    targetURL: "/history/programs/china-nuclear-program"
+  - text: "China's 350 nuclear warheads"
+    targetURL: "/history/programs/china-nuclear-program"
+  - text: "Chinese no-first-use policy"
+    targetURL: "/history/programs/china-nuclear-program"
+  - text: "DF-41 missile program"
+    targetURL: "/history/programs/china-nuclear-program"
+  - text: "Lop Nur test site"
+    targetURL: "/history/programs/china-nuclear-program"
+  - text: "world's third nuclear arsenal"
+    targetURL: "/history/programs/china-nuclear-program"
+  - text: "Chinese minimum deterrence doctrine"
+    targetURL: "/history/programs/china-nuclear-program"
 ---
 
 # Beijing - Chinese Nuclear Program

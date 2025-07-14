@@ -1,6 +1,21 @@
 ---
 title: 'GBU-57 MOP'
 description: 'The GBU-57 Massive Ordnance Penetrator is the largest conventional bunker-busting bomb in the U.S. arsenal, designed to destroy deeply buried nuclear facilities and command bunkers...'
+links:
+  - text: "GBU-57 Massive Ordnance Penetrator"
+    targetURL: "/history/programs/bunker-buster-weapons"
+  - text: "MOP bunker buster"
+    targetURL: "/history/programs/bunker-buster-weapons"
+  - text: "30,000 pound bunker-busting bomb"
+    targetURL: "/history/programs/bunker-buster-weapons"
+  - text: "weapons against Iranian nuclear facilities"
+    targetURL: "/history/programs/bunker-buster-weapons"
+  - text: "conventional alternative to nuclear bunker busters"
+    targetURL: "/history/programs/bunker-buster-weapons"
+  - text: "deep penetrator weapons"
+    targetURL: "/history/programs/bunker-buster-weapons"
+  - text: "B-2 delivered bunker buster"
+    targetURL: "/history/programs/bunker-buster-weapons"
 ---
 
 # GBU-57 MOP

@@ -1,6 +1,46 @@
 ---
 title: 'Nevada Test Site'
 description: 'From 1951 to 1992, the Nevada Test Site hosted 928 nuclear tests, making it the most heavily tested nuclear site in the United States and exposing thousands to radiation...'
+links:
+  - anchorText: "Nevada Test Site"
+    targetUrl: "/history/testing/nevada-test-site"
+    contextQuote: "The Nevada Test Site hosted 928 nuclear tests between 1951 and 1992"
+    valueProp: "Learn about America's primary continental nuclear testing facility"
+  
+  - anchorText: "atomic veterans exposure"
+    targetUrl: "/history/testing/nevada-test-site"
+    contextQuote: "Estimated 400,000 military personnel exposed to nuclear radiation"
+    valueProp: "Understand the military personnel exposed during nuclear tests"
+  
+  - anchorText: "downwinder communities"
+    targetUrl: "/history/testing/nevada-test-site"
+    contextQuote: "Utah, Nevada, Arizona communities affected by radioactive fallout"
+    valueProp: "Explore civilian radiation exposure from nuclear testing"
+  
+  - anchorText: "peaceful nuclear explosions"
+    targetUrl: "/history/testing/nevada-test-site"
+    contextQuote: "Nuclear explosions for civilian purposes from 1961-1973"
+    valueProp: "Discover failed attempts at peaceful nuclear explosions"
+  
+  - anchorText: "atmospheric testing era"
+    targetUrl: "/history/testing/nevada-test-site"
+    contextQuote: "100 atmospheric tests visible from Las Vegas created atomic tourism"
+    valueProp: "Read about the era of open-air nuclear testing"
+  
+  - anchorText: "underground testing program"
+    targetUrl: "/history/testing/nevada-test-site"
+    contextQuote: "828 underground tests conducted after the Limited Test Ban Treaty"
+    valueProp: "Learn about the shift to contained nuclear testing"
+  
+  - anchorText: "Sedan nuclear crater"
+    targetUrl: "/history/testing/nevada-test-site"
+    contextQuote: "The 104-kiloton Sedan shot created a 1,280-foot crater still visible today"
+    valueProp: "See the most contaminated nuclear crater in America"
+  
+  - anchorText: "radiation compensation"
+    targetUrl: "/history/testing/nevada-test-site"
+    contextQuote: "Radiation Exposure Compensation Act provided limited compensation for test victims"
+    valueProp: "Understand efforts to compensate nuclear testing victims"
 ---
 
 # Nevada Test Site

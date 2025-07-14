@@ -1,6 +1,23 @@
 ---
 title: 'Nuclear Fusion'
 description: 'Nuclear fusion research aims to harness the same process that powers the sun for clean energy production, potentially revolutionizing power generation while raising concerns about weapons applications...'
+links:
+  - text: "nuclear fusion research"
+    targetURL: "/history/programs/fusion-energy-research"
+  - text: "fusion energy development"
+    targetURL: "/history/programs/fusion-energy-research"
+  - text: "ITER fusion project"
+    targetURL: "/history/programs/fusion-energy-research"
+  - text: "National Ignition Facility breakthrough"
+    targetURL: "/history/programs/fusion-energy-research"
+  - text: "clean energy from fusion"
+    targetURL: "/history/programs/fusion-energy-research"
+  - text: "hydrogen bomb connection"
+    targetURL: "/history/programs/fusion-energy-research"
+  - text: "stellarator and tokamak"
+    targetURL: "/history/programs/fusion-energy-research"
+  - text: "fusion ignition achievement"
+    targetURL: "/history/programs/fusion-energy-research"
 ---
 
 # Nuclear Fusion

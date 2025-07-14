@@ -1,6 +1,35 @@
 ---
 title: 'Washington D.C. - Nuclear Command'
 description: 'Washington D.C. serves as the command center for U.S. nuclear forces, housing the Pentagon, National Security Council, and Presidential nuclear authority including the nuclear football...'
+links:
+  - anchorText: "Washington nuclear command"
+    targetURL: "/history/events/washington-nuclear-policy"
+    contextQuote: "Washington D.C. serves as the command center for U.S. nuclear forces"
+    valueProp: "Explore America's nuclear command headquarters"
+  - anchorText: "nuclear authority"
+    targetURL: "/history/events/washington-nuclear-policy"
+    contextQuote: "The seat of American nuclear decision-making authority"
+    valueProp: "Learn about presidential nuclear command authority"
+  - anchorText: "Pentagon nuclear control"
+    targetURL: "/history/events/washington-nuclear-policy"
+    contextQuote: "The Pentagon coordinates military nuclear operations"
+    valueProp: "Understand military nuclear command structure"
+  - anchorText: "nuclear policy center"
+    targetURL: "/history/events/washington-nuclear-policy"
+    contextQuote: "Washington D.C. coordinates all U.S. nuclear policy"
+    valueProp: "Discover how nuclear policy is developed and executed"
+  - anchorText: "nuclear crisis management"
+    targetURL: "/history/events/washington-nuclear-policy"
+    contextQuote: "Crisis management center for nuclear emergencies"
+    valueProp: "Learn about nuclear crisis decision-making"
+  - anchorText: "D.C. nuclear command"
+    targetURL: "/history/events/washington-nuclear-policy"
+    contextQuote: "The capital's role in nuclear command and control"
+    valueProp: "Explore the heart of American nuclear authority"
+  - anchorText: "U.S. nuclear headquarters"
+    targetURL: "/history/events/washington-nuclear-policy"
+    contextQuote: "Headquarters for American nuclear forces and policy"
+    valueProp: "Understand the center of U.S. nuclear operations"
 ---
 
 # Washington D.C. - Nuclear Command

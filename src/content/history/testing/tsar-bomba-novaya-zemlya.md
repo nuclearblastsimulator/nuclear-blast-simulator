@@ -2,6 +2,46 @@
 title: 'Tsar Bomba and Novaya Zemlya Test Site'
 description: "The largest nuclear explosion in history - the 50-megaton Tsar Bomba tested at Novaya Zemlya in 1961. Complete history of the Soviet Arctic nuclear test site."
 related: ["andrei-sakharov", "ivy-mike-hydrogen-bomb", "fusion-weapons-development", "soviet-nuclear-program"]
+links:
+  - anchorText: "Tsar Bomba test"
+    targetUrl: "/history/testing/tsar-bomba"
+    contextQuote: "The 50-megaton Tsar Bomba was the largest nuclear explosion in history"
+    valueProp: "Learn about the most powerful nuclear weapon ever detonated"
+  
+  - anchorText: "Novaya Zemlya test site"
+    targetUrl: "/history/testing/tsar-bomba"
+    contextQuote: "Novaya Zemlya served as the Soviet Union's northern nuclear testing site from 1955 to 1990"
+    valueProp: "Discover the Arctic nuclear testing facility"
+  
+  - anchorText: "largest nuclear explosion"
+    targetUrl: "/history/testing/tsar-bomba"
+    contextQuote: "The 50-megaton explosion was 3,800 times more powerful than the Hiroshima bomb"
+    valueProp: "Understand the ultimate demonstration of nuclear destructive power"
+  
+  - anchorText: "Soviet thermonuclear program"
+    targetUrl: "/history/testing/tsar-bomba"
+    contextQuote: "Novaya Zemlya hosted 224 nuclear tests including hydrogen bomb development"
+    valueProp: "Learn about Soviet hydrogen bomb testing"
+  
+  - anchorText: "Arctic nuclear contamination"
+    targetUrl: "/history/testing/tsar-bomba"
+    contextQuote: "The nuclear tests created one of the most contaminated environments on Earth"
+    valueProp: "Explore environmental destruction in the Arctic"
+  
+  - anchorText: "Nenets people displacement"
+    targetUrl: "/history/testing/tsar-bomba"
+    contextQuote: "Indigenous Nenets people were displaced from their traditional territories"
+    valueProp: "Understand the impact on indigenous Arctic communities"
+  
+  - anchorText: "Soviet hydrogen bomb"
+    targetUrl: "/history/testing/tsar-bomba"
+    contextQuote: "The first Soviet hydrogen bomb RDS-37 was tested at Novaya Zemlya in 1955"
+    valueProp: "Read about early Soviet thermonuclear weapons"
+  
+  - anchorText: "October 30, 1961"
+    targetUrl: "/history/testing/tsar-bomba"
+    contextQuote: "The Tsar Bomba was detonated on October 30, 1961"
+    valueProp: "Learn about the day of the world's largest nuclear explosion"
 ---
 
 # Tsar Bomba and Novaya Zemlya Test Site

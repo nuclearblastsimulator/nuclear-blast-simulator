@@ -1,6 +1,31 @@
 ---
 title: 'Stanislav Petrov Incident'
 description: 'On September 26, 1983, Soviet officer Stanislav Petrov prevented nuclear war by refusing to report what appeared to be incoming U.S. missiles, trusting his judgment over computer systems...'
+links:
+  - anchorText: "Stanislav Petrov"
+    targetURL: "/history/events/stanislav-petrov-incident"
+    contextQuote: "Soviet officer who prevented nuclear war in 1983"
+    valueProp: "Learn about the man who saved the world from nuclear catastrophe"
+  - anchorText: "1983 nuclear incident"
+    targetURL: "/history/events/stanislav-petrov-incident"
+    contextQuote: "The 1983 false alarm that nearly triggered nuclear war"
+    valueProp: "Discover how one officer's judgment prevented global disaster"
+  - anchorText: "Petrov incident"
+    targetURL: "/history/events/stanislav-petrov-incident"
+    contextQuote: "The Petrov incident demonstrated nuclear system vulnerabilities"
+    valueProp: "Understand the closest nuclear near-miss in history"
+  - anchorText: "September 26, 1983"
+    targetURL: "/history/events/stanislav-petrov-incident"
+    contextQuote: "On September 26, 1983, nuclear war was narrowly averted"
+    valueProp: "Explore the night one man prevented nuclear apocalypse"
+  - anchorText: "nuclear false alarm"
+    targetURL: "/history/events/stanislav-petrov-incident"
+    contextQuote: "The false alarm that could have ended civilization"
+    valueProp: "Learn how a computer error nearly caused nuclear war"
+  - anchorText: "saved the world"
+    targetURL: "/history/events/stanislav-petrov-incident"
+    contextQuote: "The individual who saved the world from nuclear war"
+    valueProp: "Discover the crucial role of human judgment in nuclear systems"
 ---
 
 # Stanislav Petrov Incident

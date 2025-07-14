@@ -1,6 +1,35 @@
 ---
 title: 'USS Nautilus'
 description: "The world's first nuclear-powered submarine, launched in 1954, revolutionized naval warfare and demonstrated the peaceful potential of nuclear technology..."
+links:
+  - anchorText: "first nuclear submarine"
+    targetURL: "/history/programs/nautilus-submarine"
+    contextQuote: "The USS Nautilus became the world's first operational nuclear-powered submarine in 1954"
+    valueProp: "Learn about the submarine that revolutionized naval warfare"
+  - anchorText: "USS Nautilus"
+    targetURL: "/history/programs/nautilus-submarine"
+    contextQuote: "USS Nautilus (SSN-571) pioneered nuclear propulsion for naval vessels"
+    valueProp: "Discover the historic first nuclear submarine"
+  - anchorText: "North Pole transit"
+    targetURL: "/history/programs/nautilus-submarine"
+    contextQuote: "Made history with the first underwater transit of the North Pole in 1958"
+    valueProp: "Read about the Nautilus's historic Arctic journey"
+  - anchorText: "nuclear propulsion breakthrough"
+    targetURL: "/history/programs/nautilus-submarine"
+    contextQuote: "Demonstrated that nuclear reactors could power submarines indefinitely"
+    valueProp: "Explore the dawn of nuclear naval propulsion"
+  - anchorText: "Underway on nuclear power"
+    targetURL: "/history/programs/nautilus-submarine"
+    contextQuote: "Famous signal 'Underway on nuclear power' marked the nuclear age at sea"
+    valueProp: "Learn about this historic moment in naval history"
+  - anchorText: "submarine museum"
+    targetURL: "/history/programs/nautilus-submarine"
+    contextQuote: "Now preserved as a museum ship in Groton, Connecticut"
+    valueProp: "Visit the historic USS Nautilus submarine museum"
+  - anchorText: "peaceful nuclear technology"
+    targetURL: "/history/programs/nautilus-submarine"
+    contextQuote: "Showcased peaceful applications of nuclear energy for propulsion"
+    valueProp: "See how nuclear technology transformed naval operations"
 ---
 
 # USS Nautilus

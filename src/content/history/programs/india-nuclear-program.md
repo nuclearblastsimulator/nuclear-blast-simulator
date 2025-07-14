@@ -1,6 +1,23 @@
 ---
 title: 'Indian Nuclear Weapons'
 description: "India's nuclear weapons program began in the 1960s, culminating in the 1974 'Smiling Buddha' test and the 1998 Pokhran-II series, establishing India as a nuclear power with a no-first-use policy..."
+links:
+  - text: "Indian nuclear weapons"
+    targetURL: "/history/programs/india-nuclear-program"
+  - text: "Smiling Buddha test"
+    targetURL: "/history/programs/india-nuclear-program"
+  - text: "Pokhran nuclear tests"
+    targetURL: "/history/programs/india-nuclear-program"
+  - text: "India's 160-170 warheads"
+    targetURL: "/history/programs/india-nuclear-program"
+  - text: "South Asian nuclear rivalry"
+    targetURL: "/history/programs/india-nuclear-program"
+  - text: "credible minimum deterrence"
+    targetURL: "/history/programs/india-nuclear-program"
+  - text: "Indian no-first-use policy"
+    targetURL: "/history/programs/india-nuclear-program"
+  - text: "Agni missile program"
+    targetURL: "/history/programs/india-nuclear-program"
 ---
 
 # Indian Nuclear Weapons

@@ -1,6 +1,39 @@
 ---
 title: 'Fission Weapons'
 description: 'Fission weapons derive their explosive power from splitting heavy atomic nuclei, representing the first generation of nuclear weapons and the foundation of nuclear warfare...'
+links:
+  - anchorText: "fission weapons"
+    targetURL: "/history/events/fission-weapons-development"
+    contextQuote: "First generation nuclear weapons using nuclear fission"
+    valueProp: "Learn about the fundamental technology behind atomic bombs"
+  - anchorText: "atomic bomb development"
+    targetURL: "/history/events/fission-weapons-development"
+    contextQuote: "The creation of the first nuclear weapons"
+    valueProp: "Discover how scientists unlocked the power of the atom"
+  - anchorText: "nuclear weapon principles"
+    targetURL: "/history/events/fission-weapons-development"
+    contextQuote: "Basic physics and engineering of atomic weapons"
+    valueProp: "Understand the science behind nuclear explosions"
+  - anchorText: "gun-type and implosion designs"
+    targetURL: "/history/events/fission-weapons-development"
+    contextQuote: "Two fundamental approaches to nuclear weapon design"
+    valueProp: "Explore the different methods of achieving nuclear detonation"
+  - anchorText: "first nuclear weapons"
+    targetURL: "/history/events/fission-weapons-development"
+    contextQuote: "The atomic bombs that ended World War II"
+    valueProp: "Read about the weapons that changed warfare forever"
+  - anchorText: "fission bomb technology"
+    targetURL: "/history/events/fission-weapons-development"
+    contextQuote: "Technical foundation of all nuclear arsenals"
+    valueProp: "Learn how nuclear chain reactions create explosive power"
+  - anchorText: "uranium and plutonium weapons"
+    targetURL: "/history/events/fission-weapons-development"
+    contextQuote: "Weapons using different fissile materials"
+    valueProp: "Compare the two types of materials used in atomic bombs"
+  - anchorText: "foundation of nuclear weapons"
+    targetURL: "/history/events/fission-weapons-development"
+    contextQuote: "The technology that started the nuclear age"
+    valueProp: "Understand the basis for all modern nuclear weapons"
 ---
 
 # Fission Weapons

@@ -1,6 +1,35 @@
 ---
 title: 'Nuclear Weapon Effects'
 description: 'Nuclear weapons produce devastating immediate and long-term effects including blast, thermal radiation, nuclear radiation, and electromagnetic pulse that can destroy cities and affect global climate...'
+links:
+  - anchorText: "nuclear effects"
+    targetURL: "/history/events/nuclear-weapon-effects-studies"
+    contextQuote: "Studies of nuclear weapons effects revealed"
+    valueProp: "Learn about research into nuclear weapon destructive effects"
+  - anchorText: "weapon effects research"
+    targetURL: "/history/events/nuclear-weapon-effects-studies"
+    contextQuote: "Nuclear weapon effects studies conducted"
+    valueProp: "Explore scientific studies of nuclear destruction mechanisms"
+  - anchorText: "blast damage studies"
+    targetURL: "/history/events/nuclear-weapon-effects-studies"
+    contextQuote: "Research into blast damage from nuclear weapons"
+    valueProp: "Understand how scientists studied nuclear blast effects"
+  - anchorText: "effects testing"
+    targetURL: "/history/events/nuclear-weapon-effects-studies"
+    contextQuote: "Nuclear testing provided data on weapon effects"
+    valueProp: "Learn about nuclear test data on destructive effects"
+  - anchorText: "radiation effects"
+    targetURL: "/history/events/nuclear-weapon-effects-studies"
+    contextQuote: "Studies of radiation effects from nuclear weapons"
+    valueProp: "Discover research into nuclear radiation impacts"
+  - anchorText: "nuclear winter studies"
+    targetURL: "/history/events/nuclear-weapon-effects-studies"
+    contextQuote: "Research predicted nuclear winter effects"
+    valueProp: "Understand climate impact studies of nuclear war"
+  - anchorText: "destruction patterns"
+    targetURL: "/history/events/nuclear-weapon-effects-studies"
+    contextQuote: "Analysis of nuclear weapon destruction patterns"
+    valueProp: "Explore how nuclear weapons destroy urban areas"
 ---
 
 # Nuclear Weapon Effects

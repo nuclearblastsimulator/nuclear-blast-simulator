@@ -1,6 +1,35 @@
 ---
 title: 'Nuclear Weapons Design'
 description: 'Nuclear weapons design involves complex physics and engineering to create devices that release enormous destructive energy through nuclear fission and fusion reactions...'
+links:
+  - anchorText: "nuclear weapons design"
+    targetURL: "/history/programs/nuclear-weapons-design"
+    contextQuote: "The complex physics and engineering required to create nuclear weapons"
+    valueProp: "Learn how nuclear weapons are designed and built"
+  - anchorText: "atomic bomb design"
+    targetURL: "/history/programs/nuclear-weapons-design"
+    contextQuote: "Gun-type and implosion designs represent the two basic fission weapon types"
+    valueProp: "Understand the fundamentals of nuclear weapon design"
+  - anchorText: "hydrogen bomb design"
+    targetURL: "/history/programs/nuclear-weapons-design"
+    contextQuote: "The Teller-Ulam configuration enabled thermonuclear weapons of unlimited yield"
+    valueProp: "Explore how hydrogen bombs work"
+  - anchorText: "warhead engineering"
+    targetURL: "/history/programs/nuclear-weapons-design"
+    contextQuote: "Precision engineering and advanced materials are essential for nuclear weapons"
+    valueProp: "Discover the engineering challenges of nuclear weapons"
+  - anchorText: "nuclear weapon physics"
+    targetURL: "/history/programs/nuclear-weapons-design"
+    contextQuote: "Harnessing nuclear fission and fusion for explosive energy release"
+    valueProp: "Learn the physics behind nuclear explosions"
+  - anchorText: "weapons miniaturization"
+    targetURL: "/history/programs/nuclear-weapons-design"
+    contextQuote: "Making nuclear weapons small enough to fit on missiles and aircraft"
+    valueProp: "See how nuclear weapons became deliverable"
+  - anchorText: "nuclear testing"
+    targetURL: "/history/programs/nuclear-weapons-design"
+    contextQuote: "Nuclear tests validated weapon designs before computer modeling"
+    valueProp: "Understand how nuclear weapons are tested and validated"
 ---
 
 # Nuclear Weapons Design

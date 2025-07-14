@@ -1,6 +1,35 @@
 ---
 title: 'Nuclear Weapons by Country'
 description: 'A comprehensive overview of nuclear weapons arsenals worldwide, detailing the nuclear capabilities, doctrines, and strategic roles of all nine nuclear-armed states...'
+links:
+  - anchorText: "nuclear weapons by country"
+    targetURL: "/history/programs/nuclear-weapons-by-country"
+    contextQuote: "Nine countries possess nuclear weapons with arsenals ranging from 80 to 6,000 warheads"
+    valueProp: "Compare nuclear arsenals of all nuclear-armed states"
+  - anchorText: "global nuclear arsenals"
+    targetURL: "/history/programs/nuclear-weapons-by-country"
+    contextQuote: "Approximately 12,700 nuclear warheads exist worldwide across nine countries"
+    valueProp: "Learn about the distribution of nuclear weapons globally"
+  - anchorText: "nuclear weapon states"
+    targetURL: "/history/programs/nuclear-weapons-by-country"
+    contextQuote: "The US, Russia, UK, France, and China are recognized nuclear weapon states"
+    valueProp: "Understand the nuclear club and proliferation"
+  - anchorText: "nuclear arsenals comparison"
+    targetURL: "/history/programs/nuclear-weapons-by-country"
+    contextQuote: "Russia and the US possess over 90% of global nuclear weapons"
+    valueProp: "See how nuclear arsenals compare between nations"
+  - anchorText: "nuclear doctrines"
+    targetURL: "/history/programs/nuclear-weapons-by-country"
+    contextQuote: "Each nuclear state has different nuclear doctrines and deployment strategies"
+    valueProp: "Explore different national approaches to nuclear weapons"
+  - anchorText: "nuclear stockpiles"
+    targetURL: "/history/programs/nuclear-weapons-by-country"
+    contextQuote: "Nuclear stockpiles range from Israel's ~80 to Russia's ~6,000 warheads"
+    valueProp: "Learn about nuclear weapon inventories worldwide"
+  - anchorText: "proliferation timeline"
+    targetURL: "/history/programs/nuclear-weapons-by-country"
+    contextQuote: "From the US in 1945 to North Korea in 2006, nine states have acquired nuclear weapons"
+    valueProp: "Trace the spread of nuclear weapons over time"
 ---
 
 # Nuclear Weapons by Country

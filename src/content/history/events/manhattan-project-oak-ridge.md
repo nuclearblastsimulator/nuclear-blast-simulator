@@ -1,6 +1,35 @@
 ---
 title: 'Oak Ridge National Laboratory'
 description: "Oak Ridge National Laboratory was the Manhattan Project's 'Secret City' where uranium enrichment facilities produced the fissile material for the world's first atomic bombs..."
+links:
+  - anchorText: "Oak Ridge"
+    targetURL: "/history/events/manhattan-project-oak-ridge"
+    contextQuote: "Oak Ridge produced enriched uranium for the atomic bomb"
+    valueProp: "Discover the secret city that fueled nuclear weapons"
+  - anchorText: "Secret City"
+    targetURL: "/history/events/manhattan-project-oak-ridge"
+    contextQuote: "The Manhattan Project's Secret City in Tennessee"
+    valueProp: "Learn about the massive uranium enrichment complex"
+  - anchorText: "Oak Ridge National Laboratory"
+    targetURL: "/history/events/manhattan-project-oak-ridge"
+    contextQuote: "Oak Ridge National Laboratory enriched uranium for weapons"
+    valueProp: "Explore America's historic uranium production center"
+  - anchorText: "Y-12 facility"
+    targetURL: "/history/events/manhattan-project-oak-ridge"
+    contextQuote: "The Y-12 electromagnetic separation plant at Oak Ridge"
+    valueProp: "See where uranium was enriched using calutrons"
+  - anchorText: "K-25 plant"
+    targetURL: "/history/events/manhattan-project-oak-ridge"
+    contextQuote: "The massive K-25 gaseous diffusion plant"
+    valueProp: "Learn about the world's largest building of its time"
+  - anchorText: "uranium enrichment facilities"
+    targetURL: "/history/events/manhattan-project-oak-ridge"
+    contextQuote: "Oak Ridge's uranium enrichment facilities produced bomb material"
+    valueProp: "Understand industrial-scale isotope separation"
+  - anchorText: "Manhattan Project Tennessee"
+    targetURL: "/history/events/manhattan-project-oak-ridge"
+    contextQuote: "The Manhattan Project's Tennessee operations"
+    valueProp: "Discover the industrial heart of the atomic bomb project"
 ---
 
 # Oak Ridge National Laboratory

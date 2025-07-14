@@ -1,6 +1,35 @@
 ---
 title: 'Nuclear Abolition'
 description: 'The nuclear abolition movement seeks the complete elimination of nuclear weapons, arguing they pose an existential threat to humanity and are morally indefensible...'
+links:
+  - anchorText: "nuclear abolition movement"
+    targetURL: "/history/events/nuclear-abolition-movement"
+    contextQuote: "The nuclear abolition movement seeks complete elimination of nuclear weapons"
+    valueProp: "Explore the global campaign to eliminate nuclear weapons"
+  - anchorText: "abolish nuclear weapons"
+    targetURL: "/history/events/nuclear-abolition-movement"
+    contextQuote: "The campaign to abolish nuclear weapons has gained momentum"
+    valueProp: "Learn about efforts to create a nuclear-free world"
+  - anchorText: "nuclear disarmament movement"
+    targetURL: "/history/events/nuclear-abolition-movement"
+    contextQuote: "The nuclear disarmament movement includes diverse organizations"
+    valueProp: "Discover the organizations working for nuclear elimination"
+  - anchorText: "ban the bomb"
+    targetURL: "/history/events/nuclear-abolition-movement"
+    contextQuote: "The Ban the Bomb campaign mobilized millions"
+    valueProp: "Understand the history of anti-nuclear activism"
+  - anchorText: "nuclear-weapon-free world"
+    targetURL: "/history/events/nuclear-abolition-movement"
+    contextQuote: "The vision of a nuclear-weapon-free world guides abolitionists"
+    valueProp: "Explore the goal of complete nuclear elimination"
+  - anchorText: "ICAN campaign"
+    targetURL: "/history/events/nuclear-abolition-movement"
+    contextQuote: "ICAN won the Nobel Peace Prize for abolition work"
+    valueProp: "Learn about the Nobel Prize-winning abolition campaign"
+  - anchorText: "anti-nuclear movement"
+    targetURL: "/history/events/nuclear-abolition-movement"
+    contextQuote: "The anti-nuclear movement has evolved over decades"
+    valueProp: "See how nuclear opposition has developed globally"
 ---
 
 # Nuclear Abolition

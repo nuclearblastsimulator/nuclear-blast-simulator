@@ -1,6 +1,39 @@
 ---
 title: 'Fukushima Daiichi'
 description: 'The 2011 tsunami-triggered nuclear disaster at Fukushima Daiichi became the worst nuclear accident since Chernobyl, forcing evacuation of 154,000 people and changing global nuclear policy...'
+links:
+  - anchorText: "Fukushima disaster"
+    targetURL: "/history/events/fukushima-daiichi"
+    contextQuote: "2011 tsunami-triggered nuclear disaster in Japan"
+    valueProp: "Learn about the worst nuclear accident since Chernobyl"
+  - anchorText: "Fukushima Daiichi accident"
+    targetURL: "/history/events/fukushima-daiichi"
+    contextQuote: "Three reactor meltdowns at Japanese nuclear plant"
+    valueProp: "Discover how natural disasters can overwhelm nuclear safety"
+  - anchorText: "March 11, 2011 nuclear crisis"
+    targetURL: "/history/events/fukushima-daiichi"
+    contextQuote: "Earthquake and tsunami caused nuclear catastrophe"
+    valueProp: "Read about the day that changed global nuclear policy"
+  - anchorText: "Japanese nuclear disaster"
+    targetURL: "/history/events/fukushima-daiichi"
+    contextQuote: "TEPCO's Fukushima plant suffered triple meltdown"
+    valueProp: "Understand the cascade of failures that led to disaster"
+  - anchorText: "Fukushima nuclear accident"
+    targetURL: "/history/events/fukushima-daiichi"
+    contextQuote: "Station blackout led to reactor core melting"
+    valueProp: "Explore how loss of power created nuclear catastrophe"
+  - anchorText: "2011 nuclear meltdown"
+    targetURL: "/history/events/fukushima-daiichi"
+    contextQuote: "154,000 people evacuated from contaminated areas"
+    valueProp: "Learn about the human impact of nuclear disasters"
+  - anchorText: "tsunami nuclear disaster"
+    targetURL: "/history/events/fukushima-daiichi"
+    contextQuote: "14-meter waves overwhelmed plant defenses"
+    valueProp: "See how natural disasters can trigger nuclear accidents"
+  - anchorText: "post-Fukushima nuclear policy"
+    targetURL: "/history/events/fukushima-daiichi"
+    contextQuote: "Changed global approach to nuclear safety"
+    valueProp: "Understand how this disaster transformed nuclear regulation"
 ---
 
 # Fukushima Daiichi Nuclear Disaster

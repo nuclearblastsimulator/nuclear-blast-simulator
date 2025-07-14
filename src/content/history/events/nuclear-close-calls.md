@@ -1,6 +1,35 @@
 ---
 title: 'Nuclear Close Calls'
 description: 'Nuclear close calls are incidents where nuclear weapons were nearly launched or detonated accidentally, highlighting the constant risk of nuclear catastrophe through technical failures, miscommunication, or human error...'
+links:
+  - anchorText: "nuclear close calls"
+    targetURL: "/history/events/nuclear-close-calls"
+    contextQuote: "Nuclear close calls have repeatedly brought the world to the brink"
+    valueProp: "Explore the catalog of nuclear near-catastrophes"
+  - anchorText: "nuclear near-misses"
+    targetURL: "/history/events/nuclear-close-calls"
+    contextQuote: "Nuclear near-misses have been averted by luck or individual heroism"
+    valueProp: "Learn about incidents that almost triggered nuclear war"
+  - anchorText: "nuclear accidents"
+    targetURL: "/history/events/nuclear-close-calls"
+    contextQuote: "Nuclear accidents and false alarms have nearly caused catastrophe"
+    valueProp: "Discover how technical failures risked nuclear disaster"
+  - anchorText: "false nuclear alarms"
+    targetURL: "/history/events/nuclear-close-calls"
+    contextQuote: "False alarms in nuclear warning systems created dangerous situations"
+    valueProp: "Understand the risks of mistaken nuclear alerts"
+  - anchorText: "nuclear safety incidents"
+    targetURL: "/history/events/nuclear-close-calls"
+    contextQuote: "Nuclear safety incidents reveal vulnerabilities in nuclear systems"
+    valueProp: "See how close humanity has come to nuclear disaster"
+  - anchorText: "nuclear command failures"
+    targetURL: "/history/events/nuclear-close-calls"
+    contextQuote: "Nuclear command and control failures have created close calls"
+    valueProp: "Learn about breakdowns in nuclear safeguards"
+  - anchorText: "nuclear crisis incidents"
+    targetURL: "/history/events/nuclear-close-calls"
+    contextQuote: "Nuclear crisis incidents demonstrate ongoing nuclear risks"
+    valueProp: "Explore the history of nuclear danger moments"
 ---
 
 # Nuclear Close Calls

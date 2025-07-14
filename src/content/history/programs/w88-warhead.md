@@ -1,6 +1,39 @@
 ---
 title: 'W88 Warhead'
 description: 'The W88 warhead is the most advanced nuclear weapon in the U.S. arsenal, deployed on Trident II submarine-launched ballistic missiles with a yield of 475 kilotons and representing the pinnacle of American nuclear technology...'
+links:
+  - anchorText: "W88 warhead"
+    targetURL: "/history/programs/w88-warhead"
+    contextQuote: "The W88 warhead equips Trident II submarine-launched missiles"
+    valueProp: "Learn about America's most advanced nuclear warhead"
+  - anchorText: "Trident warhead"
+    targetURL: "/history/programs/w88-warhead"
+    contextQuote: "Trident II missiles carry the advanced W88 nuclear warhead"
+    valueProp: "Discover the submarine-based strategic warhead"
+  - anchorText: "W88 Alt 370"
+    targetURL: "/history/programs/w88-warhead"
+    contextQuote: "The W88 Alt 370 program modernizes the warhead for extended service"
+    valueProp: "Explore warhead life extension programs"
+  - anchorText: "475-kiloton warhead"
+    targetURL: "/history/programs/w88-warhead"
+    contextQuote: "The W88 delivers a powerful 475-kiloton yield"
+    valueProp: "Learn about strategic warhead capabilities"
+  - anchorText: "submarine warhead"
+    targetURL: "/history/programs/w88-warhead"
+    contextQuote: "The W88 serves as the primary submarine-based nuclear warhead"
+    valueProp: "Understand sea-based nuclear deterrence"
+  - anchorText: "Los Alamos warhead"
+    targetURL: "/history/programs/w88-warhead"
+    contextQuote: "Los Alamos National Laboratory developed the advanced W88 design"
+    valueProp: "Discover nuclear laboratory achievements"
+  - anchorText: "most advanced warhead"
+    targetURL: "/history/programs/w88-warhead"
+    contextQuote: "The W88 is the most advanced nuclear weapon in the U.S. arsenal"
+    valueProp: "Explore cutting-edge nuclear technology"
+  - anchorText: "miniaturized warhead design"
+    targetURL: "/history/programs/w88-warhead"
+    contextQuote: "The W88 achieves unprecedented miniaturization and yield-to-weight ratio"
+    valueProp: "Learn about warhead miniaturization breakthroughs"
 ---
 
 # W88 Warhead

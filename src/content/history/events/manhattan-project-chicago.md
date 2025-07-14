@@ -1,6 +1,35 @@
 ---
 title: 'Chicago Metallurgical Laboratory'
 description: 'The Chicago Metallurgical Laboratory was the Manhattan Project facility where Enrico Fermi achieved the first controlled nuclear chain reaction on December 2, 1942, ushering in the nuclear age...'
+links:
+  - anchorText: "Chicago Met Lab"
+    targetURL: "/history/events/manhattan-project-chicago"
+    contextQuote: "The Chicago Metallurgical Laboratory achieved the first chain reaction"
+    valueProp: "Learn about the Manhattan Project's crucial Chicago facility"
+  - anchorText: "Metallurgical Laboratory"
+    targetURL: "/history/events/manhattan-project-chicago"
+    contextQuote: "The Met Lab at University of Chicago proved nuclear fission feasible"
+    valueProp: "Discover where the nuclear age truly began"
+  - anchorText: "first controlled nuclear chain reaction"
+    targetURL: "/history/events/manhattan-project-chicago"
+    contextQuote: "Fermi achieved the first controlled chain reaction in Chicago"
+    valueProp: "Explore the birthplace of nuclear energy"
+  - anchorText: "University of Chicago reactor"
+    targetURL: "/history/events/manhattan-project-chicago"
+    contextQuote: "The University of Chicago facility developed reactor technology"
+    valueProp: "See where nuclear reactor physics was pioneered"
+  - anchorText: "Manhattan Project Chicago"
+    targetURL: "/history/events/manhattan-project-chicago"
+    contextQuote: "The Manhattan Project's Chicago operations were essential"
+    valueProp: "Understand Chicago's role in developing atomic weapons"
+  - anchorText: "plutonium production research"
+    targetURL: "/history/events/manhattan-project-chicago"
+    contextQuote: "Chicago scientists developed plutonium production methods"
+    valueProp: "Learn how plutonium weapons became possible"
+  - anchorText: "December 2, 1942"
+    targetURL: "/history/events/manhattan-project-chicago"
+    contextQuote: "December 2, 1942 marked the dawn of the nuclear age"
+    valueProp: "Discover the day that changed history"
 ---
 
 # Chicago Metallurgical Laboratory

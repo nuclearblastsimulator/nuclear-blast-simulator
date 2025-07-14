@@ -1,6 +1,31 @@
 ---
 title: 'Nuclear Ethics'
 description: 'Nuclear ethics examines the moral questions surrounding nuclear weapons, from their development and possession to their use and the threat of annihilation...'
+links:
+  - anchorText: "moral questions"
+    targetURL: "/history/events/nuclear-ethics-debate"
+    contextQuote: "The Manhattan Project raised profound moral questions"
+    valueProp: "Explore the moral and ethical debates surrounding nuclear weapons"
+  - anchorText: "nuclear ethics"
+    targetURL: "/history/events/nuclear-ethics-debate"
+    contextQuote: "Scientists grappled with the ethical implications"
+    valueProp: "Understand the philosophical and religious perspectives on nuclear weapons"
+  - anchorText: "ethical debate"
+    targetURL: "/history/events/nuclear-ethics-debate"
+    contextQuote: "The ethics of nuclear deterrence became a major issue"
+    valueProp: "Learn about the moral arguments for and against nuclear deterrence"
+  - anchorText: "moral responsibility"
+    targetURL: "/history/events/nuclear-ethics-debate"
+    contextQuote: "Scientists questioned their moral responsibility"
+    valueProp: "Explore questions of individual and collective responsibility for nuclear weapons"
+  - anchorText: "just war theory"
+    targetURL: "/history/events/nuclear-ethics-debate"
+    contextQuote: "Religious leaders applied just war principles"
+    valueProp: "Understand how traditional war ethics apply to nuclear weapons"
+  - anchorText: "humanitarian concerns"
+    targetURL: "/history/events/nuclear-ethics-debate"
+    contextQuote: "The humanitarian consequences raised ethical questions"
+    valueProp: "Learn about the humanitarian arguments against nuclear weapons"
 ---
 
 # Nuclear Ethics

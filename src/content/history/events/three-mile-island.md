@@ -1,6 +1,31 @@
 ---
 title: 'Three Mile Island'
 description: "The 1979 partial meltdown at Three Mile Island nuclear power plant became America's worst commercial nuclear accident, fundamentally changing nuclear safety regulation..."
+links:
+  - anchorText: "Three Mile Island"
+    targetURL: "/history/events/three-mile-island"
+    contextQuote: "The 1979 accident at Three Mile Island"
+    valueProp: "Learn about America's worst nuclear power accident"
+  - anchorText: "TMI accident"
+    targetURL: "/history/events/three-mile-island"
+    contextQuote: "The TMI accident changed nuclear regulation"
+    valueProp: "Understand the 1979 nuclear partial meltdown"
+  - anchorText: "1979 nuclear accident"
+    targetURL: "/history/events/three-mile-island"
+    contextQuote: "The 1979 nuclear accident in Pennsylvania"
+    valueProp: "Explore the accident that transformed nuclear safety"
+  - anchorText: "partial meltdown"
+    targetURL: "/history/events/three-mile-island"
+    contextQuote: "The partial meltdown at a U.S. nuclear plant"
+    valueProp: "Learn about America's nuclear wake-up call"
+  - anchorText: "Pennsylvania accident"
+    targetURL: "/history/events/three-mile-island"
+    contextQuote: "The nuclear accident near Harrisburg, Pennsylvania"
+    valueProp: "Discover the incident that changed U.S. nuclear power"
+  - anchorText: "nuclear evacuation"
+    targetURL: "/history/events/three-mile-island"
+    contextQuote: "The evacuation following a nuclear accident"
+    valueProp: "Understand the first nuclear evacuation in America"
 ---
 
 # Three Mile Island

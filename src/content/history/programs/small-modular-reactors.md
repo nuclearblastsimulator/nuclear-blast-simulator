@@ -1,6 +1,39 @@
 ---
 title: 'Small Modular Reactors'
 description: 'Small Modular Reactors represent a new generation of nuclear technology designed to be safer, more affordable, and more flexible than traditional large nuclear plants...'
+links:
+  - anchorText: "small modular reactors"
+    targetURL: "/history/programs/small-modular-reactors"
+    contextQuote: "The future of nuclear energy may lie in small modular reactors"
+    valueProp: "Learn about next-generation nuclear power technology"
+  - anchorText: "SMR technology"
+    targetURL: "/history/programs/small-modular-reactors"
+    contextQuote: "SMR technology promises to revolutionize nuclear power deployment"
+    valueProp: "Discover how modular reactors are changing nuclear energy"
+  - anchorText: "advanced nuclear reactors"
+    targetURL: "/history/programs/small-modular-reactors"
+    contextQuote: "Advanced nuclear reactors offer enhanced safety and flexibility"
+    valueProp: "Explore the future of nuclear reactor design"
+  - anchorText: "modular nuclear power"
+    targetURL: "/history/programs/small-modular-reactors"
+    contextQuote: "Modular nuclear power enables scalable clean energy deployment"
+    valueProp: "Understand the modular approach to nuclear energy"
+  - anchorText: "passive safety systems"
+    targetURL: "/history/programs/small-modular-reactors"
+    contextQuote: "SMRs feature passive safety systems that require no external power"
+    valueProp: "Learn about revolutionary nuclear safety features"
+  - anchorText: "factory-built reactors"
+    targetURL: "/history/programs/small-modular-reactors"
+    contextQuote: "Factory-built reactors promise to reduce nuclear construction costs"
+    valueProp: "Discover how manufacturing changes nuclear economics"
+  - anchorText: "microreactors"
+    targetURL: "/history/programs/small-modular-reactors"
+    contextQuote: "Microreactors can provide power for remote communities and military bases"
+    valueProp: "Explore ultra-small nuclear power solutions"
+  - anchorText: "nuclear hydrogen production"
+    targetURL: "/history/programs/small-modular-reactors"
+    contextQuote: "SMRs enable efficient nuclear hydrogen production for clean fuel"
+    valueProp: "Learn about nuclear-powered hydrogen economy"
 ---
 
 # Small Modular Reactors

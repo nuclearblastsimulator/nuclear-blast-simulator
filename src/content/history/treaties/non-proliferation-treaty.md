@@ -1,6 +1,23 @@
 ---
 title: 'Non-Proliferation Treaty'
 description: 'The 1968 Nuclear Non-Proliferation Treaty became the cornerstone of global nuclear governance, establishing the framework to prevent nuclear weapons spread while promoting peaceful nuclear energy...'
+links:
+  - text: "Nuclear Non-Proliferation Treaty"
+    targetURL: "/history/treaties/non-proliferation-treaty"
+  - text: "NPT"
+    targetURL: "/history/treaties/non-proliferation-treaty"
+  - text: "nuclear governance framework"
+    targetURL: "/history/treaties/non-proliferation-treaty"
+  - text: "proliferation prevention"
+    targetURL: "/history/treaties/non-proliferation-treaty"
+  - text: "IAEA safeguards"
+    targetURL: "/history/treaties/non-proliferation-treaty"
+  - text: "nuclear disarmament obligations"
+    targetURL: "/history/treaties/non-proliferation-treaty"
+  - text: "peaceful nuclear cooperation"
+    targetURL: "/history/treaties/non-proliferation-treaty"
+  - text: "nuclear weapons spread prevention"
+    targetURL: "/history/treaties/non-proliferation-treaty"
 ---
 
 # Nuclear Non-Proliferation Treaty

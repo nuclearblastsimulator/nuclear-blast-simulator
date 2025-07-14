@@ -1,6 +1,31 @@
 ---
 title: 'Nuclear Fission Discovery'
 description: 'In 1938, Otto Hahn and Fritz Strassmann discovered nuclear fission, with Lise Meitner and Otto Frisch providing the theoretical explanation that opened the path to nuclear weapons...'
+links:
+  - anchorText: "discovery of fission"
+    targetURL: "/history/events/nuclear-fission-discovery"
+    contextQuote: "The 1938 discovery of nuclear fission opened the path"
+    valueProp: "Learn about the groundbreaking 1938 discovery that made nuclear weapons possible"
+  - anchorText: "Hahn and Meitner"
+    targetURL: "/history/events/nuclear-fission-discovery"
+    contextQuote: "Otto Hahn and Lise Meitner's experiments revealed"
+    valueProp: "Discover how scientists split the atom and changed history"
+  - anchorText: "splitting the atom"
+    targetURL: "/history/events/nuclear-fission-discovery"
+    contextQuote: "Scientists first split the atom in 1938"
+    valueProp: "Understand the scientific breakthrough that enabled nuclear technology"
+  - anchorText: "1938 discovery"
+    targetURL: "/history/events/nuclear-fission-discovery"
+    contextQuote: "The pivotal 1938 discovery in Berlin"
+    valueProp: "Learn about the Berlin laboratory discovery that transformed warfare"
+  - anchorText: "fission discovery"
+    targetURL: "/history/events/nuclear-fission-discovery"
+    contextQuote: "The discovery of nuclear fission led directly to"
+    valueProp: "Explore how nuclear fission was discovered and its immediate implications"
+  - anchorText: "nuclear breakthrough"
+    targetURL: "/history/events/nuclear-fission-discovery"
+    contextQuote: "This breakthrough revealed enormous energy could be released"
+    valueProp: "Understand the scientific breakthrough that revealed nuclear energy"
 ---
 
 # Nuclear Fission Discovery

@@ -1,6 +1,35 @@
 ---
 title: 'Nuclear Proliferation 21st Century'
 description: 'The 21st century has seen new nuclear weapon states emerge while others have abandoned nuclear programs, creating complex proliferation challenges and diplomatic responses...'
+links:
+  - anchorText: "21st century proliferation"
+    targetURL: "/history/events/nuclear-proliferation-21st-century"
+    contextQuote: "The challenges of nuclear proliferation in the 21st century"
+    valueProp: "Explore how nuclear weapons spread continues in the modern era"
+  - anchorText: "modern proliferation"
+    targetURL: "/history/events/nuclear-proliferation-21st-century"
+    contextQuote: "Contemporary nuclear proliferation challenges include"
+    valueProp: "Understand current nuclear proliferation dynamics and responses"
+  - anchorText: "North Korea's nuclear program"
+    targetURL: "/history/events/nuclear-proliferation-21st-century"
+    contextQuote: "North Korea's development of nuclear weapons"
+    valueProp: "Learn about North Korea's nuclear tests and international responses"
+  - anchorText: "Iran nuclear deal"
+    targetURL: "/history/events/nuclear-proliferation-21st-century"
+    contextQuote: "The Joint Comprehensive Plan of Action with Iran"
+    valueProp: "Understand diplomatic efforts to prevent nuclear proliferation"
+  - anchorText: "nuclear black market"
+    targetURL: "/history/events/nuclear-proliferation-21st-century"
+    contextQuote: "The A.Q. Khan network revealed illicit nuclear trade"
+    valueProp: "Discover how nuclear technology spreads through black markets"
+  - anchorText: "Libya's disarmament"
+    targetURL: "/history/events/nuclear-proliferation-21st-century"
+    contextQuote: "Libya voluntarily abandoned its nuclear weapons program"
+    valueProp: "Learn about successful nuclear disarmament efforts"
+  - anchorText: "current proliferation"
+    targetURL: "/history/events/nuclear-proliferation-21st-century"
+    contextQuote: "Current nuclear proliferation threats and challenges"
+    valueProp: "Explore ongoing efforts to prevent nuclear weapons spread"
 ---
 
 # Nuclear Proliferation in the 21st Century

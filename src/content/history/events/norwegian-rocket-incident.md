@@ -1,6 +1,35 @@
 ---
 title: 'Norwegian Rocket Incident'
 description: 'On January 25, 1995, Russia nearly launched nuclear missiles when they mistook a Norwegian scientific rocket for a U.S. submarine-launched ballistic missile...'
+links:
+  - anchorText: "Norwegian Rocket Incident"
+    targetURL: "/history/events/norwegian-rocket-incident"
+    contextQuote: "The 1995 Norwegian Rocket Incident nearly triggered nuclear war"
+    valueProp: "Learn about the post-Cold War nuclear near-miss"
+  - anchorText: "1995 nuclear false alarm"
+    targetURL: "/history/events/norwegian-rocket-incident"
+    contextQuote: "The 1995 false alarm brought Russia to nuclear alert"
+    valueProp: "Discover how a scientific rocket almost started nuclear war"
+  - anchorText: "Black Brant incident"
+    targetURL: "/history/events/norwegian-rocket-incident"
+    contextQuote: "The Black Brant XII rocket was mistaken for a missile"
+    valueProp: "Understand the danger of misidentified launches"
+  - anchorText: "Yeltsin nuclear briefcase"
+    targetURL: "/history/events/norwegian-rocket-incident"
+    contextQuote: "Boris Yeltsin activated his nuclear briefcase"
+    valueProp: "See the only time a Russian leader activated nuclear codes"
+  - anchorText: "post-Cold War nuclear crisis"
+    targetURL: "/history/events/norwegian-rocket-incident"
+    contextQuote: "This post-Cold War crisis showed nuclear risks remained"
+    valueProp: "Learn how nuclear dangers persisted after 1991"
+  - anchorText: "scientific rocket misidentified"
+    targetURL: "/history/events/norwegian-rocket-incident"
+    contextQuote: "A peaceful scientific rocket was misidentified as an attack"
+    valueProp: "Explore how science experiments can trigger crises"
+  - anchorText: "January 25, 1995 incident"
+    targetURL: "/history/events/norwegian-rocket-incident"
+    contextQuote: "The January 25, 1995 incident lasted only minutes"
+    valueProp: "Understand the timeline of this nuclear near-miss"
 ---
 
 # Norwegian Rocket Incident

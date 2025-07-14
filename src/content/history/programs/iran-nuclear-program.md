@@ -1,6 +1,23 @@
 ---
 title: 'Tehran - Iran Nuclear Negotiations'
 description: "Tehran has been the center of Iran's nuclear program and international negotiations, from the development of nuclear capabilities to the JCPOA agreement and subsequent diplomatic efforts..."
+links:
+  - text: "Iran nuclear program"
+    targetURL: "/history/programs/iran-nuclear-program"
+  - text: "Tehran nuclear negotiations"
+    targetURL: "/history/programs/iran-nuclear-program"
+  - text: "JCPOA nuclear deal"
+    targetURL: "/history/programs/iran-nuclear-program"
+  - text: "uranium enrichment Iran"
+    targetURL: "/history/programs/iran-nuclear-program"
+  - text: "Natanz enrichment facility"
+    targetURL: "/history/programs/iran-nuclear-program"
+  - text: "nuclear sanctions Iran"
+    targetURL: "/history/programs/iran-nuclear-program"
+  - text: "nuclear proliferation threat"
+    targetURL: "/history/programs/iran-nuclear-program"
+  - text: "Middle East nuclear crisis"
+    targetURL: "/history/programs/iran-nuclear-program"
 ---
 
 # Tehran - Iran Nuclear Negotiations

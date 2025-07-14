@@ -1,6 +1,39 @@
 ---
 title: 'Able Archer 83'
 description: 'In November 1983, a NATO military exercise simulating nuclear war nearly triggered an actual nuclear conflict when Soviet leaders believed it was cover for a real attack...'
+links:
+  - anchorText: "Able Archer 83"
+    targetURL: "/history/events/able-archer-83"
+    contextQuote: "NATO exercise that nearly triggered nuclear war in 1983"
+    valueProp: "Learn how a military exercise almost caused nuclear war through Soviet misinterpretation"
+  - anchorText: "1983 nuclear crisis"
+    targetURL: "/history/events/able-archer-83"
+    contextQuote: "The closest the world came to nuclear war since the Cuban Missile Crisis"
+    valueProp: "Discover the hidden nuclear crisis that remained classified for years"
+  - anchorText: "NATO nuclear exercise"
+    targetURL: "/history/events/able-archer-83"
+    contextQuote: "Military exercises can be misinterpreted as actual war preparations"
+    valueProp: "Understand how realistic military exercises can trigger dangerous misunderstandings"
+  - anchorText: "Soviet nuclear paranoia"
+    targetURL: "/history/events/able-archer-83"
+    contextQuote: "Operation RYaN and Soviet fears of American first strike"
+    valueProp: "Explore how intelligence failures and paranoia nearly led to nuclear catastrophe"
+  - anchorText: "Reagan-era nuclear tensions"
+    targetURL: "/history/events/able-archer-83"
+    contextQuote: "Peak Cold War tensions during Reagan administration"
+    valueProp: "Learn about the most dangerous period of U.S.-Soviet nuclear confrontation"
+  - anchorText: "nuclear command and control crisis"
+    targetURL: "/history/events/able-archer-83"
+    contextQuote: "Testing NATO's nuclear decision-making procedures"
+    valueProp: "See how nuclear command exercises can be mistaken for real war preparations"
+  - anchorText: "Oleg Gordievsky intelligence"
+    targetURL: "/history/events/able-archer-83"
+    contextQuote: "Double agent revealed Soviet fears during the crisis"
+    valueProp: "Discover how one spy's intelligence prevented potential nuclear war"
+  - anchorText: "November 1983 nuclear scare"
+    targetURL: "/history/events/able-archer-83"
+    contextQuote: "The November crisis that changed Reagan's approach to arms control"
+    valueProp: "Learn about the near-miss that influenced U.S. nuclear policy"
 ---
 
 # Able Archer 83

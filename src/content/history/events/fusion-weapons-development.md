@@ -1,6 +1,39 @@
 ---
 title: 'Fusion Weapons'
 description: 'Fusion weapons, or hydrogen bombs, derive their immense destructive power from nuclear fusion reactions, representing the most powerful weapons ever created by humanity...'
+links:
+  - anchorText: "fusion weapons"
+    targetURL: "/history/events/fusion-weapons-development"
+    contextQuote: "Weapons deriving power from nuclear fusion"
+    valueProp: "Learn about the most powerful nuclear weapons ever created"
+  - anchorText: "hydrogen bomb development"
+    targetURL: "/history/events/fusion-weapons-development"
+    contextQuote: "Development of thermonuclear weapons in the 1950s"
+    valueProp: "Discover how scientists weaponized the power of the stars"
+  - anchorText: "H-bomb technology"
+    targetURL: "/history/events/fusion-weapons-development"
+    contextQuote: "Teller-Ulam design and fusion weapon principles"
+    valueProp: "Understand the physics behind megaton-range explosions"
+  - anchorText: "thermonuclear weapons"
+    targetURL: "/history/events/fusion-weapons-development"
+    contextQuote: "Weapons using nuclear fusion for explosive power"
+    valueProp: "Explore the ultimate expression of nuclear weapon technology"
+  - anchorText: "fusion bomb development"
+    targetURL: "/history/events/fusion-weapons-development"
+    contextQuote: "Evolution from fission to fusion weapons"
+    valueProp: "Read about humanity's most destructive invention"
+  - anchorText: "megaton weapons"
+    targetURL: "/history/events/fusion-weapons-development"
+    contextQuote: "Nuclear weapons with yields in millions of tons TNT"
+    valueProp: "Learn how fusion made city-destroying weapons possible"
+  - anchorText: "advanced nuclear weapons"
+    targetURL: "/history/events/fusion-weapons-development"
+    contextQuote: "Second generation nuclear weapons technology"
+    valueProp: "See how nuclear weapons evolved beyond atomic bombs"
+  - anchorText: "hydrogen bomb principles"
+    targetURL: "/history/events/fusion-weapons-development"
+    contextQuote: "Using fission to trigger fusion reactions"
+    valueProp: "Understand the staged design of modern nuclear arsenals"
 ---
 
 # Fusion Weapons

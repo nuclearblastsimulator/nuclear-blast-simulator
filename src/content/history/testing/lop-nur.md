@@ -1,6 +1,46 @@
 ---
 title: 'Lop Nur'
 description: "China's nuclear test site in the Taklamakan Desert hosted 45 nuclear tests from 1964 to 1996, establishing China as a nuclear power while exposing Uyghur populations to radiation..."
+links:
+  - anchorText: "Lop Nur test site"
+    targetUrl: "/history/testing/lop-nur"
+    contextQuote: "Lop Nur served as China's primary nuclear testing site from 1964 to 1996"
+    valueProp: "Learn about China's nuclear weapons testing program"
+  
+  - anchorText: "Uyghur population exposure"
+    targetUrl: "/history/testing/lop-nur"
+    contextQuote: "An estimated 1.48 million people were exposed to radioactive fallout from the tests"
+    valueProp: "Understand environmental injustice from nuclear testing"
+  
+  - anchorText: "China's first nuclear test"
+    targetUrl: "/history/testing/lop-nur"
+    contextQuote: "China detonated its first atomic bomb at Lop Nur on October 16, 1964"
+    valueProp: "Discover how China became the fifth nuclear power"
+  
+  - anchorText: "Taklamakan Desert"
+    targetUrl: "/history/testing/lop-nur"
+    contextQuote: "Located in one of the most remote and inhospitable regions of China"
+    valueProp: "Explore nuclear testing in China's western desert"
+  
+  - anchorText: "Chinese thermonuclear program"
+    targetUrl: "/history/testing/lop-nur"
+    contextQuote: "China detonated its first hydrogen bomb at Lop Nur in just 2.5 years after its first atomic test"
+    valueProp: "Read about China's rapid thermonuclear development"
+  
+  - anchorText: "ethnic minority testing impacts"
+    targetUrl: "/history/testing/lop-nur"
+    contextQuote: "The burden of China's nuclear program fell disproportionately on marginalized populations"
+    valueProp: "Learn about nuclear testing's impact on ethnic minorities"
+  
+  - anchorText: "Chinese nuclear weapons program"
+    targetUrl: "/history/testing/lop-nur"
+    contextQuote: "This remote location in western China witnessed 45 nuclear tests"
+    valueProp: "Understand the scale of Chinese nuclear weapons testing"
+  
+  - anchorText: "Xinjiang testing"
+    targetUrl: "/history/testing/lop-nur"
+    contextQuote: "Located in the Taklamakan Desert of Xinjiang province"
+    valueProp: "Learn about nuclear testing in China's western regions"
 ---
 
 # Lop Nur

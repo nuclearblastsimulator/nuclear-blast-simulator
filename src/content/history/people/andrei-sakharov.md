@@ -1,6 +1,39 @@
 ---
 title: 'Andrei Sakharov'
 description: 'The Soviet physicist who helped create the hydrogen bomb later became a prominent human rights activist and nuclear disarmament advocate, earning the Nobel Peace Prize...'
+links:
+  - anchorText: "Andrei Sakharov"
+    targetURL: "/history/people/andrei-sakharov"
+    contextQuote: "Andrei Sakharov developed the Soviet Union's hydrogen bomb before becoming a prominent advocate for nuclear disarmament and human rights."
+    valueProp: "Learn about the Soviet physicist who helped create the hydrogen bomb then became its most prominent critic."
+  - anchorText: "Soviet hydrogen bomb"
+    targetURL: "/history/people/andrei-sakharov"
+    contextQuote: "The layer cake design developed by Sakharov made the Soviet hydrogen bomb possible, achieving parity with U.S. thermonuclear capabilities."
+    valueProp: "Discover how Sakharov's breakthrough design enabled Soviet thermonuclear weapons development."
+  - anchorText: "Sakharov"
+    targetURL: "/history/people/andrei-sakharov"
+    contextQuote: "Sakharov's transformation from weapons scientist to peace advocate remains one of the most remarkable moral journeys in nuclear history."
+    valueProp: "Explore the extraordinary transformation of the physicist who went from building bombs to advocating for peace."
+  - anchorText: "Nobel Peace Prize laureate"
+    targetURL: "/history/people/andrei-sakharov"
+    contextQuote: "In 1975, Sakharov received the Nobel Peace Prize for his human rights work and nuclear disarmament advocacy."
+    valueProp: "Read about the nuclear weapons scientist who earned the Nobel Peace Prize for opposing the weapons he helped create."
+  - anchorText: "father of the Soviet hydrogen bomb"
+    targetURL: "/history/people/andrei-sakharov"
+    contextQuote: "As the father of the Soviet hydrogen bomb, Sakharov's work enabled the USSR to achieve nuclear parity with the United States."
+    valueProp: "Understand the pivotal role Sakharov played in Soviet nuclear weapons development."
+  - anchorText: "Moscow Helsinki Group founder"
+    targetURL: "/history/people/andrei-sakharov"
+    contextQuote: "Sakharov co-founded the Moscow Helsinki Group to monitor Soviet human rights violations and promote democratic reforms."
+    valueProp: "Learn how Sakharov became a leading figure in the Soviet human rights movement."
+  - anchorText: "Tsar Bomba scientist"
+    targetURL: "/history/people/andrei-sakharov"
+    contextQuote: "Sakharov contributed to the development of the 50-megaton Tsar Bomba, the most powerful nuclear weapon ever tested."
+    valueProp: "Discover Sakharov's role in creating history's most powerful nuclear explosion."
+  - anchorText: "conscience of the nuclear age"
+    targetURL: "/history/people/andrei-sakharov"
+    contextQuote: "Sakharov became known as the conscience of the nuclear age, symbolizing scientific responsibility and moral courage."
+    valueProp: "Examine how Sakharov embodied the moral dilemmas facing nuclear scientists."
 ---
 
 # Andrei Sakharov

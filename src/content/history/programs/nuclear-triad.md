@@ -1,6 +1,35 @@
 ---
 title: 'Nuclear Triad'
 description: 'The nuclear triad strategy employs three delivery systems - ICBMs, submarines, and bombers - to ensure survivable nuclear deterrence through diversified capabilities...'
+links:
+  - anchorText: "nuclear triad"
+    targetURL: "/history/programs/nuclear-triad"
+    contextQuote: "The nuclear triad consists of ICBMs, submarine-launched missiles, and strategic bombers"
+    valueProp: "Learn about the three-legged nuclear deterrent"
+  - anchorText: "strategic nuclear triad"
+    targetURL: "/history/programs/nuclear-triad"
+    contextQuote: "Three complementary delivery systems ensure survivable nuclear deterrence"
+    valueProp: "Understand the foundation of nuclear strategy"
+  - anchorText: "triad modernization"
+    targetURL: "/history/programs/nuclear-triad"
+    contextQuote: "All three legs of the nuclear triad are undergoing massive modernization"
+    valueProp: "Explore the future of nuclear force structure"
+  - anchorText: "nuclear delivery systems"
+    targetURL: "/history/programs/nuclear-triad"
+    contextQuote: "Land, sea, and air-based systems provide flexible nuclear response options"
+    valueProp: "Discover how nuclear weapons are delivered"
+  - anchorText: "strategic deterrence"
+    targetURL: "/history/programs/nuclear-triad"
+    contextQuote: "The triad ensures no enemy can eliminate all nuclear forces in a first strike"
+    valueProp: "Learn why multiple delivery systems enhance deterrence"
+  - anchorText: "nuclear force structure"
+    targetURL: "/history/programs/nuclear-triad"
+    contextQuote: "The combination of ICBMs, SLBMs, and bombers creates strategic stability"
+    valueProp: "Understand nuclear force planning and structure"
+  - anchorText: "dyad vs triad"
+    targetURL: "/history/programs/nuclear-triad"
+    contextQuote: "Debates continue over maintaining all three legs versus a dyad system"
+    valueProp: "Explore alternatives to the traditional nuclear triad"
 ---
 
 # Nuclear Triad

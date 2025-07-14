@@ -1,6 +1,39 @@
 ---
 title: 'Strategic Bombers'
 description: 'Strategic bombers were the first nuclear delivery systems and remain unique for their flexibility, ability to be recalled, and dual nuclear-conventional capability...'
+links:
+  - anchorText: "strategic bombers"
+    targetURL: "/history/programs/strategic-bombers"
+    contextQuote: "Strategic bombers were the first nuclear delivery systems"
+    valueProp: "Learn about nuclear-capable bomber aircraft"
+  - anchorText: "B-52 Stratofortress"
+    targetURL: "/history/programs/strategic-bombers"
+    contextQuote: "The B-52 Stratofortress has served for over 70 years"
+    valueProp: "Discover the iconic long-range nuclear bomber"
+  - anchorText: "bomber leg of the triad"
+    targetURL: "/history/programs/strategic-bombers"
+    contextQuote: "Strategic bombers form the air-based leg of the nuclear triad"
+    valueProp: "Understand the bomber component of nuclear forces"
+  - anchorText: "stealth bombers"
+    targetURL: "/history/programs/strategic-bombers"
+    contextQuote: "The B-2 Spirit uses advanced stealth technology"
+    valueProp: "Explore radar-evading nuclear delivery aircraft"
+  - anchorText: "Enola Gay"
+    targetURL: "/history/programs/strategic-bombers"
+    contextQuote: "The B-29 Enola Gay dropped the first atomic bomb on Hiroshima"
+    valueProp: "Learn about the historic nuclear bomber"
+  - anchorText: "nuclear bomber force"
+    targetURL: "/history/programs/strategic-bombers"
+    contextQuote: "The Strategic Air Command built America's nuclear bomber force"
+    valueProp: "Discover the development of nuclear aviation"
+  - anchorText: "bomber-launched cruise missiles"
+    targetURL: "/history/programs/strategic-bombers"
+    contextQuote: "Modern bombers carry air-launched cruise missiles for standoff attacks"
+    valueProp: "Learn about advanced bomber weapons"
+  - anchorText: "visible deterrent"
+    targetURL: "/history/programs/strategic-bombers"
+    contextQuote: "Bombers provide a visible demonstration of nuclear capability"
+    valueProp: "Understand bombers' unique deterrent role"
 ---
 
 # Strategic Bombers

@@ -1,6 +1,31 @@
 ---
 title: "Obninsk Reactor"
 description: "The world's first civilian nuclear power plant began operation in 1954 in Obninsk, Soviet Union, demonstrating peaceful applications of nuclear technology..."
+links:
+  - anchorText: "first nuclear power plant"
+    targetURL: "/history/events/obninsk-first-power-reactor"
+    contextQuote: "The world's first nuclear power plant began operation"
+    valueProp: "Learn about the historic Obninsk reactor that started civilian nuclear power"
+  - anchorText: "Obninsk reactor"
+    targetURL: "/history/events/obninsk-first-power-reactor"
+    contextQuote: "The Obninsk plant demonstrated peaceful nuclear energy"
+    valueProp: "Discover the 1954 Soviet reactor that launched the nuclear power industry"
+  - anchorText: "first civilian reactor"
+    targetURL: "/history/events/obninsk-first-power-reactor"
+    contextQuote: "First reactor designed for civilian electricity generation"
+    valueProp: "Explore the pioneering reactor that proved nuclear power was feasible"
+  - anchorText: "1954 nuclear milestone"
+    targetURL: "/history/events/obninsk-first-power-reactor"
+    contextQuote: "June 27, 1954 marked the beginning of nuclear power"
+    valueProp: "Understand the historic achievement that began the nuclear power era"
+  - anchorText: "peaceful atomic energy"
+    targetURL: "/history/events/obninsk-first-power-reactor"
+    contextQuote: "Demonstrated peaceful applications of nuclear technology"
+    valueProp: "Learn how the Soviets first harnessed atoms for peace"
+  - anchorText: "nuclear power history"
+    targetURL: "/history/events/obninsk-first-power-reactor"
+    contextQuote: "The history of civilian nuclear power began at Obninsk"
+    valueProp: "Discover the origins of the global nuclear power industry"
 ---
 
 # Obninsk Nuclear Power Plant

@@ -1,6 +1,39 @@
 ---
 title: 'W87 Warhead'
 description: 'The W87 warhead is the primary nuclear warhead deployed on the Minuteman III intercontinental ballistic missile, with a yield of 300-475 kilotons and representing modern U.S. strategic nuclear capability...'
+links:
+  - anchorText: "W87 warhead"
+    targetURL: "/history/programs/w87-warhead"
+    contextQuote: "The W87 warhead is the primary warhead on Minuteman III missiles"
+    valueProp: "Learn about America's land-based strategic warhead"
+  - anchorText: "Minuteman III warhead"
+    targetURL: "/history/programs/w87-warhead"
+    contextQuote: "Minuteman III missiles carry the W87 nuclear warhead"
+    valueProp: "Discover the ICBM warhead system"
+  - anchorText: "W87 modernization"
+    targetURL: "/history/programs/w87-warhead"
+    contextQuote: "The W87-1 life extension program modernizes the warhead"
+    valueProp: "Explore nuclear warhead modernization efforts"
+  - anchorText: "modern strategic warhead"
+    targetURL: "/history/programs/w87-warhead"
+    contextQuote: "The W87 represents modern U.S. strategic nuclear capability"
+    valueProp: "Understand advanced warhead technology"
+  - anchorText: "300-475 kiloton warhead"
+    targetURL: "/history/programs/w87-warhead"
+    contextQuote: "The W87 has a yield of 300-475 kilotons"
+    valueProp: "Learn about strategic warhead yields"
+  - anchorText: "enhanced safety warhead"
+    targetURL: "/history/programs/w87-warhead"
+    contextQuote: "The W87 incorporates advanced safety and security features"
+    valueProp: "Discover modern warhead safety systems"
+  - anchorText: "Livermore warhead design"
+    targetURL: "/history/programs/w87-warhead"
+    contextQuote: "Lawrence Livermore National Laboratory developed the W87"
+    valueProp: "Explore nuclear weapons laboratory development"
+  - anchorText: "advanced thermonuclear warhead"
+    targetURL: "/history/programs/w87-warhead"
+    contextQuote: "The W87 uses sophisticated two-stage thermonuclear design"
+    valueProp: "Learn about modern hydrogen bomb technology"
 ---
 
 # W87 Warhead
