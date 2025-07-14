@@ -1,6 +1,46 @@
 ---
 title: "Critical Mass"
 description: "Critical mass is the minimum amount of fissile material needed to sustain a nuclear chain reaction."
+links:
+  - anchorText: "minimum amount of fissile material"
+    targetURL: "/terms/weapons/critical-mass"
+    contextQuote: "Nuclear weapons require a precise amount of fissile material to achieve a sustained chain reaction"
+    valueProp: "Learn about the critical mass requirements for nuclear weapons"
+  
+  - anchorText: "critical mass of uranium"
+    targetURL: "/terms/weapons/critical-mass"
+    contextQuote: "Highly enriched uranium requires approximately 52 kg for a bare sphere configuration"
+    valueProp: "Understand the critical mass requirements for uranium-based weapons"
+  
+  - anchorText: "supercritical assembly"
+    targetURL: "/terms/weapons/critical-mass"
+    contextQuote: "Weapons must achieve supercriticality rapidly to produce explosive yields"
+    valueProp: "Explore how critical mass enables nuclear explosions"
+  
+  - anchorText: "neutron multiplication factor"
+    targetURL: "/terms/weapons/critical-mass"
+    contextQuote: "The multiplication factor k must exceed 1.0 for a runaway chain reaction"
+    valueProp: "Understand the physics behind critical mass and chain reactions"
+  
+  - anchorText: "critical mass calculations"
+    targetURL: "/terms/weapons/critical-mass"
+    contextQuote: "The Trinity test required precise critical mass calculations to ensure success"
+    valueProp: "Learn how scientists calculate critical mass for different materials"
+  
+  - anchorText: "subcritical and supercritical states"
+    targetURL: "/terms/weapons/critical-mass"
+    contextQuote: "Nuclear reactors operate at criticality while weapons achieve prompt supercriticality"
+    valueProp: "Understand the different critical states in nuclear physics"
+  
+  - anchorText: "criticality accidents"
+    targetURL: "/terms/weapons/critical-mass"
+    contextQuote: "Several fatal criticality accidents occurred during early nuclear research"
+    valueProp: "Learn about the dangers of accidental critical mass assembly"
+  
+  - anchorText: "neutron reflectors"
+    targetURL: "/terms/weapons/critical-mass"
+    contextQuote: "Tamper materials can reduce the critical mass by reflecting neutrons back into the core"
+    valueProp: "Discover how reflectors reduce critical mass requirements"
 ---
 
 # Critical Mass

@@ -1,6 +1,46 @@
 ---
 title: "Nuclear Weapons Yield Comparison"
 description: "A comprehensive comparison of nuclear weapon yields from conventional explosives to the most powerful thermonuclear weapons, illustrating the dramatic scale of nuclear destructive power..."
+links:
+  - anchorText: "nuclear weapon yields"
+    targetURL: "/terms/weapons/yield-comparison"
+    contextQuote: "Nuclear weapons range from sub-kiloton tactical weapons to 50-megaton strategic bombs"
+    valueProp: "Compare the yields of different nuclear weapons"
+  
+  - anchorText: "yield comparison"
+    targetURL: "/terms/weapons/yield-comparison"
+    contextQuote: "The Hiroshima bomb was 15 kilotons while the Tsar Bomba was 50 megatons"
+    valueProp: "See comprehensive comparisons of nuclear weapon yields"
+  
+  - anchorText: "kiloton to megaton"
+    targetURL: "/terms/weapons/yield-comparison"
+    contextQuote: "Modern weapons range from kiloton tactical weapons to megaton strategic warheads"
+    valueProp: "Understand the scale from kilotons to megatons"
+  
+  - anchorText: "nuclear yields"
+    targetURL: "/terms/weapons/yield-comparison"
+    contextQuote: "Nuclear yields are measured in TNT equivalents from tons to megatons"
+    valueProp: "Learn how nuclear weapon yields are measured"
+  
+  - anchorText: "weapon yield ranges"
+    targetURL: "/terms/weapons/yield-comparison"
+    contextQuote: "Different nuclear powers maintain arsenals with varying yield capabilities"
+    valueProp: "Explore yield ranges by country and weapon type"
+  
+  - anchorText: "tactical nuclear weapons"
+    targetURL: "/terms/weapons/yield-comparison"
+    contextQuote: "Tactical nuclear weapons typically have yields below 100 kilotons"
+    valueProp: "Learn about lower-yield tactical weapon capabilities"
+  
+  - anchorText: "strategic weapon yields"
+    targetURL: "/terms/weapons/yield-comparison"
+    contextQuote: "Strategic weapons designed for deterrence often exceed 100 kilotons"
+    valueProp: "Understand strategic nuclear weapon yields"
+  
+  - anchorText: "yield scaling effects"
+    targetURL: "/terms/weapons/yield-comparison"
+    contextQuote: "Blast radius scales with the cube root of yield, not linearly"
+    valueProp: "Discover how nuclear effects scale with yield"
 ---
 
 # Nuclear Weapons Yield Comparison

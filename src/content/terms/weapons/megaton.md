@@ -1,6 +1,46 @@
 ---
 title: "Megaton"
 description: "A megaton measures nuclear explosive yield equivalent to one million tons of TNT."
+links:
+  - anchorText: "megaton yields"
+    targetURL: "/terms/weapons/megaton"
+    contextQuote: "The Tsar Bomba achieved a yield of 50 megatons, the largest ever tested"
+    valueProp: "Learn about the megaton scale of nuclear weapons"
+  
+  - anchorText: "one megaton"
+    targetURL: "/terms/weapons/megaton"
+    contextQuote: "A one megaton weapon releases energy equivalent to one million tons of TNT"
+    valueProp: "Understand what a megaton means in nuclear weapons"
+  
+  - anchorText: "megaton-class weapons"
+    targetURL: "/terms/weapons/megaton"
+    contextQuote: "Modern ICBMs can carry multiple megaton-class warheads"
+    valueProp: "Explore the destructive power of megaton weapons"
+  
+  - anchorText: "hydrogen bomb yields"
+    targetURL: "/terms/weapons/megaton"
+    contextQuote: "Thermonuclear weapons routinely achieve megaton-scale yields"
+    valueProp: "Discover how hydrogen bombs reach megaton levels"
+  
+  - anchorText: "city-busting capability"
+    targetURL: "/terms/weapons/megaton"
+    contextQuote: "A single megaton weapon can destroy an entire metropolitan area"
+    valueProp: "Learn about the strategic role of megaton weapons"
+  
+  - anchorText: "megaton explosions"
+    targetURL: "/terms/weapons/megaton"
+    contextQuote: "The Castle Bravo test unexpectedly yielded 15 megatons"
+    valueProp: "Understand the scale of megaton nuclear explosions"
+  
+  - anchorText: "MT unit"
+    targetURL: "/terms/weapons/megaton"
+    contextQuote: "Nuclear yields above one million tons of TNT are measured in megatons (MT)"
+    valueProp: "Learn how megaton units measure nuclear yields"
+  
+  - anchorText: "thermonuclear yields"
+    targetURL: "/terms/weapons/megaton"
+    contextQuote: "The development of fusion weapons enabled megaton-scale destructive power"
+    valueProp: "Explore how thermonuclear technology creates megaton yields"
 ---
 
 # Megaton

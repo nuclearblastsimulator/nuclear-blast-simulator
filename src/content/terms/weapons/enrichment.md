@@ -1,6 +1,46 @@
 ---
 title: "Enrichment"
 description: "Uranium enrichment is the process of increasing the concentration of uranium-235, the fissile isotope needed for nuclear reactions."
+links:
+  - anchorText: "uranium enrichment"
+    targetURL: "/terms/weapons/enrichment"
+    contextQuote: "The Manhattan Project required massive uranium enrichment facilities at Oak Ridge"
+    valueProp: "Learn about the uranium enrichment process for nuclear weapons"
+  
+  - anchorText: "highly enriched uranium"
+    targetURL: "/terms/weapons/enrichment"
+    contextQuote: "Little Boy used highly enriched uranium with over 90% U-235 concentration"
+    valueProp: "Understand what makes uranium weapons-grade"
+  
+  - anchorText: "centrifuge technology"
+    targetURL: "/terms/weapons/enrichment"
+    contextQuote: "Modern gas centrifuges can enrich uranium more efficiently than older methods"
+    valueProp: "Explore how centrifuges separate uranium isotopes"
+  
+  - anchorText: "weapons-grade uranium"
+    targetURL: "/terms/weapons/enrichment"
+    contextQuote: "Nuclear weapons require uranium enriched to at least 90% U-235"
+    valueProp: "Learn about weapons-grade enrichment levels"
+  
+  - anchorText: "enrichment cascade"
+    targetURL: "/terms/weapons/enrichment"
+    contextQuote: "Thousands of centrifuges arranged in cascades progressively enrich uranium"
+    valueProp: "Understand how enrichment facilities operate"
+  
+  - anchorText: "LEU and HEU"
+    targetURL: "/terms/weapons/enrichment"
+    contextQuote: "The distinction between low enriched uranium and highly enriched uranium is crucial for proliferation"
+    valueProp: "Learn the differences between enrichment levels"
+  
+  - anchorText: "enrichment capacity"
+    targetURL: "/terms/weapons/enrichment"
+    contextQuote: "A nation's enrichment capacity determines its breakout time to nuclear weapons"
+    valueProp: "Understand enrichment and proliferation risks"
+  
+  - anchorText: "uranium hexafluoride"
+    targetURL: "/terms/weapons/enrichment"
+    contextQuote: "UF6 gas is used in the enrichment process due to its unique properties"
+    valueProp: "Discover how uranium is processed for enrichment"
 ---
 
 # Enrichment

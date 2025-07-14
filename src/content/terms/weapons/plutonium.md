@@ -1,6 +1,46 @@
 ---
 title: "Plutonium"
 description: "Plutonium is a radioactive, man-made element that serves as the primary fissile material in nuclear weapons and nuclear reactors."
+links:
+  - anchorText: "plutonium"
+    targetURL: "/terms/weapons/plutonium"
+    contextQuote: "The Fat Man bomb dropped on Nagasaki used plutonium as its fissile material"
+    valueProp: "Learn about plutonium's role in nuclear weapons"
+  
+  - anchorText: "plutonium-239"
+    targetURL: "/terms/weapons/plutonium"
+    contextQuote: "Plutonium-239 is the primary fissile isotope used in nuclear weapons"
+    valueProp: "Understand the properties of weapons-grade plutonium"
+  
+  - anchorText: "plutonium production"
+    targetURL: "/terms/weapons/plutonium"
+    contextQuote: "Nuclear reactors breed plutonium from uranium-238 through neutron capture"
+    valueProp: "Discover how plutonium is produced for weapons"
+  
+  - anchorText: "weapons-grade plutonium"
+    targetURL: "/terms/weapons/plutonium"
+    contextQuote: "Weapons require plutonium with over 93% Pu-239 concentration"
+    valueProp: "Learn about weapons-grade plutonium specifications"
+  
+  - anchorText: "plutonium implosion"
+    targetURL: "/terms/weapons/plutonium"
+    contextQuote: "The implosion design was developed specifically for plutonium weapons"
+    valueProp: "Explore how plutonium weapons work"
+  
+  - anchorText: "plutonium pits"
+    targetURL: "/terms/weapons/plutonium"
+    contextQuote: "The plutonium pit is the core of modern nuclear weapons"
+    valueProp: "Understand the role of plutonium in weapon design"
+  
+  - anchorText: "reactor-grade plutonium"
+    targetURL: "/terms/weapons/plutonium"
+    contextQuote: "Even reactor-grade plutonium can potentially be used for weapons"
+    valueProp: "Learn about different grades of plutonium"
+  
+  - anchorText: "plutonium toxicity"
+    targetURL: "/terms/weapons/plutonium"
+    contextQuote: "Plutonium is one of the most toxic substances known to humans"
+    valueProp: "Discover the health hazards of plutonium"
 ---
 
 # Plutonium
