@@ -8,10 +8,34 @@ This document defines the writing style and structure for history articles in th
 
 ```yaml
 ---
-title: 'Article Title'
-description: 'A compelling one-sentence description that summarizes the historical event and its significance, ending with ellipsis to create intrigue...'
+title: 'Article Title'  # Required: The exact title of the article
+description: 'A compelling one-sentence description that summarizes the historical event and its significance, ending with ellipsis to create intrigue...'  # Required: 15-30 words
+date: 2024-01-15  # Optional: Date the article was generated or written (YYYY-MM-DD format)
+category: 'category-name'  # Optional: e.g., 'foundational-events', 'cold-war-crises', 'key-figures', 'modern-developments'
+keywords: ['keyword1', 'keyword2', 'keyword3']  # Optional: For SEO and discoverability (5-10 keywords)
+related: ['related-article-1', 'related-article-2']  # Optional: Slugs of related articles without path
+links:  # Required for ALL articles
+  - anchorText: "primary term"
+    targetURL: "/history/article-slug"
+    contextQuote: "Example sentence showing how this anchor text would naturally appear in another article about this topic."
+    valueProp: "Brief explanation of what value users get from clicking this link."
+  # Include 8-10 link entries for pillar pages
 ---
 ```
+
+**Frontmatter Field Details:**
+- **title** (required): Must match the H1 heading in the article body
+- **description** (required): SEO-optimized summary that appears in search results and link previews
+- **date** (optional): Date the article was generated or written; used for tracking content freshness
+- **category** (optional): Helps organize articles; use existing categories when possible
+- **keywords** (optional): Important for SEO; include event names, dates, locations, key figures
+- **related** (optional): Creates cross-references between articles; use just the slug (not full path)
+- **links** (required for ALL articles): 
+  - Every article must include 5-10 link entries
+  - Pillar/root articles should have 8-10 entries
+  - Supporting articles should have 5-8 entries
+  - Each link entry helps identify natural anchor texts for internal linking
+  - Include varied anchor texts: event names, dates, locations, people, variations
 
 ### 2. Title Section
 

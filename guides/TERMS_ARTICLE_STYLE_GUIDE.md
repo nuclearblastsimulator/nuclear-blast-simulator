@@ -8,12 +8,39 @@ This guide defines the standards for writing nuclear terminology articles in the
 
 ```yaml
 ---
-title: "Precise Technical Term"
-description: "One-sentence description capturing the essence of the term (15-25 words)"
-category: "Category Name" # Optional: Only for certain articles
-related: ["term1", "term2", "term3", "term4"] # Optional: Related terms
+title: "Precise Technical Term"  # Required: The exact technical term
+description: "One-sentence description capturing the essence of the term (15-25 words)"  # Required: Clear, concise definition
+date: 2024-01-15  # Optional: Date the article was generated or written (YYYY-MM-DD format)
+category: "category-name"  # Optional: e.g., 'core', 'effects', 'weapons', 'strategy'
+keywords: ["keyword1", "keyword2", "keyword3"]  # Optional: For SEO and discoverability (5-10 keywords)
+related: ["term1", "term2", "term3", "term4"]  # Optional: Related term slugs without path
+links:  # Required for ALL articles
+  - anchorText: "primary term"
+    targetURL: "/terms/article-slug"
+    contextQuote: "Example sentence showing how this anchor text would naturally appear in another article about this topic."
+    valueProp: "Brief explanation of what value users get from clicking this link."
+  # Include 8-10 link entries for pillar pages, covering:
+  # - Primary technical term
+  # - Common variations or abbreviations
+  # - Effects or consequences
+  # - Technical specifications
+  # - Comparative phrases
 ---
 ```
+
+**Frontmatter Field Details:**
+- **title** (required): Must match the H1 heading exactly; use proper capitalization
+- **description** (required): SEO-optimized technical definition that appears in search results
+- **date** (optional): Date the article was generated or written; used for tracking content freshness
+- **category** (optional): Helps organize terms by type; use existing categories when possible
+- **keywords** (optional): Include technical terms, abbreviations, related concepts, applications
+- **related** (optional): Creates network of related terms; use just the slug (not full path)
+- **links** (required for ALL articles):
+  - Every article must include 5-10 link entries
+  - Pillar/root articles should have 8-10 entries
+  - Supporting articles should have 5-8 entries
+  - Each link entry helps identify natural anchor texts for internal linking
+  - Include technical variations, common usage, effects, measurements
 
 ### Standard Section Template
 
