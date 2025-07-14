@@ -1,12 +1,55 @@
 ---
 title: "Nuclear Weapons"
 description: "Comprehensive guide to nuclear weapons including types, effects, physics, and global arsenals - everything you need to know about atomic and hydrogen bombs"
-related: ["fission-weapons", "fusion-weapons", "critical-mass", "nuclear-effects", "radiation", "fallout", "icbm", "nuclear-triad"]
+category: "core"
+keywords: ["nuclear weapons", "atomic bombs", "hydrogen bombs", "fission", "fusion", "nuclear arsenal", "nuclear effects", "radiation", "fallout", "blast radius", "nuclear yield", "thermonuclear", "nuclear warhead"]
+related: ["fission-weapons", "fusion-weapons", "critical-mass", "nuclear-yield", "blast-wave", "thermal-radiation", "nuclear-radiation", "electromagnetic-pulse", "fallout", "icbm", "nuclear-triad", "deterrence", "mad", "nuclear-proliferation"]
+links:
+  - anchorText: "nuclear weapons"
+    targetURL: "/terms/nuclear-weapons"
+    contextQuote: "The development of nuclear weapons during World War II fundamentally changed warfare, introducing devices capable of destroying entire cities with a single explosion."
+    valueProp: "Provides comprehensive understanding of what nuclear weapons are, how they work, and their global impact."
+  - anchorText: "atomic bombs"
+    targetURL: "/terms/nuclear-weapons"
+    contextQuote: "The atomic bombs dropped on Japan demonstrated the devastating power of nuclear fission, ushering in the nuclear age and changing international relations forever."
+    valueProp: "Explains the distinction between atomic (fission) and hydrogen (fusion) bombs and their different capabilities."
+  - anchorText: "thermonuclear weapons"
+    targetURL: "/terms/nuclear-weapons"
+    contextQuote: "Modern thermonuclear weapons combine fission and fusion to achieve yields thousands of times more powerful than the bombs used in World War II."
+    valueProp: "Details the physics and design of hydrogen bombs and why they're so much more powerful than atomic bombs."
+  - anchorText: "nuclear arsenal"
+    targetURL: "/terms/nuclear-weapons"
+    contextQuote: "The global nuclear arsenal contains approximately 13,000 warheads, with Russia and the United States possessing over 90% of these weapons."
+    valueProp: "Provides current data on which countries have nuclear weapons and how many they possess."
+  - anchorText: "nuclear weapon effects"
+    targetURL: "/terms/nuclear-weapons"
+    contextQuote: "Understanding nuclear weapon effects - including blast, thermal radiation, and fallout - is crucial for emergency planning and civil defense preparations."
+    valueProp: "Comprehensive breakdown of all nuclear weapons effects and their ranges for different weapon yields."
+  - anchorText: "weapon yields"
+    targetURL: "/terms/nuclear-weapons"
+    contextQuote: "Nuclear weapon yields range from sub-kiloton tactical weapons to multi-megaton strategic warheads, with destructive power scaling accordingly."
+    valueProp: "Explains yield measurements and what different kiloton/megaton ratings mean for destructive capability."
+  - anchorText: "nuclear deterrence"
+    targetURL: "/terms/nuclear-weapons"
+    contextQuote: "The concept of nuclear deterrence has prevented major power conflicts since 1945, based on the threat of mutual assured destruction."
+    valueProp: "Connects nuclear weapons capabilities to strategic doctrine and international stability."
+  - anchorText: "fission and fusion weapons"
+    targetURL: "/terms/nuclear-weapons"
+    contextQuote: "While fission weapons split heavy atoms like uranium, fusion weapons combine light atoms, with most modern weapons using both processes."
+    valueProp: "Technical explanation of the two types of nuclear reactions and how they're used in different weapon designs."
+  - anchorText: "nuclear proliferation"
+    targetURL: "/terms/nuclear-weapons"
+    contextQuote: "Preventing nuclear proliferation remains a critical global challenge as more nations seek to develop or acquire nuclear weapons technology."
+    valueProp: "Discusses how nations acquire nuclear weapons and international efforts to prevent spread."
+  - anchorText: "strategic nuclear weapons"
+    targetURL: "/terms/nuclear-weapons"
+    contextQuote: "Strategic nuclear weapons delivered by ICBMs, submarines, and bombers form the backbone of nuclear deterrence for major powers."
+    valueProp: "Explains different categories of nuclear weapons and their military/strategic purposes."
 ---
 
 # Nuclear Weapons
 
-Nuclear weapons are the most powerful and destructive devices ever created by humanity, deriving their explosive force from nuclear reactions - either fission (splitting atomic nuclei) or a combination of fission and fusion (joining atomic nuclei). A single modern nuclear weapon can obliterate an entire city, kill millions of people, and render vast areas uninhabitable for decades. Since their first use in 1945, nuclear weapons have fundamentally shaped international relations, military strategy, and the very survival prospects of human civilization.
+Nuclear weapons are the most powerful and destructive devices ever created by humanity, deriving their explosive force from nuclear reactions - either [fission](/terms/fission) (splitting atomic nuclei) or a combination of fission and [fusion](/terms/fusion) (joining atomic nuclei). A single modern nuclear weapon can obliterate an entire city, kill millions of people, and render vast areas uninhabitable for decades. Since their [first use in 1945](/history/hiroshima-nagasaki), nuclear weapons have fundamentally shaped international relations, military strategy, and the very survival prospects of human civilization.
 
 ## What Are Nuclear Weapons?
 
@@ -25,7 +68,7 @@ This enormous energy density allows a weapon weighing just a few hundred kilogra
 Nuclear weapons exploit two physical phenomena:
 
 #### Nuclear Fission
-- Splitting heavy atomic nuclei (uranium-235 or plutonium-239)
+- Splitting heavy atomic nuclei ([uranium-235](/terms/weapons/enrichment) or [plutonium-239](/terms/weapons/plutonium))
 - Releases energy from converting matter to energy (E=mc²)
 - Each fission releases ~200 MeV of energy
 - Creates chain reaction when neutrons split more nuclei
@@ -44,16 +87,16 @@ The first nuclear weapons relied solely on fission:
 
 #### Gun-Type Fission Weapons
 - **Mechanism**: Shoots one subcritical mass into another
-- **Fissile material**: Only works with highly enriched uranium
+- **Fissile material**: Only works with [highly enriched uranium](/terms/weapons/enrichment)
 - **Simplicity**: Relatively simple design but inefficient
-- **Example**: Little Boy (Hiroshima) - 15 kilotons
+- **Example**: [Little Boy](/history/hiroshima-nagasaki) (Hiroshima) - 15 kilotons
 - **Efficiency**: Less than 2% of uranium actually fissioned
 
 #### Implosion-Type Fission Weapons
 - **Mechanism**: Explosives compress plutonium core to supercriticality
 - **Fissile material**: Works with plutonium or uranium
 - **Complexity**: Requires precise explosive lens design
-- **Example**: Fat Man (Nagasaki) - 21 kilotons
+- **Example**: [Fat Man](/history/hiroshima-nagasaki) (Nagasaki) - 21 kilotons
 - **Efficiency**: More efficient than gun-type
 
 ### Thermonuclear Weapons (Hydrogen Bombs)
@@ -68,7 +111,7 @@ Modern strategic weapons use staged radiation implosion:
 
 #### Three-Stage Weapons
 - **Additional stage**: Third fusion stage for extreme yields
-- **Example**: Tsar Bomba (50 megatons tested, 100 megaton design)
+- **Example**: [Tsar Bomba](/history/testing/tsar-bomba-novaya-zemlya) (50 megatons tested, 100 megaton design)
 - **Purpose**: City-destroying strategic weapons
 
 ### Specialized Nuclear Weapons
@@ -102,7 +145,7 @@ Nuclear weapons require achieving a self-sustaining chain reaction:
 3. **Exponential growth**: Each generation doubles reactions
 4. **Energy release**: Mass converts to energy via E=mc²
 
-### Critical Mass and Geometry
+### [Critical Mass](/terms/weapons/critical-mass) and Geometry
 
 #### Critical Mass Concept
 The minimum amount of fissile material needed for chain reaction:
@@ -155,14 +198,14 @@ The minimum amount of fissile material needed for chain reaction:
 
 For a typical nuclear explosion, energy is distributed as:
 
-1. **Blast and shock**: 40-50% of total energy
-2. **Thermal radiation**: 30-50% of total energy
+1. **[Blast and shock](/terms/effects/blast-effects)**: 40-50% of total energy
+2. **[Thermal radiation](/terms/effects/thermal-radiation)**: 30-50% of total energy
 3. **Ionizing radiation**: 5% of total energy
-4. **Residual radiation**: 5-10% of total energy
+4. **[Residual radiation](/terms/fallout)**: 5-10% of total energy
 
-### Blast Effects
+### [Blast Effects](/terms/effects/blast-effects)
 
-The blast wave causes most destruction:
+The [blast wave](/terms/effects/blast-effects) causes most destruction:
 
 #### Overpressure Damage
 - **20 psi**: Heavily reinforced concrete structures destroyed
@@ -177,7 +220,7 @@ The blast wave causes most destruction:
 - **2 psi overpressure**: ~70 mph winds
 - **Effects**: Turns debris into projectiles
 
-### Thermal Radiation Effects
+### [Thermal Radiation](/terms/effects/thermal-radiation) Effects
 
 The nuclear fireball emits intense thermal energy:
 
@@ -201,13 +244,13 @@ The nuclear fireball emits intense thermal energy:
 - **Duration**: Emitted during first minute
 - **Lethal radius**: Smaller than blast for large weapons
 
-#### Fallout Radiation
+#### [Fallout](/terms/fallout) Radiation
 - **Creation**: Fission products and activated materials
 - **Distribution**: Depends on wind, weather, burst height
 - **Hot spots**: Can extend hundreds of miles downwind
 - **Decay**: Follows 7:10 rule (7-fold time = 10-fold decrease)
 
-### Electromagnetic Pulse (EMP)
+### [Electromagnetic Pulse](/terms/effects/electromagnetic-pulse) (EMP)
 
 #### High-Altitude EMP (HEMP)
 - **Mechanism**: Gamma rays interact with upper atmosphere
@@ -259,10 +302,10 @@ Nuclear weapon yields are measured in:
 ### Historical Yields
 
 Notable nuclear weapon yields:
-- **Trinity test (1945)**: 22 kt
+- **[Trinity test](/history/trinity-test) (1945)**: 22 kt
 - **Little Boy (Hiroshima)**: 15 kt
 - **Fat Man (Nagasaki)**: 21 kt
-- **Castle Bravo (1954)**: 15 Mt (largest US test)
+- **[Castle Bravo](/history/castle-bravo) (1954)**: 15 Mt (largest US test)
 - **Tsar Bomba (1961)**: 50 Mt (largest ever tested)
 
 ## Global Nuclear Arsenals
@@ -270,7 +313,7 @@ Notable nuclear weapon yields:
 ### Current Nuclear Weapon States (2024)
 
 #### Declared Nuclear Weapon States (NPT)
-1. **Russia**: ~5,900 total warheads
+1. **[Russia](/history/programs/soviet-nuclear-program)**: ~5,900 total warheads
    - 1,674 deployed strategic
    - ~2,800 reserve/nondeployed
    - ~1,400 retired awaiting dismantlement
@@ -280,39 +323,39 @@ Notable nuclear weapon yields:
    - ~2,000 reserve/nondeployed
    - ~1,600 retired awaiting dismantlement
 
-3. **China**: ~410 warheads
+3. **[China](/history/programs/china-nuclear-program)**: ~410 warheads
    - Expanding arsenal and delivery systems
    - Building new missile silos
    - Developing hypersonic delivery systems
 
-4. **France**: ~290 warheads
+4. **[France](/history/programs/france-nuclear-program)**: ~290 warheads
    - All strategic (no tactical)
    - Submarine and aircraft delivery
    - Independent deterrent policy
 
-5. **United Kingdom**: ~225 warheads
+5. **[United Kingdom](/history/programs/uk-nuclear-program)**: ~225 warheads
    - Submarine-based deterrent only
    - Uses US Trident missiles
    - Warheads designed domestically
 
 #### Other Nuclear Armed States
 
-6. **Pakistan**: ~170 warheads
+6. **[Pakistan](/history/programs/pakistan-nuclear-program)**: ~170 warheads
    - Rapidly expanding arsenal
    - Developing tactical nuclear weapons
    - Missile and aircraft delivery
 
-7. **India**: ~165 warheads
+7. **[India](/history/programs/india-nuclear-program)**: ~165 warheads
    - No first use policy
-   - Developing triad capability
+   - Developing [triad](/terms/delivery/nuclear-triad) capability
    - Focus on minimum credible deterrence
 
-8. **Israel**: ~90 warheads (estimated)
+8. **[Israel](/history/programs/israel-nuclear-program)**: ~90 warheads (estimated)
    - Policy of nuclear ambiguity
    - Suspected thermonuclear capability
    - Diverse delivery systems
 
-9. **North Korea**: ~40-50 warheads (estimated)
+9. **[North Korea](/history/programs/north-korea-nuclear-program)**: ~40-50 warheads (estimated)
    - Active testing program
    - Developing ICBM capability
    - Miniaturization progress uncertain
@@ -320,11 +363,11 @@ Notable nuclear weapon yields:
 ### Nuclear Delivery Systems
 
 #### Land-Based Systems
-- **ICBMs**: Intercontinental range (>5,500 km)
+- **[ICBMs](/terms/delivery/icbm)**: Intercontinental range (>5,500 km)
 - **IRBMs**: Intermediate range (3,000-5,500 km)
 - **MRBMs**: Medium range (1,000-3,000 km)
 - **SRBMs**: Short range (<1,000 km)
-- **Artillery**: Nuclear shells for howitzers
+- **Artillery**: [Nuclear artillery](/terms/delivery/tactical-nuclear-weapons) shells for howitzers
 
 #### Sea-Based Systems
 - **SLBMs**: Submarine-launched ballistic missiles
@@ -343,7 +386,7 @@ Notable nuclear weapon yields:
 ### Physics Package Components
 
 #### Fissile Core (Pit)
-- **Material**: Weapons-grade plutonium or uranium
+- **Material**: [Weapons-grade plutonium](/terms/weapons/plutonium) or [uranium](/terms/weapons/enrichment)
 - **Shape**: Usually hollow sphere or shell
 - **Coating**: Often nickel-plated for handling
 - **Subcritical**: Safe until compressed
@@ -405,8 +448,8 @@ Notable nuclear weapon yields:
 ### Major Test Series
 
 Notable nuclear test programs:
-- **US Nevada Test Site**: 928 tests (1951-1992)
-- **Soviet Semipalatinsk**: 456 tests (1949-1989)
+- **US [Nevada Test Site](/history/testing/nevada-test-site)**: 928 tests (1951-1992)
+- **Soviet [Semipalatinsk](/history/testing/semipalatinsk-test-site)**: 456 tests (1949-1989)
 - **Pacific Proving Grounds**: Large US thermonuclear tests
 - **French Polynesia**: 193 French tests (1966-1996)
 - **Lop Nur**: All Chinese nuclear tests
@@ -427,7 +470,7 @@ Notable nuclear test programs:
 - **Severity**: Depends on clothing, shelter
 - **Medical system**: Overwhelmed by burn casualties
 
-#### Acute Radiation Syndrome
+#### [Acute Radiation Syndrome](/terms/effects/radiation-sickness)
 - **Dose dependent**: >100 rads causes symptoms
 - **Hematopoietic**: Blood system failure (200-1000 rads)
 - **Gastrointestinal**: GI system failure (>1000 rads)
@@ -456,7 +499,7 @@ Notable nuclear test programs:
 
 ### Deterrence Theory
 
-#### Mutual Assured Destruction (MAD)
+#### [Mutual Assured Destruction](/terms/strategy/mutual-assured-destruction) (MAD)
 - **Concept**: Both sides can destroy the other
 - **Requirements**: Secure second-strike capability
 - **Stability**: Neither side can win first strike
@@ -487,7 +530,7 @@ Notable nuclear test programs:
 ### Pathways to Nuclear Weapons
 
 #### Technical Routes
-- **Uranium enrichment**: Separating U-235
+- **[Uranium enrichment](/terms/weapons/enrichment)**: Separating U-235
 - **Plutonium production**: Nuclear reactors
 - **Weapons design**: Gun-type simple, implosion complex
 - **Testing**: Not essential but helpful
@@ -501,8 +544,8 @@ Notable nuclear test programs:
 ### Non-Proliferation Regime
 
 #### Key Treaties
-- **NPT (1968)**: Non-Proliferation Treaty
-- **CTBT (1996)**: Comprehensive Test Ban Treaty
+- **[NPT](/terms/strategy/non-proliferation-treaty) (1968)**: Non-Proliferation Treaty
+- **[CTBT](/history/treaties/comprehensive-test-ban-treaty) (1996)**: Comprehensive Test Ban Treaty
 - **FMCT**: Proposed Fissile Material Cutoff Treaty
 - **Nuclear Weapon Free Zones**: Regional treaties
 
@@ -537,8 +580,8 @@ Notable nuclear test programs:
 ### Arms Control Challenges
 
 #### Current Issues
-- **New START**: US-Russia limits expiring
-- **INF collapse**: Intermediate weapons returning
+- **[New START](/terms/strategy/start-treaty)**: US-Russia limits expiring
+- **[INF](/history/treaties/inf-treaty) collapse**: Intermediate weapons returning
 - **China**: Not party to bilateral treaties
 - **Verification**: New technologies complicate
 
@@ -546,7 +589,7 @@ Notable nuclear test programs:
 - **Multilateral treaties**: Including all nuclear states
 - **AI and autonomy**: Keeping humans in loop
 - **Cyber vulnerabilities**: Securing nuclear systems
-- **Climate effects**: Nuclear winter concerns
+- **Climate effects**: [Nuclear winter](/terms/nuclear-winter) concerns
 
 ## Nuclear Weapons in Popular Culture
 
@@ -554,9 +597,9 @@ Notable nuclear test programs:
 
 Nuclear weapons have profoundly influenced:
 - **Literature**: From "On the Beach" to "The Road"
-- **Film**: "Dr. Strangelove" to "Oppenheimer"
+- **Film**: "Dr. Strangelove" to "[Oppenheimer](/history/oppenheimer)"
 - **Art**: Atomic age aesthetics and protest art
-- **Language**: "Ground zero," "nuclear option," "going nuclear"
+- **Language**: "[Ground zero](/terms/effects/ground-zero)," "nuclear option," "going nuclear"
 
 ### Public Perception
 

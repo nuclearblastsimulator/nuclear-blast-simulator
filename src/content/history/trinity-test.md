@@ -1,6 +1,47 @@
 ---
 title: "Trinity Test"
 description: "The first detonation of a nuclear weapon on July 16, 1945, in the New Mexico desert marked humanity's entry into the atomic age and the culmination of the Manhattan Project."
+links:
+  - anchorText: 'Trinity Test'
+    targetURL: '/history/trinity-test'
+    contextQuote: 'The Trinity Test on July 16, 1945, marked humanity's entry into the atomic age, demonstrating that nuclear weapons were not just theoretical but terrifyingly real.'
+    valueProp: 'Complete account of the first nuclear explosion that changed warfare and human history forever.'
+  - anchorText: 'first atomic bomb test'
+    targetURL: '/history/trinity-test'
+    contextQuote: 'The success of the first atomic bomb test in New Mexico validated the Manhattan Project's massive investment and opened the door to nuclear warfare.'
+    valueProp: 'Details the culmination of the Manhattan Project and birth of the nuclear weapons era.'
+  - anchorText: 'July 16, 1945'
+    targetURL: '/history/trinity-test'
+    contextQuote: 'On July 16, 1945, at 5:29 AM, the world changed forever when the first nuclear device detonated in the New Mexico desert.'
+    valueProp: 'Precise timeline of the historic day that ushered in the atomic age.'
+  - anchorText: 'Alamogordo test'
+    targetURL: '/history/trinity-test'
+    contextQuote: 'The Alamogordo test site in New Mexico was chosen for its isolation, allowing scientists to detonate the world's first nuclear weapon in secrecy.'
+    valueProp: 'Explains site selection and preparation for this unprecedented experiment.'
+  - anchorText: 'Manhattan Project culmination'
+    targetURL: '/history/trinity-test'
+    contextQuote: 'The Trinity Test represented the Manhattan Project culmination, proving that years of theoretical physics could produce a working atomic bomb.'
+    valueProp: 'Shows how massive scientific effort translated into the first nuclear weapon.'
+  - anchorText: 'plutonium implosion'
+    targetURL: '/history/trinity-test'
+    contextQuote: 'The Trinity device used plutonium implosion design, the same technology later used in the Nagasaki bomb, requiring perfect explosive symmetry.'
+    valueProp: 'Technical details of the implosion method that made plutonium weapons possible.'
+  - anchorText: "Oppenheimer's test"
+    targetURL: '/history/trinity-test'
+    contextQuote: "J. Robert Oppenheimer's leadership of the Trinity test established him as the 'father of the atomic bomb' while haunting him with its implications."
+    valueProp: 'Personal account of the scientific leader who directed the first nuclear test.'
+  - anchorText: 'nuclear dawn'
+    targetURL: '/history/trinity-test'
+    contextQuote: 'The nuclear dawn at Trinity site literally created a second sunrise, with light so intense it was seen hundreds of miles away.'
+    valueProp: 'Vivid description of the visual and physical phenomena of the first nuclear explosion.'
+  - anchorText: 'trinitite formation'
+    targetURL: '/history/trinity-test'
+    contextQuote: 'The intense heat of Trinity created trinitite, radioactive green glass formed when desert sand was fused by the nuclear fireball.'
+    valueProp: 'Explains unique physical evidence left by the world's first nuclear explosion.'
+  - anchorText: 'birth of atomic age'
+    targetURL: '/history/trinity-test'
+    contextQuote: 'The Trinity Test marked the birth of the atomic age, fundamentally altering the balance of power and nature of warfare forever.'
+    valueProp: 'Historical significance of the moment nuclear weapons became reality.'
 ---
 
 # Trinity Test
