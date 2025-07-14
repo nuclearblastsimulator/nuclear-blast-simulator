@@ -2,21 +2,21 @@
 title: 'Israeli Nuclear Program'
 description: 'Israel maintains a policy of nuclear ambiguity while possessing an estimated 80-90 nuclear warheads, developing its nuclear capability in response to existential security threats...'
 links:
-  - text: "Israeli nuclear weapons"
+  - anchorText: "Israeli nuclear weapons"
     targetURL: "/history/programs/israel-nuclear-program"
-  - text: "nuclear ambiguity policy"
+  - anchorText: "nuclear ambiguity policy"
     targetURL: "/history/programs/israel-nuclear-program"
-  - text: "Israel's 80-90 warheads"
+  - anchorText: "Israel's 80-90 warheads"
     targetURL: "/history/programs/israel-nuclear-program"
-  - text: "Dimona reactor"
+  - anchorText: "Dimona reactor"
     targetURL: "/history/programs/israel-nuclear-program"
-  - text: "Samson Option"
+  - anchorText: "Samson Option"
     targetURL: "/history/programs/israel-nuclear-program"
-  - text: "Begin Doctrine"
+  - anchorText: "Begin Doctrine"
     targetURL: "/history/programs/israel-nuclear-program"
-  - text: "Middle East nuclear monopoly"
+  - anchorText: "Middle East nuclear monopoly"
     targetURL: "/history/programs/israel-nuclear-program"
-  - text: "nuclear opacity"
+  - anchorText: "nuclear opacity"
     targetURL: "/history/programs/israel-nuclear-program"
 ---
 

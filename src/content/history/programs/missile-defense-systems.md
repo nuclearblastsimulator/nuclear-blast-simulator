@@ -2,21 +2,21 @@
 title: 'Missile Defense Systems'
 description: 'Missile defense systems attempt to intercept and destroy incoming ballistic missiles, creating complex strategic dynamics between offense and defense in nuclear warfare...'
 links:
-  - text: "missile defense technology"
+  - anchorText: "missile defense technology"
     targetURL: "/history/programs/missile-defense-systems"
-  - text: "ABM systems"
+  - anchorText: "ABM systems"
     targetURL: "/history/programs/missile-defense-systems"
-  - text: "Strategic Defense Initiative"
+  - anchorText: "Strategic Defense Initiative"
     targetURL: "/history/programs/missile-defense-systems"
-  - text: "THAAD missile defense"
+  - anchorText: "THAAD missile defense"
     targetURL: "/history/programs/missile-defense-systems"
-  - text: "Iron Dome system"
+  - anchorText: "Iron Dome system"
     targetURL: "/history/programs/missile-defense-systems"
-  - text: "shield against nuclear attack"
+  - anchorText: "shield against nuclear attack"
     targetURL: "/history/programs/missile-defense-systems"
-  - text: "defense against ICBMs"
+  - anchorText: "defense against ICBMs"
     targetURL: "/history/programs/missile-defense-systems"
-  - text: "ground-based interceptors"
+  - anchorText: "ground-based interceptors"
     targetURL: "/history/programs/missile-defense-systems"
 ---
 
