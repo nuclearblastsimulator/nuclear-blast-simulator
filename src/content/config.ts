@@ -3,8 +3,8 @@ import { defineCollection, z } from 'astro:content';
 const linkSchema = z.object({
   anchorText: z.string(),
   targetURL: z.string(),
-  contextQuote: z.string(),
-  valueProp: z.string(),
+  contextQuote: z.string().optional(),
+  valueProp: z.string().optional(),
 });
 
 const termsCollection = defineCollection({
