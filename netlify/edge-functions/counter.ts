@@ -17,37 +17,42 @@ export default async (request: Request) => {
   try {
     const client = getTursoClient();
 
-    // Get basic statistics
-    const stats = await client.execute(`
-      SELECT 
-        COUNT(*) as total,
-        COUNT(DISTINCT session_id) as unique_sessions,
-        COALESCE(SUM(weapon_yield_kt) / 1000, 0) as total_yield_mt
-      FROM detonations
-    `);
+    // Execute all queries in parallel for better performance
+    const [stats, recentActivity, mostPopularTarget, mostUsedWeapon] = await Promise.all([
+      // Get basic statistics
+      client.execute(`
+        SELECT 
+          COUNT(*) as total,
+          COUNT(DISTINCT session_id) as unique_sessions,
+          COALESCE(SUM(weapon_yield_kt) / 1000, 0) as total_yield_mt
+        FROM detonations
+      `),
+      
+      // Get recent activity
+      client.execute(`
+        SELECT COUNT(*) as recent_count
+        FROM detonations
+        WHERE timestamp > datetime('now', '-1 hour')
+      `),
+      
+      // Get most popular target
+      client.execute(`
+        SELECT city_name, detonation_count
+        FROM popular_targets
+        ORDER BY detonation_count DESC
+        LIMIT 1
+      `),
+      
+      // Get most used weapon
+      client.execute(`
+        SELECT weapon_name, usage_count
+        FROM weapon_stats
+        ORDER BY usage_count DESC
+        LIMIT 1
+      `)
+    ]);
 
     const row = stats.rows[0];
-
-    // Get additional interesting stats
-    const recentActivity = await client.execute(`
-      SELECT COUNT(*) as recent_count
-      FROM detonations
-      WHERE timestamp > datetime('now', '-1 hour')
-    `);
-
-    const mostPopularTarget = await client.execute(`
-      SELECT city_name, detonation_count
-      FROM popular_targets
-      ORDER BY detonation_count DESC
-      LIMIT 1
-    `);
-
-    const mostUsedWeapon = await client.execute(`
-      SELECT weapon_name, usage_count
-      FROM weapon_stats
-      ORDER BY usage_count DESC
-      LIMIT 1
-    `);
 
     // Calculate some interesting derived stats
     const totalDetonations = Number(row?.total || 0);

@@ -167,7 +167,15 @@ try {
   document.addEventListener('DOMContentLoaded', async function() {
     // First, populate the stats widget
     try {
-      const counterResponse = await fetch('/api/counter');
+      // Add timeout to prevent indefinite pending state
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+      
+      const counterResponse = await fetch('/api/counter', {
+        signal: controller.signal
+      });
+      clearTimeout(timeoutId);
+      
       const counterData = await counterResponse.json();
       
       // Update stats widget elements

@@ -1004,7 +1004,15 @@ function animateCounter(element, from, to, duration) {
 // Fetch initial counter on page load
 async function fetchInitialCounter() {
   try {
-    const response = await fetch('/api/counter')
+    // Add timeout to prevent indefinite pending state
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
+    
+    const response = await fetch('/api/counter', {
+      signal: controller.signal
+    })
+    clearTimeout(timeoutId)
+    
     const data = await response.json()
     if (data.totalDetonations) {
       updateDetonationCounter(data.totalDetonations)
