@@ -3,42 +3,42 @@ title: 'Bikini Atoll'
 description: 'From 1946 to 1958, the United States conducted 23 nuclear tests at Bikini Atoll, displacing the Marshallese people and contaminating their homeland for generations...'
 links:
   - anchorText: "Bikini Atoll testing"
-    targetUrl: "/history/testing/bikini-atoll"
+    targetURL: "/history/testing/bikini-atoll"
     contextQuote: "The United States conducted 23 nuclear tests at Bikini Atoll between 1946 and 1958"
     valueProp: "Learn about U.S. nuclear testing in the Pacific"
   
   - anchorText: "Castle Bravo test"
-    targetUrl: "/history/testing/bikini-atoll"
+    targetURL: "/history/testing/bikini-atoll"
     contextQuote: "Castle Bravo on March 1, 1954, became the largest nuclear weapon ever detonated by the United States"
     valueProp: "Understand the Castle Bravo thermonuclear test catastrophe"
   
   - anchorText: "Marshall Islands displacement"
-    targetUrl: "/history/testing/bikini-atoll"
+    targetURL: "/history/testing/bikini-atoll"
     contextQuote: "The displacement from Bikini shattered the traditional social structure of the Bikinian community"
     valueProp: "Explore indigenous displacement from nuclear testing"
   
   - anchorText: "Operation Crossroads tests"
-    targetUrl: "/history/testing/bikini-atoll"
+    targetURL: "/history/testing/bikini-atoll"
     contextQuote: "Operation Crossroads was designed to answer fundamental questions about nuclear weapons effects"
     valueProp: "Read about the first postwar nuclear weapons tests"
   
   - anchorText: "Pacific nuclear contamination"
-    targetUrl: "/history/testing/bikini-atoll"
+    targetURL: "/history/testing/bikini-atoll"
     contextQuote: "Bikini Atoll became synonymous with nuclear testing contamination"
     valueProp: "Discover how a tropical paradise became a nuclear wasteland"
   
   - anchorText: "nuclear environmental justice"
-    targetUrl: "/history/testing/bikini-atoll"
+    targetURL: "/history/testing/bikini-atoll"
     contextQuote: "The nuclear tests at Bikini created one of the most contaminated environments on Earth"
     valueProp: "Learn about long-term environmental contamination from nuclear testing"
   
   - anchorText: "Marshallese people"
-    targetUrl: "/history/testing/bikini-atoll"
+    targetURL: "/history/testing/bikini-atoll"
     contextQuote: "167 Marshallese people lived on Bikini Atoll before nuclear testing began"
     valueProp: "Understand the impact on indigenous Pacific communities"
   
   - anchorText: "underwater nuclear test"
-    targetUrl: "/history/testing/bikini-atoll"
+    targetURL: "/history/testing/bikini-atoll"
     contextQuote: "The Baker test was a 23-kiloton bomb detonated 90 feet underwater"
     valueProp: "Learn about underwater nuclear weapons testing"
 ---

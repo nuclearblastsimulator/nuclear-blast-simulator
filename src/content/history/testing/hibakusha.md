@@ -3,42 +3,42 @@ title: 'Hibakusha'
 description: 'The atomic bomb survivors of Hiroshima and Nagasaki, known as Hibakusha, have dedicated their lives to sharing their experiences and advocating for nuclear disarmament...'
 links:
   - anchorText: "Hibakusha survivors"
-    targetUrl: "/history/testing/hibakusha"
+    targetURL: "/history/testing/hibakusha"
     contextQuote: "Hibakusha are the survivors of the atomic bombings of Hiroshima and Nagasaki"
     valueProp: "Learn about the experiences of nuclear weapon survivors"
   
   - anchorText: "atomic bomb survivors"
-    targetUrl: "/history/testing/hibakusha"
+    targetURL: "/history/testing/hibakusha"
     contextQuote: "The early symptoms of radiation sickness included nausea, vomiting, and diarrhea"
     valueProp: "Understand acute radiation syndrome from firsthand accounts"
   
   - anchorText: "nuclear peace movement"
-    targetUrl: "/history/testing/hibakusha"
+    targetURL: "/history/testing/hibakusha"
     contextQuote: "The Hibakusha became powerful advocates for peace and nuclear disarmament"
     valueProp: "Discover how survivors became peace activists"
   
   - anchorText: "nuclear weapons witnesses"
-    targetUrl: "/history/testing/hibakusha"
+    targetURL: "/history/testing/hibakusha"
     contextQuote: "They are the only human beings who have experienced nuclear weapons in warfare"
     valueProp: "Read testimonies from the only nuclear warfare survivors"
   
   - anchorText: "ICAN Nobel Prize"
-    targetUrl: "/history/testing/hibakusha"
+    targetURL: "/history/testing/hibakusha"
     contextQuote: "Hibakusha played central role in ICAN winning the 2017 Nobel Peace Prize"
     valueProp: "Learn about Hibakusha's role in nuclear abolition movement"
   
   - anchorText: "radiation effects research"
-    targetUrl: "/history/testing/hibakusha"
+    targetURL: "/history/testing/hibakusha"
     contextQuote: "The Hibakusha became the subjects of the most extensive study of radiation effects on humans"
     valueProp: "Explore foundational radiation exposure research"
   
   - anchorText: "nuclear survivor testimonies"
-    targetUrl: "/history/testing/hibakusha"
+    targetURL: "/history/testing/hibakusha"
     contextQuote: "Their testimonies provided a human face to the abstract concept of nuclear deterrence"
     valueProp: "Read powerful firsthand accounts of nuclear weapons effects"
   
   - anchorText: "radiation health studies"
-    targetUrl: "/history/testing/hibakusha"
+    targetURL: "/history/testing/hibakusha"
     contextQuote: "The Hibakusha became the subjects of the most extensive study of radiation effects on humans"
     valueProp: "Understand the scientific basis for radiation protection standards"
 ---

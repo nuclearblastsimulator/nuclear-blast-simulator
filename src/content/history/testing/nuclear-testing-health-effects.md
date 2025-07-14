@@ -3,42 +3,42 @@ title: 'Nuclear Testing Health Effects'
 description: 'Over 2,000 nuclear tests exposed millions of people worldwide to radioactive fallout, causing cancer, genetic damage, and long-term health impacts that persist today...'
 links:
   - anchorText: "nuclear testing health effects"
-    targetUrl: "/history/testing/nuclear-testing-health-effects"
+    targetURL: "/history/testing/nuclear-testing-health-effects"
     contextQuote: "Over 2,000 nuclear tests exposed millions of people worldwide to radioactive fallout"
     valueProp: "Understand the global health impact of nuclear weapons testing"
   
   - anchorText: "fallout cancer rates"
-    targetUrl: "/history/testing/nuclear-testing-health-effects"
+    targetURL: "/history/testing/nuclear-testing-health-effects"
     contextQuote: "Cancer rates soared in these communities, particularly among children"
     valueProp: "Learn about increased cancer rates from nuclear fallout"
   
   - anchorText: "radiation-induced thyroid cancer"
-    targetUrl: "/history/testing/nuclear-testing-health-effects"
+    targetURL: "/history/testing/nuclear-testing-health-effects"
     contextQuote: "Thyroid cancer rates increased by 10 to 100 times normal levels"
     valueProp: "Discover the milk-iodine pathway to childhood cancer"
   
   - anchorText: "global radioactive contamination"
-    targetUrl: "/history/testing/nuclear-testing-health-effects"
+    targetURL: "/history/testing/nuclear-testing-health-effects"
     contextQuote: "The 528 atmospheric nuclear tests released fallout equivalent to nearly 30,000 Hiroshima-sized bombs"
     valueProp: "Explore worldwide radioactive contamination from testing"
   
   - anchorText: "uranium mining health impacts"
-    targetUrl: "/history/testing/nuclear-testing-health-effects"
+    targetURL: "/history/testing/nuclear-testing-health-effects"
     contextQuote: "Uranium miners had lung cancer rates five times higher than the general population"
     valueProp: "Read about occupational radiation exposure"
   
   - anchorText: "intergenerational radiation effects"
-    targetUrl: "/history/testing/nuclear-testing-health-effects"
+    targetURL: "/history/testing/nuclear-testing-health-effects"
     contextQuote: "Genetic damage has been passed to subsequent generations"
     valueProp: "Understand intergenerational impacts of radiation"
   
   - anchorText: "radiation exposure studies"
-    targetUrl: "/history/testing/nuclear-testing-health-effects"
+    targetURL: "/history/testing/nuclear-testing-health-effects"
     contextQuote: "Large-scale, long-term studies of exposed populations provided crucial data"
     valueProp: "Learn about epidemiological research on radiation health effects"
   
   - anchorText: "global fallout patterns"
-    targetUrl: "/history/testing/nuclear-testing-health-effects"
+    targetURL: "/history/testing/nuclear-testing-health-effects"
     contextQuote: "Fallout was distributed worldwide by atmospheric circulation patterns"
     valueProp: "Understand how nuclear testing contaminated the entire planet"
 ---

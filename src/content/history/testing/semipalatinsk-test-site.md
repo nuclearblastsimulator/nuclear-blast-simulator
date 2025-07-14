@@ -3,42 +3,42 @@ title: 'Semipalatinsk Test Site'
 description: "The Soviet Union's primary nuclear test site in Kazakhstan hosted 456 nuclear tests from 1949 to 1989, exposing over one million people to radiation and devastating the region..."
 links:
   - anchorText: "Semipalatinsk Test Site"
-    targetUrl: "/history/testing/semipalatinsk-test-site"
+    targetURL: "/history/testing/semipalatinsk-test-site"
     contextQuote: "The Soviet Union's primary nuclear test site in Kazakhstan hosted 456 nuclear tests from 1949 to 1989"
     valueProp: "Learn about the Soviet Union's main nuclear testing facility"
   
   - anchorText: "Soviet nuclear program"
-    targetUrl: "/history/testing/semipalatinsk-test-site"
+    targetURL: "/history/testing/semipalatinsk-test-site"
     contextQuote: "The first Soviet nuclear test RDS-1 was conducted at Semipalatinsk on August 29, 1949"
     valueProp: "Discover how the Soviet Union developed nuclear weapons"
   
   - anchorText: "Kazakhstan nuclear testing"
-    targetUrl: "/history/testing/semipalatinsk-test-site"
+    targetURL: "/history/testing/semipalatinsk-test-site"
     contextQuote: "456 nuclear tests exposed over one million people to radiation"
     valueProp: "Understand the massive scale of Soviet nuclear testing"
   
   - anchorText: "The Polygon"
-    targetUrl: "/history/testing/semipalatinsk-test-site"
+    targetURL: "/history/testing/semipalatinsk-test-site"
     contextQuote: "The Semipalatinsk Test Site, known locally as 'The Polygon,' encompasses 18,500 square kilometers"
     valueProp: "Explore the vast Soviet nuclear testing complex"
   
   - anchorText: "Nevada-Semipalatinsk movement"
-    targetUrl: "/history/testing/semipalatinsk-test-site"
+    targetURL: "/history/testing/semipalatinsk-test-site"
     contextQuote: "The Nevada-Semipalatinsk movement led by Olzhas Suleimenov brought international attention to nuclear testing"
     valueProp: "Learn about the grassroots movement that helped end nuclear testing"
   
   - anchorText: "Soviet atmospheric testing"
-    targetUrl: "/history/testing/semipalatinsk-test-site"
+    targetURL: "/history/testing/semipalatinsk-test-site"
     contextQuote: "125 atmospheric tests conducted between 1949 and 1963"
     valueProp: "Understand the environmental impact of Soviet nuclear testing"
   
   - anchorText: "Central Asian nuclear contamination"
-    targetUrl: "/history/testing/semipalatinsk-test-site"
+    targetURL: "/history/testing/semipalatinsk-test-site"
     contextQuote: "The testing program exposed over one million people to radiation"
     valueProp: "Discover the human cost of Soviet nuclear weapons development"
   
   - anchorText: "first Soviet atomic bomb"
-    targetUrl: "/history/testing/semipalatinsk-test-site"
+    targetURL: "/history/testing/semipalatinsk-test-site"
     contextQuote: "RDS-1 'First Lightning' was detonated on August 29, 1949"
     valueProp: "Read about the test that ended the U.S. nuclear monopoly"
 ---

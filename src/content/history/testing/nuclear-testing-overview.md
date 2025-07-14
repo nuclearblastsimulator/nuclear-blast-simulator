@@ -3,42 +3,42 @@ title: 'Nuclear Testing'
 description: 'Nuclear testing was essential for developing and validating nuclear weapons, with over 2,000 tests conducted worldwide before comprehensive test bans ended most testing...'
 links:
   - anchorText: "nuclear testing history"
-    targetUrl: "/history/testing/nuclear-testing-overview"
+    targetURL: "/history/testing/nuclear-testing-overview"
     contextQuote: "Over 2,000 nuclear weapons tests were conducted by nine countries"
     valueProp: "Comprehensive overview of global nuclear testing programs"
   
   - anchorText: "Trinity atomic test"
-    targetUrl: "/history/testing/nuclear-testing-overview"
+    targetURL: "/history/testing/nuclear-testing-overview"
     contextQuote: "Trinity Test: First nuclear test, July 16, 1945"
     valueProp: "Learn about the first atomic bomb test"
   
   - anchorText: "atmospheric testing era"
-    targetUrl: "/history/testing/nuclear-testing-overview"
+    targetURL: "/history/testing/nuclear-testing-overview"
     contextQuote: "528 atmospheric tests released fallout directly to atmosphere"
     valueProp: "Understand the era of open-air nuclear explosions"
   
   - anchorText: "underground nuclear testing"
-    targetUrl: "/history/testing/nuclear-testing-overview"
+    targetURL: "/history/testing/nuclear-testing-overview"
     contextQuote: "1,528 underground tests with some radiation leaks"
     valueProp: "Explore the shift to contained nuclear testing"
   
   - anchorText: "test ban treaties"
-    targetUrl: "/history/testing/nuclear-testing-overview"
+    targetURL: "/history/testing/nuclear-testing-overview"
     contextQuote: "1996 Comprehensive Test Ban Treaty prohibits all nuclear tests"
     valueProp: "Learn about efforts to end nuclear testing"
   
   - anchorText: "nuclear test detection"
-    targetUrl: "/history/testing/nuclear-testing-overview"
+    targetURL: "/history/testing/nuclear-testing-overview"
     contextQuote: "The International Monitoring System can detect nuclear tests worldwide"
     valueProp: "Discover how nuclear tests are detected globally"
   
   - anchorText: "weapons maintenance without testing"
-    targetUrl: "/history/testing/nuclear-testing-overview"
+    targetURL: "/history/testing/nuclear-testing-overview"
     contextQuote: "Computer simulation enables nuclear weapon states to maintain weapons without testing"
     valueProp: "Understand modern nuclear weapons maintenance"
   
   - anchorText: "global nuclear testing programs"
-    targetUrl: "/history/testing/nuclear-testing-overview"
+    targetURL: "/history/testing/nuclear-testing-overview"
     contextQuote: "Nine countries conducted nuclear tests between 1945 and 1996"
     valueProp: "Learn about worldwide nuclear weapons testing"
 ---
