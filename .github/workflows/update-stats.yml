@@ -1,0 +1,67 @@
+name: Update Aggregated Statistics
+
+on:
+  schedule:
+    # Run every 5 minutes
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # Allow manual triggers
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+
+    steps:
+      - name: Call Update Stats Endpoint
+        env:
+          STATS_URL: ${{ secrets.STATS_UPDATE_URL || 'https://nuclearblastsimulator.com/api/update-stats' }}
+          API_KEY: ${{ secrets.STATS_API_KEY }}
+        run: |
+          response=$(curl -s -w "\n%{http_code}" -X POST "$STATS_URL" \
+            -H "Content-Type: application/json" \
+            -H "X-API-Key: ${API_KEY:-default}" \
+            --max-time 30)
+
+          http_code=$(echo "$response" | tail -n 1)
+          body=$(echo "$response" | head -n -1)
+
+          echo "HTTP Status: $http_code"
+          echo "Response: $body"
+
+          if [ "$http_code" != "200" ]; then
+            echo "Error: Stats update failed with status $http_code"
+            exit 1
+          fi
+
+          echo "✅ Stats updated successfully"
+
+  # Backup job in case the primary fails
+  update-stats-retry:
+    runs-on: ubuntu-latest
+    needs: update-stats
+    if: failure()
+    timeout-minutes: 2
+
+    steps:
+      - name: Retry Stats Update
+        env:
+          STATS_URL: ${{ secrets.STATS_UPDATE_URL || 'https://nuclearblastsimulator.com/api/update-stats' }}
+          API_KEY: ${{ secrets.STATS_API_KEY }}
+        run: |
+          echo "Retrying stats update after initial failure..."
+          sleep 10
+
+          response=$(curl -s -w "\n%{http_code}" -X POST "$STATS_URL" \
+            -H "Content-Type: application/json" \
+            -H "X-API-Key: ${API_KEY:-default}" \
+            --max-time 30)
+
+          http_code=$(echo "$response" | tail -n 1)
+
+          if [ "$http_code" != "200" ]; then
+            echo "Error: Retry also failed with status $http_code"
+            # Don't fail the workflow for stats updates
+            exit 0
+          fi
+
+          echo "✅ Stats updated successfully on retry"
