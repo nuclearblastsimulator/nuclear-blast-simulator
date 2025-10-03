@@ -7,9 +7,9 @@ interface AnalyticsResponse {
 }
 
 async function getLiveStats(client: any): Promise<AnalyticsResponse> {
-  // Get recent detonations (last 30 minutes)
+  // OPTIMIZED: Use indexed timestamp column for recent activity
   const recentDetonations = await client.execute(`
-    SELECT 
+    SELECT
       weapon_name,
       city_name,
       country,
@@ -41,8 +41,9 @@ async function getLiveStats(client: any): Promise<AnalyticsResponse> {
 }
 
 async function getMostTargetedCities(client: any): Promise<AnalyticsResponse> {
+  // OPTIMIZED: Use indexed popular_targets table
   const cities = await client.execute(`
-    SELECT 
+    SELECT
       city_name,
       country,
       detonation_count,
@@ -64,8 +65,9 @@ async function getMostTargetedCities(client: any): Promise<AnalyticsResponse> {
 }
 
 async function getWeaponStats(client: any): Promise<AnalyticsResponse> {
+  // OPTIMIZED: Use indexed weapon_stats table
   const weapons = await client.execute(`
-    SELECT 
+    SELECT
       weapon_name,
       usage_count,
       avg_yield_kt,
@@ -86,27 +88,30 @@ async function getWeaponStats(client: any): Promise<AnalyticsResponse> {
 }
 
 async function getTimelineData(client: any): Promise<AnalyticsResponse> {
-  // Get hourly data for the last 24 hours
-  const hourlyData = await client.execute(`
-    SELECT 
-      strftime('%Y-%m-%d %H:00', timestamp) as hour,
-      COUNT(*) as detonations,
-      SUM(weapon_yield_kt) / 1000 as total_yield_mt
-    FROM detonations
-    WHERE timestamp > datetime('now', '-24 hours')
-    GROUP BY hour
-    ORDER BY hour DESC
-  `);
-
-  // Get all daily data (all-time)
-  const dailyData = await client.execute(`
-    SELECT 
-      date,
-      total_detonations,
-      total_yield_mt
-    FROM daily_stats
-    ORDER BY date DESC
-  `);
+  // OPTIMIZED: Use indexed queries with limited scope
+  const [hourlyData, dailyData] = await Promise.all([
+    // Use indexed timestamp for hourly data
+    client.execute(`
+      SELECT
+        strftime('%Y-%m-%d %H:00', timestamp) as hour,
+        COUNT(*) as detonations,
+        SUM(weapon_yield_kt) / 1000 as total_yield_mt
+      FROM detonations
+      WHERE timestamp > datetime('now', '-24 hours')
+      GROUP BY hour
+      ORDER BY hour DESC
+    `),
+    // Daily stats are already pre-aggregated
+    client.execute(`
+      SELECT
+        date,
+        total_detonations,
+        total_yield_mt
+      FROM daily_stats
+      ORDER BY date DESC
+      LIMIT 30
+    `)
+  ]);
 
   return {
     type: "timeline",
@@ -119,19 +124,22 @@ async function getTimelineData(client: any): Promise<AnalyticsResponse> {
 }
 
 async function getGlobalHeatmap(client: any): Promise<AnalyticsResponse> {
-  // Get aggregated location data
+  // OPTIMIZED: Use popular_targets for pre-aggregated city data
   const heatmapData = await client.execute(`
-    SELECT 
-      latitude,
-      longitude,
-      city_name,
-      country,
-      COUNT(*) as detonation_count,
-      SUM(weapon_yield_kt) / 1000 as total_yield_mt
-    FROM detonations
-    WHERE latitude IS NOT NULL AND longitude IS NOT NULL
-    GROUP BY latitude, longitude, city_name, country
-    ORDER BY detonation_count DESC
+    SELECT
+      d.latitude,
+      d.longitude,
+      pt.city_name,
+      pt.country,
+      pt.detonation_count,
+      pt.total_yield_mt
+    FROM popular_targets pt
+    INNER JOIN (
+      SELECT DISTINCT city_name, latitude, longitude
+      FROM detonations
+      WHERE latitude IS NOT NULL AND longitude IS NOT NULL
+    ) d ON pt.city_name = d.city_name
+    ORDER BY pt.detonation_count DESC
     LIMIT 100
   `);
 
@@ -146,42 +154,58 @@ async function getGlobalHeatmap(client: any): Promise<AnalyticsResponse> {
 }
 
 async function getAllStats(client: any): Promise<AnalyticsResponse> {
-  // Get comprehensive statistics
-  const generalStats = await client.execute(`
-    SELECT 
-      COUNT(*) as total_detonations,
-      COUNT(DISTINCT session_id) as unique_sessions,
-      COUNT(DISTINCT city_name) as unique_cities,
-      COUNT(DISTINCT weapon_id) as unique_weapons,
-      SUM(weapon_yield_kt) / 1000 as total_yield_mt,
-      AVG(weapon_yield_kt) as avg_yield_kt,
-      MAX(weapon_yield_kt) as max_yield_kt
-    FROM detonations
-  `);
+  // OPTIMIZED: Use running_totals and pre-aggregated tables
+  const [generalStats, uniqueCounts, patterns, hourlyPatterns] = await Promise.all([
+    // Get basic stats from running_totals (single row lookup)
+    client.execute(`
+      SELECT
+        total_detonations,
+        unique_sessions,
+        total_yield_mt,
+        hiroshima_equivalents
+      FROM running_totals
+      WHERE id = 1
+    `),
+    // Get unique counts from pre-aggregated tables
+    client.execute(`
+      SELECT
+        (SELECT COUNT(*) FROM popular_targets) as unique_cities,
+        (SELECT COUNT(*) FROM weapon_stats) as unique_weapons,
+        (SELECT AVG(avg_yield_kt) FROM weapon_stats) as avg_yield_kt,
+        (SELECT MAX(avg_yield_kt) FROM weapon_stats) as max_yield_kt
+    `),
+    // Get time-based patterns (limited to recent data for performance)
+    client.execute(`
+      SELECT
+        day_of_week,
+        COUNT(*) as count
+      FROM detonations
+      WHERE timestamp > datetime('now', '-30 days')
+      GROUP BY day_of_week
+      ORDER BY count DESC
+    `),
+    // Get hourly patterns (limited to recent data)
+    client.execute(`
+      SELECT
+        hour_of_day,
+        COUNT(*) as count
+      FROM detonations
+      WHERE timestamp > datetime('now', '-30 days')
+      GROUP BY hour_of_day
+      ORDER BY hour_of_day
+    `)
+  ]);
 
-  // Get time-based patterns
-  const patterns = await client.execute(`
-    SELECT 
-      day_of_week,
-      COUNT(*) as count
-    FROM detonations
-    GROUP BY day_of_week
-    ORDER BY count DESC
-  `);
-
-  const hourlyPatterns = await client.execute(`
-    SELECT 
-      hour_of_day,
-      COUNT(*) as count
-    FROM detonations
-    GROUP BY hour_of_day
-    ORDER BY hour_of_day
-  `);
+  // Combine the optimized results
+  const combinedStats = {
+    ...generalStats.rows[0],
+    ...uniqueCounts.rows[0],
+  };
 
   return {
     type: "all",
     data: {
-      general: generalStats.rows[0],
+      general: combinedStats,
       dayOfWeekPatterns: patterns.rows,
       hourlyPatterns: hourlyPatterns.rows,
     },
@@ -195,7 +219,9 @@ export default async (request: Request) => {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "GET, OPTIONS",
-    "Cache-Control": "public, max-age=1800", // Cache for 30 minutes
+    "Cache-Control": "no-cache, no-store, must-revalidate", // Disable caching during development
+    "Pragma": "no-cache",
+    "Expires": "0",
   };
 
   if (request.method === "OPTIONS") {

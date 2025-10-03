@@ -426,7 +426,7 @@ function simulateBlast() {
   }
 
   // Send to API (fire and forget - don't block the UI)
-  fetch('/api/detonate', {
+  fetch('/api/detonate-optimized', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

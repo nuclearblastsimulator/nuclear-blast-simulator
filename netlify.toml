@@ -17,6 +17,14 @@
   path = "/api/detonate"
 
 [[edge_functions]]
+  function = "detonate-optimized"
+  path = "/api/detonate-optimized"
+
+[[edge_functions]]
+  function = "update-stats"
+  path = "/api/update-stats"
+
+[[edge_functions]]
   function = "counter"
   path = "/api/counter"
 
