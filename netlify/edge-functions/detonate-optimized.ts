@@ -211,5 +211,5 @@ export default async (request: Request) => {
 };
 
 export const config = {
-  path: "/api/detonate",
+  path: "/api/detonate-optimized",
 };
