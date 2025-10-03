@@ -15,10 +15,10 @@ const terms = await getCollection('terms');
 const history = await getCollection('history');
 
 // Load data from public/assets/data.json
-const response = await fetch(new URL('/assets/data.json', Astro.url));
-const data = await response.json();
-const weapons = data.weapons;
-const locations = data.locations;
+// Import data directly instead of fetching to avoid build issues
+import dataJson from '../../public/assets/data.json';
+const weapons = dataJson.weapons;
+const locations = dataJson.locations;
 ---
 
 <BaseLayout 
@@ -1138,6 +1138,37 @@ const locations = data.locations;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    max-width: calc(100vw - 2rem);
+  }
+
+  /* Prevent widget from going off-screen */
+  @media (max-width: 480px) {
+    .stats-widget-wrapper-home {
+      width: calc(100vw - 2rem);
+      left: 1rem;
+      right: 1rem;
+      transform: translateX(0) translateY(10px);
+    }
+
+    .detonations-counter-home:hover ~ .stats-widget-wrapper-home,
+    .stats-widget-wrapper-home:hover {
+      transform: translateX(0) translateY(0);
+    }
+  }
+
+  /* Adjust position on smaller screens to prevent cutoff */
+  @media (max-width: 640px) {
+    .stats-widget-wrapper-home {
+      left: 0;
+      right: 0;
+      transform: translateY(10px);
+      margin: 10px 1rem 0;
+    }
+
+    .detonations-counter-home:hover ~ .stats-widget-wrapper-home,
+    .stats-widget-wrapper-home:hover {
+      transform: translateY(0);
+    }
   }
   
   /* Show stats on counter hover */

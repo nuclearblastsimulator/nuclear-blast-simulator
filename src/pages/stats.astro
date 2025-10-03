@@ -2,11 +2,16 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import DetonationStats from '../components/DetonationStats.astro';
 
-// Fetch initial stats data
+// Fetch initial stats data (only in production)
 let statsData = {};
 try {
-  const response = await fetch(new URL('/api/counter', Astro.url));
-  statsData = await response.json();
+  // Skip fetching during development or if running locally
+  if (import.meta.env.PROD && Astro.url.hostname !== 'localhost') {
+    const response = await fetch(new URL('/api/counter', Astro.url));
+    if (response.ok) {
+      statsData = await response.json();
+    }
+  }
 } catch (error) {
   console.error('Failed to fetch stats data:', error);
 }
@@ -40,8 +45,10 @@ try {
     <!-- 3 Column Layout: Stats Widget, Top Cities, Top Weapons -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
       <!-- Column 1: Stats Widget -->
-      <div class="flex justify-center lg:justify-start">
-        <DetonationStats hideViewAllButton={true} />
+      <div class="w-full overflow-x-auto">
+        <div class="flex justify-center lg:justify-start min-w-fit">
+          <DetonationStats hideViewAllButton={true} />
+        </div>
       </div>
       
       <!-- Column 2: Top Cities -->
@@ -255,7 +262,7 @@ try {
 
     // Fetch real heatmap data from API
     try {
-      const response = await fetch('/api/analytics?type=heatmap');
+      const response = await fetch(`/api/analytics?type=heatmap&t=${Date.now()}`);
       const result = await response.json();
       
       if (result.data && result.data.locations) {
@@ -285,7 +292,7 @@ try {
     // Populate top lists
     try {
       // Fetch cities data
-      const citiesResponse = await fetch('/api/analytics?type=cities');
+      const citiesResponse = await fetch(`/api/analytics?type=cities&t=${Date.now()}`);
       const citiesData = await citiesResponse.json();
       
       // Populate top cities
@@ -306,7 +313,7 @@ try {
       }
 
       // Fetch weapons data
-      const weaponsResponse = await fetch('/api/analytics?type=weapons');
+      const weaponsResponse = await fetch(`/api/analytics?type=weapons&t=${Date.now()}`);
       const weaponsData = await weaponsResponse.json();
       
       // Populate top weapons
@@ -343,7 +350,7 @@ try {
 
     try {
       // Fetch timeline data
-      const response = await fetch('/api/analytics?type=timeline');
+      const response = await fetch(`/api/analytics?type=timeline&t=${Date.now()}`);
       const result = await response.json();
       
       if (!result.data) {
