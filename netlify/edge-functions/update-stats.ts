@@ -5,11 +5,17 @@ import { getTursoClient } from "./utils/turso.ts";
  * Run this every 5 minutes via cron or scheduled function
  */
 export default async (request: Request) => {
+  const startTime = Date.now();
+  console.log(`[update-stats] Stats update job started at ${new Date().toISOString()}`);
   // Optional: Validate API key for security
   const apiKey = request.headers.get("X-API-Key");
   const expectedKey = Deno.env.get("STATS_API_KEY");
+  const source = request.headers.get("X-Source") || "unknown";
+
+  console.log(`[update-stats] Request source: ${source}`);
 
   if (expectedKey && apiKey !== expectedKey) {
+    console.warn(`[update-stats] ⚠️ Invalid API key attempt from ${source}`);
     return new Response(
       JSON.stringify({
         error: "Unauthorized",
@@ -26,8 +32,12 @@ export default async (request: Request) => {
 
   try {
     const client = getTursoClient();
+    console.log(`[update-stats] Database client initialized`);
 
     // Update all aggregated stats in a single transaction
+    console.log(`[update-stats] Starting batch update with 4 operations`);
+    const batchStart = Date.now();
+
     await client.batch([
       // Update last hour count
       {
@@ -100,6 +110,8 @@ export default async (request: Request) => {
       },
     ]);
 
+    console.log(`[update-stats] Batch update completed in ${Date.now() - batchStart}ms`);
+
     // Clean up old detonations (optional - keep last 90 days)
     // Uncomment if you want to archive old data
     /*
@@ -109,11 +121,14 @@ export default async (request: Request) => {
     `);
     */
 
+    console.log(`[update-stats] ✅ Success - Total execution time: ${Date.now() - startTime}ms`);
+
     return new Response(
       JSON.stringify({
         success: true,
         message: "Stats updated successfully",
         timestamp: new Date().toISOString(),
+        executionTime: `${Date.now() - startTime}ms`,
       }),
       {
         status: 200,
@@ -123,7 +138,7 @@ export default async (request: Request) => {
       }
     );
   } catch (error) {
-    console.error("Error updating stats:", error);
+    console.error(`[update-stats] ❌ Error after ${Date.now() - startTime}ms:`, error);
 
     return new Response(
       JSON.stringify({

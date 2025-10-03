@@ -214,6 +214,7 @@ async function getAllStats(client: any): Promise<AnalyticsResponse> {
 }
 
 export default async (request: Request) => {
+  const startTime = Date.now();
   // Handle CORS
   const headers = {
     "Content-Type": "application/json",
@@ -231,9 +232,15 @@ export default async (request: Request) => {
   try {
     const url = new URL(request.url);
     const type = url.searchParams.get("type");
+    console.log(`[analytics] Request received - Type: ${type || 'all'}, Time: ${new Date().toISOString()}`);
+
     const client = getTursoClient();
+    console.log(`[analytics] Database client initialized`);
 
     let response: AnalyticsResponse;
+
+    console.log(`[analytics] Processing ${type || 'all'} analytics`);
+    const queryStart = Date.now();
 
     switch (type) {
       case "live":
@@ -255,12 +262,15 @@ export default async (request: Request) => {
         response = await getAllStats(client);
     }
 
+    console.log(`[analytics] Query completed in ${Date.now() - queryStart}ms`);
+    console.log(`[analytics] ✅ Success - Type: ${type || 'all'}, Response time: ${Date.now() - startTime}ms`);
+
     return new Response(JSON.stringify(response), {
       status: 200,
       headers,
     });
   } catch (error) {
-    console.error("Error fetching analytics:", error);
+    console.error(`[analytics] ❌ Error after ${Date.now() - startTime}ms:`, error);
 
     return new Response(
       JSON.stringify({

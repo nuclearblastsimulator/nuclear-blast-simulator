@@ -10,6 +10,8 @@ import {
 } from "./utils/turso.ts";
 
 export default async (request: Request) => {
+  const startTime = Date.now();
+  console.log(`[detonate-optimized] Request received at ${new Date().toISOString()}`);
   // Handle CORS preflight
   if (request.method === "OPTIONS") {
     return new Response(null, {
@@ -35,6 +37,7 @@ export default async (request: Request) => {
   try {
     // Parse request body
     const data: DetonationData = await request.json();
+    console.log(`[detonate-optimized] Processing detonation: ${data.weaponName} (${data.weaponYieldKt}kt) at ${data.cityName || 'coordinates'}`);
 
     // Validate required fields
     if (!data.weaponId || !data.weaponName || !data.weaponYieldKt) {
@@ -52,6 +55,7 @@ export default async (request: Request) => {
 
     // Get database client
     const client = getTursoClient();
+    console.log(`[detonate-optimized] Database client initialized`);
 
     // Generate session ID
     const sessionId = generateSessionId(request);
@@ -68,6 +72,9 @@ export default async (request: Request) => {
     const hiroshimaEquivalent = Math.floor(data.weaponYieldKt / 15);
 
     // OPTIMIZED: Reduced database operations
+    console.log(`[detonate-optimized] Executing batch transaction with 3 operations`);
+    const batchStart = Date.now();
+
     await client.batch([
       // 1. Insert detonation record
       {
@@ -117,6 +124,8 @@ export default async (request: Request) => {
       },
     ]);
 
+    console.log(`[detonate-optimized] Batch transaction completed in ${Date.now() - batchStart}ms`);
+
     // Update popular targets and weapon stats asynchronously
     // These don't need to block the response
     const updatePromises = [
@@ -144,11 +153,14 @@ export default async (request: Request) => {
 
     // Wait for updates to complete (but they're already started in parallel)
     await Promise.all(updatePromises);
+    console.log(`[detonate-optimized] Async updates completed`);
 
     const statsRow = updatedStats.rows[0];
     const totalDetonations = Number(statsRow?.total_detonations || 0);
     const updatedTotalYieldMT = Number(statsRow?.total_yield_mt || 0);
     const hiroshimaEquivalents = Number(statsRow?.hiroshima_equivalents || 0);
+
+    console.log(`[detonate-optimized] ✅ Success - Total detonations: ${totalDetonations}, Response time: ${Date.now() - startTime}ms`);
 
     // Return success response with updated stats
     return new Response(
@@ -175,7 +187,7 @@ export default async (request: Request) => {
       }
     );
   } catch (error) {
-    console.error("Error recording detonation:", error);
+    console.error(`[detonate-optimized] ❌ Error after ${Date.now() - startTime}ms:`, error);
 
     // Check if it's a database constraint error (duplicate, etc)
     if (error.message?.includes('UNIQUE constraint')) {

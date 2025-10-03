@@ -1,6 +1,8 @@
 import { getTursoClient } from "./utils/turso.ts";
 
 export default async (request: Request) => {
+  const startTime = Date.now();
+  console.log(`[counter] Request received at ${new Date().toISOString()}`);
   // Handle CORS
   const headers = {
     "Content-Type": "application/json",
@@ -16,10 +18,14 @@ export default async (request: Request) => {
 
   try {
     const client = getTursoClient();
+    console.log(`[counter] Database client initialized`);
 
     // OPTIMIZED: Single row lookup instead of 4 full table scans
     // Before: 4 queries scanning entire detonations table
     // After: 1 query reading a single pre-aggregated row
+    console.log(`[counter] Fetching stats from running_totals`);
+    const queryStart = Date.now();
+
     const stats = await client.execute(`
       SELECT
         total_detonations,
@@ -36,10 +42,13 @@ export default async (request: Request) => {
       WHERE id = 1
     `);
 
+    console.log(`[counter] Query completed in ${Date.now() - queryStart}ms`);
+
     const row = stats.rows[0];
 
     // If running_totals doesn't exist yet, fall back to old method temporarily
     if (!row) {
+      console.warn(`[counter] ⚠️ No data found in running_totals table`);
       // Fallback to original queries (this should only happen once)
       const fallbackStats = await client.execute(`
         SELECT
@@ -78,6 +87,8 @@ export default async (request: Request) => {
     const hiroshimaEquivalents = Number(row.hiroshima_equivalents || 0);
 
     // Prepare response with optimized data
+    console.log(`[counter] ✅ Success - Detonations: ${totalDetonations}, Response time: ${Date.now() - startTime}ms`);
+
     const response = {
       totalDetonations,
       uniqueSessions,
@@ -104,7 +115,7 @@ export default async (request: Request) => {
       headers,
     });
   } catch (error) {
-    console.error("Error fetching counter:", error);
+    console.error(`[counter] ❌ Error after ${Date.now() - startTime}ms:`, error);
 
     return new Response(
       JSON.stringify({
