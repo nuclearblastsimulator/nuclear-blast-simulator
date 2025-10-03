@@ -32,6 +32,13 @@ try {
       </p>
     </div>
 
+    <!-- Stats Widget - Centered at Top -->
+    <div class="mb-12">
+      <div class="flex justify-center">
+        <DetonationStats hideViewAllButton={true} />
+      </div>
+    </div>
+
     <!-- World Heatmap -->
     <div class="mb-12">
       <h2 class="text-2xl font-bold mb-6 text-center">Global Detonation Heatmap</h2>
@@ -42,16 +49,9 @@ try {
       </div>
     </div>
 
-    <!-- 3 Column Layout: Stats Widget, Top Cities, Top Weapons -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-      <!-- Column 1: Stats Widget -->
-      <div class="w-full overflow-x-auto">
-        <div class="flex justify-center lg:justify-start min-w-fit">
-          <DetonationStats hideViewAllButton={true} />
-        </div>
-      </div>
-      
-      <!-- Column 2: Top Cities -->
+    <!-- 2 Column Layout: Top Cities, Top Weapons -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+      <!-- Column 1: Top Cities -->
       <div class="card bg-base-100 border border-base-300 overflow-hidden h-full flex flex-col">
         <div class="card-body">
           <div class="flex items-center gap-3 mb-4">
@@ -67,7 +67,7 @@ try {
         </div>
       </div>
       
-      <!-- Column 3: Top Weapons -->
+      <!-- Column 2: Top Weapons -->
       <div class="card bg-base-100 border border-base-300 overflow-hidden h-full flex flex-col">
         <div class="card-body">
           <div class="flex items-center gap-3 mb-4">
