@@ -63,12 +63,11 @@ export default async (request: Request) => {
     // Determine continent from coordinates
     const continent = getContinent(data.latitude, data.longitude);
 
-    // OPTIMIZED: Use batch transaction for atomic updates
-    // This ensures all operations succeed or fail together
-    // and reduces the number of round trips to the database
+    // Calculate derived values
     const yieldMT = data.weaponYieldKt / 1000;
     const hiroshimaEquivalent = Math.floor(data.weaponYieldKt / 15);
 
+    // OPTIMIZED: Reduced database operations
     await client.batch([
       // 1. Insert detonation record
       {
@@ -96,17 +95,12 @@ export default async (request: Request) => {
           timeInfo.hourOfDay,
         ],
       },
-      // 2. Update running totals atomically
+      // 2. Update running totals (simplified - no expensive subquery)
       {
         sql: `UPDATE running_totals SET
           total_detonations = total_detonations + 1,
           total_yield_mt = total_yield_mt + ?,
           hiroshima_equivalents = hiroshima_equivalents + ?,
-          last_hour_count = (
-            SELECT COUNT(*)
-            FROM detonations
-            WHERE timestamp > datetime('now', '-1 hour')
-          ) + 1,
           last_updated = CURRENT_TIMESTAMP
         WHERE id = 1`,
         args: [yieldMT, hiroshimaEquivalent],
@@ -123,37 +117,20 @@ export default async (request: Request) => {
       },
     ]);
 
-    // Update popular targets and weapon stats (can be done asynchronously)
-    await Promise.all([
+    // Update popular targets and weapon stats asynchronously
+    // These don't need to block the response
+    const updatePromises = [
       updatePopularTargets(client, data),
       updateWeaponStats(client, data),
-      // Update most popular city/weapon in running totals if needed
-      client.execute(`
-        UPDATE running_totals SET
-          most_targeted_city = (
-            SELECT city_name FROM popular_targets
-            ORDER BY detonation_count DESC LIMIT 1
-          ),
-          most_targeted_count = (
-            SELECT detonation_count FROM popular_targets
-            ORDER BY detonation_count DESC LIMIT 1
-          ),
-          most_used_weapon = (
-            SELECT weapon_name FROM weapon_stats
-            ORDER BY usage_count DESC LIMIT 1
-          ),
-          most_used_count = (
-            SELECT usage_count FROM weapon_stats
-            ORDER BY usage_count DESC LIMIT 1
-          )
-        WHERE id = 1
-      `),
-    ]);
+    ];
+
+    // Don't update most popular on every request - use a background job instead
+    // This saves 4 expensive subqueries per request
 
     // Generate impact message
     const message = generateImpactMessage(data);
 
-    // OPTIMIZED: Get updated stats from running_totals (single row lookup)
+    // Get updated stats from running_totals (single row lookup)
     const updatedStats = await client.execute(`
       SELECT
         total_detonations,
@@ -165,11 +142,14 @@ export default async (request: Request) => {
       WHERE id = 1
     `);
 
+    // Wait for updates to complete (but they're already started in parallel)
+    await Promise.all(updatePromises);
+
     const statsRow = updatedStats.rows[0];
     const totalDetonations = Number(statsRow?.total_detonations || 0);
     const updatedTotalYieldMT = Number(statsRow?.total_yield_mt || 0);
     const hiroshimaEquivalents = Number(statsRow?.hiroshima_equivalents || 0);
-    
+
     // Return success response with updated stats
     return new Response(
       JSON.stringify({
@@ -196,7 +176,24 @@ export default async (request: Request) => {
     );
   } catch (error) {
     console.error("Error recording detonation:", error);
-    
+
+    // Check if it's a database constraint error (duplicate, etc)
+    if (error.message?.includes('UNIQUE constraint')) {
+      return new Response(
+        JSON.stringify({
+          error: "Duplicate detonation detected",
+          details: "This detonation was already recorded",
+        }),
+        {
+          status: 409,
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
+      );
+    }
+
     return new Response(
       JSON.stringify({
         error: "Failed to record detonation",
