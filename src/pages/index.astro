@@ -22,8 +22,8 @@ const locations = dataJson.locations;
 ---
 
 <BaseLayout 
-  title="Nuclear Blast Simulator - Interactive Nuclear Bomb Radius Map" 
-  description="Calculate nuclear explosion effects on any city. Interactive blast radius maps, damage zones, and thermal radiation. Compare weapons from Hiroshima to Tsar Bomba. Free nuclear bomb simulator."
+  title="Nuke Simulator - Interactive Nuclear Bomb Radius Map"
+  description="Free nuke simulator and nuclear bomb simulator. Calculate explosion effects on any city with interactive blast radius maps, damage zones, and thermal radiation. Compare weapons from Hiroshima to Tsar Bomba."
 >
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden isolate">
@@ -43,7 +43,7 @@ const locations = dataJson.locations;
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
             <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
           </span>
-          <span class="text-primary text-sm font-medium">Nuclear Blast Simulator</span>
+          <span class="text-primary text-sm font-medium">Nuke Simulator • Nuclear Blast Calculator</span>
           <span class="text-base-content/50">•</span>
           <span class="text-base-content/70 text-sm"><span id="homepage-counter">0</span> Detonations</span>
         </a>
@@ -67,9 +67,9 @@ const locations = dataJson.locations;
       </h2>
       
       <p class="text-xl md:text-2xl mb-8 text-base-content/70 max-w-3xl mx-auto leading-relaxed">
-        Educational tool showing nuclear weapon impact on any city. 
-        Compare historical bombs from <a href="/history/hiroshima-nagasaki" class="link link-hover text-base-content/70">Little Boy</a> to <a href="/history/testing/tsar-bomba" class="link link-hover text-base-content/70">Tsar Bomba</a>. 
-        Visualize <a href="/terms/effects/blast-effects" class="link link-hover text-base-content/70">damage zones</a> with our nuclear bomb map to understand why <a href="/history/events/atoms-for-peace" class="link link-hover text-base-content/70">peace</a> matters.
+        Educational nuclear bomb simulator showing weapon impact on any city.
+        This free nuke simulator lets you compare historical bombs from <a href="/history/hiroshima-nagasaki" class="link link-hover text-base-content/70">Little Boy</a> to <a href="/history/testing/tsar-bomba" class="link link-hover text-base-content/70">Tsar Bomba</a>.
+        Visualize <a href="/terms/effects/blast-effects" class="link link-hover text-base-content/70">damage zones</a> with our interactive nuclear bomb map to understand why <a href="/history/events/atoms-for-peace" class="link link-hover text-base-content/70">peace</a> matters.
       </p>
       
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -86,6 +86,11 @@ const locations = dataJson.locations;
       
       <!-- Stats -->
       <div class="grid grid-cols-3 gap-8 mt-20 pt-20 border-t border-base-300">
+        <div class="col-span-3 text-center mb-4">
+          <p class="text-sm text-base-content/50">
+            Comprehensive nuke simulator and nuclear bomb simulator.
+          </p>
+        </div>
         <div class="text-center">
           <div class="text-3xl md:text-4xl font-bold text-primary mb-2">{weapons.length}+</div>
           <div class="text-sm text-base-content/70">Weapons</div>
@@ -129,7 +134,7 @@ const locations = dataJson.locations;
       <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-base-300 bg-base-200 p-4 md:p-4 lg:p-4">
         <Image 
           src={screenCapture} 
-          alt="Nuclear bomb map showing blast radius calculation in real-time" 
+          alt="Nuke simulator showing nuclear bomb blast radius on interactive map" 
           class="w-full rounded-lg" 
           loading="eager"
         />
@@ -137,7 +142,7 @@ const locations = dataJson.locations;
       
       <!-- CTA after demo -->
       <div class="text-center mt-12">
-        <p class="text-lg text-base-content/70 mb-6">Ready to try it yourself?</p>
+        <p class="text-lg text-base-content/70 mb-6">Ready to try this nuclear bomb simulator yourself?</p>
         <a href="/simulator/" class="btn btn-primary btn-lg group">
           <span>Launch Simulator</span>
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -438,7 +443,7 @@ const locations = dataJson.locations;
               <div class="rounded overflow-hidden">
                 <Image 
                   src={howItWorks} 
-                  alt="Nuclear explosion simulator calculation methodology" 
+                  alt="Nuclear bomb simulator calculation methodology for blast effects" 
                   class="w-full"
                   loading="lazy"
                 />
@@ -722,7 +727,7 @@ const locations = dataJson.locations;
                   <div class="input border-base-300">https://www.nuclearblastsimulator.com/simulator</div>
                 </div>
                 <div class="bg-base-200 p-4 flex-1 flex items-center justify-center">
-                  <Image src={screenshotDesktop} alt="Atomic bomb simulator interface on desktop - interactive nuclear blast radius map" class="w-full h-auto max-h-full object-contain" />
+                  <Image src={screenshotDesktop} alt="Nuke simulator interface - nuclear bomb simulator showing blast radius on map" class="w-full h-auto max-h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -744,7 +749,7 @@ const locations = dataJson.locations;
                 <div class="absolute inset-[3px] bg-black rounded-[2.3rem]"></div>
                 <!-- Screen -->
                 <div class="absolute inset-[10px] bg-white rounded-[2rem] overflow-hidden">
-                  <Image src={screenshotMobile} alt="Mobile nuclear bomb simulator - calculate blast effects on any city" class="w-full h-full object-cover object-top" />
+                  <Image src={screenshotMobile} alt="Mobile nuke simulator - nuclear bomb simulator for calculating blast effects" class="w-full h-full object-cover object-top" />
                 </div>
                 <!-- Notch -->
                 <div class="absolute top-[2%] left-1/2 transform -translate-x-1/2 w-[42%] h-[4%] bg-black rounded-b-xl"></div>
@@ -769,9 +774,10 @@ const locations = dataJson.locations;
   <section class="py-32 px-6 relative">
     <div class="container max-w-7xl mx-auto">
       <div class="text-center mb-20">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">Advanced Atomic Bomb Simulator Features</h2>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Advanced Nuke Simulator Features</h2>
         <p class="text-xl text-base-content/70 max-w-2xl mx-auto">
-          Everything you need to understand nuclear explosion effects - from blast radius calculations to damage visualization
+          Everything you need in a nuclear bomb simulator - from blast radius calculations to damage visualization.
+          Our nuke simulator provides scientifically accurate results.
         </p>
       </div>
       
@@ -1024,11 +1030,11 @@ const locations = dataJson.locations;
       </div>
       
       <h2 class="text-4xl md:text-5xl font-bold mb-6">
-        Try Our Nuclear Explosion Simulator
+        Try Our Nuclear Bomb Simulator
       </h2>
       <p class="text-xl text-base-content/70 mb-12 max-w-2xl mx-auto leading-relaxed">
-        Launch the nuclear bomb simulator to visualize blast effects on any location. 
-        Calculate damage zones, thermal radiation, and understand nuclear weapon impacts.
+        Launch this comprehensive nuke simulator to visualize blast effects on any location.
+        Our nuclear bomb simulator calculates damage zones, thermal radiation, and weapon impacts with scientific accuracy.
       </p>
       
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
