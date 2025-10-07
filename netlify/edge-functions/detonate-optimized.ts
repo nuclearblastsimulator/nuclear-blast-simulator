@@ -12,6 +12,7 @@ import {
 export default async (request: Request) => {
   const startTime = Date.now();
   console.log(`[detonate-optimized] Request received at ${new Date().toISOString()}`);
+
   // Handle CORS preflight
   if (request.method === "OPTIONS") {
     return new Response(null, {
@@ -27,6 +28,27 @@ export default async (request: Request) => {
   if (request.method !== "POST") {
     return new Response(JSON.stringify({ error: "Method not allowed" }), {
       status: 405,
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
+  }
+
+  // SPAM PREVENTION: Validate referer header
+  const referer = request.headers.get('referer') || '';
+  const validReferers = [
+    'nuclearblastsimulator.com',
+    'localhost:4321',
+    'localhost:8888', // Netlify dev
+  ];
+
+  const isValidReferer = validReferers.some(valid => referer.includes(valid));
+
+  if (!isValidReferer && referer !== '') {
+    console.log(`[detonate-optimized] ⚠️ Blocked invalid referer: ${referer}`);
+    return new Response(JSON.stringify({ error: "Unauthorized" }), {
+      status: 401,
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
@@ -224,4 +246,10 @@ export default async (request: Request) => {
 
 export const config = {
   path: "/api/detonate-optimized",
+  // SPAM PREVENTION: Netlify built-in rate limiting
+  rateLimit: {
+    windowLimit: 100,        // Max 100 requests per window
+    windowSize: 60,          // 60 second window
+    aggregateBy: ["ip"],     // Rate limit by IP address
+  },
 };

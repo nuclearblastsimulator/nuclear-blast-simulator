@@ -132,4 +132,10 @@ export default async (request: Request) => {
 
 export const config = {
   path: "/api/counter",
+  // SPAM PREVENTION: Netlify built-in rate limiting
+  rateLimit: {
+    windowLimit: 300,        // Higher limit for read-only endpoint
+    windowSize: 60,          // 60 second window
+    aggregateBy: ["ip"],     // Rate limit by IP address
+  },
 };

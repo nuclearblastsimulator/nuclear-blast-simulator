@@ -287,4 +287,10 @@ export default async (request: Request) => {
 
 export const config = {
   path: "/api/analytics",
+  // SPAM PREVENTION: Netlify built-in rate limiting
+  rateLimit: {
+    windowLimit: 200,        // Moderate limit for analytics endpoint
+    windowSize: 60,          // 60 second window
+    aggregateBy: ["ip"],     // Rate limit by IP address
+  },
 };

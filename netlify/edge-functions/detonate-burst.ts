@@ -220,6 +220,27 @@ export default async (request: Request) => {
     });
   }
 
+  // SPAM PREVENTION: Validate referer header
+  const referer = request.headers.get('referer') || '';
+  const validReferers = [
+    'nuclearblastsimulator.com',
+    'localhost:4321',
+    'localhost:8888', // Netlify dev
+  ];
+
+  const isValidReferer = validReferers.some(valid => referer.includes(valid));
+
+  if (!isValidReferer && referer !== '') {
+    console.log(`[detonate-burst] ⚠️ Blocked invalid referer: ${referer}`);
+    return new Response(JSON.stringify({ error: "Unauthorized" }), {
+      status: 401,
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
+  }
+
   try {
     // Parse request body
     const data: DetonationData = await request.json();
@@ -303,4 +324,10 @@ export default async (request: Request) => {
 
 export const config = {
   path: "/api/detonate-burst",
+  // SPAM PREVENTION: Netlify built-in rate limiting
+  rateLimit: {
+    windowLimit: 150,        // Higher limit for burst endpoint
+    windowSize: 60,          // 60 second window
+    aggregateBy: ["ip"],     // Rate limit by IP address
+  },
 };
