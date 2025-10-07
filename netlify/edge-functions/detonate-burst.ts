@@ -6,6 +6,7 @@ import {
   generateImpactMessage,
   type DetonationData
 } from "./utils/turso.ts";
+import { validateDetonationRequest } from "./utils/validation.ts";
 
 // Request coalescing for burst traffic
 interface PendingRequest {
@@ -249,6 +250,31 @@ export default async (request: Request) => {
     if (!data.weaponId || !data.weaponName || !data.weaponYieldKt) {
       return new Response(
         JSON.stringify({ error: "Missing required weapon data" }),
+        {
+          status: 400,
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
+      );
+    }
+
+    // SPAM PREVENTION: Validate request data
+    const validation = await validateDetonationRequest({
+      weaponId: data.weaponId,
+      weaponYieldKt: data.weaponYieldKt,
+      latitude: data.latitude,
+      longitude: data.longitude,
+    });
+
+    if (!validation.valid) {
+      console.log(`[detonate-burst] ⚠️ Invalid request:`, validation.errors);
+      return new Response(
+        JSON.stringify({
+          error: "Invalid request data",
+          details: validation.errors
+        }),
         {
           status: 400,
           headers: {
