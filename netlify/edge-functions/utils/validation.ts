@@ -11,14 +11,37 @@ async function loadWeaponsData() {
   if (WEAPONS_MAP !== null) return WEAPONS_MAP;
 
   try {
-    const dataPath = new URL("../../../public/assets/data.json", import.meta.url);
-    const response = await fetch(dataPath);
-    const weaponsData: any = await response.json();
+    // In Netlify Edge Functions, we need to fetch from the deployed URL
+    // Try multiple potential paths
+    const urls = [
+      "/assets/data.json",
+      "https://www.nuclearblastsimulator.com/assets/data.json"
+    ];
+
+    let weaponsData: any = null;
+    let lastError: Error | null = null;
+
+    for (const url of urls) {
+      try {
+        const response = await fetch(url);
+        if (response.ok) {
+          weaponsData = await response.json();
+          break;
+        }
+      } catch (e) {
+        lastError = e as Error;
+      }
+    }
+
+    if (!weaponsData) {
+      throw lastError || new Error("Failed to load weapons data from all paths");
+    }
 
     WEAPONS_MAP = new Map(
       weaponsData.weapons.map((w: any) => [w.id, { yield: w.yield, name: w.name }])
     );
 
+    console.log(`[validation] Loaded ${WEAPONS_MAP.size} weapons`);
     return WEAPONS_MAP;
   } catch (error) {
     console.error("[validation] Failed to load weapons data:", error);
