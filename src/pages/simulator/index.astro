@@ -92,20 +92,6 @@ const ogImageURL = new URL(ogImage.src, Astro.site).href;
   }
   </script>
   
-  <!-- Tailwind CSS v3 (v4 not available via CDN yet) and DaisyUI -->
-  <script src="https://cdn.tailwindcss.com/"></script>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.46/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {}
-      },
-      daisyui: {
-        themes: ["dark"]
-      }
-    }
-  </script>
-  
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   

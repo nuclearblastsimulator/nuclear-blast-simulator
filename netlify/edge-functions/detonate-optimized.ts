@@ -10,12 +10,67 @@ import {
 } from "./utils/turso.ts";
 import { validateDetonationRequest } from "./utils/validation.ts";
 
+// Manual rate limiting since Netlify Edge Functions don't support built-in rate limiting
+const requestTracker = new Map<string, { count: number; windowStart: number }>();
+
+function trackAndEnforceRateLimit(ip: string, limit = 100, windowSize = 60): { count: number; allowed: boolean; resetIn: number } {
+  const now = Date.now();
+  const windowMs = windowSize * 1000;
+
+  const tracker = requestTracker.get(ip);
+
+  // Clean up old window
+  if (!tracker || now - tracker.windowStart > windowMs) {
+    requestTracker.set(ip, { count: 1, windowStart: now });
+    return { count: 1, allowed: true, resetIn: windowSize };
+  }
+
+  // Calculate time until reset
+  const resetIn = Math.ceil((tracker.windowStart + windowMs - now) / 1000);
+
+  // Check if over limit
+  if (tracker.count >= limit) {
+    return { count: tracker.count, allowed: false, resetIn };
+  }
+
+  // Increment count in current window
+  tracker.count++;
+  requestTracker.set(ip, tracker);
+
+  return { count: tracker.count, allowed: true, resetIn };
+}
+
 export default async (request: Request) => {
   const startTime = Date.now();
-  console.log(`[detonate-optimized] Request received at ${new Date().toISOString()}`);
+  const clientIP = request.headers.get('x-forwarded-for') ||
+                   request.headers.get('x-real-ip') ||
+                   'unknown';
+
+  // Two-tier rate limiting:
+  // 1. Burst protection: 5 requests per 3 seconds (blocks rapid-fire automation)
+  // 2. Sustained rate: 50 requests per 60 seconds (allows legitimate experimentation)
+  const BURST_LIMIT = 5;
+  const BURST_WINDOW = 3;
+  const RATE_LIMIT = 50;
+  const RATE_WINDOW = 60;
+
+  const burstLimit = trackAndEnforceRateLimit(clientIP, BURST_LIMIT, BURST_WINDOW);
+  const rateLimit = trackAndEnforceRateLimit(clientIP, RATE_LIMIT, RATE_WINDOW);
+
+  console.log(`[detonate-optimized] 📥 Request received at ${new Date().toISOString()}`);
+  console.log(`[detonate-optimized] IP: ${clientIP}, Method: ${request.method}, URL: ${request.url}`);
+  console.log(`[detonate-optimized] 📊 Burst: ${burstLimit.count}/${BURST_LIMIT} in ${BURST_WINDOW}s | Rate: ${rateLimit.count}/${RATE_LIMIT} in ${RATE_WINDOW}s`);
+  console.log(`[detonate-optimized] User-Agent: ${request.headers.get('user-agent')}`);
+  console.log(`[detonate-optimized] Referer: ${request.headers.get('referer') || 'none'}`);
+
+  // STEALTH MODE: If rate limited, return fake success but don't record to database
+  // This prevents spammers from knowing they're blocked
+  const isRateLimited = !burstLimit.allowed || !rateLimit.allowed;
+  const blockReason = !burstLimit.allowed ? 'burst_limit' : 'rate_limit';
 
   // Handle CORS preflight
   if (request.method === "OPTIONS") {
+    console.log(`[detonate-optimized] OPTIONS request (preflight)`);
     return new Response(null, {
       headers: {
         "Access-Control-Allow-Origin": "*",
@@ -42,6 +97,7 @@ export default async (request: Request) => {
     'nuclearblastsimulator.com',
     'localhost:4321',
     'localhost:8888', // Netlify dev
+    'localhost:3000',
   ];
 
   const isValidReferer = validReferers.some(valid => referer.includes(valid));
@@ -61,6 +117,85 @@ export default async (request: Request) => {
     // Parse request body
     const data: DetonationData = await request.json();
     console.log(`[detonate-optimized] Processing detonation: ${data.weaponName} (${data.weaponYieldKt}kt) at ${data.cityName || 'coordinates'}`);
+    console.log(`[detonate-optimized] Payload:`, JSON.stringify({
+      weaponId: data.weaponId,
+      weaponName: data.weaponName,
+      weaponYieldKt: data.weaponYieldKt,
+      cityName: data.cityName,
+      country: data.country,
+      latitude: data.latitude,
+      longitude: data.longitude,
+      blastType: data.blastType
+    }));
+
+    // STEALTH MODE: If rate limited, log to blocked_requests table and return fake success
+    if (isRateLimited) {
+      const limitType = blockReason === 'burst_limit'
+        ? `Burst limit (${burstLimit.count}/${BURST_LIMIT} in ${BURST_WINDOW}s)`
+        : `Rate limit (${rateLimit.count}/${RATE_LIMIT} in ${RATE_WINDOW}s)`;
+
+      console.log(`[detonate-optimized] 🚫 BLOCKED (stealth): ${limitType} - returning fake success`);
+      console.log(`[detonate-optimized] 🚫 Blocked payload:`, JSON.stringify(data));
+
+      // Log blocked request to database for spam analysis
+      try {
+        const client = getTursoClient();
+        const sessionId = generateSessionId(request);
+        const userAgent = request.headers.get('user-agent') || 'unknown';
+        const referer = request.headers.get('referer') || '';
+
+        await client.execute({
+          sql: `INSERT INTO blocked_requests (
+            ip_address, user_agent, referer,
+            request_count, weapon_id, weapon_name, weapon_yield_kt,
+            city_name, country, latitude, longitude, blast_type,
+            session_id, block_reason, requests_in_window
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            clientIP,
+            userAgent,
+            referer,
+            blockReason === 'burst_limit' ? burstLimit.count : rateLimit.count,
+            data.weaponId || null,
+            data.weaponName || null,
+            data.weaponYieldKt || null,
+            data.cityName || null,
+            data.country || null,
+            data.latitude || null,
+            data.longitude || null,
+            data.blastType || null,
+            sessionId,
+            blockReason,
+            blockReason === 'burst_limit' ? burstLimit.count : rateLimit.count,
+          ],
+        });
+
+        console.log(`[detonate-optimized] 📝 Blocked request logged to database (${blockReason})`);
+      } catch (dbError) {
+        console.error(`[detonate-optimized] ⚠️ Failed to log blocked request:`, dbError);
+        // Continue anyway - don't let logging failure break the response
+      }
+
+      // Return fake success with plausible but fake stats
+      return new Response(
+        JSON.stringify({
+          success: true,
+          totalDetonations: Math.floor(Math.random() * 1000) + 50000,
+          message: "Detonation recorded successfully",
+          totalYieldMT: Math.floor(Math.random() * 10000) + 1000,
+          hiroshimaEquivalents: Math.floor(Math.random() * 100000) + 10000,
+          mostTargetedCity: null,
+        }),
+        {
+          status: 200,
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Cache-Control": "no-cache",
+          },
+        }
+      );
+    }
 
     // Validate required fields
     if (!data.weaponId || !data.weaponName || !data.weaponYieldKt) {
@@ -209,6 +344,7 @@ export default async (request: Request) => {
     const hiroshimaEquivalents = Number(statsRow?.hiroshima_equivalents || 0);
 
     console.log(`[detonate-optimized] ✅ Success - Total detonations: ${totalDetonations}, Response time: ${Date.now() - startTime}ms`);
+    console.log(`[detonate-optimized] 📤 Sending response to ${clientIP}`);
 
     // Return success response with updated stats
     return new Response(
@@ -231,6 +367,7 @@ export default async (request: Request) => {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
           "Cache-Control": "no-cache",
+          // Removed rate limit headers to stay stealthy
         },
       }
     );
@@ -272,10 +409,9 @@ export default async (request: Request) => {
 
 export const config = {
   path: "/api/detonate-optimized",
-  // SPAM PREVENTION: Netlify built-in rate limiting
-  rateLimit: {
-    windowLimit: 100,        // Max 100 requests per window
-    windowSize: 60,          // 60 second window
-    aggregateBy: ["ip"],     // Rate limit by IP address
-  },
+  // NOTE: Netlify's built-in rate limiting doesn't work for Edge Functions
+  // We implement two-tier stealth rate limiting:
+  // - Burst: 5 requests per 3 seconds (blocks rapid-fire automation)
+  // - Sustained: 50 requests per 60 seconds (allows legitimate experimentation)
+  // Blocked requests receive fake success responses and are logged to blocked_requests table
 };
