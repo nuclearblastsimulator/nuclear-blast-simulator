@@ -128,6 +128,31 @@ export default async (request: Request) => {
       blastType: data.blastType
     }));
 
+    // BOT DETECTION: Validate user activity proof
+    const activityHeader = request.headers.get('x-user-activity');
+    if (activityHeader) {
+      try {
+        const activityData = JSON.parse(atob(activityHeader));
+        console.log(`[detonate-optimized] 🤖 Activity: last=${activityData.lastInteraction}ms, count=${activityData.interactionCount}, viewport=${activityData.viewport}`);
+
+        // Flag suspicious patterns (but don't block - just log for now)
+        const isSuspicious =
+          activityData.lastInteraction > 60000 || // No interaction for 1+ minute
+          activityData.interactionCount === 0 || // No interactions at all
+          activityData.viewport === '0x0' || // Headless browser
+          !activityData.viewport; // Missing viewport
+
+        if (isSuspicious) {
+          console.log(`[detonate-optimized] ⚠️ SUSPICIOUS ACTIVITY: May be bot behavior`);
+          // TODO: Could block here in future or log to separate table
+        }
+      } catch (_e) {
+        console.log(`[detonate-optimized] ⚠️ Invalid activity header`);
+      }
+    } else {
+      console.log(`[detonate-optimized] ⚠️ Missing X-User-Activity header (likely bot or old client)`);
+    }
+
     // STEALTH MODE: If rate limited, log to blocked_requests table and return fake success
     if (isRateLimited) {
       const limitType = blockReason === 'burst_limit'
@@ -144,13 +169,37 @@ export default async (request: Request) => {
         const userAgent = request.headers.get('user-agent') || 'unknown';
         const referer = request.headers.get('referer') || '';
 
+        // Check for bot indicators
+        const activityHeader = request.headers.get('x-user-activity');
+        let isBotSuspected = false;
+        let activityDataStr = null;
+
+        if (activityHeader) {
+          try {
+            const activityData = JSON.parse(atob(activityHeader));
+            activityDataStr = JSON.stringify(activityData);
+            isBotSuspected =
+              activityData.lastInteraction > 60000 ||
+              activityData.interactionCount === 0 ||
+              activityData.viewport === '0x0' ||
+              !activityData.viewport;
+          } catch (_e) {
+            // Invalid header
+            isBotSuspected = true;
+          }
+        } else {
+          // Missing header = likely bot
+          isBotSuspected = true;
+        }
+
         await client.execute({
           sql: `INSERT INTO blocked_requests (
             ip_address, user_agent, referer,
             request_count, weapon_id, weapon_name, weapon_yield_kt,
             city_name, country, latitude, longitude, blast_type,
-            session_id, block_reason, requests_in_window
-          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            session_id, block_reason, requests_in_window,
+            is_bot_suspected, activity_data
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
           args: [
             clientIP,
             userAgent,
@@ -167,10 +216,12 @@ export default async (request: Request) => {
             sessionId,
             blockReason,
             blockReason === 'burst_limit' ? burstLimit.count : rateLimit.count,
+            isBotSuspected ? 1 : 0,
+            activityDataStr,
           ],
         });
 
-        console.log(`[detonate-optimized] 📝 Blocked request logged to database (${blockReason})`);
+        console.log(`[detonate-optimized] 📝 Blocked request logged to database (${blockReason}${isBotSuspected ? ', bot suspected' : ''})`);
       } catch (dbError) {
         console.error(`[detonate-optimized] ⚠️ Failed to log blocked request:`, dbError);
         // Continue anyway - don't let logging failure break the response

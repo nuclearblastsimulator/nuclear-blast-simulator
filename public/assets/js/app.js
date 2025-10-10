@@ -25,6 +25,19 @@ let previousWeapon = null // Track for weapon comparison
 let windDirection = 45 // Wind direction in degrees (0 = North, 90 = East, etc.)
 let windSpeed = 15 // Wind speed in mph
 
+// Bot detection: Track user interactions
+let lastInteractionTime = 0
+let interactionCount = 0
+
+// Track real user activity (proves it's not a bot)
+const interactionEvents = ['click', 'keydown', 'mousemove', 'touchstart', 'scroll']
+interactionEvents.forEach(event => {
+  document.addEventListener(event, () => {
+    lastInteractionTime = Date.now()
+    interactionCount++
+  }, { passive: true, once: false })
+})
+
 // Bomb data - will be populated from JSON
 let bombData = {}
 let weaponCategories = {}
@@ -412,7 +425,7 @@ function simulateBlast() {
 
   // Send detonation data to API
   const weapon = bombData[currentBomb]
-  
+
   const detonationData = {
     weaponId: currentBomb,
     weaponName: weapon.name,
@@ -425,11 +438,23 @@ function simulateBlast() {
     blastType: detonationType
   }
 
+  // Generate interaction proof (bot detection)
+  const now = Date.now()
+  const interactionProof = btoa(JSON.stringify({
+    lastInteraction: now - lastInteractionTime, // ms since last interaction
+    interactionCount: interactionCount,
+    timestamp: now,
+    viewport: `${window.innerWidth}x${window.innerHeight}`,
+    touch: 'ontouchstart' in window,
+    tz: new Date().getTimezoneOffset()
+  }))
+
   // Send to API (fire and forget - don't block the UI)
   fetch('/api/detonate-optimized', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      'X-User-Activity': interactionProof
     },
     body: JSON.stringify(detonationData)
   }).then(response => response.json())
